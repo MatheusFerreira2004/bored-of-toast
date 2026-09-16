@@ -1,0 +1,414 @@
+/* ==========================================================================
+   reference.css — Páginas de referência (tabelas, conversões, comparativos)
+   --------------------------------------------------------------------------
+   Carregado apenas nas páginas de referência, no mesmo padrão de recipe.css.
+   Não altera style.css e não redefine variáveis globais.
+   Todas as cores herdam dos tokens já definidos em style.css:
+     --brand-blue #2B3A30 | --paper #F8F5F0 | --ink #343630
+     --olive #62685B | --accent #C9A66B | --line #D8D4C7 | --pale #E7E5D9
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+
+.reference-page {
+  width: min(760px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-block: 56px 80px;
+}
+
+.reference-page > * + * {
+  margin-top: 40px;
+}
+
+.reference-header {
+  margin-bottom: 8px;
+}
+
+.reference-header h1 {
+  margin-bottom: 16px;
+}
+
+.reference-dek {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: var(--olive);
+  max-width: 60ch;
+}
+
+.reference-intro p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+/* --------------------------------------------------------------------------
+   Bloco de regra em destaque
+   Segue o padrão visual de .product-type usado na home.
+   -------------------------------------------------------------------------- */
+
+.reference-rule {
+  background: var(--brand-blue);
+  color: var(--paper);
+  border-radius: 4px;
+  padding: 32px 36px;
+}
+
+.reference-rule .eyebrow {
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.reference-rule dl {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.reference-rule div {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.reference-rule dt {
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  min-width: 128px;
+}
+
+.reference-rule dd {
+  margin: 0;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.reference-rule .rule-example {
+  margin: 22px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(248, 245, 240, 0.22);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--pale);
+}
+
+/* --------------------------------------------------------------------------
+   Tabela de referência
+   -------------------------------------------------------------------------- */
+
+.reference-table-block h2 {
+  margin-bottom: 10px;
+}
+
+.reference-table-note {
+  color: var(--olive);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  max-width: 62ch;
+}
+
+.reference-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  min-width: 460px;
+}
+
+.reference-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 16px 20px 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--olive);
+}
+
+.reference-table th,
+.reference-table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.reference-table thead th {
+  background: var(--pale);
+  color: var(--heading-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--line);
+}
+
+.reference-table tbody tr:last-child th,
+.reference-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reference-table tbody tr:nth-child(even) {
+  background: rgba(231, 229, 217, 0.32);
+}
+
+.reference-table tbody th {
+  font-weight: 700;
+  color: var(--heading-color);
+  white-space: nowrap;
+}
+
+/* Coluna de maior interesse editorial */
+.reference-table .col-highlight {
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+.reference-table thead .col-highlight {
+  color: var(--brand-blue);
+}
+
+/* Dica de rolagem, visível apenas no mobile */
+.reference-swipe-hint {
+  display: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  color: var(--olive);
+  margin: 10px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Bloco de exceções e ressalvas
+   Reaproveita o padrão .note-row das kitchen notes.
+   -------------------------------------------------------------------------- */
+
+.reference-exceptions {
+  display: grid;
+  gap: 24px;
+}
+
+.reference-exception {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reference-exception:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reference-exception .step-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+.reference-exception h3 {
+  font-size: 1.22rem;
+  margin-bottom: 8px;
+}
+
+.reference-exception p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.reference-exception p + p {
+  margin-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Bloco de segurança
+   Variação de .callout, com barra lateral em accent.
+   -------------------------------------------------------------------------- */
+
+.reference-safety {
+  background: var(--pale);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  padding: 26px 30px;
+}
+
+.reference-safety h2 {
+  font-size: 1.32rem;
+  margin-bottom: 12px;
+}
+
+.reference-safety p {
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+}
+
+.reference-safety ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 7px;
+  font-size: 0.98rem;
+}
+
+.reference-safety li strong {
+  color: var(--heading-color);
+}
+
+/* --------------------------------------------------------------------------
+   Fontes
+   -------------------------------------------------------------------------- */
+
+.reference-sources {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.reference-sources h2 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.reference-sources ol {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 14px;
+  font-size: 0.94rem;
+  color: var(--olive);
+}
+
+.reference-sources a {
+  color: var(--brand-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reference-sources a:hover {
+  color: var(--heading-color);
+}
+
+.reference-sources .source-note {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   Anúncios
+   Altura reservada para manter CLS abaixo de 0.1.
+   -------------------------------------------------------------------------- */
+
+.reference-page .ad-slot {
+  min-height: 280px;
+  margin-block: 40px;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .reference-page {
+    width: calc(100% - 32px);
+    padding-block: 36px 60px;
+  }
+
+  .reference-page > * + * {
+    margin-top: 32px;
+  }
+
+  .reference-rule {
+    padding: 26px 22px;
+  }
+
+  .reference-rule dt {
+    min-width: 0;
+    flex-basis: 100%;
+  }
+
+  .reference-rule dd {
+    font-size: 1.32rem;
+  }
+
+  /* A tabela sangra até a borda da tela para ganhar largura útil */
+  .reference-table-scroll {
+    margin-inline: -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .reference-swipe-hint {
+    display: block;
+  }
+
+  .reference-table th,
+  .reference-table td {
+    padding: 12px 16px;
+    font-size: 0.93rem;
+  }
+
+  .reference-exception {
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+  }
+
+  .reference-exception .step-num {
+    font-size: 1.4rem;
+  }
+
+  .reference-safety {
+    padding: 22px 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Impressão
+   Tabelas de referência são impressas com frequência.
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .reference-page .ad-slot,
+  .reference-swipe-hint,
+  .reference-page .newsletter {
+    display: none !important;
+  }
+
+  .reference-table-scroll {
+    overflow: visible;
+    border: 1px solid #999;
+  }
+
+  .reference-rule {
+    background: none;
+    color: #000;
+    border: 2px solid #000;
+  }
+
+  .reference-rule dt,
+  .reference-rule dd,
+  .reference-rule .rule-example {
+    color: #000;
+  }
+
+  .reference-table thead th {
+    background: #eee;
+  }
+}
