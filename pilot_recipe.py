@@ -62,7 +62,9 @@ def render_editorial_recipe(r,others):
     for n,s in enumerate(d['steps']):
         if s.get('phase'):steps.append(f'<h3 class="method-phase">{E(s["phase"])}</h3>')
         duration=f'<p class="step-duration">{E(s["duration"])}</p>' if s.get('duration') else ''
-        im=f'<img class="instruction-image" src="/assets/{s["image"]}" width="800" height="600" loading="lazy" alt="{E(s["alt"])}">' if s.get('image') else ''
+        
+        ai_badge = '<span class="ai-badge">AI-generated</span>' if s.get('is_ai_generated') else ''
+        im=f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}" width="800" height="600" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>' if s.get('image') else ''
         
         check_block = ''
         if s.get('cue'):
@@ -81,13 +83,65 @@ def render_editorial_recipe(r,others):
     batch_html = f'<div class="larger-batch"><p class="eyebrow">FOR A LARGER BATCH</p><p>{E(d["larger_batch"])}</p></div>' if d.get('larger_batch') else ''
 
     technique=(f'<details><summary>A small technique note</summary><p>'+E(d.get('technique',''))+f'</p></details>') if d.get('technique') else ''
-    source=('<a href="'+E(d['source'],quote=True)+'" target="_blank" rel="noopener">Food storage guidance &middot; FDA ↗</a>') if d.get('source') else ''
+    
+    source_html = ''
+    if d.get('sources'):
+        src_links = ''
+        for s in d['sources']:
+            note = f" &mdash; {E(s['note'])}" if s.get('note') else ''
+            src_links += f'<li><a href="{E(s["url"])}" target="_blank" rel="noopener nofollow">{E(s["title"])}</a> by {E(s["publisher"])}{note}</li>'
+        source_html = f'<details id="sources"><summary>Sources & References</summary><ul class="sources-list">{src_links}</ul></details>'
+    elif d.get('source'):
+        source_html = f'<details><summary>Sources</summary><p><a href="{E(d["source"],quote=True)}" target="_blank" rel="noopener nofollow">Food storage guidance &middot; FDA ↗</a></p></details>'
+
+    faq_html = ''
+    if d.get('faq'):
+        faqs = ''.join(f'<details class="faq-item"><summary>{E(q["question"])}</summary><p>{E(q["answer"])}</p></details>' for q in d['faq'])
+        faq_html = f'<section class="recipe-faq"><h2>Frequently Asked Questions</h2>{faqs}</section>'
+
+    nutrition_html = ''
+    if d.get('nutrition'):
+        nut = d['nutrition']
+        est = '<p class="nutrition-est">These values are automated estimates.</p>' if nut.get('is_estimate') else ''
+        rows = f'''
+            <div class="nut-row"><span>Calories</span><span>{E(str(nut.get("calories", "")))}</span></div>
+            <div class="nut-row"><span>Protein</span><span>{E(str(nut.get("protein_g", "")))}g</span></div>
+            <div class="nut-row"><span>Carbs</span><span>{E(str(nut.get("carbs_g", "")))}g</span></div>
+            <div class="nut-row"><span>Fat</span><span>{E(str(nut.get("fat_g", "")))}g</span></div>
+            <div class="nut-row"><span>Fiber</span><span>{E(str(nut.get("fiber_g", "")))}g</span></div>
+            <div class="nut-row"><span>Sodium</span><span>{E(str(nut.get("sodium_mg", "")))}mg</span></div>
+        '''
+        nutrition_html = f'<section class="recipe-nutrition"><h2>Nutrition Per Serving</h2>{est}<div class="nutrition-table">{rows}</div></section>'
+
     data_json=json.dumps(d).replace('<','\\u003c')
 
     why_html = ''
     why = r.get('why_it_works') or d.get('why_it_works', '')
     if why:
         why_html = f'<p class="why-it-works"><strong>Why it works:</strong> {E(why)}</p>'
+        
+    byline_html = ''
+    if d.get('author_name'):
+        byline_html = f'''<div class="recipe-byline">
+            <div class="byline-avatar"></div>
+            <div class="byline-info">
+                <span class="byline-name">By {E(d["author_name"])}</span>
+                <span class="byline-date">Published {E(d.get("date_published", ""))}</span>
+            </div>
+        </div>'''
+        
+    intro_html = f'<p class="recipe-intro">{E(d["intro"])}</p>' if d.get('intro') else f'<p class="lead">{E(r["desc"])}</p>'
+    
+    ad_content = '<div class="ad-container ad-in-content" aria-hidden="true"><span class="ad-label">Advertisement</span></div>'
+    ad_footer = '<div class="ad-container ad-footer" aria-hidden="true"><span class="ad-label">Advertisement</span></div>'
+    newsletter = '''<section class="recipe-newsletter">
+        <h3>More everyday ideas.</h3>
+        <p>Join the newsletter for new recipes and kitchen notes every week.</p>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email address" required aria-label="Email address">
+            <button class="button" type="submit">Subscribe</button>
+        </form>
+    </section>'''
 
     cats = r.get('categories', [])
     from constants import CAT_LABEL
@@ -135,7 +189,8 @@ def render_editorial_recipe(r,others):
         <div class="editorial-header-content">
             {cat_tags}
             <h1>{E(r['title'])}</h1>
-            <p class="lead">{E(r['desc'])}</p>
+            {byline_html}
+            {intro_html}
                         <dl class="recipe-time-grid" aria-label="Estimated recipe times">{times}</dl>
             <div class="recipe-actions">
                 <a class="button" href="#recipe">Ingredients & Method ↓</a>
@@ -144,7 +199,10 @@ def render_editorial_recipe(r,others):
             <p class="small transparency-note">Development edition &middot; Awaits kitchen testing.</p>
         </div>
         <div class="editorial-header-visual">
-            <figure><img src="/assets/{r['img']}" alt="{E(r['alt'])}" width="800" height="600"></figure>
+            <figure>
+                <img src="/assets/{r['img']}" alt="{E(r['alt'])}" width="800" height="600">
+                { '<span class="ai-badge">AI-generated illustration</span>' if d.get('hero_image', {}).get('is_ai_generated') else '' }
+            </figure>
         </div>
     </div>
     <nav class="recipe-local-nav" aria-label="On this recipe">
@@ -175,6 +233,7 @@ def render_editorial_recipe(r,others):
             <p class="small" aria-live="polite" data-change-status></p>
         </section>
         <section class="editorial-method-col" id="method">
+            {ad_content}
             <h2 class="editorial-section-title">Method</h2>
             {equipment}
             {before_html}
@@ -185,12 +244,17 @@ def render_editorial_recipe(r,others):
     <section class="recipe-finish">
         {why_html}
         {serve_html}
+        {faq_html}
+        {nutrition_html}
         <details><summary>One way to change it up</summary><p>{E(d['variation'])}</p></details>
         {technique}
-        <details id="storage"><summary>Storage & Prep ahead</summary><p>{E(d['ahead'])}</p><p>{E(d['storage'])}</p>{source}</details>
+        <details id="storage"><summary>Storage & Prep ahead</summary><p>{E(d['ahead'])}</p><p>{E(d['storage'])}</p></details>
+        {source_html}
     </section>
     {related_notes_html}
     {bottom_cat_tags}
     {lunch_cta}
+    {ad_footer}
+    {newsletter}
     <script type="application/json" id="pilot-recipe-data">{data_json}</script>
 </section>'''
