@@ -109,18 +109,37 @@ def render_editorial_recipe(r,others):
         faq_html = f'<section class="recipe-faq"><h2>Frequently Asked Questions</h2>{faqs}</section>'
 
     nutrition_html = ''
-    if d.get('nutrition'):
-        nut = d['nutrition']
-        est = '<p class="nutrition-est">These values are automated estimates.</p>' if nut.get('is_estimate') else ''
-        rows = f'''
-            <div class="nut-row"><span>Calories</span><span>{E(str(nut.get("calories", "")))}</span></div>
-            <div class="nut-row"><span>Protein</span><span>{E(str(nut.get("protein_g", "")))}g</span></div>
-            <div class="nut-row"><span>Carbs</span><span>{E(str(nut.get("carbs_g", "")))}g</span></div>
-            <div class="nut-row"><span>Fat</span><span>{E(str(nut.get("fat_g", "")))}g</span></div>
-            <div class="nut-row"><span>Fiber</span><span>{E(str(nut.get("fiber_g", "")))}g</span></div>
-            <div class="nut-row"><span>Sodium</span><span>{E(str(nut.get("sodium_mg", "")))}mg</span></div>
-        '''
-        nutrition_html = f'<section class="recipe-nutrition"><h2>Nutrition Per Serving</h2>{est}<div class="nutrition-table">{rows}</div></section>'
+    nut = d.get('nutrition')
+    if nut:
+        serving_size = str(nut.get('servingSize', '')).strip()
+        cals = str(nut.get('calories', '')).strip()
+        if serving_size and cals:
+            nut_rows = []
+            nut_rows.append(f'<div class="nut-row"><span>Serving Size</span><span>{E(serving_size)}</span></div>')
+            nut_rows.append(f'<div class="nut-row"><span>Calories</span><span>{E(cals)}</span></div>')
+
+            metric_configs = [
+                ('Protein', ['proteinContent', 'protein_g'], 'g'),
+                ('Carbs', ['carbohydrateContent', 'carbs_g'], 'g'),
+                ('Fat', ['fatContent', 'fat_g'], 'g'),
+                ('Saturated Fat', ['saturatedFatContent', 'saturated_fat_g'], 'g'),
+                ('Fiber', ['fiberContent', 'fiber_g'], 'g'),
+                ('Sugar', ['sugarContent', 'sugar_g'], 'g'),
+                ('Sodium', ['sodiumContent', 'sodium_mg'], 'mg'),
+            ]
+            for label, keys, unit in metric_configs:
+                val = ''
+                for k in keys:
+                    if nut.get(k) is not None and str(nut.get(k)).strip() != '':
+                        v_str = str(nut.get(k)).strip()
+                        val = v_str.replace(unit, '').strip()
+                        break
+                if val:
+                    nut_rows.append(f'<div class="nut-row"><span>{label}</span><span>{E(val)}{unit}</span></div>')
+
+            disclaimer_text = nut.get('disclaimer') or 'Estimated values calculated from ingredient data. Actual values vary with brands and portion size.'
+            est = f'<p class="nutrition-est">{E(disclaimer_text)}</p>'
+            nutrition_html = f'<section class="recipe-nutrition"><h2>Nutrition Per Serving</h2>{est}<div class="nutrition-table">{"".join(nut_rows)}</div></section>'
 
     data_json=json.dumps(d).replace('<','\\u003c')
 
@@ -130,12 +149,15 @@ def render_editorial_recipe(r,others):
         why_html = f'<p class="why-it-works"><strong>Why it works:</strong> {E(why)}</p>'
         
     byline_html = ''
-    if d.get('author_name'):
+    author = d.get('author')
+    author_name = author.get('name') if isinstance(author, dict) else d.get('author_name')
+    date_pub = d.get('datePublished') or d.get('date_published', '')
+    if author_name:
         byline_html = f'''<div class="recipe-byline">
             <div class="byline-avatar"></div>
             <div class="byline-info">
-                <span class="byline-name">By {E(d["author_name"])}</span>
-                <span class="byline-date">Published {E(d.get("date_published", ""))}</span>
+                <span class="byline-name">By {E(author_name)}</span>
+                <span class="byline-date">Published {E(date_pub)}</span>
             </div>
         </div>'''
         

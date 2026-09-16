@@ -184,6 +184,9 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
         sizes = '(max-width: 700px) calc(100vw - 40px), (max-width: 960px) 46vw, 600px'
         return tag[:-1] + f' srcset="/assets/{name}-480.webp 480w, /assets/{name}-800.webp 800w, /assets/{name}-1200.webp 1200w" sizes="{sizes}" decoding="async">'
     doc = re.sub(r'<img\b[^>]*>', responsive_image, doc)
+    if '[PREENCHER' in doc:
+        print(f"CRITICAL: Placeholder '[PREENCHER' detected in page output for '{path}'. Halting build.")
+        sys.exit(1)
     dest = OUT / path / 'index.html'
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(doc, encoding='utf-8')
@@ -198,18 +201,23 @@ def validate_models():
             for i, v in enumerate(obj):
                 find_preencher(v, f"{path}[{i}]")
         elif isinstance(obj, str):
-            if '[PREENCHER]' in obj:
+            if '[PREENCHER' in obj:
                 error_fields.append(path)
                 
     for slug, d in MODELS.items():
         find_preencher(d, slug)
+        if d.get('nutrition'):
+            nut = d['nutrition']
+            for req in ['servingSize', 'calories']:
+                if not nut.get(req) or not str(nut.get(req)).strip():
+                    error_fields.append(f"{slug}.nutrition.{req}")
         
     if error_fields:
         import sys
-        print(f"CRITICAL: Placeholder \'[PREENCHER]\' found in recipe_models.json for the following fields:\n" + "\n".join(error_fields))
+        print("CRITICAL: Pending placeholders '[PREENCHER' or empty required nutrition fields found in recipe_models.json:\n" + "\n".join(error_fields))
         sys.exit(1)
 
-validate_models()
+# validate_models is run as part of build_all()
 
 def build_recipe_jsonld(r):
     """Build a JSON-LD Recipe object using only confirmed data."""
@@ -295,8 +303,8 @@ def build_recipe_jsonld(r):
         'recipeYield': f'Serves {r.get("serves", 2)}',
         'recipeCategory': model_data.get('recipe_category') or [CAT_LABEL.get(c, c) for c in r.get('categories', [])[:2]],
         'recipeCuisine': model_data.get('recipe_cuisine'),
-        'keywords': ", ".join(model_data.get('keywords', [])) if model_data.get('keywords') else None,
-        'suitableForDiet': [f"https://schema.org/{d}" for d in model_data.get('suitable_for_diet', [])] if model_data.get('suitable_for_diet') else None,
+        'keywords': ", ".join(model_data['keywords']) if isinstance(model_data.get('keywords'), list) else model_data.get('keywords'),
+        'suitableForDiet': [f"https://schema.org/{d.strip()}" for d in (model_data['suitable_for_diet'] if isinstance(model_data.get('suitable_for_diet'), list) else model_data.get('suitable_for_diet', '').split(','))] if model_data.get('suitable_for_diet') else None,
         'image': images if images else None,
         'author': author_obj,
         'datePublished': model_data.get('datePublished', model_data.get('date_published')),
@@ -305,18 +313,58 @@ def build_recipe_jsonld(r):
     
     nut = model_data.get('nutrition')
     if nut:
-        ld['nutrition'] = {
+        sat_fat = nut.get('saturatedFatContent') or nut.get('saturated_fat_g')
+        sugar = nut.get('sugarContent') or nut.get('sugar_g')
+        protein = nut.get('proteinContent') or nut.get('protein_g')
+        carbs = nut.get('carbohydrateContent') or nut.get('carbs_g')
+        fat = nut.get('fatContent') or nut.get('fat_g')
+        fiber = nut.get('fiberContent') or nut.get('fiber_g')
+        sodium = nut.get('sodiumContent') or nut.get('sodium_mg')
+        cals = nut.get('calories')
+        serving = nut.get('servingSize')
+
+        def clean_nut_val(val, unit):
+            if val is None or str(val).strip() == '':
+                return None
+            m = re.search(r'([\d.]+)', str(val))
+            if not m:
+                return None
+            return f"{m.group(1)} {unit}"
+
+        nut_ld = {
             '@type': 'NutritionInformation',
-            'servingSize': nut.get('servingSize'),
-            'calories': f"{nut.get('calories')} calories" if nut.get('calories') else None,
-            'proteinContent': f"{nut.get('protein_g') or nut.get('proteinContent', '').replace(' g', '')} grams" if (nut.get('protein_g') or nut.get('proteinContent')) else None,
-            'carbohydrateContent': f"{nut.get('carbs_g') or nut.get('carbohydrateContent', '').replace(' g', '')} grams" if (nut.get('carbs_g') or nut.get('carbohydrateContent')) else None,
-            'fatContent': f"{nut.get('fat_g') or nut.get('fatContent', '').replace(' g', '')} grams" if (nut.get('fat_g') or nut.get('fatContent')) else None,
-            'fiberContent': f"{nut.get('fiber_g') or nut.get('fiberContent', '').replace(' g', '')} grams" if (nut.get('fiber_g') or nut.get('fiberContent')) else None,
-            'sodiumContent': f"{nut.get('sodium_mg') or nut.get('sodiumContent', '').replace(' mg', '')} milligrams" if (nut.get('sodium_mg') or nut.get('sodiumContent')) else None,
+            'servingSize': str(serving).strip() if serving and str(serving).strip() else None,
+            'calories': clean_nut_val(cals, 'calories'),
+            'proteinContent': clean_nut_val(protein, 'grams'),
+            'carbohydrateContent': clean_nut_val(carbs, 'grams'),
+            'fatContent': clean_nut_val(fat, 'grams'),
+            'saturatedFatContent': clean_nut_val(sat_fat, 'grams'),
+            'fiberContent': clean_nut_val(fiber, 'grams'),
+            'sugarContent': clean_nut_val(sugar, 'grams'),
+            'sodiumContent': clean_nut_val(sodium, 'milligrams'),
         }
-        ld['nutrition'] = {k: v for k, v in ld['nutrition'].items() if v is not None}
+        nut_ld = {k: v for k, v in nut_ld.items() if v is not None and str(v).strip() != ''}
+        val_keys = [k for k in nut_ld.keys() if k not in ('@type', 'servingSize')]
+        if val_keys:
+            ld['nutrition'] = nut_ld
         
+    def recursive_clean_ld(item):
+        if isinstance(item, dict):
+            res = {}
+            for k, v in item.items():
+                cv = recursive_clean_ld(v)
+                if cv is not None and cv != '' and cv != {} and cv != []:
+                    res[k] = cv
+            return res if res else None
+        elif isinstance(item, list):
+            res = [recursive_clean_ld(x) for x in item]
+            res = [x for x in res if x is not None and x != '' and x != {} and x != []]
+            return res if res else None
+        elif isinstance(item, str):
+            s = item.strip()
+            return s if s != '' else None
+        return item
+
     faq = model_data.get('faq')
     if faq and len(faq) >= 2:
         ld_faq = {
@@ -333,9 +381,9 @@ def build_recipe_jsonld(r):
                 } for q in faq
             ]
         }
-        ld = [ {k: v for k, v in ld.items() if v is not None}, ld_faq ]
+        ld = [recursive_clean_ld(ld), recursive_clean_ld(ld_faq)]
     else:
-        ld = {k: v for k, v in ld.items() if v is not None}
+        ld = recursive_clean_ld(ld)
         
     return ld
 
@@ -363,7 +411,22 @@ def card(r, i, featured=False):
     # Card meta line
     card_meta = f'<span class="card-meta-cat">{html.escape(primary_cat_label)}</span>' if primary_cat_label else ''
 
-    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><p class="eyebrow">{featured_label}{r['cat']} {status_tag}</p>{card_meta}<h3>{r['title']}</h3><p>{r['desc']}</p><div class="card-bottom"><span>Serves {r['serves']} <span aria-hidden="true">·</span> {m.get('card_time', '')} <span aria-hidden="true">·</span> {m.get('method', '')}</span><span class="text-link">The recipe <span aria-hidden="true">↗</span></span></div></div></a></article>'''
+    # Time derivation: total_time from MODELS, fallback prep_time, then recipes fallback
+    card_time = m.get('total_time') or m.get('prep_time') or r.get('total_time') or r.get('prep_time') or ''
+    # Method derivation
+    card_method = m.get('method') or r.get('method') or ''
+
+    bottom_items = []
+    if r.get('serves'):
+        bottom_items.append(f"Serves {r['serves']}")
+    if card_time and str(card_time).strip():
+        bottom_items.append(str(card_time).strip())
+    if card_method and str(card_method).strip():
+        bottom_items.append(str(card_method).strip())
+
+    meta_joined = ' <span aria-hidden="true">·</span> '.join(html.escape(item) for item in bottom_items)
+
+    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><p class="eyebrow">{featured_label}{r['cat']} {status_tag}</p>{card_meta}<h3>{r['title']}</h3><p>{r['desc']}</p><div class="card-bottom"><span>{meta_joined}</span><span class="text-link">The recipe <span aria-hidden="true">↗</span></span></div></div></a></article>'''
 
 
 # ---------------------------------------------------------------------------
@@ -404,7 +467,7 @@ def build_category_section():
 # ---------------------------------------------------------------------------
 def editorial_transparency(compact=False):
     if compact:
-        return '''<p class="editorial-note">Recipe development edition · Tested recipes are marked; new recipes await kitchen testing. Food images are AI-generated serving illustrations. <a href="/about/#editorial">Our editorial approach</a></p>'''
+        return '''<p class="editorial-note">Food illustrations on this site are AI-generated. Ingredient substitutions are editorial suggestions. <a href="/about/#editorial">Our editorial approach</a></p>'''
     dev_li = '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
     return f'''<section class="transparency-block wrap" aria-label="Editorial transparency">
   <div class="transparency-inner">
@@ -480,477 +543,480 @@ def build_recipe_index():
         canonical_path='recipes'
     )
 
-build_recipe_index()
+def build_all():
+    validate_models()
+    build_recipe_index()
 
-# ---------------------------------------------------------------------------
-# 1. Home page
-# ---------------------------------------------------------------------------
-page(
-    '',
-    'Everyday ingredients. Better meals.',
-    'Easy everyday recipes, practical kitchen notes, portion adjustments and useful substitutions.',
-    f'''
-<section class="hero wrap">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="edition-mark" aria-hidden="true">01</span> THE EVERYDAY KITCHEN</p>
-    <h1>Same kitchen.<br><span class="title-flourish">Fresh ideas.</span></h1>
-    <p class="lead">Good food starts with what you have. Simple recipes, a little curiosity, and plenty of reasons to look forward to lunch.</p>
-    <a class="button" href="#recipes">Find your next meal <span aria-hidden="true">↘</span></a>
-    <p class="hero-note">Familiar ingredients. A different kind of everyday.</p>
-  </div>
-  <div class="hero-visual">
-    <span class="hand-note">A little less "this again?"</span>
-    <a class="hero-feature" href="/recipes/lemon-chickpea-salad/">
-      <img src="/assets/chickpea.png" alt="Illustrated serving suggestion for lemon chickpea salad" fetchpriority="high" width="900" height="675">
-      <div class="feature-label">
+    # ---------------------------------------------------------------------------
+    # 1. Home page
+    # ---------------------------------------------------------------------------
+    featured_model = MODELS.get('lemon-chickpea-salad', {})
+    featured_caption = '<span class="photo-caption">Serving illustration · Recipe in development</span>' if featured_model.get('status') == 'development' else '<span class="photo-caption">Serving illustration</span>'
+    page(
+        '',
+        'Everyday ingredients. Better meals.',
+        'Easy everyday recipes, practical kitchen notes, portion adjustments and useful substitutions.',
+        f'''
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="edition-mark" aria-hidden="true">01</span> THE EVERYDAY KITCHEN</p>
+        <h1>Same kitchen.<br><span class="title-flourish">Fresh ideas.</span></h1>
+        <p class="lead">Good food starts with what you have. Simple recipes, a little curiosity, and plenty of reasons to look forward to lunch.</p>
+        <a class="button" href="#recipes">Find your next meal <span aria-hidden="true">↘</span></a>
+        <p class="hero-note">Familiar ingredients. A different kind of everyday.</p>
+      </div>
+      <div class="hero-visual">
+        <span class="hand-note">A little less "this again?"</span>
+        <a class="hero-feature" href="/recipes/lemon-chickpea-salad/">
+          <img src="/assets/chickpea.png" alt="Illustrated serving suggestion for lemon chickpea salad" fetchpriority="high" width="900" height="675">
+          <div class="feature-label">
+            <div>
+              <span class="eyebrow">IN THE NOTEBOOK / 01</span>
+              <h2>Lemon chickpea salad</h2>
+              <p>Crunchy. Lemony. Ready for a fork.</p>
+            </div>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <span class="hero-stamp">EVERYDAY<br><b>looks good.</b></span>
+        {featured_caption}
+      </div>
+    </section>
+    <div class="ribbon">
+      <span>Everyday ingredients.</span>
+      <span aria-hidden="true">✳</span>
+      <span>Room to improvise.</span>
+      <span aria-hidden="true">✳</span>
+      <span>Portion adjustment.</span>
+      <span aria-hidden="true">✳</span>
+      <span>Room to make it yours.</span>
+    </div>
+    <section class="wrap section" id="recipes">
+      <div class="section-top">
         <div>
-          <span class="eyebrow">IN THE NOTEBOOK / 01</span>
-          <h2>Lemon chickpea salad</h2>
-          <p>Crunchy. Lemony. Ready for a fork.</p>
+          <p class="eyebrow">01 / THE RECIPE NOTEBOOK</p>
+          <h2>What sounds <span class="serif-accent">good?</span></h2>
         </div>
-        <span class="feature-arrow" aria-hidden="true">↗</span>
+        <p>Ten everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
       </div>
-    </a>
-    <span class="hero-stamp">EVERYDAY<br><b>looks good.</b></span>
-    <span class="photo-caption">Serving illustration · Recipe in development</span>
-  </div>
-</section>
-<div class="ribbon">
-  <span>Everyday ingredients.</span>
-  <span aria-hidden="true">✳</span>
-  <span>Room to improvise.</span>
-  <span aria-hidden="true">✳</span>
-  <span>Portion adjustment.</span>
-  <span aria-hidden="true">✳</span>
-  <span>Room to make it yours.</span>
-</div>
-<section class="wrap section" id="recipes">
-  <div class="section-top">
-    <div>
-      <p class="eyebrow">01 / THE RECIPE NOTEBOOK</p>
-      <h2>What sounds <span class="serif-accent">good?</span></h2>
-    </div>
-    <p>Ten everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
-  </div>
-  <div class="recipe-grid">{''.join(card(r, i + 1) for i, r in enumerate(recipes[:3]))}</div>
-  <p><a class="text-link" href="/recipes/">View all 10 recipes ↗</a></p>
-  {editorial_transparency(compact=True)}
-</section>
-{render_kitchen_home_feature()}
-{build_category_section()}
-<section class="wrap home-paths" id="start-here-paths">
-  <div class="section-top">
-    <div>
-      <p class="eyebrow">04 / WHERE TO BEGIN</p>
-      <h2>Start from <span class="serif-accent">where you are.</span></h2>
-    </div>
-    <p>Choose a direction and find recipes and techniques that fit right now.</p>
-  </div>
-  <div class="home-paths-grid">
-    <a class="home-path-card" href="/start-here/#short-on-time">
-      <span class="home-path-icon" aria-hidden="true">⏱</span>
-      <strong>I'm short on time</strong>
-      <span>No-cook lunches and make-ahead breakfasts.</span>
-    </a>
-    <a class="home-path-card" href="/start-here/#use-what-you-have">
-      <span class="home-path-icon" aria-hidden="true">🥫</span>
-      <strong>I want to use what I have</strong>
-      <span>Pantry-first recipes built around beans and lentils.</span>
-    </a>
-    <a class="home-path-card" href="/start-here/#something-different">
-      <span class="home-path-icon" aria-hidden="true">🥗</span>
-      <strong>I want something different</strong>
-      <span>Change the texture or format of familiar ingredients.</span>
-    </a>
-    <a class="home-path-card" href="/start-here/#more-protein">
-      <span class="home-path-icon" aria-hidden="true">💪</span>
-      <strong>I want more protein</strong>
-      <span>Recipes centred on legumes and plant protein.</span>
-    </a>
-    <a class="home-path-card" href="/start-here/#more-vegetables">
-      <span class="home-path-icon" aria-hidden="true">🥦</span>
-      <strong>I want more vegetables</strong>
-      <span>Plant-forward meals where vegetables take the lead.</span>
-    </a>
-  </div>
-  <p><a class="text-link" href="/start-here/">All starting points ↗</a></p>
-</section>
-<section class="future-note wrap">
-  <span class="eyebrow">ON THE BACK BURNER</span>
-  <div>
-    <h2>The Lunch Edit</h2>
-    <p>A digital collection in development. Twenty recipes, four flexible weeks, and coordinated shopping lists. Not available yet.</p>
-  </div>
-  <a class="text-link" href="/the-lunch-edit/">A peek at the idea ↗</a>
-</section>
-''',
-    'home',
-    canonical_path='',
-    og_img='chickpea.png'
-)
-
-# ---------------------------------------------------------------------------
-# 2. All recipes use one editorial renderer.
-# ---------------------------------------------------------------------------
-for r in recipes:
-    model = MODELS.get(r['slug']) or editorial_model(r, parse_ingredient)
-    jsonld = build_recipe_jsonld(r)
-    page(
-        f'recipes/{r["slug"]}',
-        r['title'],
-        r['desc'],
-        render_editorial_recipe({**r, 'editorial': model}, ''),
-        'recipes',
-        canonical_path=f'recipes/{r["slug"]}',
-        jsonld=jsonld,
-        og_img=r.get('img')
-    )
-
-# ---------------------------------------------------------------------------
-# 3. Kitchen notes index and reusable technique guides (REMOVED - Diluted into Start Here)
-# ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
-# 4. The Lunch Edit
-# ---------------------------------------------------------------------------
-dev_lunch = '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
-page(
-    'the-lunch-edit',
-    'The Lunch Edit',
-    'An upcoming digital collection: four flexible lunch weeks, twenty recipes and coordinated shopping lists.',
-    f'''
-<section class="wrap product-hero">
-  <div>
-    <p class="eyebrow">BORED OF TOAST PRESENTS</p>
-    <h1>Lunch, with<br>a little less<br>thinking.</h1>
-    <p class="lead">The Lunch Edit brings everyday recipes and the shopping that goes with them into one useful digital collection.</p>
-    <div class="price-line">
-      <strong>$19</strong>
-      <span>USD · planned one-time price</span>
-    </div>
-    <p class="status">In development · Not available to buy yet</p>
-    <a class="button" href="#sample">Read the free sample ↓</a>
-  </div>
-  <div class="product-poster">
-    <p>BORED OF TOAST / VOL. 01</p>
-    <h2>THE<br>LUNCH<br>EDIT<span>.</span></h2>
-    <div class="poster-bottom">
-      <span>4 flexible weeks<br>20 everyday lunches</span>
-      <span>A DIGITAL<br>KITCHEN COMPANION</span>
-    </div>
-  </div>
-</section>
-<section class="wrap section">
-  <div class="section-top">
-    <div>
-      <p class="eyebrow">WHAT WE'RE PUTTING TOGETHER</p>
-      <h2>From "what's for lunch?"<br>to a plan you can use.</h2>
-    </div>
-  </div>
-  <div class="included-grid">
-    <div>
-      <span>01 / THE FOOD</span>
-      <h3>20 lunch recipes</h3>
-      <p>Clear ingredients, portions and substitutions, with US and metric measures. Kitchen testing is part of development before release.</p>
-    </div>
-    <div>
-      <span>02 / THE ROUTINE</span>
-      <h3>Four flexible weeks</h3>
-      <p>Five lunch ideas per week, arranged around overlapping ingredients. Move meals around to suit your day.</p>
-    </div>
-    <div>
-      <span>03 / THE SHOPPING</span>
-      <h3>Lists that match</h3>
-      <p>Weekly shopping lists separated into fresh ingredients and pantry items, plus a blank page for your own changes.</p>
-    </div>
-    <div>
-      <span>04 / THE FORMAT</span>
-      <h3>Easy to keep nearby</h3>
-      <p>A PDF designed for phone reading, with simple printable recipe and shopping pages. A single purchase, with no subscription planned.</p>
-    </div>
-  </div>
-</section>
-<section class="sample-section" id="sample">
-  <div class="wrap">
-    <p class="eyebrow">A FREE LOOK AT THE APPROACH</p>
-    <h2>Two lunches.<br>One small shop.</h2>
-    <p class="sample-intro">This development sample shows how ingredients can overlap. Make one two-serving recipe on each cooking day; it gives two people one lunch, or lets you share the extra portion.</p>
-    <div class="sample-grid">
-      <div class="sample-day">
-        <span>COOKING DAY 01</span>
-        <h3>Lemon chickpea salad</h3>
-        <p>Chickpeas, cucumber and tomatoes with feta, parsley and lemon.</p>
-        <a class="text-link" href="/recipes/lemon-chickpea-salad/">Open the complete recipe ↗</a>
+      <div class="recipe-grid">{''.join(card(r, i + 1) for i, r in enumerate(recipes[:3]))}</div>
+      <p><a class="text-link" href="/recipes/">View all 10 recipes ↗</a></p>
+      {editorial_transparency(compact=True)}
+    </section>
+    {render_kitchen_home_feature()}
+    {build_category_section()}
+    <section class="wrap home-paths" id="start-here-paths">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">04 / WHERE TO BEGIN</p>
+          <h2>Start from <span class="serif-accent">where you are.</span></h2>
+        </div>
+        <p>Choose a direction and find recipes and techniques that fit right now.</p>
       </div>
-      <div class="sample-day">
-        <span>COOKING DAY 02</span>
-        <h3>Lemony white beans &amp; spinach</h3>
-        <p>A warm skillet that reuses the olive oil and lemon from the first lunch.</p>
-        <a class="text-link" href="/recipes/lemon-white-bean-skillet/">Open the complete recipe ↗</a>
+      <div class="home-paths-grid">
+        <a class="home-path-card" href="/start-here/#short-on-time">
+          <span class="home-path-icon" aria-hidden="true">⏱</span>
+          <strong>I'm short on time</strong>
+          <span>No-cook lunches and make-ahead breakfasts.</span>
+        </a>
+        <a class="home-path-card" href="/start-here/#use-what-you-have">
+          <span class="home-path-icon" aria-hidden="true">🥫</span>
+          <strong>I want to use what I have</strong>
+          <span>Pantry-first recipes built around beans and lentils.</span>
+        </a>
+        <a class="home-path-card" href="/start-here/#something-different">
+          <span class="home-path-icon" aria-hidden="true">🥗</span>
+          <strong>I want something different</strong>
+          <span>Change the texture or format of familiar ingredients.</span>
+        </a>
+        <a class="home-path-card" href="/start-here/#more-protein">
+          <span class="home-path-icon" aria-hidden="true">💪</span>
+          <strong>I want more protein</strong>
+          <span>Recipes centred on legumes and plant protein.</span>
+        </a>
+        <a class="home-path-card" href="/start-here/#more-vegetables">
+          <span class="home-path-icon" aria-hidden="true">🥦</span>
+          <strong>I want more vegetables</strong>
+          <span>Plant-forward meals where vegetables take the lead.</span>
+        </a>
       </div>
-    </div>
-    <div class="shopping">
+      <p><a class="text-link" href="/start-here/">All starting points ↗</a></p>
+    </section>
+    <section class="future-note wrap">
+      <span class="eyebrow">ON THE BACK BURNER</span>
       <div>
-        <h3>The shared shopping list</h3>
-        <p>For both recipes at their stated two-serving yields. Check your pantry first.</p>
-        <button class="button outline" type="button" data-print>Print this sample</button>
+        <h2>The Lunch Edit</h2>
+        <p>A digital collection in development. Twenty recipes, four flexible weeks, and coordinated shopping lists. Not available yet.</p>
       </div>
-      <ul>
-        <li>1 can chickpeas + 1 can white beans (15 oz / 425 g each)</li>
-        <li>150 g cucumber + 150 g cherry tomatoes</li>
-        <li>90 g baby spinach + 2 garlic cloves</li>
-        <li>50 g feta + ¼ cup chopped parsley</li>
-        <li>1–2 lemons, to yield 3 tbsp juice</li>
-        <li>2 slices of bread</li>
-        <li>Pantry: 3 tbsp olive oil, ¼ tsp oregano, salt and pepper</li>
-      </ul>
-    </div>
-    {dev_lunch}
-  </div>
-</section>
-<section class="wrap article-section narrow">
-  <h2>Who is it for?</h2>
-  <p>Home cooks who want a little more variety at lunch and appreciate having the recipes and shopping worked out together. The planned first edition focuses on vegetable-forward everyday meals.</p>
-  <h2>Will the free recipes stay free?</h2>
-  <p>Yes. Our website recipes include the ingredients and method. The paid collection will add coordinated weeks, shopping lists and a convenient printable format.</p>
-  <h2>When can I buy it?</h2>
-  <p>After recipe testing, photography and the finished PDF are complete. We will update this page when it is ready. There is no checkout or pre-order at this stage.</p>
-</section>
-''',
-    'product',
-    canonical_path='the-lunch-edit',
-    og_img='read-the-recipe.webp'
-)
+      <a class="text-link" href="/the-lunch-edit/">A peek at the idea ↗</a>
+    </section>
+    ''',
+        'home',
+        canonical_path='',
+        og_img='chickpea.png'
+    )
 
-# ---------------------------------------------------------------------------
-# 5. About page
-# ---------------------------------------------------------------------------
-dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
-dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
-page(
-    'about',
-    'About & Editorial Approach',
-    'How Bored of Toast develops, tests and photographs recipes for everyday cooking.',
-    f'''
-<article class="article wrap">
-  <p class="eyebrow">THE MISSION</p>
-  <h1>Saving lunches from<br>boring sandwiches.</h1>
-  <p class="lead">Bored of Toast was born in the exact moment you look at your kitchen pantry and think: <em>"surely there's something else I can make."</em></p>
-  
-  <style>
-    @keyframes subtleFloat {{
-      0%, 100% {{ transform: translateY(0); }}
-      50% {{ transform: translateY(-8px); }}
-    }}
-  </style>
-  <div class="side-note" style="margin-top: 40px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
-    <img src="/assets/mascot.png" alt="Bored of Toast Mascot" style="width: 140px; border-radius: 50%; background: #fff; padding: 10px; animation: subtleFloat 4s ease-in-out infinite;">
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="margin-bottom: 10px;">Meet the Mascot</h3>
-      <p style="margin-bottom: 0;">This is the "Bored Toast". It represents everyone who is tired of eating the exact same meal every single day. We are here to change that expression into a smile, using simple ingredients you already have.</p>
-    </div>
-  </div>
+    # ---------------------------------------------------------------------------
+    # 2. All recipes use one editorial renderer.
+    # ---------------------------------------------------------------------------
+    for r in recipes:
+        model = MODELS.get(r['slug']) or editorial_model(r, parse_ingredient)
+        jsonld = build_recipe_jsonld(r)
+        page(
+            f'recipes/{r["slug"]}',
+            r['title'],
+            r['desc'],
+            render_editorial_recipe({**r, 'editorial': model}, ''),
+            'recipes',
+            canonical_path=f'recipes/{r["slug"]}',
+            jsonld=jsonld,
+            og_img=r.get('img')
+        )
 
-  <section class="article-section" id="philosophy">
-    <h2>Our Philosophy</h2>
-    <p>We believe cooking shouldn't be stressful. We don't use 20 pans, and we don't ask you to buy ingredients you will only use once. Our focus is on <strong>pantry staples, speed, and practicality</strong>.</p>
-    <p>Breakfast, lunch, and dinner all belong here. Our name is a nudge to try something different—though, of course, a good piece of toast is always welcome.</p>
-  </section>
+    # ---------------------------------------------------------------------------
+    # 3. Kitchen notes index and reusable technique guides (REMOVED - Diluted into Start Here)
+    # ---------------------------------------------------------------------------
 
-  <section class="article-section" id="editorial">
-    <h2>Our editorial approach</h2>
-    {dev_note}
-    <p>Food images in this edition are AI-generated serving illustrations. They are not photographs of tested results. The goal for the public recipe collection is to replace them with authentic photographs from kitchen preparation.</p>
-    
-    <div class="callout" style="margin-top: 30px;">
-      <h3 style="margin-bottom: 15px;">What you should know</h3>
-      <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-        {dev_li}
-        <li><strong>AI-generated images.</strong> Food photos are illustrative. They are not photographs of tested dishes.</li>
-        <li><strong>Substitutions are editorial suggestions.</strong> They describe what may change — they are not tested equivalents.</li>
-        <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
-        <li><strong>No medical advice.</strong> Content is not medical or dietary advice.</li>
-      </ul>
-    </div>
-  </section>
-  <div style="margin-top: 50px;">
-    <a class="button" href="/#recipes">Back to the recipes ↗</a>
-  </div>
-</article>
-''',
-    'about',
-    canonical_path='about',
-    og_img='read-the-recipe.webp'
-)
-
-
-# ---------------------------------------------------------------------------
-# 7. Contact page
-# ---------------------------------------------------------------------------
-page(
-    'contact',
-    'Contact & Kitchen Inquiries',
-    'Editorial contact guidelines and development status for Bored of Toast.',
-    '''
-<article class="article wrap">
-  <p class="eyebrow">GET IN TOUCH</p>
-  <h1>Contact &amp;<br>kitchen inquiries.</h1>
-  <p class="lead">Bored of Toast is currently in active recipe formulation and digital development.</p>
-
-  <section class="article-section">
-    <h2>Contact channels in development</h2>
-    <p>Bored of Toast is in an early prototype and recipe drafting stage. Public email inboxes (such as <code>editorial@boredoftoast.com</code>) are not yet live or monitored.</p>
-    <div style="background:#fefbf2;border:1px solid #eadeb8;padding:20px 24px;border-radius:3px;margin:24px 0;border-left:4px solid var(--yellow);">
-      <p style="font-family:'Manrope',sans-serif;font-weight:700;font-size:1.05rem;color:#5a420e;margin:0;">No active inbox during development</p>
-      <p style="font-size:0.9rem;color:#675122;margin:6px 0 0;">To prevent missed messages or unfulfilled inquiries, direct inbox reception is disabled until recipes pass kitchen verification. Public contact channels will open alongside the general release.</p>
-    </div>
-
-    <h2>Recipe feedback &amp; future kitchen tests</h2>
-    <p>When our testing phase opens for home cooks, we will provide a dedicated web feedback form to submit cooking notes, oven calibration observations, and ingredient swap results.</p>
-
-    <h2>Press &amp; partnerships</h2>
-    <p>Bored of Toast is independently produced. We do not accept paid product placements or undisclosed sponsored content. Partnership inquiries may be directed to the editorial inbox once it opens.</p>
-  </section>
-
-  <a class="button" href="/">Back to home ↗</a>
-</article>
-''',
-    '',
-    canonical_path='contact'
-)
-
-# ---------------------------------------------------------------------------
-# 8. Privacy Policy page
-# ---------------------------------------------------------------------------
-page(
-    'privacy',
-    'Privacy Policy',
-    'How Bored of Toast handles visitor privacy, advertising cookies, and tracking.',
-    '''
-<article class="article wrap">
-  <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
-  <h1>Privacy policy.</h1>
-  <p class="lead">How Bored of Toast handles visitor privacy, advertising cookies, and tracking.</p>
-
-  <section class="article-section">
-    <h2>Advertising and Third-Party Cookies</h2>
-    <p>Bored of Toast uses third-party advertising companies, including Google AdSense, to serve ads when you visit the site. These companies may use cookies and similar technologies to collect information about your visits to this and other websites in order to provide personalized advertisements about goods and services of interest to you.</p>
-    <p>You can opt out of personalized advertising by visiting <a href="https://myadcenter.google.com/">Google's Ads Settings</a> or by using tools like <a href="https://optout.aboutads.info/">aboutads.info</a>.</p>
-  </section>
-  
-  <section class="article-section">
-    <h2>CCPA/CPRA Privacy Rights (California Residents)</h2>
-    <p>If you are a California resident, you have the right to opt out of the "sale" or "sharing" of your personal information. Bored of Toast does not sell your personal data directly, but we do share data with advertising partners to deliver personalized ads. You can manage your preferences through the privacy choices link in our footer.</p>
-  </section>
-
-  <section class="article-section">
-    <h2>EEA and UK Visitors</h2>
-    <p>If you visit from the European Economic Area (EEA) or the UK, we request your consent before setting non-essential cookies via a Consent Management Platform (CMP). You can review or revoke your consent at any time.</p>
-  </section>
-  
-  <section class="article-section">
-    <h2>Analytics</h2>
-    <p>We may use analytics tools to understand site traffic and improve our recipes. These tools collect standard internet log information and visitor behavior information in an anonymous form.</p>
-  </section>
-
-  <a class="button" href="/">Back to home ↗</a>
-</article>
-''',
-    '',
-    canonical_path='privacy'
-)
-
-# ---------------------------------------------------------------------------
-# 9. Terms of Use page
-# ---------------------------------------------------------------------------
-page(
-    'terms',
-    'Terms of Use',
-    'Terms and conditions for using Bored of Toast recipes, kitchen notes, and content.',
-    '''
-<article class="article wrap">
-  <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
-  <h1>Terms of use.</h1>
-  <p class="lead">By using Bored of Toast, you agree to these simple terms and common-sense kitchen safety guidelines.</p>
-
-  <section class="article-section">
-    <h2>Recipe development &amp; kitchen safety</h2>
-    <p>Recipes on Bored of Toast are created for culinary inspiration and personal home cooking. While we take great care in developing proportions and methods, cooking times and temperatures are estimates that can vary based on individual cookware, oven calibration, stove power, and ingredient freshness.</p>
-    <p>Home cooks are responsible for exercising safe food handling practices, including proper refrigeration, safe cooking temperatures, and thorough hand washing.</p>
-
-    <h2>Allergies &amp; dietary restrictions</h2>
-    <p>We list major known allergens (such as dairy, wheat, soy, sesame, and nuts) alongside our recipes as a convenience. However, food manufacturers frequently update formulation and packaging. Always inspect ingredient packaging directly to verify allergens and cross-contamination risks.</p>
-
-    <h2>Intellectual property</h2>
-    <p>All written text, recipe methods, graphic layouts, and brand assets on Bored of Toast are copyright © 2026 Bored of Toast. You are warmly welcome to print copies for your own personal home cooking. Republishing our full recipes or selling our digital content without written permission is prohibited.</p>
-
-    <h2>Changes to these terms</h2>
-    <p>We may update these terms occasionally to reflect new features or editorial updates. Continued use of the website represents acceptance of current terms.</p>
-  </section>
-
-  <a class="button" href="/">Back to home ↗</a>
-</article>
-''',
-    '',
-    canonical_path='terms'
-)
-
-# ---------------------------------------------------------------------------
-# 10. Technical SEO: sitemap.xml and robots.txt
-# ---------------------------------------------------------------------------
-from kitchen_notes import GUIDES, guide, index
-for g in GUIDES:
-    slug = g['slug']
+    # ---------------------------------------------------------------------------
+    # 4. The Lunch Edit
+    # ---------------------------------------------------------------------------
+    dev_lunch = '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
     page(
-        f'kitchen-notes/{slug}',
-        g['title'],
-        g['intro'],
-        guide(g),
+        'the-lunch-edit',
+        'The Lunch Edit',
+        'An upcoming digital collection: four flexible lunch weeks, twenty recipes and coordinated shopping lists.',
+        f'''
+    <section class="wrap product-hero">
+      <div>
+        <p class="eyebrow">BORED OF TOAST PRESENTS</p>
+        <h1>Lunch, with<br>a little less<br>thinking.</h1>
+        <p class="lead">The Lunch Edit brings everyday recipes and the shopping that goes with them into one useful digital collection.</p>
+        <div class="price-line">
+          <strong>$19</strong>
+          <span>USD · planned one-time price</span>
+        </div>
+        <p class="status">In development · Not available to buy yet</p>
+        <a class="button" href="#sample">Read the free sample ↓</a>
+      </div>
+      <div class="product-poster">
+        <p>BORED OF TOAST / VOL. 01</p>
+        <h2>THE<br>LUNCH<br>EDIT<span>.</span></h2>
+        <div class="poster-bottom">
+          <span>4 flexible weeks<br>20 everyday lunches</span>
+          <span>A DIGITAL<br>KITCHEN COMPANION</span>
+        </div>
+      </div>
+    </section>
+    <section class="wrap section">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">WHAT WE'RE PUTTING TOGETHER</p>
+          <h2>From "what's for lunch?"<br>to a plan you can use.</h2>
+        </div>
+      </div>
+      <div class="included-grid">
+        <div>
+          <span>01 / THE FOOD</span>
+          <h3>20 lunch recipes</h3>
+          <p>Clear ingredients, portions and substitutions, with US and metric measures.</p>
+        </div>
+        <div>
+          <span>02 / THE ROUTINE</span>
+          <h3>Four flexible weeks</h3>
+          <p>Five lunch ideas per week, arranged around overlapping ingredients. Move meals around to suit your day.</p>
+        </div>
+        <div>
+          <span>03 / THE SHOPPING</span>
+          <h3>Lists that match</h3>
+          <p>Weekly shopping lists separated into fresh ingredients and pantry items, plus a blank page for your own changes.</p>
+        </div>
+        <div>
+          <span>04 / THE FORMAT</span>
+          <h3>Easy to keep nearby</h3>
+          <p>A PDF designed for phone reading, with simple printable recipe and shopping pages. A single purchase, with no subscription planned.</p>
+        </div>
+      </div>
+    </section>
+    <section class="sample-section" id="sample">
+      <div class="wrap">
+        <p class="eyebrow">A FREE LOOK AT THE APPROACH</p>
+        <h2>Two lunches.<br>One small shop.</h2>
+        <p class="sample-intro">This development sample shows how ingredients can overlap. Make one two-serving recipe on each cooking day; it gives two people one lunch, or lets you share the extra portion.</p>
+        <div class="sample-grid">
+          <div class="sample-day">
+            <span>COOKING DAY 01</span>
+            <h3>Lemon chickpea salad</h3>
+            <p>Chickpeas, cucumber and tomatoes with feta, parsley and lemon.</p>
+            <a class="text-link" href="/recipes/lemon-chickpea-salad/">Open the complete recipe ↗</a>
+          </div>
+          <div class="sample-day">
+            <span>COOKING DAY 02</span>
+            <h3>Lemony white beans &amp; spinach</h3>
+            <p>A warm skillet that reuses the olive oil and lemon from the first lunch.</p>
+            <a class="text-link" href="/recipes/lemon-white-bean-skillet/">Open the complete recipe ↗</a>
+          </div>
+        </div>
+        <div class="shopping">
+          <div>
+            <h3>The shared shopping list</h3>
+            <p>For both recipes at their stated two-serving yields. Check your pantry first.</p>
+            <button class="button outline" type="button" data-print>Print this sample</button>
+          </div>
+          <ul>
+            <li>1 can chickpeas + 1 can white beans (15 oz / 425 g each)</li>
+            <li>150 g cucumber + 150 g cherry tomatoes</li>
+            <li>90 g baby spinach + 2 garlic cloves</li>
+            <li>50 g feta + ¼ cup chopped parsley</li>
+            <li>1–2 lemons, to yield 3 tbsp juice</li>
+            <li>2 slices of bread</li>
+            <li>Pantry: 3 tbsp olive oil, ¼ tsp oregano, salt and pepper</li>
+          </ul>
+        </div>
+        {dev_lunch}
+      </div>
+    </section>
+    <section class="wrap article-section narrow">
+      <h2>Who is it for?</h2>
+      <p>Home cooks who want a little more variety at lunch and appreciate having the recipes and shopping worked out together. The planned first edition focuses on vegetable-forward everyday meals.</p>
+      <h2>Will the free recipes stay free?</h2>
+      <p>Yes. Our website recipes include the ingredients and method. The paid collection will add coordinated weeks, shopping lists and a convenient printable format.</p>
+      <h2>When can I buy it?</h2>
+      <p>After recipe testing, photography and the finished PDF are complete. We will update this page when it is ready. There is no checkout or pre-order at this stage.</p>
+    </section>
+    ''',
+        'product',
+        canonical_path='the-lunch-edit',
+        og_img='read-the-recipe.webp'
+    )
+
+    # ---------------------------------------------------------------------------
+    # 5. About page
+    # ---------------------------------------------------------------------------
+    dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    page(
+        'about',
+        'About & Editorial Approach',
+        'How Bored of Toast develops, tests and photographs recipes for everyday cooking.',
+        f'''
+    <article class="article wrap">
+      <p class="eyebrow">THE MISSION</p>
+      <h1>Saving lunches from<br>boring sandwiches.</h1>
+      <p class="lead">Bored of Toast was born in the exact moment you look at your kitchen pantry and think: <em>"surely there's something else I can make."</em></p>
+  
+      <style>
+        @keyframes subtleFloat {{
+          0%, 100% {{ transform: translateY(0); }}
+          50% {{ transform: translateY(-8px); }}
+        }}
+      </style>
+      <div class="side-note" style="margin-top: 40px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+        <img src="/assets/mascot.png" alt="Bored of Toast Mascot" style="width: 140px; border-radius: 50%; background: #fff; padding: 10px; animation: subtleFloat 4s ease-in-out infinite;">
+        <div style="flex: 1; min-width: 250px;">
+          <h3 style="margin-bottom: 10px;">Meet the Mascot</h3>
+          <p style="margin-bottom: 0;">This is the "Bored Toast". It represents everyone who is tired of eating the exact same meal every single day. We are here to change that expression into a smile, using simple ingredients you already have.</p>
+        </div>
+      </div>
+
+      <section class="article-section" id="philosophy">
+        <h2>Our Philosophy</h2>
+        <p>We believe cooking shouldn't be stressful. We don't use 20 pans, and we don't ask you to buy ingredients you will only use once. Our focus is on <strong>pantry staples, speed, and practicality</strong>.</p>
+        <p>Breakfast, lunch, and dinner all belong here. Our name is a nudge to try something different—though, of course, a good piece of toast is always welcome.</p>
+      </section>
+
+      <section class="article-section" id="editorial">
+        <h2>Our editorial approach</h2>
+        {dev_note}
+        <p>Food images in this edition are AI-generated serving illustrations. They are not photographs of tested results. The goal for the public recipe collection is to replace them with authentic photographs from kitchen preparation.</p>
+    
+        <div class="callout" style="margin-top: 30px;">
+          <h3 style="margin-bottom: 15px;">What you should know</h3>
+          <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+            {dev_li}
+            <li><strong>AI-generated images.</strong> Food photos are illustrative. They are not photographs of tested dishes.</li>
+            <li><strong>Substitutions are editorial suggestions.</strong> They describe what may change — they are not tested equivalents.</li>
+            <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
+            <li><strong>No medical advice.</strong> Content is not medical or dietary advice.</li>
+          </ul>
+        </div>
+      </section>
+      <div style="margin-top: 50px;">
+        <a class="button" href="/#recipes">Back to the recipes ↗</a>
+      </div>
+    </article>
+    ''',
+        'about',
+        canonical_path='about',
+        og_img='read-the-recipe.webp'
+    )
+
+
+    # ---------------------------------------------------------------------------
+    # 7. Contact page
+    # ---------------------------------------------------------------------------
+    page(
+        'contact',
+        'Contact & Kitchen Inquiries',
+        'Editorial contact guidelines and inquiries for Bored of Toast.',
+        '''
+    <article class="article wrap">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h1>Contact &amp;<br>kitchen inquiries.</h1>
+      <p class="lead">Questions, corrections, or feedback on our recipes and kitchen notes? We'd love to hear from you.</p>
+
+      <section class="article-section">
+        <h2>Editorial Inquiries</h2>
+        <p>For recipe questions, editorial suggestions, or corrections, contact our editorial team directly at <a href="mailto:hello@boredoftoast.com">hello@boredoftoast.com</a>.</p>
+
+        <h2>Recipe Feedback</h2>
+        <p>If you made one of our recipes or tried an ingredient substitution, share your notes and observations with us. Reader feedback helps us refine notes and practical tips.</p>
+
+        <h2>Press &amp; partnerships</h2>
+        <p>Bored of Toast is independently produced. We do not accept paid product placements or undisclosed sponsored content. Partnership inquiries may be directed to <a href="mailto:hello@boredoftoast.com">hello@boredoftoast.com</a>.</p>
+      </section>
+
+      <a class="button" href="/">Back to home ↗</a>
+    </article>
+    ''',
+        '',
+        canonical_path='contact'
+    )
+
+    # ---------------------------------------------------------------------------
+    # 8. Privacy Policy page
+    # ---------------------------------------------------------------------------
+    page(
+        'privacy',
+        'Privacy Policy',
+        'How Bored of Toast handles visitor privacy, advertising cookies, and tracking.',
+        '''
+    <article class="article wrap">
+      <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
+      <h1>Privacy policy.</h1>
+      <p class="lead">How Bored of Toast handles visitor privacy, advertising cookies, and tracking.</p>
+
+      <section class="article-section">
+        <h2>Advertising and Third-Party Cookies</h2>
+        <p>Bored of Toast uses third-party advertising companies, including Google AdSense, to serve ads when you visit the site. These companies may use cookies and similar technologies to collect information about your visits to this and other websites in order to provide personalized advertisements about goods and services of interest to you.</p>
+        <p>You can opt out of personalized advertising by visiting <a href="https://myadcenter.google.com/">Google's Ads Settings</a> or by using tools like <a href="https://optout.aboutads.info/">aboutads.info</a>.</p>
+      </section>
+  
+      <section class="article-section">
+        <h2>CCPA/CPRA Privacy Rights (California Residents)</h2>
+        <p>If you are a California resident, you have the right to opt out of the "sale" or "sharing" of your personal information. Bored of Toast does not sell your personal data directly, but we do share data with advertising partners to deliver personalized ads. You can manage your preferences through the privacy choices link in our footer.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>EEA and UK Visitors</h2>
+        <p>If you visit from the European Economic Area (EEA) or the UK, we request your consent before setting non-essential cookies via a Consent Management Platform (CMP). You can review or revoke your consent at any time.</p>
+      </section>
+  
+      <section class="article-section">
+        <h2>Analytics</h2>
+        <p>We may use analytics tools to understand site traffic and improve our recipes. These tools collect standard internet log information and visitor behavior information in an anonymous form.</p>
+      </section>
+
+      <a class="button" href="/">Back to home ↗</a>
+    </article>
+    ''',
+        '',
+        canonical_path='privacy'
+    )
+
+    # ---------------------------------------------------------------------------
+    # 9. Terms of Use page
+    # ---------------------------------------------------------------------------
+    page(
+        'terms',
+        'Terms of Use',
+        'Terms and conditions for using Bored of Toast recipes, kitchen notes, and content.',
+        '''
+    <article class="article wrap">
+      <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
+      <h1>Terms of use.</h1>
+      <p class="lead">By using Bored of Toast, you agree to these simple terms and common-sense kitchen safety guidelines.</p>
+
+      <section class="article-section">
+        <h2>Recipe development &amp; kitchen safety</h2>
+        <p>Recipes on Bored of Toast are created for culinary inspiration and personal home cooking. While we take great care in developing proportions and methods, cooking times and temperatures are estimates that can vary based on individual cookware, oven calibration, stove power, and ingredient freshness.</p>
+        <p>Home cooks are responsible for exercising safe food handling practices, including proper refrigeration, safe cooking temperatures, and thorough hand washing.</p>
+
+        <h2>Allergies &amp; dietary restrictions</h2>
+        <p>We list major known allergens (such as dairy, wheat, soy, sesame, and nuts) alongside our recipes as a convenience. However, food manufacturers frequently update formulation and packaging. Always inspect ingredient packaging directly to verify allergens and cross-contamination risks.</p>
+
+        <h2>Intellectual property</h2>
+        <p>All written text, recipe methods, graphic layouts, and brand assets on Bored of Toast are copyright © 2026 Bored of Toast. You are warmly welcome to print copies for your own personal home cooking. Republishing our full recipes or selling our digital content without written permission is prohibited.</p>
+
+        <h2>Changes to these terms</h2>
+        <p>We may update these terms occasionally to reflect new features or editorial updates. Continued use of the website represents acceptance of current terms.</p>
+      </section>
+
+      <a class="button" href="/">Back to home ↗</a>
+    </article>
+    ''',
+        '',
+        canonical_path='terms'
+    )
+
+    # ---------------------------------------------------------------------------
+    # 10. Technical SEO: sitemap.xml and robots.txt
+    # ---------------------------------------------------------------------------
+    from kitchen_notes import GUIDES, guide, index
+    for g in GUIDES:
+        slug = g['slug']
+        page(
+            f'kitchen-notes/{slug}',
+            g['title'],
+            g['intro'],
+            guide(g),
+            'kitchen-notes',
+            canonical_path=f'kitchen-notes/{slug}',
+            og_img=g.get('image')
+        )
+
+    # Kitchen notes index
+    page(
         'kitchen-notes',
-        canonical_path=f'kitchen-notes/{slug}',
-        og_img=g.get('image')
+        'Kitchen Notes',
+        'Practical guides for everyday cooking.',
+        index(),
+        'kitchen-notes',
+        canonical_path='kitchen-notes'
     )
 
-# Kitchen notes index
-page(
-    'kitchen-notes',
-    'Kitchen Notes',
-    'Practical guides for everyday cooking.',
-    index(),
-    'kitchen-notes',
-    canonical_path='kitchen-notes'
-)
+    canonical_routes = [
+        '',
+        'recipes/',
+        'kitchen-notes/',
+        'the-lunch-edit/',
+        'about/',
+        'contact/',
+        'privacy/',
+        'terms/'
+    ] + [f'recipes/{r["slug"]}/' for r in recipes] + [f'kitchen-notes/{g["slug"]}/' for g in GUIDES]
 
-canonical_routes = [
-    '',
-    'recipes/',
-    'kitchen-notes/',
-    'the-lunch-edit/',
-    'about/',
-    'contact/',
-    'privacy/',
-    'terms/'
-] + [f'recipes/{r["slug"]}/' for r in recipes] + [f'kitchen-notes/{g["slug"]}/' for g in GUIDES]
+    sitemap_xml_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+    for route in canonical_routes:
+        url = f"{BASE_URL}/{route}"
+        priority = '1.0' if route == '' else ('0.9' if route == 'recipes/' else ('0.8' if route.startswith('recipes/') or route.startswith('kitchen-notes/') else '0.7'))
+        sitemap_xml_lines.append(
+            f'  <url>\n    <loc>{url}</loc>\n    <lastmod>2026-09-14</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>{priority}</priority>\n  </url>'
+        )
+    sitemap_xml_lines.append('</urlset>')
 
-sitemap_xml_lines = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-]
-for route in canonical_routes:
-    url = f"{BASE_URL}/{route}"
-    priority = '1.0' if route == '' else ('0.9' if route == 'recipes/' else ('0.8' if route.startswith('recipes/') or route.startswith('kitchen-notes/') else '0.7'))
-    sitemap_xml_lines.append(
-        f'  <url>\n    <loc>{url}</loc>\n    <lastmod>2026-09-14</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>{priority}</priority>\n  </url>'
-    )
-sitemap_xml_lines.append('</urlset>')
+    (OUT / 'sitemap.xml').write_text('\n'.join(sitemap_xml_lines), encoding='utf-8')
 
-(OUT / 'sitemap.xml').write_text('\n'.join(sitemap_xml_lines), encoding='utf-8')
+    robots_txt = f"""User-agent: *
+    Allow: /
 
-robots_txt = f"""User-agent: *
-Allow: /
+    Sitemap: {BASE_URL}/sitemap.xml
+    """
+    (OUT / 'robots.txt').write_text(robots_txt, encoding='utf-8')
 
-Sitemap: {BASE_URL}/sitemap.xml
-"""
-(OUT / 'robots.txt').write_text(robots_txt, encoding='utf-8')
+    print(f"Successfully generated all content: {len(canonical_routes)} routes, sitemap.xml, and robots.txt.")
 
-print(f"Successfully generated all content: {len(canonical_routes)} routes, sitemap.xml, and robots.txt.")
+if __name__ == "__main__":
+    build_all()

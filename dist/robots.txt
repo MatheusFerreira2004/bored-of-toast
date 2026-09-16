@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+    Allow: /
 
-Sitemap: /sitemap.xml
+    Sitemap: /sitemap.xml
+    

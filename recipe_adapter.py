@@ -34,4 +34,4 @@ def editorial_model(r, parse):
         batch_default='Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.',
         steps=[{'id':f'step-{i}','title':title,'action':action.replace('½ tsp', '{{amount:0.5:tsp}}')} for i,(title,action) in enumerate(r['steps'])],
         equipment=[],allergen=r.get('allergens',''),serve=r.get('extra',''),variation=r.get('swap',''),
-        technique=r.get('tip',''),ahead='',storage='This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.',source='')
+        technique=r.get('tip',''),ahead='',storage='Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.',source='')
