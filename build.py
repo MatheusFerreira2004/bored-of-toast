@@ -569,6 +569,14 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(doc, encoding='utf-8')
 
+def validate_models():
+    for slug, d in MODELS.items():
+        json_str = json.dumps(d)
+        if '[PREENCHER]' in json_str:
+            raise ValueError(f"CRITICAL: Placeholder '[PREENCHER]' found in recipe_models.json for recipe '{slug}'. You must provide real verified data.")
+
+validate_models()
+
 def build_recipe_jsonld(r):
     """Build a JSON-LD Recipe object using only confirmed data."""
     model_data = MODELS.get(r['slug']) or {}
@@ -592,10 +600,17 @@ def build_recipe_jsonld(r):
 
     img_name = r.get('img', '').replace('.png', '')
     images = []
-    for size in ['1200', '800', '480']:
-        webp = AS / f'{img_name}-{size}.webp'
-        if webp.exists() and webp.stat().st_size > 0:
-            images.append(f'{BASE_URL}/assets/{img_name}-{size}.webp')
+    
+    hero = model_data.get('hero_image')
+    if hero:
+        if hero.get('src_1x1'): images.append(f"{BASE_URL}/assets/{hero['src_1x1']}" if BASE_URL else f"/assets/{hero['src_1x1']}")
+        if hero.get('src_4x3'): images.append(f"{BASE_URL}/assets/{hero['src_4x3']}" if BASE_URL else f"/assets/{hero['src_4x3']}")
+        if hero.get('src_16x9'): images.append(f"{BASE_URL}/assets/{hero['src_16x9']}" if BASE_URL else f"/assets/{hero['src_16x9']}")
+    else:
+        for size in ['1200', '800', '480']:
+            webp = AS / f'{img_name}-{size}.webp'
+            if webp.exists() and webp.stat().st_size > 0:
+                images.append(f'{BASE_URL}/assets/{img_name}-{size}.webp' if BASE_URL else f'/assets/{img_name}-{size}.webp')
 
     ld = {
         '@context': 'https://schema.org',
@@ -607,13 +622,52 @@ def build_recipe_jsonld(r):
         'prepTime': f'PT{r.get("prep_time","").replace(" min prep","").replace("~","").strip()}M' if 'min' in r.get('prep_time', '') else None,
         'totalTime': f'PT{r.get("total_time","").replace(" min total","").replace("~","").strip()}M' if 'min' in r.get('total_time', '') else None,
         'recipeYield': f'Serves {r.get("serves", 2)}',
-        'recipeCategory': [CAT_LABEL.get(c, c) for c in r.get('categories', [])[:2]],
+        'recipeCategory': model_data.get('recipe_category') or [CAT_LABEL.get(c, c) for c in r.get('categories', [])[:2]],
+        'recipeCuisine': model_data.get('recipe_cuisine'),
+        'keywords': ", ".join(model_data.get('keywords', [])) if model_data.get('keywords') else None,
+        'suitableForDiet': [f"https://schema.org/{d}" for d in model_data.get('suitable_for_diet', [])] if model_data.get('suitable_for_diet') else None,
         'image': images if images else None,
-        'author': {'@type': 'Organization', 'name': 'Bored of Toast'},
-        'datePublished': '2026-09-14',
+        'author': {
+            '@type': 'Person',
+            'name': model_data.get('author', {}).get('name', 'Bored of Toast') if isinstance(model_data.get('author'), dict) else model_data.get('author_name', 'Bored of Toast')
+        },
+        'datePublished': model_data.get('datePublished', model_data.get('date_published', '2026-09-14')),
+        'dateModified': model_data.get('dateModified', model_data.get('date_modified')),
     }
-    # Remove None values
-    ld = {k: v for k, v in ld.items() if v is not None}
+    
+    nut = model_data.get('nutrition')
+    if nut:
+        ld['nutrition'] = {
+            '@type': 'NutritionInformation',
+            'calories': f"{nut.get('calories')} calories" if nut.get('calories') else None,
+            'proteinContent': f"{nut.get('protein_g') or nut.get('proteinContent', '').replace(' g', '')} grams" if (nut.get('protein_g') or nut.get('proteinContent')) else None,
+            'carbohydrateContent': f"{nut.get('carbs_g') or nut.get('carbohydrateContent', '').replace(' g', '')} grams" if (nut.get('carbs_g') or nut.get('carbohydrateContent')) else None,
+            'fatContent': f"{nut.get('fat_g') or nut.get('fatContent', '').replace(' g', '')} grams" if (nut.get('fat_g') or nut.get('fatContent')) else None,
+            'fiberContent': f"{nut.get('fiber_g') or nut.get('fiberContent', '').replace(' g', '')} grams" if (nut.get('fiber_g') or nut.get('fiberContent')) else None,
+            'sodiumContent': f"{nut.get('sodium_mg') or nut.get('sodiumContent', '').replace(' mg', '')} milligrams" if (nut.get('sodium_mg') or nut.get('sodiumContent')) else None,
+        }
+        ld['nutrition'] = {k: v for k, v in ld['nutrition'].items() if v is not None}
+        
+    faq = model_data.get('faq')
+    if faq:
+        ld_faq = {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            'mainEntity': [
+                {
+                    '@type': 'Question',
+                    'name': q['question'],
+                    'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': q['answer']
+                    }
+                } for q in faq
+            ]
+        }
+        ld = [ {k: v for k, v in ld.items() if v is not None}, ld_faq ]
+    else:
+        ld = {k: v for k, v in ld.items() if v is not None}
+        
     return ld
 
 def card(r, i, featured=False):

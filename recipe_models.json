@@ -201,7 +201,71 @@
       "above": 4,
       "note": "Use a larger bowl or mix in batches. Extra chopping may take longer."
     },
-    "batch_default": "Amounts adjust; preparation time remains an estimate."
+    "batch_default": "Amounts adjust; preparation time remains an estimate.",
+    "author": {
+      "name": "[PREENCHER: nome real do autor]",
+      "credential": "[PREENCHER: uma linha de credencial]",
+      "url": "/about/"
+    },
+    "datePublished": "[PREENCHER: AAAA-MM-DD]",
+    "dateModified": "[PREENCHER: AAAA-MM-DD]",
+    "intro": "[PREENCHER: 100-150 palavras de contexto editorial. Por que esta versão, para quem serve, o que o leitor ganha. Texto corrido, sem repetir o dek.]",
+    "whyItWorks": [
+      {
+        "heading": "Drained and dried surfaces concentrate the dressing",
+        "body": "[PREENCHER: 60-90 palavras explicando o mecanismo. Água residual dilui a emulsão e escorre para o fundo da tigela, deixando o sabor aguado. Explicar o porquê físico, não apenas a instrução.]"
+      },
+      {
+        "heading": "Feta added last keeps two textures in the bowl",
+        "body": "[PREENCHER: 60-90 palavras. Por que mexer demais transforma a feta em cobertura cremosa e o que se perde com isso.]"
+      },
+      {
+        "heading": "Acid does the work of a long marinade",
+        "body": "[PREENCHER: 60-90 palavras. Como o ácido atua rápido em vegetais crus e por que a salada não precisa descansar.]"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I make this ahead of time?",
+        "answer": "[PREENCHER: 40-60 palavras]"
+      },
+      {
+        "question": "How long does it keep in the fridge?",
+        "answer": "[PREENCHER: 40-60 palavras]"
+      },
+      {
+        "question": "What can I use instead of feta?",
+        "answer": "[PREENCHER: 40-60 palavras]"
+      },
+      {
+        "question": "Do I need to peel the cucumber?",
+        "answer": "[PREENCHER: 40-60 palavras]"
+      }
+    ],
+    "nutrition": {
+      "servingSize": "1 serving (about [PREENCHER] g)",
+      "calories": "[PREENCHER]",
+      "proteinContent": "[PREENCHER] g",
+      "fatContent": "[PREENCHER] g",
+      "saturatedFatContent": "[PREENCHER] g",
+      "carbohydrateContent": "[PREENCHER] g",
+      "fiberContent": "[PREENCHER] g",
+      "sugarContent": "[PREENCHER] g",
+      "sodiumContent": "[PREENCHER] mg",
+      "disclaimer": "Estimated values calculated from ingredient data. Actual values vary with brands and portion size."
+    },
+    "sources": [
+      {
+        "title": "[PREENCHER: título exato da receita original]",
+        "publisher": "[PREENCHER: nome do site ou criador]",
+        "url": "[PREENCHER: URL completa e funcional]"
+      }
+    ],
+    "relatedRecipes": [
+      "smashed-cucumber-edamame-bowl",
+      "mediterranean-warm-green-lentils",
+      "lemon-white-bean-skillet"
+    ]
   },
   "lemon-white-bean-skillet": {
     "slug": "lemon-white-bean-skillet",
