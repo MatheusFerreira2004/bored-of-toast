@@ -1,0 +1,100 @@
+</article>
+''',
+    'about',
+    canonical_path='about',
+    og_img='read-the-recipe.webp'
+)
+
+
+# ---------------------------------------------------------------------------
+# 7. Contact page
+# ---------------------------------------------------------------------------
+page(
+    'contact',
+    'Contact & Kitchen Inquiries',
+    'Editorial contact guidelines and development status for Bored of Toast.',
+    '''
+<article class="article wrap">
+  <p class="eyebrow">GET IN TOUCH</p>
+  <h1>Contact &amp;<br>kitchen inquiries.</h1>
+  <p class="lead">Bored of Toast is currently in active recipe formulation and digital development.</p>
+
+  <section class="article-section">
+    <h2>Contact channels in development</h2>
+    <p>Bored of Toast is in an early prototype and recipe drafting stage. Public email inboxes (such as <code>editorial@boredoftoast.com</code>) are not yet live or monitored.</p>
+    <div style="background:#fefbf2;border:1px solid #eadeb8;padding:20px 24px;border-radius:3px;margin:24px 0;border-left:4px solid var(--yellow);">
+      <p style="font-family:'Manrope',sans-serif;font-weight:700;font-size:1.05rem;color:#5a420e;margin:0;">No active inbox during development</p>
+      <p style="font-size:0.9rem;color:#675122;margin:6px 0 0;">To prevent missed messages or unfulfilled inquiries, direct inbox reception is disabled until recipes pass kitchen verification. Public contact channels will open alongside the general release.</p>
+    </div>
+
+    <h2>Recipe feedback &amp; future kitchen tests</h2>
+    <p>When our testing phase opens for home cooks, we will provide a dedicated web feedback form to submit cooking notes, oven calibration observations, and ingredient swap results.</p>
+
+    <h2>Press &amp; partnerships</h2>
+    <p>Bored of Toast is independently produced. We do not accept paid product placements or undisclosed sponsored content. Partnership inquiries may be directed to the editorial inbox once it opens.</p>
+  </section>
+
+  <a class="button" href="/">Back to home ↗</a>
+</article>
+''',
+    '',
+    canonical_path='contact'
+)
+
+# ---------------------------------------------------------------------------
+# 8. Privacy Policy page
+# ---------------------------------------------------------------------------
+page(
+    'privacy',
+    'Privacy Policy',
+    'How Bored of Toast handles visitor privacy, session storage, and cookie-free browsing.',
+    '''
+<article class="article wrap">
+  <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
+  <h1>Privacy policy.</h1>
+  <p class="lead">We believe recipes should be simple to read without ad banners, behavioral surveillance, or third-party trackers following you around the web.</p>
+
+  <section class="article-section">
+    <h2>Zero third-party tracking</h2>
+    <p>Bored of Toast does not use Google Analytics, Facebook Pixels, marketing beacons, or third-party tracking cookies. We do not sell, rent, or trade visitor data under any circumstances.</p>
+
+    <h2>Local browser storage (sessionStorage)</h2>
+    <p>Our website provides interactive convenience features designed to help you cook:</p>
+    <ul>
+      <li><strong>Interactive ingredient checklist:</strong> When you check off an ingredient on a recipe page, your checked state is saved in your browser's temporary <code>sessionStorage</code> so it stays intact if you refresh or switch tabs.</li>
+    </ul>
+    <p><strong>Crucially:</strong> All of this data stays strictly inside your web browser on your own device. It is never transmitted to our servers or any third party, and it is automatically erased when you close your browser tab.</p>
+
+    <h2>Contact regarding privacy</h2>
+    <p>During this prototype phase, no visitor accounts, analytics, or user profiling exist. Dedicated privacy contact channels will open when the site launches publicly.</p>
+  </section>
+
+  <a class="button" href="/">Back to home ↗</a>
+</article>
+''',
+    '',
+    canonical_path='privacy'
+)
+
+# ---------------------------------------------------------------------------
+# 9. Terms of Use page
+# ---------------------------------------------------------------------------
+page(
+    'terms',
+    'Terms of Use',
+    'Terms and conditions for using Bored of Toast recipes, kitchen notes, and content.',
+    '''
+<article class="article wrap">
+  <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
+  <h1>Terms of use.</h1>
+  <p class="lead">By using Bored of Toast, you agree to these simple terms and common-sense kitchen safety guidelines.</p>
+
+  <section class="article-section">
+    <h2>Recipe development &amp; kitchen safety</h2>
+    <p>Recipes on Bored of Toast are created for culinary inspiration and personal home cooking. While we take great care in developing proportions and methods, cooking times and temperatures are estimates that can vary based on individual cookware, oven calibration, stove power, and ingredient freshness.</p>
+    <p>Home cooks are responsible for exercising safe food handling practices, including proper refrigeration, safe cooking temperatures, and thorough hand washing.</p>
+
+    <h2>Allergies &amp; dietary restrictions</h2>
+    <p>We list major known allergens (such as dairy, wheat, soy, sesame, and nuts) alongside our recipes as a convenience. However, food manufacturers frequently update formulation and packaging. Always inspect ingredient packaging directly to verify allergens and cross-contamination risks.</p>
+
+    <h2>Intellectual property</h2>

@@ -1,0 +1,5 @@
+__pycache__/
+*.zip
+scratch_*.py
+.venv/
+node_modules/

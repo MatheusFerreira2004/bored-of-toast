@@ -1,0 +1,150 @@
+1: from recipe_adapter import editorial_model
+2: from pilot_recipe import render_editorial_recipe, MODELS
+3: from kitchen_notes import index as render_kitchen_notes_index, guide as render_kitchen_note_guide, GUIDES, home_feature as render_kitchen_home_feature, start as render_kitchen_start
+4: from pathlib import Path
+5: import html
+6: import re
+7: import json
+8: 
+9: ROOT = Path(__file__).parent
+10: OUT = ROOT / 'dist'
+11: AS = OUT / 'assets'
+12: AS.mkdir(parents=True, exist_ok=True)
+13: 
+14: FRACTIONS = {
+15:     '½': 0.5,
+16:     '⅓': 1/3,
+17:     '⅔': 2/3,
+18:     '¼': 0.25,
+19:     '¾': 0.75,
+20:     '⅛': 0.125,
+21:     '⅜': 0.375,
+22:     '⅝': 0.625,
+23:     '⅞': 0.875
+24: }
+25: 
+26: # ---------------------------------------------------------------------------
+27: # Category definitions — single source of truth
+28: # ---------------------------------------------------------------------------
+29: CATEGORIES = [
+30:     dict(
+31:         slug='quick-easy',
+32:         label='Quick & Easy',
+33:         desc='Short active prep and few steps — ready in 25 minutes or less. Overnight resting is noted separately.'
+34:     ),
+35:     dict(
+36:         slug='budget-friendly',
+37:         label='Budget-Friendly',
+38:         desc='Meals built around pantry staples and everyday affordable ingredients.'
+39:     ),
+40:     dict(
+41:         slug='plant-forward',
+42:         label='Plant-Forward',
+43:         desc='Vegetables, fruits, grains, and legumes take the lead. Not necessarily vegan.'
+44:     ),
+45:     dict(
+46:         slug='protein-forward',
+47:         label='Protein-Forward',
+48:         desc='Recipes centred on legumes, eggs, tofu, or other protein sources.'
+49:     ),
+50:     dict(
+51:         slug='make-ahead',
+52:         label='Make-Ahead',
+53:         desc='Suited to preparing in advance or starting the night before — breakfast included.'
+54:     ),
+55:     dict(
+56:         slug='pantry-meals',
+57:         label='Pantry Meals',
+58:         desc='Built around shelf-stable ingredients you are likely to have at home.'
+59:     ),
+60:     dict(
+61:         slug='fresh-lunches',
+62:         label='Fresh Lunches',
+63:         desc='No-cook or minimal-cook options that feel light and lively at midday.'
+64:     ),
+65:     dict(
+66:         slug='cozy-dinners',
+67:         label='Cozy Dinners',
+68:         desc='Warm skillet and stovetop meals that are comforting after a long day.'
+69:     ),
+70:     dict(
+71:         slug='one-ingredient-different-ways',
+72:         label='One Ingredient, Different Ways',
+73:         desc='The same starting ingredient taken in entirely different directions.'
+74:     ),
+75: ]
+76: 
+77: # Lookup helper: slug → label
+78: CAT_LABEL = {c['slug']: c['label'] for c in CATEGORIES}
+79: 
+80: 
+81: def parse_ingredient(text):
+82:     text = text.strip()
+83:     m_mixed = re.match(r'^(\d+)\s+([½⅓⅔¼¾⅛⅜⅝⅞])\s+(.*)$', text)
+84:     if m_mixed:
+85:         whole = int(m_mixed.group(1))
+86:         frac = FRACTIONS[m_mixed.group(2)]
+87:         val = whole + frac
+88:         display = f"{m_mixed.group(1)} {m_mixed.group(2)}"
+89:         return val, display, m_mixed.group(3)
+90: 
+91:     m_frac = re.match(r'^([½⅓⅔¼¾⅛⅜⅝⅞])\s+(.*)$', text)
+92:     if m_frac:
+93:         frac_char = m_frac.group(1)
+94:         return FRACTIONS[frac_char], frac_char, m_frac.group(2)
+95: 
+96:     m_num = re.match(r'^(\d+(?:\.\d+)?)\s+(.*)$', text)
+97:     if m_num:
+98:         val = float(m_num.group(1))
+99:         display = m_num.group(1)
+100:         return val, display, m_num.group(2)
+101: 
+102:     return None, None, text
+103: 
+104: recipes = [
+105:     dict(
+106:         slug='lemon-chickpea-salad',
+107:         tested=False,
+108:         title='Lemon chickpea salad',
+109:         cat='THE NO-COOK LUNCH',
+110:         categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'fresh-lunches', 'one-ingredient-different-ways'],
+111:         primary_goal='A no-cook lunch ready in 10 minutes.',
+112:         why_it_works='Chickpeas bring body, cucumber adds crunch, and lemon keeps the bowl bright.',
+113:         img='chickpea.png',
+114:         alt='Illustrated serving suggestion for lemon chickpea salad with cucumber and feta',
+115:         desc='Crunchy cucumber, chickpeas and a lemony dressing. A fresh answer to the same old lunch.',
+116:         serves='2',
+117:         prep_time='10 min prep',
+118:         total_time='10 min total',
+119:         method='No-cook',
+120:         difficulty='Easy',
+121:         time_estimate='10 min prep · 10 min total · No-cook',
+122:         time_glance='~10 mins total',
+123:         card_time='~10 mins',
+124:         ingredients=[
+125:             {'text': '1 can (15 oz / 425 g) chickpeas, drained and rinsed; about 240 g drained', 'swap': 'Try cooked, drained white beans.'},
+126:             '1 cup (150 g) diced cucumber',
+127:             '1 cup (150 g) cherry tomatoes, halved',
+128:             {'text': '⅓ cup (50 g) crumbled feta', 'swap': 'Try diced avocado for a different texture.'},
+129:             {'text': '¼ cup loosely packed chopped flat-leaf parsley', 'swap': 'Dill can replace parsley.'},
+130:             'SECTION: For the dressing',
+131:             '2 tbsp olive oil',
+132:             '2 tbsp lemon juice, plus more to taste',
+133:             'Black pepper and salt, to taste'
+134:         ],
+135:         steps=[
+136:             ('Make the dressing.', 'Whisk the olive oil and lemon juice in a large bowl. Add a few grinds of black pepper.'),
+137:             ('Build the salad.', 'Add the drained chickpeas, cucumber, tomatoes and parsley. Toss until everything is lightly coated.'),
+138:             ('Finish with feta.', 'Fold in the feta. Taste before adding salt: feta and canned chickpeas can already be salty. Divide into portions and serve.')
+139:         ],
+140:         tip='Drain the chickpeas well so the dressing stays bright rather than watery. Add the feta last to keep some distinct pieces.',
+141:         allergens='Contains milk (feta).',
+142:         extra='For a more substantial lunch, serve with bread or tuck a portion into a wrap.',
+143:         related_notes=['keep-salad-crisp', 'simple-lemon-dressing'],
+144:     ),
+145:     dict(
+146:         slug='lemon-white-bean-skillet',
+147:         tested=False,
+148:         title='Lemony white beans & spinach',
+149:         cat='ONE PAN, EVERYDAY INGREDIENTS',
+150:         categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'],

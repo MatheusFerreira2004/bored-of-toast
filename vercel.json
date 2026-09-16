@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "buildCommand": "python build.py",
+  "outputDirectory": "dist",
+  "framework": null
+}
