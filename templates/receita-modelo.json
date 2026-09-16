@@ -1,0 +1,135 @@
+{
+  "_comentario": "Modelo de referencia para novas receitas. Copiar este bloco, renomear a chave para o slug da receita e colar em recipe_models.json. Campos com [PREENCHER travam o build ate serem substituidos. Este arquivo NAO e lido pelo build.",
+
+  "slug-da-receita": {
+    "status": "published",
+
+    "base_people": 2,
+    "serves_default": 2,
+    "meal_role": "a light meal",
+    "primary_goal": "Frase curta com a promessa central da receita.",
+    "method": "No-cook",
+    "difficulty": "Easy",
+    "prep_time": "~10 min",
+    "cook_time": "",
+    "total_time": "~10 min",
+    "card_time": "~10 mins",
+
+    "categories": [
+      "quick-easy",
+      "budget-friendly"
+    ],
+
+    "author_name": "Matheus Ferreira",
+    "author_url": "/about/",
+    "date_published": "[PREENCHER: AAAA-MM-DD]",
+    "date_modified": "[PREENCHER: AAAA-MM-DD]",
+
+    "recipe_cuisine": "Mediterranean",
+    "keywords": [
+      "termo principal",
+      "termo secundario",
+      "ingrediente chave"
+    ],
+    "suitable_for_diet": [
+      "VegetarianDiet"
+    ],
+
+    "intro": "[PREENCHER: 100-150 palavras em ingles. Contexto de uso, por que esta versao, o que o leitor ganha. Evitar linguagem promocional.]",
+
+    "why_it_works": "[PREENCHER: 200-300 palavras em ingles. Explicacao tecnica do porque a receita funciona. E o diferencial competitivo da pagina: e o que o Google premia e o que nenhum concorrente generico tem.]",
+
+    "allergen": "Contains milk. Check ingredient labels.",
+
+    "equipment": [
+      "Large mixing bowl",
+      "Knife and board"
+    ],
+
+    "ingredients": [
+      {
+        "id": "identificador-curto",
+        "name": "nome do ingrediente, com preparo",
+        "qty": 240,
+        "unit": "g",
+        "metric": null,
+        "note": "Observacao opcional sobre embalagem ou equivalencia.",
+        "group": "For the salad",
+        "method_name": "nome usado nos passos",
+        "swap": {
+          "name": "nome do substituto",
+          "qty": 240,
+          "unit": "g",
+          "note": "Ressalva sobre equivalencia.",
+          "texture_change": "Como a textura muda.",
+          "flavor_change": "Como o sabor muda.",
+          "how_to_adjust": "O que fazer diferente.",
+          "technique": "Ajuste de preparo.",
+          "quantity_similar": true,
+          "method_name": "nome do substituto nos passos"
+        }
+      }
+    ],
+
+    "steps": [
+      {
+        "id": "identificador-do-passo",
+        "phase": "Prepare",
+        "title": "Titulo curto e acionavel",
+        "action": "O que o usuario faz. Usar {{id-do-ingrediente}} para referenciar ingredientes e manter a coerencia com substituicoes.",
+        "cue": "Sinal sensorial observavel. O que o usuario deve ver, ouvir ou sentir para saber que deu certo.",
+        "care": "Dica extra opcional.",
+        "image": "slug-da-receita-passo.webp",
+        "alt": "Descricao da imagem para quem nao a ve.",
+        "is_ai_generated": true
+      }
+    ],
+
+    "faq": [
+      {
+        "question": "Can I make this ahead of time?",
+        "answer": "[PREENCHER: 40-60 palavras em ingles]"
+      },
+      {
+        "question": "How long does it keep in the fridge?",
+        "answer": "[PREENCHER: 40-60 palavras em ingles]"
+      },
+      {
+        "question": "What can I use instead of [ingrediente]?",
+        "answer": "[PREENCHER: 40-60 palavras em ingles]"
+      }
+    ],
+
+    "nutrition": {
+      "servingSize": "[PREENCHER: 1 serving (about X cups)]",
+      "calories": "[PREENCHER: numero]",
+      "protein_g": "[PREENCHER]",
+      "carbs_g": "[PREENCHER]",
+      "fat_g": "[PREENCHER]",
+      "saturated_fat_g": "[PREENCHER]",
+      "fiber_g": "[PREENCHER]",
+      "sugar_g": "[PREENCHER]",
+      "sodium_mg": "[PREENCHER]",
+      "is_estimate": true
+    },
+
+    "sources": [
+      {
+        "title": "[PREENCHER: titulo exato da receita ou artigo]",
+        "publisher": "[PREENCHER: nome da publicacao]",
+        "url": "[PREENCHER: URL completa e funcional]",
+        "note": "[PREENCHER: o que esta fonte especificamente informou]"
+      }
+    ],
+
+    "storage": "Refrigerate at or below 40°F (4°C) within two hours of preparing, or within one hour if the room is above 90°F (32°C). Storage life depends on the freshness of the ingredients used.",
+
+    "related_notes": [
+      "slug-da-kitchen-note"
+    ],
+
+    "related_recipes": [
+      "slug-de-receita-relacionada"
+    ]
+  }
+}
