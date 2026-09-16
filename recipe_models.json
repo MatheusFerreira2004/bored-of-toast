@@ -243,15 +243,15 @@
       }
     ],
     "nutrition": {
-      "servingSize": "1 serving (about [PREENCHER] g)",
-      "calories": "[PREENCHER]",
-      "proteinContent": "[PREENCHER] g",
-      "fatContent": "[PREENCHER] g",
-      "saturatedFatContent": "[PREENCHER] g",
-      "carbohydrateContent": "[PREENCHER] g",
-      "fiberContent": "[PREENCHER] g",
-      "sugarContent": "[PREENCHER] g",
-      "sodiumContent": "[PREENCHER] mg",
+      "servingSize": "",
+      "calories": "",
+      "proteinContent": "",
+      "fatContent": "",
+      "saturatedFatContent": "",
+      "carbohydrateContent": "",
+      "fiberContent": "",
+      "sugarContent": "",
+      "sodiumContent": "",
       "disclaimer": "Estimated values calculated from ingredient data. Actual values vary with brands and portion size."
     },
     "sources": [
@@ -265,7 +265,8 @@
       "smashed-cucumber-edamame-bowl",
       "mediterranean-warm-green-lentils",
       "lemon-white-bean-skillet"
-    ]
+    ],
+    "status": "published"
   },
   "lemon-white-bean-skillet": {
     "slug": "lemon-white-bean-skillet",
@@ -476,7 +477,8 @@
     "variation": "For a little crunch, add a few chopped radishes just before serving. This optional topping is not part of the base recipe.",
     "ahead": "Drain the beans and measure the ingredients ahead if helpful. Keep prepared ingredients covered and refrigerated until cooking.",
     "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. This development recipe does not yet have a tested refrigerated shelf life.",
-    "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely"
+    "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
+    "status": "published"
   },
   "blueberry-overnight-oats": {
     "slug": "blueberry-overnight-oats",
@@ -571,7 +573,8 @@
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
     "source": "",
-    "before_prep": "Plan ahead: These oats need to rest in the refrigerator for at least 4 hours, or ideally overnight, before eating."
+    "before_prep": "Plan ahead: These oats need to rest in the refrigerator for at least 4 hours, or ideally overnight, before eating.",
+    "status": "published"
   },
   "crispy-sheet-pan-gnocchi": {
     "slug": "crispy-sheet-pan-gnocchi",
@@ -689,7 +692,8 @@
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
     "source": "",
-    "before_prep": "Preheat oven to 425°F (220°C)."
+    "before_prep": "Preheat oven to 425°F (220°C).",
+    "status": "published"
   },
   "mediterranean-warm-green-lentils": {
     "slug": "mediterranean-warm-green-lentils",
@@ -818,7 +822,8 @@
     "technique": "Rinse canned lentils thoroughly under cold water to remove excess sodium and canning brine, then drain well before simmering with olive oil and spices.",
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
-    "source": ""
+    "source": "",
+    "status": "published"
   },
   "smashed-cucumber-edamame-bowl": {
     "slug": "smashed-cucumber-edamame-bowl",
@@ -942,7 +947,8 @@
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
     "source": "",
-    "before_prep": "If using frozen shelled edamame, thaw them by rinsing under warm water for 2 minutes and draining well."
+    "before_prep": "If using frozen shelled edamame, thaw them by rinsing under warm water for 2 minutes and draining well.",
+    "status": "published"
   },
   "garlic-butter-bean-mushroom-toast": {
     "slug": "garlic-butter-bean-mushroom-toast",
@@ -1065,7 +1071,8 @@
     "technique": "Do not salt the mushrooms until after they have browned in the skillet! Salting early draws out moisture and steams them instead of creating deep caramelized flavor.",
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
-    "source": ""
+    "source": "",
+    "status": "published"
   },
   "spiced-apple-cinnamon-porridge": {
     "slug": "spiced-apple-cinnamon-porridge",
@@ -1188,7 +1195,8 @@
     "technique": "Gently cooking the diced apples in melted butter and cinnamon before simmering with the oats caramelizes the natural sugars and infuses the entire bowl with warm bakery aroma.",
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
-    "source": ""
+    "source": "",
+    "status": "published"
   },
   "5-minute-blender-hummus": {
     "slug": "5-minute-blender-hummus",
@@ -1267,7 +1275,8 @@
     "technique": "Add the water gradually to control how thick or loose the hummus gets.",
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
-    "source": ""
+    "source": "",
+    "status": "published"
   },
   "oven-roasted-crispy-chickpeas": {
     "slug": "oven-roasted-crispy-chickpeas",
@@ -1341,6 +1350,7 @@
     "technique": "The more carefully you dry the chickpeas with a clean towel, the crispier they will become in the oven.",
     "ahead": "",
     "storage": "This recipe awaits kitchen testing. A refrigerated shelf life has not yet been established.",
-    "source": ""
+    "source": "",
+    "status": "published"
   }
 }

@@ -17,6 +17,15 @@ def number(q):
         if abs(q-v)<.001:return t
     return str(int(q)) if q==int(q) else f'{q:.2f}'.rstrip('0').rstrip('.')
 
+def plain_ingredient(i):
+    name = inline_amounts(i['name'])
+    if 'qty' not in i:
+        return name
+    unit = i.get('unit', '')
+    metric = f" ({i['metric']} {i.get('metric_unit', 'g')})" if i.get('metric') else ''
+    qty = number(i['qty'])
+    return ' '.join(p for p in [f"{qty} {unit}{metric}".strip(), name] if p)
+
 def ingredient_text(i):
     if 'qty' not in i:
         return f'<span class="ingredient-name">{E(inline_amounts(i["name"]))}</span>'

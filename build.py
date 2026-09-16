@@ -217,17 +217,16 @@ def build_recipe_jsonld(r):
     model_data = MODELS.get(slug) or {}
     
     # Read ingredients and steps from MODELS, not from `r` directly to unify the truth
-    from pilot_recipe import ingredient_text
+    from pilot_recipe import plain_ingredient, resolve_text
     
     ingredient_list = []
-    for section in model_data.get('ingredients', []):
-        for item in section.get('items', []):
-            ingredient_list.append(ingredient_text(item))
+    for item in model_data.get('ingredients', []):
+        ingredient_list.append(plain_ingredient(item))
 
     instructions = []
     for i, step in enumerate(model_data.get('steps', [])):
-        title = step.get('phase', '') or step.get('cue', '') or f"Step {i+1}"
-        action = step.get('action', '')
+        title = step.get('title', '') or f"Step {i+1}"
+        action = resolve_text(step.get('action', ''), model_data)
         step_ld = {
             '@type': 'HowToStep',
             'name': title,
@@ -253,19 +252,23 @@ def build_recipe_jsonld(r):
             if webp.exists() and webp.stat().st_size > 0:
                 images.append(f'{BASE_URL}/assets/{img_name}-{size}.webp' if BASE_URL else f'/assets/{img_name}-{size}.webp')
                 
-    def parse_time(t_str):
-        if not t_str: return None
-        return f'PT{t_str.replace(" min prep","").replace(" min total","").replace("~","").strip()}M'
-        
-    prepTime = parse_time(r.get('prep_time'))
-    totalTime = parse_time(r.get('total_time'))
+    import re
+    def minutes_from(text):
+        if not text: return None
+        m = re.search(r'(\d+)', str(text))
+        return int(m.group(1)) if m else None
+
+    prep_m = minutes_from(r.get('prep_time'))
+    total_m = minutes_from(r.get('total_time'))
+    
     cookTime = None
-    if totalTime and prepTime:
-        total_m = int(r.get('total_time').replace(" min total","").replace("~","").strip())
-        prep_m = int(r.get('prep_time').replace(" min prep","").replace("~","").strip())
-        cookTime = f'PT{total_m - prep_m}M'
-        if total_m - prep_m == 0:
-            cookTime = 'PT0M'
+    if total_m is not None and prep_m is not None:
+        diff = total_m - prep_m
+        if diff > 0:
+            cookTime = f'PT{diff}M'
+            
+    prepTime = f'PT{prep_m}M' if prep_m is not None else None
+    totalTime = f'PT{total_m}M' if total_m is not None else None
 
     author_name = model_data.get('author', {}).get('name') if isinstance(model_data.get('author'), dict) else model_data.get('author_name')
     author_url = model_data.get('author', {}).get('url') if isinstance(model_data.get('author'), dict) else None
@@ -360,7 +363,7 @@ def card(r, i, featured=False):
     # Card meta line
     card_meta = f'<span class="card-meta-cat">{html.escape(primary_cat_label)}</span>' if primary_cat_label else ''
 
-    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><p class="eyebrow">{featured_label}{r['cat']} {status_tag}</p>{card_meta}<h3>{r['title']}</h3><p>{r['desc']}</p><div class="card-bottom"><span>Serves {r['serves']} <span aria-hidden="true">·</span> {r['card_time']} <span aria-hidden="true">·</span> {r['method']}</span><span class="text-link">The recipe <span aria-hidden="true">↗</span></span></div></div></a></article>'''
+    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><p class="eyebrow">{featured_label}{r['cat']} {status_tag}</p>{card_meta}<h3>{r['title']}</h3><p>{r['desc']}</p><div class="card-bottom"><span>Serves {r['serves']} <span aria-hidden="true">·</span> {m.get('card_time', '')} <span aria-hidden="true">·</span> {m.get('method', '')}</span><span class="text-link">The recipe <span aria-hidden="true">↗</span></span></div></div></a></article>'''
 
 
 # ---------------------------------------------------------------------------
@@ -402,15 +405,16 @@ def build_category_section():
 def editorial_transparency(compact=False):
     if compact:
         return '''<p class="editorial-note">Recipe development edition · Tested recipes are marked; new recipes await kitchen testing. Food images are AI-generated serving illustrations. <a href="/about/#editorial">Our editorial approach</a></p>'''
-    return '''<section class="transparency-block wrap" aria-label="Editorial transparency">
+    dev_li = '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    return f'''<section class="transparency-block wrap" aria-label="Editorial transparency">
   <div class="transparency-inner">
     <p class="eyebrow">A NOTE ON HOW THIS SITE WORKS</p>
     <h2>What you should know.</h2>
     <ul class="transparency-list">
-      { '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
+      {dev_li}
       <li><strong>AI-generated images.</strong> Food photos on this site are illustrative images generated with AI. They do not show tested results.</li>
       <li><strong>Substitutions are suggestions.</strong> Substitution notes describe what may change — they are editorial suggestions, not tested equivalents.</li>
-      <li><strong>No nutritional claims.</strong> We do not provide nutritional data, calorie counts, or health claims.</li>
+      <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
       <li><strong>No medical advice.</strong> Recipes are not medical or dietary advice. Consult a qualified professional for health-related guidance.</li>
     </ul>
     <a class="text-link" href="/about/#editorial">Full editorial approach ↗</a>
@@ -609,11 +613,12 @@ for r in recipes:
 # ---------------------------------------------------------------------------
 # 4. The Lunch Edit
 # ---------------------------------------------------------------------------
+dev_lunch = '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
 page(
     'the-lunch-edit',
     'The Lunch Edit',
     'An upcoming digital collection: four flexible lunch weeks, twenty recipes and coordinated shopping lists.',
-    '''
+    f'''
 <section class="wrap product-hero">
   <div>
     <p class="eyebrow">BORED OF TOAST PRESENTS</p>
@@ -700,7 +705,7 @@ page(
         <li>Pantry: 3 tbsp olive oil, ¼ tsp oregano, salt and pepper</li>
       </ul>
     </div>
-    { '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
+    {dev_lunch}
   </div>
 </section>
 <section class="wrap article-section narrow">
@@ -720,21 +725,23 @@ page(
 # ---------------------------------------------------------------------------
 # 5. About page
 # ---------------------------------------------------------------------------
+dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
 page(
     'about',
     'About & Editorial Approach',
     'How Bored of Toast develops, tests and photographs recipes for everyday cooking.',
-    '''
+    f'''
 <article class="article wrap">
   <p class="eyebrow">THE MISSION</p>
   <h1>Saving lunches from<br>boring sandwiches.</h1>
   <p class="lead">Bored of Toast was born in the exact moment you look at your kitchen pantry and think: <em>"surely there's something else I can make."</em></p>
   
   <style>
-    @keyframes subtleFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
+    @keyframes subtleFloat {{
+      0%, 100% {{ transform: translateY(0); }}
+      50% {{ transform: translateY(-8px); }}
+    }}
   </style>
   <div class="side-note" style="margin-top: 40px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
     <img src="/assets/mascot.png" alt="Bored of Toast Mascot" style="width: 140px; border-radius: 50%; background: #fff; padding: 10px; animation: subtleFloat 4s ease-in-out infinite;">
@@ -752,16 +759,16 @@ page(
 
   <section class="article-section" id="editorial">
     <h2>Our editorial approach</h2>
-    { '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
+    {dev_note}
     <p>Food images in this edition are AI-generated serving illustrations. They are not photographs of tested results. The goal for the public recipe collection is to replace them with authentic photographs from kitchen preparation.</p>
     
     <div class="callout" style="margin-top: 30px;">
       <h3 style="margin-bottom: 15px;">What you should know</h3>
       <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-        { '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
+        {dev_li}
         <li><strong>AI-generated images.</strong> Food photos are illustrative. They are not photographs of tested dishes.</li>
         <li><strong>Substitutions are editorial suggestions.</strong> They describe what may change — they are not tested equivalents.</li>
-        <li><strong>No nutritional claims.</strong> We do not provide calorie counts, macronutrient data, or health claims.</li>
+        <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
         <li><strong>No medical advice.</strong> Content is not medical or dietary advice.</li>
       </ul>
     </div>
@@ -818,26 +825,32 @@ page(
 page(
     'privacy',
     'Privacy Policy',
-    'How Bored of Toast handles visitor privacy, session storage, and cookie-free browsing.',
+    'How Bored of Toast handles visitor privacy, advertising cookies, and tracking.',
     '''
 <article class="article wrap">
   <p class="eyebrow">LEGAL &amp; TRANSPARENCY</p>
   <h1>Privacy policy.</h1>
-  <p class="lead">We believe recipes should be simple to read without ad banners, behavioral surveillance, or third-party trackers following you around the web.</p>
+  <p class="lead">How Bored of Toast handles visitor privacy, advertising cookies, and tracking.</p>
 
   <section class="article-section">
-    <h2>Zero third-party tracking</h2>
-    <p>Bored of Toast does not use Google Analytics, Facebook Pixels, marketing beacons, or third-party tracking cookies. We do not sell, rent, or trade visitor data under any circumstances.</p>
+    <h2>Advertising and Third-Party Cookies</h2>
+    <p>Bored of Toast uses third-party advertising companies, including Google AdSense, to serve ads when you visit the site. These companies may use cookies and similar technologies to collect information about your visits to this and other websites in order to provide personalized advertisements about goods and services of interest to you.</p>
+    <p>You can opt out of personalized advertising by visiting <a href="https://myadcenter.google.com/">Google's Ads Settings</a> or by using tools like <a href="https://optout.aboutads.info/">aboutads.info</a>.</p>
+  </section>
+  
+  <section class="article-section">
+    <h2>CCPA/CPRA Privacy Rights (California Residents)</h2>
+    <p>If you are a California resident, you have the right to opt out of the "sale" or "sharing" of your personal information. Bored of Toast does not sell your personal data directly, but we do share data with advertising partners to deliver personalized ads. You can manage your preferences through the privacy choices link in our footer.</p>
+  </section>
 
-    <h2>Local browser storage (sessionStorage)</h2>
-    <p>Our website provides interactive convenience features designed to help you cook:</p>
-    <ul>
-      <li><strong>Interactive ingredient checklist:</strong> When you check off an ingredient on a recipe page, your checked state is saved in your browser's temporary <code>sessionStorage</code> so it stays intact if you refresh or switch tabs.</li>
-    </ul>
-    <p><strong>Crucially:</strong> All of this data stays strictly inside your web browser on your own device. It is never transmitted to our servers or any third party, and it is automatically erased when you close your browser tab.</p>
-
-    <h2>Contact regarding privacy</h2>
-    <p>During this prototype phase, no visitor accounts, analytics, or user profiling exist. Dedicated privacy contact channels will open when the site launches publicly.</p>
+  <section class="article-section">
+    <h2>EEA and UK Visitors</h2>
+    <p>If you visit from the European Economic Area (EEA) or the UK, we request your consent before setting non-essential cookies via a Consent Management Platform (CMP). You can review or revoke your consent at any time.</p>
+  </section>
+  
+  <section class="article-section">
+    <h2>Analytics</h2>
+    <p>We may use analytics tools to understand site traffic and improve our recipes. These tools collect standard internet log information and visitor behavior information in an anonymous form.</p>
   </section>
 
   <a class="button" href="/">Back to home ↗</a>
