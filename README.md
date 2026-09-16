@@ -1,3 +1,4 @@
+
 # Bored of Toast V4
 
 This is a static Python-generated website (HTML/CSS/JS). No frameworks, no build steps required for production.

@@ -1,4 +1,5 @@
 from recipe_adapter import editorial_model
+import os
 from pilot_recipe import render_editorial_recipe, MODELS
 from kitchen_notes import index as render_kitchen_notes_index, guide as render_kitchen_note_guide, GUIDES, home_feature as render_kitchen_home_feature, start as render_kitchen_start
 from pathlib import Path
@@ -102,419 +103,24 @@ def parse_ingredient(text):
     return None, None, text
 
 recipes = [
-    dict(
-        slug='lemon-chickpea-salad',
-        tested=False,
-        title='Lemon chickpea salad',
-        cat='THE NO-COOK LUNCH',
-        categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'fresh-lunches', 'one-ingredient-different-ways'],
-        primary_goal='A no-cook lunch ready in 10 minutes.',
-        why_it_works='Chickpeas bring body, cucumber adds crunch, and lemon keeps the bowl bright.',
-        img='chickpea.png',
-        alt='Illustrated serving suggestion for lemon chickpea salad with cucumber and feta',
-        desc='Crunchy cucumber, chickpeas and a lemony dressing. A fresh answer to the same old lunch.',
-        serves='2',
-        prep_time='10 min prep',
-        total_time='10 min total',
-        method='No-cook',
-        difficulty='Easy',
-        time_estimate='10 min prep · 10 min total · No-cook',
-        time_glance='~10 mins total',
-        card_time='~10 mins',
-        ingredients=[
-            {'text': '1 can (15 oz / 425 g) chickpeas, drained and rinsed; about 240 g drained', 'swap': 'Try cooked, drained white beans.'},
-            '1 cup (150 g) diced cucumber',
-            '1 cup (150 g) cherry tomatoes, halved',
-            {'text': '⅓ cup (50 g) crumbled feta', 'swap': 'Try diced avocado for a different texture.'},
-            {'text': '¼ cup loosely packed chopped flat-leaf parsley', 'swap': 'Dill can replace parsley.'},
-            'SECTION: For the dressing',
-            '2 tbsp olive oil',
-            '2 tbsp lemon juice, plus more to taste',
-            'Black pepper and salt, to taste'
-        ],
-        steps=[
-            ('Make the dressing.', 'Whisk the olive oil and lemon juice in a large bowl. Add a few grinds of black pepper.'),
-            ('Build the salad.', 'Add the drained chickpeas, cucumber, tomatoes and parsley. Toss until everything is lightly coated.'),
-            ('Finish with feta.', 'Fold in the feta. Taste before adding salt: feta and canned chickpeas can already be salty. Divide into portions and serve.')
-        ],
-        tip='Drain the chickpeas well so the dressing stays bright rather than watery. Add the feta last to keep some distinct pieces.',
-        allergens='Contains milk (feta).',
-        extra='For a more substantial lunch, serve with bread or tuck a portion into a wrap.',
-        related_notes=['keep-salad-crisp', 'simple-lemon-dressing'],
-    ),
-    dict(
-        slug='lemon-white-bean-skillet',
-        tested=False,
-        title='Lemony white beans & spinach',
-        cat='ONE PAN, EVERYDAY INGREDIENTS',
-        categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'],
-        primary_goal='A warm one-pan skillet in 15 minutes.',
-        why_it_works='Garlic kept pale adds fragrance without bitterness. Mashing a few beans thickens the liquid into a light sauce. Lemon goes in off the heat so its brightness stays lively.',
-        img='beans.png',
-        alt='Illustration of white beans and spinach in a skillet with a light lemony sauce',
-        desc='Soft white beans, wilted spinach and a little lemon. Keep some bread nearby for the pan juices.',
-        serves='2',
-        prep_time='5 min prep',
-        total_time='15 min total',
-        method='One-pan',
-        difficulty='Easy',
-        time_estimate='5 min prep · 15 min total · One-pan',
-        time_glance='~15 mins total',
-        card_time='~15 mins',
-        ingredients=[
-            '1 tbsp olive oil',
-            '2 garlic cloves, thinly sliced',
-            '1 can (15 oz / 425 g) white beans, drained and rinsed; about 240 g drained',
-            '⅓ cup (80 ml) water',
-            '3 packed cups (90 g) baby spinach',
-            '1 tbsp lemon juice, plus more to taste',
-            '¼ tsp dried oregano',
-            'Salt and black pepper, to taste',
-            '2 slices of bread, to serve'
-        ],
-        steps=[
-            ('Gently cook the garlic.', 'Warm the oil in a skillet over medium-low heat. Add the garlic and stir for about 1 minute, until fragrant but not browned.'),
-            ('Warm the beans.', 'Add the beans, water and oregano. Bring to a gentle simmer and cook for about 5 minutes. Mash a spoonful of beans against the pan to thicken the sauce.'),
-            ('Wilt the spinach.', 'Add the spinach in handfuls and stir until wilted. If the pan looks dry, add another splash of water.'),
-            ('Add the lemon.', 'Remove from the heat, stir in lemon juice, then taste and season. Divide into portions and serve with bread.')
-        ],
-        swap='Cannellini, great northern or butter beans all work here. If using larger beans, let their texture guide the warming time.',
-        tip='Keep the garlic pale. If it burns, it can make the whole pan taste bitter. Lemon goes in at the end to keep its flavor lively.',
-        allergens='Bread may contain wheat and other allergens; check its label.',
-        extra='Want more crunch? Top your bowl with a few chopped radishes just before serving.',
-        related_notes=['make-beans-creamy', 'simple-lemon-dressing'],
-    ),
-    dict(
-        slug='blueberry-overnight-oats',
-        tested=False,
-        title='Blueberry overnight oats',
-        cat='BREAKFAST, ALREADY STARTED',
-        categories=['budget-friendly', 'plant-forward', 'make-ahead'],
-        primary_goal='A creamy breakfast you prepare the night before.',
-        why_it_works='Rolled oats soak overnight and soften without cooking. Yogurt adds creaminess and a mild tang. Fresh fruit goes on last so it stays bright.',
-        img='oats.png',
-        alt='Illustration of blueberry overnight oats in a glass jar with banana slices',
-        desc='A small evening task that leaves you with a creamy breakfast to finish in the morning.',
-        serves='1',
-        prep_time='5 min prep',
-        total_time='Chill overnight',
-        method='Make-ahead',
-        difficulty='Very easy',
-        time_estimate='5 min prep · Chill overnight',
-        time_glance='5 min + overnight',
-        card_time='Overnight',
-        ingredients=[
-            '½ cup (40 g) rolled oats',
-            '½ cup (120 ml) milk or an unsweetened plant drink',
-            '¼ cup (60 g) plain yogurt',
-            '½ cup (75 g) blueberries',
-            '½ banana, sliced just before serving',
-            'A pinch of cinnamon, optional'
-        ],
-        steps=[
-            ('Mix the base.', 'Stir the oats, milk, yogurt and optional cinnamon in a clean covered container.'),
-            ('Refrigerate overnight.', 'Cover and place in the refrigerator overnight so the oats soften. Do not leave the mixture on the counter.'),
-            ('Finish in the morning.', 'Stir, adding a splash of milk if you prefer a looser texture. Top with blueberries and freshly sliced banana, then serve.')
-        ],
-        swap='Use strawberries or diced pear in place of blueberries. Dairy-free yogurt and a plant drink also work, with a different taste and texture.',
-        tip='Use rolled oats for a little texture. Steel-cut oats need a different method and are not a direct substitute in this recipe.',
-        allergens='Contains milk if made with dairy. Check oats and alternative products for relevant allergen labels.',
-        extra='The fruit brings sweetness. Taste the finished bowl before deciding whether it needs anything else.',
-        related_notes=[],
-    ),
-    dict(
-        slug='crispy-sheet-pan-gnocchi',
-        title='Crispy sheet-pan gnocchi with cherry tomatoes & basil',
-        cat='SHEET-PAN · CRISP & TENDER',
-        categories=['budget-friendly', 'plant-forward', 'quick-easy', 'cozy-dinners'],
-        primary_goal='A sheet-pan dinner with crispy gnocchi and burst tomatoes.',
-        why_it_works='Dry-roasting shelf-stable gnocchi draws out moisture so the outside crisps while the centre stays pillowy. Burst tomatoes create a natural pan sauce with no extra effort.',
-        img='gnocchi.png',
-        alt='Crispy sheet-pan gnocchi with burst cherry tomatoes and torn basil leaves',
-        desc='Shelf-stable potato gnocchi roasted dry until crisp outside and pillowy inside, tossed with burst cherry tomatoes and fresh torn basil.',
-        serves='2',
-        prep_time='5 min prep',
-        total_time='25 min total',
-        method='Sheet-pan',
-        difficulty='Easy',
-        time_estimate='5 min prep · 25 min total · Sheet-pan',
-        time_glance='~25 mins total',
-        card_time='~25 mins',
-        tested=False,
-        ingredients=[
-            '1 package (16 oz / 450 g) shelf-stable potato gnocchi',
-            '2 cups (300 g) cherry or grape tomatoes',
-            'SECTION: For the dressing',
-            '2 tbsp olive oil',
-            '2 garlic cloves, smashed',
-            '½ tsp dried oregano',
-            '½ tsp kosher salt',
-            '¼ tsp black pepper',
-            '½ cup fresh basil leaves, torn',
-            '2 tbsp grated Parmesan or pecorino (optional)'
-        ],
-        steps=[
-            ('Heat the oven and prep pan.', 'Preheat oven to 425°F (220°C). Line a large rimmed baking sheet with parchment paper.'),
-            ('Toss directly on the sheet.', 'Add the uncooked gnocchi, whole cherry tomatoes, and smashed garlic cloves directly onto the pan. Drizzle with olive oil, oregano, salt, and black pepper. Toss with hands until evenly glossy, spreading in a single layer.'),
-            ('Roast until golden and blistered.', 'Bake for 20 to 25 minutes, tossing once halfway through, until gnocchi are deeply golden and crisp on the edges and tomatoes have burst and released juices.'),
-            ('Finish with basil and cheese.', 'Toss in the torn basil right on the hot sheet so it wilts slightly. Sprinkle with grated Parmesan and serve hot straight from the pan.')
-        ],
-        swap='No basil? Baby arugula or spinach folded in hot adds fresh peppery greens. For extra protein, toss cooked chickpeas or sliced sausage onto the sheet.',
-        tip='Do not boil the gnocchi first! Roasting dry shelf-stable gnocchi directly in olive oil creates a delightful crispy skin with a pillowy interior.',
-        allergens='Contains wheat (gnocchi). Contains milk if finished with cheese.',
-        extra='Leftovers reheat surprisingly well in a dry hot skillet or air fryer for 3 minutes to restore crispness.',
-        related_notes=[],
-    ),
-    dict(
-        slug='mediterranean-warm-green-lentils',
-        title='15-minute Mediterranean warm green lentils',
-        cat='PANTRY PROTEIN · WARM & EARTHY',
-        categories=['budget-friendly', 'protein-forward', 'plant-forward', 'quick-easy', 'pantry-meals', 'cozy-dinners'],
-        primary_goal='A warming lentil bowl ready in 15 minutes.',
-        why_it_works='Cumin and coriander bloom quickly in warm oil, coating the lentils with earthy fragrance. Lemon juice and zest added off the heat keeps the citrus bright against the warm spices.',
-        img='lentils.png',
-        alt='Warm green lentils with wilted spinach and crumbled goat cheese in a bowl',
-        desc='Tender cooked brown lentils warmed with shallots, cumin, lemon zest, baby spinach, and crumbled creamy goat cheese.',
-        serves='2',
-        prep_time='5 min prep',
-        total_time='15 min total',
-        method='One-pan',
-        difficulty='Easy',
-        time_estimate='5 min prep · 15 min total · One-pan',
-        time_glance='~15 mins total',
-        card_time='~15 mins',
-        tested=False,
-        ingredients=[
-            '1 can (15 oz / 400 g) cooked brown or green lentils, rinsed and drained',
-            '1 tbsp olive oil',
-            '1 medium shallot, finely chopped',
-            '1 garlic clove, minced',
-            '½ tsp ground cumin',
-            '¼ tsp ground coriander',
-            '2 cups (60 g) baby spinach leaves',
-            '1 tbsp fresh lemon juice, plus ½ tsp grated lemon zest',
-            '⅓ cup (50 g) crumbled goat cheese or feta',
-            'Salt and black pepper, to taste'
-        ],
-        steps=[
-            ('Soften the aromatics.', 'Heat olive oil in a medium skillet over medium heat. Add chopped shallot and cook 3 minutes until translucent. Stir in minced garlic, cumin, and coriander for 30 seconds until fragrant.'),
-            ('Warm the lentils.', 'Add the drained lentils and 2 tablespoons of water or broth. Simmer gently for 4–5 minutes, stirring occasionally, until hot throughout.'),
-            ('Wilt greens and brighten.', 'Stir in the spinach leaves in batches until just wilted (about 1 minute). Remove pan from heat and stir in lemon juice, lemon zest, salt, and pepper.'),
-            ('Plate and top.', 'Transfer to warm bowls. Scatter crumbled goat cheese or feta over top and finish with a light drizzle of olive oil.')
-        ],
-        swap='Swap canned brown lentils with cooked French Puy lentils. Dairy-free? Replace goat cheese with toasted walnuts or pumpkin seeds for richness and crunch.',
-        tip='Rinse canned lentils thoroughly under cold water to remove excess sodium and canning brine, then drain well before simmering with olive oil and spices.',
-        allergens='Contains milk (goat cheese / feta).',
-        extra='Delicious served as a standalone warm lunch with sourdough toast, or spooned over roasted sweet potatoes for dinner.',
-        related_notes=[],
-    ),
-    dict(
-        slug='smashed-cucumber-edamame-bowl',
-        title='Smashed cucumber, avocado & edamame crunch bowl',
-        cat='CRUNCHY NO-COOK · PLANT PROTEIN',
-        categories=['protein-forward', 'plant-forward', 'quick-easy', 'fresh-lunches'],
-        primary_goal='A bright no-cook bowl with plant protein and crunch.',
-        why_it_works='Smashing cucumbers fractures their surface, soaking up the ginger-sesame dressing much faster than clean slices. Avocado folded in last stays creamy and distinct.',
-        img='edamame-bowl.png',
-        alt='Smashed cucumber, avocado and edamame bowl with toasted sesame seeds',
-        desc='Crisp smashed Persian cucumbers, buttery avocado, shelled edamame, and toasted sesame seeds tossed in a ginger-tamari vinaigrette.',
-        serves='2',
-        prep_time='12 min prep',
-        total_time='12 min total',
-        method='No-cook',
-        difficulty='Very easy',
-        time_estimate='12 min prep · 12 min total · No-cook',
-        time_glance='~12 mins total',
-        card_time='~12 mins',
-        tested=False,
-        ingredients=[
-            '4 Persian mini cucumbers (approx. 300 g)',
-            '1 cup (150 g) shelled edamame, thawed',
-            '1 ripe avocado, diced',
-            '2 scallions, thinly sliced',
-            '1 tbsp tamari or low-sodium soy sauce',
-            '1 tbsp toasted sesame oil',
-            '1 tbsp rice vinegar',
-            '½ tsp grated fresh ginger',
-            '1 tsp maple syrup or honey',
-            '1 tbsp toasted sesame seeds'
-        ],
-        steps=[
-            ('Smash the cucumbers.', 'Place cucumbers on a cutting board. Use the flat side of a heavy chef knife or rolling pin to firmly smack them until split lengthwise. Cut diagonally into bite-sized jagged pieces.'),
-            ('Whisk dressing.', 'In a small bowl, whisk together tamari, toasted sesame oil, rice vinegar, grated ginger, and maple syrup until emulsified.'),
-            ('Combine bowl ingredients.', 'In a mixing bowl, toss smashed cucumbers, thawed edamame, and sliced scallions with the vinaigrette until well coated.'),
-            ('Fold avocado and garnish.', 'Gently fold in diced avocado so it stays intact. Divide into portions, scatter toasted sesame seeds over top, and serve immediately.')
-        ],
-        swap='Add cold cubed firm tofu for extra protein. Swap rice vinegar for fresh lime juice if you prefer a sharper citrus punch.',
-        tip='Smashing cucumbers fractures their cell walls and creates jagged edges, soaking up the ginger-sesame dressing ten times faster than clean slices.',
-        allergens='Contains soy (tamari/edamame) and sesame (oil/seeds).',
-        extra='Can be served over cold cooked soba noodles, brown rice, or crisp gem lettuce leaves for a heartier meal.',
-        related_notes=['keep-salad-crisp'],
-    ),
-    dict(
-        slug='garlic-butter-bean-mushroom-toast',
-        title='Garlic butter white bean & mushroom toast',
-        cat='COMFORT CLASSIC · SKILLET & TOAST',
-        categories=['budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'],
-        primary_goal='A satisfying skillet toast with mushrooms and creamy beans.',
-        why_it_works='Mushrooms browned dry (no early salt) develop deep caramel flavor. Mashing a third of the beans creates a creamy sauce while the rest stay whole and satisfying.',
-        img='mushroom-toast.png',
-        alt='Garlic butter white beans and mushrooms spooned over toasted sourdough bread',
-        desc='Caramelized cremini mushrooms and buttery cannellini beans simmered in garlic, thyme, and white wine vinegar on thick crusty sourdough.',
-        serves='2',
-        prep_time='8 min prep',
-        total_time='15 min total',
-        method='One-pan',
-        difficulty='Easy',
-        time_estimate='8 min prep · 15 min total · One-pan',
-        time_glance='~15 mins total',
-        card_time='~15 mins',
-        tested=False,
-        ingredients=[
-            '2 thick slices rustic sourdough bread',
-            '1 tbsp unsalted butter or olive oil',
-            '8 oz (225 g) cremini or button mushrooms, sliced',
-            '2 garlic cloves, finely grated',
-            '1 can (15 oz / 425 g) cannellini beans, rinsed and drained',
-            '½ cup (120 ml) vegetable stock or water',
-            '1 tsp fresh thyme leaves (or ¼ tsp dried thyme)',
-            '1 tsp white wine vinegar or lemon juice',
-            'Salt and cracked black pepper, to taste',
-            '1 tbsp chopped fresh chives or flat-leaf parsley'
-        ],
-        steps=[
-            ('Brown the mushrooms.', 'Melt butter in a large skillet over medium-high heat. Add sliced mushrooms in a single layer without moving for 3 minutes until deeply browned, then stir and cook 2 minutes more.'),
-            ('Add garlic and herbs.', 'Turn heat down to medium. Add grated garlic and thyme; stir for 1 minute until fragrant.'),
-            ('Simmer the beans.', 'Stir in the drained cannellini beans and stock. Bring to a simmer for 4 minutes. Lightly crush about one third of the beans with the back of a fork to create a creamy sauce.'),
-            ('Toast and assemble.', 'Toast the sourdough slices until deeply golden. Stir white wine vinegar, salt, and pepper into the beans. Spoon generously over hot toast and garnish with chopped chives.')
-        ],
-        swap='Use olive oil instead of butter for a completely dairy-free version. Any hearty beans (butter beans, great northern) work wonderfully.',
-        tip='Do not salt the mushrooms until after they have browned in the skillet! Salting early draws out moisture and steams them instead of creating deep caramelized flavor.',
-        allergens='Contains wheat (sourdough). Contains milk if butter is used.',
-        extra='A poached or fried runny egg on top turns this into a satisfying weekend brunch.',
-        related_notes=['make-beans-creamy'],
-    ),
-    dict(
-        slug='spiced-apple-cinnamon-porridge',
-        title='Spiced apple & cinnamon porridge',
-        cat='WARM MORNINGS · STOVETOP COMFORT',
-        categories=['budget-friendly', 'plant-forward', 'make-ahead', 'cozy-dinners'],
-        primary_goal='A warming stovetop porridge with spiced apples.',
-        why_it_works='Cooking the diced apples in butter and cinnamon first caramelizes their natural sugars before the oats go in, giving the whole bowl a warm bakery depth rather than a plain sweetness.',
-        img='porridge.png',
-        alt='Spiced apple and cinnamon porridge in a bowl topped with toasted pecans',
-        desc='Toasted oats simmered with warm cinnamon, nutmeg, diced crisp apples, and finished with toasted pecans and maple syrup.',
-        serves='2',
-        prep_time='5 min prep',
-        total_time='20 min total',
-        method='Stovetop',
-        difficulty='Easy',
-        time_estimate='5 min prep · 20 min total · Stovetop',
-        time_glance='~20 mins total',
-        card_time='~20 mins',
-        tested=False,
-        ingredients=[
-            '1 cup (90 g) quick-cooking steel-cut or rolled oats',
-            '1 cup (240 ml) water',
-            '1 cup (240 ml) whole milk or unsweetened almond milk',
-            '1 crisp sweet apple (such as Honeycrisp or Gala), diced',
-            '1 tbsp unsalted butter or coconut oil',
-            '1 tsp ground cinnamon',
-            '⅛ tsp ground nutmeg',
-            'Pinch of fine sea salt',
-            '2 tbsp pure maple syrup',
-            '2 tbsp chopped toasted pecans or walnuts'
-        ],
-        steps=[
-            ('Sauté spiced apples.', 'Melt butter in a medium saucepan over medium heat. Add diced apple and ½ tsp of the cinnamon. Cook for 3–4 minutes until apple starts to soften slightly at edges.'),
-            ('Cook the porridge.', 'Add oats, water, milk, remaining ½ tsp cinnamon, nutmeg, and a pinch of salt to the saucepan. Stir well and bring to a gentle bubble.'),
-            ('Simmer until thick.', 'Reduce heat to low and simmer, stirring frequently, for 10–12 minutes until oats are tender and porridge is thick and creamy. (5 minutes if using rolled oats).'),
-            ('Serve with toppings.', 'Ladle into serving bowls. Drizzle each with maple syrup and finish with chopped toasted pecans for crunch.')
-        ],
-        swap='Swap diced pears for the apple. In summer, substitute fresh peaches or berries. For extra protein, swirl in a tablespoon of chia seeds or almond butter.',
-        tip='Gently cooking the diced apples in melted butter and cinnamon before simmering with the oats caramelizes the natural sugars and infuses the entire bowl with warm bakery aroma.',
-        allergens='Contains milk (butter/milk) and tree nuts (pecans) if used. Oats may contain cross-contact gluten unless certified gluten-free.',
-        extra='Makes great meal prep: double the batch and reheat portions through the week with an extra splash of warm milk.',
-        related_notes=[],
-    ),
-    dict(
-        slug='5-minute-blender-hummus',
-        tested=False,
-        title='5-Minute Blender Hummus',
-        cat='NO TAHINI · FIVE MINUTES',
-        categories=['one-ingredient-different-ways', 'budget-friendly', 'quick-easy'],
-        primary_goal='Canned chickpeas, one blender, five minutes. No tahini required.',
-        why_it_works='Using just a few everyday ingredients and adjusting the water creates a creamy texture without tahini.',
-        img='hummus.webp',
-        alt='A shallow bowl of creamy blended hummus with a swirl on top, a drizzle of olive oil pooling in the center',
-        desc='Canned chickpeas, one blender, five minutes. No tahini required.',
-        serves='4',
-        prep_time='5 min prep',
-        total_time='5 min total',
-        method='No-cook',
-        difficulty='Very easy',
-        time_estimate='5 min prep · 5 min total · No-cook',
-        time_glance='~5 mins total',
-        card_time='~5 mins',
-        ingredients=[
-            '1 can (15 oz / 425 g) chickpeas, drained',
-            '2 tbsp olive oil',
-            '1 garlic clove',
-            'Juice of ½ lemon',
-            '¼ cup water (adjust to texture)',
-            'Salt to taste'
-        ],
-        steps=[
-            ('Blend until smooth.', 'Blend everything until nearly smooth, adding water gradually until you reach the texture you want.'),
-            ('Taste and adjust.', 'Taste and adjust salt or lemon before serving.')
-        ],
-        swap='Add 1 tbsp tahini if you have it — this version skips it on purpose to keep the ingredient list short.',
-        tip='Add the water gradually to control how thick or loose the hummus gets.',
-        allergens='None standard. Check all ingredient labels.',
-        extra='Serve with fresh vegetables or warm pita bread.',
-        related_notes=[],
-    ),
-    dict(
-        slug='oven-roasted-crispy-chickpeas',
-        tested=False,
-        title='Oven-Roasted Crispy Chickpeas',
-        cat='OVEN-ROASTED · SAVORY SNACK',
-        categories=['one-ingredient-different-ways', 'budget-friendly', 'plant-forward'],
-        primary_goal='The same can of chickpeas, crisped in the oven until they snap.',
-        why_it_works='Drying the chickpeas thoroughly before roasting removes surface moisture, allowing them to crisp up properly rather than steaming.',
-        img='roasted-chickpeas.webp',
-        alt='A small bowl of golden, visibly crisp roasted chickpeas with a light dusting of paprika',
-        desc='The same can of chickpeas, crisped in the oven until they snap.',
-        serves='2',
-        prep_time='5 min prep',
-        total_time='30 min total',
-        method='Oven',
-        difficulty='Easy',
-        time_estimate='5 min prep · 30 min total · Oven',
-        time_glance='~30 mins total',
-        card_time='~30 mins',
-        ingredients=[
-            '1 can (15 oz / 425 g) chickpeas, drained and thoroughly dried',
-            '1 tbsp olive oil',
-            'Salt to taste',
-            'Pinch of paprika (optional)'
-        ],
-        steps=[
-            ('Dry thoroughly.', 'Dry the chickpeas thoroughly before roasting — this is what makes them crisp instead of soft.'),
-            ('Roast until crisp.', 'Roast at 425°F/220°C for about 25-30 minutes, shaking the pan halfway through.'),
-            ('Season immediately.', 'Season immediately after they come out of the oven, while still hot.')
-        ],
-        swap='Try smoked paprika, cumin, or a pinch of cayenne for a different flavor profile.',
-        tip='The more carefully you dry the chickpeas with a clean towel, the crispier they will become in the oven.',
-        allergens='None standard. Check all ingredient labels.',
-        extra='Eat them on their own as a snack or scatter them over salads for extra crunch.',
-        related_notes=[],
-    )
+    dict(slug='lemon-chickpea-salad', title='Lemon chickpea salad', cat='THE NO-COOK LUNCH', categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'fresh-lunches', 'one-ingredient-different-ways'], img='chickpea.png', alt='Illustrated serving suggestion for lemon chickpea salad with cucumber and feta', desc='Crunchy cucumber, chickpeas and a lemony dressing. A fresh answer to the same old lunch.', serves='2', prep_time='10 min prep', total_time='10 min total'), 
+    dict(slug='lemon-white-bean-skillet', title='Lemony white beans & spinach', cat='ONE PAN, EVERYDAY INGREDIENTS', categories=['quick-easy', 'budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'], img='beans.png', alt='Illustration of white beans and spinach in a skillet with a light lemony sauce', desc='Soft white beans, wilted spinach and a little lemon. Keep some bread nearby for the pan juices.', serves='2', prep_time='5 min prep', total_time='15 min total'), 
+    dict(slug='blueberry-overnight-oats', title='Blueberry overnight oats', cat='BREAKFAST, ALREADY STARTED', categories=['budget-friendly', 'plant-forward', 'make-ahead'], img='oats.png', alt='Illustration of blueberry overnight oats in a glass jar with banana slices', desc='A small evening task that leaves you with a creamy breakfast to finish in the morning.', serves='1', prep_time='5 min prep', total_time='Chill overnight'), 
+    dict(slug='crispy-sheet-pan-gnocchi', title='Crispy sheet-pan gnocchi with cherry tomatoes & basil', cat='SHEET-PAN · CRISP & TENDER', categories=['budget-friendly', 'plant-forward', 'quick-easy', 'cozy-dinners'], img='gnocchi.png', alt='Crispy sheet-pan gnocchi with burst cherry tomatoes and torn basil leaves', desc='Shelf-stable potato gnocchi roasted dry until crisp outside and pillowy inside, tossed with burst cherry tomatoes and fresh torn basil.', serves='2', prep_time='5 min prep', total_time='25 min total'), 
+    dict(slug='mediterranean-warm-green-lentils', title='15-minute Mediterranean warm green lentils', cat='PANTRY PROTEIN · WARM & EARTHY', categories=['budget-friendly', 'protein-forward', 'plant-forward', 'quick-easy', 'pantry-meals', 'cozy-dinners'], img='lentils.png', alt='Warm green lentils with wilted spinach and crumbled goat cheese in a bowl', desc='Tender cooked brown lentils warmed with shallots, cumin, lemon zest, baby spinach, and crumbled creamy goat cheese.', serves='2', prep_time='5 min prep', total_time='15 min total'), 
+    dict(slug='smashed-cucumber-edamame-bowl', title='Smashed cucumber, avocado & edamame crunch bowl', cat='CRUNCHY NO-COOK · PLANT PROTEIN', categories=['protein-forward', 'plant-forward', 'quick-easy', 'fresh-lunches'], img='edamame-bowl.png', alt='Smashed cucumber, avocado and edamame bowl with toasted sesame seeds', desc='Crisp smashed Persian cucumbers, buttery avocado, shelled edamame, and toasted sesame seeds tossed in a ginger-tamari vinaigrette.', serves='2', prep_time='12 min prep', total_time='12 min total'), 
+    dict(slug='garlic-butter-bean-mushroom-toast', title='Garlic butter white bean & mushroom toast', cat='COMFORT CLASSIC · SKILLET & TOAST', categories=['budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'], img='mushroom-toast.png', alt='Garlic butter white beans and mushrooms spooned over toasted sourdough bread', desc='Caramelized cremini mushrooms and buttery cannellini beans simmered in garlic, thyme, and white wine vinegar on thick crusty sourdough.', serves='2', prep_time='8 min prep', total_time='15 min total'), 
+    dict(slug='spiced-apple-cinnamon-porridge', title='Spiced apple & cinnamon porridge', cat='WARM MORNINGS · STOVETOP COMFORT', categories=['budget-friendly', 'plant-forward', 'make-ahead', 'cozy-dinners'], img='porridge.png', alt='Spiced apple and cinnamon porridge in a bowl topped with toasted pecans', desc='Toasted oats simmered with warm cinnamon, nutmeg, diced crisp apples, and finished with toasted pecans and maple syrup.', serves='2', prep_time='5 min prep', total_time='20 min total'), 
+    dict(slug='5-minute-blender-hummus', title='5-Minute Blender Hummus', cat='NO TAHINI · FIVE MINUTES', categories=['one-ingredient-different-ways', 'budget-friendly', 'quick-easy'], img='hummus.webp', alt='A shallow bowl of creamy blended hummus with a swirl on top, a drizzle of olive oil pooling in the center', desc='Canned chickpeas, one blender, five minutes. No tahini required.', serves='4', prep_time='5 min prep', total_time='5 min total'), 
+    dict(slug='oven-roasted-crispy-chickpeas', title='Oven-Roasted Crispy Chickpeas', cat='OVEN-ROASTED · SAVORY SNACK', categories=['one-ingredient-different-ways', 'budget-friendly', 'plant-forward'], img='roasted-chickpeas.webp', alt='A small bowl of golden, visibly crisp roasted chickpeas with a light dusting of paprika', desc='The same can of chickpeas, crisped in the oven until they snap.', serves='2', prep_time='5 min prep', total_time='30 min total')
 ]
 
-BASE_URL = 'https://boredoftoast.com'
+BASE_URL = os.environ.get('SITE_BASE_URL', '').rstrip('/')
+ENVIRONMENT = os.environ.get('ENVIRONMENT', 'development')
 
 def og_meta_tags(title, desc, url, image_url, width=1200, height=900):
+    if not BASE_URL:
+        return ''
     return f'<meta property="og:type" content="article"><meta property="og:title" content="{html.escape(title, quote=True)}"><meta property="og:description" content="{html.escape(desc, quote=True)}"><meta property="og:url" content="{html.escape(url, quote=True)}"><meta property="og:site_name" content="Bored of Toast"><meta property="og:image" content="{html.escape(image_url, quote=True)}"><meta property="og:image:width" content="{width}"><meta property="og:image:height" content="{height}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{html.escape(title, quote=True)}"><meta name="twitter:description" content="{html.escape(desc, quote=True)}"><meta name="twitter:image" content="{html.escape(image_url, quote=True)}">'
 
 def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, og_img=None):
@@ -529,31 +135,44 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
     )
     # Canonical URL
     if canonical_path is None:
-        canonical_path = str(path).replace('\\', '/')
-    canonical_url = f'{BASE_URL}/{canonical_path}/' if canonical_path else f'{BASE_URL}/'
-    canonical_tag = f'<link rel="canonical" href="{html.escape(canonical_url, quote=True)}">'
+        canonical_path = str(path).replace('\\\\', '/')
+        
+    canonical_tag = ''
+    canonical_url = ''
+    if BASE_URL:
+        canonical_url = f'{BASE_URL}/{canonical_path}/' if canonical_path else f'{BASE_URL}/'
+        canonical_tag = f'<link rel="canonical" href="{html.escape(canonical_url, quote=True)}">'
+
+    robots_tag = '<meta name="robots" content="noindex, nofollow">' if ENVIRONMENT != 'production' else ''
 
     # JSON-LD block
     jsonld_tag = ''
     if jsonld:
-        jsonld_str = json.dumps(jsonld, ensure_ascii=False).replace('<', '\\u003c')
-        jsonld_tag = f'<script type="application/ld+json">{jsonld_str}</script>'
+        if isinstance(jsonld, list):
+            tags = []
+            for j in jsonld:
+                s = json.dumps(j, ensure_ascii=False).replace('<', '\\u003c')
+                tags.append(f'<script type="application/ld+json">{s}</script>')
+            jsonld_tag = "\n".join(tags)
+        else:
+            jsonld_str = json.dumps(jsonld, ensure_ascii=False).replace('<', '\u003c')
+            jsonld_tag = f'<script type="application/ld+json">{jsonld_str}</script>'
 
     # Open Graph block
     width, height = 1200, 900
     if og_img:
         image_name = og_img.rsplit('.', 1)[0]
         if (AS / f"{image_name}-1200.webp").exists():
-            image_url = f"{BASE_URL}/assets/{image_name}-1200.webp"
+            image_url = f"{BASE_URL}/assets/{image_name}-1200.webp" if BASE_URL else f"/assets/{image_name}-1200.webp"
         else:
-            image_url = f"{BASE_URL}/assets/{og_img}"
+            image_url = f"{BASE_URL}/assets/{og_img}" if BASE_URL else f"/assets/{og_img}"
     else:
-        image_url = f"{BASE_URL}/assets/logo.png"
+        image_url = f"{BASE_URL}/assets/logo.png" if BASE_URL else "/assets/logo.png"
         width, height = 210, 90
 
     og_tags = og_meta_tags(title, desc, canonical_url, image_url, width, height)
 
-    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 10 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/start-here/">Start here</a><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
+    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{robots_tag}{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 10 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/start-here/">Start here</a><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
     # Use pre-generated responsive images; building the site needs no image tool.
     def responsive_image(match):
         tag = match.group(0)
@@ -570,35 +189,57 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
     dest.write_text(doc, encoding='utf-8')
 
 def validate_models():
+    error_fields = []
+    def find_preencher(obj, path):
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                find_preencher(v, f"{path}.{k}")
+        elif isinstance(obj, list):
+            for i, v in enumerate(obj):
+                find_preencher(v, f"{path}[{i}]")
+        elif isinstance(obj, str):
+            if '[PREENCHER]' in obj:
+                error_fields.append(path)
+                
     for slug, d in MODELS.items():
-        json_str = json.dumps(d)
-        if '[PREENCHER]' in json_str:
-            raise ValueError(f"CRITICAL: Placeholder '[PREENCHER]' found in recipe_models.json for recipe '{slug}'. You must provide real verified data.")
+        find_preencher(d, slug)
+        
+    if error_fields:
+        import sys
+        print(f"CRITICAL: Placeholder \'[PREENCHER]\' found in recipe_models.json for the following fields:\n" + "\n".join(error_fields))
+        sys.exit(1)
 
 validate_models()
 
 def build_recipe_jsonld(r):
     """Build a JSON-LD Recipe object using only confirmed data."""
-    model_data = MODELS.get(r['slug']) or {}
-    ingredients_raw = r.get('ingredients', [])
+    slug = r['slug']
+    model_data = MODELS.get(slug) or {}
+    
+    # Read ingredients and steps from MODELS, not from `r` directly to unify the truth
+    from pilot_recipe import ingredient_text
+    
     ingredient_list = []
-    for item in ingredients_raw:
-        text = item['text'] if isinstance(item, dict) else item
-        if text.startswith('SECTION:'):
-            continue
-        ingredient_list.append(text)
+    for section in model_data.get('ingredients', []):
+        for item in section.get('items', []):
+            ingredient_list.append(ingredient_text(item))
 
-    steps_raw = r.get('steps', [])
     instructions = []
-    for i, step in enumerate(steps_raw):
-        title, action = step if isinstance(step, tuple) else (step.get('title', ''), step.get('action', ''))
-        instructions.append({
+    for i, step in enumerate(model_data.get('steps', [])):
+        title = step.get('phase', '') or step.get('cue', '') or f"Step {i+1}"
+        action = step.get('action', '')
+        step_ld = {
             '@type': 'HowToStep',
             'name': title,
-            'text': action
-        })
+            'text': action,
+            'url': f"{BASE_URL}/recipes/{slug}/#step-{i+1}" if BASE_URL else f"/recipes/{slug}/#step-{i+1}"
+        }
+        if step.get('image'):
+            step_ld['image'] = f"{BASE_URL}/assets/{step['image']}" if BASE_URL else f"/assets/{step['image']}"
+        instructions.append(step_ld)
 
-    img_name = r.get('img', '').replace('.png', '')
+    from pathlib import Path
+    img_name = Path(r.get('img', '')).stem
     images = []
     
     hero = model_data.get('hero_image')
@@ -611,6 +252,32 @@ def build_recipe_jsonld(r):
             webp = AS / f'{img_name}-{size}.webp'
             if webp.exists() and webp.stat().st_size > 0:
                 images.append(f'{BASE_URL}/assets/{img_name}-{size}.webp' if BASE_URL else f'/assets/{img_name}-{size}.webp')
+                
+    def parse_time(t_str):
+        if not t_str: return None
+        return f'PT{t_str.replace(" min prep","").replace(" min total","").replace("~","").strip()}M'
+        
+    prepTime = parse_time(r.get('prep_time'))
+    totalTime = parse_time(r.get('total_time'))
+    cookTime = None
+    if totalTime and prepTime:
+        total_m = int(r.get('total_time').replace(" min total","").replace("~","").strip())
+        prep_m = int(r.get('prep_time').replace(" min prep","").replace("~","").strip())
+        cookTime = f'PT{total_m - prep_m}M'
+        if total_m - prep_m == 0:
+            cookTime = 'PT0M'
+
+    author_name = model_data.get('author', {}).get('name') if isinstance(model_data.get('author'), dict) else model_data.get('author_name')
+    author_url = model_data.get('author', {}).get('url') if isinstance(model_data.get('author'), dict) else None
+    
+    author_obj = None
+    if author_name:
+        author_obj = {
+            '@type': 'Person',
+            'name': author_name
+        }
+        if author_url:
+            author_obj['url'] = author_url
 
     ld = {
         '@context': 'https://schema.org',
@@ -619,26 +286,25 @@ def build_recipe_jsonld(r):
         'description': r['desc'],
         'recipeIngredient': ingredient_list,
         'recipeInstructions': instructions,
-        'prepTime': f'PT{r.get("prep_time","").replace(" min prep","").replace("~","").strip()}M' if 'min' in r.get('prep_time', '') else None,
-        'totalTime': f'PT{r.get("total_time","").replace(" min total","").replace("~","").strip()}M' if 'min' in r.get('total_time', '') else None,
+        'prepTime': prepTime,
+        'cookTime': cookTime,
+        'totalTime': totalTime,
         'recipeYield': f'Serves {r.get("serves", 2)}',
         'recipeCategory': model_data.get('recipe_category') or [CAT_LABEL.get(c, c) for c in r.get('categories', [])[:2]],
         'recipeCuisine': model_data.get('recipe_cuisine'),
         'keywords': ", ".join(model_data.get('keywords', [])) if model_data.get('keywords') else None,
         'suitableForDiet': [f"https://schema.org/{d}" for d in model_data.get('suitable_for_diet', [])] if model_data.get('suitable_for_diet') else None,
         'image': images if images else None,
-        'author': {
-            '@type': 'Person',
-            'name': model_data.get('author', {}).get('name', 'Bored of Toast') if isinstance(model_data.get('author'), dict) else model_data.get('author_name', 'Bored of Toast')
-        },
-        'datePublished': model_data.get('datePublished', model_data.get('date_published', '2026-09-14')),
-        'dateModified': model_data.get('dateModified', model_data.get('date_modified')),
+        'author': author_obj,
+        'datePublished': model_data.get('datePublished', model_data.get('date_published')),
+        'dateModified': model_data.get('dateModified', model_data.get('date_modified', model_data.get('datePublished', model_data.get('date_published')))),
     }
     
     nut = model_data.get('nutrition')
     if nut:
         ld['nutrition'] = {
             '@type': 'NutritionInformation',
+            'servingSize': nut.get('servingSize'),
             'calories': f"{nut.get('calories')} calories" if nut.get('calories') else None,
             'proteinContent': f"{nut.get('protein_g') or nut.get('proteinContent', '').replace(' g', '')} grams" if (nut.get('protein_g') or nut.get('proteinContent')) else None,
             'carbohydrateContent': f"{nut.get('carbs_g') or nut.get('carbohydrateContent', '').replace(' g', '')} grams" if (nut.get('carbs_g') or nut.get('carbohydrateContent')) else None,
@@ -649,7 +315,7 @@ def build_recipe_jsonld(r):
         ld['nutrition'] = {k: v for k, v in ld['nutrition'].items() if v is not None}
         
     faq = model_data.get('faq')
-    if faq:
+    if faq and len(faq) >= 2:
         ld_faq = {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
@@ -677,7 +343,8 @@ def card(r, i, featured=False):
     else:
         media_html = f'''<div class="card-image card-placeholder" aria-label="{html.escape(r["alt"], quote=True)}"><div class="placeholder-art"><div class="placeholder-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span class="placeholder-status">IN DEVELOPMENT</span><span class="placeholder-note">Serving illustration in progress</span></div><span class="number">{idx_str}</span></div>'''
 
-    status_tag = '' if r.get('tested', False) else '<span class="dev-badge">Development edition</span>'
+    m = MODELS.get(r['slug']) or {}
+    status_tag = '<span class="dev-badge">Development edition</span>' if m.get('status') == 'development' else ''
 
     # Primary category label for the card
     cats = r.get('categories', [])
@@ -740,7 +407,7 @@ def editorial_transparency(compact=False):
     <p class="eyebrow">A NOTE ON HOW THIS SITE WORKS</p>
     <h2>What you should know.</h2>
     <ul class="transparency-list">
-      <li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>
+      { '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
       <li><strong>AI-generated images.</strong> Food photos on this site are illustrative images generated with AI. They do not show tested results.</li>
       <li><strong>Substitutions are suggestions.</strong> Substitution notes describe what may change — they are editorial suggestions, not tested equivalents.</li>
       <li><strong>No nutritional claims.</strong> We do not provide nutritional data, calorie counts, or health claims.</li>
@@ -1033,7 +700,7 @@ page(
         <li>Pantry: 3 tbsp olive oil, ¼ tsp oregano, salt and pepper</li>
       </ul>
     </div>
-    <p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>
+    { '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
   </div>
 </section>
 <section class="wrap article-section narrow">
@@ -1085,13 +752,13 @@ page(
 
   <section class="article-section" id="editorial">
     <h2>Our editorial approach</h2>
-    <p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>
+    { '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
     <p>Food images in this edition are AI-generated serving illustrations. They are not photographs of tested results. The goal for the public recipe collection is to replace them with authentic photographs from kitchen preparation.</p>
     
     <div class="callout" style="margin-top: 30px;">
       <h3 style="margin-bottom: 15px;">What you should know</h3>
       <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-        <li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>
+        { '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else '' }
         <li><strong>AI-generated images.</strong> Food photos are illustrative. They are not photographs of tested dishes.</li>
         <li><strong>Substitutions are editorial suggestions.</strong> They describe what may change — they are not tested equivalents.</li>
         <li><strong>No nutritional claims.</strong> We do not provide calorie counts, macronutrient data, or health claims.</li>

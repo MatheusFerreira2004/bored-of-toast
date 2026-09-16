@@ -196,7 +196,7 @@ def render_editorial_recipe(r,others):
                 <a class="button" href="#recipe">Ingredients & Method ↓</a>
                 <button class="button discreet outline" type="button" data-print>Print</button>
             </div>
-            <p class="small transparency-note">Development edition &middot; Awaits kitchen testing.</p>
+            { '<p class="small transparency-note">Development edition &middot; Awaits kitchen testing.</p>' if d.get('status') == 'development' else '' }
         </div>
         <div class="editorial-header-visual">
             <figure>
