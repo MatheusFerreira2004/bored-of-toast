@@ -16,6 +16,10 @@ Fridge and freezer figures are FoodSafety.gov and USDA FSIS values for
 storage at or below 40 F / 4 C and 0 F / -18 C. Freezer figures are
 quality windows, not safety limits; food held at 0 F stays safe
 indefinitely.
+
+Note on the safety block: reference_content._safety() reads 'intro' and
+'items' (a list of label/value pairs), not free-form paragraphs. Getting
+that shape wrong raises inside body() and the page is silently skipped.
 """
 
 SLUG = 'food-storage-chart'
@@ -175,21 +179,23 @@ PAGE = dict(
     ],
     safety=dict(
         heading='The two-hour rule',
-        body=[
-            'Bacteria multiply fastest between 40 F and 140 F / 4 C and '
-            '60 C, which the USDA calls the danger zone. Cooked food '
-            'should not sit in it for more than two hours in total, '
-            'counting the time it spent on the counter cooling.',
-            'Above 90 F / 32 C, that window drops to one hour. Keep the '
-            'fridge at or below 40 F / 4 C and the freezer at 0 F / '
-            '-18 C, and check it with a thermometer rather than trusting '
-            'the dial.',
-            'When in doubt, throw it out. Food that has been mishandled '
-            'can look, smell and taste completely normal, and no amount of '
-            'reheating fixes a toxin that has already formed.',
+        intro='Bacteria multiply fastest between 40 F and 140 F / 4 C and '
+              '60 C, which the USDA calls the danger zone. Cooked food '
+              'should not sit in it for more than two hours in total, '
+              'counting the time it spent cooling on the counter.',
+        items=[
+            ('Refrigerate within', '2 hours of cooking'),
+            ('Above 90 F / 32 C', '1 hour, not two'),
+            ('Fridge temperature', 'At or below 40 F / 4 C'),
+            ('Freezer temperature', '0 F / -18 C'),
+            ('Cooked rice', 'Into the fridge within 1 hour, reheat once only'),
+            ('Garlic or herbs in oil', 'Refrigerated, 4 days maximum'),
         ],
-        source=('USDA Food Safety and Inspection Service',
-                'https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f'),
+        outro='When in doubt, throw it out. Food that has been mishandled '
+              'can look, smell and taste completely normal, and no amount '
+              'of reheating destroys a toxin that has already formed. '
+              'Check the fridge with a thermometer rather than trusting '
+              'the dial.',
     ),
     sources=[
         ('Cold Food Storage Chart', 'FoodSafety.gov, U.S. Department of '
