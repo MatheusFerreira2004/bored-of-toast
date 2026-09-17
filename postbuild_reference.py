@@ -13,17 +13,33 @@ What this pass does, in order:
 
   1. Discovers charts/*.py and registers each PAGE into
      reference_content.PAGES so the existing renderers can see them.
-  2. Writes a page for each discovered chart, cloning a live reference
+  2. Renders every discovered chart as a smoke test and stops the build if
+     any of them raises. See the note on failure modes below.
+  3. Writes a page for each discovered chart, cloning a live reference
      page as the HTML shell so header, footer, stylesheet links and font
      preloads stay identical with no markup duplicated here.
-  3. Adds a card for every reference page to the kitchen notes grid, using
+  4. Adds a card for every reference page to the kitchen notes grid, using
      the real kn-guide-card markup so the cards inherit existing styles.
-  4. Corrects the library eyebrow, which claimed three techniques above a
+  5. Corrects the library eyebrow, which claimed three techniques above a
      grid that has since grown well past that.
-  5. Repairs robots.txt: generated directives were indented, which makes
+  6. Repairs robots.txt: generated directives were indented, which makes
      crawlers read none of them, and the sitemap line was relative when it
      must be absolute.
-  6. Appends sitemap entries for any reference page missing from it.
+  7. Appends sitemap entries for any reference page missing from it.
+
+On failure modes: chart generation used to sit inside a broad try/except
+that printed a warning and continued. Two charts in a row failed the same
+way under it, both by writing a block with the wrong keys. body() raised
+KeyError, the except swallowed it, the page was never written, and the
+build still reported success. The only visible symptom was a 404 on the new
+page while every older page kept working, which points at a broken build
+rather than at bad data and costs a long detour to diagnose.
+
+A malformed chart is a data error, not a transient condition, so it now
+stops the deploy instead of being logged and skipped. Charts are rendered
+through the real body() and article_jsonld() rather than validated against
+a key list kept here, which would drift from reference_content.py and only
+catch the mistakes it was written for.
 
 Scope note: postbuild.py still owns the recipe-side transforms and the
 first three reference pages. Both passes belong in build.py once the
@@ -36,6 +52,7 @@ import importlib.util
 import json
 import re
 import sys
+import traceback
 from html import escape as esc
 from pathlib import Path
 
@@ -59,11 +76,16 @@ def load_charts():
     """Import every chart module in charts/ and return {slug: PAGE}.
 
     Loaded by file path rather than package import so the directory needs
-    no entry in sys.path and a broken chart cannot take down the others.
+    no entry in sys.path. A module that fails to import or exposes no
+    SLUG/PAGE is a hard error: it means a chart was added and is not being
+    published, which is exactly the silent failure this pass now refuses to
+    absorb.
     """
     found = {}
     if not CHARTS.exists():
         return found
+
+    failures = []
 
     for path in sorted(CHARTS.glob('*.py')):
         if path.name.startswith('_'):
@@ -75,16 +97,31 @@ def load_charts():
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
         except Exception as exc:
-            print(f'  warn: {path.name} failed to load ({exc})')
+            failures.append((path.name, f'{type(exc).__name__}: {exc}'))
             continue
 
         slug = getattr(module, 'SLUG', None)
         page = getattr(module, 'PAGE', None)
-        if not slug or not isinstance(page, dict):
-            print(f'  warn: {path.name} has no SLUG/PAGE, skipped')
+
+        if not slug:
+            failures.append((path.name, 'no SLUG defined'))
+            continue
+        if not isinstance(page, dict):
+            failures.append((path.name, 'no PAGE dict defined'))
+            continue
+        if slug in found:
+            failures.append((path.name, f'duplicate slug: {slug}'))
             continue
 
         found[slug] = page
+
+    if failures:
+        print('\npostbuild_reference: chart modules could not be loaded\n')
+        for name, reason in failures:
+            print(f'  {name}: {reason}')
+        print('\nFix the module above. Every file in charts/ must import '
+              'cleanly and expose a SLUG string and a PAGE dict.\n')
+        sys.exit(1)
 
     return found
 
@@ -92,19 +129,80 @@ def load_charts():
 def register(charts):
     """Merge discovered charts into reference_content.PAGES.
 
-    Returns the module, or None if it cannot be imported. Registering makes
-    the existing body() and article_jsonld() renderers work on the charts
-    without duplicating any rendering code here.
+    Registering makes the existing body() and article_jsonld() renderers
+    work on the charts without duplicating any rendering code here. Failing
+    to import reference_content when charts are waiting is fatal, since
+    nothing would be published and the build would still pass.
     """
     try:
         import reference_content as rc
     except Exception as exc:
+        if charts:
+            print(f'\npostbuild_reference: reference_content not importable '
+                  f'({type(exc).__name__}: {exc})\n')
+            print(f'{len(charts)} chart(s) are waiting to be published and '
+                  'none can be rendered without it.\n')
+            sys.exit(1)
         print(f'  skip: reference_content not importable ({exc})')
         return None
 
     for slug, data in charts.items():
         rc.PAGES[slug] = data
     return rc
+
+
+# ---------------------------------------------------------------------------
+# Validation
+# ---------------------------------------------------------------------------
+
+def validate(rc, slugs):
+    """Render every chart before writing anything, and stop on any failure.
+
+    This is a smoke test, not a schema check. It calls the same renderers
+    the pass uses later, so a block written with the wrong keys surfaces
+    here with a traceback pointing at the line that raised, rather than as
+    a 404 with no explanation.
+
+    Rendering is cheap and the output is discarded. Correctness of the
+    error message matters more than the duplicated work.
+    """
+    if not slugs:
+        return
+
+    failures = []
+    for slug in slugs:
+        for label, render in (
+            ('body', rc.body),
+            ('article_jsonld', rc.article_jsonld),
+        ):
+            try:
+                render(slug)
+            except Exception as exc:
+                failures.append((slug, label, exc, traceback.format_exc()))
+                break
+
+    if not failures:
+        return
+
+    print('\n' + '=' * 70)
+    print('postbuild_reference: chart data is malformed, build stopped')
+    print('=' * 70 + '\n')
+
+    for slug, label, exc, tb in failures:
+        print(f'  chart:     {slug}')
+        print(f'  renderer:  {label}()')
+        print(f'  raised:    {type(exc).__name__}: {exc}\n')
+        for line in tb.rstrip().splitlines():
+            print(f'    {line}')
+        print()
+
+    print('-' * 70)
+    print('A KeyError here almost always means a block in charts/<name>.py '
+          'uses\nthe wrong keys. Compare that block against a chart that '
+          'renders:\nthe key names must match what reference_content.py '
+          'reads, exactly.')
+    print('-' * 70 + '\n')
+    sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
@@ -345,12 +443,25 @@ def main():
         print('postbuild_reference: done (nothing registered)')
         return 0
 
+    # Render everything before writing anything. A malformed chart stops the
+    # build here, with the traceback, instead of turning into a 404 later.
+    validate(rc, list(charts))
+    if charts:
+        print(f'  {len(charts)} chart(s) render cleanly')
+
+    written = 0
     for slug in charts:
-        try:
-            if write_page(rc, slug):
-                print(f'  page written: /kitchen-notes/{slug}/')
-        except Exception as exc:
-            print(f'  warn: {slug} generation failed: {exc}')
+        if write_page(rc, slug):
+            print(f'  page written: /kitchen-notes/{slug}/')
+            written += 1
+
+    if charts and written != len(charts):
+        print(f'\npostbuild_reference: {len(charts) - written} of '
+              f'{len(charts)} chart page(s) were not written\n')
+        print('Charts rendered cleanly, so this is a shell or output problem '
+              'rather than\nbad data. Check that the shell page exists in '
+              'dist/ and contains <main>.\n')
+        sys.exit(1)
 
     listing = DIST / 'kitchen-notes' / 'index.html'
     if listing.exists():
