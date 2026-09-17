@@ -5,9 +5,10 @@ touching build.py itself:
 
   1. Copies additive stylesheets into dist/
   2. Injects their <link> tags last, so the cascade order is correct
-  3. Removes the /start-here/ footer link, which 404s
-  4. Fixes the lowercase sentence start in the dressing step cue
-  5. Drops the leftover "development editions" line from kitchen notes
+  3. Hides the visible byline (kept in JSON-LD for SEO)
+  4. Removes the /start-here/ footer link, which 404s
+  5. Fixes the lowercase sentence start in the dressing step cue
+  6. Drops the leftover "development editions" line from kitchen notes
 
 Every step is wrapped so a failure here can never break a deploy. If a file
 or pattern is missing, the script logs and moves on.
@@ -26,6 +27,10 @@ DIST = ROOT / 'dist'
 # Stylesheets that are additive and must load after the existing ones.
 # Order matters: later files win in the cascade.
 ADDITIVE_CSS = ['related.css', 'polish.css']
+
+# Author name to strip from the visible page. The name stays in the
+# JSON-LD author field, which is what Google reads for E-E-A-T.
+AUTHOR_NAME = 'Matheus Ferreira'
 
 
 def copy_stylesheets():
@@ -88,6 +93,35 @@ def add_scroll_progress(html):
     return html.replace('</body>', script + '</body>', 1), True
 
 
+def remove_visible_byline(html):
+    """Remove the visible author byline from the page body.
+
+    The author remains in the Recipe JSON-LD, so structured data and SEO
+    signals are unaffected. Only the on-page credit line is removed.
+
+    Matches paragraphs such as:
+        <p class="small">By Matheus Ferreira · Published 2026-09-16</p>
+    """
+    changed = False
+
+    # Any element whose text starts with "By <author>"
+    pattern = re.compile(
+        r'<(p|span|div)\b[^>]*>\s*By\s+' + re.escape(AUTHOR_NAME) + r'[^<]*</\1>',
+        re.I,
+    )
+    html, count = pattern.subn('', html)
+    if count:
+        changed = True
+
+    # Fallback: a bare "By <author>" text node left outside a wrapper
+    bare = re.compile(r'\bBy\s+' + re.escape(AUTHOR_NAME) + r'\b\s*(·[^<]*)?')
+    html, count = bare.subn('', html)
+    if count:
+        changed = True
+
+    return html, changed
+
+
 def remove_start_here(html):
     """Remove the footer link to /start-here/, which no longer exists."""
     pattern = re.compile(r'<a[^>]*href="/start-here/"[^>]*>.*?</a>', re.I | re.S)
@@ -126,6 +160,7 @@ def fix_development_note(html):
 
 TRANSFORMS = [
     ('scroll progress', add_scroll_progress),
+    ('visible byline', remove_visible_byline),
     ('start-here link', remove_start_here),
     ('cue typo', fix_cue_typo),
     ('development note', fix_development_note),
