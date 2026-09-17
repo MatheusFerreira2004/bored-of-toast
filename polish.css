@@ -8,7 +8,7 @@
 
 /* --------------------------------------------------------------------------
    1. Barra de progresso de leitura
-   Mostra o quanto falta da página. Visível imediatamente ao rolar.
+   Alimentada pela variável --scroll, definida pelo script do postbuild.
    -------------------------------------------------------------------------- */
 
 body::before {
@@ -25,37 +25,65 @@ body::before {
 }
 
 /* --------------------------------------------------------------------------
-   2. Byline com mais presença
-   Hoje o crédito do autor passa despercebido. É sinal de confiança
-   para o leitor e para a avaliação de rede de anúncios.
+   2. Proporção de imagem — correção de cortes
+   --------------------------------------------------------------------------
+   Todos os assets do site são 4:3 (etapas 800×600, heros 1200×900).
+   Os containers pediam proporções diferentes com object-fit: cover,
+   o que cortava parte da ilustração — em imagem de comida o corte
+   remove justamente a borda da tigela.
+
+   A correção alinha os containers ao 4:3 nativo dos arquivos.
    -------------------------------------------------------------------------- */
 
-.recipe-intro .small,
-.reference-header .small {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 14px 7px 12px;
-  background: var(--pale);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 3px 3px 0;
-  font-size: .82rem;
-  color: var(--heading-color);
-  font-weight: 600;
+/* Cards de receita: era 3/2, cortava topo e base */
+.card-image img,
+.recipe-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
 }
 
-.recipe-intro .small::before,
-.reference-header .small::before {
-  content: '✎';
-  font-size: .95rem;
-  color: var(--accent);
-  line-height: 1;
+/* Hero da página de receita: era 1.22, cortava as laterais */
+.recipe-hero img,
+.editorial-recipe > figure img,
+.recipe-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+}
+
+/* Hero da home: era 1.06, corte mais agressivo do site */
+.hero-feature > img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+/* Imagens de etapa: mantêm a ilustração inteira, sem recorte */
+.instruction-figure img,
+.instruction-image {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+  border-radius: 2px;
+}
+
+/* Kitchen notes */
+.kn-hero img,
+.kn-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+}
+
+/* Cards do bloco de relacionadas */
+.rr-thumb img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 /* --------------------------------------------------------------------------
    3. Passos com marcação de leitura
-   Uma linha fina acompanha o passo sob o cursor. Ajuda em cozinha,
-   onde o usuário perde o ponto com frequência.
    -------------------------------------------------------------------------- */
 
 .steps li,
@@ -72,8 +100,7 @@ body::before {
 
 /* --------------------------------------------------------------------------
    4. Bloco de fontes com mais destaque
-   Curadoria creditada é o pilar editorial do site. Hoje fica discreto
-   demais no fim da página.
+   Curadoria creditada é o pilar editorial do site.
    -------------------------------------------------------------------------- */
 
 .recipe-sources,
@@ -156,7 +183,6 @@ body::before {
 
 /* --------------------------------------------------------------------------
    7. Ligações internas mais evidentes dentro do texto
-   Páginas por sessão é a alavanca de receita mais barata que existe.
    -------------------------------------------------------------------------- */
 
 .kn-recipe-link,
@@ -184,7 +210,7 @@ body::before {
 }
 
 /* --------------------------------------------------------------------------
-   8. Mobile: tipografia e respiro
+   8. Mobile: tipografia, respiro e imagem
    A maior parte do tráfego de Pinterest e Facebook chega por celular.
    -------------------------------------------------------------------------- */
 
@@ -198,6 +224,13 @@ body::before {
 
   .steps li {
     margin-bottom: 26px;
+  }
+
+  /* No mobile o card tem pouca altura útil: 4:3 evita corte severo */
+  .card-image img,
+  .recipe-card img,
+  .rr-thumb img {
+    aspect-ratio: 4 / 3;
   }
 
   /* Alvos de toque com área adequada */
@@ -221,7 +254,6 @@ body::before {
 
 /* --------------------------------------------------------------------------
    9. Foco visível e consistente
-   Acessibilidade e critério de avaliação de qualidade.
    -------------------------------------------------------------------------- */
 
 a:focus-visible,
@@ -234,7 +266,6 @@ summary:focus-visible {
 
 /* --------------------------------------------------------------------------
    10. Impressão
-   Receita impressa e colada na cozinha traz o usuário de volta.
    -------------------------------------------------------------------------- */
 
 @media print {
