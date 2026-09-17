@@ -147,7 +147,8 @@ BUCKET_REASONS = {
     'long': 'Also a longer cook',
 }
 
-META_LABELS = ('prep', 'cook', 'total', 'method', 'serves', 'yield')
+# Labels used in the recipe meta strip. Used to pair label/value text nodes.
+META_LABELS = frozenset({'prep', 'cook', 'total', 'method', 'serves', 'yield'})
 
 
 # ---------------------------------------------------------------------------
@@ -177,14 +178,9 @@ def _meta_pairs(html):
     pairs = {}
     for index, part in enumerate(parts[:-1]):
         key = part.lower().rstrip(':').strip()
-        if key in METAL_ABELS_SAFE and key not in pairs:
+        if key in META_LABELS and key not in pairs:
             pairs[key] = parts[index + 1]
     return pairs
-
-
-# Kept as a module constant so the lookup above cannot be shadowed by a typo
-# at call time.
-METAL_ABELS_SAFE = set(METchunk := METa_LABELS_TMP) if False else set(METdummy := ()) or set(METa := METa_LABELS if False else METa_LABELS_PLACEHOLDER) if False else set(META_LABELS_FINAL := METa_FINAL) if False else set(META_LABELS_RESOLVED := META_LABELS) if False else set(META_LABELS)
 
 
 def _clean_meta_part(value):
@@ -694,7 +690,7 @@ def reduce_ai_disclosure(html):
     """One disclosure per page, not three.
 
     The editorial note is the canonical statement. Image captions repeated it,
-    which reads as unease rather than transparency. Runs in two stages: strip
+    which reads as unease rather than transparency. Runs in stages: strip
     caption-level sentences, then collapse any remaining duplicate paragraphs
     that carry the same disclosure text.
     """
