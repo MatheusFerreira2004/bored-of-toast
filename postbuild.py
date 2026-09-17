@@ -12,6 +12,18 @@ touching build.py itself:
   7. Fixes the lowercase sentence start in the dressing step cue
   8. Drops the leftover "development editions" line from kitchen notes
 
+Editorial pass (added later):
+
+  9. Removes the "04 / Where to begin" home section. It repeated the category
+     grid directly above it and every one of its five cards linked to
+     /start-here/, a route that does not exist.
+ 10. Trims the home category grid from nine cards to five and shortens the
+     label descriptions to one short line each.
+ 11. Reduces the AI-image disclosure to a single mention per page.
+ 12. Rewrites the About page body.
+ 13. Removes the duplicated Prep line in swap blocks.
+ 14. Fixes British spellings and the overnight oats card meta.
+
 Every step is wrapped so a failure here can never break a deploy. If a file
 or pattern is missing, the script logs and moves on.
 
@@ -39,6 +51,57 @@ ADDITIVE_CSS = ['related.css', 'polish.css']
 # Author name to strip from the visible page. The name stays in the
 # JSON-LD author field, which is what Google reads for E-E-A-T.
 AUTHOR_NAME = 'Matheus Ferreira'
+
+# Category cards removed from the home grid. Nine cards is a wall; these four
+# overlap heavily with the five that stay, and the full list is one click away
+# on /recipes/.
+DROPPED_HOME_CATEGORIES = [
+    'protein-forward',
+    'pantry-meals',
+    'fresh-lunches',
+    'cozy-dinners',
+]
+
+# Long category blurbs shortened to a single scannable line.
+CATEGORY_DESC_REWRITES = {
+    'Short active prep and few steps — ready in 25 minutes or less. '
+    'Overnight resting is noted separately.':
+        'Ready in 25 minutes or less.',
+    'Meals built around pantry staples and everyday affordable ingredients.':
+        'Built on pantry staples.',
+    'Vegetables, fruits, grains, and legumes take the lead. '
+    'Not necessarily vegan.':
+        'Vegetables and legumes take the lead.',
+    'Suited to preparing in advance or starting the night before — '
+    'breakfast included.':
+        'Prep ahead, or start the night before.',
+    'The same starting ingredient taken in entirely different directions.':
+        'One ingredient, taken somewhere new.',
+    'Recipes centred on legumes, eggs, tofu, or other protein sources.':
+        'Legumes, eggs and tofu take the lead.',
+    'Built around shelf-stable ingredients you are likely to have at home.':
+        'Shelf-stable ingredients only.',
+    'No-cook or minimal-cook options that feel light and lively at midday.':
+        'Light, no-cook midday meals.',
+    'Warm skillet and stovetop meals that are comforting after a long day.':
+        'Warm skillet meals for tired evenings.',
+}
+
+# British spellings, on a US-facing site.
+SPELLING_FIXES = [
+    (r'\bcentred\b', 'centered'),
+    (r'\bcentre\b', 'center'),
+    (r'\bflavour\b', 'flavor'),
+    (r'\bflavours\b', 'flavors'),
+    (r'\bcolour\b', 'color'),
+]
+
+ABOUT_MARKER = 'data-about-rewritten'
+
+ABOUT_DESCRIPTION = (
+    'How Bored of Toast develops its recipes: sources we read, what we write '
+    'ourselves, how images are made, and who is responsible for corrections.'
+)
 
 
 # ---------------------------------------------------------------------------
@@ -228,6 +291,127 @@ def inject_related(html, slug, all_recipes):
 
 
 # ---------------------------------------------------------------------------
+# About page
+# ---------------------------------------------------------------------------
+
+def about_body():
+    """A single-voice About page.
+
+    Three things the previous version was missing and that matter both to a
+    reader and to an ad network review: a named person responsible for the
+    content, a plain description of how recipes are actually produced, and no
+    future-tense language about a site that is already live.
+
+    The #editorial anchor is preserved because pages across the site link to it.
+    """
+    return (
+        f'<section class="wrap section" {ABOUT_MARKER}>'
+        '<p class="eyebrow">ABOUT BORED OF TOAST</p>'
+        '<h1>Everyday ingredients.<br>'
+        '<span class="title-flourish">Better meals.</span></h1>'
+        '<p class="lead">Most of us cook the same handful of meals on repeat. '
+        'Not for lack of skill, but for lack of ideas at seven on a Tuesday. '
+        'This site exists to widen that rotation without sending you to the '
+        'store for anything unusual.</p>'
+        '</section>'
+
+        '<section class="wrap section">'
+        '<div class="section-top">'
+        '<div><p class="eyebrow">WHAT YOU WILL FIND</p>'
+        '<h2>Familiar ingredients, '
+        '<span class="serif-accent">new directions.</span></h2></div>'
+        '<p>Every recipe starts from something already in your kitchen: a can '
+        'of beans, a bag of lentils, oats, a cucumber. The interesting part is '
+        'what happens next.</p>'
+        '</div>'
+        '<ul class="transparency-list">'
+        '<li><strong>Recipes that adjust to you.</strong> Change the number of '
+        'servings and every quantity recalculates. Swap an ingredient and we '
+        'tell you what shifts in texture, flavor and timing, rather than '
+        'leaving you to guess.</li>'
+        '<li><strong>Kitchen notes.</strong> Short pieces on technique: why '
+        'beans turn creamy, when garlic burns, how to keep a salad crisp. '
+        'These outlast any single recipe.</li>'
+        '<li><strong>Reference charts.</strong> Cooking times, conversions and '
+        'substitutions in one place, so you are not searching with one hand '
+        'while stirring with the other.</li>'
+        '</ul>'
+        '</section>'
+
+        '<section class="wrap section" id="editorial">'
+        '<div class="section-top">'
+        '<div><p class="eyebrow">OUR EDITORIAL APPROACH</p>'
+        '<h2>How these recipes '
+        '<span class="serif-accent">are made.</span></h2></div>'
+        '<p>You should know how anything you cook from was put together. '
+        'Here is ours, without the gloss.</p>'
+        '</div>'
+        '<ul class="transparency-list">'
+        '<li><strong>We start from cooks who have made the dish.</strong> Each '
+        'recipe begins by reading several published versions from established '
+        'food publications and experienced home cooks, comparing where they '
+        'agree and where they diverge, and explaining the reasoning behind the '
+        'version we land on. Every source we consulted is linked at the foot '
+        'of the recipe.</li>'
+        '<li><strong>We write the method ourselves.</strong> Ingredient lists '
+        'are factual. The instructions, explanations and notes on this site '
+        'are our own writing, not a single source rephrased.</li>'
+        '<li><strong>Food images are illustrations.</strong> The food images '
+        'here are generated with AI to show a serving suggestion. They are not '
+        'photographs of a plate we cooked.</li>'
+        '<li><strong>Substitutions are suggestions.</strong> Swap notes '
+        'describe what is likely to change. They are editorial guidance, not '
+        'tested equivalents.</li>'
+        '<li><strong>Nutrition is estimated.</strong> Where nutrition appears, '
+        'it is calculated from the listed ingredients and rounded. It is not '
+        'laboratory verified and will vary with brands and portioning.</li>'
+        '<li><strong>No medical advice.</strong> Nothing here is dietary or '
+        'medical advice. For health guidance, speak to a qualified '
+        'professional.</li>'
+        '</ul>'
+        '<p><a class="text-link" href="/contact/">'
+        'Found something that looks wrong? Tell us ↗</a></p>'
+        '</section>'
+
+        '<section class="wrap section">'
+        '<div class="section-top">'
+        '<div><p class="eyebrow">WHO WRITES IT</p>'
+        '<h2>A small operation.</h2></div>'
+        '<p>No test kitchen, no staff of twenty, no sponsored recipes.</p>'
+        '</div>'
+        '<p>Bored of Toast is researched, written and edited by Matheus '
+        'Ferreira, who is also the person who fixes it when something is '
+        'wrong. Questions, corrections and suggestions all reach the same '
+        'inbox.</p>'
+        '<p><a class="text-link" href="/contact/">Get in touch ↗</a></p>'
+        '</section>'
+    )
+
+
+def rewrite_about(html):
+    """Swap the About page body and its meta description."""
+    if ABOUT_MARKER in html:
+        return html, False
+
+    m = re.search(r'(<main[^>]*>)(.*?)(</main>)', html, re.S | re.I)
+    if not m:
+        return html, False
+
+    html = html[:m.start()] + m.group(1) + about_body() + m.group(3) + html[m.end():]
+
+    # The old description claimed the site tests and photographs recipes.
+    for attr in ('name="description"', 'property="og:description"',
+                 'name="twitter:description"'):
+        html = re.sub(
+            r'(<meta ' + re.escape(attr) + r' content=")[^"]*(")',
+            lambda mm: mm.group(1) + esc(ABOUT_DESCRIPTION, quote=True) + mm.group(2),
+            html,
+        )
+
+    return html, True
+
+
+# ---------------------------------------------------------------------------
 # Generic transforms
 # ---------------------------------------------------------------------------
 
@@ -298,9 +482,125 @@ def remove_visible_byline(html):
 
 
 def remove_start_here(html):
-    pattern = re.compile(r'<a[^>]*href="/start-here/"[^>]*>.*?</a>', re.I | re.S)
+    pattern = re.compile(r'<a[^>]*href="/start-here/[^"]*"[^>]*>.*?</a>', re.I | re.S)
     new_html, count = pattern.subn('', html)
     return new_html, count > 0
+
+
+def remove_where_to_begin(html):
+    """Drop the "04 / Where to begin" home section.
+
+    It asked the reader to pick a direction and then offered the same choices
+    as the category grid immediately above it, under different names. All five
+    of its cards also pointed at /start-here/, which does not exist.
+    """
+    pattern = re.compile(
+        r'<section[^>]*class="[^"]*home-paths[^"]*"[^>]*>.*?</section>',
+        re.I | re.S,
+    )
+    new_html, count = pattern.subn('', html)
+    if count:
+        return new_html, True
+
+    # Fallback: match on the id if the class ever changes.
+    pattern = re.compile(
+        r'<section[^>]*id="start-here-paths"[^>]*>.*?</section>',
+        re.I | re.S,
+    )
+    new_html, count = pattern.subn('', html)
+    return new_html, count > 0
+
+
+def trim_category_cards(html):
+    """Nine category cards is a wall. Keep five distinct axes."""
+    changed = False
+    for slug in DROPPED_HOME_CATEGORIES:
+        pattern = re.compile(
+            r'<a[^>]*class="[^"]*cat-card[^"]*"[^>]*id="home-cat-'
+            + re.escape(slug) + r'"[^>]*>.*?</a>',
+            re.I | re.S,
+        )
+        html, count = pattern.subn('', html)
+        if count:
+            changed = True
+    return html, changed
+
+
+def shorten_category_descs(html):
+    changed = False
+    for long_text, short_text in CATEGORY_DESC_REWRITES.items():
+        if long_text in html:
+            html = html.replace(long_text, short_text)
+            changed = True
+    return html, changed
+
+
+def reduce_ai_disclosure(html):
+    """One disclosure per page, not three.
+
+    The editorial note is the canonical statement. Image captions repeat it,
+    which reads as unease rather than transparency. Only strips the caption
+    version when another disclosure survives on the page.
+    """
+    mentions = len(re.findall(r'AI[- ]generated', html, re.I))
+    if mentions < 2:
+        return html, False
+
+    changed = False
+    for phrase in (' Image is AI-generated.', ' Images are AI-generated.',
+                   ' Image is AI generated.'):
+        if phrase in html:
+            html = html.replace(phrase, '')
+            changed = True
+
+    # Recipe pages carry both a badge and the editorial note; keep the note.
+    html, count = re.subn(
+        r'\s*<span[^>]*class="[^"]*ai-badge[^"]*"[^>]*>.*?</span>',
+        '',
+        html,
+        flags=re.I | re.S,
+    )
+    if count and 'editorial-note' in html:
+        changed = True
+
+    return html, changed
+
+
+def remove_development_leftovers(html):
+    """Clear the last of the pre-launch labelling."""
+    changed = False
+    replacements = [
+        (r'\s*<span aria-hidden="true">·</span>\s*Recipe in development', ''),
+        (r'\s*·\s*Recipe in development', ''),
+        (r'\s*<span[^>]*class="[^"]*dev-badge[^"]*"[^>]*>.*?</span>', ''),
+    ]
+    for pattern, repl in replacements:
+        html, count = re.subn(pattern, repl, html, flags=re.I | re.S)
+        if count:
+            changed = True
+    return html, changed
+
+
+def dedupe_swap_prep(html):
+    """Swap blocks repeated the same sentence under Adjust and Prep."""
+    pattern = re.compile(
+        r'(<strong>Adjust:</strong>\s*)(.*?)(<br><strong>Prep:</strong>\s*)(.*?)'
+        r'(?=</p>)',
+        re.S,
+    )
+
+    hits = [0]
+
+    def repl(m):
+        adjust = m.group(2).strip()
+        prep = m.group(4).strip()
+        if adjust and adjust == prep:
+            hits[0] += 1
+            return m.group(1) + m.group(2)
+        return m.group(0)
+
+    html = pattern.sub(repl, html)
+    return html, hits[0] > 0
 
 
 def fix_cue_typo(html):
@@ -308,6 +608,25 @@ def fix_cue_typo(html):
     if needle not in html:
         return html, False
     return html.replace(needle, 'combined. Whisk again'), True
+
+
+def fix_spelling(html):
+    changed = False
+    for pattern, repl in SPELLING_FIXES:
+        html, count = re.subn(pattern, repl, html)
+        if count:
+            changed = True
+    return html, changed
+
+
+def fix_overnight_card_meta(html):
+    """"Serves 1 · Chill overnight" hid the five minutes of actual work."""
+    pattern = re.compile(
+        r'(class="card-bottom".{0,200}?)Chill overnight',
+        re.I | re.S,
+    )
+    new_html, count = pattern.subn(lambda m: m.group(1) + '5 min + overnight', html)
+    return new_html, count > 0
 
 
 def fix_development_note(html):
@@ -324,8 +643,16 @@ def fix_development_note(html):
 TRANSFORMS = [
     ('scroll progress', add_scroll_progress),
     ('visible byline', remove_visible_byline),
+    ('where-to-begin section', remove_where_to_begin),
     ('start-here link', remove_start_here),
+    ('category cards trimmed', trim_category_cards),
+    ('category blurbs', shorten_category_descs),
+    ('ai disclosure', reduce_ai_disclosure),
+    ('development leftovers', remove_development_leftovers),
+    ('swap prep duplicate', dedupe_swap_prep),
     ('cue typo', fix_cue_typo),
+    ('spelling', fix_spelling),
+    ('overnight card meta', fix_overnight_card_meta),
     ('development note', fix_development_note),
 ]
 
@@ -352,6 +679,7 @@ def main():
     counts = {name: 0 for name, _ in TRANSFORMS}
     counts['stylesheets'] = 0
     counts['related block'] = 0
+    counts['about rewrite'] = 0
     touched = 0
 
     for page in pages:
@@ -362,6 +690,16 @@ def main():
             continue
 
         original = html
+        parts = page.relative_to(DIST).parts
+
+        # About body first, so later transforms see the new copy
+        if parts and parts[0] == 'about':
+            try:
+                html, changed = rewrite_about(html)
+                if changed:
+                    counts['about rewrite'] += 1
+            except Exception as exc:
+                print(f'  warn: about rewrite failed: {exc}')
 
         if available:
             html, changed = inject_stylesheets(html, available)
@@ -369,7 +707,6 @@ def main():
                 counts['stylesheets'] += 1
 
         # Related recipes, only on individual recipe pages
-        parts = page.relative_to(DIST).parts
         if len(parts) == 3 and parts[0] == 'recipes' and parts[2] == 'index.html':
             try:
                 html, changed = inject_related(html, parts[1], recipes)
