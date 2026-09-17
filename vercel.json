@@ -1,4 +1,6 @@
 {
-  "buildCommand": "python build.py && python postbuild.py && python postbuild_index.py && python postbuild_herbs.py",
-  "outputDirectory": "dist"
+  "version": 2,
+  "buildCommand": "python build.py && python postbuild.py && python postbuild_reference.py",
+  "outputDirectory": "dist",
+  "framework": null
 }
