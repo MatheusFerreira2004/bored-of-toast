@@ -1,0 +1,198 @@
+/* ==========================================================================
+   related.css — bloco de receitas relacionadas
+   --------------------------------------------------------------------------
+   Arquivo aditivo. Usa apenas os tokens já definidos em style.css.
+   Reaproveita a linguagem visual dos cards existentes: cantos suaves,
+   borda em --line, hover com deslocamento e sombra sólida.
+   ========================================================================== */
+
+.rr-block {
+  margin-block: 56px 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.rr-block .eyebrow {
+  color: var(--olive);
+  margin-bottom: 10px;
+}
+
+.rr-block h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+  margin-bottom: 26px;
+}
+
+.rr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Card
+   -------------------------------------------------------------------------- */
+
+.rr-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 rgba(var(--shadow-rgb), .07);
+  transition: transform .22s var(--ease, ease),
+              box-shadow .22s var(--ease, ease),
+              border-color .22s ease;
+}
+
+.rr-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(var(--shadow-rgb), .12);
+  border-color: var(--accent);
+}
+
+.rr-thumb {
+  display: block;
+  overflow: hidden;
+  background: var(--pale);
+}
+
+.rr-thumb img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform .5s var(--ease, ease);
+}
+
+.rr-card:hover .rr-thumb img {
+  transform: scale(1.04);
+}
+
+.rr-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 16px 18px 18px;
+}
+
+/* Motivo editorial da sugestão — o que diferencia de uma grade genérica */
+.rr-reason {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.rr-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.22rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  color: var(--heading-color);
+  transition: color .2s ease;
+}
+
+.rr-card:hover .rr-title {
+  color: var(--brand-blue);
+}
+
+.rr-meta {
+  font-size: .82rem;
+  color: var(--olive);
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Tablet
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .rr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Terceiro card ocupa a largura toda para não deixar buraco na grade */
+  .rr-card:nth-child(3) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .rr-card:nth-child(3) .rr-thumb {
+    flex: 0 0 38%;
+  }
+
+  .rr-card:nth-child(3) .rr-thumb img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .rr-card:nth-child(3) .rr-body {
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — rolagem horizontal
+   Preserva as três sugestões sem empilhar e alongar a página.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 620px) {
+  .rr-block {
+    margin-top: 44px;
+    padding-top: 32px;
+  }
+
+  .rr-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .rr-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rr-card {
+    flex: 0 0 74%;
+    scroll-snap-align: start;
+  }
+
+  /* Desfaz o tratamento especial do terceiro card no tablet */
+  .rr-card:nth-child(3) {
+    grid-column: auto;
+    flex-direction: column;
+  }
+
+  .rr-card:nth-child(3) .rr-thumb {
+    flex: none;
+  }
+
+  .rr-card:nth-child(3) .rr-thumb img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .rr-title {
+    font-size: 1.12rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Impressão
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .rr-block {
+    display: none;
+  }
+}
