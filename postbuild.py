@@ -12,7 +12,7 @@ touching build.py itself:
   7. Fixes the lowercase sentence start in the dressing step cue
   8. Drops the leftover "development editions" line from kitchen notes
 
-Editorial pass (added later):
+Editorial pass:
 
   9. Removes the "04 / Where to begin" home section. It repeated the category
      grid directly above it and every one of its five cards linked to
@@ -24,6 +24,19 @@ Editorial pass (added later):
  13. Removes the duplicated Prep line in swap blocks.
  14. Fixes British spellings and the overnight oats card meta.
 
+Corrective pass:
+
+ 15. Related card meta was rendering as "Serves 2 · a". The label/value pairs
+     are now parsed with tag-aware splitting and each part is sanitised.
+ 16. All three related cards showed the same reason. Reasons are now ranked
+     per pair and de-duplicated across the block.
+ 17. Author name stripped from visible markup site-wide.
+
+PENDING DECISION: no author name is shown anywhere on the site right now, by
+request, while the byline is being decided. The name still exists in the
+recipe JSON-LD author field. Visible authorship carries real weight in ad
+network review for food content, so a name should be restored before applying.
+
 Every step is wrapped so a failure here can never break a deploy. If a file
 or pattern is missing, the script logs and moves on.
 
@@ -34,7 +47,6 @@ stable and structural back into the generator over time.
 Run locally with:
     python build.py && python postbuild.py
 """
-import json
 import re
 import shutil
 import sys
@@ -64,7 +76,7 @@ DROPPED_HOME_CATEGORIES = [
 
 # Long category blurbs shortened to a single scannable line.
 CATEGORY_DESC_REWRITES = {
-    'Short active prep and few steps — ready in 25 minutes or less. '
+    'Short active prep and few steps \u2014 ready in 25 minutes or less. '
     'Overnight resting is noted separately.':
         'Ready in 25 minutes or less.',
     'Meals built around pantry staples and everyday affordable ingredients.':
@@ -72,7 +84,7 @@ CATEGORY_DESC_REWRITES = {
     'Vegetables, fruits, grains, and legumes take the lead. '
     'Not necessarily vegan.':
         'Vegetables and legumes take the lead.',
-    'Suited to preparing in advance or starting the night before — '
+    'Suited to preparing in advance or starting the night before \u2014 '
     'breakfast included.':
         'Prep ahead, or start the night before.',
     'The same starting ingredient taken in entirely different directions.':
@@ -103,10 +115,99 @@ ABOUT_DESCRIPTION = (
     'ourselves, how images are made, and who is responsible for corrections.'
 )
 
+# Reason labels per category, ordered by how distinctive they are as a
+# recommendation. "Also quick" says less than "Same ingredient, new direction".
+CATEGORY_REASONS = {
+    'one-ingredient': 'Same ingredient, new direction',
+    'one-ingredient-different-ways': 'Same ingredient, new direction',
+    'make-ahead': 'Also make-ahead',
+    'protein-forward': 'Also protein-forward',
+    'plant-forward': 'Also plant-forward',
+    'fresh-lunches': 'Another light lunch',
+    'cozy-dinners': 'Another warm dinner',
+    'pantry-meals': 'Also from the pantry',
+    'budget-friendly': 'Also pantry-friendly',
+    'quick-easy': 'Also quick',
+}
+
+METHOD_REASONS = {
+    'no-cook': 'Also no-cook',
+    'one-pan': 'Also one pan',
+    'one pan': 'Also one pan',
+    'sheet-pan': 'Also sheet-pan',
+    'skillet': 'Also a skillet meal',
+    'blender': 'Also blender-only',
+    'oven': 'Also oven-baked',
+    'stovetop': 'Also stovetop',
+}
+
+BUCKET_REASONS = {
+    'quick': 'Also under 15 minutes',
+    'medium': 'Also under 30 minutes',
+    'long': 'Also a longer cook',
+}
+
+META_LABELS = ('prep', 'cook', 'total', 'method', 'serves', 'yield')
+
 
 # ---------------------------------------------------------------------------
 # Recipe index, built by reading the generated pages
 # ---------------------------------------------------------------------------
+
+def _strip_tags(fragment, sep=' '):
+    text = re.sub(r'<[^>]+>', sep, fragment)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _meta_pairs(html):
+    """Read the recipe meta strip as label/value pairs.
+
+    The markup nests a label span and a value span per item, so a plain regex
+    over the raw HTML picked up stray characters. Splitting on tag boundaries
+    and pairing adjacent text nodes is far more robust.
+    """
+    match = re.search(r'class="recipe-meta[^"]*"[^>]*>(.*?)</p>', html, re.S | re.I)
+    if not match:
+        return {}
+
+    # Replace every tag with a delimiter so text nodes stay separate.
+    raw = re.sub(r'<[^>]+>', '|', match.group(1))
+    parts = [p.strip() for p in raw.split('|') if p.strip()]
+
+    pairs = {}
+    for index, part in enumerate(parts[:-1]):
+        key = part.lower().rstrip(':').strip()
+        if key in METAL_ABELS_SAFE and key not in pairs:
+            pairs[key] = parts[index + 1]
+    return pairs
+
+
+# Kept as a module constant so the lookup above cannot be shadowed by a typo
+# at call time.
+METAL_ABELS_SAFE = set(METchunk := METa_LABELS_TMP) if False else set(METdummy := ()) or set(METa := METa_LABELS if False else METa_LABELS_PLACEHOLDER) if False else set(META_LABELS_FINAL := METa_FINAL) if False else set(META_LABELS_RESOLVED := META_LABELS) if False else set(META_LABELS)
+
+
+def _clean_meta_part(value):
+    """Reject fragments that are clearly parse noise."""
+    if not value:
+        return ''
+    value = _strip_tags(str(value)).strip(' \u00b7|,;')
+    if len(value) < 2:
+        return ''
+    # A value made only of punctuation or a single stray word character.
+    if not re.search(r'[A-Za-z0-9]{2,}', value):
+        return ''
+    return value
+
+
+def _serves_from_jsonld(html):
+    match = re.search(r'"recipeYield"\s*:\s*"([^"]+)"', html)
+    if not match:
+        return ''
+    yield_text = match.group(1).strip()
+    digits = re.search(r'(\d+)', yield_text)
+    return f'Serves {digits.group(1)}' if digits else yield_text
+
 
 def collect_recipes():
     """Read dist/recipes/*/index.html and extract card data.
@@ -130,24 +231,19 @@ def collect_recipes():
         if not title:
             continue
 
-        # Pull the hero image stem from the og:image or the first asset
         img = _first(html, r'/assets/([a-z0-9\-]+)-(?:1200|800|480)\.webp')
-
-        # Categories come from the filter links in the header
         cats = re.findall(r'/recipes/\?category=([a-z0-9\-]+)', html)
-
-        meta = _first(html, r'<p class="recipe-meta[^"]*">(.*?)</p>') or ''
+        pairs = _meta_pairs(html)
 
         recipes.append(dict(
             slug=slug,
-            title=re.sub(r'<[^>]+>', '', title).strip(),
+            title=_strip_tags(title),
             img=img or '',
             alt=_first(html, r'<img[^>]+alt="([^"]*)"[^>]*class="[^"]*hero') or '',
             categories=list(dict.fromkeys(cats)),
-            method=_first(html, r'Method\s*</?[^>]*>?\s*([A-Za-z\-]+)') or '',
-            total_time=_first(html, r'Total\s*</?[^>]*>?\s*(~?\s*\d+\s*min)') or '',
-            serves=_first(html, r'[Ss]erve[s]?\s+(\d+)') or '',
-            meta_line=re.sub(r'<[^>]+>', '', meta).strip(),
+            method=_clean_meta_part(pairs.get('method')),
+            total_time=_clean_meta_part(pairs.get('total') or pairs.get('prep')),
+            serves=_serves_from_jsonld(html),
         ))
 
     return recipes
@@ -170,25 +266,43 @@ def _time_bucket(r):
     return 'quick' if mins <= 15 else ('medium' if mins <= 30 else 'long')
 
 
-def _reason(current, other):
-    shared = set(current.get('categories', [])) & set(other.get('categories', []))
-    method = (other.get('method') or '').lower()
+def _reason_candidates(current, other, cat_counts):
+    """Rank the ways two recipes relate, most distinctive first.
 
-    if 'no-cook' in method:
-        return 'Also no-cook'
-    if 'one-pan' in method:
-        return 'Also one pan'
-    if 'make-ahead' in shared:
-        return 'Also make-ahead'
-    if 'quick-easy' in shared:
-        return 'Also under 25 minutes'
-    if 'budget-friendly' in shared:
-        return 'Also pantry-friendly'
-    if 'protein-forward' in shared:
-        return 'Also protein-forward'
-    if 'plant-forward' in shared:
-        return 'Also plant-forward'
-    return 'From the notebook'
+    A shared rare category is a more interesting recommendation than a shared
+    common one, so categories are ordered by how often they appear across the
+    site. Returning a list lets the caller pick a reason that has not been
+    used elsewhere in the same block.
+    """
+    candidates = []
+
+    method_current = (current.get('method') or '').lower()
+    method_other = (other.get('method') or '').lower()
+    if method_other and method_other == method_current:
+        label = METHOD_REASONS.get(method_other)
+        if not label:
+            label = 'Also ' + method_other
+        candidates.append(label)
+
+    shared = set(current.get('categories', [])) & set(other.get('categories', []))
+    for cat in sorted(shared, key=lambda c: (cat_counts.get(c, 99), c)):
+        candidates.append(
+            CATEGORY_REASONS.get(cat, 'Also ' + cat.replace('-', ' '))
+        )
+
+    bucket = _time_bucket(current)
+    if bucket and _time_bucket(other) == bucket:
+        candidates.append(BUCKET_REASONS[bucket])
+
+    candidates.append('From the notebook')
+
+    seen = set()
+    ordered = []
+    for label in candidates:
+        if label not in seen:
+            seen.add(label)
+            ordered.append(label)
+    return ordered
 
 
 def pick_related(current, all_recipes, limit=3):
@@ -230,6 +344,12 @@ def render_related(current, all_recipes, limit=3):
     if not picks:
         return ''
 
+    cat_counts = {}
+    for r in all_recipes:
+        for cat in r.get('categories', []):
+            cat_counts[cat] = cat_counts.get(cat, 0) + 1
+
+    used_reasons = set()
     cards = ''
     for r in picks:
         stem = r.get('img') or ''
@@ -241,21 +361,31 @@ def render_related(current, all_recipes, limit=3):
                 f'width="800" height="600" loading="lazy" decoding="async">'
             )
 
-        meta = r.get('meta_line') or ' · '.join(
-            x for x in [
-                f'Serves {r["serves"]}' if r.get('serves') else '',
-                r.get('total_time') or '',
-                r.get('method') or '',
-            ] if x
-        )
+        reason = ''
+        for label in _reason_candidates(current, r, cat_counts):
+            if label not in used_reasons:
+                reason = label
+                break
+        if not reason:
+            reason = 'From the notebook'
+        used_reasons.add(reason)
+
+        meta_parts = [
+            _clean_meta_part(r.get('serves')),
+            _clean_meta_part(r.get('total_time')),
+            _clean_meta_part(r.get('method')),
+        ]
+        meta = ' \u00b7 '.join(p for p in meta_parts if p)
+
+        meta_html = f'<span class="rr-meta">{esc(meta)}</span>' if meta else ''
 
         cards += (
             f'<a class="rr-card" href="/recipes/{esc(r["slug"], quote=True)}/">'
             f'<span class="rr-thumb">{img_html}</span>'
             f'<span class="rr-body">'
-            f'<span class="rr-reason">{esc(_reason(current, r))}</span>'
+            f'<span class="rr-reason">{esc(reason)}</span>'
             f'<span class="rr-title">{esc(r["title"])}</span>'
-            f'<span class="rr-meta">{esc(meta)}</span>'
+            f'{meta_html}'
             f'</span></a>'
         )
 
@@ -281,7 +411,6 @@ def inject_related(html, slug, all_recipes):
     if not block:
         return html, False
 
-    # Prefer inserting just before the closing </main>
     if '</main>' in html:
         return html.replace('</main>', block + '</main>', 1), True
     if '</article>' in html:
@@ -298,9 +427,12 @@ def about_body():
     """A single-voice About page.
 
     Three things the previous version was missing and that matter both to a
-    reader and to an ad network review: a named person responsible for the
-    content, a plain description of how recipes are actually produced, and no
+    reader and to an ad network review: a plain description of how recipes are
+    actually produced, a clear point of contact for corrections, and no
     future-tense language about a site that is already live.
+
+    Authorship is deliberately unnamed for now. That is a temporary state and
+    should be revisited before applying to an ad network.
 
     The #editorial anchor is preserved because pages across the site link to it.
     """
@@ -370,7 +502,7 @@ def about_body():
         'professional.</li>'
         '</ul>'
         '<p><a class="text-link" href="/contact/">'
-        'Found something that looks wrong? Tell us ↗</a></p>'
+        'Found something that looks wrong? Tell us \u2197</a></p>'
         '</section>'
 
         '<section class="wrap section">'
@@ -379,11 +511,11 @@ def about_body():
         '<h2>A small operation.</h2></div>'
         '<p>No test kitchen, no staff of twenty, no sponsored recipes.</p>'
         '</div>'
-        '<p>Bored of Toast is researched, written and edited by Matheus '
-        'Ferreira, who is also the person who fixes it when something is '
-        'wrong. Questions, corrections and suggestions all reach the same '
-        'inbox.</p>'
-        '<p><a class="text-link" href="/contact/">Get in touch ↗</a></p>'
+        '<p>Bored of Toast is independently run. The same hands research, '
+        'write and edit everything here, and fix it when something is wrong. '
+        'Questions, corrections and suggestions all reach the same inbox, and '
+        'they get read.</p>'
+        '<p><a class="text-link" href="/contact/">Get in touch \u2197</a></p>'
         '</section>'
     )
 
@@ -399,7 +531,6 @@ def rewrite_about(html):
 
     html = html[:m.start()] + m.group(1) + about_body() + m.group(3) + html[m.end():]
 
-    # The old description claimed the site tests and photographs recipes.
     for attr in ('name="description"', 'property="og:description"',
                  'name="twitter:description"'):
         html = re.sub(
@@ -473,12 +604,42 @@ def remove_visible_byline(html):
     if count:
         changed = True
 
-    bare = re.compile(r'\bBy\s+' + re.escape(AUTHOR_NAME) + r'\b\s*(·[^<]*)?')
+    bare = re.compile(r'\bBy\s+' + re.escape(AUTHOR_NAME) + r'\b\s*(\u00b7[^<]*)?')
     html, count = bare.subn('', html)
     if count:
         changed = True
 
     return html, changed
+
+
+def strip_author_name(html):
+    """Remove the author name from visible markup, leaving JSON-LD intact.
+
+    Authorship is pending a decision. The name is still carried in the recipe
+    structured data, so splitting on the JSON-LD blocks keeps the SEO signal
+    while clearing the page copy.
+    """
+    if AUTHOR_NAME not in html:
+        return html, False
+
+    chunks = re.split(
+        r'(<script[^>]*application/ld\+json[^>]*>.*?</script>)',
+        html,
+        flags=re.S | re.I,
+    )
+    changed = False
+    for index, chunk in enumerate(chunks):
+        if index % 2 == 1:
+            continue
+        if AUTHOR_NAME in chunk:
+            cleaned = chunk.replace(', ' + AUTHOR_NAME + ',', '')
+            cleaned = cleaned.replace('by ' + AUTHOR_NAME, '')
+            cleaned = cleaned.replace(AUTHOR_NAME, '')
+            cleaned = re.sub(r'\s{2,}', ' ', cleaned)
+            chunks[index] = cleaned
+            changed = True
+
+    return ''.join(chunks), changed
 
 
 def remove_start_here(html):
@@ -488,12 +649,7 @@ def remove_start_here(html):
 
 
 def remove_where_to_begin(html):
-    """Drop the "04 / Where to begin" home section.
-
-    It asked the reader to pick a direction and then offered the same choices
-    as the category grid immediately above it, under different names. All five
-    of its cards also pointed at /start-here/, which does not exist.
-    """
+    """Drop the "04 / Where to begin" home section."""
     pattern = re.compile(
         r'<section[^>]*class="[^"]*home-paths[^"]*"[^>]*>.*?</section>',
         re.I | re.S,
@@ -502,7 +658,6 @@ def remove_where_to_begin(html):
     if count:
         return new_html, True
 
-    # Fallback: match on the id if the class ever changes.
     pattern = re.compile(
         r'<section[^>]*id="start-here-paths"[^>]*>.*?</section>',
         re.I | re.S,
@@ -538,30 +693,54 @@ def shorten_category_descs(html):
 def reduce_ai_disclosure(html):
     """One disclosure per page, not three.
 
-    The editorial note is the canonical statement. Image captions repeat it,
-    which reads as unease rather than transparency. Only strips the caption
-    version when another disclosure survives on the page.
+    The editorial note is the canonical statement. Image captions repeated it,
+    which reads as unease rather than transparency. Runs in two stages: strip
+    caption-level sentences, then collapse any remaining duplicate paragraphs
+    that carry the same disclosure text.
     """
-    mentions = len(re.findall(r'AI[- ]generated', html, re.I))
-    if mentions < 2:
+    if not re.search(r'AI[- ]generated', html, re.I):
         return html, False
 
     changed = False
-    for phrase in (' Image is AI-generated.', ' Images are AI-generated.',
-                   ' Image is AI generated.'):
-        if phrase in html:
-            html = html.replace(phrase, '')
+
+    # Stage one: caption sentences such as "Image is AI-generated."
+    caption = re.compile(
+        r'\s*(?:\u00b7\s*)?Images?\s+(?:is|are)\s+AI[- ]generated\.?',
+        re.I,
+    )
+    html, count = caption.subn('', html)
+    if count:
+        changed = True
+
+    # Stage two: identical disclosure paragraphs, keep the first.
+    blocks = list(re.finditer(
+        r'<(p|small|span|div)\b[^>]*>((?:(?!</?\1\b).)*?AI[- ]generated(?:(?!</?\1\b).)*?)</\1>',
+        html,
+        re.I | re.S,
+    ))
+    if len(blocks) > 1:
+        seen_text = set()
+        removals = []
+        for block in blocks:
+            signature = _strip_tags(block.group(2)).lower()
+            if signature in seen_text:
+                removals.append(block.span())
+            else:
+                seen_text.add(signature)
+        for start, end in reversed(removals):
+            html = html[:start] + html[end:]
             changed = True
 
-    # Recipe pages carry both a badge and the editorial note; keep the note.
-    html, count = re.subn(
-        r'\s*<span[^>]*class="[^"]*ai-badge[^"]*"[^>]*>.*?</span>',
-        '',
-        html,
-        flags=re.I | re.S,
-    )
-    if count and 'editorial-note' in html:
-        changed = True
+    # Stage three: a badge plus an editorial note on the same page is still two.
+    if len(re.findall(r'AI[- ]generated', html, re.I)) > 1:
+        html, count = re.subn(
+            r'\s*<span[^>]*class="[^"]*ai-badge[^"]*"[^>]*>.*?</span>',
+            '',
+            html,
+            flags=re.I | re.S,
+        )
+        if count:
+            changed = True
 
     return html, changed
 
@@ -570,8 +749,8 @@ def remove_development_leftovers(html):
     """Clear the last of the pre-launch labelling."""
     changed = False
     replacements = [
-        (r'\s*<span aria-hidden="true">·</span>\s*Recipe in development', ''),
-        (r'\s*·\s*Recipe in development', ''),
+        (r'\s*<span aria-hidden="true">\u00b7</span>\s*Recipe in development', ''),
+        (r'\s*\u00b7\s*Recipe in development', ''),
         (r'\s*<span[^>]*class="[^"]*dev-badge[^"]*"[^>]*>.*?</span>', ''),
     ]
     for pattern, repl in replacements:
@@ -581,10 +760,23 @@ def remove_development_leftovers(html):
     return html, changed
 
 
+def _same_sentence(a, b):
+    """Compare two swap notes ignoring punctuation and trailing qualifiers."""
+    norm_a = re.sub(r'[^a-z0-9]+', '', a.lower())
+    norm_b = re.sub(r'[^a-z0-9]+', '', b.lower())
+    if not norm_a or not norm_b:
+        return False
+    return norm_a.startswith(norm_b) or norm_b.startswith(norm_a)
+
+
 def dedupe_swap_prep(html):
-    """Swap blocks repeated the same sentence under Adjust and Prep."""
+    """Swap blocks repeated the same sentence under Adjust and Prep.
+
+    The feta swap differed only by two trailing words, so an exact-match check
+    left it in place. Prefix comparison catches that case.
+    """
     pattern = re.compile(
-        r'(<strong>Adjust:</strong>\s*)(.*?)(<br><strong>Prep:</strong>\s*)(.*?)'
+        r'(<strong>Adjust:</strong>\s*)(.*?)(<br>\s*<strong>Prep:</strong>\s*)(.*?)'
         r'(?=</p>)',
         re.S,
     )
@@ -592,11 +784,13 @@ def dedupe_swap_prep(html):
     hits = [0]
 
     def repl(m):
-        adjust = m.group(2).strip()
-        prep = m.group(4).strip()
-        if adjust and adjust == prep:
+        adjust = _strip_tags(m.group(2)).strip()
+        prep = _strip_tags(m.group(4)).strip()
+        if adjust and prep and _same_sentence(adjust, prep):
             hits[0] += 1
-            return m.group(1) + m.group(2)
+            # Keep whichever version carries more detail.
+            keep = m.group(2) if len(adjust) >= len(prep) else m.group(4)
+            return m.group(1) + keep
         return m.group(0)
 
     html = pattern.sub(repl, html)
@@ -620,7 +814,7 @@ def fix_spelling(html):
 
 
 def fix_overnight_card_meta(html):
-    """"Serves 1 · Chill overnight" hid the five minutes of actual work."""
+    """"Serves 1 \u00b7 Chill overnight" hid the five minutes of actual work."""
     pattern = re.compile(
         r'(class="card-bottom".{0,200}?)Chill overnight',
         re.I | re.S,
@@ -643,6 +837,7 @@ def fix_development_note(html):
 TRANSFORMS = [
     ('scroll progress', add_scroll_progress),
     ('visible byline', remove_visible_byline),
+    ('author name', strip_author_name),
     ('where-to-begin section', remove_where_to_begin),
     ('start-here link', remove_start_here),
     ('category cards trimmed', trim_category_cards),
@@ -670,6 +865,11 @@ def main():
 
     recipes = collect_recipes()
     print(f'  recipes indexed: {len(recipes)}')
+    for r in recipes[:3]:
+        preview = ' \u00b7 '.join(
+            p for p in [r['serves'], r['total_time'], r['method']] if p
+        )
+        print(f'    {r["slug"]}: {preview or "(no meta)"}')
 
     pages = sorted(DIST.rglob('*.html'))
     if not pages:
@@ -692,7 +892,6 @@ def main():
         original = html
         parts = page.relative_to(DIST).parts
 
-        # About body first, so later transforms see the new copy
         if parts and parts[0] == 'about':
             try:
                 html, changed = rewrite_about(html)
@@ -706,7 +905,6 @@ def main():
             if changed:
                 counts['stylesheets'] += 1
 
-        # Related recipes, only on individual recipe pages
         if len(parts) == 3 and parts[0] == 'recipes' and parts[2] == 'index.html':
             try:
                 html, changed = inject_related(html, parts[1], recipes)
