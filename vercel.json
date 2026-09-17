@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "python build.py",
+  "buildCommand": "python build.py && python postbuild.py",
   "outputDirectory": "dist",
   "framework": null
 }
