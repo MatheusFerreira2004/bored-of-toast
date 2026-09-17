@@ -1,4 +1,4 @@
 {
-  "buildCommand": "python build.py && python postbuild.py && python postbuild_index.py",
+  "buildCommand": "python build.py && python postbuild.py && python postbuild_index.py && python postbuild_herbs.py",
   "outputDirectory": "dist"
 }
