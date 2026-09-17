@@ -32,6 +32,19 @@ Corrective pass:
      per pair and de-duplicated across the block.
  17. Author name stripped from visible markup site-wide.
 
+Reference pages and schema repair:
+
+ 18. Generates the reference pages defined in reference_content.py. Each one
+     reuses the shell of an existing generated page, so the header, footer,
+     fonts and stylesheets match the rest of the site exactly. Three routes
+     under /kitchen-notes/, carrying Article schema rather than Recipe.
+ 19. Repairs suitableForDiet and keywords in the recipe JSON-LD. Both fields
+     are stored as plain strings in the data model, and the generator
+     iterates them character by character, producing entries such as
+     "https://schema.org/V" and a keyword list split into single letters.
+     The repair reassembles both. It is written generically, so it also
+     covers future recipes stored the same way.
+
 PENDING DECISION: no author name is shown anywhere on the site right now, by
 request, while the byline is being decided. The name still exists in the
 recipe JSON-LD author field. Visible authorship carries real weight in ad
@@ -47,6 +60,7 @@ stable and structural back into the generator over time.
 Run locally with:
     python build.py && python postbuild.py
 """
+import json
 import re
 import shutil
 import sys
@@ -59,6 +73,9 @@ DIST = ROOT / 'dist'
 # Stylesheets that are additive and must load after the existing ones.
 # Order matters: later files win in the cascade.
 ADDITIVE_CSS = ['related.css', 'polish.css']
+
+# Loaded only on reference pages, in the same way recipe.css is scoped.
+REFERENCE_CSS = 'reference.css'
 
 # Author name to strip from the visible page. The name stays in the
 # JSON-LD author field, which is what Google reads for E-E-A-T.
@@ -114,6 +131,21 @@ ABOUT_DESCRIPTION = (
     'How Bored of Toast develops its recipes: sources we read, what we write '
     'ourselves, how images are made, and who is responsible for corrections.'
 )
+
+# Full schema.org diet names, used to rebuild truncated URLs.
+DIET_NAMES = [
+    'DiabeticDiet',
+    'GlutenFreeDiet',
+    'HalalDiet',
+    'HinduDiet',
+    'KosherDiet',
+    'LowCalorieDiet',
+    'LowFatDiet',
+    'LowLactoseDiet',
+    'LowSaltDiet',
+    'VeganDiet',
+    'VegetarianDiet',
+]
 
 # Reason labels per category, ordered by how distinctive they are as a
 # recommendation. "Also quick" says less than "Same ingredient, new direction".
@@ -248,6 +280,298 @@ def collect_recipes():
 def _first(text, pattern):
     m = re.search(pattern, text, re.I | re.S)
     return m.group(1).strip() if m else None
+
+
+# ---------------------------------------------------------------------------
+# JSON-LD repair
+# ---------------------------------------------------------------------------
+
+def _rebuild_diet(values):
+    """Reassemble diet URLs that were split into single characters.
+
+    The data model stores suitable_for_diet as "VegetarianDiet, GlutenFreeDiet"
+    and the generator iterates the string, so each character becomes its own
+    URL. Joining the fragments back together and matching against the known
+    schema.org names recovers the intended list.
+    """
+    tail = 'https://schema.org/'
+    letters = ''
+    for value in values:
+        if not isinstance(value, str):
+            continue
+        letters += value[len(tail):] if value.startswith(tail) else value
+
+    # Drop separators the original string carried.
+    letters = letters.replace(',', '').replace(' ', '')
+    if not letters:
+        return []
+
+    found = []
+    cursor = 0
+    guard = 0
+    while cursor < len(letters) and guard < 40:
+        guard += 1
+        for name in DIET_NAMES:
+            if letters.startswith(name, cursor):
+                found.append(tail + name)
+                cursor += len(name)
+                break
+        else:
+            cursor += 1
+
+    return list(dict.fromkeys(found))
+
+
+def _looks_fragmented(values):
+    """True when a list is mostly single characters, i.e. an iterated string."""
+    tail = 'https://schema.org/'
+    if not isinstance(values, list) or len(values) < 4:
+        return False
+    short = 0
+    for value in values:
+        if not isinstance(value, str):
+            return False
+        body = value[len(tail):] if value.startswith(tail) else value
+        if len(body.strip()) <= 2:
+            short += 1
+    return short >= len(values) * 0.6
+
+
+def _repair_node(node):
+    """Repair one JSON-LD object in place. Returns True if anything changed."""
+    changed = False
+    if not isinstance(node, dict):
+        return changed
+
+    diets = node.get('suitableForDiet')
+    if _looks_fragmented(diets):
+        rebuilt = _rebuild_diet(diets)
+        if rebuilt:
+            node['suitableForDiet'] = rebuilt
+            changed = True
+        else:
+            node.pop('suitableForDiet', None)
+            changed = True
+
+    keywords = node.get('keywords')
+    if isinstance(keywords, str):
+        parts = [p.strip() for p in keywords.split(',')]
+        # A fragmented keyword string reads as "c, h, i, c, k...".
+        if parts and sum(1 for p in parts if len(p) <= 1) >= len(parts) * 0.6:
+            joined = ''.join(parts)
+            words = [w.strip() for w in joined.split(',') if w.strip()]
+            node['keywords'] = ', '.join(words) if words else joined.strip()
+            changed = True
+
+    nutrition = node.get('nutrition')
+    if isinstance(nutrition, dict):
+        cleaned = {
+            k: v for k, v in nutrition.items()
+            if not (isinstance(v, str) and not v.strip())
+        }
+        if len(cleaned) != len(nutrition):
+            if len(cleaned) <= 1:
+                node.pop('nutrition', None)
+            else:
+                node['nutrition'] = cleaned
+            changed = True
+
+    return changed
+
+
+def repair_jsonld(html):
+    """Rewrite JSON-LD blocks whose list fields were built from a string."""
+    if 'suitableForDiet' not in html and '"keywords"' not in html:
+        return html, False
+
+    pattern = re.compile(
+        r'(<script[^>]*application/ld\+json[^>]*>)(.*?)(</script>)',
+        re.S | re.I,
+    )
+    touched = [0]
+
+    def repl(match):
+        raw = match.group(2).strip()
+        try:
+            data = json.loads(raw)
+        except Exception:
+            return match.group(0)
+
+        nodes = data if isinstance(data, list) else [data]
+        changed = False
+        for node in nodes:
+            if _repair_node(node):
+                changed = True
+
+        if not changed:
+            return match.group(0)
+
+        touched[0] += 1
+        encoded = json.dumps(data, ensure_ascii=False, separators=(', ', ': '))
+        return match.group(1) + encoded + match.group(3)
+
+    return pattern.sub(repl, html), touched[0] > 0
+
+
+# ---------------------------------------------------------------------------
+# Reference pages
+# ---------------------------------------------------------------------------
+
+def _page_shell():
+    """Borrow the shell of a generated page: head, header, footer, scripts.
+
+    Reusing real output guarantees the new pages carry the same fonts,
+    stylesheets, navigation and footer as everything else, without this script
+    needing to know how build.py assembles a page.
+    """
+    for candidate in [
+        DIST / 'kitchen-notes' / 'index.html',
+        DIST / 'about' / 'index.html',
+        DIST / 'index.html',
+    ]:
+        if not candidate.exists():
+            continue
+        try:
+            html = candidate.read_text(encoding='utf-8')
+        except Exception:
+            continue
+        if re.search(r'<main[^>]*>.*?</main>', html, re.S | re.I):
+            return html
+    return None
+
+
+def _set_meta(html, title, description, canonical_path):
+    html = re.sub(
+        r'<title>.*?</title>',
+        f'<title>{esc(title)} \u00b7 Bored of Toast</title>',
+        html,
+        count=1,
+        flags=re.S | re.I,
+    )
+
+    for attr in ('name="description"', 'property="og:description"',
+                 'name="twitter:description"'):
+        html = re.sub(
+            r'(<meta ' + re.escape(attr) + r' content=")[^"]*(")',
+            lambda m: m.group(1) + esc(description, quote=True) + m.group(2),
+            html,
+        )
+
+    for attr in ('property="og:title"', 'name="twitter:title"'):
+        html = re.sub(
+            r'(<meta ' + re.escape(attr) + r' content=")[^"]*(")',
+            lambda m: m.group(1) + esc(title, quote=True) + m.group(2),
+            html,
+        )
+
+    def fix_url(match):
+        prefix, value, suffix = match.group(1), match.group(2), match.group(3)
+        base = re.sub(r'/(kitchen-notes|about|recipes)(/.*)?$', '', value)
+        return prefix + base.rstrip('/') + canonical_path + suffix
+
+    html = re.sub(r'(<link rel="canonical" href=")([^"]*)(")', fix_url, html)
+    html = re.sub(r'(<meta property="og:url" content=")([^"]*)(")', fix_url, html)
+
+    return html
+
+
+def build_reference_pages():
+    """Write the reference pages defined in reference_content.py."""
+    try:
+        import reference_content as rc
+    except Exception as exc:
+        print(f'  skip: reference_content not importable ({exc})')
+        return []
+
+    shell = _page_shell()
+    if not shell:
+        print('  skip: no generated page to use as a shell')
+        return []
+
+    # Reference pages load their own stylesheet on top of the shared ones.
+    if f'/{REFERENCE_CSS}' not in shell and '</head>' in shell:
+        shell = shell.replace(
+            '</head>',
+            f'<link rel="stylesheet" href="/{REFERENCE_CSS}"></head>',
+            1,
+        )
+
+    written = []
+    for slug in rc.PAGES:
+        try:
+            data = rc.PAGES[slug]
+            html = _set_meta(
+                shell,
+                data['title'],
+                data['description'],
+                f'/kitchen-notes/{slug}/',
+            )
+
+            html = re.sub(
+                r'(<main[^>]*>).*?(</main>)',
+                lambda m: m.group(1) + rc.body(slug) + m.group(2),
+                html,
+                count=1,
+                flags=re.S | re.I,
+            )
+
+            # Replace any inherited structured data with this page's Article.
+            html = re.sub(
+                r'<script[^>]*application/ld\+json[^>]*>.*?</script>',
+                '',
+                html,
+                flags=re.S | re.I,
+            )
+            ld = json.dumps(
+                rc.article_jsonld(slug),
+                ensure_ascii=False,
+                separators=(', ', ': '),
+            )
+            if '</head>' in html:
+                html = html.replace(
+                    '</head>',
+                    f'<script type="application/ld+json">{ld}</script></head>',
+                    1,
+                )
+
+            target = DIST / 'kitchen-notes' / slug / 'index.html'
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(html, encoding='utf-8')
+            written.append(slug)
+        except Exception as exc:
+            print(f'  warn: reference page {slug} failed: {exc}')
+
+    return written
+
+
+def add_reference_sitemap(written):
+    """Add the new routes to sitemap.xml so they are discoverable."""
+    if not written:
+        return False
+    path = DIST / 'sitemap.xml'
+    if not path.exists():
+        return False
+    try:
+        xml = path.read_text(encoding='utf-8')
+    except Exception:
+        return False
+
+    existing = re.search(r'<loc>([^<]*)/kitchen-notes/', xml)
+    base = existing.group(1) if existing else ''
+
+    entries = ''
+    for slug in written:
+        loc = f'{base}/kitchen-notes/{slug}/'
+        if loc in xml:
+            continue
+        entries += f'<url><loc>{loc}</loc><changefreq>monthly</changefreq></url>'
+
+    if not entries or '</urlset>' not in xml:
+        return False
+
+    path.write_text(xml.replace('</urlset>', entries + '</urlset>', 1),
+                    encoding='utf-8')
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -544,7 +868,7 @@ def rewrite_about(html):
 
 def copy_stylesheets():
     copied = []
-    for name in ADDITIVE_CSS:
+    for name in ADDITIVE_CSS + [REFERENCE_CSS]:
         src = ROOT / name
         if not src.exists():
             print(f'  skip: {name} not found at repo root')
@@ -559,6 +883,9 @@ def inject_stylesheets(html, available):
         return html, False
     tags = ''
     for name in available:
+        # reference.css is scoped to reference pages, not injected globally.
+        if name == REFERENCE_CSS:
+            continue
         href = f'/{name}'
         if href not in html:
             tags += f'<link rel="stylesheet" href="{href}">'
@@ -834,6 +1161,7 @@ TRANSFORMS = [
     ('scroll progress', add_scroll_progress),
     ('visible byline', remove_visible_byline),
     ('author name', strip_author_name),
+    ('jsonld repair', repair_jsonld),
     ('where-to-begin section', remove_where_to_begin),
     ('start-here link', remove_start_here),
     ('category cards trimmed', trim_category_cards),
@@ -858,6 +1186,17 @@ def main():
     available = copy_stylesheets()
     if available:
         print(f'  copied: {", ".join(available)}')
+
+    # Reference pages are written before the transform loop so they receive
+    # the same stylesheet injection and cleanup as every other page.
+    try:
+        written = build_reference_pages()
+        if written:
+            print(f'  reference pages: {", ".join(written)}')
+            if add_reference_sitemap(written):
+                print('  sitemap updated')
+    except Exception as exc:
+        print(f'  warn: reference pages failed: {exc}')
 
     recipes = collect_recipes()
     print(f'  recipes indexed: {len(recipes)}')
