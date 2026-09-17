@@ -11,6 +11,11 @@ reach all of it. Both are fixable without changing the recipe.
 
 Temperatures and times are for basket-style air fryers, which run hotter
 at the food than oven-style models because the fan sits closer.
+
+Note on the safety block: reference_content._safety() reads 'heading',
+'intro', 'items' (label/value pairs) and 'outro'. Using any other keys
+raises inside body() and the page is silently skipped while the build
+still reports success. Match storage_chart.py exactly.
 """
 
 SLUG = 'why-food-does-not-crisp'
@@ -154,20 +159,20 @@ PAGE = dict(
           'in this note are for basket models.']),
     ],
     safety=dict(
-        eyebrow='WORTH KNOWING',
+        heading='Worth knowing',
         intro='Two things that come up often enough to be worth stating '
-              'plainly.',
+              'plainly, both from USDA Food Safety and Inspection Service '
+              'guidance on countertop appliances.',
         items=[
-            ('Parchment before the food',
-             'Loose parchment can lift into the heating element. Put the '
-             'food on it first, and only use perforated sheets.'),
-            ('Doneness is temperature, not time',
-             'Air fryer times vary widely between models. For anything '
-             'where doneness matters, use a thermometer rather than the '
-             'clock.'),
+            ('Parchment', 'Food on top first, perforated sheets only'),
+            ('Loose parchment', 'Can lift into the heating element'),
+            ('Doneness', 'By internal temperature, not by the clock'),
+            ('Model variation', 'Times differ widely, use a thermometer'),
         ],
-        source=('Air Fryer Safety', 'USDA Food Safety and Inspection '
-                'Service', 'https://www.fsis.usda.gov/food-safety'),
+        outro='Air fryer times are less transferable between models than '
+              'oven times are, because basket size and fan proximity vary '
+              'so much. For anything where doneness matters rather than '
+              'just colour, a thermometer is the only reliable check.',
     ),
     sources=[
         ('How Air Fryers Work', 'Serious Eats',
