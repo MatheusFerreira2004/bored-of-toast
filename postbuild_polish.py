@@ -9,11 +9,18 @@ rewritten safely from a remote editing session without risking silent loss.
 These transforms belong there and should be folded in the next time that file
 is edited properly in a local checkout.
 
-Every pattern here is written against HTML that was read back off the live
-site, not against assumed markup. Three of these transforms previously
-matched nothing while still reporting success, so each one now says whether
-it found its target and main() exits non-zero when a scoped transform finds
-nothing on the page it was written for.
+Two lessons are baked into this version.
+
+First, a transform that reports success is not the same as a transform that
+produced the intended result. The empty-state panel was being hidden with an
+inline display rule, which is invisible to any text-based check of the page,
+so there was no way to confirm from outside whether it had worked. That panel
+is now removed from the markup outright, which is verifiable.
+
+Second, failing the build when a pattern misses was the wrong trade. One
+stale selector then blocks every later deploy, including unrelated content.
+Misses are now reported loudly and the build continues. Only a genuine
+exception is treated as fatal.
 
 Run locally with:
     python build.py && python postbuild.py && python postbuild_reference.py \
@@ -33,7 +40,6 @@ WRONG_THEME_COLOUR = '#124de3'
 BRAND_INK = '#2B3A30'
 
 # Marker attributes keep every transform safe to run twice.
-EMPTY_STATE_MARKER = 'data-empty-hidden'
 REFERENCE_ANCHOR_ID = 'reference-charts'
 SERIES_MARKER = 'data-reference-series'
 
@@ -52,6 +58,16 @@ CHICKPEA_TEXT_FIXES = (
     ('three ways with chickpeas', 'five ways with chickpeas'),
     ('explores three ways', 'explores five ways'),
     ('One can, three directions', 'One can, five directions'),
+)
+
+# Exact strings from the last theme card, read off the live listing. Cloning
+# that card and swapping these two strings is deterministic, unlike walking
+# text nodes and hoping the right ones come up first.
+SERIES_SOURCE_TITLE = 'Day One'
+SERIES_SOURCE_BODY = 'For absolute beginners: the bare minimum to get started.'
+SERIES_NEW_TITLE = 'Reference'
+SERIES_NEW_BODY = (
+    'Cooking times, yields, substitutions and storage, gathered in one place.'
 )
 
 
@@ -74,47 +90,57 @@ def fix_theme_colour(html):
 # Empty state on the recipe index
 # ---------------------------------------------------------------------------
 
-def hide_empty_state(html):
-    """Hide the empty-results panel that renders below the full grid.
+def remove_empty_state(html):
+    """Delete the empty-results panel that renders below the full grid.
 
-    The panel exists for a filter that matches nothing, but it is emitted
-    unconditionally, so it sat under all ten recipes telling the reader the
-    category was empty.
+    The panel is meant for a filter that matches nothing, but the generator
+    emits it unconditionally, so it sat under all ten recipes telling the
+    reader the category was empty.
 
-    The first attempt used the hidden attribute. That was the wrong tool: any
-    class-based display rule in the stylesheet beats it, and this panel is a
-    styled section. An inline display:none sits high enough in the cascade to
-    win, and the filter script can still reveal the panel by writing its own
-    inline display later.
+    Two earlier attempts hid it instead: first with the hidden attribute,
+    which any class-based display rule in the stylesheet overrides, then with
+    an inline display rule, which works in a browser but cannot be confirmed
+    from outside the page. Removing the element is both stronger and
+    checkable.
+
+    The trade-off: if the client-side filter later matches nothing, the grid
+    is simply empty rather than showing an explanation. That is a smaller
+    problem than a permanent panel contradicting a full page of recipes, and
+    the honest fix belongs in the generator, which should only emit this
+    panel when the grid is empty.
     """
-    if EMPTY_STATE_MARKER in html:
-        return html, False
     if not any(phrase in html for phrase in EMPTY_STATE_PHRASES):
         return html, False
 
     phrase = next(p for p in EMPTY_STATE_PHRASES if p in html)
     position = html.find(phrase)
 
-    # Walk back to the nearest containing section or div, preferring a
-    # container over the paragraph holding the copy so the icon and heading
-    # disappear with it.
-    opens = list(re.finditer(r'<(section|div)\b[^>]*>', html[:position], re.I))
-    if not opens:
+    # Find the innermost section or div that opens before the phrase and
+    # closes after it, then drop that whole element.
+    best = None
+    for match in re.finditer(r'<(section|div)\b[^>]*>', html[:position], re.I):
+        tag_name = match.group(1)
+        depth = 0
+        cursor = match.start()
+        pattern = re.compile(rf'<{tag_name}\b[^>]*>|</{tag_name}\s*>', re.I)
+        for token in pattern.finditer(html, cursor):
+            if token.group(0).startswith('</'):
+                depth -= 1
+                if depth == 0:
+                    end = token.end()
+                    if end > position:
+                        # Prefer the tightest container around the phrase.
+                        if best is None or match.start() > best[0]:
+                            best = (match.start(), end)
+                    break
+            else:
+                depth += 1
+
+    if best is None:
         return html, False
 
-    target = opens[-1]
-    tag = target.group(0)
-
-    if 'display:none' in tag.replace(' ', ''):
-        return html, False
-
-    if 'style="' in tag:
-        patched = tag.replace('style="', 'style="display:none;', 1)
-        patched = patched[:-1] + f' {EMPTY_STATE_MARKER}>'
-    else:
-        patched = tag[:-1] + f' style="display:none" {EMPTY_STATE_MARKER}>'
-
-    return html[:target.start()] + patched + html[target.end():], True
+    start, end = best
+    return html[:start] + html[end:], True
 
 
 # ---------------------------------------------------------------------------
@@ -168,12 +194,6 @@ def fix_chickpea_reference(html):
     Written before Chickpeas, Five Ways existed, so it advertised three ways
     and sent the reader to the unfiltered recipe index.
 
-    The first version keyed off the anchor text and required the word
-    "chickpea" in it. The real link reads "One can, three directions", so it
-    was skipped every time. The fix is to work from the section instead: find
-    the block that talks about chickpeas, then retarget the one anchor inside
-    it that still points at a listing route.
-
     Requiring a listing href is what keeps this off the recipe cards. An
     anchor already pointing at a specific recipe is left alone, which is why
     the roasted chickpeas card is safe.
@@ -185,7 +205,6 @@ def fix_chickpea_reference(html):
             html = html.replace(old, new)
             changed = True
 
-    # Find each section, then act only on those mentioning chickpeas.
     sections = list(re.finditer(r'<section\b[^>]*>.*?</section>', html, re.I | re.S))
     if not sections:
         return html, changed
@@ -240,83 +259,61 @@ def add_reference_anchor(html):
     return html[:target.start()] + patched + html[target.end():], True
 
 
-def _clone_card(card_html, href, texts):
-    """Rebuild a sibling card with a new href and new text nodes.
-
-    Cloning real markup rather than writing fresh HTML means the new card
-    inherits whatever classes and structure the generator currently emits, so
-    it cannot drift out of step with its siblings.
-    """
-    clone = re.sub(
-        r'(href=")[^"]*(")',
-        lambda m: m.group(1) + href + m.group(2),
-        card_html,
-        count=1,
-    )
-    clone = re.sub(r'\sid="[^"]*"', '', clone)
-
-    queue = list(texts)
-
-    def swap(match):
-        body = match.group(1)
-        if not queue:
-            return match.group(0)
-        if len(body.strip()) < 2 or not re.search(r'[A-Za-z]{2,}', body):
-            return match.group(0)
-        return '>' + queue.pop(0) + '<'
-
-    clone = re.sub(r'>([^<>]+)<', swap, clone)
-
-    # Mark it so the injection is idempotent.
-    return clone.replace('<a ', f'<a {SERIES_MARKER} ', 1)
-
-
 def add_reference_series(html):
-    """Add a Reference card to the theme grid, cloned from its siblings.
+    """Add a Reference card to the theme grid.
 
     Eight charts now sit in the listing with no theme covering them, so a
     reader browsing by theme cannot reach them.
 
-    The first version looked for href="...?series=..." because that is how a
-    filtered view would be built. The grid actually links to in-page anchors
-    such as #texture-school, so nothing matched. The pattern now follows the
-    real markup, and the new card points at the charts anchor for the same
-    reason: it works without depending on the filter script.
+    The previous version cloned the last card and then walked its text nodes,
+    replacing the first two that looked like prose. That is guesswork: the
+    order of text nodes depends on markup that can change, and a miss is
+    silent. This version keys off the two exact strings in the Day One card,
+    so either both are found and the swap is correct, or nothing happens and
+    the miss is reported.
     """
     if SERIES_MARKER in html:
         return html, False
 
-    # Theme cards are anchors whose href is a bare in-page fragment.
+    if SERIES_SOURCE_TITLE not in html or SERIES_SOURCE_BODY not in html:
+        return html, False
+
+    # Locate the anchor that contains both strings.
     cards = list(re.finditer(
         r'<a\b[^>]*href="#[a-z0-9-]+"[^>]*>.*?</a>',
         html,
         re.I | re.S,
     ))
 
-    # Ignore a skip link or any other fragment anchor that is not part of the
-    # grid. The theme cards are the run of them that sit next to each other.
-    cards = [c for c in cards if len(_strip_tags(c.group(0))) > 20]
+    source = None
+    for card in cards:
+        block = card.group(0)
+        if SERIES_SOURCE_TITLE in block and SERIES_SOURCE_BODY in block:
+            source = card
+            break
 
-    if not cards:
+    if source is None:
         return html, False
 
-    last = cards[-1]
-    clone = _clone_card(
-        last.group(0),
-        f'#{REFERENCE_ANCHOR_ID}',
-        [
-            'Reference',
-            'Cooking times, yields, substitutions and storage, '
-            'gathered in one place.',
-        ],
+    clone = source.group(0)
+    clone = re.sub(
+        r'(href=")#[a-z0-9-]+(")',
+        lambda m: m.group(1) + '#' + REFERENCE_ANCHOR_ID + m.group(2),
+        clone,
+        count=1,
+        flags=re.I,
     )
+    clone = re.sub(r'\sid="[^"]*"', '', clone)
+    clone = clone.replace(SERIES_SOURCE_BODY, SERIES_NEW_BODY)
+    clone = clone.replace(SERIES_SOURCE_TITLE, SERIES_NEW_TITLE)
+    clone = clone.replace('<a ', f'<a {SERIES_MARKER} ', 1)
 
-    return html[:last.end()] + clone + html[last.end():], True
+    return html[:source.end()] + clone + html[source.end():], True
 
 
 TRANSFORMS = [
     ('theme colour', fix_theme_colour),
-    ('empty state hidden', hide_empty_state),
+    ('empty state removed', remove_empty_state),
     ('index numbering', fix_padded_numbering),
     ('hero number', fix_hero_number),
     ('chickpea reference', fix_chickpea_reference),
@@ -326,19 +323,19 @@ TRANSFORMS = [
 
 # Transforms that only make sense on one route, keyed by the first path part.
 SCOPED = {
-    'empty state hidden': ('recipes',),
+    'empty state removed': ('recipes',),
     'hero number': ('',),
     'chickpea reference': ('kitchen-notes',),
     'reference anchor': ('kitchen-notes',),
     'reference series card': ('kitchen-notes',),
 }
 
-# A scoped transform that never fires is a broken pattern, not a no-op. These
-# are the ones worth failing the build over, because each one was written for
-# a specific page that is known to contain its target.
-MUST_MATCH = (
+# Transforms expected to match somewhere. A miss is a broken selector worth
+# shouting about, but it no longer fails the build: one stale pattern should
+# not block unrelated content from deploying.
+EXPECTED = (
     'theme colour',
-    'empty state hidden',
+    'empty state removed',
     'reference anchor',
     'reference series card',
 )
@@ -365,6 +362,7 @@ def main():
         return 0
 
     counts = {name: 0 for name, _ in TRANSFORMS}
+    errors = []
     touched = 0
 
     for page in pages:
@@ -385,7 +383,7 @@ def main():
                 if changed:
                     counts[name] += 1
             except Exception as exc:
-                print(f'  warn: {name} failed on {page.name}: {exc}')
+                errors.append((name, page.name, exc))
 
         if html != original:
             try:
@@ -397,17 +395,22 @@ def main():
     print(f'  pages scanned: {len(pages)}')
     print(f'  pages modified: {touched}')
     for key, value in counts.items():
-        print(f'    {key}: {value if value else "no match"}')
+        print(f'    {key}: {value if value else "NO MATCH"}')
 
-    missed = [name for name in MUST_MATCH if counts.get(name, 0) == 0]
+    missed = [name for name in EXPECTED if counts.get(name, 0) == 0]
     if missed:
         print()
-        print('postbuild_polish: FAILED')
-        print('  These transforms matched nothing. Each was written against')
-        print('  markup read off the live site, so a miss means the pattern')
-        print('  is wrong or the generated markup changed:')
+        print('  WARNING: these transforms matched nothing. Each was written')
+        print('  against markup read off the live site, so a miss means the')
+        print('  pattern is wrong or the generated markup changed:')
         for name in missed:
             print(f'    - {name}')
+
+    if errors:
+        print()
+        print('postbuild_polish: FAILED')
+        for name, page_name, exc in errors:
+            print(f'  {name} raised on {page_name}: {type(exc).__name__}: {exc}')
         return 1
 
     print('postbuild_polish: done')
