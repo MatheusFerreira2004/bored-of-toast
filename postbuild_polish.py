@@ -45,6 +45,16 @@ EMPTY_STATE_PHRASES = [
 # ways and linked to the unfiltered recipe index.
 CHICKPEA_TARGET = '/kitchen-notes/chickpeas-five-ways/'
 
+# Only a link that currently points at a listing is a candidate for
+# retargeting. An anchor already pointing at a specific recipe or note is
+# doing its job and must be left alone: an earlier version of this transform
+# matched on link text alone and rewrote the roasted chickpeas recipe card,
+# which made that recipe unreachable from its own index.
+LISTING_HREFS = (
+    '/recipes/',
+    '/kitchen-notes/',
+)
+
 CHICKPEA_TEXT_FIXES = [
     ('three ways to use chickpeas', 'five ways to use chickpeas'),
     ('three ways with chickpeas', 'five ways with chickpeas'),
@@ -123,11 +133,11 @@ def fix_padded_numbering(html):
     The listing pads every index to two characters, so the tenth note onward
     rendered as 010, 011, 012. Only single digits should be padded.
 
-    The pattern requires a three-digit run starting with a zero, immediately
-    followed by the separator used in the eyebrow, so ordinary numbers such as
-    the section label 01 are left alone.
+    The pattern is deliberately tight: a zero, then 10 to 29, then the space
+    and slash the eyebrow uses. Anything looser starts matching ordinary
+    numbers in body copy.
     """
-    pattern = re.compile(r'(>|\s)0(1\d|2\d)(\s*(?:/|<))')
+    pattern = re.compile(r'(>|\s)0([12]\d)(\s*/)')
     new_html, count = pattern.subn(
         lambda m: m.group(1) + m.group(2) + m.group(3), html
     )
@@ -158,11 +168,19 @@ def fix_hero_number(html):
 # Chickpea cross-reference
 # ---------------------------------------------------------------------------
 
+def _is_listing_href(href):
+    """True when an href points at a listing rather than a single page."""
+    cleaned = href.split('?')[0].split('#')[0]
+    return cleaned in LISTING_HREFS
+
+
 def _retarget_chickpea_anchor(match):
-    """Send an anchor about ways to use chickpeas to the pillar page."""
+    """Send a listing link about ways to use chickpeas to the pillar page."""
     opening, href, rest, body = match.groups()
 
     if CHICKPEA_TARGET in href:
+        return match.group(0)
+    if not _is_listing_href(href):
         return match.group(0)
 
     text = _strip_tags(body).lower()
@@ -298,9 +316,12 @@ TRANSFORMS = [
 ]
 
 # Transforms that only make sense on one route, keyed by the first path part.
+# The chickpea retarget is scoped to the home page: the stale copy lives
+# there, and running it site-wide is what let it rewrite a recipe card.
 SCOPED = {
     'empty state hidden': ('recipes',),
     'hero number': ('',),
+    'chickpea reference': ('',),
     'reference anchor': ('kitchen-notes',),
     'reference series card': ('kitchen-notes',),
 }
