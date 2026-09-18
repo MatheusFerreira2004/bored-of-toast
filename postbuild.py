@@ -238,15 +238,49 @@ def _serves_from_jsonld(html):
 
 
 def collect_recipes():
-    """Read dist/recipes/*/index.html and extract card data.
+    try:
+        import json
+        with open('recipe_models.json', 'r', encoding='utf-8') as f:
+            models = json.load(f)
+    except Exception:
+        models = {}
 
-    Parsing the output rather than importing build.py keeps this script
-    independent of the generator's internals.
-    """
     recipes = []
     base = DIST / 'recipes'
     if not base.exists():
         return recipes
+
+    for page in sorted(base.glob('*/index.html')):
+        slug = page.parent.name
+        try:
+            html = page.read_text(encoding='utf-8')
+        except Exception:
+            continue
+
+        title = _first(html, r'<h1[^>]*>(.*?)</h1>')
+        if not title:
+            continue
+
+        img = _first(html, r'/assets/([a-z0-9\-]+)-(?:1200|800|480)\.webp')
+        cats = re.findall(r'/recipes/\?category=([a-z0-9\-]+)', html)
+        pairs = _meta_pairs(html)
+        
+        model = models.get(slug, {})
+        editorial_related = model.get('relatedRecipes')
+
+        recipes.append(dict(
+            slug=slug,
+            title=unescape(_strip_tags(title)),
+            img=img or '',
+            alt=_first(html, r'<img[^>]+alt="([^"]*)"[^>]*class="[^"]*hero') or '',
+            categories=list(dict.fromkeys(cats)),
+            method=_clean_meta_part(pairs.get('method')),
+            total_time=_clean_meta_part(pairs.get('total') or pairs.get('prep')),
+            serves=_serves_from_jsonld(html),
+            editorial_related=editorial_related,
+        ))
+
+    return recipes
 
     for page in sorted(base.glob('*/index.html')):
         slug = page.parent.name
@@ -626,8 +660,39 @@ def _reason_candidates(current, other, cat_counts):
 
 
 def pick_related(current, all_recipes, limit=3):
-    """Score by category overlap, method and time, with a stable fallback."""
     slug = current['slug']
+    editorial = current.get('editorial_related')
+    
+    if editorial is not None:
+        if not editorial:
+            return []
+            
+        picked = []
+        seen = {slug}
+        valid = {r['slug']: r for r in all_recipes}
+        
+        for item in editorial:
+            if isinstance(item, dict):
+                r_slug = item.get('slug')
+                reason = item.get('reason')
+            else:
+                r_slug = item
+                reason = None
+                
+            if r_slug not in seen and r_slug in valid:
+                r_copy = dict(valid[r_slug])
+                if reason:
+                    r_copy['editorial_reason'] = reason
+                picked.append(r_copy)
+                seen.add(r_slug)
+            elif r_slug not in valid:
+                print(f"  warn: invalid related recipe slug '{r_slug}' for '{slug}'")
+                
+            if len(picked) == limit:
+                break
+                
+        return picked
+
     cats = set(current.get('categories', []))
     method = (current.get('method') or '').lower()
     bucket = _time_bucket(current)
@@ -682,12 +747,15 @@ def render_related(current, all_recipes, limit=3):
             )
 
         reason = ''
-        for label in _reason_candidates(current, r, cat_counts):
-            if label not in used_reasons:
-                reason = label
-                break
-        if not reason:
-            reason = 'From the notebook'
+        if r.get('editorial_reason'):
+            reason = r['editorial_reason']
+        else:
+            for label in _reason_candidates(current, r, cat_counts):
+                if label not in used_reasons:
+                    reason = label
+                    break
+            if not reason:
+                reason = 'From the notebook'
         used_reasons.add(reason)
 
         meta_parts = [

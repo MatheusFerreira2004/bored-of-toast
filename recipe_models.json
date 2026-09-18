@@ -1486,7 +1486,14 @@
       }
     ],
     "relatedRecipes": [
-      "lemon-white-bean-skillet"
+      {
+        "slug": "crispy-sheet-pan-gnocchi",
+        "reason": "Another pasta dinner"
+      },
+      {
+        "slug": "lemon-white-bean-skillet",
+        "reason": "Another quick dinner"
+      }
     ],
     "hero_image": {
       "src": "lemon-pea-ricotta-pasta.webp",
@@ -1635,8 +1642,14 @@
       }
     ],
     "relatedRecipes": [
-      "lemon-white-bean-skillet",
-      "crispy-sheet-pan-gnocchi"
+      {
+        "slug": "lemon-white-bean-skillet",
+        "reason": "Another skillet meal"
+      },
+      {
+        "slug": "garlic-butter-bean-mushroom-toast",
+        "reason": "Another quick dinner"
+      }
     ],
     "hero_image": {
       "src": "cabbage-egg-skillet-rice.webp",
