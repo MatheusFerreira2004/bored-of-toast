@@ -1703,7 +1703,7 @@
     ],
     "method": "Oven",
     "base_people": 2,
-    "meal_role": "generous side",
+    "meal_role": "a generous side",
     "tagline": "Golden roasted cauliflower florets with toasted edges, finished with a creamy lemon tahini sauce.",
     "intro": "A simple and rewarding way to roast cauliflower. The tahini dressing adds richness, and a little parsley brings freshness. Serve it alongside your favorite grains or legumes.",
     "tested": false,
@@ -1743,7 +1743,17 @@
         "id": "tahini",
         "qty": 2,
         "unit": "tbsp",
-        "name": "tahini"
+        "name": "tahini",
+        "swap": {
+          "name": "thick plain yogurt",
+          "qty": 3,
+          "unit": "tbsp",
+          "flavor_change": "It becomes fresher and tangy without the sesame flavor.",
+          "how_to_adjust": "Start with less lemon juice and adjust to taste.",
+          "change": "Skip adding water unless needed to thin it out.",
+          "note": "(Contains dairy).",
+          "action_swap": "In a small bowl, whisk together the {{tahini}} and {{lemon}}, starting with half the lemon juice and adjusting to taste. No water is needed unless the yogurt is very thick."
+        }
       },
       {
         "id": "lemon",
@@ -1764,7 +1774,7 @@
       {
         "phase": "Roast",
         "title": "Prepare the cauliflower",
-        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {cauliflower} with the {oil}, {cumin}, {sp} until evenly coated."
+        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {{cauliflower}} with the {{oil}}, {{cumin}}, {{sp}} until evenly coated."
       },
       {
         "title": "Arrange on a baking sheet",
@@ -1781,12 +1791,12 @@
       {
         "phase": "Finish",
         "title": "Make the tahini sauce",
-        "action": "In a small bowl, whisk together the {tahini} and {lemon}. The mixture will seize and thicken at first. Add {water} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
+        "action": "In a small bowl, whisk together the {{tahini}} and {{lemon}}. The mixture will seize and thicken at first. Add {{water}} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
         "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out."
       },
       {
         "title": "Serve",
-        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {parsley} if using."
+        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {{parsley}} if using."
       }
     ],
     "relatedRecipes": [
@@ -1818,9 +1828,8 @@
       "Mixing bowl",
       "Whisk"
     ],
-    "larger_batch": "Use multiple baking sheets or roast in batches to avoid crowding. The sauce water should still be added gradually as needed.",
     "if_looks": "If the sauce looks split or overly thick after adding lemon, keep adding water a teaspoon at a time and whisk vigorously until smooth.",
-    "variation": "For a fresher, tangy alternative without sesame, swap the 2 tbsp tahini for about 3 tbsp of thick plain yogurt. Start with less lemon juice and adjust to taste, skipping the water unless needed to thin it out. (Contains dairy)."
+    "larger_batch": "Use multiple baking sheets or roast in batches to avoid crowding. The sauce water should still be added gradually as needed."
   },
   "golden-tofu-edamame-bowls": {
     "title": "Golden Tofu & Edamame Bowls",
@@ -1830,7 +1839,7 @@
     ],
     "method": "Skillet",
     "base_people": 2,
-    "meal_role": "main meal",
+    "meal_role": "a main meal",
     "tagline": "Golden pan-fried tofu, edamame and rice, brought together with a creamy peanut and lemon sauce.",
     "intro": "A simple, satisfying bowl focusing on flavor and texture. The tofu gets a quick pan-fry until golden, served over rice and edamame with a rich peanut sauce.",
     "tested": false,
@@ -1883,7 +1892,16 @@
         "id": "peanut_butter",
         "qty": 1.5,
         "unit": "tbsp",
-        "name": "unsweetened peanut butter"
+        "name": "unsweetened peanut butter",
+        "swap": {
+          "name": "tahini",
+          "qty": 1.5,
+          "unit": "tbsp",
+          "flavor_change": "The flavor profile changes to sesame.",
+          "how_to_adjust": "Adjust the water gradually as needed.",
+          "note": "(Contains sesame).",
+          "action_swap": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
+        }
       },
       {
         "id": "lemon",
@@ -1904,12 +1922,12 @@
       {
         "phase": "Prep",
         "title": "Prepare the tofu",
-        "action": "Gently pat the {tofu} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes."
+        "action": "Gently pat the {{tofu}} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes."
       },
       {
         "phase": "Cook",
         "title": "Pan-fry the tofu",
-        "action": "Heat the {oil} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
+        "action": "Heat the {{oil}} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
         "image": "golden-tofu-edamame-bowls-step.webp",
         "alt": "Tofu cubes pan-frying in a skillet",
         "is_ai_generated": true,
@@ -1917,16 +1935,16 @@
       },
       {
         "title": "Prepare edamame and rice",
-        "action": "Cook or thaw the {edamame} according to the package instructions. Safely reheat the {rice} until steaming hot throughout."
+        "action": "Cook or thaw the {{edamame}} according to the package instructions. Safely reheat the {{rice}} until steaming hot throughout."
       },
       {
         "phase": "Finish",
-        "title": "Make the peanut sauce",
-        "action": "In a small bowl, whisk together the {peanut_butter}, {soy}, and {lemon}. Add {water} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
+        "title": "Make the sauce",
+        "action": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
       },
       {
         "title": "Assemble the bowls",
-        "action": "Divide the rice, edamame, and golden tofu between two bowls. Drizzle with the peanut sauce and top with {scallions} if using."
+        "action": "Divide the rice, edamame, and golden tofu between serving bowls. Drizzle with the sauce and top with {{scallions}} if using."
       }
     ],
     "relatedRecipes": [
@@ -1957,8 +1975,7 @@
       "Skillet",
       "Small mixing bowl"
     ],
-    "larger_batch": "If scaling up, brown the tofu in batches so the skillet doesn't get crowded. The sauce water should still be adjusted gradually.",
     "if_looks": "If the sauce is too thick, simply whisk in a splash more water until you reach the desired consistency.",
-    "variation": "You can swap the peanut butter for an equal amount of tahini for a sesame flavor profile. Adjust the water gradually as needed. (Contains sesame)."
+    "larger_batch": "If scaling up, brown the tofu in batches so the skillet doesn't get crowded. The sauce water should still be adjusted gradually."
   }
 }

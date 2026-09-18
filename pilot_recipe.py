@@ -174,11 +174,12 @@ def render_editorial_recipe(r,others):
     author_name = author.get('name') if isinstance(author, dict) else d.get('author_name')
     date_pub = d.get('datePublished') or d.get('date_published', '')
     if author_name:
+        date_html = f'<span class="byline-date">Published {E(date_pub)}</span>' if date_pub else ''
         byline_html = f'''<div class="recipe-byline">
             <div class="byline-avatar"></div>
             <div class="byline-info">
                 <span class="byline-name">By {E(author_name)}</span>
-                <span class="byline-date">Published {E(date_pub)}</span>
+                {date_html}
             </div>
         </div>'''
         
