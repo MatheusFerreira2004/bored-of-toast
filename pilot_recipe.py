@@ -36,26 +36,34 @@ def ingredient_text(i):
 
 def render_swap_block(sw, iid):
     qty_str = f'{number(sw["qty"])} {sw["unit"]}' if sw.get('qty') else ''
-    title = f'{E(sw["name"].capitalize())}'
+    title = f'Use {E(sw["name"])}'
     if qty_str:
-        title += f' (<span data-swap-amount>{qty_str}</span>)'
+        title += f' &middot; <span data-swap-amount>{qty_str}</span>'
     
     parts = []
-    if sw.get('texture_change'): parts.append(f'<strong>Texture:</strong> {E(sw["texture_change"])}')
-    if sw.get('flavor_change'): parts.append(f'<strong>Flavor:</strong> {E(sw["flavor_change"])}')
-    if sw.get('how_to_adjust'): parts.append(f'<strong>Adjust:</strong> {E(sw["how_to_adjust"])}')
-    if sw.get('change'): parts.append(f'<strong>Changes:</strong> {E(sw["change"])}')
-    if sw.get('technique'): parts.append(f'<strong>Prep:</strong> {E(sw["technique"])}')
+    if sw.get('texture_change'): parts.append(f'{E(sw["texture_change"])}')
+    if sw.get('flavor_change'): parts.append(f'{E(sw["flavor_change"])}')
+    if sw.get('how_to_adjust'): parts.append(f'{E(sw["how_to_adjust"])}')
+    if sw.get('change'): parts.append(f'{E(sw["change"])}')
+    if sw.get('technique'): parts.append(f'{E(sw["technique"])}')
     
-    desc = '<br>'.join(parts) if parts else ''
-    note_text = sw.get('note', '')
-    if not desc and note_text:
-        desc = E(note_text)
-        note_text = ''
+    # Filter out empty parts and ensure punctuation
+    clean_parts = []
+    for p in parts:
+        p = p.strip()
+        if p:
+            if not p.endswith('.') and not p.endswith('!'):
+                p += '.'
+            clean_parts.append(p)
+            
+    desc = ' '.join(clean_parts) if clean_parts else ''
+    note_text = sw.get('note', '').strip()
+    
+    # Avoid repeating the same phrase
+    if note_text and note_text not in desc:
+        desc += f" {E(note_text)}"
         
-    note_row = f'<p class="swap-note">{E(note_text)}</p>' if note_text else ''
-    
-    return f'''<details class="ingredient-swap"><summary>Missing this?</summary><div class="swap-content swap-content--structured"><div class="swap-header"><h4>{title}</h4></div><div class="swap-changes"><p>{desc}</p></div>{note_row}<button type="button" class="button outline swap-btn" data-use-swap="{iid}">Use in this recipe</button></div></details><span class="applied-swap" data-applied-swap hidden></span><button type="button" class="undo-swap" data-undo-swap="{iid}" hidden>Undo substitution</button>'''
+    return f'''<details class="ingredient-swap"><summary>Missing this?</summary><div class="swap-content"><div class="swap-header"><p class="swap-title"><strong>{title}</strong></p></div><p class="swap-changes">{desc}</p><button type="button" class="button outline swap-btn" data-use-swap="{iid}">Use in this recipe</button></div></details><span class="applied-swap" data-applied-swap hidden></span><button type="button" class="undo-swap" data-undo-swap="{iid}" hidden>Undo substitution</button>'''
 
 def render_editorial_recipe(r,others):
     d=r.get('editorial') or MODELS[r['slug']]

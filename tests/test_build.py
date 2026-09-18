@@ -199,7 +199,7 @@ class TestBuildOutput(unittest.TestCase):
         """7. A linha de meta dos cards não contém separador órfão, no padrão de dois separadores consecutivos ou separador no fim da string."""
         for i, r in enumerate(recipes):
             card_html = card(r, i + 1)
-            meta_match = re.search(r'<div class="card-bottom"><span>(.*?)</span>', card_html)
+            meta_match = re.search(r'<div class="card-bottom"[^>]*><span>(.*?)</span>', card_html)
             self.assertIsNotNone(meta_match, f"Card meta line not found for {r['slug']}")
             meta_text = meta_match.group(1).strip()
 

@@ -408,22 +408,22 @@ def card(r, i, featured=False):
     card_class = 'recipe-card'
     featured_label = ''
 
-    # Time derivation: total_time from MODELS, fallback prep_time, then recipes fallback
+    # Time derivation
     card_time = m.get('total_time') or m.get('prep_time') or r.get('total_time') or r.get('prep_time') or ''
     # Method derivation
     card_method = m.get('method') or r.get('method') or ''
-
-    info_decisiva = str(card_method).strip() or str(primary_cat_label).strip()
     
+    info_decisiva = str(card_method).strip()
+
     bottom_items = []
     if card_time and str(card_time).strip():
         bottom_items.append(str(card_time).strip())
-    if info_decisiva:
+    if info_decisiva and info_decisiva.lower() not in str(card_time).lower():
         bottom_items.append(info_decisiva)
 
-    meta_joined = ' <span aria-hidden="true">·</span> '.join(html.escape(item) for item in bottom_items)
+    meta_joined = ' <span aria-hidden="true">&middot;</span> '.join(html.escape(item) for item in bottom_items)
 
-    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><h3>{r['title']}</h3><div class="card-bottom"><span>{meta_joined}</span></div></div></a></article>'''
+    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><h3 style="color:var(--heading-color);">{r['title']}</h3><div class="card-bottom" style="color:var(--olive); font-size:0.9rem;"><span>{meta_joined}</span></div></div></a></article>'''
 
 
 # ---------------------------------------------------------------------------

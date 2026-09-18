@@ -581,7 +581,8 @@
     "before_prep": "Plan ahead: These oats need to rest in the refrigerator for at least 4 hours, or ideally overnight, before eating.",
     "status": "published",
     "intro": "Rolled oats soaked overnight with chia seeds and blueberries. A dense, pudding-like texture that sets in the fridge and is ready to eat by morning. Stir well before serving to distribute the softened fruit.",
-    "tested": false
+    "tested": false,
+    "method": "No-cook"
   },
   "crispy-sheet-pan-gnocchi": {
     "slug": "crispy-sheet-pan-gnocchi",
@@ -702,7 +703,8 @@
     "before_prep": "Preheat oven to 425°F (220°C).",
     "status": "published",
     "intro": "Pillow-soft gnocchi roasted on a sheet pan until golden and crisp. Tossed with cherry tomatoes that burst in the oven to create a natural sauce. A hands-off approach that skips the boiling water.",
-    "tested": false
+    "tested": false,
+    "method": "Sheet pan"
   },
   "mediterranean-warm-green-lentils": {
     "slug": "mediterranean-warm-green-lentils",
@@ -834,7 +836,8 @@
     "source": "",
     "status": "published",
     "intro": "Earthy green lentils warmed through with a Mediterranean flavor profile. A sturdy base that holds up well for days. Simmer gently to ensure the lentils absorb the aromatics without turning mushy.",
-    "tested": false
+    "tested": false,
+    "method": "One-pot"
   },
   "smashed-cucumber-edamame-bowl": {
     "slug": "smashed-cucumber-edamame-bowl",
@@ -961,7 +964,8 @@
     "before_prep": "If using frozen shelled edamame, thaw them by rinsing under warm water for 2 minutes and draining well.",
     "status": "published",
     "intro": "Smashed cucumbers paired with edamame for a refreshing, high-texture bowl. Smashing the cucumber helps it absorb the dressing immediately. Serve immediately after tossing for maximum crunch.",
-    "tested": false
+    "tested": false,
+    "method": "No-cook"
   },
   "garlic-butter-bean-mushroom-toast": {
     "slug": "garlic-butter-bean-mushroom-toast",
@@ -1087,7 +1091,8 @@
     "source": "",
     "status": "published",
     "intro": "Butter beans and deeply browned mushrooms served over toasted bread. Sear the mushrooms undisturbed in a hot pan before adding the beans for a rich, savory topping.",
-    "tested": false
+    "tested": false,
+    "method": "Skillet"
   },
   "spiced-apple-cinnamon-porridge": {
     "slug": "spiced-apple-cinnamon-porridge",
@@ -1213,7 +1218,8 @@
     "source": "",
     "status": "published",
     "intro": "Warm porridge naturally sweetened with spiced apples and cinnamon. Cooking the apples down slightly releases their juices, flavoring the entire bowl. Best served immediately while the spices are most fragrant.",
-    "tested": false
+    "tested": false,
+    "method": "One-pot"
   },
   "5-minute-blender-hummus": {
     "slug": "5-minute-blender-hummus",
@@ -1295,7 +1301,8 @@
     "source": "",
     "status": "published",
     "intro": "A smooth, homemade hummus ready in five minutes using a blender. The key to a creamy texture is blending the tahini and lemon first before adding the chickpeas.",
-    "tested": false
+    "tested": false,
+    "method": "Blender"
   },
   "oven-roasted-crispy-chickpeas": {
     "slug": "oven-roasted-crispy-chickpeas",
@@ -1372,6 +1379,7 @@
     "source": "",
     "status": "published",
     "intro": "Oven-roasted chickpeas that turn deeply crunchy. Drying them thoroughly before tossing in oil is crucial—any remaining moisture will steam them instead of roasting them.",
-    "tested": false
+    "tested": false,
+    "method": "Oven"
   }
 }

@@ -121,7 +121,7 @@ details[open].ingredient-swap summary::before{transform:rotate(90deg)}
 #pilot-recipe .ingredient-note{display:block;color:var(--olive);font-size:.78rem;line-height:1.5;margin-top:4px}
 #pilot-recipe .ingredient-note:empty{display:none}
 #pilot-recipe .swap-content{padding:12px 0 16px}
-#pilot-recipe .swap-content h4{font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--heading-color);margin:0 0 8px}
+#pilot-recipe .swap-content .swap-title{font-family:'DM Sans',sans-serif;font-size:1rem;color:var(--heading-color);margin:0 0 8px}
 #pilot-recipe .swap-content p{border:0;padding:0;margin:8px 0}
 #pilot-recipe .undo-swap{display:block;background:none;border:0;padding:10px 0;min-height:44px;color:var(--brand-blue);text-decoration:underline;cursor:pointer}
 #pilot-recipe [hidden]{display:none!important}
