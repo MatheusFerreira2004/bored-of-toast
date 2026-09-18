@@ -1,0 +1,289 @@
+/* ==========================================================================
+   polish.css — refinamentos visíveis, carregado por último
+   --------------------------------------------------------------------------
+   Arquivo aditivo. Não substitui nem altera style.css, refinements.css
+   ou recipe.css. Carregar sempre depois dos três.
+   Usa apenas os tokens já definidos no site.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Barra de progresso de leitura
+   Alimentada pela variável --scroll, definida pelo script do postbuild.
+   -------------------------------------------------------------------------- */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, var(--accent) var(--scroll, 0%), transparent 0);
+  z-index: 60;
+  pointer-events: none;
+  transition: background .1s linear;
+}
+
+/* --------------------------------------------------------------------------
+   2. Proporção de imagem — correção de cortes
+   --------------------------------------------------------------------------
+   Todos os assets do site são 4:3 (etapas 800×600, heros 1200×900).
+   Os containers pediam proporções diferentes com object-fit: cover,
+   o que cortava parte da ilustração — em imagem de comida o corte
+   remove justamente a borda da tigela.
+
+   A correção alinha os containers ao 4:3 nativo dos arquivos.
+   -------------------------------------------------------------------------- */
+
+/* Cards de receita: era 3/2, cortava topo e base */
+.card-image img,
+.recipe-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hero da página de receita: era 1.22, cortava as laterais */
+.recipe-hero img,
+.editorial-recipe > figure img,
+.recipe-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+}
+
+/* Hero da home: era 1.06, corte mais agressivo do site */
+.hero-feature > img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+/* Imagens de etapa: mantêm a ilustração inteira, sem recorte */
+.instruction-figure img,
+.instruction-image {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+  border-radius: 2px;
+}
+
+/* Kitchen notes */
+.kn-hero img,
+.kn-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pale);
+}
+
+/* Cards do bloco de relacionadas */
+.rr-thumb img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   3. Passos com marcação de leitura
+   -------------------------------------------------------------------------- */
+
+.steps li,
+.kn-steps li {
+  transition: border-color .25s var(--ease, ease);
+}
+
+.steps li:hover::before,
+.kn-steps li:hover .kn-number {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   4. Bloco de fontes com mais destaque
+   Curadoria creditada é o pilar editorial do site.
+   -------------------------------------------------------------------------- */
+
+.recipe-sources,
+.reference-sources {
+  background: var(--pale);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 26px 28px;
+}
+
+.recipe-sources a,
+.reference-sources a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.recipe-sources a:hover,
+.reference-sources a:hover {
+  background: rgba(201, 166, 107, .18);
+}
+
+/* --------------------------------------------------------------------------
+   5. Tabela de nutrição mais legível
+   -------------------------------------------------------------------------- */
+
+.nut-row {
+  padding-block: 9px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.nut-row:last-of-type {
+  border-bottom: none;
+}
+
+.nut-row > span:last-child {
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+/* --------------------------------------------------------------------------
+   6. FAQ com afordância mais clara
+   -------------------------------------------------------------------------- */
+
+.recipe-faq details {
+  border-bottom: 1px solid var(--line);
+}
+
+.recipe-faq summary {
+  padding-block: 15px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  transition: color .2s;
+}
+
+.recipe-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.recipe-faq summary::after {
+  content: '+';
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform .25s var(--ease, ease);
+}
+
+.recipe-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.recipe-faq summary:hover {
+  color: var(--brand-blue);
+}
+
+/* --------------------------------------------------------------------------
+   7. Ligações internas mais evidentes dentro do texto
+   -------------------------------------------------------------------------- */
+
+.kn-recipe-link,
+.related-note-link {
+  position: relative;
+}
+
+.kn-recipe-link::after,
+.related-note-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s var(--ease, ease);
+}
+
+.kn-recipe-link:hover::after,
+.related-note-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------------------------------
+   8. Mobile: tipografia, respiro e imagem
+   A maior parte do tráfego de Pinterest e Facebook chega por celular.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .steps p,
+  .kn-steps p,
+  .reference-intro p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+
+  .steps li {
+    margin-bottom: 26px;
+  }
+
+  /* No mobile o card tem pouca altura útil: 4:3 evita corte severo */
+  .card-image img,
+  .recipe-card img,
+  .rr-thumb img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Alvos de toque com área adequada */
+  .swap-btn,
+  .servings-btn,
+  .recipe-faq summary {
+    min-height: 44px;
+  }
+
+  .servings-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Fontes com quebra segura em telas estreitas */
+  .recipe-sources a,
+  .reference-sources a {
+    word-break: break-word;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Foco visível e consistente
+   -------------------------------------------------------------------------- */
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Impressão
+   -------------------------------------------------------------------------- */
+
+@media print {
+  body::before {
+    display: none;
+  }
+
+  .recipe-sources,
+  .reference-sources {
+    background: none;
+    border: 1px solid #999;
+  }
+
+  .recipe-faq details {
+    break-inside: avoid;
+  }
+
+  .recipe-faq details[open] summary::after {
+    display: none;
+  }
+}

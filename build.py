@@ -172,7 +172,7 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
 
     og_tags = og_meta_tags(title, desc, canonical_url, image_url, width, height)
 
-    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{robots_tag}{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 10 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/start-here/">Start here</a><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
+    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{robots_tag}{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 10 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
     # Use pre-generated responsive images; building the site needs no image tool.
     def responsive_image(match):
         tag = match.group(0)
@@ -392,7 +392,7 @@ def card(r, i, featured=False):
     if r.get('img'):
         media_html = f'<div class="card-image"><img src="/assets/{r["img"]}" alt="{html.escape(r["alt"], quote=True)}" loading="lazy" width="800" height="600"><span class="number">{idx_str}</span></div>'
     else:
-        media_html = f'''<div class="card-image card-placeholder" aria-label="{html.escape(r["alt"], quote=True)}"><div class="placeholder-art"><div class="placeholder-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span class="placeholder-status">IN DEVELOPMENT</span><span class="placeholder-note">Serving illustration in progress</span></div><span class="number">{idx_str}</span></div>'''
+        media_html = ''
 
     m = MODELS.get(r['slug']) or {}
     status_tag = '<span class="dev-badge">Development edition</span>' if m.get('status') == 'development' else ''
@@ -408,25 +408,22 @@ def card(r, i, featured=False):
     card_class = 'recipe-card'
     featured_label = ''
 
-    # Card meta line
-    card_meta = f'<span class="card-meta-cat">{html.escape(primary_cat_label)}</span>' if primary_cat_label else ''
-
     # Time derivation: total_time from MODELS, fallback prep_time, then recipes fallback
     card_time = m.get('total_time') or m.get('prep_time') or r.get('total_time') or r.get('prep_time') or ''
     # Method derivation
     card_method = m.get('method') or r.get('method') or ''
 
+    info_decisiva = str(card_method).strip() or str(primary_cat_label).strip()
+    
     bottom_items = []
-    if r.get('serves'):
-        bottom_items.append(f"Serves {r['serves']}")
     if card_time and str(card_time).strip():
         bottom_items.append(str(card_time).strip())
-    if card_method and str(card_method).strip():
-        bottom_items.append(str(card_method).strip())
+    if info_decisiva:
+        bottom_items.append(info_decisiva)
 
     meta_joined = ' <span aria-hidden="true">·</span> '.join(html.escape(item) for item in bottom_items)
 
-    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><p class="eyebrow">{featured_label}{r['cat']} {status_tag}</p>{card_meta}<h3>{r['title']}</h3><p>{r['desc']}</p><div class="card-bottom"><span>{meta_joined}</span><span class="text-link">The recipe <span aria-hidden="true">↗</span></span></div></div></a></article>'''
+    return f'''<article class="{card_class}" data-categories="{cats_attr}"><a href="/recipes/{r['slug']}/" aria-label="{html.escape(r['title'])}"><div class="card-image-wrap">{media_html}</div><div class="card-copy"><h3>{r['title']}</h3><div class="card-bottom"><span>{meta_joined}</span></div></div></a></article>'''
 
 
 # ---------------------------------------------------------------------------
@@ -605,43 +602,7 @@ def build_all():
     </section>
     {render_kitchen_home_feature()}
     {build_category_section()}
-    <section class="wrap home-paths" id="start-here-paths">
-      <div class="section-top">
-        <div>
-          <p class="eyebrow">04 / WHERE TO BEGIN</p>
-          <h2>Start from <span class="serif-accent">where you are.</span></h2>
-        </div>
-        <p>Choose a direction and find recipes and techniques that fit right now.</p>
-      </div>
-      <div class="home-paths-grid">
-        <a class="home-path-card" href="/start-here/#short-on-time">
-          <span class="home-path-icon" aria-hidden="true">⏱</span>
-          <strong>I'm short on time</strong>
-          <span>No-cook lunches and make-ahead breakfasts.</span>
-        </a>
-        <a class="home-path-card" href="/start-here/#use-what-you-have">
-          <span class="home-path-icon" aria-hidden="true">🥫</span>
-          <strong>I want to use what I have</strong>
-          <span>Pantry-first recipes built around beans and lentils.</span>
-        </a>
-        <a class="home-path-card" href="/start-here/#something-different">
-          <span class="home-path-icon" aria-hidden="true">🥗</span>
-          <strong>I want something different</strong>
-          <span>Change the texture or format of familiar ingredients.</span>
-        </a>
-        <a class="home-path-card" href="/start-here/#more-protein">
-          <span class="home-path-icon" aria-hidden="true">💪</span>
-          <strong>I want more protein</strong>
-          <span>Recipes centred on legumes and plant protein.</span>
-        </a>
-        <a class="home-path-card" href="/start-here/#more-vegetables">
-          <span class="home-path-icon" aria-hidden="true">🥦</span>
-          <strong>I want more vegetables</strong>
-          <span>Plant-forward meals where vegetables take the lead.</span>
-        </a>
-      </div>
-      <p><a class="text-link" href="/start-here/">All starting points ↗</a></p>
-    </section>
+
     <section class="future-note wrap">
       <span class="eyebrow">ON THE BACK BURNER</span>
       <div>

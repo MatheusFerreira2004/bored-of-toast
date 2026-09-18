@@ -55,7 +55,7 @@ def render_swap_block(sw, iid):
         
     note_row = f'<p class="swap-note">{E(note_text)}</p>' if note_text else ''
     
-    return f'''<details class="ingredient-swap"><summary>Swap option</summary><div class="swap-content swap-content--structured"><div class="swap-header"><h4>{title}</h4></div><div class="swap-changes"><p>{desc}</p></div>{note_row}<button type="button" class="button outline swap-btn" data-use-swap="{iid}">Use in this recipe</button></div></details><span class="applied-swap" data-applied-swap hidden></span><button type="button" class="undo-swap" data-undo-swap="{iid}" hidden>Undo substitution</button>'''
+    return f'''<details class="ingredient-swap"><summary>Missing this?</summary><div class="swap-content swap-content--structured"><div class="swap-header"><h4>{title}</h4></div><div class="swap-changes"><p>{desc}</p></div>{note_row}<button type="button" class="button outline swap-btn" data-use-swap="{iid}">Use in this recipe</button></div></details><span class="applied-swap" data-applied-swap hidden></span><button type="button" class="undo-swap" data-undo-swap="{iid}" hidden>Undo substitution</button>'''
 
 def render_editorial_recipe(r,others):
     d=r.get('editorial') or MODELS[r['slug']]
@@ -163,16 +163,9 @@ def render_editorial_recipe(r,others):
         
     intro_html = f'<p class="recipe-intro">{E(d["intro"])}</p>' if d.get('intro') else f'<p class="lead">{E(r["desc"])}</p>'
     
-    ad_content = '<div class="ad-container ad-in-content" aria-hidden="true"><span class="ad-label">Advertisement</span></div>'
-    ad_footer = '<div class="ad-container ad-footer" aria-hidden="true"><span class="ad-label">Advertisement</span></div>'
-    newsletter = '''<section class="recipe-newsletter">
-        <h3>More everyday ideas.</h3>
-        <p>Join the newsletter for new recipes and kitchen notes every week.</p>
-        <form class="newsletter-form" action="#" method="post">
-            <input type="email" placeholder="Your email address" required aria-label="Email address">
-            <button class="button" type="submit">Subscribe</button>
-        </form>
-    </section>'''
+    ad_content = ''
+    ad_footer = ''
+    newsletter = ''
 
     cats = r.get('categories', [])
     from constants import CAT_LABEL
