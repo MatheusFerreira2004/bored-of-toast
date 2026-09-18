@@ -112,7 +112,9 @@ recipes = [
     dict(slug='garlic-butter-bean-mushroom-toast', title='Garlic butter white bean & mushroom toast', cat='COMFORT CLASSIC · SKILLET & TOAST', categories=['budget-friendly', 'protein-forward', 'plant-forward', 'pantry-meals', 'cozy-dinners'], img='mushroom-toast.png', alt='Garlic butter white beans and mushrooms spooned over toasted sourdough bread', desc='Caramelized cremini mushrooms and buttery cannellini beans simmered in garlic, thyme, and white wine vinegar on thick crusty sourdough.', serves='2', prep_time='8 min prep', total_time='15 min total'), 
     dict(slug='spiced-apple-cinnamon-porridge', title='Spiced apple & cinnamon porridge', cat='WARM MORNINGS · STOVETOP COMFORT', categories=['budget-friendly', 'plant-forward', 'make-ahead', 'cozy-dinners'], img='porridge.png', alt='Spiced apple and cinnamon porridge in a bowl topped with toasted pecans', desc='Toasted oats simmered with warm cinnamon, nutmeg, diced crisp apples, and finished with toasted pecans and maple syrup.', serves='2', prep_time='5 min prep', total_time='20 min total'), 
     dict(slug='5-minute-blender-hummus', title='5-Minute Blender Hummus', cat='NO TAHINI · FIVE MINUTES', categories=['one-ingredient-different-ways', 'budget-friendly', 'quick-easy'], img='hummus.webp', alt='A shallow bowl of creamy blended hummus with a swirl on top, a drizzle of olive oil pooling in the center', desc='Canned chickpeas, one blender, five minutes. No tahini required.', serves='4', prep_time='5 min prep', total_time='5 min total'), 
-    dict(slug='oven-roasted-crispy-chickpeas', title='Oven-Roasted Crispy Chickpeas', cat='OVEN-ROASTED · SAVORY SNACK', categories=['one-ingredient-different-ways', 'budget-friendly', 'plant-forward'], img='roasted-chickpeas.webp', alt='A small bowl of golden, visibly crisp roasted chickpeas with a light dusting of paprika', desc='The same can of chickpeas, crisped in the oven until they snap.', serves='2', prep_time='5 min prep', total_time='30 min total')
+    dict(slug='oven-roasted-crispy-chickpeas', title='Oven-Roasted Crispy Chickpeas', cat='OVEN-ROASTED · SAVORY SNACK', categories=['one-ingredient-different-ways', 'budget-friendly', 'plant-forward'], img='roasted-chickpeas.webp', alt='A small bowl of golden, visibly crisp roasted chickpeas with a light dusting of paprika', desc='The same can of chickpeas, crisped in the oven until they snap.', serves='2', prep_time='5 min prep', total_time='30 min total'),
+    dict(slug='lemon-pea-ricotta-pasta', title='Lemon, Pea & Ricotta Pasta', cat='QUICK & BRIGHT · STOVETOP', categories=['quick-easy'], img='lemon-pea-ricotta-pasta.webp', alt='Pasta with green peas and a light ricotta coating', desc='Short pasta tossed in a light ricotta and lemon sauce, with sweet green peas cooked in the same pot.', serves='2', prep_time='20 min', total_time='20 min'), 
+    dict(slug='cabbage-egg-skillet-rice', title='Cabbage & Egg Skillet Rice', cat='BUDGET PAN-FRIED · SKILLET', categories=['budget-friendly'], img='cabbage-egg-skillet-rice.webp', alt='Fried rice with cabbage, carrots, and egg in a bowl', desc='Cooked rice pan-fried with lightly browned cabbage, sweet carrots, and scrambled eggs.', serves='2', prep_time='20 min', total_time='20 min')
 ]
 
 BASE_URL = os.environ.get('SITE_BASE_URL', '').rstrip('/')
@@ -172,7 +174,7 @@ def page(path, title, desc, body, active='', canonical_path=None, jsonld=None, o
 
     og_tags = og_meta_tags(title, desc, canonical_url, image_url, width, height)
 
-    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{robots_tag}{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 10 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
+    doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} — Bored of Toast</title><meta name="description" content="{html.escape(desc, quote=True)}">{robots_tag}{canonical_tag}{og_tags}<meta name="theme-color" content="#124de3"><link rel="icon" href="/assets/mascot.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/refinements.css"><link rel="stylesheet" href="/recipe.css">{jsonld_tag}</head><body><a class="skip" href="#main">Skip to content</a><header><div class="navwrap"><a class="brand" href="/" aria-label="Bored of Toast home"><img src="/assets/logo.png" alt="Bored of Toast" width="210" height="90"></a><nav aria-label="Main navigation">{nav}</nav><a class="header-note" href="/about/">A little curiosity<br>goes a long way.</a></div></header><main id="main">{body}</main><footer><div class="footer-statement wrap"><img src="/assets/mascot.png" alt="" width="76" height="76" loading="lazy"><p>See you in<br>the kitchen<span>.</span></p><a class="text-link" href="/recipes/">Browse all 12 recipes ↗</a></div><div class="footer-inner"><div><strong>Bored of Toast</strong><p>Everyday ingredients. Better meals.</p></div><div class="footer-links"><a href="/about/">About &amp; editorial approach</a><a href="/the-lunch-edit/">The Lunch Edit</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><span>© 2026 Bored of Toast</span></div></div></footer><script src="/recipe-engine.js" defer></script><script src="/site.js" defer></script><script src="/pilot.js" defer></script></body></html>'''
     # Use pre-generated responsive images; building the site needs no image tool.
     def responsive_image(match):
         tag = match.group(0)
@@ -456,7 +458,7 @@ def build_category_section():
     <p>From quick weeknight dinners to make-ahead breakfasts — find the right recipe for right now.</p>
   </div>
   <div class="cat-grid">{items}</div>
-  <p class="cat-browse-note"><a class="text-link" href="/recipes/">See all 10 recipes ↗</a></p>
+  <p class="cat-browse-note"><a class="text-link" href="/recipes/">See all 12 recipes ↗</a></p>
 </section>'''
 
 # ---------------------------------------------------------------------------
@@ -505,7 +507,7 @@ def build_recipe_index():
       <p class="eyebrow">THE RECIPE NOTEBOOK</p>
       <h1>Find your next meal.</h1>
     </div>
-    <p class="recipe-index-intro">Ten everyday recipes for fresh lunches, warm skillet dinners and make-ahead mornings. Use the filters to find what suits your day.</p>
+    <p class="recipe-index-intro">Twelve everyday recipes for fresh lunches, warm skillet dinners and make-ahead mornings. Use the filters to find what suits your day.</p>
   </div>
 </section>
 <section class="wrap recipe-index-body">
@@ -517,7 +519,7 @@ def build_recipe_index():
     <p class="noscript-note">Showing all recipes. Enable JavaScript to filter by category without leaving this page.</p>
   </noscript>
   <div class="recipe-index-status" aria-live="polite" aria-atomic="true">
-    <p class="active-filter-label" id="active-filter-label">All 10 recipes</p>
+    <p class="active-filter-label" id="active-filter-label">All 12 recipes</p>
     <p class="active-cat-desc" id="active-cat-desc" hidden></p>
   </div>
   <div class="recipe-grid" id="recipe-grid">{all_cards}</div>
@@ -525,7 +527,7 @@ def build_recipe_index():
     <div class="empty-state-inner">
       <span class="empty-state-icon" aria-hidden="true">&#128203;</span>
       <h2>No recipes in this category yet.</h2>
-      <p>This section will grow as the recipe collection expands. In the meantime, <a href="/recipes/">browse all 10 recipes</a>.</p>
+      <p>This section will grow as the recipe collection expands. In the meantime, <a href="/recipes/">browse all 12 recipes</a>.</p>
     </div>
   </div>
   {editorial_transparency(compact=True)}
@@ -534,7 +536,7 @@ def build_recipe_index():
     page(
         'recipes',
         'All recipes',
-        'Browse all ten everyday recipes. Filter by Quick & Easy, Budget-Friendly, Plant-Forward, Make-Ahead and more.',
+        'Browse all twelve everyday recipes. Filter by Quick & Easy, Budget-Friendly, Plant-Forward, Make-Ahead and more.',
         body,
         'recipes',
         canonical_path='recipes'
@@ -594,10 +596,10 @@ def build_all():
           <p class="eyebrow">01 / THE RECIPE NOTEBOOK</p>
           <h2>What sounds <span class="serif-accent">good?</span></h2>
         </div>
-        <p>Ten everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
+        <p>Twelve everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
       </div>
       <div class="recipe-grid">{''.join(card(r, i + 1) for i, r in enumerate(recipes[:3]))}</div>
-      <p><a class="text-link" href="/recipes/">View all 10 recipes ↗</a></p>
+      <p><a class="text-link" href="/recipes/">View all 12 recipes ↗</a></p>
       {editorial_transparency(compact=True)}
     </section>
     {render_kitchen_home_feature()}
@@ -753,8 +755,8 @@ def build_all():
     # ---------------------------------------------------------------------------
     # 5. About page
     # ---------------------------------------------------------------------------
-    dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
-    dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
+    dev_note = '<p>This is the development edition of the site. All twelve recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
+    dev_li = '<li><strong>Development recipes.</strong> All twelve recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
     page(
         'about',
         'About & Editorial Approach',

@@ -19,4 +19,4 @@ const gn=engine.calculate(models['crispy-sheet-pan-gnocchi'],4);
 assert.equal(gn.ingredients[0].amount,'2 packages');assert.match(gn.ingredients[0].note,/450 g/);
 assert.match(engine.calculate(models['spiced-apple-cinnamon-porridge'],4).steps[0].action,/1 tsp/);
 assert.equal((fs.readFileSync(path.join(root,'dist/index.html'),'utf8').match(/class="recipe-card"/g)||[]).length,3);
-console.log('PASS: all ten generated recipes, scaling, fixed package sizes, cinnamon instructions, three home cards.');
+console.log('PASS: all twelve generated recipes, scaling, fixed package sizes, cinnamon instructions, three home cards.');

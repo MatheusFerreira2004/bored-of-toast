@@ -1381,5 +1381,306 @@
     "intro": "Oven-roasted chickpeas that turn deeply crunchy. Drying them thoroughly before tossing in oil is crucial—any remaining moisture will steam them instead of roasting them.",
     "tested": false,
     "method": "Oven"
+  },
+  "lemon-pea-ricotta-pasta": {
+    "title": "Lemon, Pea & Ricotta Pasta",
+    "slug": "lemon-pea-ricotta-pasta",
+    "categories": [
+      "quick-easy"
+    ],
+    "method": "Stovetop",
+    "base_people": 2,
+    "meal_role": "a main meal",
+    "tagline": "Short pasta folded into a light, bright ricotta sauce.",
+    "intro": "Short pasta tossed in a light ricotta and lemon sauce, with sweet green peas cooked in the same pot. The starchy pasta water brings everything together into a creamy, bright bowl without heavy cream.",
+    "prep_time": "20 mins",
+    "total_time": "20 mins",
+    "batch_default": "Use a larger pot and bowl. The reserved water is for adjustment, not a fixed amount.",
+    "tested": false,
+    "status": "published",
+    "author": {
+      "name": "",
+      "url": "/about/"
+    },
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-18",
+    "allergen": "Contains wheat (pasta) and dairy (ricotta). Check all ingredient labels.",
+    "serve": "Serve immediately while warm and creamy.",
+    "ahead": "This dish is best eaten fresh. The ricotta sauce will absorb into the pasta if left sitting.",
+    "storage": "Store leftovers in an airtight container in the fridge for up to 2 days. Reheat gently with a splash of water to loosen the sauce.",
+    "ingredients": [
+      {
+        "id": "pasta",
+        "name": "dry short pasta",
+        "qty": 180,
+        "unit": "g"
+      },
+      {
+        "id": "peas",
+        "name": "frozen peas",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "id": "ricotta",
+        "name": "ricotta cheese",
+        "qty": 120,
+        "unit": "g",
+        "swap": {
+          "name": "mashed or whipped cottage cheese",
+          "qty": 120,
+          "unit": "g",
+          "texture_change": "Similar creaminess, but may have small curds unless blended.",
+          "flavor_change": "Cottage cheese can be saltier, so taste before adding extra salt.",
+          "how_to_adjust": "Adjust the pasta water gradually, as moisture levels vary.",
+          "technique": "Mash or blend before mixing for a smoother sauce."
+        }
+      },
+      {
+        "id": "oil",
+        "name": "olive oil",
+        "qty": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "lemon-juice",
+        "name": "lemon juice, plus more to taste",
+        "qty": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "lemon-zest",
+        "name": "lemon zest",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "id": "seasoning",
+        "name": "Salt and black pepper to taste"
+      },
+      {
+        "id": "water",
+        "name": "reserved pasta water, as needed"
+      }
+    ],
+    "steps": [
+      {
+        "id": "boil",
+        "title": "Cook the pasta and peas",
+        "action": "Cook the pasta according to package directions. Add the frozen peas near the end, respecting their required cooking time. Reserve a cup of the pasta water before draining.",
+        "cue": "Pasta is cooked to the package's suggested doneness."
+      },
+      {
+        "id": "mix-sauce",
+        "title": "Prepare the ricotta base",
+        "action": "In a large bowl, mash the ricotta with the olive oil, lemon juice, lemon zest, and black pepper. Add a few spoonfuls of the hot reserved pasta water to loosen the mixture.",
+        "cue": "The mixture should look creamy and slightly thinned out."
+      },
+      {
+        "id": "combine",
+        "title": "Combine and adjust",
+        "action": "Add the drained pasta and peas to the bowl. Toss well, adding more pasta water gradually until the sauce coats the pasta. Adjust salt to taste and serve.",
+        "cue": "The sauce adheres to the pasta without looking dry or forming a puddle at the bottom.",
+        "image": "lemon-pea-ricotta-pasta-step.webp",
+        "alt": "Spoon holding pasta coated in ricotta sauce with peas"
+      }
+    ],
+    "relatedRecipes": [
+      "lemon-chickpea-salad",
+      "lemon-white-bean-skillet"
+    ],
+    "hero_image": {
+      "src": "lemon-pea-ricotta-pasta.webp",
+      "alt": "Pasta with green peas and a light ricotta coating",
+      "is_ai_generated": true
+    },
+    "nutrition": {
+      "verified": false
+    },
+    "times": [
+      {
+        "label": "Prep",
+        "value": "~20 min"
+      },
+      {
+        "label": "Method",
+        "value": "Stovetop"
+      },
+      {
+        "label": "Total",
+        "value": "~20 min"
+      }
+    ],
+    "equipment": [
+      "Large pot",
+      "Large mixing bowl"
+    ],
+    "serves_default": 2,
+    "max_people": 4,
+    "difficulty": "Easy",
+    "card_time": "~20 min",
+    "batch": [],
+    "faq": [],
+    "related_notes": [],
+    "sources": [],
+    "source": "",
+    "variation": "",
+    "recipe_cuisine": "",
+    "suitable_for_diet": [],
+    "primary_goal": "",
+    "keywords": ""
+  },
+  "cabbage-egg-skillet-rice": {
+    "title": "Cabbage & Egg Skillet Rice",
+    "slug": "cabbage-egg-skillet-rice",
+    "categories": [
+      "budget-friendly"
+    ],
+    "method": "Skillet",
+    "base_people": 2,
+    "meal_role": "a main meal",
+    "tagline": "Simple ingredients, fast prep, and golden cabbage.",
+    "intro": "Cooked rice pan-fried with lightly browned cabbage, sweet carrots, and scrambled eggs. A fast, budget-friendly meal that makes excellent use of simple ingredients.",
+    "prep_time": "20 mins",
+    "total_time": "20 mins",
+    "batch_default": "Cook in batches if your skillet is crowded. Do not double the cooking time automatically.",
+    "tested": false,
+    "status": "published",
+    "author": {
+      "name": "",
+      "url": "/about/"
+    },
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-18",
+    "allergen": "Contains egg and soy. Check all ingredient labels.",
+    "serve": "Serve hot directly from the skillet.",
+    "ahead": "This recipe uses leftover rice. Ensure the rice was cooled quickly and stored correctly before using. <a href=\"https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety\" target=\"_blank\">Food safety guide</a>.",
+    "storage": "Keep leftovers at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation.",
+    "ingredients": [
+      {
+        "id": "rice",
+        "name": "cooked rice, properly stored",
+        "qty": 300,
+        "unit": "g",
+        "note": "Time does not include cooking the rice."
+      },
+      {
+        "id": "cabbage",
+        "name": "thinly sliced cabbage",
+        "qty": 250,
+        "unit": "g",
+        "swap": {
+          "name": "finely chopped broccoli",
+          "qty": 250,
+          "unit": "g",
+          "texture_change": "More crunch, less surface area for browning.",
+          "how_to_adjust": "Cooking may take longer. Cut thick stems very small so they cook evenly.",
+          "technique": "Cook until tender-crisp before adding the rice."
+        }
+      },
+      {
+        "id": "egg",
+        "name": "eggs",
+        "qty": 3,
+        "unit": ""
+      },
+      {
+        "id": "carrot",
+        "name": "small carrot, grated",
+        "qty": 1,
+        "unit": ""
+      },
+      {
+        "id": "oil",
+        "name": "neutral oil, divided",
+        "qty": 2,
+        "unit": "tsp"
+      },
+      {
+        "id": "garlic",
+        "name": "garlic clove, minced",
+        "qty": 1,
+        "unit": ""
+      },
+      {
+        "id": "soy-sauce",
+        "name": "soy sauce, plus more to taste",
+        "qty": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "scallion",
+        "name": "sliced scallions (optional)",
+        "qty": 2,
+        "unit": ""
+      }
+    ],
+    "steps": [
+      {
+        "id": "cook-egg",
+        "title": "Scramble the eggs",
+        "action": "Heat half the oil in a large skillet. Add the beaten eggs and stir until just set. Transfer to a plate and set aside.",
+        "cue": "Eggs are fully cooked with no runny parts left."
+      },
+      {
+        "id": "brown-veg",
+        "title": "Brown the vegetables",
+        "action": "Add the remaining oil to the skillet along with the cabbage and carrot. Let it sit undisturbed for a moment to develop some color, then stir. Stir in the garlic and cook briefly without burning it.",
+        "cue": "The cabbage has spots of golden brown while maintaining some crunch.",
+        "image": "cabbage-egg-skillet-rice-step.webp",
+        "alt": "Cabbage and grated carrots browning in a skillet"
+      },
+      {
+        "id": "add-rice",
+        "title": "Combine and heat",
+        "action": "Add the cooked rice, breaking up any clumps. Stir in the soy sauce and toss until everything is thoroughly heated. Return the eggs to the pan, breaking them up, and fold in the scallions if using.",
+        "cue": "The rice is hot and the grains are separate, not mushy."
+      }
+    ],
+    "relatedRecipes": [
+      "crispy-sheet-pan-gnocchi",
+      "smashed-cucumber-edamame-bowl"
+    ],
+    "hero_image": {
+      "src": "cabbage-egg-skillet-rice.webp",
+      "alt": "Fried rice with cabbage, carrots, and egg in a bowl",
+      "is_ai_generated": true
+    },
+    "nutrition": {
+      "verified": false
+    },
+    "times": [
+      {
+        "label": "Prep",
+        "value": "~20 min"
+      },
+      {
+        "label": "Method",
+        "value": "Skillet"
+      },
+      {
+        "label": "Total",
+        "value": "~20 min"
+      }
+    ],
+    "equipment": [
+      "Large skillet",
+      "Cutting board",
+      "Chef's knife"
+    ],
+    "serves_default": 2,
+    "max_people": 4,
+    "difficulty": "Easy",
+    "card_time": "~20 min",
+    "batch": [],
+    "faq": [],
+    "related_notes": [],
+    "sources": [],
+    "source": "",
+    "variation": "",
+    "recipe_cuisine": "",
+    "suitable_for_diet": [],
+    "primary_goal": "",
+    "keywords": ""
   }
 }
