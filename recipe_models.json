@@ -1482,7 +1482,7 @@
         "cue": "The mixture should look creamy and slightly thinned out.",
         "image": "lemon-pea-ricotta-pasta-step-2.webp",
         "is_ai_generated": true,
-        "alt": "Ricotta cheese being mixed with lemon, olive oil, and pasta water in a bowl",
+        "alt": "Mixing fresh ricotta cheese, lemon zest, and a light touch of olive oil with a wooden spoon in a glass bowl",
         "width": 800,
         "height": 800
       },
@@ -1640,7 +1640,7 @@
         "cue": "Eggs are fully cooked with no runny parts left.",
         "image": "cabbage-egg-skillet-rice-step-1.webp",
         "is_ai_generated": true,
-        "alt": "Scrambled eggs in a skillet with a spatula",
+        "alt": "Soft yellow scrambled eggs cooking in a silver-grey two-handled pan, gently stirred with a wooden spoon",
         "width": 800,
         "height": 800
       },
@@ -1664,7 +1664,7 @@
         "width": 800,
         "height": 800,
         "is_ai_generated": true,
-        "alt": "Tossing cooked rice, browned cabbage, carrots, scrambled eggs and scallions in a skillet"
+        "alt": "Cooked rice, finely shredded cabbage, carrots, golden egg pieces and scallions being folded together with a wooden spoon in a two-handled pan"
       }
     ],
     "relatedRecipes": [
@@ -1988,7 +1988,7 @@
         "title": "Pan-fry the tofu",
         "action": "Heat the {{oil}} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
         "image": "golden-tofu-edamame-bowls-step-2.webp",
-        "alt": "Bite-sized tofu cubes pan-frying with golden-brown seared edges in a skillet",
+        "alt": "Tofu cubes pan-frying in a thin sheen of oil in a cast iron skillet, with a wooden spatula turning one cube to show the golden crust",
         "is_ai_generated": true,
         "cue": "Golden brown surfaces on the tofu cubes.",
         "id": "pan-fry",
