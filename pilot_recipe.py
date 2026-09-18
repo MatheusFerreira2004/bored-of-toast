@@ -84,8 +84,17 @@ def render_editorial_recipe(r,others):
         im = ""
         if s.get('image'):
             img_base = s['image'].rsplit('.', 1)[0]
-            img_srcset = f"/assets/{img_base}-480.webp 480w, /assets/{img_base}-800.webp 800w, /assets/{img_base}-1200.webp 1200w"
-            im = f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}" srcset="{img_srcset}" sizes="(max-width: 800px) 100vw, 800px" width="800" height="600" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>'
+            as_dir = Path(__file__).parent / 'dist' / 'assets'
+            src_as_dir = Path(__file__).parent / 'source-assets'
+            candidates = []
+            for w in (480, 800, 1200):
+                if (as_dir / f"{img_base}-{w}.webp").exists() or (src_as_dir / f"{img_base}-{w}.webp").exists():
+                    candidates.append(f"/assets/{img_base}-{w}.webp {w}w")
+            srcset_attr = f' srcset="{", ".join(candidates)}"' if candidates else ''
+            sizes_attr = ' sizes="(max-width: 800px) 100vw, 680px"' if candidates else ''
+            img_w = s.get('width', 800)
+            img_h = s.get('height', 600)
+            im = f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}"{srcset_attr}{sizes_attr} width="{img_w}" height="{img_h}" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>'
         
         check_block = ''
         if s.get('cue'):

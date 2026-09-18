@@ -12,6 +12,16 @@ OUT = ROOT / 'dist'
 AS = OUT / 'assets'
 AS.mkdir(parents=True, exist_ok=True)
 
+# Mirror ready assets from source-assets to dist/assets to guarantee build reproducibility
+SOURCE_AS = ROOT / 'source-assets'
+if SOURCE_AS.exists():
+    import shutil
+    for f in SOURCE_AS.iterdir():
+        if f.is_file() and (f.suffix == '.webp' or ('-step-' in f.name and f.suffix == '.jpg')):
+            dest = AS / f.name
+            if not dest.exists() or dest.stat().st_mtime < f.stat().st_mtime:
+                shutil.copy2(f, dest)
+
 FRACTIONS = {
     '½': 0.5,
     '⅓': 1/3,

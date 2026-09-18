@@ -68,6 +68,42 @@ recipes_idx = (DIST / 'recipes' / 'index.html').read_text(encoding='utf-8')
 recipe_count = recipes_idx.count('class="recipe-card')
 ok.append(f'Recipe index cards: {recipe_count}')
 
+# Verify all local image references (src and srcset) across all generated HTML files exist and are non-empty
+checked_refs = 0
+broken_refs = []
+
+for html_file in DIST.rglob('*.html'):
+    h_text = html_file.read_text(encoding='utf-8')
+    for img_match in re.finditer(r'<img\s+([^>]+)>', h_text, re.IGNORECASE):
+        attrs = img_match.group(1)
+        
+        # Check src
+        src_m = re.search(r'src=["\'](/assets/[^"\'?#]+)', attrs)
+        if src_m:
+            checked_refs += 1
+            rel_asset = src_m.group(1).lstrip('/')
+            target_asset = DIST / rel_asset
+            if not target_asset.exists() or target_asset.stat().st_size == 0:
+                broken_refs.append(f"{html_file.relative_to(DIST)}: src={src_m.group(1)} (missing or 0 bytes)")
+
+        # Check srcset
+        srcset_m = re.search(r'srcset=["\']([^"\']+)["\']', attrs)
+        if srcset_m:
+            candidates = [c.strip().split()[0] for c in srcset_m.group(1).split(',') if c.strip()]
+            for cand in candidates:
+                if cand.startswith('/assets/'):
+                    checked_refs += 1
+                    cand_clean = cand.split('?')[0].split('#')[0]
+                    target_cand = DIST / cand_clean.lstrip('/')
+                    if not target_cand.exists() or target_cand.stat().st_size == 0:
+                        broken_refs.append(f"{html_file.relative_to(DIST)}: srcset candidate {cand} (missing or 0 bytes)")
+
+if broken_refs:
+    for br in broken_refs:
+        issues.append(f'Broken local image reference: {br}')
+else:
+    ok.append(f'All {checked_refs} local image references (src/srcset) exist on disk')
+
 print('=== AUDIT RESULTS ===')
 print()
 print('ISSUES:')

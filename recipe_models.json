@@ -1469,27 +1469,33 @@
         "title": "Cook the pasta and peas",
         "action": "Cook the pasta according to package directions. Add the frozen peas near the end, respecting their required cooking time. Reserve a cup of the pasta water before draining.",
         "cue": "Pasta is cooked to the package's suggested doneness.",
-        "image": "lemon-pea-ricotta-pasta-step-1.jpg",
+        "image": "lemon-pea-ricotta-pasta-step-1.webp",
         "is_ai_generated": true,
-        "alt": "Pasta and peas boiling in a pot being stirred, with reserved pasta water"
+        "alt": "Pasta and peas boiling in a pot being stirred, with reserved pasta water",
+        "width": 800,
+        "height": 800
       },
       {
         "id": "mix-sauce",
         "title": "Prepare the ricotta base",
         "action": "In a large bowl, mash the ricotta with the olive oil, lemon juice, lemon zest, and black pepper. Add a few spoonfuls of the hot reserved pasta water to loosen the mixture.",
         "cue": "The mixture should look creamy and slightly thinned out.",
-        "image": "lemon-pea-ricotta-pasta-step-2.jpg",
+        "image": "lemon-pea-ricotta-pasta-step-2.webp",
         "is_ai_generated": true,
-        "alt": "Ricotta cheese being mixed with lemon, olive oil, and pasta water in a bowl"
+        "alt": "Ricotta cheese being mixed with lemon, olive oil, and pasta water in a bowl",
+        "width": 800,
+        "height": 800
       },
       {
         "id": "combine",
         "title": "Combine and adjust",
         "action": "Add the drained pasta and peas to the bowl. Toss well, adding more pasta water gradually until the sauce coats the pasta. Adjust salt to taste and serve.",
         "cue": "The sauce adheres to the pasta without looking dry or forming a puddle at the bottom.",
-        "image": "lemon-pea-ricotta-pasta-step-3.jpg",
+        "image": "lemon-pea-ricotta-pasta-step-3.webp",
         "alt": "Pasta and peas tossed in creamy ricotta sauce in a bowl",
-        "is_ai_generated": true
+        "is_ai_generated": true,
+        "width": 800,
+        "height": 800
       }
     ],
     "relatedRecipes": [
@@ -1632,18 +1638,22 @@
         "title": "Scramble the eggs",
         "action": "Heat half the oil in a large skillet. Add the beaten eggs and stir until just set. Transfer to a plate and set aside.",
         "cue": "Eggs are fully cooked with no runny parts left.",
-        "image": "cabbage-egg-skillet-rice-step-1.jpg",
+        "image": "cabbage-egg-skillet-rice-step-1.webp",
         "is_ai_generated": true,
-        "alt": "Scrambled eggs in a skillet with a spatula"
+        "alt": "Scrambled eggs in a skillet with a spatula",
+        "width": 800,
+        "height": 800
       },
       {
         "id": "brown-veg",
         "title": "Brown the vegetables",
         "action": "Add the remaining oil to the skillet along with the cabbage and carrot. Let it sit undisturbed for a moment to develop some color, then stir. Stir in the garlic and cook briefly without burning it.",
         "cue": "The cabbage has spots of golden brown while maintaining some crunch.",
-        "image": "cabbage-egg-skillet-rice-step-2.jpg",
+        "image": "cabbage-egg-skillet-rice-step-2.webp",
         "alt": "Sliced cabbage and carrots browning in a skillet",
-        "is_ai_generated": true
+        "is_ai_generated": true,
+        "width": 800,
+        "height": 800
       },
       {
         "id": "add-rice",
