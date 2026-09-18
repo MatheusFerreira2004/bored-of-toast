@@ -93,8 +93,9 @@ def render_editorial_recipe(r,others):
             srcset_attr = f' srcset="{", ".join(candidates)}"' if candidates else ''
             sizes_attr = ' sizes="(max-width: 800px) 100vw, 680px"' if candidates else ''
             img_w = s.get('width', 800)
-            img_h = s.get('height', 600)
-            im = f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}"{srcset_attr}{sizes_attr} width="{img_w}" height="{img_h}" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>'
+            img_h = s.get('height', 800)
+            alt_text = s.get('alt') or s.get('title') or ''
+            im = f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}"{srcset_attr}{sizes_attr} width="{img_w}" height="{img_h}" loading="lazy" alt="{E(alt_text)}">{ai_badge}</figure>'
         
         check_block = ''
         if s.get('cue'):

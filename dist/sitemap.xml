@@ -121,6 +121,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>/recipes/golden-cauliflower-lemon-tahini/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/recipes/golden-tofu-edamame-bowls/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>/kitchen-notes/keep-salad-crisp/</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
