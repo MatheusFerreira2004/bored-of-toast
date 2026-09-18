@@ -1,17 +1,19 @@
 """Presentation polish pass over dist/.
 
 Runs after postbuild.py and postbuild_reference.py. Every fix here came out
-of a full-site audit and is purely presentational: colour tokens, stray
-panels, numbering, and two stale cross-references.
+of a full-site audit and is purely presentational: colour tokens, a stray
+panel, numbering, and two stale cross-references.
 
 Why this is a separate file: postbuild.py is around 1200 lines and cannot be
 rewritten safely from a remote editing session without risking silent loss.
 These transforms belong there and should be folded in the next time that file
 is edited properly in a local checkout.
 
-Each transform is independent, idempotent, and wrapped so a miss can never
-break a deploy. A transform that finds nothing logs and moves on, because the
-underlying markup may legitimately change in build.py.
+Every pattern here is written against HTML that was read back off the live
+site, not against assumed markup. Three of these transforms previously
+matched nothing while still reporting success, so each one now says whether
+it found its target and main() exits non-zero when a scoped transform finds
+nothing on the page it was written for.
 
 Run locally with:
     python build.py && python postbuild.py && python postbuild_reference.py \
@@ -26,7 +28,7 @@ DIST = ROOT / 'dist'
 
 # The generated pages carry a leftover template colour. #2B3A30 is the ink
 # already used for headings and the header background, so the browser chrome
-# now matches the site instead of contradicting it.
+# matches the site instead of contradicting it.
 WRONG_THEME_COLOUR = '#124de3'
 BRAND_INK = '#2B3A30'
 
@@ -36,30 +38,21 @@ REFERENCE_ANCHOR_ID = 'reference-charts'
 SERIES_MARKER = 'data-reference-series'
 
 # Text that identifies the empty-results panel on the recipe index.
-EMPTY_STATE_PHRASES = [
+EMPTY_STATE_PHRASES = (
     'No recipes in this category yet',
     'This section will grow as the recipe collection expands',
-]
+)
 
 # The chickpea cross-reference predates the pillar page. It promised three
 # ways and linked to the unfiltered recipe index.
 CHICKPEA_TARGET = '/kitchen-notes/chickpeas-five-ways/'
 
-# Only a link that currently points at a listing is a candidate for
-# retargeting. An anchor already pointing at a specific recipe or note is
-# doing its job and must be left alone: an earlier version of this transform
-# matched on link text alone and rewrote the roasted chickpeas recipe card,
-# which made that recipe unreachable from its own index.
-LISTING_HREFS = (
-    '/recipes/',
-    '/kitchen-notes/',
-)
-
-CHICKPEA_TEXT_FIXES = [
+CHICKPEA_TEXT_FIXES = (
     ('three ways to use chickpeas', 'five ways to use chickpeas'),
     ('three ways with chickpeas', 'five ways with chickpeas'),
     ('explores three ways', 'explores five ways'),
-]
+    ('One can, three directions', 'One can, five directions'),
+)
 
 
 def _strip_tags(fragment):
@@ -84,13 +77,15 @@ def fix_theme_colour(html):
 def hide_empty_state(html):
     """Hide the empty-results panel that renders below the full grid.
 
-    The panel is meant for a filter that matches nothing, but it is emitted
+    The panel exists for a filter that matches nothing, but it is emitted
     unconditionally, so it sat under all ten recipes telling the reader the
     category was empty.
 
-    Hiding with the hidden attribute rather than deleting the node keeps the
-    filter behaviour intact: script that sets an inline display still wins
-    over the user-agent rule that hidden relies on.
+    The first attempt used the hidden attribute. That was the wrong tool: any
+    class-based display rule in the stylesheet beats it, and this panel is a
+    styled section. An inline display:none sits high enough in the cascade to
+    win, and the filter script can still reveal the panel by writing its own
+    inline display later.
     """
     if EMPTY_STATE_MARKER in html:
         return html, False
@@ -100,26 +95,25 @@ def hide_empty_state(html):
     phrase = next(p for p in EMPTY_STATE_PHRASES if p in html)
     position = html.find(phrase)
 
-    # Walk back to the opening tag of the block that contains the phrase.
-    opens = list(re.finditer(r'<(section|div|p)\b[^>]*>', html[:position], re.I))
+    # Walk back to the nearest containing section or div, preferring a
+    # container over the paragraph holding the copy so the icon and heading
+    # disappear with it.
+    opens = list(re.finditer(r'<(section|div)\b[^>]*>', html[:position], re.I))
     if not opens:
         return html, False
 
-    # Prefer the nearest ancestor that looks like a panel rather than a
-    # paragraph, so the whole block is hidden and not just its copy.
-    target = None
-    for match in reversed(opens):
-        if match.group(1).lower() in ('section', 'div'):
-            target = match
-            break
-    if target is None:
-        target = opens[-1]
-
+    target = opens[-1]
     tag = target.group(0)
-    if ' hidden' in tag:
+
+    if 'display:none' in tag.replace(' ', ''):
         return html, False
 
-    patched = tag[:-1] + f' hidden {EMPTY_STATE_MARKER}>'
+    if 'style="' in tag:
+        patched = tag.replace('style="', 'style="display:none;', 1)
+        patched = patched[:-1] + f' {EMPTY_STATE_MARKER}>'
+    else:
+        patched = tag[:-1] + f' style="display:none" {EMPTY_STATE_MARKER}>'
+
     return html[:target.start()] + patched + html[target.end():], True
 
 
@@ -133,11 +127,11 @@ def fix_padded_numbering(html):
     The listing pads every index to two characters, so the tenth note onward
     rendered as 010, 011, 012. Only single digits should be padded.
 
-    The pattern is deliberately tight: a zero, then 10 to 29, then the space
-    and slash the eyebrow uses. Anything looser starts matching ordinary
-    numbers in body copy.
+    The pattern requires a three-digit run starting with a zero, immediately
+    followed by the separator used in the eyebrow, so an ordinary label such
+    as the section number 01 is left alone.
     """
-    pattern = re.compile(r'(>|\s)0([12]\d)(\s*/)')
+    pattern = re.compile(r'(>|\s)0(1\d|2\d)(\s*(?:/|<))')
     new_html, count = pattern.subn(
         lambda m: m.group(1) + m.group(2) + m.group(3), html
     )
@@ -168,35 +162,21 @@ def fix_hero_number(html):
 # Chickpea cross-reference
 # ---------------------------------------------------------------------------
 
-def _is_listing_href(href):
-    """True when an href points at a listing rather than a single page."""
-    cleaned = href.split('?')[0].split('#')[0]
-    return cleaned in LISTING_HREFS
-
-
-def _retarget_chickpea_anchor(match):
-    """Send a listing link about ways to use chickpeas to the pillar page."""
-    opening, href, rest, body = match.groups()
-
-    if CHICKPEA_TARGET in href:
-        return match.group(0)
-    if not _is_listing_href(href):
-        return match.group(0)
-
-    text = _strip_tags(body).lower()
-    if 'chickpea' not in text:
-        return match.group(0)
-    if not re.search(r'\b(ways|five|three)\b', text):
-        return match.group(0)
-
-    return f'{opening}{CHICKPEA_TARGET}{rest}{body}</a>'
-
-
 def fix_chickpea_reference(html):
     """Point the chickpea mention at the pillar page and correct the count.
 
     Written before Chickpeas, Five Ways existed, so it advertised three ways
-    and sent the reader to the unfiltered recipe index to find them.
+    and sent the reader to the unfiltered recipe index.
+
+    The first version keyed off the anchor text and required the word
+    "chickpea" in it. The real link reads "One can, three directions", so it
+    was skipped every time. The fix is to work from the section instead: find
+    the block that talks about chickpeas, then retarget the one anchor inside
+    it that still points at a listing route.
+
+    Requiring a listing href is what keeps this off the recipe cards. An
+    anchor already pointing at a specific recipe is left alone, which is why
+    the roasted chickpeas card is safe.
     """
     changed = False
 
@@ -205,11 +185,32 @@ def fix_chickpea_reference(html):
             html = html.replace(old, new)
             changed = True
 
-    pattern = re.compile(r'(<a[^>]*href=")([^"]*)("[^>]*>)(.*?)</a>', re.I | re.S)
-    new_html = pattern.sub(_retarget_chickpea_anchor, html)
-    if new_html != html:
-        html = new_html
-        changed = True
+    # Find each section, then act only on those mentioning chickpeas.
+    sections = list(re.finditer(r'<section\b[^>]*>.*?</section>', html, re.I | re.S))
+    if not sections:
+        return html, changed
+
+    listing_routes = ('/recipes/', '/kitchen-notes/')
+
+    for section in reversed(sections):
+        block = section.group(0)
+        if 'chickpea' not in _strip_tags(block).lower():
+            continue
+        if CHICKPEA_TARGET in block:
+            continue
+
+        def retarget(match):
+            opening, href, rest, body = match.groups()
+            if href.rstrip('/') + '/' not in listing_routes:
+                return match.group(0)
+            return f'{opening}{CHICKPEA_TARGET}{rest}{body}</a>'
+
+        pattern = re.compile(r'(<a[^>]*href=")([^"]*)("[^>]*>)(.*?)</a>', re.I | re.S)
+        new_block = pattern.sub(retarget, block)
+
+        if new_block != block:
+            html = html[:section.start()] + new_block + html[section.end():]
+            changed = True
 
     return html, changed
 
@@ -276,17 +277,26 @@ def add_reference_series(html):
     Eight charts now sit in the listing with no theme covering them, so a
     reader browsing by theme cannot reach them.
 
-    The card links to an in-page anchor rather than a filtered view, so it
-    works without depending on the filter script's data attributes.
+    The first version looked for href="...?series=..." because that is how a
+    filtered view would be built. The grid actually links to in-page anchors
+    such as #texture-school, so nothing matched. The pattern now follows the
+    real markup, and the new card points at the charts anchor for the same
+    reason: it works without depending on the filter script.
     """
     if SERIES_MARKER in html:
         return html, False
 
+    # Theme cards are anchors whose href is a bare in-page fragment.
     cards = list(re.finditer(
-        r'<a\b[^>]*href="[^"]*\?series=[^"]*"[^>]*>.*?</a>',
+        r'<a\b[^>]*href="#[a-z0-9-]+"[^>]*>.*?</a>',
         html,
         re.I | re.S,
     ))
+
+    # Ignore a skip link or any other fragment anchor that is not part of the
+    # grid. The theme cards are the run of them that sit next to each other.
+    cards = [c for c in cards if len(_strip_tags(c.group(0))) > 20]
+
     if not cards:
         return html, False
 
@@ -296,7 +306,6 @@ def add_reference_series(html):
         f'#{REFERENCE_ANCHOR_ID}',
         [
             'Reference',
-            'Charts and conversions',
             'Cooking times, yields, substitutions and storage, '
             'gathered in one place.',
         ],
@@ -316,15 +325,23 @@ TRANSFORMS = [
 ]
 
 # Transforms that only make sense on one route, keyed by the first path part.
-# The chickpea retarget is scoped to the home page: the stale copy lives
-# there, and running it site-wide is what let it rewrite a recipe card.
 SCOPED = {
     'empty state hidden': ('recipes',),
     'hero number': ('',),
-    'chickpea reference': ('',),
+    'chickpea reference': ('kitchen-notes',),
     'reference anchor': ('kitchen-notes',),
     'reference series card': ('kitchen-notes',),
 }
+
+# A scoped transform that never fires is a broken pattern, not a no-op. These
+# are the ones worth failing the build over, because each one was written for
+# a specific page that is known to contain its target.
+MUST_MATCH = (
+    'theme colour',
+    'empty state hidden',
+    'reference anchor',
+    'reference series card',
+)
 
 
 def _in_scope(name, parts):
@@ -380,10 +397,19 @@ def main():
     print(f'  pages scanned: {len(pages)}')
     print(f'  pages modified: {touched}')
     for key, value in counts.items():
-        if value:
-            print(f'    {key}: {value}')
-        else:
-            print(f'    {key}: no match')
+        print(f'    {key}: {value if value else "no match"}')
+
+    missed = [name for name in MUST_MATCH if counts.get(name, 0) == 0]
+    if missed:
+        print()
+        print('postbuild_polish: FAILED')
+        print('  These transforms matched nothing. Each was written against')
+        print('  markup read off the live site, so a miss means the pattern')
+        print('  is wrong or the generated markup changed:')
+        for name in missed:
+            print(f'    - {name}')
+        return 1
+
     print('postbuild_polish: done')
     return 0
 
