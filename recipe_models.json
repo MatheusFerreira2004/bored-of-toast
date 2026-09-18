@@ -1694,5 +1694,271 @@
       "text": "Food safety guide"
     },
     "before_prep": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 20 minutes does not include the time to cook the rice."
+  },
+  "golden-cauliflower-lemon-tahini": {
+    "title": "Golden Cauliflower with Lemon Tahini",
+    "slug": "golden-cauliflower-lemon-tahini",
+    "categories": [
+      "plant-forward"
+    ],
+    "method": "Oven",
+    "base_people": 2,
+    "meal_role": "generous side",
+    "tagline": "Golden roasted cauliflower florets with toasted edges, finished with a creamy lemon tahini sauce.",
+    "intro": "A simple and rewarding way to roast cauliflower. The tahini dressing adds richness, and a little parsley brings freshness. Serve it alongside your favorite grains or legumes.",
+    "tested": false,
+    "status": "pilot",
+    "author": {
+      "name": "Matheus Ferreira",
+      "url": "/about/"
+    },
+    "allergen": "Contains sesame.",
+    "serve": "Serve as a generous side dish.",
+    "ahead": "Cauliflower is best served fresh from the oven to keep its texture.",
+    "storage": "Store leftovers in an airtight container in the fridge for up to 3 days. The sauce can be stored separately.",
+    "ingredients": [
+      {
+        "id": "cauliflower",
+        "qty": 600,
+        "unit": "g",
+        "name": "cauliflower florets"
+      },
+      {
+        "id": "oil",
+        "qty": 1.5,
+        "unit": "tbsp",
+        "name": "olive oil"
+      },
+      {
+        "id": "cumin",
+        "qty": 0.5,
+        "unit": "tsp",
+        "name": "ground cumin"
+      },
+      {
+        "id": "sp",
+        "name": "Salt and black pepper, to taste"
+      },
+      {
+        "id": "tahini",
+        "qty": 2,
+        "unit": "tbsp",
+        "name": "tahini"
+      },
+      {
+        "id": "lemon",
+        "qty": 1,
+        "unit": "tbsp",
+        "name": "lemon juice"
+      },
+      {
+        "id": "water",
+        "name": "Water, as needed"
+      },
+      {
+        "id": "parsley",
+        "name": "Chopped parsley, to serve (optional)"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "Roast",
+        "title": "Prepare the cauliflower",
+        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {cauliflower} with the {oil}, {cumin}, {sp} until evenly coated."
+      },
+      {
+        "title": "Arrange on a baking sheet",
+        "action": "Spread the florets on a baking sheet in a single layer without crowding them. Place the cut surfaces flat against the pan where possible.",
+        "image": "golden-cauliflower-lemon-tahini-step.webp",
+        "alt": "Cauliflower florets spread out on a baking sheet",
+        "is_ai_generated": true
+      },
+      {
+        "title": "Roast until golden",
+        "action": "Roast in the oven, starting to check around the 25-minute mark. Turn the pieces as needed and continue roasting until they are deeply golden and tender.",
+        "cue": "Golden edges and stems that yield to the tip of a knife."
+      },
+      {
+        "phase": "Finish",
+        "title": "Make the tahini sauce",
+        "action": "In a small bowl, whisk together the {tahini} and {lemon}. The mixture will seize and thicken at first. Add {water} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
+        "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out."
+      },
+      {
+        "title": "Serve",
+        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {parsley} if using."
+      }
+    ],
+    "relatedRecipes": [
+      {
+        "slug": "crispy-sheet-pan-gnocchi",
+        "reason": "Also oven-baked"
+      },
+      {
+        "slug": "oven-roasted-crispy-chickpeas",
+        "reason": "Also oven-baked"
+      }
+    ],
+    "hero_image": {
+      "is_ai_generated": true
+    },
+    "times": [
+      {
+        "label": "Estimated total",
+        "value": "35–40 min",
+        "note": "(subject to oven and floret size)"
+      },
+      {
+        "label": "Method",
+        "value": "Oven"
+      }
+    ],
+    "equipment": [
+      "Baking sheet",
+      "Mixing bowl",
+      "Whisk"
+    ],
+    "larger_batch": "Use multiple baking sheets or roast in batches to avoid crowding. The sauce water should still be added gradually as needed.",
+    "if_looks": "If the sauce looks split or overly thick after adding lemon, keep adding water a teaspoon at a time and whisk vigorously until smooth.",
+    "variation": "For a fresher, tangy alternative without sesame, swap the 2 tbsp tahini for about 3 tbsp of thick plain yogurt. Start with less lemon juice and adjust to taste, skipping the water unless needed to thin it out. (Contains dairy)."
+  },
+  "golden-tofu-edamame-bowls": {
+    "title": "Golden Tofu & Edamame Bowls",
+    "slug": "golden-tofu-edamame-bowls",
+    "categories": [
+      "protein-forward"
+    ],
+    "method": "Skillet",
+    "base_people": 2,
+    "meal_role": "main meal",
+    "tagline": "Golden pan-fried tofu, edamame and rice, brought together with a creamy peanut and lemon sauce.",
+    "intro": "A simple, satisfying bowl focusing on flavor and texture. The tofu gets a quick pan-fry until golden, served over rice and edamame with a rich peanut sauce.",
+    "tested": false,
+    "status": "pilot",
+    "author": {
+      "name": "Matheus Ferreira",
+      "url": "/about/"
+    },
+    "allergen": "Contains soy and peanuts. May contain wheat (check soy sauce).",
+    "serve": "Serve warm in bowls.",
+    "ahead": "If storing leftovers, keep the sauce separate. This recipe relies on pre-cooked rice. Ensure the rice was cooled quickly and stored correctly before using.",
+    "safety_link": {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "text": "Food safety guide"
+    },
+    "before_you_begin": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 25 minutes does not include the time to cook the rice.",
+    "storage": "Store leftovers in the fridge for up to 2 days.",
+    "ingredients": [
+      {
+        "id": "tofu",
+        "qty": 300,
+        "unit": "g",
+        "name": "firm tofu, drained"
+      },
+      {
+        "id": "edamame",
+        "qty": 150,
+        "unit": "g",
+        "name": "shelled edamame"
+      },
+      {
+        "id": "rice",
+        "qty": 250,
+        "unit": "g",
+        "name": "cooked rice"
+      },
+      {
+        "id": "oil",
+        "qty": 2,
+        "unit": "tsp",
+        "name": "neutral oil"
+      },
+      {
+        "id": "soy",
+        "qty": 1,
+        "unit": "tbsp",
+        "name": "soy sauce"
+      },
+      {
+        "id": "peanut_butter",
+        "qty": 1.5,
+        "unit": "tbsp",
+        "name": "unsweetened peanut butter"
+      },
+      {
+        "id": "lemon",
+        "qty": 1,
+        "unit": "tbsp",
+        "name": "lemon juice"
+      },
+      {
+        "id": "water",
+        "name": "Water, as needed"
+      },
+      {
+        "id": "scallions",
+        "name": "Sliced scallions, to serve (optional)"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "Prep",
+        "title": "Prepare the tofu",
+        "action": "Gently pat the {tofu} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes."
+      },
+      {
+        "phase": "Cook",
+        "title": "Pan-fry the tofu",
+        "action": "Heat the {oil} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
+        "image": "golden-tofu-edamame-bowls-step.webp",
+        "alt": "Tofu cubes pan-frying in a skillet",
+        "is_ai_generated": true,
+        "cue": "Golden brown surfaces on the tofu cubes."
+      },
+      {
+        "title": "Prepare edamame and rice",
+        "action": "Cook or thaw the {edamame} according to the package instructions. Safely reheat the {rice} until steaming hot throughout."
+      },
+      {
+        "phase": "Finish",
+        "title": "Make the peanut sauce",
+        "action": "In a small bowl, whisk together the {peanut_butter}, {soy}, and {lemon}. Add {water} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
+      },
+      {
+        "title": "Assemble the bowls",
+        "action": "Divide the rice, edamame, and golden tofu between two bowls. Drizzle with the peanut sauce and top with {scallions} if using."
+      }
+    ],
+    "relatedRecipes": [
+      {
+        "slug": "cabbage-egg-skillet-rice",
+        "reason": "Another skillet rice meal"
+      },
+      {
+        "slug": "smashed-cucumber-edamame-bowl",
+        "reason": "Another edamame bowl"
+      }
+    ],
+    "hero_image": {
+      "is_ai_generated": true
+    },
+    "times": [
+      {
+        "label": "Estimated total",
+        "value": "25 min",
+        "note": "(using pre-cooked rice)"
+      },
+      {
+        "label": "Method",
+        "value": "Skillet"
+      }
+    ],
+    "equipment": [
+      "Skillet",
+      "Small mixing bowl"
+    ],
+    "larger_batch": "If scaling up, brown the tofu in batches so the skillet doesn't get crowded. The sauce water should still be adjusted gradually.",
+    "if_looks": "If the sauce is too thick, simply whisk in a splash more water until you reach the desired consistency.",
+    "variation": "You can swap the peanut butter for an equal amount of tahini for a sesame flavor profile. Adjust the water gradually as needed. (Contains sesame)."
   }
 }
