@@ -64,7 +64,7 @@ import json
 import re
 import shutil
 import sys
-from html import escape as esc
+from html import escape as esc, unescape
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -265,7 +265,7 @@ def collect_recipes():
 
         recipes.append(dict(
             slug=slug,
-            title=_strip_tags(title),
+            title=unescape(_strip_tags(title)),
             img=img or '',
             alt=_first(html, r'<img[^>]+alt="([^"]*)"[^>]*class="[^"]*hero') or '',
             categories=list(dict.fromkeys(cats)),

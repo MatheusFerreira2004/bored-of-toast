@@ -1486,7 +1486,6 @@
       }
     ],
     "relatedRecipes": [
-      "lemon-chickpea-salad",
       "lemon-white-bean-skillet"
     ],
     "hero_image": {
@@ -1499,16 +1498,13 @@
     },
     "times": [
       {
-        "label": "Prep",
-        "value": "~20 min"
+        "label": "Estimated total",
+        "value": "~20 min",
+        "note": "(subject to pasta and boiling time)"
       },
       {
         "label": "Method",
         "value": "Stovetop"
-      },
-      {
-        "label": "Total",
-        "value": "~20 min"
       }
     ],
     "equipment": [
@@ -1528,7 +1524,8 @@
     "recipe_cuisine": "",
     "suitable_for_diet": [],
     "primary_goal": "",
-    "keywords": ""
+    "keywords": "",
+    "before_prep": "The estimated 20 minutes depends on the cooking time specified on your pasta package and how long your water takes to boil."
   },
   "cabbage-egg-skillet-rice": {
     "title": "Cabbage & Egg Skillet Rice",
@@ -1554,7 +1551,7 @@
     "dateModified": "2026-09-18",
     "allergen": "Contains egg and soy. Check all ingredient labels.",
     "serve": "Serve hot directly from the skillet.",
-    "ahead": "This recipe uses leftover rice. Ensure the rice was cooled quickly and stored correctly before using. <a href=\"https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety\" target=\"_blank\">Food safety guide</a>.",
+    "ahead": "This recipe uses leftover rice. Ensure the rice was cooled quickly and stored correctly before using.",
     "storage": "Keep leftovers at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation.",
     "ingredients": [
       {
@@ -1638,8 +1635,8 @@
       }
     ],
     "relatedRecipes": [
-      "crispy-sheet-pan-gnocchi",
-      "smashed-cucumber-edamame-bowl"
+      "lemon-white-bean-skillet",
+      "crispy-sheet-pan-gnocchi"
     ],
     "hero_image": {
       "src": "cabbage-egg-skillet-rice.webp",
@@ -1651,16 +1648,13 @@
     },
     "times": [
       {
-        "label": "Prep",
-        "value": "~20 min"
+        "label": "Estimated total",
+        "value": "~20 min",
+        "note": "(starting from cooked rice)"
       },
       {
         "label": "Method",
         "value": "Skillet"
-      },
-      {
-        "label": "Total",
-        "value": "~20 min"
       }
     ],
     "equipment": [
@@ -1681,6 +1675,11 @@
     "recipe_cuisine": "",
     "suitable_for_diet": [],
     "primary_goal": "",
-    "keywords": ""
+    "keywords": "",
+    "safety_link": {
+      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+      "text": "Food safety guide"
+    },
+    "before_prep": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 20 minutes does not include the time to cook the rice."
   }
 }

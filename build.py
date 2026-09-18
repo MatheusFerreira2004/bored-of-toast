@@ -392,7 +392,9 @@ def build_recipe_jsonld(r):
 def card(r, i, featured=False):
     idx_str = f"0{i}" if i < 10 else str(i)
     if r.get('img'):
-        media_html = f'<div class="card-image"><img src="/assets/{r["img"]}" alt="{html.escape(r["alt"], quote=True)}" loading="lazy" width="800" height="600"><span class="number">{idx_str}</span></div>'
+        base = r['img'].rsplit('.', 1)[0]
+        srcset = f"/assets/{base}-480.webp 480w, /assets/{base}-800.webp 800w, /assets/{base}-1200.webp 1200w"
+        media_html = f'<div class="card-image"><img src="/assets/{r["img"]}" srcset="{srcset}" sizes="(max-width: 800px) 100vw, 800px" alt="{html.escape(r["alt"], quote=True)}" loading="lazy" width="800" height="600"><span class="number">{idx_str}</span></div>'
     else:
         media_html = ''
 

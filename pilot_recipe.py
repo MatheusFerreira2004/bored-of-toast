@@ -81,7 +81,11 @@ def render_editorial_recipe(r,others):
         duration=f'<p class="step-duration">{E(s["duration"])}</p>' if s.get('duration') else ''
         
         ai_badge = '<span class="ai-badge">AI-generated</span>' if s.get('is_ai_generated') else ''
-        im=f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}" width="800" height="600" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>' if s.get('image') else ''
+        im = ""
+        if s.get('image'):
+            img_base = s['image'].rsplit('.', 1)[0]
+            img_srcset = f"/assets/{img_base}-480.webp 480w, /assets/{img_base}-800.webp 800w, /assets/{img_base}-1200.webp 1200w"
+            im = f'<figure class="instruction-figure"><img class="instruction-image" src="/assets/{s["image"]}" srcset="{img_srcset}" sizes="(max-width: 800px) 100vw, 800px" width="800" height="600" loading="lazy" alt="{E(s["alt"])}">{ai_badge}</figure>'
         
         check_block = ''
         if s.get('cue'):
@@ -91,11 +95,20 @@ def render_editorial_recipe(r,others):
             
         steps.append(f'''<section class="method-step" data-method-step="{n}"><div class="method-title"><span>{n+1:02d}</span><h3>{E(s['title'])}</h3></div>{duration}{im}<p data-step-action>{E(resolve_text(s['action'],d))}</p>{check_block}</section>''')
         
-    times=''.join(f'<div><dt>{E(t["label"])}</dt><dd>{E(t["value"])}</dd></div>' for t in d['times'])
+    def render_time(t):
+        n = f' <span class="time-note" style="font-size: 0.85em; font-weight: normal; opacity: 0.8;">{E(t["note"])}</span>' if t.get('note') else ''
+        return f'<div><dt>{E(t["label"])}</dt><dd>{E(t["value"])}{n}</dd></div>'
+    times = ''.join(render_time(t) for t in d['times'])
     equipment=(f'<p class="equipment"><strong>You\'ll need</strong><br>'+E(' \xb7 '.join(d['equipment']))+'</p>') if d['equipment'] else ''
     
     # Extra new fields
-    before_html = f'<div class="before-you-begin"><p class="eyebrow">BEFORE YOU BEGIN</p><p>{E(d["before_prep"])}</p></div>' if d.get('before_prep') else ''
+    bp = d.get('before_prep') or d.get('before_you_begin')
+    before_html = ''
+    if bp:
+        link_html = ''
+        if d.get('safety_link'):
+            link_html = f' <a href="{E(d["safety_link"]["url"], quote=True)}" target="_blank">{E(d["safety_link"]["text"])}</a>'
+        before_html = f'<div class="before-you-begin"><p class="eyebrow">BEFORE YOU BEGIN</p><p>{E(bp)}{link_html}</p></div>'
     looks_html = f'<div class="if-yours-looks"><p class="eyebrow">IF YOURS LOOKS...</p><p>{E(d["if_looks"])}</p></div>' if d.get('if_looks') else ''
     batch_html = f'<div class="larger-batch"><p class="eyebrow">FOR A LARGER BATCH</p><p>{E(d["larger_batch"])}</p></div>' if d.get('larger_batch') else ''
 
@@ -215,6 +228,14 @@ def render_editorial_recipe(r,others):
         serve_title = d.get('serve_title', 'Serve with')
         serve_html = f'<h2>{E(serve_title)}</h2><p>{E(d["serve"])}</p>'
 
+    variation_block = f'<details><summary>One way to change it up</summary><p>{E(d["variation"])}</p></details>' if d.get('variation') else ''
+    ahead_html = f'<p>{E(d["ahead"])}</p>' if d.get('ahead') else ''
+    storage_html = f'<p>{E(d["storage"])}</p>' if d.get('storage') else ''
+    storage_block = f'<details id="storage"><summary>Storage & Prep ahead</summary>{ahead_html}{storage_html}</details>' if ahead_html or storage_html else ''
+
+    main_img_base = r['img'].rsplit('.', 1)[0]
+    main_img_srcset = f"/assets/{main_img_base}-480.webp 480w, /assets/{main_img_base}-800.webp 800w, /assets/{main_img_base}-1200.webp 1200w"
+
     return f'''<section class="editorial-recipe wrap" id="pilot-recipe" data-pilot-recipe="{r['slug']}">
     <a class="breadcrumb" href="/recipes/">← All recipes</a>
     <div class="editorial-header-grid">
@@ -232,7 +253,7 @@ def render_editorial_recipe(r,others):
         </div>
         <div class="editorial-header-visual">
             <figure>
-                <img src="/assets/{r['img']}" alt="{E(r['alt'])}" width="800" height="600">
+                <img src="/assets/{r['img']}" srcset="{main_img_srcset}" sizes="(max-width: 800px) 100vw, 800px" alt="{E(r['alt'])}" width="800" height="600" fetchpriority="high">
                 { '<span class="ai-badge">AI-generated illustration</span>' if d.get('hero_image', {}).get('is_ai_generated') else '' }
             </figure>
         </div>
@@ -278,9 +299,9 @@ def render_editorial_recipe(r,others):
         {serve_html}
         {faq_html}
         {nutrition_html}
-        <details><summary>One way to change it up</summary><p>{E(d['variation'])}</p></details>
+        {variation_block}
         {technique}
-        <details id="storage"><summary>Storage & Prep ahead</summary><p>{E(d['ahead'])}</p><p>{E(d['storage'])}</p></details>
+        {storage_block}
         {source_html}
     </section>
     {related_notes_html}
