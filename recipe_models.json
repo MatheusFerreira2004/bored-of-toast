@@ -1468,21 +1468,28 @@
         "id": "boil",
         "title": "Cook the pasta and peas",
         "action": "Cook the pasta according to package directions. Add the frozen peas near the end, respecting their required cooking time. Reserve a cup of the pasta water before draining.",
-        "cue": "Pasta is cooked to the package's suggested doneness."
+        "cue": "Pasta is cooked to the package's suggested doneness.",
+        "image": "lemon-pea-ricotta-pasta-step-1.jpg",
+        "is_ai_generated": true,
+        "alt": "Pasta and peas boiling in a pot being stirred, with reserved pasta water"
       },
       {
         "id": "mix-sauce",
         "title": "Prepare the ricotta base",
         "action": "In a large bowl, mash the ricotta with the olive oil, lemon juice, lemon zest, and black pepper. Add a few spoonfuls of the hot reserved pasta water to loosen the mixture.",
-        "cue": "The mixture should look creamy and slightly thinned out."
+        "cue": "The mixture should look creamy and slightly thinned out.",
+        "image": "lemon-pea-ricotta-pasta-step-2.jpg",
+        "is_ai_generated": true,
+        "alt": "Ricotta cheese being mixed with lemon, olive oil, and pasta water in a bowl"
       },
       {
         "id": "combine",
         "title": "Combine and adjust",
         "action": "Add the drained pasta and peas to the bowl. Toss well, adding more pasta water gradually until the sauce coats the pasta. Adjust salt to taste and serve.",
         "cue": "The sauce adheres to the pasta without looking dry or forming a puddle at the bottom.",
-        "image": "lemon-pea-ricotta-pasta-step.webp",
-        "alt": "Spoon holding pasta coated in ricotta sauce with peas"
+        "image": "lemon-pea-ricotta-pasta-step-3.jpg",
+        "alt": "Pasta and peas tossed in creamy ricotta sauce in a bowl",
+        "is_ai_generated": true
       }
     ],
     "relatedRecipes": [
@@ -1624,15 +1631,19 @@
         "id": "cook-egg",
         "title": "Scramble the eggs",
         "action": "Heat half the oil in a large skillet. Add the beaten eggs and stir until just set. Transfer to a plate and set aside.",
-        "cue": "Eggs are fully cooked with no runny parts left."
+        "cue": "Eggs are fully cooked with no runny parts left.",
+        "image": "cabbage-egg-skillet-rice-step-1.jpg",
+        "is_ai_generated": true,
+        "alt": "Scrambled eggs in a skillet with a spatula"
       },
       {
         "id": "brown-veg",
         "title": "Brown the vegetables",
         "action": "Add the remaining oil to the skillet along with the cabbage and carrot. Let it sit undisturbed for a moment to develop some color, then stir. Stir in the garlic and cook briefly without burning it.",
         "cue": "The cabbage has spots of golden brown while maintaining some crunch.",
-        "image": "cabbage-egg-skillet-rice-step.webp",
-        "alt": "Cabbage and grated carrots browning in a skillet"
+        "image": "cabbage-egg-skillet-rice-step-2.jpg",
+        "alt": "Sliced cabbage and carrots browning in a skillet",
+        "is_ai_generated": true
       },
       {
         "id": "add-rice",
@@ -1774,29 +1785,34 @@
       {
         "phase": "Roast",
         "title": "Prepare the cauliflower",
-        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {{cauliflower}} with the {{oil}}, {{cumin}}, {{sp}} until evenly coated."
+        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {{cauliflower}} with the {{oil}}, {{cumin}}, {{sp}} until evenly coated.",
+        "id": "prep-cauliflower"
       },
       {
         "title": "Arrange on a baking sheet",
         "action": "Spread the florets on a baking sheet in a single layer without crowding them. Place the cut surfaces flat against the pan where possible.",
         "image": "golden-cauliflower-lemon-tahini-step.webp",
         "alt": "Cauliflower florets spread out on a baking sheet",
-        "is_ai_generated": true
+        "is_ai_generated": true,
+        "id": "arrange-sheet"
       },
       {
         "title": "Roast until golden",
         "action": "Roast in the oven, starting to check around the 25-minute mark. Turn the pieces as needed and continue roasting until they are deeply golden and tender.",
-        "cue": "Golden edges and stems that yield to the tip of a knife."
+        "cue": "Golden edges and stems that yield to the tip of a knife.",
+        "id": "roast"
       },
       {
         "phase": "Finish",
         "title": "Make the tahini sauce",
         "action": "In a small bowl, whisk together the {{tahini}} and {{lemon}}. The mixture will seize and thicken at first. Add {{water}} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
-        "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out."
+        "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out.",
+        "id": "make-sauce"
       },
       {
         "title": "Serve",
-        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {{parsley}} if using."
+        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {{parsley}} if using.",
+        "id": "serve"
       }
     ],
     "relatedRecipes": [
@@ -1922,7 +1938,8 @@
       {
         "phase": "Prep",
         "title": "Prepare the tofu",
-        "action": "Gently pat the {{tofu}} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes."
+        "action": "Gently pat the {{tofu}} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes.",
+        "id": "prep-tofu"
       },
       {
         "phase": "Cook",
@@ -1931,20 +1948,24 @@
         "image": "golden-tofu-edamame-bowls-step.webp",
         "alt": "Tofu cubes pan-frying in a skillet",
         "is_ai_generated": true,
-        "cue": "Golden brown surfaces on the tofu cubes."
+        "cue": "Golden brown surfaces on the tofu cubes.",
+        "id": "pan-fry"
       },
       {
         "title": "Prepare edamame and rice",
-        "action": "Cook or thaw the {{edamame}} according to the package instructions. Safely reheat the {{rice}} until steaming hot throughout."
+        "action": "Cook or thaw the {{edamame}} according to the package instructions. Safely reheat the {{rice}} until steaming hot throughout.",
+        "id": "prep-edamame-rice"
       },
       {
         "phase": "Finish",
         "title": "Make the sauce",
-        "action": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
+        "action": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily.",
+        "id": "make-sauce"
       },
       {
         "title": "Assemble the bowls",
-        "action": "Divide the rice, edamame, and golden tofu between serving bowls. Drizzle with the sauce and top with {{scallions}} if using."
+        "action": "Divide the rice, edamame, and golden tofu between serving bowls. Drizzle with the sauce and top with {{scallions}} if using.",
+        "id": "assemble"
       }
     ],
     "relatedRecipes": [

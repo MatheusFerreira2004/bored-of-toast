@@ -30,3 +30,6 @@ Este documento define as regras fundamentais e o escopo do projeto, consolidando
 
 ## Pendências de Validação
 - **Validação Visual Pendente**: Em ambientes onde a checagem com um navegador real não é suportada por falta de interface gráfica (ex: execução por agentes automáticos via CLI), a prova definitiva de layout em dispositivos móveis e em resoluções variadas (375x812, 1440x900) dependerá de validação humana posterior, embora os testes em JSDOM garantam a estrutura HTML subjacente.
+
+### Identidade Visual e Imagens
+Capa fotográfica; uma ilustração culinária por passo de preparo.
