@@ -14,7 +14,7 @@ break a deploy. A transform that finds nothing logs and moves on, because the
 underlying markup may legitimately change in build.py.
 
 Run locally with:
-    python build.py && python postbuild.py && python postbuild_reference.py \\
+    python build.py && python postbuild.py && python postbuild_reference.py \
         && python postbuild_polish.py
 """
 import re
@@ -128,7 +128,9 @@ def fix_padded_numbering(html):
     the section label 01 are left alone.
     """
     pattern = re.compile(r'(>|\s)0(1\d|2\d)(\s*(?:/|<))')
-    new_html, count = pattern.subn(lambda m: m.group(1) + m.group(2) + m.group(3), html)
+    new_html, count = pattern.subn(
+        lambda m: m.group(1) + m.group(2) + m.group(3), html
+    )
     return new_html, count > 0
 
 
@@ -156,6 +158,22 @@ def fix_hero_number(html):
 # Chickpea cross-reference
 # ---------------------------------------------------------------------------
 
+def _retarget_chickpea_anchor(match):
+    """Send an anchor about ways to use chickpeas to the pillar page."""
+    opening, href, rest, body = match.groups()
+
+    if CHICKPEA_TARGET in href:
+        return match.group(0)
+
+    text = _strip_tags(body).lower()
+    if 'chickpea' not in text:
+        return match.group(0)
+    if not re.search(r'\b(ways|five|three)\b', text):
+        return match.group(0)
+
+    return f'{opening}{CHICKPEA_TARGET}{rest}{body}</a>'
+
+
 def fix_chickpea_reference(html):
     """Point the chickpea mention at the pillar page and correct the count.
 
@@ -169,36 +187,11 @@ def fix_chickpea_reference(html):
             html = html.replace(old, new)
             changed = True
 
-    # Re-target any anchor whose visible text is about ways to use chickpeas.
-    def repl(match):
-        nonlocal changed
-        whole = match.group(0)
-        if CHICKPEA_TARGET in whole:
-            return whole
-        text = _strip_tags(match.group(3)).lower()
-        if 'chickpea' not in text:
-            return whole
-        if not re.search(r'\b(ways|five|three)\b', text):
-            return whole
+    pattern = re.compile(r'(<a[^>]*href=")([^"]*)("[^>]*>)(.*?)</a>', re.I | re.S)
+    new_html = pattern.sub(_retarget_chickpea_anchor, html)
+    if new_html != html:
+        html = new_html
         changed = True
-        return match.group(1) + CHICKPEA_TARGET + match.group(2) + match.group(3) + '</a>'
-
-    pattern = re.compile(r'(<a[^>]*href=")([^"]*)("[^>]*>.*?)</a>', re.I | re.S)
-    html = re.sub(
-        pattern,
-        lambda m: repl(re.match(
-            r'(<a[^>]*href=")([^"]*)("[^>]*>)(.*?)</a>',
-            m.group(0),
-            re.I | re.S,
-        ) and type('M', (), {
-            'group': lambda self, i, mm=re.match(
-                r'(<a[^>]*href=")([^"]*)("[^>]*>)(.*?)</a>',
-                m.group(0),
-                re.I | re.S,
-            ): [m.group(0), mm.group(1), mm.group(3), mm.group(4)][i],
-        })()) or m.group(0),
-        html,
-    )
 
     return html, changed
 
@@ -235,8 +228,12 @@ def _clone_card(card_html, href, texts):
     inherits whatever classes and structure the generator currently emits, so
     it cannot drift out of step with its siblings.
     """
-    clone = re.sub(r'(href=")[^"]*(")', lambda m: m.group(1) + href + m.group(2),
-                   card_html, count=1)
+    clone = re.sub(
+        r'(href=")[^"]*(")',
+        lambda m: m.group(1) + href + m.group(2),
+        card_html,
+        count=1,
+    )
     clone = re.sub(r'\sid="[^"]*"', '', clone)
 
     queue = list(texts)
