@@ -116,7 +116,8 @@ class TestBuildOutput(unittest.TestCase):
             'calories': '320',
             'proteinContent': '14g',
             'fatContent': '',
-            'disclaimer': 'Estimated values.'
+            'disclaimer': 'Estimated values.',
+            'verified': True
         }
         html_filled = render_editorial_recipe({**r, 'editorial': model_copy}, '')
         self.assertIn('<section class="recipe-nutrition">', html_filled)
@@ -137,7 +138,7 @@ class TestBuildOutput(unittest.TestCase):
         orig_nut = MODELS[r['slug']].get('nutrition')
         try:
             # Case 1: only servingSize -> must NOT include nutrition
-            MODELS[r['slug']]['nutrition'] = {'servingSize': '1 bowl', 'calories': ''}
+            MODELS[r['slug']]['nutrition'] = {'servingSize': '1 bowl', 'calories': '', 'verified': True}
             ld_serving_only = build_recipe_jsonld(r)
             target_1 = ld_serving_only[0] if isinstance(ld_serving_only, list) else ld_serving_only
             self.assertNotIn('nutrition', target_1, "Nutrition with only servingSize must be omitted")
@@ -147,7 +148,8 @@ class TestBuildOutput(unittest.TestCase):
                 'servingSize': '1 bowl',
                 'calories': '320',
                 'saturatedFatContent': '2 g',
-                'sugarContent': '4 g'
+                'sugarContent': '4 g',
+                'verified': True
             }
             ld_val = build_recipe_jsonld(r)
             target_2 = ld_val[0] if isinstance(ld_val, list) else ld_val

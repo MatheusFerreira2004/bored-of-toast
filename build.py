@@ -206,7 +206,7 @@ def validate_models():
                 
     for slug, d in MODELS.items():
         find_preencher(d, slug)
-        if d.get('nutrition'):
+        if d.get('nutrition') and d['nutrition'].get('verified', False):
             nut = d['nutrition']
             for req in ['servingSize', 'calories']:
                 if not nut.get(req) or not str(nut.get(req)).strip():
@@ -312,7 +312,7 @@ def build_recipe_jsonld(r):
     }
     
     nut = model_data.get('nutrition')
-    if nut:
+    if nut and nut.get('verified', False):
         sat_fat = nut.get('saturatedFatContent') or nut.get('saturated_fat_g')
         sugar = nut.get('sugarContent') or nut.get('sugar_g')
         protein = nut.get('proteinContent') or nut.get('protein_g')
@@ -395,7 +395,7 @@ def card(r, i, featured=False):
         media_html = ''
 
     m = MODELS.get(r['slug']) or {}
-    status_tag = '<span class="dev-badge">Development edition</span>' if m.get('status') == 'development' else ''
+    status_tag = '<span class="dev-badge">Development edition</span>' if not m.get('tested', False) else ''
 
     # Primary category label for the card
     cats = r.get('categories', [])
@@ -465,7 +465,7 @@ def build_category_section():
 def editorial_transparency(compact=False):
     if compact:
         return '''<p class="editorial-note">Food illustrations on this site are AI-generated. Ingredient substitutions are editorial suggestions. <a href="/about/#editorial">Our editorial approach</a></p>'''
-    dev_li = '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    dev_li = '<li><strong>Development recipes.</strong> All recipes await kitchen testing. Times, yields, and results may change.</li>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
     return f'''<section class="transparency-block wrap" aria-label="Editorial transparency">
   <div class="transparency-inner">
     <p class="eyebrow">A NOTE ON HOW THIS SITE WORKS</p>
@@ -474,7 +474,7 @@ def editorial_transparency(compact=False):
       {dev_li}
       <li><strong>AI-generated images.</strong> Food photos on this site are illustrative images generated with AI. They do not show tested results.</li>
       <li><strong>Substitutions are suggestions.</strong> Substitution notes describe what may change — they are editorial suggestions, not tested equivalents.</li>
-      <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
+      <li><strong>Nutritional data.</strong> Nutritional information is currently withheld pending kitchen verification to ensure accuracy. When published, estimates are calculated from ingredient databases and may vary based on exact brands and portions used.</li>
       <li><strong>No medical advice.</strong> Recipes are not medical or dietary advice. Consult a qualified professional for health-related guidance.</li>
     </ul>
     <a class="text-link" href="/about/#editorial">Full editorial approach ↗</a>
@@ -548,7 +548,7 @@ def build_all():
     # 1. Home page
     # ---------------------------------------------------------------------------
     featured_model = MODELS.get('lemon-chickpea-salad', {})
-    featured_caption = '<span class="photo-caption">Serving illustration · Recipe in development</span>' if featured_model.get('status') == 'development' else '<span class="photo-caption">Serving illustration</span>'
+    featured_caption = '<span class="photo-caption">Serving illustration · Recipe in development</span>' if not featured_model.get('tested', False) else '<span class="photo-caption">Serving illustration</span>'
     page(
         '',
         'Everyday ingredients. Better meals.',
@@ -641,7 +641,7 @@ def build_all():
     # ---------------------------------------------------------------------------
     # 4. The Lunch Edit
     # ---------------------------------------------------------------------------
-    dev_lunch = '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    dev_lunch = '<p class="small">Sample recipes await kitchen testing. The complete product is still in development; no payment is being collected.</p>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
     page(
         'the-lunch-edit',
         'The Lunch Edit',
@@ -753,8 +753,8 @@ def build_all():
     # ---------------------------------------------------------------------------
     # 5. About page
     # ---------------------------------------------------------------------------
-    dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
-    dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(m.get('status') == 'development' for m in MODELS.values()) else ''
+    dev_note = '<p>This is the development edition of the site. All ten recipes are in development and await kitchen testing. We label development status transparently on each recipe card and will update quantities, yields and methods as kitchen testing concludes.</p>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
+    dev_li = '<li><strong>Development recipes.</strong> All ten recipes are in development and await kitchen testing. Times and yields are estimates, not guarantees.</li>' if any(not m.get('tested', False) for m in MODELS.values()) else ''
     page(
         'about',
         'About & Editorial Approach',
@@ -796,7 +796,7 @@ def build_all():
             {dev_li}
             <li><strong>AI-generated images.</strong> Food photos are illustrative. They are not photographs of tested dishes.</li>
             <li><strong>Substitutions are editorial suggestions.</strong> They describe what may change — they are not tested equivalents.</li>
-            <li><strong>Nutritional estimates.</strong> We provide estimated calorie counts and macronutrient data, calculated from ingredient databases. Values may vary based on exact brands and portions used.</li>
+            <li><strong>Nutritional data.</strong> Nutritional information is currently withheld pending kitchen verification to ensure accuracy. When published, estimates are calculated from ingredient databases and may vary based on exact brands and portions used.</li>
             <li><strong>No medical advice.</strong> Content is not medical or dietary advice.</li>
           </ul>
         </div>

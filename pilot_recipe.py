@@ -110,7 +110,7 @@ def render_editorial_recipe(r,others):
 
     nutrition_html = ''
     nut = d.get('nutrition')
-    if nut:
+    if nut and nut.get("verified", False):
         serving_size = str(nut.get('servingSize', '')).strip()
         cals = str(nut.get('calories', '')).strip()
         if serving_size and cals:
@@ -220,7 +220,7 @@ def render_editorial_recipe(r,others):
                 <a class="button" href="#recipe">Ingredients & Method ↓</a>
                 <button class="button discreet outline" type="button" data-print>Print</button>
             </div>
-            { '<p class="small transparency-note">Development edition &middot; Awaits kitchen testing.</p>' if d.get('status') == 'development' else '' }
+            { '<p class="small transparency-note">Development edition &middot; Awaits kitchen testing.</p>' if not d.get('tested', False) else '' }
         </div>
         <div class="editorial-header-visual">
             <figure>
