@@ -289,3 +289,47 @@ summary:focus-visible {
     display: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   11. Correção de controles (Remover excesso de azul)
+   -------------------------------------------------------------------------- */
+.jump-nav a,
+.recipe-cat,
+.servings-control,
+.servings-btn,
+.swap-btn,
+.undo-swap,
+.reset-servings,
+.note h4,
+.recipe-nav a,
+.storage-links a,
+.prep-links a {
+  color: var(--heading-color) !important;
+}
+
+.jump-nav a:hover,
+.jump-nav a:active,
+.recipe-nav a:hover,
+.recipe-nav a:active,
+.swap-btn:hover,
+.swap-btn:active,
+.undo-swap:hover,
+.undo-swap:active,
+.reset-servings:hover,
+.reset-servings:active,
+.servings-btn:hover:not(:disabled) {
+  color: var(--heading-color) !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. Compactar ilustrações de preparo no desktop
+   -------------------------------------------------------------------------- */
+@media (min-width: 960px) {
+  .instruction-figure {
+    width: min(100%, 460px);
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+}

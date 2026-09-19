@@ -472,7 +472,7 @@ def build_category_section():
     <p>From quick weeknight dinners to make-ahead breakfasts — find the right recipe for right now.</p>
   </div>
   <div class="cat-grid">{items}</div>
-  <p class="cat-browse-note"><a class="text-link" href="/recipes/">See all 12 recipes ↗</a></p>
+  <p class="cat-browse-note"><a class="text-link" href="/recipes/">See all {len(recipes)} recipes ↗</a></p>
 </section>'''
 
 # ---------------------------------------------------------------------------
@@ -521,7 +521,7 @@ def build_recipe_index():
       <p class="eyebrow">THE RECIPE NOTEBOOK</p>
       <h1>Find your next meal.</h1>
     </div>
-    <p class="recipe-index-intro">Twelve everyday recipes for fresh lunches, warm skillet dinners and make-ahead mornings. Use the filters to find what suits your day.</p>
+    <p class="recipe-index-intro">{len(recipes)} everyday recipes for fresh lunches, warm skillet dinners and make-ahead mornings. Use the filters to find what suits your day.</p>
   </div>
 </section>
 <section class="wrap recipe-index-body">
@@ -533,7 +533,7 @@ def build_recipe_index():
     <p class="noscript-note">Showing all recipes. Enable JavaScript to filter by category without leaving this page.</p>
   </noscript>
   <div class="recipe-index-status" aria-live="polite" aria-atomic="true">
-    <p class="active-filter-label" id="active-filter-label">All 12 recipes</p>
+    <p class="active-filter-label" id="active-filter-label">All {len(recipes)} recipes</p>
     <p class="active-cat-desc" id="active-cat-desc" hidden></p>
   </div>
   <div class="recipe-grid" id="recipe-grid">{all_cards}</div>
@@ -610,10 +610,10 @@ def build_all():
           <p class="eyebrow">01 / THE RECIPE NOTEBOOK</p>
           <h2>What sounds <span class="serif-accent">good?</span></h2>
         </div>
-        <p>Twelve everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
+        <p>{len(recipes)} everyday recipes for fresh lunches, warm skillet dinners, and make-ahead mornings.</p>
       </div>
       <div class="recipe-grid">{''.join(card(r, i + 1) for i, r in enumerate(recipes[:3]))}</div>
-      <p><a class="text-link" href="/recipes/">View all 12 recipes ↗</a></p>
+      <p><a class="text-link" href="/recipes/">View all {len(recipes)} recipes ↗</a></p>
       {editorial_transparency(compact=True)}
     </section>
     {render_kitchen_home_feature()}

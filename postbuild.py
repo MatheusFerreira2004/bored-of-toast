@@ -743,7 +743,7 @@ def render_related(current, all_recipes, limit=3):
             img_html = (
                 f'<img src="/assets/{esc(stem, quote=True)}-800.webp" '
                 f'alt="{esc(r.get("alt") or r["title"], quote=True)}" '
-                f'width="800" height="600" loading="lazy" decoding="async">'
+                f'width="400" height="400" loading="lazy" decoding="async">'
             )
 
         reason = ''
@@ -778,7 +778,7 @@ def render_related(current, all_recipes, limit=3):
         )
 
     return (
-        f'<section class="rr-block" aria-labelledby="rr-heading">'
+        f'<section class="rr-block wrap" aria-labelledby="rr-heading">'
         f'<p class="eyebrow">KEEP GOING</p>'
         f'<h2 id="rr-heading">What to cook next.</h2>'
         f'<div class="rr-grid">{cards}</div>'
