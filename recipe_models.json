@@ -1,2061 +1,2061 @@
 {
-  "lemon-chickpea-salad": {
-    "base_people": 2,
-    "serves_default": 2,
-    "meal_role": "a light meal",
-    "primary_goal": "A no-cook lunch ready in 10 minutes.",
-    "method": "No-cook",
-    "difficulty": "Easy",
-    "prep_time": "~10 min",
-    "total_time": "~10 min",
-    "categories": [
-      "quick-easy",
-      "budget-friendly",
-      "plant-forward",
-      "protein-forward",
-      "fresh-lunches"
-    ],
-    "related_notes": [
-      "keep-salad-crisp",
-      "simple-lemon-dressing"
-    ],
-    "allergen": "Contains milk (feta). Check ingredient labels.",
-    "equipment": [
-      "Large mixing bowl",
-      "Sieve",
-      "Knife and board",
-      "Whisk or fork",
-      "Serving spoon"
-    ],
-    "ingredients": [
-      {
-        "id": "beans",
-        "name": "chickpeas, drained and rinsed",
-        "qty": 240,
-        "unit": "g",
-        "note": "About 1 standard 15 oz / 425 g can, drained.",
-        "group": "For the salad",
-        "swap": {
-          "name": "cooked white beans, drained",
-          "qty": 240,
-          "unit": "g",
-          "note": "Use the same drained weight.",
-          "change": "",
-          "texture_change": "White beans are softer and may break apart more easily.",
-          "flavor_change": "Milder flavor with a creamier mouthfeel.",
-          "how_to_adjust": "Fold gently so the beans keep their shape.",
-          "quantity_similar": true,
-          "technique": "Fold gently so the beans keep their shape.",
-          "method_name": "white beans",
-          "step_notes": {
-            "combine": "White beans are softer: fold gently to keep them intact."
-          }
-        },
-        "package": {
-          "qty": 1,
-          "label": "15 oz / 425 g each, drained"
-        },
-        "method_name": "chickpeas"
-      },
-      {
-        "id": "cucumber",
-        "name": "diced cucumber",
-        "qty": 1,
-        "unit": "cup",
-        "metric": 150
-      },
-      {
-        "id": "tomatoes",
-        "name": "cherry tomatoes, halved",
-        "qty": 1,
-        "unit": "cup",
-        "metric": 150
-      },
-      {
-        "id": "feta",
-        "name": "crumbled feta",
-        "qty": 0.3333333333333333,
-        "unit": "cup",
-        "metric": 50,
-        "swap": {
-          "name": "diced avocado",
-          "qty": 50,
-          "unit": "g",
-          "note": "A suggested variation, not an equivalent cheese replacement.",
-          "change": "",
-          "texture_change": "Soft and buttery rather than crumbly.",
-          "flavor_change": "No saltiness or tang — taste and adjust lemon and salt.",
-          "how_to_adjust": "Fold in at the end. Taste and adjust lemon and salt before serving.",
-          "quantity_similar": true,
-          "technique": "Fold in at the end. Taste and adjust lemon and salt.",
-          "allergen": "Feta has been replaced. Check all ingredient labels for allergens and cross-contact.",
-          "method_name": "avocado",
-          "step_overrides": {
-            "finish": {
-              "title": "Finish with avocado",
-              "action": "Fold in the diced avocado at the end. Taste and adjust lemon and salt; divide into portions.",
-              "cue": "The avocado pieces remain distinct, rather than mashed into the dressing.",
-              "care": "Avocado is milder than feta. Adjust seasoning to taste. The illustration shows the original feta version."
+    "lemon-chickpea-salad": {
+        "base_people": 2,
+        "serves_default": 2,
+        "meal_role": "a light meal",
+        "primary_goal": "A no-cook lunch ready in 10 minutes.",
+        "method": "No-cook",
+        "difficulty": "Easy",
+        "prep_time": "~10 min",
+        "total_time": "~10 min",
+        "categories": [
+            "quick-easy",
+            "budget-friendly",
+            "plant-forward",
+            "protein-forward",
+            "fresh-lunches"
+        ],
+        "related_notes": [
+            "keep-salad-crisp",
+            "simple-lemon-dressing"
+        ],
+        "allergen": "Contains milk (feta). Check ingredient labels.",
+        "equipment": [
+            "Large mixing bowl",
+            "Sieve",
+            "Knife and board",
+            "Whisk or fork",
+            "Serving spoon"
+        ],
+        "ingredients": [
+            {
+                "id": "beans",
+                "name": "chickpeas, drained and rinsed",
+                "qty": 240,
+                "unit": "g",
+                "note": "About 1 standard 15 oz / 425 g can, drained.",
+                "group": "For the salad",
+                "swap": {
+                    "name": "cooked white beans, drained",
+                    "qty": 240,
+                    "unit": "g",
+                    "note": "Use the same drained weight.",
+                    "change": "",
+                    "texture_change": "White beans are softer and may break apart more easily.",
+                    "flavor_change": "Milder flavor with a creamier mouthfeel.",
+                    "how_to_adjust": "Fold gently so the beans keep their shape.",
+                    "quantity_similar": true,
+                    "technique": "Fold gently so the beans keep their shape.",
+                    "method_name": "white beans",
+                    "step_notes": {
+                        "combine": "White beans are softer: fold gently to keep them intact."
+                    }
+                },
+                "package": {
+                    "qty": 1,
+                    "label": "15 oz / 425 g each, drained"
+                },
+                "method_name": "chickpeas"
+            },
+            {
+                "id": "cucumber",
+                "name": "diced cucumber",
+                "qty": 1,
+                "unit": "cup",
+                "metric": 150
+            },
+            {
+                "id": "tomatoes",
+                "name": "cherry tomatoes, halved",
+                "qty": 1,
+                "unit": "cup",
+                "metric": 150
+            },
+            {
+                "id": "feta",
+                "name": "crumbled feta",
+                "qty": 0.3333333333333333,
+                "unit": "cup",
+                "metric": 50,
+                "swap": {
+                    "name": "diced avocado",
+                    "qty": 50,
+                    "unit": "g",
+                    "note": "A suggested variation, not an equivalent cheese replacement.",
+                    "change": "",
+                    "texture_change": "Soft and buttery rather than crumbly.",
+                    "flavor_change": "No saltiness or tang — taste and adjust lemon and salt.",
+                    "how_to_adjust": "Fold in at the end. Taste and adjust lemon and salt before serving.",
+                    "quantity_similar": true,
+                    "technique": "Fold in at the end. Taste and adjust lemon and salt.",
+                    "allergen": "Feta has been replaced. Check all ingredient labels for allergens and cross-contact.",
+                    "method_name": "avocado",
+                    "step_overrides": {
+                        "finish": {
+                            "title": "Finish with avocado",
+                            "action": "Fold in the diced avocado at the end. Taste and adjust lemon and salt; divide into portions.",
+                            "cue": "The avocado pieces remain distinct, rather than mashed into the dressing.",
+                            "care": "Avocado is milder than feta. Adjust seasoning to taste. The illustration shows the original feta version."
+                        }
+                    }
+                },
+                "method_name": "feta"
+            },
+            {
+                "id": "herb",
+                "name": "chopped flat-leaf parsley, loosely packed",
+                "qty": 0.25,
+                "unit": "cup",
+                "swap": {
+                    "name": "chopped dill, loosely packed",
+                    "qty": 2,
+                    "unit": "tbsp",
+                    "note": "Start with half the parsley volume; add more to taste.",
+                    "change": "",
+                    "texture_change": "Same texture — fine, leafy herb.",
+                    "flavor_change": "Dill is more assertive and anise-forward than parsley.",
+                    "how_to_adjust": "Add with the vegetables, then taste before adding more.",
+                    "quantity_similar": false,
+                    "technique": "Add with the vegetables, then taste before adding more.",
+                    "method_name": "dill",
+                    "step_notes": {
+                        "combine": "Taste before adding extra dill."
+                    }
+                },
+                "method_name": "parsley"
+            },
+            {
+                "id": "oil",
+                "name": "olive oil",
+                "qty": 2,
+                "unit": "tbsp",
+                "group": "For the dressing"
+            },
+            {
+                "id": "lemon",
+                "name": "lemon juice, plus more to taste",
+                "qty": 2,
+                "unit": "tbsp"
+            },
+            {
+                "id": "seasoning",
+                "name": "Black pepper and salt, to taste"
             }
-          }
+        ],
+        "steps": [
+            {
+                "title": "Whisk the dressing",
+                "action": "Whisk the olive oil and lemon juice in the mixing bowl. Add a few grinds of black pepper.",
+                "cue": "The mixture looks slightly cloudy and combined. whisk again if it separates.",
+                "care": "Wait until the salad is assembled before adding salt.",
+                "image": "lemon-dressing.webp",
+                "alt": "Illustration of lemon and olive oil dressing with a whisk in a ceramic bowl",
+                "id": "dressing",
+                "phase": "Prepare"
+            },
+            {
+                "title": "Add the crunch",
+                "action": "Drain the {{beans}} thoroughly. Add them to the dressing with cucumber, tomatoes and {{herb}}. Toss gently.",
+                "cue": "The ingredients look lightly coated, without a puddle of rinse water.",
+                "care": "Pat wet cucumber dry with a clean cloth before adding it.",
+                "id": "combine",
+                "phase": "Assemble",
+                "image": "lemon-chickpea-salad-combine.webp",
+                "alt": "Illustration of ingredients tossed in bowl"
+            },
+            {
+                "title": "Finish gently",
+                "action": "Fold in the feta, keeping some crumbles intact. Taste, adjust lemon and salt if needed, and divide into portions.",
+                "cue": "You can still see distinct pieces of feta among the vegetables.",
+                "care": "Avoid vigorous stirring, which turns the feta into a creamy coating.",
+                "image": "feta-finish.webp",
+                "alt": "Illustration of chickpea, cucumber and tomato salad with distinct feta crumbles",
+                "id": "finish",
+                "phase": "Finish"
+            }
+        ],
+        "serve": "Serve as a light meal, or add bread or a cooked grain for a more substantial plate. These extras are not included in the ingredient amounts.",
+        "variation": "For a creamier version, use the avocado option above. The illustration shows the original feta version.",
+        "ahead": "For a crisper result, keep the dressing and feta separate from the prepared vegetables until serving. Refrigerate the components in covered containers.",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
+        "slug": "lemon-chickpea-salad",
+        "max_people": 12,
+        "tagline": "A little crunch, a lot of lemon.",
+        "times": [
+            {
+                "label": "Prep",
+                "value": "~10 min"
+            },
+            {
+                "label": "Method",
+                "value": "No-cook"
+            },
+            {
+                "label": "Total",
+                "value": "~10 min"
+            }
+        ],
+        "batch": {
+            "above": 4,
+            "note": "Use a larger bowl or mix in batches. Extra chopping may take longer."
         },
-        "method_name": "feta"
-      },
-      {
-        "id": "herb",
-        "name": "chopped flat-leaf parsley, loosely packed",
-        "qty": 0.25,
-        "unit": "cup",
-        "swap": {
-          "name": "chopped dill, loosely packed",
-          "qty": 2,
-          "unit": "tbsp",
-          "note": "Start with half the parsley volume; add more to taste.",
-          "change": "",
-          "texture_change": "Same texture — fine, leafy herb.",
-          "flavor_change": "Dill is more assertive and anise-forward than parsley.",
-          "how_to_adjust": "Add with the vegetables, then taste before adding more.",
-          "quantity_similar": false,
-          "technique": "Add with the vegetables, then taste before adding more.",
-          "method_name": "dill",
-          "step_notes": {
-            "combine": "Taste before adding extra dill."
-          }
+        "batch_default": "Amounts adjust; preparation time remains an estimate.",
+        "author": {
+            "name": "Matheus Ferreira",
+            "url": "/about/"
         },
-        "method_name": "parsley"
-      },
-      {
-        "id": "oil",
-        "name": "olive oil",
-        "qty": 2,
-        "unit": "tbsp",
-        "group": "For the dressing"
-      },
-      {
-        "id": "lemon",
-        "name": "lemon juice, plus more to taste",
-        "qty": 2,
-        "unit": "tbsp"
-      },
-      {
-        "id": "seasoning",
-        "name": "Black pepper and salt, to taste"
-      }
-    ],
-    "steps": [
-      {
-        "title": "Whisk the dressing",
-        "action": "Whisk the olive oil and lemon juice in the mixing bowl. Add a few grinds of black pepper.",
-        "cue": "The mixture looks slightly cloudy and combined. whisk again if it separates.",
-        "care": "Wait until the salad is assembled before adding salt.",
-        "image": "lemon-dressing.webp",
-        "alt": "Illustration of lemon and olive oil dressing with a whisk in a ceramic bowl",
-        "id": "dressing",
-        "phase": "Prepare"
-      },
-      {
-        "title": "Add the crunch",
-        "action": "Drain the {{beans}} thoroughly. Add them to the dressing with cucumber, tomatoes and {{herb}}. Toss gently.",
-        "cue": "The ingredients look lightly coated, without a puddle of rinse water.",
-        "care": "Pat wet cucumber dry with a clean cloth before adding it.",
-        "id": "combine",
-        "phase": "Assemble",
-        "image": "lemon-chickpea-salad-combine.webp",
-        "alt": "Illustration of ingredients tossed in bowl"
-      },
-      {
-        "title": "Finish gently",
-        "action": "Fold in the feta, keeping some crumbles intact. Taste, adjust lemon and salt if needed, and divide into portions.",
-        "cue": "You can still see distinct pieces of feta among the vegetables.",
-        "care": "Avoid vigorous stirring, which turns the feta into a creamy coating.",
-        "image": "feta-finish.webp",
-        "alt": "Illustration of chickpea, cucumber and tomato salad with distinct feta crumbles",
-        "id": "finish",
-        "phase": "Finish"
-      }
-    ],
-    "serve": "Serve as a light meal, or add bread or a cooked grain for a more substantial plate. These extras are not included in the ingredient amounts.",
-    "variation": "For a creamier version, use the avocado option above. The illustration shows the original feta version.",
-    "ahead": "For a crisper result, keep the dressing and feta separate from the prepared vegetables until serving. Refrigerate the components in covered containers.",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
-    "slug": "lemon-chickpea-salad",
-    "max_people": 12,
-    "tagline": "A little crunch, a lot of lemon.",
-    "times": [
-      {
-        "label": "Prep",
-        "value": "~10 min"
-      },
-      {
-        "label": "Method",
-        "value": "No-cook"
-      },
-      {
-        "label": "Total",
-        "value": "~10 min"
-      }
-    ],
-    "batch": {
-      "above": 4,
-      "note": "Use a larger bowl or mix in batches. Extra chopping may take longer."
-    },
-    "batch_default": "Amounts adjust; preparation time remains an estimate.",
-    "author": {
-      "name": "Matheus Ferreira",
-      "url": "/about/"
-    },
-    "datePublished": "2026-09-16",
-    "dateModified": "2026-09-16",
-    "intro": "Chickpeas, crunchy cucumber and tomatoes tossed in a lemon dressing, finished with feta and parsley. Drain the chickpeas well and pat wet cucumber dry to keep excess water out of the bowl.",
-    "faq": [
-      {
-        "question": "Can I make this ahead of time?",
-        "answer": "Yes, with one adjustment. Prepare the vegetables, chickpeas and dressing separately and keep them in the fridge, then combine just before eating. If you dress it in advance, the cucumber releases water and the lemon loses its edge. Assembled, it is best within a few hours."
-      },
-      {
-        "question": "How long does it keep in the fridge?",
-        "answer": "Stored in an airtight container at or below 40°F (4°C), the assembled salad keeps for two to three days. The texture softens after the first day as the cucumber continues to release moisture. Drain off any liquid that collects and taste before adding more lemon or salt."
-      },
-      {
-        "question": "What can I use instead of feta?",
-        "answer": "Diced avocado works well, though it changes the character of the dish: it is buttery rather than salty and tangy, so you will want more lemon and salt to compensate. Fold it in at the very end. For a closer match in saltiness, a firm ricotta salata behaves similarly to feta."
-      },
-      {
-        "question": "Do I need to peel the cucumber?",
-        "answer": "No. The skin adds colour and holds the pieces together as you toss. If you are using a thick-skinned field cucumber, the skin can taste bitter, so peeling is reasonable there. With English or Persian cucumbers, leave it on. If the seed centre looks very watery, scoop some out before dicing."
-      }
-    ],
-    "nutrition": {
-      "servingSize": "1 serving (about 1½ cups)",
-      "calories": 385,
-      "protein_g": 14,
-      "carbs_g": 34,
-      "fat_g": 22,
-      "saturated_fat_g": 6,
-      "fiber_g": 9,
-      "sugar_g": 5,
-      "sodium_mg": 450,
-      "is_estimate": true,
-      "verified": false
-    },
-    "sources": [
-      {
-        "title": "Cucumber Chickpea Salad with Feta & Lemon",
-        "publisher": "EatingWell",
-        "url": "https://www.eatingwell.com/recipe/8053923/cucumber-chickpea-salad-with-feta/",
-        "note": "Reference for the 1:1 olive oil and lemon juice dressing ratio and the feta quantity."
-      },
-      {
-        "title": "Chickpea Salad",
-        "publisher": "Love and Lemons",
-        "url": "https://www.loveandlemons.com/chickpea-salad/",
-        "note": "Reference for herb proportions and the practice of dressing the salad just before serving."
-      },
-      {
-        "title": "Chickpea Cucumber Feta Salad",
-        "publisher": "A Sweet Thyme",
-        "url": "https://asweetthyme.com/chickpea-cucumber-feta-salad/",
-        "note": "Reference for the assembly order and cherry tomato quantity."
-      }
-    ],
-    "relatedRecipes": [
-      "smashed-cucumber-edamame-bowl",
-      "mediterranean-warm-green-lentils",
-      "lemon-white-bean-skillet"
-    ],
-    "status": "published",
-    "recipe_cuisine": "Mediterranean",
-    "keywords": "chickpea salad, no-cook lunch, feta, meal prep, vegetarian",
-    "suitable_for_diet": "VegetarianDiet, GlutenFreeDiet",
-    "card_time": "~10 mins",
-    "tested": false
-  },
-  "lemon-white-bean-skillet": {
-    "slug": "lemon-white-bean-skillet",
-    "base_people": 2,
-    "serves_default": 2,
-    "max_people": 8,
-    "meal_role": "a light meal with bread",
-    "primary_goal": "A warm one-pan skillet in 15 minutes.",
-    "method": "One-pan",
-    "difficulty": "Easy",
-    "prep_time": "~5 min",
-    "total_time": "~15 min",
-    "categories": [
-      "quick-easy",
-      "budget-friendly",
-      "plant-forward",
-      "protein-forward",
-      "pantry-meals",
-      "cozy-dinners"
-    ],
-    "why_it_works": "Garlic kept pale adds fragrance without bitterness. Mashing a few beans thickens the liquid into a light sauce. Lemon goes in off the heat so its brightness stays lively.",
-    "related_notes": [
-      "make-beans-creamy",
-      "simple-lemon-dressing"
-    ],
-    "tagline": "Keep the garlic pale. Finish with lemon.",
-    "times": [
-      {
-        "label": "Prep",
-        "value": "~5 min"
-      },
-      {
-        "label": "Cooking",
-        "value": "~10 min"
-      },
-      {
-        "label": "Total",
-        "value": "~15 min"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Let the texture guide you.",
-    "batch": {
-      "above": 4,
-      "note": "Use two skillets or cook in batches. Allow extra preparation time; do not multiply the simmering time automatically."
-    },
-    "allergen": "Bread may contain wheat and other allergens. Check all ingredient labels.",
-    "equipment": [
-      "Wide skillet",
-      "Sieve",
-      "Knife and board",
-      "Wooden spoon",
-      "Measuring cup"
-    ],
-    "ingredients": [
-      {
-        "id": "oil",
-        "name": "olive oil",
-        "qty": 1,
-        "unit": "tbsp"
-      },
-      {
-        "id": "garlic",
-        "name": "garlic, thinly sliced",
-        "qty": 2,
-        "unit": "clove",
-        "unit_plural": "cloves",
-        "scale": "whole"
-      },
-      {
-        "id": "beans",
-        "name": "cooked white beans, drained and rinsed",
-        "qty": 240,
-        "unit": "g",
-        "method_name": "white beans",
-        "package": {
-          "qty": 1,
-          "label": "15 oz / 425 g each, drained"
+        "datePublished": "2026-09-16",
+        "dateModified": "2026-09-16",
+        "intro": "Chickpeas, crunchy cucumber and tomatoes tossed in a lemon dressing, finished with feta and parsley. Drain the chickpeas well and pat wet cucumber dry to keep excess water out of the bowl.",
+        "faq": [
+            {
+                "question": "Can I make this ahead of time?",
+                "answer": "Yes, with one adjustment. Prepare the vegetables, chickpeas and dressing separately and keep them in the fridge, then combine just before eating. If you dress it in advance, the cucumber releases water and the lemon loses its edge. Assembled, it is best within a few hours."
+            },
+            {
+                "question": "How long does it keep in the fridge?",
+                "answer": "Stored in an airtight container at or below 40°F (4°C), the assembled salad keeps for two to three days. The texture softens after the first day as the cucumber continues to release moisture. Drain off any liquid that collects and taste before adding more lemon or salt."
+            },
+            {
+                "question": "What can I use instead of feta?",
+                "answer": "Diced avocado works well, though it changes the character of the dish: it is buttery rather than salty and tangy, so you will want more lemon and salt to compensate. Fold it in at the very end. For a closer match in saltiness, a firm ricotta salata behaves similarly to feta."
+            },
+            {
+                "question": "Do I need to peel the cucumber?",
+                "answer": "No. The skin adds colour and holds the pieces together as you toss. If you are using a thick-skinned field cucumber, the skin can taste bitter, so peeling is reasonable there. With English or Persian cucumbers, leave it on. If the seed centre looks very watery, scoop some out before dicing."
+            }
+        ],
+        "nutrition": {
+            "servingSize": "1 serving (about 1½ cups)",
+            "calories": 385,
+            "protein_g": 14,
+            "carbs_g": 34,
+            "fat_g": 22,
+            "saturated_fat_g": 6,
+            "fiber_g": 9,
+            "sugar_g": 5,
+            "sodium_mg": 450,
+            "is_estimate": true,
+            "verified": false
         },
-        "note": "About 1 standard 15 oz / 425 g can, drained.",
-        "swap": {
-          "name": "cooked butter beans, drained and rinsed",
-          "qty": 240,
-          "unit": "g",
-          "method_name": "butter beans",
-          "note": "Use the same drained weight; canned or already cooked beans only.",
-          "change": "",
-          "texture_change": "Larger and creamier in the centre — they hold their shape well.",
-          "flavor_change": "Slightly richer and more buttery than cannellini.",
-          "how_to_adjust": "Warm gently and check that the centres are hot. Avoid vigorous stirring.",
-          "quantity_similar": true,
-          "technique": "Warm gently and check that the centres are hot. Avoid vigorous stirring.",
-          "step_notes": {
-            "simmer": "Butter beans are larger: check the centres and warm gently for longer if needed."
-          }
-        }
-      },
-      {
-        "id": "water",
-        "name": "water, plus a splash if needed",
-        "qty": 0.3333333333333333,
-        "unit": "cup",
-        "metric": 80,
-        "metric_unit": "ml",
-        "note": "Starting amount only. Pan size and evaporation affect how much you need."
-      },
-      {
-        "id": "oregano",
-        "name": "dried oregano",
-        "qty": 0.25,
-        "unit": "tsp",
-        "method_name": "oregano",
-        "swap": {
-          "name": "dried thyme",
-          "qty": 0.25,
-          "unit": "tsp",
-          "method_name": "thyme",
-          "note": "Start with the same quantity; adjust to taste.",
-          "change": "",
-          "texture_change": "No texture change — same dried herb format.",
-          "flavor_change": "Earthier and woodsier than oregano, less Mediterranean.",
-          "how_to_adjust": "Add with the beans and water. Taste before adding more.",
-          "quantity_similar": true,
-          "technique": "Add with the beans and water.",
-          "step_notes": {
-            "simmer": "Thyme replaces oregano; taste before adding any extra."
-          }
-        }
-      },
-      {
-        "id": "spinach",
-        "name": "baby spinach, packed",
-        "qty": 3,
-        "unit": "cup",
-        "metric": 90
-      },
-      {
-        "id": "lemon",
-        "name": "lemon juice, plus more to taste",
-        "qty": 1,
-        "unit": "tbsp"
-      },
-      {
-        "id": "seasoning",
-        "name": "Salt and black pepper, to taste"
-      },
-      {
-        "id": "bread",
-        "name": "bread, to serve",
-        "qty": 2,
-        "unit": "slice",
-        "unit_plural": "slices",
-        "scale": "whole"
-      }
-    ],
-    "steps": [
-      {
-        "id": "prep",
-        "phase": "Prepare",
-        "title": "Get everything ready",
-        "action": "Drain and rinse the beans. Slice the garlic, wash the spinach and measure the water and lemon juice.",
-        "cue": "Everything is ready before the garlic goes into the pan.",
-        "care": "Drain the beans well. The measured water will give you more control over the sauce.",
-        "image": "lemon-white-bean-skillet-prep.webp",
-        "alt": "Illustration for Get everything ready"
-      },
-      {
-        "id": "garlic",
-        "phase": "Cook",
-        "title": "Gently warm the garlic",
-        "duration": "About 1 minute",
-        "action": "Warm the olive oil in a skillet over medium-low heat. Add the sliced garlic and stir until fragrant.",
-        "cue": "The garlic is pale and fragrant, with gentle sizzling.",
-        "care": "Lower the heat if it colours quickly. Burnt garlic can make the sauce bitter.",
-        "image": "lemon-white-bean-skillet-garlic.webp",
-        "alt": "Watercolor illustration of olive oil and garlic in a skillet"
-      },
-      {
-        "id": "simmer",
-        "title": "Make the beans saucy",
-        "duration": "About 5 minutes",
-        "action": "Add the {{beans}}, measured water and {{oregano}}. Bring to a gentle simmer. Mash a spoonful of beans against the pan and stir it back into the liquid.",
-        "cue": "The beans are hot and the liquid lightly coats them.",
-        "care": "Keep a gentle simmer. If it looks dry, add a splash of water; if watery, simmer briefly and check again.",
-        "image": "lemon-white-bean-skillet-simmer.webp",
-        "alt": "Watercolor illustration of white beans simmering in a skillet"
-      },
-      {
-        "id": "greens",
-        "title": "Wilt the spinach",
-        "action": "Add the spinach in handfuls, stirring each addition until it begins to wilt before adding more.",
-        "cue": "The leaves have softened and reduced in volume.",
-        "care": "Add another splash of water only if the pan needs it.",
-        "image": "lemon-white-bean-skillet-greens.webp",
-        "alt": "Watercolor illustration of spinach being stirred into the beans"
-      },
-      {
-        "id": "finish",
-        "phase": "Finish",
-        "title": "Add lemon off the heat",
-        "action": "Remove the skillet from the heat and stir in the lemon juice. Taste, season with salt and pepper, divide into portions and serve with the bread.",
-        "cue": "A lightly saucy pan of beans, with lemon adjusted to your taste.",
-        "care": "Canned beans can already be salty, so taste before seasoning.",
-        "image": "lemon-white-bean-skillet-finish.webp",
-        "alt": "Watercolor illustration of lemon juice being squeezed into the skillet"
-      }
-    ],
-    "serve": "Serve warm with the bread listed in the ingredients. The stated yield is an estimate for a light meal, not a guarantee of appetite or nutritional adequacy. Estimated to serve 2 people as a light meal with bread.",
-    "variation": "For a little crunch, add a few chopped radishes just before serving. This optional topping is not part of the base recipe.",
-    "ahead": "Drain the beans and measure the ingredients ahead if helpful. Keep prepared ingredients covered and refrigerated until cooking.",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
-    "status": "published",
-    "intro": "A warm skillet of white beans and wilted spinach, brightened with lemon. Garlic cooked gently in olive oil builds a fragrant base without bitterness. Mashing a few beans thickens the liquid into a light sauce.",
-    "tested": false
-  },
-  "blueberry-overnight-oats": {
-    "slug": "blueberry-overnight-oats",
-    "base_people": 1,
-    "max_people": 12,
-    "meal_role": "breakfast",
-    "tagline": "A small evening task that leaves you with a creamy breakfast to finish in the morning.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "rolled oats",
-        "qty": 0.5,
-        "unit": "cup",
-        "metric": 40.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-1",
-        "name": "milk or an unsweetened plant drink",
-        "qty": 0.5,
-        "unit": "cup",
-        "metric": 120.0,
-        "metric_unit": "ml"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "plain yogurt",
-        "qty": 0.25,
-        "unit": "cup",
-        "metric": 60.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-3",
-        "name": "blueberries",
-        "qty": 0.5,
-        "unit": "cup",
-        "metric": 75.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-4",
-        "name": "banana, sliced just before serving",
-        "qty": 0.5,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-5",
-        "name": "A pinch of cinnamon, optional"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min prep"
-      },
-      {
-        "label": "Total / resting",
-        "value": "Chill overnight"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Mix the base.",
-        "action": "Stir the oats, milk, yogurt and optional cinnamon in a clean covered container.",
-        "image": "blueberry-overnight-oats-step-0.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Refrigerate overnight.",
-        "action": "Cover and place in the refrigerator overnight so the oats soften. Do not leave the mixture on the counter.",
-        "image": "blueberry-overnight-oats-step-1.webp",
-        "alt": "Illustration for Refrigerate overnight."
-      },
-      {
-        "id": "step-2",
-        "title": "Finish in the morning.",
-        "action": "Stir, adding a splash of milk if you prefer a looser texture. Top with blueberries and freshly sliced banana, then serve.",
-        "image": "blueberry-overnight-oats-step-2.webp",
-        "alt": "Illustration for Finish in the morning.",
-        "cue": "Thick, creamy, and oats have absorbed the liquid."
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains milk if made with dairy. Check oats and alternative products for relevant allergen labels.",
-    "serve": "The fruit brings sweetness. Taste the finished bowl before deciding whether it needs anything else. Estimated to serve 1 people as breakfast.",
-    "variation": "Use strawberries or diced pear in place of blueberries. Dairy-free yogurt and a plant drink also work, with a different taste and texture.",
-    "technique": "Use rolled oats for a little texture. Steel-cut oats need a different method and are not a direct substitute in this recipe.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "before_prep": "Plan ahead: These oats need to rest in the refrigerator for at least 4 hours, or ideally overnight, before eating.",
-    "status": "published",
-    "intro": "Rolled oats soaked overnight with chia seeds and blueberries. A dense, pudding-like texture that sets in the fridge and is ready to eat by morning. Stir well before serving to distribute the softened fruit.",
-    "tested": false,
-    "method": "No-cook"
-  },
-  "crispy-sheet-pan-gnocchi": {
-    "slug": "crispy-sheet-pan-gnocchi",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a comforting meal",
-    "tagline": "Shelf-stable potato gnocchi roasted dry until crisp outside and pillowy inside, tossed with burst cherry tomatoes and fresh torn basil.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "shelf-stable potato gnocchi",
-        "qty": 1.0,
-        "unit": "package",
-        "unit_plural": "packages",
-        "note": "Package size: 16 oz / 450 g."
-      },
-      {
-        "id": "ingredient-1",
-        "name": "cherry or grape tomatoes",
-        "qty": 2.0,
-        "unit": "cup",
-        "metric": 300.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "olive oil",
-        "qty": 2.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-3",
-        "name": "garlic cloves, smashed",
-        "qty": 2.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-4",
-        "name": "dried oregano",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-5",
-        "name": "kosher salt",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-6",
-        "name": "black pepper",
-        "qty": 0.25,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-7",
-        "name": "fresh basil leaves, torn",
-        "qty": 0.5,
-        "unit": "cup"
-      },
-      {
-        "id": "ingredient-8",
-        "name": "grated Parmesan or pecorino (optional)",
-        "qty": 2.0,
-        "unit": "tbsp"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min"
-      },
-      {
-        "label": "Cook",
-        "value": "20-25 min"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Heat the oven and prep pan.",
-        "action": "Line a large rimmed baking sheet with parchment paper.",
-        "image": "gnocchi-step1.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Toss directly on the sheet.",
-        "action": "Add the uncooked gnocchi, whole cherry tomatoes, and smashed garlic cloves directly onto the pan. Drizzle with olive oil, oregano, salt, and black pepper. Toss with hands until evenly glossy, spreading in a single layer.",
-        "image": "gnocchi-step2.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-2",
-        "title": "Roast until golden and blistered.",
-        "action": "Bake for 20 to 25 minutes, tossing once halfway through, until gnocchi are deeply golden and crisp on the edges and tomatoes have burst and released juices.",
-        "image": "gnocchi-step3.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Gnocchi are golden and crispy on the edges, and tomatoes have burst."
-      },
-      {
-        "id": "step-3",
-        "title": "Finish with basil and cheese.",
-        "action": "Toss in the torn basil right on the hot sheet so it wilts slightly. Sprinkle with grated Parmesan and serve hot straight from the pan.",
-        "image": "gnocchi-step4.webp",
-        "alt": "Step-by-step cooking illustration"
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains wheat (gnocchi). Contains milk if finished with cheese.",
-    "serve": "Estimated to serve 2 people as a comforting meal.",
-    "variation": "No basil? Baby arugula or spinach folded in hot adds fresh peppery greens. For extra protein, toss cooked chickpeas or sliced sausage onto the sheet.",
-    "technique": "Do not boil the gnocchi first! Roasting dry shelf-stable gnocchi directly in olive oil creates a delightful crispy skin with a pillowy interior.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "before_prep": "Preheat oven to 425°F (220°C).",
-    "status": "published",
-    "intro": "Pillow-soft gnocchi roasted on a sheet pan until golden and crisp. Tossed with cherry tomatoes that burst in the oven to create a natural sauce. A hands-off approach that skips the boiling water.",
-    "tested": false,
-    "method": "Sheet pan"
-  },
-  "mediterranean-warm-green-lentils": {
-    "slug": "mediterranean-warm-green-lentils",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a comforting meal",
-    "tagline": "Tender cooked brown lentils warmed with shallots, cumin, lemon zest, baby spinach, and crumbled creamy goat cheese.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "cooked brown or green lentils, rinsed and drained",
-        "qty": 1.0,
-        "unit": "can",
-        "unit_plural": "cans",
-        "note": "Package size: 15 oz / 400 g."
-      },
-      {
-        "id": "ingredient-1",
-        "name": "olive oil",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "medium shallot, finely chopped",
-        "qty": 1.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-3",
-        "name": "garlic clove, minced",
-        "qty": 1.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-4",
-        "name": "ground cumin",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-5",
-        "name": "ground coriander",
-        "qty": 0.25,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-6",
-        "name": "baby spinach leaves",
-        "qty": 2.0,
-        "unit": "cup",
-        "metric": 60.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-7",
-        "name": "fresh lemon juice, plus {{amount:0.5:tsp}} grated lemon zest",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-8",
-        "name": "crumbled goat cheese or feta",
-        "qty": 0.3333333333333333,
-        "unit": "cup",
-        "metric": 50.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-9",
-        "name": "Salt and black pepper, to taste"
-      },
-      {
-        "id": "water",
-        "name": "water or vegetable broth",
-        "qty": 2,
-        "unit": "tbsp"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min prep"
-      },
-      {
-        "label": "Total / resting",
-        "value": "15 min total"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Soften the aromatics.",
-        "action": "Heat olive oil in a wide skillet over medium heat. Add diced onion and cook for 4-5 minutes until softened. Add garlic and cumin, cooking for another minute until fragrant.",
-        "image": "lentils-step1.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Warm the lentils.",
-        "action": "Add the drained lentils and 2 tablespoons of water or broth. Simmer gently for 4–5 minutes, stirring occasionally, until hot throughout.",
-        "image": "lentils-step2.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-2",
-        "title": "Wilt greens and brighten.",
-        "action": "Stir in the spinach leaves in batches until just wilted (about 1 minute). Remove pan from heat and stir in lemon juice, lemon zest, salt, and pepper.",
-        "image": "lentils-step3.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Lentils are warmed through and tender, but not mushy."
-      },
-      {
-        "id": "step-3",
-        "title": "Plate and top.",
-        "action": "Transfer to warm bowls. Scatter crumbled goat cheese or feta over top and finish with a light drizzle of olive oil.",
-        "image": "lentils-step4.webp",
-        "alt": "Illustration for Plate and top"
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains milk (goat cheese / feta).",
-    "serve": "Delicious served as a standalone warm lunch with sourdough toast, or spooned over roasted sweet potatoes for dinner. Estimated to serve 2 people as a comforting meal.",
-    "variation": "Swap canned brown lentils with cooked French Puy lentils. Dairy-free? Replace goat cheese with toasted walnuts or pumpkin seeds for richness and crunch.",
-    "technique": "Rinse canned lentils thoroughly under cold water to remove excess sodium and canning brine, then drain well before simmering with olive oil and spices.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "status": "published",
-    "intro": "Earthy green lentils warmed through with a Mediterranean flavor profile. A sturdy base that holds up well for days. Simmer gently to ensure the lentils absorb the aromatics without turning mushy.",
-    "tested": false,
-    "method": "One-pot"
-  },
-  "smashed-cucumber-edamame-bowl": {
-    "slug": "smashed-cucumber-edamame-bowl",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a comforting meal",
-    "tagline": "Crisp smashed Persian cucumbers, buttery avocado, shelled edamame, and toasted sesame seeds tossed in a ginger-tamari vinaigrette.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "Persian mini cucumbers",
-        "qty": 4.0,
-        "unit": "",
-        "metric": 300.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-1",
-        "name": "shelled edamame, thawed",
-        "qty": 1.0,
-        "unit": "cup",
-        "metric": 150.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "ripe avocado, diced",
-        "qty": 1.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-3",
-        "name": "scallions, thinly sliced",
-        "qty": 2.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-4",
-        "name": "tamari or low-sodium soy sauce",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-5",
-        "name": "toasted sesame oil",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-6",
-        "name": "rice vinegar",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-7",
-        "name": "grated fresh ginger",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-8",
-        "name": "maple syrup or honey",
-        "qty": 1.0,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-9",
-        "name": "toasted sesame seeds",
-        "qty": 1.0,
-        "unit": "tbsp"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "12 min prep"
-      },
-      {
-        "label": "Total / resting",
-        "value": "12 min total"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Smash the cucumbers.",
-        "action": "Place cucumbers on a cutting board. Use the flat side of a heavy chef knife or rolling pin to firmly smack them until split lengthwise. Cut diagonally into bite-sized jagged pieces.",
-        "image": "edamame-step1.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Whisk dressing.",
-        "action": "In a small bowl, whisk together tamari, toasted sesame oil, rice vinegar, grated ginger, and maple syrup until emulsified.",
-        "image": "edamame-step2.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-2",
-        "title": "Combine bowl ingredients.",
-        "action": "In a mixing bowl, toss smashed cucumbers, thawed edamame, and sliced scallions with the vinaigrette until well coated.",
-        "image": "edamame-step3.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Cucumbers are well coated and slightly softened by the dressing."
-      },
-      {
-        "id": "step-3",
-        "title": "Fold avocado and garnish.",
-        "action": "Gently fold in diced avocado so it stays intact. Divide into portions, scatter toasted sesame seeds over top, and serve immediately.",
-        "image": "edamame-step4.webp",
-        "alt": "Step-by-step cooking illustration"
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains soy (tamari/edamame) and sesame (oil/seeds).",
-    "serve": "Can be served over cold cooked soba noodles, brown rice, or crisp gem lettuce leaves for a heartier meal. Estimated to serve 2 people as a comforting meal.",
-    "variation": "Add cold cubed firm tofu for extra protein. Swap rice vinegar for fresh lime juice if you prefer a sharper citrus punch.",
-    "technique": "Smashing cucumbers fractures their cell walls and creates jagged edges, soaking up the ginger-sesame dressing ten times faster than clean slices.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "before_prep": "If using frozen shelled edamame, thaw them by rinsing under warm water for 2 minutes and draining well.",
-    "status": "published",
-    "intro": "Smashed cucumbers paired with edamame for a refreshing, high-texture bowl. Smashing the cucumber helps it absorb the dressing immediately. Serve immediately after tossing for maximum crunch.",
-    "tested": false,
-    "method": "No-cook"
-  },
-  "garlic-butter-bean-mushroom-toast": {
-    "slug": "garlic-butter-bean-mushroom-toast",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a comforting meal",
-    "tagline": "Caramelized cremini mushrooms and buttery cannellini beans simmered in garlic, thyme, and white wine vinegar on thick crusty sourdough.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "thick slices rustic sourdough bread",
-        "qty": 2.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-1",
-        "name": "unsalted butter or olive oil",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "cremini or button mushrooms, sliced",
-        "qty": 8.0,
-        "unit": "oz",
-        "metric": 225.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-3",
-        "name": "garlic cloves, finely grated",
-        "qty": 2.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-4",
-        "name": "cannellini beans, rinsed and drained",
-        "qty": 1.0,
-        "unit": "can",
-        "unit_plural": "cans",
-        "note": "Package size: 15 oz / 425 g."
-      },
-      {
-        "id": "ingredient-5",
-        "name": "vegetable stock or water",
-        "qty": 0.5,
-        "unit": "cup",
-        "metric": 120.0,
-        "metric_unit": "ml"
-      },
-      {
-        "id": "ingredient-6",
-        "name": "fresh thyme leaves (or {{amount:0.25:tsp}} dried thyme)",
-        "qty": 1.0,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-7",
-        "name": "white wine vinegar or lemon juice",
-        "qty": 1.0,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-8",
-        "name": "Salt and cracked black pepper, to taste"
-      },
-      {
-        "id": "ingredient-9",
-        "name": "chopped fresh chives or flat-leaf parsley",
-        "qty": 1.0,
-        "unit": "tbsp"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min"
-      },
-      {
-        "label": "Cook",
-        "value": "10 min"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Brown the mushrooms.",
-        "action": "Melt butter in a large skillet over medium-high heat. Add sliced mushrooms in a single layer without moving for 3 minutes until deeply browned, then stir and cook 2 minutes more.",
-        "image": "garlic-butter-bean-mushroom-toast-step-0.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Add garlic and herbs.",
-        "action": "Turn heat down to medium. Add grated garlic and thyme; stir for 1 minute until fragrant.",
-        "image": "mushroom-step2.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-2",
-        "title": "Simmer the beans.",
-        "action": "Stir in the drained cannellini beans and stock. Bring to a simmer for 4 minutes. Lightly crush about one third of the beans with the back of a fork to create a creamy sauce.",
-        "image": "mushroom-step3.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Mushrooms are deeply browned and the buttery sauce is thickened."
-      },
-      {
-        "id": "step-3",
-        "title": "Toast and assemble.",
-        "action": "Toast the sourdough slices until deeply golden. Stir white wine vinegar, salt, and pepper into the beans. Spoon generously over hot toast and garnish with chopped chives.",
-        "image": "mushroom-step4.webp",
-        "alt": "Step-by-step cooking illustration"
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains wheat (sourdough). Contains milk if butter is used.",
-    "serve": "A poached or fried runny egg on top turns this into a satisfying weekend brunch. Estimated to serve 2 people as a comforting meal.",
-    "variation": "Use olive oil instead of butter for a completely dairy-free version. Any hearty beans (butter beans, great northern) work wonderfully.",
-    "technique": "Do not salt the mushrooms until after they have browned in the skillet! Salting early draws out moisture and steams them instead of creating deep caramelized flavor.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "status": "published",
-    "intro": "Butter beans and deeply browned mushrooms served over toasted bread. Sear the mushrooms undisturbed in a hot pan before adding the beans for a rich, savory topping.",
-    "tested": false,
-    "method": "Skillet"
-  },
-  "spiced-apple-cinnamon-porridge": {
-    "slug": "spiced-apple-cinnamon-porridge",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a comforting meal",
-    "tagline": "Toasted oats simmered with warm cinnamon, nutmeg, diced crisp apples, and finished with toasted pecans and maple syrup.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "quick-cooking steel-cut or rolled oats",
-        "qty": 1.0,
-        "unit": "cup",
-        "metric": 90.0,
-        "metric_unit": "g"
-      },
-      {
-        "id": "ingredient-1",
-        "name": "water",
-        "qty": 1.0,
-        "unit": "cup",
-        "metric": 240.0,
-        "metric_unit": "ml"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "whole milk or unsweetened almond milk",
-        "qty": 1.0,
-        "unit": "cup",
-        "metric": 240.0,
-        "metric_unit": "ml"
-      },
-      {
-        "id": "ingredient-3",
-        "name": "crisp sweet apple (such as Honeycrisp or Gala), diced",
-        "qty": 1.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-4",
-        "name": "unsalted butter or coconut oil",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-5",
-        "name": "ground cinnamon",
-        "qty": 1.0,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-6",
-        "name": "ground nutmeg",
-        "qty": 0.125,
-        "unit": "tsp"
-      },
-      {
-        "id": "ingredient-7",
-        "name": "Pinch of fine sea salt"
-      },
-      {
-        "id": "ingredient-8",
-        "name": "pure maple syrup",
-        "qty": 2.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-9",
-        "name": "chopped toasted pecans or walnuts",
-        "qty": 2.0,
-        "unit": "tbsp"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min"
-      },
-      {
-        "label": "Cook",
-        "value": "10-15 min"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Sauté spiced apples.",
-        "action": "Melt butter in a medium saucepan over medium heat. Add diced apple and {{amount:0.5:tsp}} of the cinnamon. Cook for 3–4 minutes until apple starts to soften slightly at edges.",
-        "image": "porridge-step1.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Cook the porridge.",
-        "action": "Add oats to the saucepan and toast in the butter for 1 minute until fragrant. Pour in water, milk, the remaining {{amount:0.5:tsp}} of cinnamon, nutmeg, and a pinch of salt. Stir well and bring to a gentle bubble.",
-        "image": "porridge-step2.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-2",
-        "title": "Simmer until thick.",
-        "action": "Reduce heat to low and simmer, stirring frequently. For quick-cooking oats, cook for 5 minutes. For rolled oats, cook for 10-12 minutes until tender and porridge is thick and creamy.",
-        "image": "porridge-step3.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Thick and creamy, with the oats tender but not mushy."
-      },
-      {
-        "id": "step-3",
-        "title": "Serve with toppings.",
-        "action": "Ladle into serving bowls. Drizzle each with maple syrup and finish with chopped toasted pecans for crunch.",
-        "image": "porridge-step4.webp",
-        "alt": "Step-by-step cooking illustration"
-      }
-    ],
-    "equipment": [],
-    "allergen": "Contains milk (butter/milk) and tree nuts (pecans) if used. Oats may contain cross-contact gluten unless certified gluten-free.",
-    "serve": "Estimated to serve 2 people as a comforting meal.",
-    "variation": "Swap diced pears for the apple. In summer, substitute fresh peaches or berries. For extra protein, swirl in a tablespoon of chia seeds or almond butter.",
-    "technique": "Gently cooking the diced apples in melted butter and cinnamon before simmering with the oats caramelizes the natural sugars and infuses the entire bowl with warm bakery aroma.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "status": "published",
-    "intro": "Warm porridge naturally sweetened with spiced apples and cinnamon. Cooking the apples down slightly releases their juices, flavoring the entire bowl. Best served immediately while the spices are most fragrant.",
-    "tested": false,
-    "method": "One-pot"
-  },
-  "5-minute-blender-hummus": {
-    "slug": "5-minute-blender-hummus",
-    "base_people": 4,
-    "max_people": 12,
-    "meal_role": "a dip or spread (about 1.5 cups total)",
-    "tagline": "Canned chickpeas, one blender, five minutes. No tahini required.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "chickpeas, drained",
-        "qty": 1.0,
-        "unit": "can",
-        "unit_plural": "cans",
-        "note": "Package size: 15 oz / 425 g."
-      },
-      {
-        "id": "ingredient-1",
-        "name": "olive oil",
-        "qty": 2.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "garlic clove",
-        "qty": 1.0,
-        "unit": ""
-      },
-      {
-        "id": "ingredient-3",
-        "name": "Juice of ½ lemon"
-      },
-      {
-        "id": "ingredient-4",
-        "name": "water (adjust to texture)",
-        "qty": 0.25,
-        "unit": "cup"
-      },
-      {
-        "id": "ingredient-5",
-        "name": "Salt to taste"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min prep"
-      },
-      {
-        "label": "Total / resting",
-        "value": "5 min total"
-      }
-    ],
-    "batch_default": "Times are estimates for the base recipe. You may need to blend in batches if doubling in a small food processor.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Blend until smooth.",
-        "action": "Blend everything until nearly smooth, adding water gradually until you reach the texture you want.",
-        "image": "5-minute-blender-hummus-step-0.webp",
-        "alt": "Blender running with creamy hummus"
-      },
-      {
-        "id": "step-1",
-        "title": "Taste and adjust.",
-        "action": "Taste and adjust salt or lemon before serving.",
-        "image": "5-minute-blender-hummus-step-1.webp",
-        "alt": "Spoon scooping hummus to taste",
-        "cue": "Perfectly smooth, creamy, and lighter in color."
-      }
-    ],
-    "equipment": [],
-    "allergen": "None standard. Check all ingredient labels.",
-    "serve": "Serve with fresh vegetables or warm pita bread. Estimated to serve 4 people as a dip or spread (about 1.5 cups total).",
-    "variation": "Add 1 tbsp tahini if you have it — this version skips it on purpose to keep the ingredient list short.",
-    "technique": "Add the water gradually to control how thick or loose the hummus gets.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "status": "published",
-    "intro": "A smooth, homemade hummus ready in five minutes using a blender. The key to a creamy texture is blending the tahini and lemon first before adding the chickpeas.",
-    "tested": false,
-    "method": "Blender"
-  },
-  "oven-roasted-crispy-chickpeas": {
-    "slug": "oven-roasted-crispy-chickpeas",
-    "base_people": 2,
-    "max_people": 12,
-    "meal_role": "a snack or topping",
-    "tagline": "The same can of chickpeas, crisped in the oven until they snap.",
-    "ingredients": [
-      {
-        "id": "ingredient-0",
-        "name": "chickpeas, drained and thoroughly dried",
-        "qty": 1.0,
-        "unit": "can",
-        "unit_plural": "cans",
-        "note": "Package size: 15 oz / 425 g."
-      },
-      {
-        "id": "ingredient-1",
-        "name": "olive oil",
-        "qty": 1.0,
-        "unit": "tbsp"
-      },
-      {
-        "id": "ingredient-2",
-        "name": "Salt to taste"
-      },
-      {
-        "id": "ingredient-3",
-        "name": "Pinch of paprika (optional)"
-      }
-    ],
-    "times": [
-      {
-        "label": "Prep",
-        "value": "5 min prep"
-      },
-      {
-        "label": "Total / resting",
-        "value": "30 min total"
-      }
-    ],
-    "batch_default": "If doubling, use two baking sheets so they don't steam.",
-    "steps": [
-      {
-        "id": "step-0",
-        "title": "Dry thoroughly",
-        "action": "Dry the chickpeas thoroughly with a clean towel before roasting — removing surface moisture allows them to crisp up properly rather than steaming.",
-        "image": "oven-roasted-crispy-chickpeas-step-0.webp",
-        "alt": "Step-by-step cooking illustration"
-      },
-      {
-        "id": "step-1",
-        "title": "Coat and roast",
-        "action": "Toss the dried chickpeas with olive oil directly on a bare baking sheet, spreading them in a single layer. Roast at 425°F/220°C for about 25-30 minutes, shaking the pan halfway through until golden and crisp.",
-        "image": "oven-roasted-crispy-chickpeas-step-1.webp",
-        "alt": "Step-by-step cooking illustration",
-        "cue": "Deep golden brown, dry, and brittle."
-      },
-      {
-        "id": "step-2",
-        "title": "Season immediately",
-        "action": "Toss with salt and paprika immediately after taking them out of the oven, while still hot, so the spices stick.",
-        "image": "roasted-chickpeas-step3.webp",
-        "alt": "Step-by-step cooking illustration"
-      }
-    ],
-    "equipment": [],
-    "allergen": "None standard. Check all ingredient labels.",
-    "serve": "Eat them on their own as a snack or scatter them over salads for extra crunch. Estimated to serve 2 people as a snack or topping.",
-    "variation": "Try smoked paprika, cumin, or a pinch of cayenne for a different flavor profile.",
-    "technique": "The more carefully you dry the chickpeas with a clean towel, the crispier they will become in the oven.",
-    "ahead": "",
-    "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
-    "source": "",
-    "status": "published",
-    "intro": "Oven-roasted chickpeas that turn deeply crunchy. Drying them thoroughly before tossing in oil is crucial—any remaining moisture will steam them instead of roasting them.",
-    "tested": false,
-    "method": "Oven"
-  },
-  "lemon-pea-ricotta-pasta": {
-    "title": "Lemon, Pea & Ricotta Pasta",
-    "slug": "lemon-pea-ricotta-pasta",
-    "categories": [
-      "quick-easy"
-    ],
-    "method": "Stovetop",
-    "base_people": 2,
-    "meal_role": "a main meal",
-    "tagline": "Short pasta folded into a light, bright ricotta sauce.",
-    "intro": "Short pasta tossed in a light ricotta and lemon sauce, with sweet green peas cooked in the same pot. The starchy pasta water brings everything together into a creamy, bright bowl without heavy cream.",
-    "prep_time": "20 mins",
-    "total_time": "20 mins",
-    "batch_default": "Use a larger pot and bowl. The reserved water is for adjustment, not a fixed amount.",
-    "tested": false,
-    "status": "published",
-    "author": {
-      "name": "",
-      "url": "/about/"
+        "sources": [
+            {
+                "title": "Cucumber Chickpea Salad with Feta & Lemon",
+                "publisher": "EatingWell",
+                "url": "https://www.eatingwell.com/recipe/8053923/cucumber-chickpea-salad-with-feta/",
+                "note": "Reference for the 1:1 olive oil and lemon juice dressing ratio and the feta quantity."
+            },
+            {
+                "title": "Chickpea Salad",
+                "publisher": "Love and Lemons",
+                "url": "https://www.loveandlemons.com/chickpea-salad/",
+                "note": "Reference for herb proportions and the practice of dressing the salad just before serving."
+            },
+            {
+                "title": "Chickpea Cucumber Feta Salad",
+                "publisher": "A Sweet Thyme",
+                "url": "https://asweetthyme.com/chickpea-cucumber-feta-salad/",
+                "note": "Reference for the assembly order and cherry tomato quantity."
+            }
+        ],
+        "relatedRecipes": [
+            "smashed-cucumber-edamame-bowl",
+            "mediterranean-warm-green-lentils",
+            "lemon-white-bean-skillet"
+        ],
+        "status": "published",
+        "recipe_cuisine": "Mediterranean",
+        "keywords": "chickpea salad, no-cook lunch, feta, meal prep, vegetarian",
+        "suitable_for_diet": "VegetarianDiet, GlutenFreeDiet",
+        "card_time": "~10 mins",
+        "tested": false
     },
-    "datePublished": "2026-09-18",
-    "dateModified": "2026-09-18",
-    "allergen": "Contains wheat (pasta) and dairy (ricotta). Check all ingredient labels.",
-    "serve": "Serve immediately while warm and creamy.",
-    "ahead": "This dish is best eaten fresh. The ricotta sauce will absorb into the pasta if left sitting.",
-    "storage": "Store leftovers in an airtight container in the fridge for up to 2 days. Reheat gently with a splash of water to loosen the sauce.",
-    "ingredients": [
-      {
-        "id": "pasta",
-        "name": "dry short pasta",
-        "qty": 180,
-        "unit": "g"
-      },
-      {
-        "id": "peas",
-        "name": "frozen peas",
-        "qty": 150,
-        "unit": "g"
-      },
-      {
-        "id": "ricotta",
-        "name": "ricotta cheese",
-        "qty": 120,
-        "unit": "g",
-        "swap": {
-          "name": "mashed or whipped cottage cheese",
-          "qty": 120,
-          "unit": "g",
-          "texture_change": "Similar creaminess, but may have small curds unless blended.",
-          "flavor_change": "Cottage cheese can be saltier, so taste before adding extra salt.",
-          "how_to_adjust": "Adjust the pasta water gradually, as moisture levels vary.",
-          "technique": "Mash or blend before mixing for a smoother sauce."
-        }
-      },
-      {
-        "id": "oil",
-        "name": "olive oil",
-        "qty": 1,
-        "unit": "tbsp"
-      },
-      {
-        "id": "lemon-juice",
-        "name": "lemon juice, plus more to taste",
-        "qty": 1,
-        "unit": "tbsp"
-      },
-      {
-        "id": "lemon-zest",
-        "name": "lemon zest",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "id": "seasoning",
-        "name": "Salt and black pepper to taste"
-      },
-      {
-        "id": "water",
-        "name": "reserved pasta water, as needed"
-      }
-    ],
-    "steps": [
-      {
-        "id": "boil",
-        "title": "Cook the pasta and peas",
-        "action": "Cook the pasta according to package directions. Add the frozen peas near the end, respecting their required cooking time. Reserve a cup of the pasta water before draining.",
-        "cue": "Pasta is cooked to the package's suggested doneness.",
-        "image": "lemon-pea-ricotta-pasta-step-1.webp",
-        "is_ai_generated": true,
-        "alt": "Pasta and peas boiling in a pot being stirred, with reserved pasta water",
-        "width": 800,
-        "height": 800
-      },
-      {
-        "id": "mix-sauce",
-        "title": "Prepare the ricotta base",
-        "action": "In a large bowl, mash the ricotta with the olive oil, lemon juice, lemon zest, and black pepper. Add a few spoonfuls of the hot reserved pasta water to loosen the mixture.",
-        "cue": "The mixture should look creamy and slightly thinned out.",
-        "image": "lemon-pea-ricotta-pasta-step-2-v2.webp",
-        "is_ai_generated": true,
-        "alt": "Mixing fresh ricotta cheese, lemon zest, and a light touch of olive oil with a wooden spoon in a glass bowl",
-        "width": 800,
-        "height": 800
-      },
-      {
-        "id": "combine",
-        "title": "Combine and adjust",
-        "action": "Add the drained pasta and peas to the bowl. Toss well, adding more pasta water gradually until the sauce coats the pasta. Adjust salt to taste and serve.",
-        "cue": "The sauce adheres to the pasta without looking dry or forming a puddle at the bottom.",
-        "image": "lemon-pea-ricotta-pasta-step-3.webp",
-        "alt": "Pasta and peas tossed in creamy ricotta sauce in a bowl",
-        "is_ai_generated": true,
-        "width": 800,
-        "height": 800
-      }
-    ],
-    "relatedRecipes": [
-      {
-        "slug": "crispy-sheet-pan-gnocchi",
-        "reason": "Another pasta dinner"
-      },
-      {
+    "lemon-white-bean-skillet": {
         "slug": "lemon-white-bean-skillet",
-        "reason": "Another quick dinner"
-      }
-    ],
-    "hero_image": {
-      "src": "lemon-pea-ricotta-pasta.webp",
-      "alt": "Pasta with green peas and a light ricotta coating",
-      "is_ai_generated": true
+        "base_people": 2,
+        "serves_default": 2,
+        "max_people": 8,
+        "meal_role": "a light meal with bread",
+        "primary_goal": "A warm one-pan skillet in 15 minutes.",
+        "method": "One-pan",
+        "difficulty": "Easy",
+        "prep_time": "~5 min",
+        "total_time": "~15 min",
+        "categories": [
+            "quick-easy",
+            "budget-friendly",
+            "plant-forward",
+            "protein-forward",
+            "pantry-meals",
+            "cozy-dinners"
+        ],
+        "why_it_works": "Garlic kept pale adds fragrance without bitterness. Mashing a few beans thickens the liquid into a light sauce. Lemon goes in off the heat so its brightness stays lively.",
+        "related_notes": [
+            "make-beans-creamy",
+            "simple-lemon-dressing"
+        ],
+        "tagline": "Keep the garlic pale. Finish with lemon.",
+        "times": [
+            {
+                "label": "Prep",
+                "value": "~5 min"
+            },
+            {
+                "label": "Cooking",
+                "value": "~10 min"
+            },
+            {
+                "label": "Total",
+                "value": "~15 min"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Let the texture guide you.",
+        "batch": {
+            "above": 4,
+            "note": "Use two skillets or cook in batches. Allow extra preparation time; do not multiply the simmering time automatically."
+        },
+        "allergen": "Bread may contain wheat and other allergens. Check all ingredient labels.",
+        "equipment": [
+            "Wide skillet",
+            "Sieve",
+            "Knife and board",
+            "Wooden spoon",
+            "Measuring cup"
+        ],
+        "ingredients": [
+            {
+                "id": "oil",
+                "name": "olive oil",
+                "qty": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "garlic",
+                "name": "garlic, thinly sliced",
+                "qty": 2,
+                "unit": "clove",
+                "unit_plural": "cloves",
+                "scale": "whole"
+            },
+            {
+                "id": "beans",
+                "name": "cooked white beans, drained and rinsed",
+                "qty": 240,
+                "unit": "g",
+                "method_name": "white beans",
+                "package": {
+                    "qty": 1,
+                    "label": "15 oz / 425 g each, drained"
+                },
+                "note": "About 1 standard 15 oz / 425 g can, drained.",
+                "swap": {
+                    "name": "cooked butter beans, drained and rinsed",
+                    "qty": 240,
+                    "unit": "g",
+                    "method_name": "butter beans",
+                    "note": "Use the same drained weight; canned or already cooked beans only.",
+                    "change": "",
+                    "texture_change": "Larger and creamier in the centre — they hold their shape well.",
+                    "flavor_change": "Slightly richer and more buttery than cannellini.",
+                    "how_to_adjust": "Warm gently and check that the centres are hot. Avoid vigorous stirring.",
+                    "quantity_similar": true,
+                    "technique": "Warm gently and check that the centres are hot. Avoid vigorous stirring.",
+                    "step_notes": {
+                        "simmer": "Butter beans are larger: check the centres and warm gently for longer if needed."
+                    }
+                }
+            },
+            {
+                "id": "water",
+                "name": "water, plus a splash if needed",
+                "qty": 0.3333333333333333,
+                "unit": "cup",
+                "metric": 80,
+                "metric_unit": "ml",
+                "note": "Starting amount only. Pan size and evaporation affect how much you need."
+            },
+            {
+                "id": "oregano",
+                "name": "dried oregano",
+                "qty": 0.25,
+                "unit": "tsp",
+                "method_name": "oregano",
+                "swap": {
+                    "name": "dried thyme",
+                    "qty": 0.25,
+                    "unit": "tsp",
+                    "method_name": "thyme",
+                    "note": "Start with the same quantity; adjust to taste.",
+                    "change": "",
+                    "texture_change": "No texture change — same dried herb format.",
+                    "flavor_change": "Earthier and woodsier than oregano, less Mediterranean.",
+                    "how_to_adjust": "Add with the beans and water. Taste before adding more.",
+                    "quantity_similar": true,
+                    "technique": "Add with the beans and water.",
+                    "step_notes": {
+                        "simmer": "Thyme replaces oregano; taste before adding any extra."
+                    }
+                }
+            },
+            {
+                "id": "spinach",
+                "name": "baby spinach, packed",
+                "qty": 3,
+                "unit": "cup",
+                "metric": 90
+            },
+            {
+                "id": "lemon",
+                "name": "lemon juice, plus more to taste",
+                "qty": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "seasoning",
+                "name": "Salt and black pepper, to taste"
+            },
+            {
+                "id": "bread",
+                "name": "bread, to serve",
+                "qty": 2,
+                "unit": "slice",
+                "unit_plural": "slices",
+                "scale": "whole"
+            }
+        ],
+        "steps": [
+            {
+                "id": "prep",
+                "phase": "Prepare",
+                "title": "Get everything ready",
+                "action": "Drain and rinse the beans. Slice the garlic, wash the spinach and measure the water and lemon juice.",
+                "cue": "Everything is ready before the garlic goes into the pan.",
+                "care": "Drain the beans well. The measured water will give you more control over the sauce.",
+                "image": "lemon-white-bean-skillet-prep.webp",
+                "alt": "Illustration for Get everything ready"
+            },
+            {
+                "id": "garlic",
+                "phase": "Cook",
+                "title": "Gently warm the garlic",
+                "duration": "About 1 minute",
+                "action": "Warm the olive oil in a skillet over medium-low heat. Add the sliced garlic and stir until fragrant.",
+                "cue": "The garlic is pale and fragrant, with gentle sizzling.",
+                "care": "Lower the heat if it colours quickly. Burnt garlic can make the sauce bitter.",
+                "image": "lemon-white-bean-skillet-garlic.webp",
+                "alt": "Watercolor illustration of olive oil and garlic in a skillet"
+            },
+            {
+                "id": "simmer",
+                "title": "Make the beans saucy",
+                "duration": "About 5 minutes",
+                "action": "Add the {{beans}}, measured water and {{oregano}}. Bring to a gentle simmer. Mash a spoonful of beans against the pan and stir it back into the liquid.",
+                "cue": "The beans are hot and the liquid lightly coats them.",
+                "care": "Keep a gentle simmer. If it looks dry, add a splash of water; if watery, simmer briefly and check again.",
+                "image": "lemon-white-bean-skillet-simmer.webp",
+                "alt": "Watercolor illustration of white beans simmering in a skillet"
+            },
+            {
+                "id": "greens",
+                "title": "Wilt the spinach",
+                "action": "Add the spinach in handfuls, stirring each addition until it begins to wilt before adding more.",
+                "cue": "The leaves have softened and reduced in volume.",
+                "care": "Add another splash of water only if the pan needs it.",
+                "image": "lemon-white-bean-skillet-greens.webp",
+                "alt": "Watercolor illustration of spinach being stirred into the beans"
+            },
+            {
+                "id": "finish",
+                "phase": "Finish",
+                "title": "Add lemon off the heat",
+                "action": "Remove the skillet from the heat and stir in the lemon juice. Taste, season with salt and pepper, divide into portions and serve with the bread.",
+                "cue": "A lightly saucy pan of beans, with lemon adjusted to your taste.",
+                "care": "Canned beans can already be salty, so taste before seasoning.",
+                "image": "lemon-white-bean-skillet-finish.webp",
+                "alt": "Watercolor illustration of lemon juice being squeezed into the skillet"
+            }
+        ],
+        "serve": "Serve warm with the bread listed in the ingredients. The stated yield is an estimate for a light meal, not a guarantee of appetite or nutritional adequacy. Estimated to serve 2 people as a light meal with bread.",
+        "variation": "For a little crunch, add a few chopped radishes just before serving. This optional topping is not part of the base recipe.",
+        "ahead": "Drain the beans and measure the ingredients ahead if helpful. Keep prepared ingredients covered and refrigerated until cooking.",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely",
+        "status": "published",
+        "intro": "A warm skillet of white beans and wilted spinach, brightened with lemon. Garlic cooked gently in olive oil builds a fragrant base without bitterness. Mashing a few beans thickens the liquid into a light sauce.",
+        "tested": false
     },
-    "nutrition": {
-      "verified": false
+    "blueberry-overnight-oats": {
+        "slug": "blueberry-overnight-oats",
+        "base_people": 1,
+        "max_people": 12,
+        "meal_role": "breakfast",
+        "tagline": "A small evening task that leaves you with a creamy breakfast to finish in the morning.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "rolled oats",
+                "qty": 0.5,
+                "unit": "cup",
+                "metric": 40.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-1",
+                "name": "milk or an unsweetened plant drink",
+                "qty": 0.5,
+                "unit": "cup",
+                "metric": 120.0,
+                "metric_unit": "ml"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "plain yogurt",
+                "qty": 0.25,
+                "unit": "cup",
+                "metric": 60.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-3",
+                "name": "blueberries",
+                "qty": 0.5,
+                "unit": "cup",
+                "metric": 75.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-4",
+                "name": "banana, sliced just before serving",
+                "qty": 0.5,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-5",
+                "name": "A pinch of cinnamon, optional"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min prep"
+            },
+            {
+                "label": "Total / resting",
+                "value": "Chill overnight"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Mix the base.",
+                "action": "Stir the oats, milk, yogurt and optional cinnamon in a clean covered container.",
+                "image": "blueberry-overnight-oats-step-0.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Refrigerate overnight.",
+                "action": "Cover and place in the refrigerator overnight so the oats soften. Do not leave the mixture on the counter.",
+                "image": "blueberry-overnight-oats-step-1.webp",
+                "alt": "Illustration for Refrigerate overnight."
+            },
+            {
+                "id": "step-2",
+                "title": "Finish in the morning.",
+                "action": "Stir, adding a splash of milk if you prefer a looser texture. Top with blueberries and freshly sliced banana, then serve.",
+                "image": "blueberry-overnight-oats-step-2.webp",
+                "alt": "Illustration for Finish in the morning.",
+                "cue": "Thick, creamy, and oats have absorbed the liquid."
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains milk if made with dairy. Check oats and alternative products for relevant allergen labels.",
+        "serve": "The fruit brings sweetness. Taste the finished bowl before deciding whether it needs anything else. Estimated to serve 1 people as breakfast.",
+        "variation": "Use strawberries or diced pear in place of blueberries. Dairy-free yogurt and a plant drink also work, with a different taste and texture.",
+        "technique": "Use rolled oats for a little texture. Steel-cut oats need a different method and are not a direct substitute in this recipe.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "before_prep": "Plan ahead: These oats need to rest in the refrigerator for at least 4 hours, or ideally overnight, before eating.",
+        "status": "published",
+        "intro": "Rolled oats soaked overnight with chia seeds and blueberries. A dense, pudding-like texture that sets in the fridge and is ready to eat by morning. Stir well before serving to distribute the softened fruit.",
+        "tested": false,
+        "method": "No-cook"
     },
-    "times": [
-      {
-        "label": "Estimated total",
-        "value": "~20 min",
-        "note": "(subject to pasta and boiling time)"
-      },
-      {
-        "label": "Method",
-        "value": "Stovetop"
-      }
-    ],
-    "equipment": [
-      "Large pot",
-      "Large mixing bowl"
-    ],
-    "serves_default": 2,
-    "max_people": 4,
-    "difficulty": "Easy",
-    "card_time": "~20 min",
-    "batch": [],
-    "faq": [],
-    "related_notes": [],
-    "sources": [],
-    "source": "",
-    "variation": "",
-    "recipe_cuisine": "",
-    "suitable_for_diet": [],
-    "primary_goal": "",
-    "keywords": "",
-    "before_prep": "The estimated 20 minutes depends on the cooking time specified on your pasta package and how long your water takes to boil."
-  },
-  "cabbage-egg-skillet-rice": {
-    "title": "Cabbage & Egg Skillet Rice",
-    "slug": "cabbage-egg-skillet-rice",
-    "categories": [
-      "budget-friendly"
-    ],
-    "method": "Skillet",
-    "base_people": 2,
-    "meal_role": "a main meal",
-    "tagline": "Simple ingredients, fast prep, and golden cabbage.",
-    "intro": "Cooked rice pan-fried with lightly browned cabbage, sweet carrots, and scrambled eggs. A fast, budget-friendly meal that makes excellent use of simple ingredients.",
-    "prep_time": "20 mins",
-    "total_time": "20 mins",
-    "batch_default": "Cook in batches if your skillet is crowded. Do not double the cooking time automatically.",
-    "tested": false,
-    "status": "published",
-    "author": {
-      "name": "",
-      "url": "/about/"
-    },
-    "datePublished": "2026-09-18",
-    "dateModified": "2026-09-18",
-    "allergen": "Contains egg and soy. Check all ingredient labels.",
-    "serve": "Serve hot directly from the skillet.",
-    "ahead": "This recipe uses leftover rice. Ensure the rice was cooled quickly and stored correctly before using.",
-    "storage": "Keep leftovers at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation.",
-    "ingredients": [
-      {
-        "id": "rice",
-        "name": "cooked rice, properly stored",
-        "qty": 300,
-        "unit": "g",
-        "note": "Time does not include cooking the rice."
-      },
-      {
-        "id": "cabbage",
-        "name": "thinly sliced cabbage",
-        "qty": 250,
-        "unit": "g",
-        "swap": {
-          "name": "finely chopped broccoli",
-          "qty": 250,
-          "unit": "g",
-          "texture_change": "More crunch, less surface area for browning.",
-          "how_to_adjust": "Cooking may take longer. Cut thick stems very small so they cook evenly.",
-          "technique": "Cook until tender-crisp before adding the rice."
-        }
-      },
-      {
-        "id": "egg",
-        "name": "eggs",
-        "qty": 3,
-        "unit": ""
-      },
-      {
-        "id": "carrot",
-        "name": "small carrot, grated",
-        "qty": 1,
-        "unit": ""
-      },
-      {
-        "id": "oil",
-        "name": "neutral oil, divided",
-        "qty": 2,
-        "unit": "tsp"
-      },
-      {
-        "id": "garlic",
-        "name": "garlic clove, minced",
-        "qty": 1,
-        "unit": ""
-      },
-      {
-        "id": "soy-sauce",
-        "name": "soy sauce, plus more to taste",
-        "qty": 1,
-        "unit": "tbsp"
-      },
-      {
-        "id": "scallion",
-        "name": "sliced scallions (optional)",
-        "qty": 2,
-        "unit": ""
-      }
-    ],
-    "steps": [
-      {
-        "id": "cook-egg",
-        "title": "Scramble the eggs",
-        "action": "Heat half the oil in a large skillet. Add the beaten eggs and stir until just set. Transfer to a plate and set aside.",
-        "cue": "Eggs are fully cooked with no runny parts left.",
-        "image": "cabbage-egg-skillet-rice-step-1-v2.webp",
-        "is_ai_generated": true,
-        "alt": "Soft yellow scrambled eggs cooking in a silver-grey two-handled pan, gently stirred with a wooden spoon",
-        "width": 800,
-        "height": 800
-      },
-      {
-        "id": "brown-veg",
-        "title": "Brown the vegetables",
-        "action": "Add the remaining oil to the skillet along with the cabbage and carrot. Let it sit undisturbed for a moment to develop some color, then stir. Stir in the garlic and cook briefly without burning it.",
-        "cue": "The cabbage has spots of golden brown while maintaining some crunch.",
-        "image": "cabbage-egg-skillet-rice-step-2.webp",
-        "alt": "Sliced cabbage and carrots browning in a skillet",
-        "is_ai_generated": true,
-        "width": 800,
-        "height": 800
-      },
-      {
-        "id": "add-rice",
-        "title": "Combine and heat",
-        "action": "Add the cooked rice, breaking up any clumps. Stir in the soy sauce and toss until everything is thoroughly heated. Return the eggs to the pan, breaking them up, and fold in the scallions if using.",
-        "cue": "The rice is hot and the grains are separate, not mushy.",
-        "image": "cabbage-egg-skillet-rice-step-3-v2.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Cooked rice, finely shredded cabbage, carrots, golden egg pieces and scallions being folded together with a wooden spoon in a two-handled pan"
-      }
-    ],
-    "relatedRecipes": [
-      {
-        "slug": "lemon-white-bean-skillet",
-        "reason": "Another skillet meal"
-      },
-      {
-        "slug": "garlic-butter-bean-mushroom-toast",
-        "reason": "Another quick dinner"
-      }
-    ],
-    "hero_image": {
-      "src": "cabbage-egg-skillet-rice.webp",
-      "alt": "Fried rice with cabbage, carrots, and egg in a bowl",
-      "is_ai_generated": true
-    },
-    "nutrition": {
-      "verified": false
-    },
-    "times": [
-      {
-        "label": "Estimated total",
-        "value": "~20 min",
-        "note": "(starting from cooked rice)"
-      },
-      {
-        "label": "Method",
-        "value": "Skillet"
-      }
-    ],
-    "equipment": [
-      "Large skillet",
-      "Cutting board",
-      "Chef's knife"
-    ],
-    "serves_default": 2,
-    "max_people": 4,
-    "difficulty": "Easy",
-    "card_time": "~20 min",
-    "batch": [],
-    "faq": [],
-    "related_notes": [],
-    "sources": [],
-    "source": "",
-    "variation": "",
-    "recipe_cuisine": "",
-    "suitable_for_diet": [],
-    "primary_goal": "",
-    "keywords": "",
-    "safety_link": {
-      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
-      "text": "Food safety guide"
-    },
-    "before_prep": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 20 minutes does not include the time to cook the rice."
-  },
-  "golden-cauliflower-lemon-tahini": {
-    "title": "Golden Cauliflower with Lemon Tahini",
-    "slug": "golden-cauliflower-lemon-tahini",
-    "categories": [
-      "plant-forward"
-    ],
-    "method": "Oven",
-    "base_people": 2,
-    "meal_role": "a generous side",
-    "tagline": "Golden roasted cauliflower florets with toasted edges, finished with a creamy lemon tahini sauce.",
-    "intro": "A simple and rewarding way to roast cauliflower. The tahini dressing adds richness, and a little parsley brings freshness. Serve it alongside your favorite grains or legumes.",
-    "tested": false,
-    "status": "pilot",
-    "author": {
-      "name": "Matheus Ferreira",
-      "url": "/about/"
-    },
-    "allergen": "Contains sesame.",
-    "serve": "Serve as a generous side dish.",
-    "ahead": "Cauliflower is best served fresh from the oven to keep its texture.",
-    "storage": "Store leftovers in an airtight container in the fridge for up to 3 days. The sauce can be stored separately.",
-    "ingredients": [
-      {
-        "id": "cauliflower",
-        "qty": 600,
-        "unit": "g",
-        "name": "cauliflower florets"
-      },
-      {
-        "id": "oil",
-        "qty": 1.5,
-        "unit": "tbsp",
-        "name": "olive oil"
-      },
-      {
-        "id": "cumin",
-        "qty": 0.5,
-        "unit": "tsp",
-        "name": "ground cumin"
-      },
-      {
-        "id": "sp",
-        "name": "Salt and black pepper, to taste"
-      },
-      {
-        "id": "tahini",
-        "qty": 2,
-        "unit": "tbsp",
-        "name": "tahini",
-        "swap": {
-          "name": "thick plain yogurt",
-          "qty": 3,
-          "unit": "tbsp",
-          "flavor_change": "It becomes fresher and tangy without the sesame flavor.",
-          "how_to_adjust": "Start with less lemon juice and adjust to taste.",
-          "change": "Skip adding water unless needed to thin it out.",
-          "note": "(Contains dairy).",
-          "action_swap": "In a small bowl, whisk together the {{tahini}} and {{lemon}}, starting with half the lemon juice and adjusting to taste. No water is needed unless the yogurt is very thick."
-        }
-      },
-      {
-        "id": "lemon",
-        "qty": 1,
-        "unit": "tbsp",
-        "name": "lemon juice"
-      },
-      {
-        "id": "water",
-        "name": "Water, as needed"
-      },
-      {
-        "id": "parsley",
-        "name": "Chopped parsley, to serve (optional)"
-      }
-    ],
-    "steps": [
-      {
-        "phase": "Roast",
-        "title": "Prepare the cauliflower",
-        "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {{cauliflower}} with the {{oil}}, {{cumin}}, {{sp}} until evenly coated.",
-        "id": "prep-cauliflower",
-        "image": "golden-cauliflower-lemon-tahini-step-1.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Cauliflower florets tossed with olive oil and cumin in a ceramic mixing bowl"
-      },
-      {
-        "title": "Arrange on a baking sheet",
-        "action": "Spread the florets on a baking sheet in a single layer without crowding them. Place the cut surfaces flat against the pan where possible.",
-        "image": "golden-cauliflower-lemon-tahini-step-2.webp",
-        "alt": "Cauliflower florets arranged in a single layer on a parchment-lined baking sheet",
-        "is_ai_generated": true,
-        "id": "arrange-sheet",
-        "width": 800,
-        "height": 800
-      },
-      {
-        "title": "Roast until golden",
-        "action": "Roast in the oven, starting to check around the 25-minute mark. Turn the pieces as needed and continue roasting until they are deeply golden and tender.",
-        "cue": "Golden edges and stems that yield to the tip of a knife.",
-        "id": "roast",
-        "image": "golden-cauliflower-lemon-tahini-step-3.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Roasted cauliflower florets with golden-brown caramelized edges on a baking sheet"
-      },
-      {
-        "phase": "Finish",
-        "title": "Make the tahini sauce",
-        "action": "In a small bowl, whisk together the {{tahini}} and {{lemon}}. The mixture will seize and thicken at first. Add {{water}} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
-        "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out.",
-        "id": "make-sauce",
-        "image": "golden-cauliflower-lemon-tahini-step-4.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Whisking creamy lemon tahini sauce in a small ceramic bowl"
-      },
-      {
-        "title": "Serve",
-        "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {{parsley}} if using.",
-        "id": "serve",
-        "image": "golden-cauliflower-lemon-tahini-step-5.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Plated roasted cauliflower drizzled with lemon tahini sauce and chopped parsley"
-      }
-    ],
-    "relatedRecipes": [
-      {
+    "crispy-sheet-pan-gnocchi": {
         "slug": "crispy-sheet-pan-gnocchi",
-        "reason": "Also oven-baked"
-      },
-      {
-        "slug": "oven-roasted-crispy-chickpeas",
-        "reason": "Also oven-baked"
-      }
-    ],
-    "hero_image": {
-      "is_ai_generated": true
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a comforting meal",
+        "tagline": "Shelf-stable potato gnocchi roasted dry until crisp outside and pillowy inside, tossed with burst cherry tomatoes and fresh torn basil.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "shelf-stable potato gnocchi",
+                "qty": 1.0,
+                "unit": "package",
+                "unit_plural": "packages",
+                "note": "Package size: 16 oz / 450 g."
+            },
+            {
+                "id": "ingredient-1",
+                "name": "cherry or grape tomatoes",
+                "qty": 2.0,
+                "unit": "cup",
+                "metric": 300.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "olive oil",
+                "qty": 2.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-3",
+                "name": "garlic cloves, smashed",
+                "qty": 2.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-4",
+                "name": "dried oregano",
+                "qty": 0.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-5",
+                "name": "kosher salt",
+                "qty": 0.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-6",
+                "name": "black pepper",
+                "qty": 0.25,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-7",
+                "name": "fresh basil leaves, torn",
+                "qty": 0.5,
+                "unit": "cup"
+            },
+            {
+                "id": "ingredient-8",
+                "name": "grated Parmesan or pecorino (optional)",
+                "qty": 2.0,
+                "unit": "tbsp"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min"
+            },
+            {
+                "label": "Cook",
+                "value": "20-25 min"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Heat the oven and prep pan.",
+                "action": "Line a large rimmed baking sheet with parchment paper.",
+                "image": "gnocchi-step1.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Toss directly on the sheet.",
+                "action": "Add the uncooked gnocchi, whole cherry tomatoes, and smashed garlic cloves directly onto the pan. Drizzle with olive oil, oregano, salt, and black pepper. Toss with hands until evenly glossy, spreading in a single layer.",
+                "image": "gnocchi-step2.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-2",
+                "title": "Roast until golden and blistered.",
+                "action": "Bake for 20 to 25 minutes, tossing once halfway through, until gnocchi are deeply golden and crisp on the edges and tomatoes have burst and released juices.",
+                "image": "gnocchi-step3.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Gnocchi are golden and crispy on the edges, and tomatoes have burst."
+            },
+            {
+                "id": "step-3",
+                "title": "Finish with basil and cheese.",
+                "action": "Toss in the torn basil right on the hot sheet so it wilts slightly. Sprinkle with grated Parmesan and serve hot straight from the pan.",
+                "image": "gnocchi-step4.webp",
+                "alt": "Step-by-step cooking illustration"
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains wheat (gnocchi). Contains milk if finished with cheese.",
+        "serve": "Estimated to serve 2 people as a comforting meal.",
+        "variation": "No basil? Baby arugula or spinach folded in hot adds fresh peppery greens. For extra protein, toss cooked chickpeas or sliced sausage onto the sheet.",
+        "technique": "Do not boil the gnocchi first! Roasting dry shelf-stable gnocchi directly in olive oil creates a delightful crispy skin with a pillowy interior.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "before_prep": "Preheat oven to 425°F (220°C).",
+        "status": "published",
+        "intro": "Pillow-soft gnocchi roasted on a sheet pan until golden and crisp. Tossed with cherry tomatoes that burst in the oven to create a natural sauce. A hands-off approach that skips the boiling water.",
+        "tested": false,
+        "method": "Sheet pan"
     },
-    "times": [
-      {
-        "label": "Estimated total",
-        "value": "35–40 min",
-        "note": "(subject to oven and floret size)"
-      },
-      {
-        "label": "Method",
-        "value": "Oven"
-      }
-    ],
-    "equipment": [
-      "Baking sheet",
-      "Mixing bowl",
-      "Whisk"
-    ],
-    "if_looks": "If the sauce looks split or overly thick after adding lemon, keep adding water a teaspoon at a time and whisk vigorously until smooth.",
-    "larger_batch": "Use multiple baking sheets or roast in batches to avoid crowding. The sauce water should still be added gradually as needed."
-  },
-  "golden-tofu-edamame-bowls": {
-    "title": "Golden Tofu & Edamame Bowls",
-    "slug": "golden-tofu-edamame-bowls",
-    "categories": [
-      "protein-forward"
-    ],
-    "method": "Skillet",
-    "base_people": 2,
-    "meal_role": "a main meal",
-    "tagline": "Golden pan-fried tofu, edamame and rice, brought together with a creamy peanut and lemon sauce.",
-    "intro": "A simple, satisfying bowl focusing on flavor and texture. The tofu gets a quick pan-fry until golden, served over rice and edamame with a rich peanut sauce.",
-    "tested": false,
-    "status": "pilot",
-    "author": {
-      "name": "Matheus Ferreira",
-      "url": "/about/"
+    "mediterranean-warm-green-lentils": {
+        "slug": "mediterranean-warm-green-lentils",
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a comforting meal",
+        "tagline": "Tender cooked brown lentils warmed with shallots, cumin, lemon zest, baby spinach, and crumbled creamy goat cheese.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "cooked brown or green lentils, rinsed and drained",
+                "qty": 1.0,
+                "unit": "can",
+                "unit_plural": "cans",
+                "note": "Package size: 15 oz / 400 g."
+            },
+            {
+                "id": "ingredient-1",
+                "name": "olive oil",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "medium shallot, finely chopped",
+                "qty": 1.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-3",
+                "name": "garlic clove, minced",
+                "qty": 1.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-4",
+                "name": "ground cumin",
+                "qty": 0.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-5",
+                "name": "ground coriander",
+                "qty": 0.25,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-6",
+                "name": "baby spinach leaves",
+                "qty": 2.0,
+                "unit": "cup",
+                "metric": 60.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-7",
+                "name": "fresh lemon juice, plus {{amount:0.5:tsp}} grated lemon zest",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-8",
+                "name": "crumbled goat cheese or feta",
+                "qty": 0.3333333333333333,
+                "unit": "cup",
+                "metric": 50.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-9",
+                "name": "Salt and black pepper, to taste"
+            },
+            {
+                "id": "water",
+                "name": "water or vegetable broth",
+                "qty": 2,
+                "unit": "tbsp"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min prep"
+            },
+            {
+                "label": "Total / resting",
+                "value": "15 min total"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Soften the aromatics.",
+                "action": "Heat olive oil in a wide skillet over medium heat. Add diced onion and cook for 4-5 minutes until softened. Add garlic and cumin, cooking for another minute until fragrant.",
+                "image": "lentils-step1.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Warm the lentils.",
+                "action": "Add the drained lentils and 2 tablespoons of water or broth. Simmer gently for 4–5 minutes, stirring occasionally, until hot throughout.",
+                "image": "lentils-step2.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-2",
+                "title": "Wilt greens and brighten.",
+                "action": "Stir in the spinach leaves in batches until just wilted (about 1 minute). Remove pan from heat and stir in lemon juice, lemon zest, salt, and pepper.",
+                "image": "lentils-step3.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Lentils are warmed through and tender, but not mushy."
+            },
+            {
+                "id": "step-3",
+                "title": "Plate and top.",
+                "action": "Transfer to warm bowls. Scatter crumbled goat cheese or feta over top and finish with a light drizzle of olive oil.",
+                "image": "lentils-step4.webp",
+                "alt": "Illustration for Plate and top"
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains milk (goat cheese / feta).",
+        "serve": "Delicious served as a standalone warm lunch with sourdough toast, or spooned over roasted sweet potatoes for dinner. Estimated to serve 2 people as a comforting meal.",
+        "variation": "Swap canned brown lentils with cooked French Puy lentils. Dairy-free? Replace goat cheese with toasted walnuts or pumpkin seeds for richness and crunch.",
+        "technique": "Rinse canned lentils thoroughly under cold water to remove excess sodium and canning brine, then drain well before simmering with olive oil and spices.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "status": "published",
+        "intro": "Earthy green lentils warmed through with a Mediterranean flavor profile. A sturdy base that holds up well for days. Simmer gently to ensure the lentils absorb the aromatics without turning mushy.",
+        "tested": false,
+        "method": "One-pot"
     },
-    "allergen": "Contains soy and peanuts. May contain wheat (check soy sauce).",
-    "serve": "Serve warm in bowls.",
-    "ahead": "If storing leftovers, keep the sauce separate. This recipe relies on pre-cooked rice. Ensure the rice was cooled quickly and stored correctly before using.",
-    "safety_link": {
-      "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
-      "text": "Food safety guide"
-    },
-    "before_you_begin": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 25 minutes does not include the time to cook the rice.",
-    "storage": "Store leftovers in the fridge for up to 2 days.",
-    "ingredients": [
-      {
-        "id": "tofu",
-        "qty": 300,
-        "unit": "g",
-        "name": "firm tofu, drained"
-      },
-      {
-        "id": "edamame",
-        "qty": 150,
-        "unit": "g",
-        "name": "shelled edamame"
-      },
-      {
-        "id": "rice",
-        "qty": 250,
-        "unit": "g",
-        "name": "cooked rice"
-      },
-      {
-        "id": "oil",
-        "qty": 2,
-        "unit": "tsp",
-        "name": "neutral oil"
-      },
-      {
-        "id": "soy",
-        "qty": 1,
-        "unit": "tbsp",
-        "name": "soy sauce"
-      },
-      {
-        "id": "peanut_butter",
-        "qty": 1.5,
-        "unit": "tbsp",
-        "name": "unsweetened peanut butter",
-        "swap": {
-          "name": "tahini",
-          "qty": 1.5,
-          "unit": "tbsp",
-          "flavor_change": "The flavor profile changes to sesame.",
-          "how_to_adjust": "Adjust the water gradually as needed.",
-          "note": "(Contains sesame).",
-          "action_swap": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
-        }
-      },
-      {
-        "id": "lemon",
-        "qty": 1,
-        "unit": "tbsp",
-        "name": "lemon juice"
-      },
-      {
-        "id": "water",
-        "name": "Water, as needed"
-      },
-      {
-        "id": "scallions",
-        "name": "Sliced scallions, to serve (optional)"
-      }
-    ],
-    "steps": [
-      {
-        "phase": "Prep",
-        "title": "Prepare the tofu",
-        "action": "Gently pat the {{tofu}} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes.",
-        "id": "prep-tofu",
-        "image": "golden-tofu-edamame-bowls-step-1.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Patting firm tofu dry on a kitchen towel and cutting into neat cubes on a wooden board"
-      },
-      {
-        "phase": "Cook",
-        "title": "Pan-fry the tofu",
-        "action": "Heat the {{oil}} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
-        "image": "golden-tofu-edamame-bowls-step-2-v2.webp",
-        "alt": "Tofu cubes pan-frying in a thin sheen of oil in a cast iron skillet, with a wooden spatula turning one cube to show the golden crust",
-        "is_ai_generated": true,
-        "cue": "Golden brown surfaces on the tofu cubes.",
-        "id": "pan-fry",
-        "width": 800,
-        "height": 800
-      },
-      {
-        "title": "Prepare edamame and rice",
-        "action": "Cook or thaw the {{edamame}} according to the package instructions. Safely reheat the {{rice}} until steaming hot throughout.",
-        "id": "prep-edamame-rice",
-        "image": "golden-tofu-edamame-bowls-step-3.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Two ceramic bowls side by side with steaming white rice and bright green edamame beans"
-      },
-      {
-        "phase": "Finish",
-        "title": "Make the sauce",
-        "action": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily.",
-        "id": "make-sauce",
-        "image": "golden-tofu-edamame-bowls-step-4.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Whisking creamy peanut butter and soy sauce into a pourable dressing in a small bowl"
-      },
-      {
-        "title": "Assemble the bowls",
-        "action": "Divide the rice, edamame, and golden tofu between serving bowls. Drizzle with the sauce and top with {{scallions}} if using.",
-        "id": "assemble",
-        "image": "golden-tofu-edamame-bowls-step-5.webp",
-        "width": 800,
-        "height": 800,
-        "is_ai_generated": true,
-        "alt": "Ceramic grain bowl assembled with white rice, bright edamame, golden tofu, peanut drizzle and scallions"
-      }
-    ],
-    "relatedRecipes": [
-      {
-        "slug": "cabbage-egg-skillet-rice",
-        "reason": "Another skillet rice meal"
-      },
-      {
+    "smashed-cucumber-edamame-bowl": {
         "slug": "smashed-cucumber-edamame-bowl",
-        "reason": "Another edamame bowl"
-      }
-    ],
-    "hero_image": {
-      "is_ai_generated": true
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a comforting meal",
+        "tagline": "Crisp smashed Persian cucumbers, buttery avocado, shelled edamame, and toasted sesame seeds tossed in a ginger-tamari vinaigrette.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "Persian mini cucumbers",
+                "qty": 4.0,
+                "unit": "",
+                "metric": 300.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-1",
+                "name": "shelled edamame, thawed",
+                "qty": 1.0,
+                "unit": "cup",
+                "metric": 150.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "ripe avocado, diced",
+                "qty": 1.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-3",
+                "name": "scallions, thinly sliced",
+                "qty": 2.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-4",
+                "name": "tamari or low-sodium soy sauce",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-5",
+                "name": "toasted sesame oil",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-6",
+                "name": "rice vinegar",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-7",
+                "name": "grated fresh ginger",
+                "qty": 0.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-8",
+                "name": "maple syrup or honey",
+                "qty": 1.0,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-9",
+                "name": "toasted sesame seeds",
+                "qty": 1.0,
+                "unit": "tbsp"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "12 min prep"
+            },
+            {
+                "label": "Total / resting",
+                "value": "12 min total"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Smash the cucumbers.",
+                "action": "Place cucumbers on a cutting board. Use the flat side of a heavy chef knife or rolling pin to firmly smack them until split lengthwise. Cut diagonally into bite-sized jagged pieces.",
+                "image": "edamame-step1.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Whisk dressing.",
+                "action": "In a small bowl, whisk together tamari, toasted sesame oil, rice vinegar, grated ginger, and maple syrup until emulsified.",
+                "image": "edamame-step2.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-2",
+                "title": "Combine bowl ingredients.",
+                "action": "In a mixing bowl, toss smashed cucumbers, thawed edamame, and sliced scallions with the vinaigrette until well coated.",
+                "image": "edamame-step3.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Cucumbers are well coated and slightly softened by the dressing."
+            },
+            {
+                "id": "step-3",
+                "title": "Fold avocado and garnish.",
+                "action": "Gently fold in diced avocado so it stays intact. Divide into portions, scatter toasted sesame seeds over top, and serve immediately.",
+                "image": "edamame-step4.webp",
+                "alt": "Step-by-step cooking illustration"
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains soy (tamari/edamame) and sesame (oil/seeds).",
+        "serve": "Can be served over cold cooked soba noodles, brown rice, or crisp gem lettuce leaves for a heartier meal. Estimated to serve 2 people as a comforting meal.",
+        "variation": "Add cold cubed firm tofu for extra protein. Swap rice vinegar for fresh lime juice if you prefer a sharper citrus punch.",
+        "technique": "Smashing cucumbers fractures their cell walls and creates jagged edges, soaking up the ginger-sesame dressing ten times faster than clean slices.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "before_prep": "If using frozen shelled edamame, thaw them by rinsing under warm water for 2 minutes and draining well.",
+        "status": "published",
+        "intro": "Smashed cucumbers paired with edamame for a refreshing, high-texture bowl. Smashing the cucumber helps it absorb the dressing immediately. Serve immediately after tossing for maximum crunch.",
+        "tested": false,
+        "method": "No-cook"
     },
-    "times": [
-      {
-        "label": "Estimated total",
-        "value": "25 min",
-        "note": "(using pre-cooked rice)"
-      },
-      {
-        "label": "Method",
-        "value": "Skillet"
-      }
-    ],
-    "equipment": [
-      "Skillet",
-      "Small mixing bowl"
-    ],
-    "if_looks": "If the sauce is too thick, simply whisk in a splash more water until you reach the desired consistency.",
-    "larger_batch": "If scaling up, brown the tofu in batches so the skillet doesn't get crowded. The sauce water should still be adjusted gradually."
-  }
+    "garlic-butter-bean-mushroom-toast": {
+        "slug": "garlic-butter-bean-mushroom-toast",
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a comforting meal",
+        "tagline": "Caramelized cremini mushrooms and buttery cannellini beans simmered in garlic, thyme, and white wine vinegar on thick crusty sourdough.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "thick slices rustic sourdough bread",
+                "qty": 2.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-1",
+                "name": "unsalted butter or olive oil",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "cremini or button mushrooms, sliced",
+                "qty": 8.0,
+                "unit": "oz",
+                "metric": 225.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-3",
+                "name": "garlic cloves, finely grated",
+                "qty": 2.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-4",
+                "name": "cannellini beans, rinsed and drained",
+                "qty": 1.0,
+                "unit": "can",
+                "unit_plural": "cans",
+                "note": "Package size: 15 oz / 425 g."
+            },
+            {
+                "id": "ingredient-5",
+                "name": "vegetable stock or water",
+                "qty": 0.5,
+                "unit": "cup",
+                "metric": 120.0,
+                "metric_unit": "ml"
+            },
+            {
+                "id": "ingredient-6",
+                "name": "fresh thyme leaves (or {{amount:0.25:tsp}} dried thyme)",
+                "qty": 1.0,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-7",
+                "name": "white wine vinegar or lemon juice",
+                "qty": 1.0,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-8",
+                "name": "Salt and cracked black pepper, to taste"
+            },
+            {
+                "id": "ingredient-9",
+                "name": "chopped fresh chives or flat-leaf parsley",
+                "qty": 1.0,
+                "unit": "tbsp"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min"
+            },
+            {
+                "label": "Cook",
+                "value": "10 min"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Brown the mushrooms.",
+                "action": "Melt butter in a large skillet over medium-high heat. Add sliced mushrooms in a single layer without moving for 3 minutes until deeply browned, then stir and cook 2 minutes more.",
+                "image": "garlic-butter-bean-mushroom-toast-step-0.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Add garlic and herbs.",
+                "action": "Turn heat down to medium. Add grated garlic and thyme; stir for 1 minute until fragrant.",
+                "image": "mushroom-step2.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-2",
+                "title": "Simmer the beans.",
+                "action": "Stir in the drained cannellini beans and stock. Bring to a simmer for 4 minutes. Lightly crush about one third of the beans with the back of a fork to create a creamy sauce.",
+                "image": "mushroom-step3.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Mushrooms are deeply browned and the buttery sauce is thickened."
+            },
+            {
+                "id": "step-3",
+                "title": "Toast and assemble.",
+                "action": "Toast the sourdough slices until deeply golden. Stir white wine vinegar, salt, and pepper into the beans. Spoon generously over hot toast and garnish with chopped chives.",
+                "image": "mushroom-step4.webp",
+                "alt": "Step-by-step cooking illustration"
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains wheat (sourdough). Contains milk if butter is used.",
+        "serve": "A poached or fried runny egg on top turns this into a satisfying weekend brunch. Estimated to serve 2 people as a comforting meal.",
+        "variation": "Use olive oil instead of butter for a completely dairy-free version. Any hearty beans (butter beans, great northern) work wonderfully.",
+        "technique": "Do not salt the mushrooms until after they have browned in the skillet! Salting early draws out moisture and steams them instead of creating deep caramelized flavor.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "status": "published",
+        "intro": "Butter beans and deeply browned mushrooms served over toasted bread. Sear the mushrooms undisturbed in a hot pan before adding the beans for a rich, savory topping.",
+        "tested": false,
+        "method": "Skillet"
+    },
+    "spiced-apple-cinnamon-porridge": {
+        "slug": "spiced-apple-cinnamon-porridge",
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a comforting meal",
+        "tagline": "Toasted oats simmered with warm cinnamon, nutmeg, diced crisp apples, and finished with toasted pecans and maple syrup.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "quick-cooking steel-cut or rolled oats",
+                "qty": 1.0,
+                "unit": "cup",
+                "metric": 90.0,
+                "metric_unit": "g"
+            },
+            {
+                "id": "ingredient-1",
+                "name": "water",
+                "qty": 1.0,
+                "unit": "cup",
+                "metric": 240.0,
+                "metric_unit": "ml"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "whole milk or unsweetened almond milk",
+                "qty": 1.0,
+                "unit": "cup",
+                "metric": 240.0,
+                "metric_unit": "ml"
+            },
+            {
+                "id": "ingredient-3",
+                "name": "crisp sweet apple (such as Honeycrisp or Gala), diced",
+                "qty": 1.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-4",
+                "name": "unsalted butter or coconut oil",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-5",
+                "name": "ground cinnamon",
+                "qty": 1.0,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-6",
+                "name": "ground nutmeg",
+                "qty": 0.125,
+                "unit": "tsp"
+            },
+            {
+                "id": "ingredient-7",
+                "name": "Pinch of fine sea salt"
+            },
+            {
+                "id": "ingredient-8",
+                "name": "pure maple syrup",
+                "qty": 2.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-9",
+                "name": "chopped toasted pecans or walnuts",
+                "qty": 2.0,
+                "unit": "tbsp"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min"
+            },
+            {
+                "label": "Cook",
+                "value": "10-15 min"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. Adjust pan size and check the texture when changing the yield.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Sauté spiced apples.",
+                "action": "Melt butter in a medium saucepan over medium heat. Add diced apple and {{amount:0.5:tsp}} of the cinnamon. Cook for 3–4 minutes until apple starts to soften slightly at edges.",
+                "image": "porridge-step1.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Cook the porridge.",
+                "action": "Add oats to the saucepan and toast in the butter for 1 minute until fragrant. Pour in water, milk, the remaining {{amount:0.5:tsp}} of cinnamon, nutmeg, and a pinch of salt. Stir well and bring to a gentle bubble.",
+                "image": "porridge-step2.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-2",
+                "title": "Simmer until thick.",
+                "action": "Reduce heat to low and simmer, stirring frequently. For quick-cooking oats, cook for 5 minutes. For rolled oats, cook for 10-12 minutes until tender and porridge is thick and creamy.",
+                "image": "porridge-step3.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Thick and creamy, with the oats tender but not mushy."
+            },
+            {
+                "id": "step-3",
+                "title": "Serve with toppings.",
+                "action": "Ladle into serving bowls. Drizzle each with maple syrup and finish with chopped toasted pecans for crunch.",
+                "image": "porridge-step4.webp",
+                "alt": "Step-by-step cooking illustration"
+            }
+        ],
+        "equipment": [],
+        "allergen": "Contains milk (butter/milk) and tree nuts (pecans) if used. Oats may contain cross-contact gluten unless certified gluten-free.",
+        "serve": "Estimated to serve 2 people as a comforting meal.",
+        "variation": "Swap diced pears for the apple. In summer, substitute fresh peaches or berries. For extra protein, swirl in a tablespoon of chia seeds or almond butter.",
+        "technique": "Gently cooking the diced apples in melted butter and cinnamon before simmering with the oats caramelizes the natural sugars and infuses the entire bowl with warm bakery aroma.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "status": "published",
+        "intro": "Warm porridge naturally sweetened with spiced apples and cinnamon. Cooking the apples down slightly releases their juices, flavoring the entire bowl. Best served immediately while the spices are most fragrant.",
+        "tested": false,
+        "method": "One-pot"
+    },
+    "5-minute-blender-hummus": {
+        "slug": "5-minute-blender-hummus",
+        "base_people": 4,
+        "max_people": 12,
+        "meal_role": "a dip or spread (about 1.5 cups total)",
+        "tagline": "Canned chickpeas, one blender, five minutes. No tahini required.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "chickpeas, drained",
+                "qty": 1.0,
+                "unit": "can",
+                "unit_plural": "cans",
+                "note": "Package size: 15 oz / 425 g."
+            },
+            {
+                "id": "ingredient-1",
+                "name": "olive oil",
+                "qty": 2.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "garlic clove",
+                "qty": 1.0,
+                "unit": ""
+            },
+            {
+                "id": "ingredient-3",
+                "name": "Juice of ½ lemon"
+            },
+            {
+                "id": "ingredient-4",
+                "name": "water (adjust to texture)",
+                "qty": 0.25,
+                "unit": "cup"
+            },
+            {
+                "id": "ingredient-5",
+                "name": "Salt to taste"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min prep"
+            },
+            {
+                "label": "Total / resting",
+                "value": "5 min total"
+            }
+        ],
+        "batch_default": "Times are estimates for the base recipe. You may need to blend in batches if doubling in a small food processor.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Blend until smooth.",
+                "action": "Blend everything until nearly smooth, adding water gradually until you reach the texture you want.",
+                "image": "5-minute-blender-hummus-step-0.webp",
+                "alt": "Blender running with creamy hummus"
+            },
+            {
+                "id": "step-1",
+                "title": "Taste and adjust.",
+                "action": "Taste and adjust salt or lemon before serving.",
+                "image": "5-minute-blender-hummus-step-1.webp",
+                "alt": "Spoon scooping hummus to taste",
+                "cue": "Perfectly smooth, creamy, and lighter in color."
+            }
+        ],
+        "equipment": [],
+        "allergen": "None standard. Check all ingredient labels.",
+        "serve": "Serve with fresh vegetables or warm pita bread. Estimated to serve 4 people as a dip or spread (about 1.5 cups total).",
+        "variation": "Add 1 tbsp tahini if you have it — this version skips it on purpose to keep the ingredient list short.",
+        "technique": "Add the water gradually to control how thick or loose the hummus gets.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "status": "published",
+        "intro": "A smooth, homemade hummus ready in five minutes using a blender. The key to a creamy texture is blending the tahini and lemon first before adding the chickpeas.",
+        "tested": false,
+        "method": "Blender"
+    },
+    "oven-roasted-crispy-chickpeas": {
+        "slug": "oven-roasted-crispy-chickpeas",
+        "base_people": 2,
+        "max_people": 12,
+        "meal_role": "a snack or topping",
+        "tagline": "The same can of chickpeas, crisped in the oven until they snap.",
+        "ingredients": [
+            {
+                "id": "ingredient-0",
+                "name": "chickpeas, drained and thoroughly dried",
+                "qty": 1.0,
+                "unit": "can",
+                "unit_plural": "cans",
+                "note": "Package size: 15 oz / 425 g."
+            },
+            {
+                "id": "ingredient-1",
+                "name": "olive oil",
+                "qty": 1.0,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ingredient-2",
+                "name": "Salt to taste"
+            },
+            {
+                "id": "ingredient-3",
+                "name": "Pinch of paprika (optional)"
+            }
+        ],
+        "times": [
+            {
+                "label": "Prep",
+                "value": "5 min prep"
+            },
+            {
+                "label": "Total / resting",
+                "value": "30 min total"
+            }
+        ],
+        "batch_default": "If doubling, use two baking sheets so they don't steam.",
+        "steps": [
+            {
+                "id": "step-0",
+                "title": "Dry thoroughly",
+                "action": "Dry the chickpeas thoroughly with a clean towel before roasting — removing surface moisture allows them to crisp up properly rather than steaming.",
+                "image": "oven-roasted-crispy-chickpeas-step-0.webp",
+                "alt": "Step-by-step cooking illustration"
+            },
+            {
+                "id": "step-1",
+                "title": "Coat and roast",
+                "action": "Toss the dried chickpeas with olive oil directly on a bare baking sheet, spreading them in a single layer. Roast at 425°F/220°C for about 25-30 minutes, shaking the pan halfway through until golden and crisp.",
+                "image": "oven-roasted-crispy-chickpeas-step-1.webp",
+                "alt": "Step-by-step cooking illustration",
+                "cue": "Deep golden brown, dry, and brittle."
+            },
+            {
+                "id": "step-2",
+                "title": "Season immediately",
+                "action": "Toss with salt and paprika immediately after taking them out of the oven, while still hot, so the spices stick.",
+                "image": "roasted-chickpeas-step3.webp",
+                "alt": "Step-by-step cooking illustration"
+            }
+        ],
+        "equipment": [],
+        "allergen": "None standard. Check all ingredient labels.",
+        "serve": "Eat them on their own as a snack or scatter them over salads for extra crunch. Estimated to serve 2 people as a snack or topping.",
+        "variation": "Try smoked paprika, cumin, or a pinch of cayenne for a different flavor profile.",
+        "technique": "The more carefully you dry the chickpeas with a clean towel, the crispier they will become in the oven.",
+        "ahead": "",
+        "storage": "Keep at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation, or within 1 hour above 90°F (32°C). Discard if left out longer. Storage life depends on ingredient freshness and preparation.",
+        "source": "",
+        "status": "published",
+        "intro": "Oven-roasted chickpeas that turn deeply crunchy. Drying them thoroughly before tossing in oil is crucial—any remaining moisture will steam them instead of roasting them.",
+        "tested": false,
+        "method": "Oven"
+    },
+    "lemon-pea-ricotta-pasta": {
+        "title": "Lemon, Pea & Ricotta Pasta",
+        "slug": "lemon-pea-ricotta-pasta",
+        "categories": [
+            "quick-easy"
+        ],
+        "method": "Stovetop",
+        "base_people": 2,
+        "meal_role": "a main meal",
+        "tagline": "Short pasta folded into a light, bright ricotta sauce.",
+        "intro": "Short pasta tossed in a light ricotta and lemon sauce, with sweet green peas cooked in the same pot. The starchy pasta water brings everything together into a creamy, bright bowl without heavy cream.",
+        "prep_time": "20 mins",
+        "total_time": "20 mins",
+        "batch_default": "Use a larger pot and bowl. The reserved water is for adjustment, not a fixed amount.",
+        "tested": false,
+        "status": "published",
+        "author": {
+            "name": "",
+            "url": "/about/"
+        },
+        "datePublished": "2026-09-18",
+        "dateModified": "2026-09-18",
+        "allergen": "Contains wheat (pasta) and dairy (ricotta). Check all ingredient labels.",
+        "serve": "Serve immediately while warm and creamy.",
+        "ahead": "This dish is best eaten fresh. The ricotta sauce will absorb into the pasta if left sitting.",
+        "storage": "Store leftovers in an airtight container in the fridge for up to 2 days. Reheat gently with a splash of water to loosen the sauce.",
+        "ingredients": [
+            {
+                "id": "pasta",
+                "name": "dry short pasta",
+                "qty": 180,
+                "unit": "g"
+            },
+            {
+                "id": "peas",
+                "name": "frozen peas",
+                "qty": 150,
+                "unit": "g"
+            },
+            {
+                "id": "ricotta",
+                "name": "ricotta cheese",
+                "qty": 120,
+                "unit": "g",
+                "swap": {
+                    "name": "mashed or whipped cottage cheese",
+                    "qty": 120,
+                    "unit": "g",
+                    "texture_change": "Similar creaminess, but may have small curds unless blended.",
+                    "flavor_change": "Cottage cheese can be saltier, so taste before adding extra salt.",
+                    "how_to_adjust": "Adjust the pasta water gradually, as moisture levels vary.",
+                    "technique": "Mash or blend before mixing for a smoother sauce."
+                }
+            },
+            {
+                "id": "oil",
+                "name": "olive oil",
+                "qty": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "lemon-juice",
+                "name": "lemon juice, plus more to taste",
+                "qty": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "lemon-zest",
+                "name": "lemon zest",
+                "qty": 0.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "seasoning",
+                "name": "Salt and black pepper to taste"
+            },
+            {
+                "id": "water",
+                "name": "reserved pasta water, as needed"
+            }
+        ],
+        "steps": [
+            {
+                "id": "boil",
+                "title": "Cook the pasta and peas",
+                "action": "Cook the pasta according to package directions. Add the frozen peas near the end, respecting their required cooking time. Reserve a cup of the pasta water before draining.",
+                "cue": "Pasta is cooked to the package's suggested doneness.",
+                "image": "lemon-pea-ricotta-pasta-step-1.webp",
+                "is_ai_generated": true,
+                "alt": "Pasta and peas boiling in a pot being stirred, with reserved pasta water",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "id": "mix-sauce",
+                "title": "Prepare the ricotta base",
+                "action": "In a large bowl, mash the ricotta with the olive oil, lemon juice, lemon zest, and black pepper. Add a few spoonfuls of the hot reserved pasta water to loosen the mixture.",
+                "cue": "The mixture should look creamy and slightly thinned out.",
+                "image": "lemon-pea-ricotta-pasta-step-2-v2.webp",
+                "is_ai_generated": true,
+                "alt": "Mixing fresh ricotta cheese, lemon zest, and a light touch of olive oil with a wooden spoon in a glass bowl",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "id": "combine",
+                "title": "Combine and adjust",
+                "action": "Add the drained pasta and peas to the bowl. Toss well, adding more pasta water gradually until the sauce coats the pasta. Adjust salt to taste and serve.",
+                "cue": "The sauce adheres to the pasta without looking dry or forming a puddle at the bottom.",
+                "image": "lemon-pea-ricotta-pasta-step-3-v2.webp",
+                "alt": "Top-down view of cooked rigatoni pasta and bright green peas being tossed with a creamy ricotta sauce in a large bowl with a wooden spoon and pasta water",
+                "is_ai_generated": true,
+                "width": 800,
+                "height": 800
+            }
+        ],
+        "relatedRecipes": [
+            {
+                "slug": "crispy-sheet-pan-gnocchi",
+                "reason": "Another pasta dinner"
+            },
+            {
+                "slug": "lemon-white-bean-skillet",
+                "reason": "Another quick dinner"
+            }
+        ],
+        "hero_image": {
+            "src": "lemon-pea-ricotta-pasta.webp",
+            "alt": "Pasta with green peas and a light ricotta coating",
+            "is_ai_generated": true
+        },
+        "nutrition": {
+            "verified": false
+        },
+        "times": [
+            {
+                "label": "Estimated total",
+                "value": "~20 min",
+                "note": "(subject to pasta and boiling time)"
+            },
+            {
+                "label": "Method",
+                "value": "Stovetop"
+            }
+        ],
+        "equipment": [
+            "Large pot",
+            "Large mixing bowl"
+        ],
+        "serves_default": 2,
+        "max_people": 4,
+        "difficulty": "Easy",
+        "card_time": "~20 min",
+        "batch": [],
+        "faq": [],
+        "related_notes": [],
+        "sources": [],
+        "source": "",
+        "variation": "",
+        "recipe_cuisine": "",
+        "suitable_for_diet": [],
+        "primary_goal": "",
+        "keywords": "",
+        "before_prep": "The estimated 20 minutes depends on the cooking time specified on your pasta package and how long your water takes to boil."
+    },
+    "cabbage-egg-skillet-rice": {
+        "title": "Cabbage & Egg Skillet Rice",
+        "slug": "cabbage-egg-skillet-rice",
+        "categories": [
+            "budget-friendly"
+        ],
+        "method": "Skillet",
+        "base_people": 2,
+        "meal_role": "a main meal",
+        "tagline": "Simple ingredients, fast prep, and golden cabbage.",
+        "intro": "Cooked rice pan-fried with lightly browned cabbage, sweet carrots, and scrambled eggs. A fast, budget-friendly meal that makes excellent use of simple ingredients.",
+        "prep_time": "20 mins",
+        "total_time": "20 mins",
+        "batch_default": "Cook in batches if your skillet is crowded. Do not double the cooking time automatically.",
+        "tested": false,
+        "status": "published",
+        "author": {
+            "name": "",
+            "url": "/about/"
+        },
+        "datePublished": "2026-09-18",
+        "dateModified": "2026-09-18",
+        "allergen": "Contains egg and soy. Check all ingredient labels.",
+        "serve": "Serve hot directly from the skillet.",
+        "ahead": "This recipe uses leftover rice. Ensure the rice was cooled quickly and stored correctly before using.",
+        "storage": "Keep leftovers at 40°F (4°C) or colder. Refrigerate within 2 hours of preparation.",
+        "ingredients": [
+            {
+                "id": "rice",
+                "name": "cooked rice, properly stored",
+                "qty": 300,
+                "unit": "g",
+                "note": "Time does not include cooking the rice."
+            },
+            {
+                "id": "cabbage",
+                "name": "thinly sliced cabbage",
+                "qty": 250,
+                "unit": "g",
+                "swap": {
+                    "name": "finely chopped broccoli",
+                    "qty": 250,
+                    "unit": "g",
+                    "texture_change": "More crunch, less surface area for browning.",
+                    "how_to_adjust": "Cooking may take longer. Cut thick stems very small so they cook evenly.",
+                    "technique": "Cook until tender-crisp before adding the rice."
+                }
+            },
+            {
+                "id": "egg",
+                "name": "eggs",
+                "qty": 3,
+                "unit": ""
+            },
+            {
+                "id": "carrot",
+                "name": "small carrot, grated",
+                "qty": 1,
+                "unit": ""
+            },
+            {
+                "id": "oil",
+                "name": "neutral oil, divided",
+                "qty": 2,
+                "unit": "tsp"
+            },
+            {
+                "id": "garlic",
+                "name": "garlic clove, minced",
+                "qty": 1,
+                "unit": ""
+            },
+            {
+                "id": "soy-sauce",
+                "name": "soy sauce, plus more to taste",
+                "qty": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "scallion",
+                "name": "sliced scallions (optional)",
+                "qty": 2,
+                "unit": ""
+            }
+        ],
+        "steps": [
+            {
+                "id": "cook-egg",
+                "title": "Scramble the eggs",
+                "action": "Heat half the oil in a large skillet. Add the beaten eggs and stir until just set. Transfer to a plate and set aside.",
+                "cue": "Eggs are fully cooked with no runny parts left.",
+                "image": "cabbage-egg-skillet-rice-step-1-v2.webp",
+                "is_ai_generated": true,
+                "alt": "Soft yellow scrambled eggs cooking in a silver-grey two-handled pan, gently stirred with a wooden spoon",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "id": "brown-veg",
+                "title": "Brown the vegetables",
+                "action": "Add the remaining oil to the skillet along with the cabbage and carrot. Let it sit undisturbed for a moment to develop some color, then stir. Stir in the garlic and cook briefly without burning it.",
+                "cue": "The cabbage has spots of golden brown while maintaining some crunch.",
+                "image": "cabbage-egg-skillet-rice-step-2.webp",
+                "alt": "Sliced cabbage and carrots browning in a skillet",
+                "is_ai_generated": true,
+                "width": 800,
+                "height": 800
+            },
+            {
+                "id": "add-rice",
+                "title": "Combine and heat",
+                "action": "Add the cooked rice, breaking up any clumps. Stir in the soy sauce and toss until everything is thoroughly heated. Return the eggs to the pan, breaking them up, and fold in the scallions if using.",
+                "cue": "The rice is hot and the grains are separate, not mushy.",
+                "image": "cabbage-egg-skillet-rice-step-3-v2.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Cooked rice, finely shredded cabbage, carrots, golden egg pieces and scallions being folded together with a wooden spoon in a two-handled pan"
+            }
+        ],
+        "relatedRecipes": [
+            {
+                "slug": "lemon-white-bean-skillet",
+                "reason": "Another skillet meal"
+            },
+            {
+                "slug": "garlic-butter-bean-mushroom-toast",
+                "reason": "Another quick dinner"
+            }
+        ],
+        "hero_image": {
+            "src": "cabbage-egg-skillet-rice.webp",
+            "alt": "Fried rice with cabbage, carrots, and egg in a bowl",
+            "is_ai_generated": true
+        },
+        "nutrition": {
+            "verified": false
+        },
+        "times": [
+            {
+                "label": "Estimated total",
+                "value": "~20 min",
+                "note": "(starting from cooked rice)"
+            },
+            {
+                "label": "Method",
+                "value": "Skillet"
+            }
+        ],
+        "equipment": [
+            "Large skillet",
+            "Cutting board",
+            "Chef's knife"
+        ],
+        "serves_default": 2,
+        "max_people": 4,
+        "difficulty": "Easy",
+        "card_time": "~20 min",
+        "batch": [],
+        "faq": [],
+        "related_notes": [],
+        "sources": [],
+        "source": "",
+        "variation": "",
+        "recipe_cuisine": "",
+        "suitable_for_diet": [],
+        "primary_goal": "",
+        "keywords": "",
+        "safety_link": {
+            "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+            "text": "Food safety guide"
+        },
+        "before_prep": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 20 minutes does not include the time to cook the rice."
+    },
+    "golden-cauliflower-lemon-tahini": {
+        "title": "Golden Cauliflower with Lemon Tahini",
+        "slug": "golden-cauliflower-lemon-tahini",
+        "categories": [
+            "plant-forward"
+        ],
+        "method": "Oven",
+        "base_people": 2,
+        "meal_role": "a generous side",
+        "tagline": "Golden roasted cauliflower florets with toasted edges, finished with a creamy lemon tahini sauce.",
+        "intro": "A simple and rewarding way to roast cauliflower. The tahini dressing adds richness, and a little parsley brings freshness. Serve it alongside your favorite grains or legumes.",
+        "tested": false,
+        "status": "pilot",
+        "author": {
+            "name": "Matheus Ferreira",
+            "url": "/about/"
+        },
+        "allergen": "Contains sesame.",
+        "serve": "Serve as a generous side dish.",
+        "ahead": "Cauliflower is best served fresh from the oven to keep its texture.",
+        "storage": "Store leftovers in an airtight container in the fridge for up to 3 days. The sauce can be stored separately.",
+        "ingredients": [
+            {
+                "id": "cauliflower",
+                "qty": 600,
+                "unit": "g",
+                "name": "cauliflower florets"
+            },
+            {
+                "id": "oil",
+                "qty": 1.5,
+                "unit": "tbsp",
+                "name": "olive oil"
+            },
+            {
+                "id": "cumin",
+                "qty": 0.5,
+                "unit": "tsp",
+                "name": "ground cumin"
+            },
+            {
+                "id": "sp",
+                "name": "Salt and black pepper, to taste"
+            },
+            {
+                "id": "tahini",
+                "qty": 2,
+                "unit": "tbsp",
+                "name": "tahini",
+                "swap": {
+                    "name": "thick plain yogurt",
+                    "qty": 3,
+                    "unit": "tbsp",
+                    "flavor_change": "It becomes fresher and tangy without the sesame flavor.",
+                    "how_to_adjust": "Start with less lemon juice and adjust to taste.",
+                    "change": "Skip adding water unless needed to thin it out.",
+                    "note": "(Contains dairy).",
+                    "action_swap": "In a small bowl, whisk together the {{tahini}} and {{lemon}}, starting with half the lemon juice and adjusting to taste. No water is needed unless the yogurt is very thick."
+                }
+            },
+            {
+                "id": "lemon",
+                "qty": 1,
+                "unit": "tbsp",
+                "name": "lemon juice"
+            },
+            {
+                "id": "water",
+                "name": "Water, as needed"
+            },
+            {
+                "id": "parsley",
+                "name": "Chopped parsley, to serve (optional)"
+            }
+        ],
+        "steps": [
+            {
+                "phase": "Roast",
+                "title": "Prepare the cauliflower",
+                "action": "Heat the oven to 220°C / 425°F. Dry the cauliflower florets well if they are wet. In a large bowl, toss the {{cauliflower}} with the {{oil}}, {{cumin}}, {{sp}} until evenly coated.",
+                "id": "prep-cauliflower",
+                "image": "golden-cauliflower-lemon-tahini-step-1.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Cauliflower florets tossed with olive oil and cumin in a ceramic mixing bowl"
+            },
+            {
+                "title": "Arrange on a baking sheet",
+                "action": "Spread the florets on a baking sheet in a single layer without crowding them. Place the cut surfaces flat against the pan where possible.",
+                "image": "golden-cauliflower-lemon-tahini-step-2.webp",
+                "alt": "Cauliflower florets arranged in a single layer on a parchment-lined baking sheet",
+                "is_ai_generated": true,
+                "id": "arrange-sheet",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "title": "Roast until golden",
+                "action": "Roast in the oven, starting to check around the 25-minute mark. Turn the pieces as needed and continue roasting until they are deeply golden and tender.",
+                "cue": "Golden edges and stems that yield to the tip of a knife.",
+                "id": "roast",
+                "image": "golden-cauliflower-lemon-tahini-step-3-v2.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Top-down view of roasted cauliflower florets on a baking sheet, deeply golden brown, with metal tongs turning a piece"
+            },
+            {
+                "phase": "Finish",
+                "title": "Make the tahini sauce",
+                "action": "In a small bowl, whisk together the {{tahini}} and {{lemon}}. The mixture will seize and thicken at first. Add {{water}} a splash at a time, whisking continuously, until the sauce is creamy and easily drizzled.",
+                "care": "Add the water slowly. It takes a moment for the tahini to absorb the water and smooth out.",
+                "id": "make-sauce",
+                "image": "golden-cauliflower-lemon-tahini-step-4.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Whisking creamy lemon tahini sauce in a small ceramic bowl"
+            },
+            {
+                "title": "Serve",
+                "action": "Transfer the roasted cauliflower to a plate, drizzle with the tahini sauce, and top with {{parsley}} if using.",
+                "id": "serve",
+                "image": "golden-cauliflower-lemon-tahini-step-5.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Plated roasted cauliflower drizzled with lemon tahini sauce and chopped parsley"
+            }
+        ],
+        "relatedRecipes": [
+            {
+                "slug": "crispy-sheet-pan-gnocchi",
+                "reason": "Also oven-baked"
+            },
+            {
+                "slug": "oven-roasted-crispy-chickpeas",
+                "reason": "Also oven-baked"
+            }
+        ],
+        "hero_image": {
+            "is_ai_generated": true
+        },
+        "times": [
+            {
+                "label": "Estimated total",
+                "value": "35–40 min",
+                "note": "(subject to oven and floret size)"
+            },
+            {
+                "label": "Method",
+                "value": "Oven"
+            }
+        ],
+        "equipment": [
+            "Baking sheet",
+            "Mixing bowl",
+            "Whisk"
+        ],
+        "if_looks": "If the sauce looks split or overly thick after adding lemon, keep adding water a teaspoon at a time and whisk vigorously until smooth.",
+        "larger_batch": "Use multiple baking sheets or roast in batches to avoid crowding. The sauce water should still be added gradually as needed."
+    },
+    "golden-tofu-edamame-bowls": {
+        "title": "Golden Tofu & Edamame Bowls",
+        "slug": "golden-tofu-edamame-bowls",
+        "categories": [
+            "protein-forward"
+        ],
+        "method": "Skillet",
+        "base_people": 2,
+        "meal_role": "a main meal",
+        "tagline": "Golden pan-fried tofu, edamame and rice, brought together with a creamy peanut and lemon sauce.",
+        "intro": "A simple, satisfying bowl focusing on flavor and texture. The tofu gets a quick pan-fry until golden, served over rice and edamame with a rich peanut sauce.",
+        "tested": false,
+        "status": "pilot",
+        "author": {
+            "name": "Matheus Ferreira",
+            "url": "/about/"
+        },
+        "allergen": "Contains soy and peanuts. May contain wheat (check soy sauce).",
+        "serve": "Serve warm in bowls.",
+        "ahead": "If storing leftovers, keep the sauce separate. This recipe relies on pre-cooked rice. Ensure the rice was cooled quickly and stored correctly before using.",
+        "safety_link": {
+            "url": "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+            "text": "Food safety guide"
+        },
+        "before_you_begin": "This recipe requires pre-cooked rice that has been properly cooled and stored. The estimated 25 minutes does not include the time to cook the rice.",
+        "storage": "Store leftovers in the fridge for up to 2 days.",
+        "ingredients": [
+            {
+                "id": "tofu",
+                "qty": 300,
+                "unit": "g",
+                "name": "firm tofu, drained"
+            },
+            {
+                "id": "edamame",
+                "qty": 150,
+                "unit": "g",
+                "name": "shelled edamame"
+            },
+            {
+                "id": "rice",
+                "qty": 250,
+                "unit": "g",
+                "name": "cooked rice"
+            },
+            {
+                "id": "oil",
+                "qty": 2,
+                "unit": "tsp",
+                "name": "neutral oil"
+            },
+            {
+                "id": "soy",
+                "qty": 1,
+                "unit": "tbsp",
+                "name": "soy sauce"
+            },
+            {
+                "id": "peanut_butter",
+                "qty": 1.5,
+                "unit": "tbsp",
+                "name": "unsweetened peanut butter",
+                "swap": {
+                    "name": "tahini",
+                    "qty": 1.5,
+                    "unit": "tbsp",
+                    "flavor_change": "The flavor profile changes to sesame.",
+                    "how_to_adjust": "Adjust the water gradually as needed.",
+                    "note": "(Contains sesame).",
+                    "action_swap": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily."
+                }
+            },
+            {
+                "id": "lemon",
+                "qty": 1,
+                "unit": "tbsp",
+                "name": "lemon juice"
+            },
+            {
+                "id": "water",
+                "name": "Water, as needed"
+            },
+            {
+                "id": "scallions",
+                "name": "Sliced scallions, to serve (optional)"
+            }
+        ],
+        "steps": [
+            {
+                "phase": "Prep",
+                "title": "Prepare the tofu",
+                "action": "Gently pat the {{tofu}} dry with a clean kitchen towel or paper towel, then cut it into bite-sized cubes.",
+                "id": "prep-tofu",
+                "image": "golden-tofu-edamame-bowls-step-1.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Patting firm tofu dry on a kitchen towel and cutting into neat cubes on a wooden board"
+            },
+            {
+                "phase": "Cook",
+                "title": "Pan-fry the tofu",
+                "action": "Heat the {{oil}} in a skillet over medium heat. Arrange the tofu cubes in a single layer. Let them cook undisturbed until the bottom is golden brown, then flip to brown the other sides. Perfect uniform crispness isn't required.",
+                "image": "golden-tofu-edamame-bowls-step-2-v2.webp",
+                "alt": "Tofu cubes pan-frying in a thin sheen of oil in a cast iron skillet, with a wooden spatula turning one cube to show the golden crust",
+                "is_ai_generated": true,
+                "cue": "Golden brown surfaces on the tofu cubes.",
+                "id": "pan-fry",
+                "width": 800,
+                "height": 800
+            },
+            {
+                "title": "Prepare edamame and rice",
+                "action": "Cook or thaw the {{edamame}} according to the package instructions. Safely reheat the {{rice}} until steaming hot throughout.",
+                "id": "prep-edamame-rice",
+                "image": "golden-tofu-edamame-bowls-step-3.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Two ceramic bowls side by side with steaming white rice and bright green edamame beans"
+            },
+            {
+                "phase": "Finish",
+                "title": "Make the sauce",
+                "action": "In a small bowl, whisk together the {{peanut_butter}}, {{soy}}, and {{lemon}}. Add {{water}} a little at a time until the sauce is creamy and fluid enough to drizzle easily.",
+                "id": "make-sauce",
+                "image": "golden-tofu-edamame-bowls-step-4.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Whisking creamy peanut butter and soy sauce into a pourable dressing in a small bowl"
+            },
+            {
+                "title": "Assemble the bowls",
+                "action": "Divide the rice, edamame, and golden tofu between serving bowls. Drizzle with the sauce and top with {{scallions}} if using.",
+                "id": "assemble",
+                "image": "golden-tofu-edamame-bowls-step-5.webp",
+                "width": 800,
+                "height": 800,
+                "is_ai_generated": true,
+                "alt": "Ceramic grain bowl assembled with white rice, bright edamame, golden tofu, peanut drizzle and scallions"
+            }
+        ],
+        "relatedRecipes": [
+            {
+                "slug": "cabbage-egg-skillet-rice",
+                "reason": "Another skillet rice meal"
+            },
+            {
+                "slug": "smashed-cucumber-edamame-bowl",
+                "reason": "Another edamame bowl"
+            }
+        ],
+        "hero_image": {
+            "is_ai_generated": true
+        },
+        "times": [
+            {
+                "label": "Estimated total",
+                "value": "25 min",
+                "note": "(using pre-cooked rice)"
+            },
+            {
+                "label": "Method",
+                "value": "Skillet"
+            }
+        ],
+        "equipment": [
+            "Skillet",
+            "Small mixing bowl"
+        ],
+        "if_looks": "If the sauce is too thick, simply whisk in a splash more water until you reach the desired consistency.",
+        "larger_batch": "If scaling up, brown the tofu in batches so the skillet doesn't get crowded. The sauce water should still be adjusted gradually."
+    }
 }
