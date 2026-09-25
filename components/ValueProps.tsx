@@ -1,5 +1,6 @@
 // Content pillars (recipes; do/don't tips) are Supplied. Specific phrasing below
 // is Proposed and should be validated once real reader feedback is available.
+// Visual styling updated to match the new cream/ink/mustard/sage design reference.
 const valueProps = [
   {
     title: "Recipes that actually work",
@@ -24,12 +25,15 @@ export default function ValueProps() {
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {valueProps.map((item) => (
-          <div key={item.title} className="rounded-xl bg-white p-6 shadow-sm">
-            <div className="mb-4 h-10 w-10 rounded-md bg-brand-mustard/20" />
-            <h3 className="mb-2 text-base font-bold text-gray-900">
+          <div
+            key={item.title}
+            className="rounded-xl border border-brand-tag bg-white p-6 shadow-sm"
+          >
+            <div className="mb-4 h-10 w-10 rounded-md bg-brand-sage/20" />
+            <h3 className="mb-2 font-serif text-base font-semibold text-brand-ink">
               {item.title}
             </h3>
-            <p className="text-sm text-gray-600">{item.body}</p>
+            <p className="text-sm text-brand-ink/70">{item.body}</p>
           </div>
         ))}
       </div>
