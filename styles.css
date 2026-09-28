@@ -413,9 +413,10 @@ textarea { min-height: 130px; resize: vertical; }
 /* Hero variant B: full-bleed photo (Home) */
 .hero-bleed { padding: 0; }
 .hero-bleed .hero-grid { position: static; min-height: 580px; }
+.hero-bleed.hero-short .hero-grid { min-height: 520px; }
 .hero-bleed .hero-copy { position: relative; z-index: 2; padding: 64px 0 120px; }
 .hero-bleed .art-bleed { position: static; height: auto; }
-.hero-bleed .art-bleed::before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 52vw; background: url('images/hero-bowl.jpg') center / cover; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24%); mask-image: linear-gradient(90deg, transparent 0, #000 24%); }
+.hero-bleed .art-bleed::before { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 52vw; background: var(--bleed, url('images/hero-bowl.jpg')) center / cover; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24%); mask-image: linear-gradient(90deg, transparent 0, #000 24%); }
 .hero-bleed .float-card { left: auto; top: auto; right: max(24px, calc((100vw - 1200px) / 2 + 24px)); bottom: 120px; z-index: 3; }
 
 /* Hero variant A: photo mosaic (Recipes) */
@@ -429,7 +430,8 @@ textarea { min-height: 130px; resize: vertical; }
 @media (max-width: 960px) {
   .hero-bleed .hero-grid { min-height: 0; gap: 0; }
   .hero-bleed .hero-copy { padding: 40px 0 28px; }
-  .hero-bleed .art-bleed { position: relative; height: 340px; max-width: none; margin: 0 -24px 60px; width: auto; }
+  .hero-bleed .art-bleed { position: relative; height: 340px; max-width: none; margin: 0 -24px; width: auto; }
+  .hero-bleed .float-card { bottom: 64px !important; }
   .hero-bleed .art-bleed::before { width: auto; left: 0; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%); mask-image: linear-gradient(180deg, transparent 0, #000 22%); }
   .hero-bleed .float-card { right: 24px; bottom: 24px; }
   .art-mosaic { height: 360px; }
