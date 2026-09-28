@@ -13,18 +13,28 @@
   <header id="site-header"></header>
 
   <section class="hero hero-short">
-    <div class="hero-grid">
+    <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Recipes</p>
+        <p class="eyebrow">The recipe library</p>
         <h1>Explore, cook,<br><em>enjoy.</em></h1>
-        <p>Find recipes for every kind of day, from quick weeknight meals to slow weekend favorites.</p>
-        <img src="images/leaf.svg" alt="" class="leaf">
+        <p>Find recipes for every kind of day, from quick weeknight meals to slow weekend favorites. Every recipe comes with step-by-step instructions, tips, swaps and storage notes.</p>
+        <div class="hero-actions">
+          <button class="btn btn-yellow" data-random>Pick one for me <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
       </div>
-      <div class="hero-media"><img src="images/grain-bowl.jpg" alt="Mediterranean grain bowl"></div>
+      <div class="hero-art">
+        <div class="arch"><img src="images/grain-bowl.jpg" alt="Mediterranean grain bowl"></div>
+        <div class="bubble"><img src="images/beef-tacos.jpg" alt="Beef tacos"></div>
+        <div class="stamp"></div>
+        <img src="images/whisk.svg" alt="" class="doodle whisk">
+        <img src="images/sparkle.svg" alt="" class="doodle sparkle">
+        <img src="images/chili.svg" alt="" class="doodle chili">
+      </div>
     </div>
+    <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>
   </section>
 
-  <main class="container section">
+  <main class="container">
     <div class="toolbar">
       <div class="search">
         <input type="search" id="search" placeholder="Search recipes or ingredients…" aria-label="Search recipes">
@@ -32,11 +42,21 @@
       </div>
       <div class="chips" id="chips"></div>
     </div>
-    <div class="recipe-grid wide" id="recipe-grid"></div>
+    <p class="results-count" id="results-count"></p>
+    <div class="recipe-grid" id="recipe-grid"></div>
     <p class="empty" id="empty">No recipes match your search. Try another ingredient.</p>
+
+    <div class="cta reveal" style="margin-top:72px">
+      <div>
+        <h2>Can't decide what to cook?</h2>
+        <p>Let us pick a recipe for you. No scrolling required.</p>
+      </div>
+      <button class="btn btn-yellow" data-random>Surprise me <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
   </main>
 
   <footer id="site-footer"></footer>
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

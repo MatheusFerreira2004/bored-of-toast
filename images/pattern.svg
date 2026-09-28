@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" fill="none" stroke="#f5efe2" stroke-opacity=".07" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- whisk -->
+  <g transform="translate(40 40) rotate(-25)">
+    <path d="M10 60v40"/><path d="M10 60C-6 40-2 6 10 0c12 6 16 40 0 60z"/><path d="M10 60C2 40 4 10 10 0"/><path d="M10 60c8-20 6-50 0-60"/>
+  </g>
+  <!-- leaf -->
+  <g transform="translate(210 30) rotate(20)">
+    <path d="M0 60C0 20 30 0 60 0c0 30-20 60-60 60z"/><path d="M0 60L40 20"/>
+  </g>
+  <!-- spoon -->
+  <g transform="translate(290 150) rotate(35)">
+    <ellipse cx="10" cy="14" rx="10" ry="14"/><path d="M10 28v52"/>
+  </g>
+  <!-- chili -->
+  <g transform="translate(120 170) rotate(-10)">
+    <path d="M6 10c20 4 40 20 44 50-20-6-44-24-44-50z"/><path d="M6 10C4 4 8 0 14 0"/>
+  </g>
+  <!-- sparkle -->
+  <path d="M60 250l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/>
+  <path d="M320 300l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+  <!-- dots -->
+  <circle cx="180" cy="120" r="2.5"/><circle cx="30" cy="160" r="2.5"/><circle cx="250" cy="260" r="2.5"/>
+  <!-- garlic -->
+  <g transform="translate(200 280)">
+    <path d="M20 0c-4 10-20 16-20 30 0 10 9 16 20 16s20-6 20-16C40 16 24 10 20 0z"/><path d="M20 12v34M10 22c2 10 4 18 10 24M30 22c-2 10-4 18-10 24"/>
+  </g>
+  <!-- toast -->
+  <g transform="translate(20 300)">
+    <path d="M8 16C2 16 0 12 0 8 0 3 5 0 12 0h20c7 0 12 3 12 8 0 4-2 8-8 8v24H8z"/>
+  </g>
+</svg>

@@ -13,67 +13,101 @@
   <header id="site-header"></header>
 
   <section class="hero">
-    <div class="hero-grid">
+    <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Recipes · Tips · Inspiration</p>
         <h1>Good food,<br><em>every day.</em></h1>
         <p>Discover simple, delicious recipes made for real life: easy enough for a weekday, special enough for the weekend.</p>
-        <div><a href="recipes.html" class="btn btn-light">Explore Recipes <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-        <img src="images/leaf.svg" alt="" class="leaf">
+        <div class="hero-actions">
+          <a href="recipes.html" class="btn btn-yellow">Explore recipes <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="btn btn-ghost" data-random>Surprise me</button>
+        </div>
+        <div class="hero-trust">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m5 12 5 5L20 7"/></svg>Tested at home</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m5 12 5 5L20 7"/></svg>Everyday ingredients</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m5 12 5 5L20 7"/></svg>Step-by-step guides</span>
+        </div>
       </div>
-      <div class="hero-media"><img src="images/hero-bowl.jpg" alt="Grilled chicken avocado salad in a speckled bowl"></div>
+      <div class="hero-art">
+        <div class="arch"><img src="images/hero-bowl.jpg" alt="Grilled chicken avocado salad in a speckled bowl"></div>
+        <div class="bubble"><img src="images/creamy-garlic-pasta.jpg" alt="Creamy garlic pasta"></div>
+        <a class="float-card" href="recipe.html?id=creamy-garlic-pasta">
+          <img src="images/creamy-garlic-pasta.jpg" alt="">
+          <div><small>Recipe of the week</small><strong>Creamy Garlic Pasta</strong><span>20 min · Easy</span></div>
+        </a>
+        <div class="stamp"></div>
+        <img src="images/whisk.svg" alt="" class="doodle whisk">
+        <img src="images/sparkle.svg" alt="" class="doodle sparkle">
+        <img src="images/sparkle.svg" alt="" class="doodle sparkle s2">
+        <img src="images/chili.svg" alt="" class="doodle chili">
+      </div>
     </div>
+    <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>
   </section>
 
-  <main class="container">
-    <div class="features">
-      <div class="feature reveal">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 4C10 4 5 9 5 16c0 1.5.3 2.8.8 4"/><path d="M20 4c0 10-5 15-12 15"/><path d="M5 20 13 12"/></svg>
-        Tested recipes<br>and approved
-      </div>
-      <div class="feature reveal">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
-        Options for<br>every family
-      </div>
-      <div class="feature reveal">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10"/><path d="M16 21V3c2.2 1 3 3.5 3 6s-1 4-3 4"/></svg>
-        Accessible<br>ingredients
-      </div>
-      <div class="feature reveal">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
-        More flavor,<br>less stress
-      </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Fresh ingredients</span><span>Simple steps</span><span>Weeknight dinners</span><span>Cozy soups</span><span>Sweet treats</span><span>Healthy bowls</span><span>No fuss</span>
+      <span>Fresh ingredients</span><span>Simple steps</span><span>Weeknight dinners</span><span>Cozy soups</span><span>Sweet treats</span><span>Healthy bowls</span><span>No fuss</span>
     </div>
+  </div>
 
-    <section class="section">
+  <main>
+    <section class="container section" style="padding-bottom:24px">
       <div class="section-head">
-        <h2>Browse by category <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M20 4C10 4 5 9 5 16c0 1.5.3 2.8.8 4"/><path d="M5 20 13 12"/></svg></h2>
-        <a href="recipes.html" class="view-all">View all →</a>
+        <div><h2>Browse by category</h2><p>From 20-minute dinners to weekend baking projects.</p></div>
+        <a href="recipes.html" class="view-all">View all recipes →</a>
       </div>
       <div class="categories" id="categories"></div>
     </section>
 
-    <section class="section">
+    <section class="container section">
       <div class="section-head">
-        <h2>Recipes worth making <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M20 4C10 4 5 9 5 16c0 1.5.3 2.8.8 4"/><path d="M5 20 13 12"/></svg></h2>
+        <div><h2>Recipes worth making</h2><p>Our most-loved dishes, tested and ready for your kitchen.</p></div>
         <a href="recipes.html" class="view-all">View all →</a>
       </div>
       <div class="recipe-grid five" id="featured"></div>
     </section>
 
-    <div class="cta reveal">
-      <div class="cta-inner">
-        <img src="images/leaf.svg" alt="" class="leaf">
+    <section class="container section-tight">
+      <div class="spotlight reveal" id="spotlight"></div>
+    </section>
+
+    <section class="bg-paper section" style="margin-top:56px">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Little tricks, big flavor</h2><p>Three habits that will instantly make you a better home cook.</p></div>
+        </div>
+        <div class="tips-grid">
+          <div class="tip-card reveal"><div class="num">01</div><h3>Salt your pasta water</h3><p>It should taste like the sea. It is the only chance to season the pasta itself, and it makes every sauce taste better.</p></div>
+          <div class="tip-card reveal"><div class="num">02</div><h3>Let meat rest</h3><p>Five minutes on the board before slicing keeps the juices in the meat instead of on your cutting board.</p></div>
+          <div class="tip-card reveal"><div class="num">03</div><h3>Taste as you go</h3><p>Season in small steps and taste often. A squeeze of lemon or pinch of salt at the end can wake up any dish.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="features">
+        <div class="feature reveal"><div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m5 12 5 5L20 7"/></svg></div><div><strong>Tested recipes</strong>Made and approved at home</div></div>
+        <div class="feature reveal"><div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div><div><strong>For every family</strong>Options for all tastes</div></div>
+        <div class="feature reveal"><div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10"/><path d="M16 21V3c2.2 1 3 3.5 3 6s-1 4-3 4"/></svg></div><div><strong>Easy to find</strong>Everyday ingredients</div></div>
+        <div class="feature reveal"><div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><div><strong>Less stress</strong>More flavor, less fuss</div></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="cta reveal">
         <div>
           <h2>Real ingredients. Better meals.</h2>
           <p>Simple recipes, fresh ideas, everyday inspiration.</p>
         </div>
+        <a href="recipes.html" class="btn btn-yellow">Explore all recipes <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <a href="recipes.html" class="btn btn-light">Explore all recipes <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
+    </section>
   </main>
 
   <footer id="site-footer"></footer>
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
