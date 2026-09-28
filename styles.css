@@ -29,7 +29,8 @@ em { font-style: italic; }
 .site-header { background: var(--green); color: var(--cream); position: sticky; top: 0; z-index: 50; }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.6rem; }
-.brand img { width: 44px; height: 44px; }
+.brand img { height: 46px; width: auto; }
+.site-footer .brand img { height: 52px; }
 .nav { display: flex; align-items: center; gap: 32px; font-size: .92rem; }
 .nav a { opacity: .88; position: relative; padding: 6px 0; }
 .nav a:hover, .nav a.active { opacity: 1; }
@@ -170,7 +171,7 @@ textarea { min-height: 130px; resize: vertical; }
 .site-footer { background: var(--green); color: var(--cream); margin-top: 56px; position: relative; overflow: hidden; }
 .site-footer .container { display: flex; align-items: center; justify-content: space-between; padding-top: 34px; padding-bottom: 34px; gap: 24px; flex-wrap: wrap; }
 .site-footer .brand { font-size: 1.45rem; }
-.footer-tagline { font-size: .8rem; opacity: .75; margin-top: 2px; margin-left: 56px; }
+.footer-tagline { font-size: .8rem; opacity: .75; margin-top: 6px; }
 .footer-nav { display: flex; gap: 28px; font-size: .88rem; opacity: .9; }
 .socials { display: flex; gap: 16px; }
 .socials a { opacity: .9; }

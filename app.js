@@ -92,7 +92,7 @@ function renderHeader() {
   el.className = 'site-header';
   el.innerHTML = `
     <div class="container">
-      <a href="index.html" class="brand"><img src="images/logo.svg" alt="Bored of Toast logo">Bored of Toast</a>
+      <a href="index.html" class="brand" aria-label="Bored of Toast home"><img src="images/logo-white.png" alt="Bored of Toast"></a>
       <nav class="nav" id="nav">
         ${NAV.map(([href, label, key]) => `<a href="${href}" class="${key === PAGE ? 'active' : ''}">${label}</a>`).join('')}
         <div class="nav-icons">
@@ -112,7 +112,7 @@ function renderFooter() {
   el.innerHTML = `
     <div class="container">
       <div>
-        <a href="index.html" class="brand"><img src="images/logo.svg" alt="">Bored of Toast</a>
+        <a href="index.html" class="brand" aria-label="Bored of Toast home"><img src="images/logo-white.png" alt="Bored of Toast"></a>
         <div class="footer-tagline">Good food without the fuss.</div>
       </div>
       <nav class="footer-nav">${NAV.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>
