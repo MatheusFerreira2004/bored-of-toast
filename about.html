@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Bored of Toast</title>
+  <meta name="description" content="We believe great food doesn't have to be complicated. Meet the kitchen behind Bored of Toast.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+  <header id="site-header"></header>
+
+  <section class="hero hero-short">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">About Bored of Toast</p>
+        <h1>Our passion is<br>good food.</h1>
+        <p>We believe great food doesn't have to be complicated. Bored of Toast is here to make everyday cooking easier, more enjoyable and a little more delicious.</p>
+        <img src="images/leaf.svg" alt="" class="leaf">
+      </div>
+      <div class="hero-media"><img src="images/tomato-soup.jpg" alt="Tomato basil soup with fresh basil"></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="section">
+      <div class="story">
+        <img src="images/our-story.jpg" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="reveal">
+        <div class="reveal">
+          <h2>Our story</h2>
+          <p>Bored of Toast started with a simple idea: real food, made easy. We were tired of eating the same thing every night, so we started collecting the recipes that got us excited to cook again.</p>
+          <p>What began as a small collection of favorites has grown into a place for home cooks, food lovers and anyone who believes that good food makes life better.</p>
+          <a href="recipes.html" class="btn btn-dark" style="margin-top:8px">Our recipes <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Our values</h2></div>
+      <div class="values">
+        <div class="value reveal">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 7c-3-2-8-1-8 5 0 5 3 9 5 9 1.2 0 2-.6 3-.6s1.8.6 3 .6c2 0 5-4 5-9 0-6-5-7-8-5z"/><path d="M12 7c0-2 1-4 3-4"/></svg>
+          <h3>Real Food</h3><p>Fresh ingredients,<br>real flavor.</p>
+        </div>
+        <div class="value reveal">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></svg>
+          <h3>Simple Cooking</h3><p>Easy steps,<br>less stress.</p>
+        </div>
+        <div class="value reveal">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          <h3>Quality Ingredients</h3><p>Better ingredients,<br>better meals.</p>
+        </div>
+        <div class="value reveal">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0M1.5 19a3.5 3.5 0 0 1 4.5-3.3M22.5 19a3.5 3.5 0 0 0-4.5-3.3"/></svg>
+          <h3>Everyday Joy</h3><p>Good food,<br>happier days.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta cta-photo reveal">
+      <div class="cta-text">
+        <h2>Cooking is a small<br>act of care.</h2>
+        <p>And we're here for every meal, big or small.</p>
+      </div>
+      <img src="images/hero-bowl.jpg" alt="" class="bg">
+    </div>
+
+    <section class="section" id="contact" style="border-top:0">
+      <div class="contact">
+        <div class="reveal">
+          <p class="eyebrow" style="color:var(--green-soft)">Get in touch</p>
+          <h2>Say hello</h2>
+          <p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? We read every message.</p>
+          <ul class="contact-list">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>hello@boredoftoast.com</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>@boredoftoast</li>
+          </ul>
+        </div>
+        <form id="contact-form" class="reveal">
+          <div class="row">
+            <label>Name<input name="name" required placeholder="Your name"></label>
+            <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+          </div>
+          <label>Message<textarea name="message" required placeholder="Tell us what's cooking…"></textarea></label>
+          <div><button type="submit" class="btn btn-dark">Send message <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <p class="form-note" id="form-note">Thanks! Your email app should open to send the message.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="app.js"></script>
+</body>
+</html>
