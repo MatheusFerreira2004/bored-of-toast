@@ -7,7 +7,7 @@ import json, os, html, re, datetime, shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20260929-2'
+VER = '20260929-3'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -20,6 +20,40 @@ CREDITS = json.load(open(os.path.join(HERE, 'credits.json')))
 GL = json.load(open(os.path.join(HERE, 'guides_legal.json')))
 GUIDES = GL['guides']
 BY_ID = {r['id']: r for r in RECIPES}
+
+# Responsive images: _src/make_images.py writes images/<name>-<w>w.webp and images/variants.json.
+try:
+    VARIANTS = json.load(open(os.path.join(HERE, '..', 'images', 'variants.json')))
+except FileNotFoundError:
+    VARIANTS = {}
+# `sizes` per layout slot, from the rendered widths measured at 360-1440px viewports.
+SIZES = {
+    'avatar': '52px', 'mini': '58px', 'credit': '72px',
+    'plan': '(max-width: 520px) 90vw, (max-width: 700px) 110px, 160px',
+    'circle': '(max-width: 520px) 88px, (max-width: 760px) 116px, 140px',
+    'card': '(max-width: 520px) calc(100vw - 50px), (max-width: 700px) 264px, (max-width: 900px) 350px, (max-width: 1100px) 480px, 366px',
+    'guide': '(max-width: 520px) calc(100vw - 50px), (max-width: 700px) 262px, 366px',
+    'spot': '(max-width: 900px) calc(100vw - 48px), 640px',
+    'step': '(max-width: 1080px) calc(100vw - 110px), 668px',
+    'arch': '(max-width: 520px) 170px, (max-width: 960px) 264px, 344px',
+    'story': '(max-width: 900px) calc(100vw - 48px), 500px',
+    'cover': '(max-width: 1000px) calc(100vw - 48px), 952px',
+    'bleed': '(max-width: 960px) 100vw, 52vw',
+    'cta': '(max-width: 900px) calc(100vw - 48px), 640px',
+}
+
+def rimg(root, path, sizes):
+    """srcset + sizes attributes for images/<name>.webp when responsive variants exist (else nothing)."""
+    v = VARIANTS.get(path)
+    if not v or not v['variants']:
+        return ''
+    parts = [f"{root}{path[:-5]}-{w}w.webp {w}w" for w in v['variants']] + [f"{root}{path} {v['width']}w"]
+    return f' srcset="{", ".join(parts)}" sizes="{sizes}"'
+
+def thumb(path):
+    """Smallest variant for tiny thumbnails (search overlay)."""
+    v = VARIANTS.get(path)
+    return f"{path[:-5]}-{v['variants'][0]}w.webp" if v and v['variants'] else path
 GUIDE_IMG = {'pantry-staples': 'guide-pantry', 'perfect-rice': 'guide-rice', 'knife-skills': 'guide-knife'}
 GUIDE_RELATED = {'pantry-staples': ['tomato-basil-soup', 'creamy-garlic-pasta', 'mediterranean-grain-bowl'],
                  'perfect-rice': ['honey-garlic-chicken-thighs', 'mushroom-risotto', 'beef-tacos'],
@@ -193,13 +227,13 @@ def hero_bleed(root, img, eyebrow, h1, p, actions='', card='', short=False, trus
       {f'<div class="hero-actions">{actions}</div>' if actions else ''}
       {trust}
     </div>
-    <div class="hero-art art-bleed"><div class="bleed-img" aria-hidden="true" style="background-image:url('{root}{img}')"></div>{card}</div>
+    <div class="hero-art art-bleed"><div class="bleed-img" aria-hidden="true"><img src="{root}{img}" alt="" decoding="async"{rimg(root, img, SIZES['bleed'])}></div>{card}</div>
   </div>
   {WAVE}
 </section>'''
 
 def float_card(root, r, label):
-    return f'''<a class="float-card" href="{root}recipes/{r['id']}/"><img src="{root}{r['img']}" alt="" width="52" height="52"><div><small>{label}</small><strong>{e(r['title'])}</strong><span>{fmt_time(r['time'])} · {r['level']}</span></div></a>'''
+    return f'''<a class="float-card" href="{root}recipes/{r['id']}/"><img src="{root}{r['img']}" alt="" width="52" height="52"{rimg(root, r['img'], SIZES['avatar'])}><div><small>{label}</small><strong>{e(r['title'])}</strong><span>{fmt_time(r['time'])} · {r['level']}</span></div></a>'''
 
 def diet_badges(r, cls='diet-badges'):
     if not r.get('diet'): return ''
@@ -208,14 +242,14 @@ def diet_badges(r, cls='diet-badges'):
 def card(root, r, desc=True, eager=False):
     text = ' '.join([r['title'], r['desc'], r['category']] + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()
     return f'''<a class="card reveal" href="{root}recipes/{r['id']}/" data-cat="{e(r['category'])}" data-tags="{' '.join(r['tags'])}" data-diet="{' '.join(r.get('diet', []))}" data-text="{e(text)}">
-  <div class="card-img"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="600" height="450" {'' if eager else 'loading="lazy"'} decoding="async"><span class="card-badge">{e(r['category'])}</span>{diet_badges(r)}</div>
+  <div class="card-img"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="600" height="450" {'' if eager else 'loading="lazy"'} decoding="async"{rimg(root, r['img'], SIZES['card'])}><span class="card-badge">{e(r['category'])}</span>{diet_badges(r)}</div>
   <div class="card-body"><h3>{e(r['title'])}</h3>{f'<p class="desc">{e(r["desc"])}</p>' if desc else ''}
     <div class="meta"><span>{ICON['clock']}{fmt_time(r['time'])}</span><span>{ICON['chef']}{r['level']}</span></div></div>
 </a>'''
 
 def guide_card(root, g):
     return f'''<a class="guide-card reveal" href="{root}guides/{g['id']}/">
-  <div class="guide-img"><img src="{root}images/{GUIDE_IMG[g['id']]}.webp" alt="{e(g['title'])}" loading="lazy" width="700" height="466"></div>
+  <div class="guide-img"><img src="{root}images/{GUIDE_IMG[g['id']]}.webp" alt="{e(g['title'])}" loading="lazy" width="700" height="466"{rimg(root, 'images/' + GUIDE_IMG[g['id']] + '.webp', SIZES['guide'])}></div>
   <div class="guide-body"><span class="tag">{e(g['category'])} · {g['readTime']} min read</span><h3>{e(g['title'])}</h3><p>{e(g['subtitle'])}</p><span class="view-all">Read the guide →</span></div>
 </a>'''
 
@@ -230,7 +264,7 @@ def section_head(title, sub='', link=''):
 def count(key): return sum(1 for r in RECIPES if r['category'] == key or key in r['tags'])
 
 def cats_grid(root):
-    return '<div class="categories">' + ''.join(f'''<a class="category reveal" href="{root}recipes/?cat={e(k)}"><div class="circle"><img src="{root}images/{img}.webp" alt="{l}" loading="lazy" width="150" height="150"></div>{l}<small>{count(k)} recipes</small></a>''' for k, l, img in CATS) + '</div>'
+    return '<div class="categories">' + ''.join(f'''<a class="category reveal" href="{root}recipes/?cat={e(k)}"><div class="circle"><img src="{root}images/{img}.webp" alt="{l}" loading="lazy" width="150" height="150"{rimg(root, 'images/' + img + '.webp', SIZES['circle'])}></div>{l}<small>{count(k)} recipes</small></a>''' for k, l, img in CATS) + '</div>'
 
 # ---------------------------------------------------------------- pages
 def build_home():
@@ -279,7 +313,7 @@ def build_home():
 
 <section class="container section">
   <div class="spotlight reveal">
-    <div class="spotlight-img"><img src="{root}{wk['img']}" alt="{e(wk['title'])}" loading="lazy"><span class="ribbon">Recipe of the week</span></div>
+    <div class="spotlight-img"><img src="{root}{wk['img']}" alt="{e(wk['title'])}" loading="lazy"{rimg(root, wk['img'], SIZES['spot'])}><span class="ribbon">Recipe of the week</span></div>
     <div class="spotlight-body">
       <span class="tag">{wk['category']}</span><h2>{e(wk['title'])}</h2><p>{e(wk['subtitle'])}</p>
       <div class="meta" style="margin-bottom:18px"><span>{ICON['clock']}{fmt_time(wk['time'])}</span><span>{ICON['chef']}{wk['level']}</span><span>{ICON['users']}Serves {wk['serves']}</span></div>
@@ -321,6 +355,7 @@ def build_recipes():
     <div class="chips" id="chips">{''.join(f'<button class="chip" data-key="{e(k)}">{l}</button>' for k, l in chips)}</div>
     <div class="chips diet-chips" id="diet-chips"><span class="chips-label">Diet:</span>{''.join(f'<button class="chip chip-diet" data-diet="{k}"><span class="diet">{DIET[k][0]}</span>{l}</button>' for k, l in diets)}</div>
   </div>
+  <h2 class="sr-only">All recipes</h2>
   <p class="results-count" id="results-count"></p>
   <div class="recipe-grid" id="recipe-grid">{''.join(card(root, r, eager=i < 4) for i, r in enumerate(RECIPES))}</div>
   <div class="empty" id="empty"><p>No recipes match those filters yet.</p><button class="btn btn-outline" id="clear-filters">Clear filters</button></div>
@@ -364,7 +399,7 @@ def build_recipe(r):
     tagline = ' · '.join([r['category']] + (['Quick & Easy'] if 'quick' in r['tags'] else []) + (['Healthy'] if 'healthy' in r['tags'] else []) + (['Fall'] if 'fall' in r['tags'] else []))
     pin_url = f"https://www.pinterest.com/pin/create/button/?url={url}&media={SITE_URL}images/pins/{r['id']}.jpg&description={html.escape(r['title'] + ' | Bored of Toast')}"
     groups = ''.join(f'''<div class="ing-group"><h3>{e(g['group'])}</h3><ul class="ing-list">{''.join(f'<li><label><input type="checkbox"><span>{"<b>" + e(fmt_qty(i["q"]) + (" " + i["u"] if i["u"] else "")) + "</b> " if i.get("q") is not None else ""}{e(i["n"])}{f" <em>({e(i["note"])})</em>" if i.get("note") else ""}</span></label></li>' for i in g['items'])}</ul></div>''' for g in r['ingredients'])
-    steps = ''.join(f'''<li class="step" id="step-{k}"><div class="step-num" role="button" tabindex="0" aria-label="Mark step {k} done">{k}</div><div class="step-body"><h3>{e(s['t'])}</h3><p>{e(s['d'])}</p>{f'<figure class="step-img"><img src="{root}{s["img"]}" alt="{e(s["t"])}" loading="lazy" width="1200" height="800"></figure>' if s.get('img') else ''}{f'<div class="step-tip">{ICON["bulb"]}<div><strong>Tip:</strong> {e(s["tip"])}</div></div>' if s.get('tip') else ''}</div></li>''' for k, s in enumerate(r['steps'], 1))
+    steps = ''.join(f'''<li class="step" id="step-{k}"><div class="step-num" role="button" tabindex="0" aria-label="Mark step {k} done">{k}</div><div class="step-body"><h3>{e(s['t'])}</h3><p>{e(s['d'])}</p>{f'<figure class="step-img"><img src="{root}{s["img"]}" alt="{e(s["t"])}" loading="lazy" width="1200" height="800"{rimg(root, s["img"], SIZES["step"])}></figure>' if s.get('img') else ''}{f'<div class="step-tip">{ICON["bulb"]}<div><strong>Tip:</strong> {e(s["tip"])}</div></div>' if s.get('tip') else ''}</div></li>''' for k, s in enumerate(r['steps'], 1))
     video = f'<section class="reveal"><h2>Watch how it\'s made</h2><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(r["video"])}" title="{e(r["title"])} video" loading="lazy" allowfullscreen></iframe></div></section>' if r.get('video') else ''
     comments = ''
     if GISCUS:
@@ -392,7 +427,7 @@ def build_recipe(r):
       {credit(r['id'])}
     </div>
     <div class="hero-art">
-      <div class="arch"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="360" height="440" fetchpriority="high"></div>
+      <div class="arch"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="360" height="440" fetchpriority="high"{rimg(root, r['img'], SIZES['arch'])}></div>
       {stamp(root)}
       <img src="{root}images/whisk.svg" alt="" class="doodle whisk"><img src="{root}images/sparkle.svg" alt="" class="doodle sparkle"><img src="{root}images/chili.svg" alt="" class="doodle chili">
     </div>
@@ -500,7 +535,7 @@ def build_guide(g):
     <h1>{e(g['title'])}</h1><p class="hero-lead">{e(g['subtitle'])}</p>
   </div>{WAVE}
 </section>
-<div class="container guide-cover"><img src="{root}{img}" alt="{e(g['title'])}" width="1400" height="933" fetchpriority="high">{credit(GUIDE_IMG[g['id']])}</div>
+<div class="container guide-cover"><img src="{root}{img}" alt="{e(g['title'])}" width="1400" height="933" fetchpriority="high"{rimg(root, img, SIZES['cover'])}>{credit(GUIDE_IMG[g['id']])}</div>
 <div class="container section guide-layout">
   <article class="prose">
     <div class="lead">{''.join(f'<p>{e(p)}</p>' for p in g['intro'])}</div>
@@ -509,7 +544,7 @@ def build_guide(g):
     <section class="faq reveal"><h2>Questions</h2>{''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g.get('faq', []))}</section>
   </article>
   <aside class="sidebar"><div class="side-card side-toc"><h3>In this guide</h3>{toc}</div>
-    <div class="side-card"><h3>Put it into practice</h3>{''.join(f'<a class="mini-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]["img"]}" alt="" loading="lazy" width="64" height="64"><span><strong>{e(BY_ID[rid]["title"])}</strong><small>{fmt_time(BY_ID[rid]["time"])}</small></span></a>' for rid in GUIDE_RELATED[g['id']])}</div></aside>
+    <div class="side-card"><h3>Put it into practice</h3>{''.join(f'<a class="mini-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]["img"]}" alt="" loading="lazy" width="64" height="64"{rimg(root, BY_ID[rid]["img"], SIZES["mini"])}><span><strong>{e(BY_ID[rid]["title"])}</strong><small>{fmt_time(BY_ID[rid]["time"])}</small></span></a>' for rid in GUIDE_RELATED[g['id']])}</div></aside>
 </div>
 <section class="container related">{section_head('More kitchen basics', '', f'<a href="{root}guides/" class="view-all">All guides →</a>')}<div class="guide-grid">{''.join(guide_card(root, x) for x in GUIDES if x['id'] != g['id'])}</div></section>'''
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g['title'], "description": g['subtitle'], "image": SITE_URL + img,
@@ -527,7 +562,7 @@ BONUS = [('Saturday breakfast', 'buttermilk-pancakes'), ('Sunday treat', 'apple-
 def build_meal_plan():
     root = '../'
     days = ''.join(f'''<div class="plan-day reveal"><div class="plan-label"><span>{d[:3]}</span><small>{d}</small></div>
-  <a class="plan-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]['img']}" alt="{e(BY_ID[rid]['title'])}" loading="lazy" width="160" height="120">
+  <a class="plan-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]['img']}" alt="{e(BY_ID[rid]['title'])}" loading="lazy" width="160" height="120"{rimg(root, BY_ID[rid]['img'], SIZES['plan'])}>
   <div><span class="tag">{e(BY_ID[rid]['category'])}</span><h3>{e(BY_ID[rid]['title'])}</h3><div class="meta"><span>{ICON['clock']}{fmt_time(BY_ID[rid]['time'])}</span><span>{ICON['chef']}{BY_ID[rid]['level']}</span></div><p class="plan-tip">{ICON['bulb']} {e(tip)}</p></div></a></div>''' for d, rid, tip in PLAN)
     bonus = ''.join(card(root, BY_ID[rid]) for _, rid in BONUS)
     ids = [rid for _, rid, _ in PLAN]
@@ -571,12 +606,12 @@ def build_about():
     hero = hero_bleed(root, 'images/tomato-basil-soup.webp', 'About Bored of Toast', 'Our passion is<br><em>good food.</em>',
         "We believe great food doesn't have to be complicated. Bored of Toast is here to make everyday cooking easier, more enjoyable and a little more delicious.",
         f'<a href="#story" class="btn btn-yellow">Read our story {ICON["down"]}</a><a href="#contact" class="btn btn-ghost">Say hello</a>',
-        f'<a class="float-card" href="#story"><img src="{root}images/our-story.webp" alt=""><div><small>Our story</small><strong>It started with toast</strong><span>Read how it began →</span></div></a>', short=True)
+        f'<a class="float-card" href="#story"><img src="{root}images/our-story.webp" alt=""{rimg(root, "images/our-story.webp", SIZES["avatar"])}><div><small>Our story</small><strong>It started with toast</strong><span>Read how it began →</span></div></a>', short=True)
     vals = [('leaf', 'Real food', 'Fresh ingredients and real flavor, nothing overly processed.'), ('chef', 'Simple cooking', 'Clear steps and honest timing, so you are never left guessing.'),
             ('heart', 'Quality ingredients', 'Better ingredients make better meals, and they are easy to find.'), ('users', 'Everyday joy', 'Food brings people together. That is the best part.')]
     body = f'''{hero}
 <section class="container section" id="story"><div class="story">
-  <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="main" loading="lazy"><div class="note"><span class="hand">made with love ♥</span></div></div>
+  <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="main" loading="lazy"{rimg(root, 'images/our-story.webp', SIZES['story'])}><div class="note"><span class="hand">made with love ♥</span></div></div>
   <div class="reveal"><p class="tag">Our story</p><h2>It started with one<br>too many slices of toast.</h2>
     <p>Bored of Toast started with a simple idea: real food, made easy. We were tired of eating the same thing every night, so we started collecting the recipes that got us excited to cook again.</p>
     <p>What began as a small collection of favorites has grown into a place for home cooks, food lovers and anyone who believes that good food makes life better.</p>
@@ -585,7 +620,7 @@ def build_about():
 </div></section>
 <section class="section bg-paper"><div class="container">{section_head('What we believe in', 'Four simple ideas behind every recipe we share.')}
   <div class="values">{''.join(f'<div class="value reveal"><div class="icon-circle">{ICON[i]}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in vals)}</div></div></section>
-<section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we're here for every meal, big or small.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"></div></section>
+<section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we're here for every meal, big or small.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"{rimg(root, 'images/chicken-avocado-salad.webp', SIZES['cta'])}></div></section>
 <section class="container section" id="contact" style="padding-top:0"><div class="contact">
   <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? We read every message.</p>
     <ul class="contact-list"><li><span class="icon-circle">{ICON['box']}</span>{EMAIL}</li><li><span class="icon-circle">{ICON['instagram']}</span>{INSTAGRAM}</li></ul></div>
@@ -609,7 +644,7 @@ def build_credits():
         c = CREDITS.get(r['id'])
         if not c: continue
         link = f"{root}guides/{r['guide']}/" if r.get('guide') else f"{root}recipes/{r['id']}/"
-        rows.append(f'''<div class="credit-row"><img src="{root}{r['img']}" alt="" loading="lazy" width="72" height="72"><div><a href="{link}"><strong>{e(r['title'])}</strong></a><small>Photo by <a href="{e(c['photographer_url'])}" target="_blank" rel="noopener">{e(c['photographer'])}</a> · <a href="{e(c['photo_url'])}" target="_blank" rel="noopener">View on {c['source']}</a></small></div></div>''')
+        rows.append(f'''<div class="credit-row"><img src="{root}{r['img']}" alt="" loading="lazy" width="72" height="72"{rimg(root, r['img'], SIZES['credit'])}><div><a href="{link}"><strong>{e(r['title'])}</strong></a><small>Photo by <a href="{e(c['photographer_url'])}" target="_blank" rel="noopener">{e(c['photographer'])}</a> · <a href="{e(c['photo_url'])}" target="_blank" rel="noopener">View on {c['source']}</a></small></div></div>''')
     body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Thank you</p><h1>Photo credits</h1><p class="hero-lead">Our main recipe and guide photos come from talented photographers on <a href="https://www.pexels.com" target="_blank" rel="noopener" style="text-decoration:underline">Pexels</a>, shared under the free Pexels License. Step-by-step photos and pins are made by us.</p></div>{WAVE}</section>
 <section class="container section narrow"><div class="credit-list">{''.join(rows)}</div></section>'''
     page('photo-credits/', 'Photo Credits | Bored of Toast', 'Credits for the photographers whose work appears on Bored of Toast.', body, '', root)
@@ -628,9 +663,9 @@ def build_redirects():
     open(os.path.join(OUT, 'recipe.html'), 'w').write('''<!DOCTYPE html><meta charset="utf-8"><title>Redirecting…</title><meta name="robots" content="noindex"><script>var id=new URLSearchParams(location.search).get('id');location.replace(id?'recipes/'+encodeURIComponent(id)+'/':'recipes/');</script><noscript><meta http-equiv="refresh" content="0; url=recipes/"></noscript>''')
 
 def build_index_js():
-    items = [{'t': r['title'], 'u': f"recipes/{r['id']}/", 'i': r['img'], 'c': r['category'], 'm': fmt_time(r['time']), 'k': 'recipe',
+    items = [{'t': r['title'], 'u': f"recipes/{r['id']}/", 'i': thumb(r['img']), 'c': r['category'], 'm': fmt_time(r['time']), 'k': 'recipe',
               's': ' '.join([r['title'], r['category'], r['desc']] + r['tags'] + r.get('diet', []) + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()} for r in RECIPES]
-    items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': f"images/{GUIDE_IMG[g['id']]}.webp", 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
+    items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': thumb(f"images/{GUIDE_IMG[g['id']]}.webp"), 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
                's': (g['title'] + ' ' + g['subtitle'] + ' guide').lower()} for g in GUIDES]
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
