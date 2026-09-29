@@ -1,0 +1,30 @@
+name: Site checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Every page is generated from _src/. If someone edits a recipe or a template and forgets to
+      # regenerate, this fails and shows which files differ.
+      - name: Regenerate the site and compare with what is committed
+        run: |
+          mkdir -p _src/site
+          cp -r images _src/site/images
+          python3 _src/build.py
+          # sitemap.xml carries today's date as <lastmod>, so it always differs; images are inputs, not outputs.
+          diff -r -q _src/site . -x images -x _src -x .git -x .github -x README.md -x sitemap.xml \
+            || { echo "::error::Generated site differs from the committed files. Run: mkdir -p _src/site && cp -r images _src/site/images && python3 _src/build.py, then copy _src/site/* (except images) to the project root."; exit 1; }
+
+      - name: Site checks (links, SEO basics, structured data, fonts, image and page budgets)
+        run: python3 _src/checks.py
