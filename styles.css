@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap');
+/* Self-hosted fonts (latin subset, variable). Replaces the render-blocking Google Fonts @import. */
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/fraunces-normal.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 400 500; font-display: swap; src: url(fonts/fraunces-italic.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/inter.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/caveat.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
   --green: #3f5130;
@@ -6,6 +10,7 @@
   --green-soft: #56693f;
   --green-tint: #e6ead9;
   --yellow: #f2b431;
+  --gold: #a77710;
   --yellow-tint: #fcf0d2;
   --cream: #f7f2e7;
   --cream-2: #efe8d8;
@@ -29,7 +34,7 @@ button { font: inherit; cursor: pointer; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.12; }
 em { font-style: italic; }
-.hand { font-family: var(--hand); font-size: 1.5rem; color: var(--yellow); line-height: 1; }
+.hand { font-family: var(--hand); font-size: 1.5rem; color: var(--gold); line-height: 1; }
 
 /* ---------- Header ---------- */
 .site-header { background: var(--green); color: var(--cream); position: sticky; top: 0; z-index: 50; transition: box-shadow .2s ease; }
@@ -226,7 +231,7 @@ em { font-style: italic; }
 .scaler button:hover { background: var(--green); color: var(--cream); }
 .scaler span { min-width: 110px; text-align: center; font-size: .88rem; font-weight: 500; }
 .ing-note { font-size: .82rem; color: var(--muted); margin-bottom: 18px; }
-.ing-group h4 { font-family: var(--sans); font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green-soft); margin: 22px 0 8px; }
+.ing-group h3 { font-family: var(--sans); font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--green-soft); margin: 22px 0 8px; }
 .ing-list { list-style: none; }
 .ing-list li { border-bottom: 1px dashed var(--line); }
 .ing-list li:last-child { border-bottom: 0; }
@@ -326,7 +331,7 @@ textarea { min-height: 130px; resize: vertical; }
 .site-footer { background: var(--green-dark); color: var(--cream); margin-top: 80px; position: relative; overflow: hidden; }
 .site-footer::before { content: ''; position: absolute; inset: 0; background: url('images/pattern.svg'); background-size: 320px; }
 .footer-grid { position: relative; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.3fr; gap: 40px; padding: 56px 0 36px; }
-.footer-grid h4 { font-family: var(--sans); font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; opacity: .6; margin-bottom: 16px; font-weight: 600; }
+.footer-grid .fh { line-height: 1.12; font-family: var(--sans); font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; opacity: .6; margin-bottom: 16px; font-weight: 600; }
 .footer-grid ul { list-style: none; display: grid; gap: 10px; font-size: .92rem; }
 .footer-grid ul a { opacity: .85; }
 .footer-grid ul a:hover { opacity: 1; color: var(--yellow); }
@@ -344,8 +349,8 @@ textarea { min-height: 130px; resize: vertical; }
 .to-top:hover { transform: translateY(-3px); }
 
 /* Reveal */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.visible, .js-fallback .reveal { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
@@ -451,7 +456,7 @@ textarea { min-height: 130px; resize: vertical; }
   .recipe-layout { grid-template-columns: 1fr; }
   .callout { background: #fff; color: #000; border: 1px solid #ccc; }
   .callout h2 { color: #000; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal, .js .reveal { opacity: 1; transform: none; }
 }
 
 
@@ -461,7 +466,7 @@ textarea { min-height: 130px; resize: vertical; }
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .25s; }
 main { animation: pageIn .45s ease both; }
-@keyframes pageIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes pageIn { from { transform: translateY(6px); } to { transform: none; } }
 
 /* Header tools */
 .site-header .container { gap: 20px; }
@@ -474,8 +479,8 @@ main { animation: pageIn .45s ease both; }
 .menu-toggle { display: none; }
 
 /* Image fade-in */
-.js .card-img img, .js .guide-img img, .js .arch img { opacity: 0; transition: opacity .5s ease, transform .5s ease; }
-.js .card-img img.loaded, .js .guide-img img.loaded, .js .arch img.loaded { opacity: 1; }
+.js .card-img img, .js .guide-img img { opacity: 0; transition: opacity .5s ease, transform .5s ease; }
+.js .card-img img.loaded, .js .guide-img img.loaded { opacity: 1; }
 .card-img, .guide-img, .arch { background: var(--cream-2); }
 
 /* Diet badges */
@@ -534,7 +539,7 @@ main { animation: pageIn .45s ease both; }
 .prose-list li { position: relative; padding-left: 26px; line-height: 1.7; color: #45433a; }
 .prose-list li::before { content: ''; position: absolute; left: 4px; top: 10px; width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); }
 .takeaways { background: var(--green); color: var(--cream); border-radius: 20px; padding: 26px 28px; margin: 26px 0; }
-.takeaways h3 { font-size: 1.3rem; margin-bottom: 14px; }
+.takeaways h2 { font-size: 1.3rem; margin: 0 0 14px; }
 .takeaways ul { list-style: none; display: grid; gap: 10px; }
 .takeaways li { display: flex; gap: 10px; align-items: flex-start; }
 .takeaways svg { color: var(--yellow); flex-shrink: 0; margin-top: 3px; }
@@ -710,3 +715,16 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
 .credit-row strong { font-family: var(--serif); font-weight: 500; font-size: 1.05rem; }
 .credit-row small { display: block; color: var(--muted); }
 .credit-row small a { text-decoration: underline; }
+
+
+/* ---------- Accessibility ---------- */
+.skip-link { position: absolute; left: 12px; top: -60px; z-index: 1000; background: var(--green-dark); color: #fff; padding: 10px 16px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: top .15s ease; }
+.skip-link:focus { top: 12px; outline: 3px solid var(--yellow); outline-offset: 2px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible, [tabindex]:focus-visible, input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--green-dark); outline-offset: 3px; box-shadow: 0 0 0 3px #fff !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js .reveal { opacity: 1; transform: none; }
+  .marquee-track { animation: none; }
+}
