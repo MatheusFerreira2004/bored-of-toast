@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matheusferreira2004.github.io/bored-of-toast/sitemap.xml

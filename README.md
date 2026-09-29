@@ -1,14 +1,16 @@
-# Bored of Toast 🍞
+# Bored of Toast
 
-Good food without the fuss. A simple recipe website for everyday home cooks.
+Good food without the fuss. Live site: https://matheusferreira2004.github.io/bored-of-toast/
 
-## Pages
-- `index.html`: Home (hero, categories, featured recipes)
-- `recipes.html`: Recipe library with search, category filters and full recipe view
-- `about.html`: Our story, values and contact form
+## How this site is built
+The pages are generated from content files by a small Python script, so every recipe has its own fast, SEO-friendly page.
 
-## Editing recipes
-All recipes live in the `RECIPES` array at the top of `app.js`. Add a new object with a title, category, image, time, ingredients and steps, and it will show up automatically.
+- `_src/recipes.json`: all recipes (ingredients, steps, tips, nutrition, notes)
+- `_src/guides_legal.json`: kitchen guides, privacy policy and terms
+- `_src/build.py`: the generator (pages, Recipe schema for Google, sitemap, search index)
+- `_src/styles.css`, `_src/app.js`: design and interactive features
 
-## Publishing
-This is a static site with no build step. To publish on GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
+To add a recipe: add an object to `recipes.json`, add its photo to `images/<id>.webp`, then run `python3 _src/build.py` from a copy of the project.
+
+## Features
+Recipe pages with servings scaler, US/metric toggle, cook mode (keeps screen awake), shopping list, step photos, Pinterest pins, print view, search, diet badges, weekly meal plan, guides and a sitemap.

@@ -1,0 +1,3821 @@
+[
+ {
+  "id": "chicken-avocado-salad",
+  "title": "Grilled Chicken Avocado Salad",
+  "subtitle": "Smoky, juicy chicken over peppery greens with creamy avocado and a bright honey-lemon dressing.",
+  "category": "Salads",
+  "tags": [
+   "quick",
+   "healthy"
+  ],
+  "prep": 10,
+  "cook": 15,
+  "serves": 2,
+  "level": "Easy",
+  "desc": "Juicy chicken, creamy avocado and peppery greens.",
+  "intro": [
+   "This is the salad we make when we want something fresh but still want to feel full an hour later. The chicken gets a quick smoky rub and a hard sear, so it stays juicy inside with a golden crust outside.",
+   "Everything else comes together while the chicken rests: a handful of greens, sweet cherry tomatoes, ripe avocado and a three-ingredient dressing you will want to put on everything."
+  ],
+  "why": [
+   [
+    "Ready in 25 minutes",
+    "Faster than delivery and far more satisfying."
+   ],
+   [
+    "High in protein",
+    "About 40 g per serving to keep you full."
+   ],
+   [
+    "Meal-prep friendly",
+    "Cook the chicken ahead and assemble in minutes."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the chicken",
+    "items": [
+     {
+      "q": 2,
+      "u": "",
+      "n": "boneless, skinless chicken breasts",
+      "note": "about 1 lb / 450 g"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "smoked paprika"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "garlic powder"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "olive oil"
+     }
+    ]
+   },
+   {
+    "group": "For the dressing",
+    "items": [
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "extra-virgin olive oil"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "fresh lemon juice"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "honey"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and black pepper",
+      "note": "to taste"
+     }
+    ]
+   },
+   {
+    "group": "For the salad",
+    "items": [
+     {
+      "q": 4,
+      "u": "cups",
+      "n": "arugula and mixed greens",
+      "g": 80
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "cherry tomatoes",
+      "note": "halved",
+      "g": 150
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "ripe avocado",
+      "note": "sliced"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "sesame seeds",
+      "note": "toasted"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Season the chicken",
+    "d": "Pat the chicken dry with paper towels. If one end is much thicker, pound it to an even \u00be-inch thickness. Rub with olive oil, then season all over with smoked paprika, garlic powder and salt.",
+    "tip": "Even thickness means the chicken cooks evenly, with no dry edges and raw centers."
+   },
+   {
+    "t": "Sear until golden",
+    "d": "Heat a grill pan or skillet over medium-high heat. Cook the chicken for 5\u20136 minutes per side, without moving it, until deeply golden and the thickest part reaches 165\u00b0F (74\u00b0C)."
+   },
+   {
+    "t": "Let it rest",
+    "d": "Move the chicken to a cutting board and rest for 5 minutes before slicing against the grain. This keeps the juices inside the meat instead of on the board."
+   },
+   {
+    "t": "Shake the dressing",
+    "d": "Add the olive oil, lemon juice, honey, a pinch of salt and pepper to a small jar. Close and shake until creamy and emulsified."
+   },
+   {
+    "t": "Assemble and serve",
+    "d": "Toss the greens and tomatoes with half of the dressing and divide between two bowls. Top with sliced chicken and avocado, drizzle with the remaining dressing and finish with sesame seeds."
+   }
+  ],
+  "tips": [
+   "Slice the avocado at the very last minute and squeeze a little lemon over it so it stays bright green.",
+   "No grill pan? A cast-iron skillet gives you an even better crust.",
+   "Warm chicken over cold greens is part of the magic. Assemble just before eating."
+  ],
+  "storage": "Store the chicken, greens and dressing separately in the fridge for up to 3 days. Slice the avocado fresh each time.",
+  "variations": [
+   [
+    "Make it vegetarian",
+    "Swap the chicken for crispy roasted chickpeas or grilled halloumi."
+   ],
+   [
+    "Add some crunch",
+    "Toss in toasted almonds, pumpkin seeds or crushed tortilla chips."
+   ],
+   [
+    "Turn it into a wrap",
+    "Roll everything into a large tortilla for a lunch you can take anywhere."
+   ]
+  ],
+  "nutrition": {
+   "calories": 520,
+   "protein": 42,
+   "carbs": 14,
+   "fat": 34,
+   "fiber": 8
+  },
+  "faq": [
+   [
+    "Can I use chicken thighs?",
+    "Yes. Boneless thighs are even juicier. Cook them for 6\u20137 minutes per side."
+   ],
+   [
+    "Can I make the dressing ahead?",
+    "Absolutely. It keeps in the fridge for up to a week. Shake again before using."
+   ]
+  ],
+  "note": "This is our default \"we should eat something green\" dinner. We keep a jar of the dressing in the fridge door all week, and it makes even a sad desk lunch feel like a treat.",
+  "diet": [
+   "gluten-free",
+   "dairy-free"
+  ],
+  "img": "images/chicken-avocado-salad.webp",
+  "time": 25
+ },
+ {
+  "id": "creamy-garlic-pasta",
+  "title": "Creamy Garlic Pasta",
+  "subtitle": "Silky Parmesan cream sauce, two kinds of garlic and just one pan. Comfort food in 20 minutes.",
+  "category": "Main Dishes",
+  "tags": [
+   "quick"
+  ],
+  "prep": 5,
+  "cook": 15,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Rich, comforting and ready in 20 minutes.",
+  "intro": [
+   "Some nights you need a big bowl of pasta, and you need it fast. This one is built on pantry staples and gets its depth from using garlic two ways: minced for bold flavor and thinly sliced for sweet, golden bites.",
+   "The secret to a sauce that is glossy instead of greasy is starchy pasta water. It helps the cream and cheese cling to every strand."
+  ],
+  "why": [
+   [
+    "20 minutes, start to finish",
+    "The sauce cooks while the pasta boils."
+   ],
+   [
+    "Pantry ingredients",
+    "Pasta, garlic, butter, cream and cheese."
+   ],
+   [
+    "Crowd-pleaser",
+    "Kids and adults both go back for seconds."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the pasta",
+    "items": [
+     {
+      "q": 12,
+      "u": "oz",
+      "n": "fettuccine",
+      "note": "340 g, or any long pasta"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "kosher salt",
+      "note": "for the pasta water"
+     }
+    ]
+   },
+   {
+    "group": "For the sauce",
+    "items": [
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "unsalted butter"
+     },
+     {
+      "q": 6,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "3 minced, 3 thinly sliced"
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "heavy cream"
+     },
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "Parmesan",
+      "note": "finely grated, plus more to serve",
+      "g": 60
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "reserved pasta water"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "black pepper and fresh parsley",
+      "note": "to finish"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Boil the pasta",
+    "d": "Bring a large pot of water to a boil and add the salt. Cook the fettuccine 1 minute less than the package says. Before draining, scoop out 1 cup of the cooking water.",
+    "tip": "The water should taste like the sea. This is your only chance to season the pasta itself."
+   },
+   {
+    "t": "Toast the garlic",
+    "d": "While the pasta cooks, melt the butter in a large skillet over medium-low heat. Add the sliced and minced garlic and cook for 2\u20133 minutes, stirring, until fragrant and just turning golden."
+   },
+   {
+    "t": "Build the sauce",
+    "d": "Pour in the cream and bring to a gentle simmer. Let it bubble softly for 3 minutes to thicken slightly.",
+    "img": "images/step-pasta-sauce.webp"
+   },
+   {
+    "t": "Melt in the cheese",
+    "d": "Turn the heat to low and stir in the Parmesan a handful at a time until smooth. Keeping the heat low stops the cheese from turning grainy."
+   },
+   {
+    "t": "Toss and loosen",
+    "d": "Add the pasta to the skillet with \u00bd cup of pasta water. Toss with tongs for 1\u20132 minutes until the sauce is glossy and coats every strand. Add more water if it looks thick."
+   },
+   {
+    "t": "Finish and serve",
+    "d": "Season generously with black pepper, taste for salt and top with parsley and extra Parmesan. Serve right away."
+   }
+  ],
+  "tips": [
+   "Grate your own Parmesan. Pre-shredded cheese has anti-caking agents that keep it from melting smoothly.",
+   "Do not let the garlic brown too much. It turns bitter in seconds.",
+   "The sauce thickens as it sits, so keep some pasta water nearby."
+  ],
+  "storage": "Keep leftovers in an airtight container in the fridge for up to 2 days. Reheat gently in a pan with a splash of milk or water, stirring until creamy again.",
+  "variations": [
+   [
+    "Add protein",
+    "Top with grilled chicken, saut\u00e9ed shrimp or crispy pancetta."
+   ],
+   [
+    "Add greens",
+    "Stir in two handfuls of baby spinach right at the end."
+   ],
+   [
+    "Lemon twist",
+    "Add the zest of one lemon for a brighter, lighter sauce."
+   ]
+  ],
+  "nutrition": {
+   "calories": 640,
+   "protein": 20,
+   "carbs": 66,
+   "fat": 33,
+   "fiber": 3
+  },
+  "faq": [
+   [
+    "Can I use milk instead of cream?",
+    "Whole milk works, but the sauce will be thinner. Stir 1 tsp of cornstarch into the cold milk first to help it thicken."
+   ],
+   [
+    "Which pasta works best?",
+    "Long, flat shapes like fettuccine or linguine hold creamy sauces best, but penne works too."
+   ]
+  ],
+  "note": "This recipe was born on a night when the fridge held nothing but butter, cream and a very old wedge of Parmesan. It has since become the dish we make whenever someone has had a long day.",
+  "diet": [
+   "vegetarian"
+  ],
+  "img": "images/creamy-garlic-pasta.webp",
+  "time": 20
+ },
+ {
+  "id": "sheet-pan-salmon",
+  "title": "Honey Dijon Sheet Pan Salmon",
+  "subtitle": "Tender, flaky salmon under a sticky honey-mustard glaze, roasted with lemon and fresh herbs.",
+  "category": "Main Dishes",
+  "tags": [
+   "healthy",
+   "quick"
+  ],
+  "prep": 10,
+  "cook": 15,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Fresh, healthy and full of flavor.",
+  "intro": [
+   "If cooking fish at home feels intimidating, start here. Roasting on a sheet pan is the most forgiving method there is: no flipping, no sticking and no fishy smell filling the kitchen.",
+   "A quick glaze of honey, Dijon and garlic caramelizes in the oven, while lemon slices and herbs steam on top and keep the salmon incredibly moist."
+  ],
+  "why": [
+   [
+    "Weeknight-easy",
+    "10 minutes of prep, then the oven does the work."
+   ],
+   [
+    "Good for you",
+    "Packed with omega-3s and lean protein."
+   ],
+   [
+    "One pan to wash",
+    "Line it with parchment and cleanup is done."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the salmon",
+    "items": [
+     {
+      "q": 4,
+      "u": "",
+      "n": "salmon fillets",
+      "note": "about 6 oz / 170 g each, skin on or off"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "lemon",
+      "note": "thinly sliced"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "fresh thyme and dill sprigs"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and black pepper"
+     }
+    ]
+   },
+   {
+    "group": "For the glaze",
+    "items": [
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "honey"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "Dijon mustard"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "minced"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Heat the oven",
+    "d": "Preheat the oven to 400\u00b0F (200\u00b0C) and line a sheet pan with parchment paper."
+   },
+   {
+    "t": "Season the fillets",
+    "d": "Pat the salmon dry and place it on the pan with a little space between each piece. Season with salt and pepper.",
+    "tip": "Take the salmon out of the fridge 15 minutes before cooking so it roasts more evenly."
+   },
+   {
+    "t": "Glaze",
+    "d": "Whisk the olive oil, honey, Dijon and garlic in a small bowl. Brush it generously over the top and sides of each fillet."
+   },
+   {
+    "t": "Top and roast",
+    "d": "Lay lemon slices and herb sprigs over the salmon. Roast for 12\u201315 minutes, until the thickest part flakes easily and reaches 125\u2013130\u00b0F (52\u201354\u00b0C) for medium."
+   },
+   {
+    "t": "Rest and serve",
+    "d": "Let it sit for 2 minutes, then spoon any glaze from the pan over the top. Serve with rice, roasted vegetables or a green salad."
+   }
+  ],
+  "tips": [
+   "For a caramelized top, switch to broil for the last 1\u20132 minutes and watch closely.",
+   "Thinner fillets cook faster. Start checking at 10 minutes.",
+   "Add asparagus or green beans to the same pan for a complete meal."
+  ],
+  "storage": "Refrigerate leftovers for up to 2 days. Enjoy cold over salad or reheat at 275\u00b0F (135\u00b0C) for 10 minutes so the fish does not dry out.",
+  "variations": [
+   [
+    "Spicy",
+    "Add 1 tsp sriracha or red pepper flakes to the glaze."
+   ],
+   [
+    "Asian-style",
+    "Use soy sauce, ginger and sesame oil instead of Dijon."
+   ],
+   [
+    "Maple",
+    "Swap the honey for maple syrup for a deeper sweetness."
+   ]
+  ],
+  "nutrition": {
+   "calories": 380,
+   "protein": 34,
+   "carbs": 10,
+   "fat": 22,
+   "fiber": 0
+  },
+  "faq": [
+   [
+    "Can I use frozen salmon?",
+    "Yes. Thaw it overnight in the fridge and pat it very dry before glazing."
+   ],
+   [
+    "Should I remove the skin?",
+    "No need. It peels right off after roasting, and it keeps the fish extra moist."
+   ]
+  ],
+  "note": "The first time we made this, a friend who swore she hated fish asked for the recipe. We now make it on Sunday nights and pack the leftovers over greens for Monday lunch.",
+  "diet": [
+   "gluten-free",
+   "dairy-free"
+  ],
+  "img": "images/sheet-pan-salmon.webp",
+  "time": 25
+ },
+ {
+  "id": "mediterranean-grain-bowl",
+  "title": "Mediterranean Grain Bowl",
+  "subtitle": "Fluffy quinoa, crispy spiced chickpeas, crunchy vegetables and feta with a zesty lemon dressing.",
+  "category": "Salads",
+  "tags": [
+   "healthy"
+  ],
+  "prep": 15,
+  "cook": 20,
+  "serves": 4,
+  "level": "Medium",
+  "desc": "Colorful, fresh and satisfying.",
+  "intro": [
+   "This bowl is all about contrast: warm quinoa and cool cucumber, crispy chickpeas and creamy feta, salty olives and a squeeze of lemon. Every bite is a little different.",
+   "It is naturally vegetarian, keeps well in the fridge and tastes even better the next day, which makes it our favorite recipe for weekday lunches."
+  ],
+  "why": [
+   [
+    "Plant-powered",
+    "About 18 g of plant protein and plenty of fiber."
+   ],
+   [
+    "Better the next day",
+    "Perfect for Sunday meal prep."
+   ],
+   [
+    "Fully customizable",
+    "Use whatever vegetables you have on hand."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the base",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "quinoa",
+      "note": "rinsed well",
+      "g": 170
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "water or vegetable broth"
+     }
+    ]
+   },
+   {
+    "group": "For the crispy chickpeas",
+    "items": [
+     {
+      "q": 1,
+      "u": "can",
+      "n": "chickpeas",
+      "note": "15 oz / 425 g, drained and dried"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "ground cumin"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "smoked paprika"
+     }
+    ]
+   },
+   {
+    "group": "For the bowl",
+    "items": [
+     {
+      "q": 1,
+      "u": "",
+      "n": "English cucumber",
+      "note": "diced"
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "cherry tomatoes",
+      "note": "halved",
+      "g": 150
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "n": "red onion",
+      "note": "thinly sliced"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "Kalamata olives",
+      "g": 70
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "crumbled feta",
+      "g": 75
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "fresh parsley",
+      "note": "chopped"
+     }
+    ]
+   },
+   {
+    "group": "For the dressing",
+    "items": [
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "extra-virgin olive oil"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "lemon juice"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "dried oregano"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Roast the chickpeas",
+    "d": "Heat the oven to 425\u00b0F (220\u00b0C). Toss the dried chickpeas with olive oil, cumin, paprika and a pinch of salt. Roast on a sheet pan for 20\u201325 minutes, shaking halfway, until crisp.",
+    "tip": "Dry the chickpeas very well with a towel. Moisture is the enemy of crunch."
+   },
+   {
+    "t": "Cook the quinoa",
+    "d": "Bring the quinoa and water to a boil, then cover and simmer on low for 15 minutes. Turn off the heat and leave it covered for 5 minutes, then fluff with a fork."
+   },
+   {
+    "t": "Prep the vegetables",
+    "d": "While everything cooks, dice the cucumber, halve the tomatoes and thinly slice the onion. Soak the onion in cold water for 5 minutes to soften its bite."
+   },
+   {
+    "t": "Make the dressing",
+    "d": "Whisk the olive oil, lemon juice, oregano, salt and pepper until combined."
+   },
+   {
+    "t": "Build the bowls",
+    "d": "Divide the quinoa into bowls and arrange the vegetables, olives and chickpeas in sections on top. Sprinkle with feta and parsley, then drizzle with dressing."
+   }
+  ],
+  "tips": [
+   "Rinse the quinoa before cooking to remove its natural bitter coating.",
+   "Add a spoonful of hummus to each bowl for extra creaminess.",
+   "Add the chickpeas just before eating so they stay crunchy."
+  ],
+  "storage": "Store assembled bowls, without dressing or chickpeas, for up to 4 days. Keep the chickpeas in an open container at room temperature so they stay crisp.",
+  "variations": [
+   [
+    "Swap the grain",
+    "Try farro, bulgur, couscous or brown rice."
+   ],
+   [
+    "Add protein",
+    "Top with grilled chicken, falafel or a jammy boiled egg."
+   ],
+   [
+    "Make it vegan",
+    "Skip the feta and add avocado or a tahini drizzle."
+   ]
+  ],
+  "nutrition": {
+   "calories": 470,
+   "protein": 16,
+   "carbs": 52,
+   "fat": 23,
+   "fiber": 11
+  },
+  "faq": [
+   [
+    "Is this gluten-free?",
+    "Yes, as written. Just check that your broth is certified gluten-free."
+   ],
+   [
+    "Can I serve it warm?",
+    "Definitely. Warm quinoa with cold toppings is delicious."
+   ]
+  ],
+  "note": "We make a big batch of this every Sunday and it carries us through the week. The crispy chickpeas rarely survive past Tuesday, because we keep snacking on them straight from the pan.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/mediterranean-grain-bowl.webp",
+  "time": 35
+ },
+ {
+  "id": "tomato-basil-soup",
+  "title": "Creamy Tomato Basil Soup",
+  "subtitle": "Velvety, deeply flavorful tomato soup finished with fresh basil and a swirl of cream.",
+  "category": "Soups",
+  "tags": [
+   "healthy",
+   "fall"
+  ],
+  "prep": 10,
+  "cook": 25,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Simple, flavorful and cozy.",
+  "intro": [
+   "This is tomato soup the way it should taste: rich, a little sweet, a little tangy and so much better than the canned kind. Good canned whole tomatoes are the key. They taste like summer all year long.",
+   "Serve it with a grilled cheese or a slice of crusty bread for dunking, and you have the coziest dinner of the week."
+  ],
+  "why": [
+   [
+    "Made with pantry staples",
+    "Canned tomatoes, onion, garlic and broth."
+   ],
+   [
+    "Freezer-friendly",
+    "Make a double batch for busy weeks."
+   ],
+   [
+    "Easy to make vegan",
+    "Use coconut cream instead of dairy."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the soup",
+    "items": [
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "yellow onion",
+      "note": "chopped"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "minced"
+     },
+     {
+      "q": 2,
+      "u": "cans",
+      "n": "whole peeled tomatoes",
+      "note": "28 oz / 800 g each"
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "vegetable broth"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "sugar",
+      "note": "balances the acidity"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "fresh basil leaves",
+      "note": "packed",
+      "g": 20
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "q": 0.33,
+      "u": "cup",
+      "n": "heavy cream",
+      "note": "plus extra to swirl"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and black pepper",
+      "note": "to taste"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "crusty bread",
+      "note": "to serve"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Soften the aromatics",
+    "d": "Heat the olive oil in a large pot over medium heat. Add the onion with a pinch of salt and cook for 6\u20138 minutes, until soft and translucent. Add the garlic and cook for 1 minute more."
+   },
+   {
+    "t": "Simmer",
+    "d": "Add the tomatoes with their juices, crushing them with a spoon. Stir in the broth and sugar, bring to a boil, then simmer uncovered for 15 minutes.",
+    "tip": "Simmering uncovered concentrates the flavor and lets the soup thicken naturally."
+   },
+   {
+    "t": "Blend until silky",
+    "d": "Add the basil and blend with an immersion blender until completely smooth. If using a regular blender, work in batches and leave the lid vent open so steam can escape."
+   },
+   {
+    "t": "Add the cream",
+    "d": "Return the pot to low heat and stir in the cream. Taste and season with salt and pepper."
+   },
+   {
+    "t": "Serve",
+    "d": "Ladle into bowls, swirl in a little extra cream and top with torn basil and cracked pepper. Serve hot with crusty bread."
+   }
+  ],
+  "tips": [
+   "San Marzano tomatoes give the sweetest, least acidic result.",
+   "A Parmesan rind added during simmering brings incredible savory depth. Remove it before blending.",
+   "Too thick? Add broth. Too thin? Simmer a few more minutes."
+  ],
+  "storage": "Refrigerate for up to 5 days or freeze for up to 3 months. For best texture, freeze before adding the cream and stir it in when reheating.",
+  "variations": [
+   [
+    "Roasted red pepper",
+    "Blend in a jar of roasted red peppers for a smoky twist."
+   ],
+   [
+    "Vegan",
+    "Use coconut cream or blended soaked cashews."
+   ],
+   [
+    "Spicy",
+    "Add a pinch of chili flakes with the garlic."
+   ]
+  ],
+  "nutrition": {
+   "calories": 210,
+   "protein": 4,
+   "carbs": 20,
+   "fat": 14,
+   "fiber": 5
+  },
+  "faq": [
+   [
+    "Can I use fresh tomatoes?",
+    "Yes. Use about 3 lb (1.4 kg) of ripe tomatoes, roasted first for the deepest flavor."
+   ],
+   [
+    "Why add sugar?",
+    "Just a little balances the natural acidity of the tomatoes. You will not taste sweetness."
+   ]
+  ],
+  "note": "On the first cold, rainy evening of the year, this soup goes on the stove without anyone asking. A grilled cheese on the side is not optional in our house.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/tomato-basil-soup.webp",
+  "time": 35
+ },
+ {
+  "id": "beef-tacos",
+  "title": "Weeknight Beef Tacos",
+  "subtitle": "Saucy homemade taco meat with a from-scratch spice blend, fresh pico de gallo and all the toppings.",
+  "category": "Main Dishes",
+  "tags": [
+   "quick"
+  ],
+  "prep": 10,
+  "cook": 15,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Bold flavors, easy to make.",
+  "intro": [
+   "Taco night is a tradition for a reason: everyone builds their own, and dinner feels like a party. Our homemade spice blend takes one minute to mix and has way more flavor, and less salt, than the packets.",
+   "A splash of water at the end turns the spices into a light sauce, so the meat is juicy and never dry."
+  ],
+  "why": [
+   [
+    "Ready in 25 minutes",
+    "Perfect for busy weeknights."
+   ],
+   [
+    "Homemade seasoning",
+    "Six spices you probably already have."
+   ],
+   [
+    "Fun for everyone",
+    "Set out the toppings and let people build their own."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the taco meat",
+    "items": [
+     {
+      "q": 1,
+      "u": "lb",
+      "n": "ground beef",
+      "note": "450 g, 85% lean"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "chili powder"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "ground cumin"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "smoked paprika"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "garlic powder"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "dried oregano"
+     },
+     {
+      "q": 0.75,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "water"
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "q": 8,
+      "u": "",
+      "n": "taco shells or small tortillas"
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "shredded lettuce",
+      "g": 100
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "pico de gallo",
+      "g": 240
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "shredded cheddar",
+      "g": 110
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "lime wedges, cilantro and sour cream"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Mix the spices",
+    "d": "Stir together the chili powder, cumin, paprika, garlic powder, oregano and salt in a small bowl."
+   },
+   {
+    "t": "Brown the beef",
+    "d": "Heat a large skillet over medium-high heat. Add the beef and cook for 6\u20138 minutes, breaking it into small crumbles, until browned with some crispy bits. Drain any excess fat.",
+    "tip": "Leave the meat alone for a minute or two between stirs. That is how you get flavorful browned edges."
+   },
+   {
+    "t": "Season and simmer",
+    "d": "Sprinkle the spice mix over the beef and stir for 30 seconds until fragrant. Add the water and simmer for 3\u20135 minutes, until the liquid thickens and coats the meat."
+   },
+   {
+    "t": "Warm the shells",
+    "d": "Warm taco shells in a 350\u00b0F (175\u00b0C) oven for 3\u20134 minutes, or heat tortillas in a dry skillet for 20 seconds per side."
+   },
+   {
+    "t": "Build your tacos",
+    "d": "Fill each shell with beef, then top with lettuce, pico de gallo, cheese, cilantro and a squeeze of lime."
+   }
+  ],
+  "tips": [
+   "Make a big batch of the spice blend and keep it in a jar for next time.",
+   "Leftover taco meat makes a great nacho topping or burrito bowl.",
+   "For extra richness, stir in 1 tbsp tomato paste with the spices."
+  ],
+  "storage": "Refrigerate cooked taco meat for up to 4 days or freeze for up to 3 months. Reheat in a skillet with a splash of water.",
+  "variations": [
+   [
+    "Turkey or chicken",
+    "Ground turkey or chicken works perfectly with the same spices."
+   ],
+   [
+    "Vegetarian",
+    "Use black beans and diced sweet potato instead of beef."
+   ],
+   [
+    "Bowl style",
+    "Serve over rice with beans, corn and avocado."
+   ]
+  ],
+  "nutrition": {
+   "calories": 480,
+   "protein": 28,
+   "carbs": 26,
+   "fat": 29,
+   "fiber": 4
+  },
+  "faq": [
+   [
+    "Hard or soft shells?",
+    "Both work. Soft corn tortillas are the most traditional choice."
+   ],
+   [
+    "How spicy is it?",
+    "Mild and family-friendly. Add cayenne or jalape\u00f1os for heat."
+   ]
+  ],
+  "note": "Taco Tuesday is a real rule in our kitchen. We once tried to skip it, and there was a small revolt, so now we double the spice mix and keep a jar ready.",
+  "diet": [
+   "gluten-free"
+  ],
+  "img": "images/beef-tacos.webp",
+  "time": 25
+ },
+ {
+  "id": "chocolate-chip-cookies",
+  "title": "Chewy Chocolate Chip Cookies",
+  "subtitle": "Crisp golden edges, soft chewy centers and pools of melted chocolate with a touch of sea salt.",
+  "category": "Desserts",
+  "tags": [
+   "quick"
+  ],
+  "prep": 15,
+  "cook": 12,
+  "serves": 24,
+  "servesLabel": "cookies",
+  "level": "Easy",
+  "desc": "Soft, chewy and classic.",
+  "intro": [
+   "After many (delicious) test batches, this is our forever chocolate chip cookie. Melted butter and extra brown sugar give it the chewiness, and chopped chocolate instead of chips creates those irresistible melty pools.",
+   "No mixer, no chilling required, just one bowl and a spoon. Although if you can wait, an overnight rest in the fridge makes them even better."
+  ],
+  "why": [
+   [
+    "One bowl, no mixer",
+    "Minimal dishes and maximum reward."
+   ],
+   [
+    "Chewy every time",
+    "Melted butter plus brown sugar is the secret."
+   ],
+   [
+    "Freezer-friendly dough",
+    "Bake fresh cookies whenever you want."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "Wet ingredients",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "unsalted butter",
+      "note": "225 g, melted and slightly cooled",
+      "g": 225
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "packed brown sugar",
+      "g": 220
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "granulated sugar",
+      "g": 100
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "large eggs",
+      "note": "room temperature"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "n": "vanilla extract"
+     }
+    ]
+   },
+   {
+    "group": "Dry ingredients",
+    "items": [
+     {
+      "q": 3,
+      "u": "cups",
+      "n": "all-purpose flour",
+      "note": "375 g, spooned and leveled",
+      "g": 375
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "baking soda"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "fine salt"
+     }
+    ]
+   },
+   {
+    "group": "Mix-ins",
+    "items": [
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "chopped dark chocolate or chunks",
+      "g": 340
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "flaky sea salt",
+      "note": "to finish"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Preheat",
+    "d": "Heat the oven to 350\u00b0F (175\u00b0C) and line two baking sheets with parchment paper."
+   },
+   {
+    "t": "Mix the wet ingredients",
+    "d": "Whisk the melted butter with both sugars for about 1 minute, until smooth and glossy. Add the eggs and vanilla and whisk until lighter in color."
+   },
+   {
+    "t": "Add the dry ingredients",
+    "d": "Add the flour, baking soda and salt. Stir with a spatula until just combined and no dry streaks remain, then fold in the chocolate.",
+    "tip": "Stop mixing as soon as the flour disappears. Overmixing makes cookies tough.",
+    "img": "images/step-cookies-dough.webp"
+   },
+   {
+    "t": "Scoop",
+    "d": "Scoop 2-tablespoon balls of dough onto the sheets, leaving 2 inches (5 cm) between them. For the best texture, chill the scooped dough for 30 minutes or up to 24 hours."
+   },
+   {
+    "t": "Bake",
+    "d": "Bake one sheet at a time for 10\u201312 minutes, until the edges are golden but the centers still look slightly underdone."
+   },
+   {
+    "t": "Finish and cool",
+    "d": "Sprinkle with flaky salt right away. Cool on the pan for 5 minutes, which lets the centers set, then move to a wire rack."
+   }
+  ],
+  "tips": [
+   "Pull them out when they look a little underbaked. They keep cooking on the hot pan.",
+   "For perfectly round cookies, swirl a large glass around each one right out of the oven.",
+   "Mix dark and milk chocolate for a deeper flavor."
+  ],
+  "storage": "Keep baked cookies in an airtight container for up to 5 days. Freeze dough balls for up to 3 months and bake from frozen, adding 1\u20132 minutes.",
+  "variations": [
+   [
+    "Brown butter",
+    "Brown the butter first for a nutty, toffee-like flavor."
+   ],
+   [
+    "Add nuts",
+    "Fold in 1 cup of toasted walnuts or pecans."
+   ],
+   [
+    "Double chocolate",
+    "Replace \u00bc cup flour with cocoa powder."
+   ]
+  ],
+  "nutrition": {
+   "calories": 230,
+   "protein": 3,
+   "carbs": 29,
+   "fat": 12,
+   "fiber": 1
+  },
+  "faq": [
+   [
+    "Why did my cookies spread too much?",
+    "The butter was probably too warm. Let it cool, or chill the dough for 30 minutes before baking."
+   ],
+   [
+    "Can I use chocolate chips?",
+    "Yes, but chopped chocolate melts into bigger, gooier pools."
+   ]
+  ],
+  "note": "We baked more than a dozen test batches to land on this one, and nobody complained. Keep a few dough balls in the freezer and you are always ten minutes away from warm cookies.",
+  "diet": [
+   "vegetarian"
+  ],
+  "img": "images/chocolate-chip-cookies.webp",
+  "time": 27
+ },
+ {
+  "id": "chocolate-mousse-cake",
+  "title": "No-Bake Chocolate Mousse Cake",
+  "subtitle": "A crunchy cookie crust topped with a cloud of silky dark chocolate mousse and fresh raspberries.",
+  "category": "Desserts",
+  "tags": [],
+  "prep": 30,
+  "cook": 5,
+  "chill": 360,
+  "serves": 10,
+  "level": "Medium",
+  "desc": "Silky, rich and made for celebrations.",
+  "intro": [
+   "This cake looks like it came from a fancy bakery, but it only takes about 30 minutes of hands-on time and no oven at all. The fridge does most of the work.",
+   "It is rich without being heavy. Whipped cream folded into melted chocolate creates a mousse that is light, airy and melts on your tongue."
+  ],
+  "why": [
+   [
+    "No oven needed",
+    "Perfect for hot days or small kitchens."
+   ],
+   [
+    "Make-ahead friendly",
+    "Prepare it the day before your party."
+   ],
+   [
+    "Show-stopping",
+    "Looks impressive with very little effort."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the crust",
+    "items": [
+     {
+      "q": 20,
+      "u": "",
+      "n": "chocolate sandwich cookies",
+      "note": "finely crushed"
+     },
+     {
+      "q": 4,
+      "u": "tbsp",
+      "n": "unsalted butter",
+      "note": "melted"
+     }
+    ]
+   },
+   {
+    "group": "For the mousse",
+    "items": [
+     {
+      "q": 10,
+      "u": "oz",
+      "n": "dark chocolate (60\u201370%)",
+      "note": "280 g, chopped"
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "cold heavy cream",
+      "note": "divided"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "powdered sugar"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "salt"
+     }
+    ]
+   },
+   {
+    "group": "To decorate",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "fresh raspberries",
+      "g": 125
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "chocolate curls or cocoa powder"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Make the crust",
+    "d": "Mix the cookie crumbs with the melted butter until it looks like wet sand. Press firmly into the bottom of a 9-inch (23 cm) springform pan and refrigerate while you make the mousse."
+   },
+   {
+    "t": "Melt the chocolate",
+    "d": "Heat \u00bd cup of the cream until steaming, pour it over the chopped chocolate and let it sit for 2 minutes. Stir until smooth and glossy, add the salt and let it cool until just barely warm.",
+    "tip": "If the chocolate is too warm, it will melt the whipped cream and the mousse will not set."
+   },
+   {
+    "t": "Whip the cream",
+    "d": "Beat the remaining 1\u00bd cups of cold cream with the powdered sugar and vanilla until soft peaks form, when the peaks gently fold over."
+   },
+   {
+    "t": "Fold gently",
+    "d": "Fold one third of the whipped cream into the chocolate to lighten it, then gently fold in the rest in two additions until no white streaks remain."
+   },
+   {
+    "t": "Chill",
+    "d": "Spread the mousse over the crust and smooth the top. Cover and refrigerate for at least 6 hours, or overnight, until set."
+   },
+   {
+    "t": "Decorate and slice",
+    "d": "Release the springform ring and top with raspberries and chocolate curls. Slice with a knife dipped in hot water and wiped dry between cuts."
+   }
+  ],
+  "tips": [
+   "Use a good chocolate bar, not chips. It is the star of the dessert.",
+   "Fold with a spatula in big, gentle strokes to keep the air in the mousse.",
+   "A thin layer of raspberry jam on the crust adds a lovely fruity surprise."
+  ],
+  "storage": "Keep covered in the fridge for up to 4 days. You can also freeze the whole cake, without toppings, for up to 1 month and thaw it overnight in the fridge.",
+  "variations": [
+   [
+    "Mocha",
+    "Dissolve 1 tsp instant espresso into the warm cream."
+   ],
+   [
+    "Orange",
+    "Add orange zest to the mousse and top with candied peel."
+   ],
+   [
+    "Graham crust",
+    "Use graham crackers for a lighter, honeyed base."
+   ]
+  ],
+  "nutrition": {
+   "calories": 440,
+   "protein": 4,
+   "carbs": 30,
+   "fat": 35,
+   "fiber": 3
+  },
+  "faq": [
+   [
+    "Can I use milk chocolate?",
+    "You can, but the mousse will be sweeter and softer. Reduce the powdered sugar to 1 tbsp."
+   ],
+   [
+    "I don't have a springform pan.",
+    "Use a pie dish and serve it straight from the dish, or line a regular cake pan with plastic wrap."
+   ]
+  ],
+  "note": "This is our go-to birthday cake for people who \"do not really like cake\". It disappears faster than anything else we bring to a party, and nobody guesses it took no oven at all.",
+  "diet": [
+   "vegetarian"
+  ],
+  "img": "images/chocolate-mousse-cake.webp",
+  "time": 395
+ },
+ {
+  "id": "buttermilk-pancakes",
+  "title": "Fluffy Buttermilk Pancakes",
+  "subtitle": "Tall, tender diner-style pancakes with crisp buttery edges and a gentle tang, ready in thirty minutes from one bowl.",
+  "category": "Beyond Toast",
+  "tags": [
+   "quick"
+  ],
+  "diet": [
+   "vegetarian"
+  ],
+  "prep": 10,
+  "cook": 20,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Tall, tangy, diner-style weekend stacks",
+  "note": "We tested this batter on a lot of sleepy Saturdays, and the one rule that stuck is leaving the lumps alone. The first pancake is always the cook's snack in our kitchen, no exceptions. If you have leftover buttermilk, this recipe is the best excuse to buy another carton.",
+  "intro": [
+   "These are the pancakes we make when someone in the house says the word 'brunch' out loud. Buttermilk and baking soda team up to give you a thick, bubbly batter that puffs high on the griddle and stays soft in the middle.",
+   "There is nothing fancy here, just pantry staples and a couple of small habits that make a big difference. Rest the batter while the pan heats, keep the heat at medium, and you will get golden, even stacks every time."
+  ],
+  "why": [
+   [
+    "Seriously fluffy stacks",
+    "Buttermilk reacts with baking soda for extra lift, so each pancake rises tall and stays airy."
+   ],
+   [
+    "One bowl, no mixer",
+    "Whisk the dry ingredients, pour in the wet, and fold. That is the whole method."
+   ],
+   [
+    "Freezer friendly",
+    "Make a double batch and toast leftovers straight from frozen on busy weekday mornings."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the batter",
+    "items": [
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "all-purpose flour",
+      "note": "spooned and leveled",
+      "g": 250
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "granulated sugar",
+      "g": 25
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "n": "baking powder"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "baking soda"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "fine salt"
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "buttermilk",
+      "note": "about 480 ml, at room temperature if possible"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "unsalted butter",
+      "note": "melted and slightly cooled, about 42 g"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "vanilla extract"
+     }
+    ]
+   },
+   {
+    "group": "For cooking and serving",
+    "items": [
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "butter or neutral oil",
+      "note": "for the pan, plus more as needed"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "maple syrup",
+      "note": "to serve"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "fresh berries or sliced banana",
+      "note": "optional, to serve"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Whisk the dry ingredients",
+    "d": "In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt for about 20 seconds. Make sure there are no clumps of baking soda hiding in the flour, since those taste bitter."
+   },
+   {
+    "t": "Mix the wet ingredients",
+    "d": "In a separate bowl or a large measuring jug, whisk the buttermilk, eggs, and vanilla until smooth. Slowly whisk in the melted butter. If it seizes into little flecks from cold buttermilk, that is fine and will melt on the griddle.",
+    "tip": "Room-temperature buttermilk and eggs keep the melted butter from clumping and give a more even rise."
+   },
+   {
+    "t": "Fold and rest",
+    "d": "Pour the wet ingredients into the dry and fold with a spatula just until no dry streaks of flour remain, about 10 to 12 strokes. The batter should be thick and lumpy. Let it rest for 5 to 10 minutes while the pan heats, and you will see bubbles form on the surface.",
+    "tip": "Do not stir out the lumps. Overmixing develops gluten and makes pancakes tough and flat.",
+    "img": "images/step-pancakes-batter.webp"
+   },
+   {
+    "t": "Heat the pan",
+    "d": "Set a large nonstick skillet or griddle over medium heat for 2 to 3 minutes. Brush lightly with butter or oil. The pan is ready when a drop of water sizzles and dances before evaporating."
+   },
+   {
+    "t": "Cook the first side",
+    "d": "Scoop 1/3 cup of batter per pancake onto the pan, leaving space between them, and gently nudge each into a round. Cook for 2 to 3 minutes, until bubbles pop on the surface, the edges look set and matte, and the underside is golden brown."
+   },
+   {
+    "t": "Flip and finish",
+    "d": "Flip once with a thin spatula and cook for another 1 1/2 to 2 minutes, until the center springs back when lightly pressed. Transfer to a baking sheet in a 200\u00b0F (95\u00b0C) oven to keep warm while you cook the rest, adding a little more butter to the pan between batches.",
+    "tip": "If the outsides brown before the centers cook, turn the heat down slightly. Most stovetops need a small adjustment after the first batch.",
+    "img": "images/step-pancakes-flip.webp"
+   },
+   {
+    "t": "Serve",
+    "d": "Stack the pancakes on warm plates and serve right away with maple syrup, a pat of butter, and fresh fruit. This recipe makes about 12 pancakes, or 3 per person."
+   }
+  ],
+  "tips": [
+   "No buttermilk? Stir 2 tbsp lemon juice or white vinegar into 2 cups of regular milk and let it sit for 5 minutes until slightly thickened.",
+   "Measure flour by spooning it into the cup and leveling it off, or weigh it. Scooping straight from the bag packs in extra flour and makes dense pancakes.",
+   "Add blueberries or chocolate chips by dropping them onto each pancake right after you pour it, rather than stirring them into the batter."
+  ],
+  "storage": "Cool leftover pancakes completely, then refrigerate in an airtight container for up to 3 days or freeze in a zip-top bag with parchment between layers for up to 2 months. Reheat in the toaster or on a baking sheet at 350\u00b0F (175\u00b0C) for 8 to 10 minutes.",
+  "variations": [
+   [
+    "Lemon ricotta",
+    "Add the zest of 1 lemon to the wet ingredients and dot small spoonfuls of ricotta onto each pancake before flipping."
+   ],
+   [
+    "Whole wheat",
+    "Swap 1 cup of the all-purpose flour for white whole wheat flour for a nuttier flavor and a little more fiber."
+   ],
+   [
+    "Cinnamon spice",
+    "Whisk 1 tsp ground cinnamon and a pinch of nutmeg into the dry ingredients, then serve with sliced apples."
+   ]
+  ],
+  "nutrition": {
+   "calories": 425,
+   "protein": 13,
+   "carbs": 60,
+   "fat": 14,
+   "fiber": 2
+  },
+  "faq": [
+   [
+    "Why are my pancakes flat?",
+    "The usual culprits are overmixed batter, expired baking powder, or a pan that is not hot enough. Fold gently, check the date on your leaveners, and give the pan a few minutes to heat through."
+   ],
+   [
+    "Can I make the batter the night before?",
+    "It is best made fresh, since the leaveners start working as soon as the buttermilk hits them. You can mix the dry and wet ingredients separately the night before, refrigerate the wet bowl, and combine them in the morning."
+   ],
+   [
+    "Can I use a nondairy milk?",
+    "Yes. Mix unsweetened soy or oat milk with 2 tbsp lemon juice to mimic buttermilk. The pancakes will be slightly less tender but still fluffy."
+   ]
+  ],
+  "img": "images/buttermilk-pancakes.webp",
+  "time": 30
+ },
+ {
+  "id": "shakshuka",
+  "title": "One-Pan Shakshuka",
+  "subtitle": "Eggs gently poached in a smoky, garlicky tomato and pepper sauce, finished with salty feta and fresh herbs.",
+  "category": "Beyond Toast",
+  "tags": [
+   "healthy"
+  ],
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "prep": 10,
+  "cook": 25,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Eggs poached in spiced tomato sauce",
+  "note": "We started making shakshuka on Sunday mornings when the fridge was down to eggs, an onion, and a lonely bell pepper. Now we keep a can of tomatoes around just for this. Please do not skip the crusty bread for dunking, it is half the fun.",
+  "intro": [
+   "Shakshuka is a North African and Middle Eastern classic, and it is one of the easiest ways to feed a crowd at breakfast with a single pan. Onions and peppers melt into a spiced tomato sauce, then the eggs cook right on top until the whites are set and the yolks are still runny.",
+   "It works just as well for a lazy brunch as it does for a quick weeknight dinner. Everything happens in one skillet, and you can bring it straight to the table for everyone to scoop from."
+  ],
+  "why": [
+   [
+    "Pantry-friendly ingredients",
+    "Canned tomatoes, eggs, and a few spices are all you really need to make it happen."
+   ],
+   [
+    "One pan, easy cleanup",
+    "The sauce and eggs cook in the same skillet, which also doubles as your serving dish."
+   ],
+   [
+    "Breakfast or dinner",
+    "It is hearty enough for supper, especially with a green salad and warm bread on the side."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the sauce",
+    "items": [
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "extra-virgin olive oil"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "medium yellow onion",
+      "note": "diced"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "red bell pepper",
+      "note": "seeded and diced"
+     },
+     {
+      "q": 3,
+      "u": "cloves",
+      "n": "garlic",
+      "note": "minced"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "ground cumin"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "smoked paprika"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "red pepper flakes",
+      "note": "or more to taste"
+     },
+     {
+      "q": 1,
+      "u": "can",
+      "n": "crushed tomatoes",
+      "note": "28 oz (794 g)"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "granulated sugar",
+      "note": "optional, to balance acidity"
+     },
+     {
+      "q": 0.75,
+      "u": "tsp",
+      "n": "kosher salt",
+      "note": "plus more to taste"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "black pepper",
+      "note": "to taste"
+     }
+    ]
+   },
+   {
+    "group": "For the eggs and topping",
+    "items": [
+     {
+      "q": 6,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 0.33,
+      "u": "cup",
+      "n": "crumbled feta cheese",
+      "g": 50
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "fresh cilantro or parsley",
+      "note": "chopped"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "crusty bread or pita",
+      "note": "to serve; use gluten-free bread if needed"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Soften the vegetables",
+    "d": "Heat the olive oil in a 10 to 12 inch skillet over medium heat. Add the onion and bell pepper with a pinch of salt and cook, stirring occasionally, for 7 to 8 minutes, until soft and the onion is translucent and just starting to turn golden."
+   },
+   {
+    "t": "Bloom the spices",
+    "d": "Add the garlic, cumin, smoked paprika, and red pepper flakes and stir constantly for about 1 minute, until fragrant. Keep things moving so the garlic does not brown.",
+    "tip": "Toasting the spices in oil for a minute wakes up their flavor far more than stirring them into the tomatoes later."
+   },
+   {
+    "t": "Simmer the sauce",
+    "d": "Pour in the crushed tomatoes, sugar if using, salt, and a few grinds of black pepper. Bring to a gentle simmer and cook for 8 to 10 minutes, stirring now and then, until the sauce thickens enough that a spoon dragged through it leaves a trail for a second or two. Taste and adjust the salt.",
+    "img": "images/step-shakshuka-sauce.webp"
+   },
+   {
+    "t": "Add the eggs",
+    "d": "Use the back of a spoon to make 6 small wells in the sauce. Crack an egg into each well, then sprinkle the eggs with a little salt and pepper.",
+    "tip": "Crack each egg into a small cup first, then slide it into its well. It keeps the yolks whole and catches any stray shell.",
+    "img": "images/step-shakshuka-eggs.webp"
+   },
+   {
+    "t": "Cook until just set",
+    "d": "Reduce the heat to medium-low, cover the pan, and cook for 5 to 8 minutes. The eggs are ready when the whites are opaque and set but the yolks still jiggle when you gently shake the pan. Check at 5 minutes, since the eggs keep cooking from residual heat."
+   },
+   {
+    "t": "Finish and serve",
+    "d": "Take the skillet off the heat and scatter the feta and chopped herbs over the top. Serve straight from the pan with crusty bread or warm pita for scooping up the sauce."
+   }
+  ],
+  "tips": [
+   "Use a pan with a lid. If you do not have one that fits, a baking sheet or large plate laid over the top works fine.",
+   "If the sauce gets too thick before the eggs go in, loosen it with a few tablespoons of water so the eggs have something to settle into.",
+   "Fire-roasted crushed tomatoes add an extra layer of smokiness with zero extra work."
+  ],
+  "storage": "The tomato sauce keeps in the fridge for up to 4 days or in the freezer for up to 3 months, so it is worth making a double batch. Cooked eggs do not reheat well, so reheat the sauce in a skillet until simmering and poach fresh eggs in it.",
+  "variations": [
+   [
+    "Green shakshuka",
+    "Skip the tomatoes and wilt a big pile of spinach, chard, and leeks with a splash of broth before adding the eggs."
+   ],
+   [
+    "Spicy harissa",
+    "Stir 1 to 2 tbsp harissa paste into the sauce along with the tomatoes for a deeper, spicier flavor."
+   ],
+   [
+    "Hearty chickpea",
+    "Add a drained 15 oz can of chickpeas to the sauce as it simmers to make it more filling for dinner."
+   ]
+  ],
+  "nutrition": {
+   "calories": 290,
+   "protein": 14,
+   "carbs": 17,
+   "fat": 17,
+   "fiber": 4
+  },
+  "faq": [
+   [
+    "Can I make shakshuka ahead of time?",
+    "Make the sauce up to 4 days ahead and refrigerate it. When you are ready to eat, bring it back to a simmer in the skillet and add the eggs, which only take a few minutes."
+   ],
+   [
+    "How do I make it dairy-free?",
+    "Leave off the feta or use a dairy-free crumbly cheese. A drizzle of tahini or a spoonful of dairy-free yogurt is also lovely on top."
+   ],
+   [
+    "Can I use fresh tomatoes?",
+    "Yes. Use about 2 1/2 lb of ripe tomatoes, chopped, and simmer the sauce a little longer, 15 to 20 minutes, until it thickens."
+   ]
+  ],
+  "img": "images/shakshuka.webp",
+  "time": 35
+ },
+ {
+  "id": "overnight-oats",
+  "title": "Blueberry Vanilla Overnight Oats",
+  "subtitle": "Creamy, no-cook vanilla oats loaded with juicy blueberries, stirred together in five minutes and waiting for you at breakfast.",
+  "category": "Beyond Toast",
+  "tags": [
+   "healthy"
+  ],
+  "diet": [
+   "vegetarian"
+  ],
+  "prep": 5,
+  "cook": 0,
+  "chill": 480,
+  "serves": 2,
+  "level": "Easy",
+  "desc": "Five-minute prep, zero morning effort",
+  "note": "We make these jars on Sunday night while the kettle boils and feel very smug about it all week. A little lemon zest is our secret, it makes the blueberries taste brighter. Eat them cold straight from the jar, or give them 60 seconds in the microwave on chilly mornings.",
+  "intro": [
+   "Overnight oats are the breakfast equivalent of a favor from your past self. You stir oats, milk, yogurt, and chia together at night, and by morning they have soaked into something thick, creamy, and pudding-like.",
+   "This version leans on vanilla and plenty of blueberries, with Greek yogurt for extra protein. No stove, no blender, and no excuse to skip breakfast on a busy morning."
+  ],
+  "why": [
+   [
+    "No cooking at all",
+    "The oats soften overnight in the fridge, so all you do in the morning is grab a spoon."
+   ],
+   [
+    "Meal prep friendly",
+    "Mix up four or five jars at once and they will keep happily through the workweek."
+   ],
+   [
+    "Filling and balanced",
+    "Oats, chia, and Greek yogurt bring fiber and protein to keep you full until lunch."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the oats",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "old-fashioned rolled oats",
+      "note": "use certified gluten-free oats if needed",
+      "g": 90
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "milk",
+      "note": "dairy or any unsweetened plant milk, about 240 ml"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "plain Greek yogurt",
+      "g": 120
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "chia seeds",
+      "g": 12
+     },
+     {
+      "q": 1.5,
+      "u": "tbsp",
+      "n": "maple syrup",
+      "note": "or honey, adjust to taste"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "fine salt"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "lemon zest",
+      "note": "optional"
+     }
+    ]
+   },
+   {
+    "group": "For the blueberries",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "fresh or frozen blueberries",
+      "note": "divided",
+      "g": 150
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "sliced almonds or chopped walnuts",
+      "note": "optional, for topping"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Mix the base",
+    "d": "In a medium bowl, stir together the oats, milk, Greek yogurt, chia seeds, maple syrup, vanilla, salt, and lemon zest if using. Mix for about 30 seconds, until the yogurt is fully blended and no dry oats are floating on top.",
+    "tip": "Stir well now. Chia seeds love to clump, and a good mix at the start means an even texture in the morning."
+   },
+   {
+    "t": "Add the berries",
+    "d": "Fold in about two-thirds of the blueberries. If you are using frozen berries, add them straight from the freezer, no need to thaw."
+   },
+   {
+    "t": "Portion into jars",
+    "d": "Divide the mixture between two 12 to 16 oz jars or airtight containers, leaving a little room at the top. Seal tightly."
+   },
+   {
+    "t": "Chill overnight",
+    "d": "Refrigerate for at least 6 hours and ideally 8 hours or overnight. The oats and chia will absorb the liquid and turn thick and creamy.",
+    "tip": "Want to eat sooner? Four hours will do in a pinch, though the oats will be a little chewier."
+   },
+   {
+    "t": "Top and serve",
+    "d": "In the morning, give each jar a good stir and add a splash of milk if it seems too thick. Top with the remaining blueberries and a sprinkle of nuts, then eat cold, or microwave for 60 to 90 seconds, stirring halfway, if you prefer it warm."
+   }
+  ],
+  "tips": [
+   "Stick with old-fashioned rolled oats. Quick oats turn mushy, and steel-cut oats stay too hard without cooking.",
+   "Taste before adding more sweetener. Ripe blueberries add plenty of natural sweetness by morning.",
+   "Frozen wild blueberries are small and intensely flavored, and they tint the oats a pretty purple as they thaw."
+  ],
+  "storage": "Keep sealed jars in the fridge for up to 4 days, adding any crunchy toppings just before eating so they stay crisp. The oats thicken over time, so loosen them with a splash of milk as needed.",
+  "variations": [
+   [
+    "Blueberry lemon cheesecake",
+    "Stir 2 tbsp softened cream cheese into the base and top with a crumbled graham cracker before serving."
+   ],
+   [
+    "Vegan and dairy-free",
+    "Use oat or almond milk and a plant-based yogurt, and sweeten with maple syrup rather than honey."
+   ],
+   [
+    "Peanut butter berry",
+    "Swirl 1 tbsp peanut butter into each jar for a PB and J style breakfast with extra staying power."
+   ]
+  ],
+  "nutrition": {
+   "calories": 390,
+   "protein": 17,
+   "carbs": 62,
+   "fat": 8,
+   "fiber": 8
+  },
+  "faq": [
+   [
+    "Do I have to use chia seeds?",
+    "No, but they help thicken the oats and add fiber. If you leave them out, reduce the milk by about 2 tablespoons so the oats are not too loose."
+   ],
+   [
+    "Can I heat overnight oats?",
+    "Yes. Transfer them to a microwave-safe bowl if your jar is not, and heat for 60 to 90 seconds, stirring halfway through. Add the fresh blueberries after heating."
+   ],
+   [
+    "Are overnight oats gluten-free?",
+    "Oats are naturally gluten-free but are often processed alongside wheat. Use oats labeled certified gluten-free if you need to avoid gluten."
+   ]
+  ],
+  "img": "images/overnight-oats.webp",
+  "time": 485
+ },
+ {
+  "id": "avocado-toast-jammy-eggs",
+  "title": "Smashed Avocado Toast with Jammy Eggs",
+  "subtitle": "Crunchy sourdough piled with zesty smashed avocado and a soft, golden jammy egg. Proof that toast can still be exciting.",
+  "category": "Beyond Toast",
+  "tags": [
+   "quick",
+   "healthy"
+  ],
+  "diet": [
+   "vegetarian",
+   "dairy-free"
+  ],
+  "prep": 10,
+  "cook": 10,
+  "serves": 2,
+  "level": "Easy",
+  "desc": "Toast, finally done right",
+  "note": "Yes, we named our whole site Bored of Toast, and yes, we still eat this about twice a week. The trick is treating each layer like it matters: properly crisp bread, well-seasoned avocado, and eggs timed to the second. We keep a phone timer set to 6 minutes 30 seconds for exactly this.",
+  "intro": [
+   "We are not against toast, we are against boring toast. This one earns its place with thick, olive oil crisped sourdough, avocado smashed with lemon and chili, and an egg with a yolk somewhere between runny and fudgy.",
+   "Jammy eggs sound fussy, but they come down to a timer and a bowl of ice water. Once you have nailed them, you will want them on salads, noodles, and pretty much everything else."
+  ],
+  "why": [
+   [
+    "Perfect jammy yolks",
+    "A precise boil and an ice bath give you set whites and rich, spoonable centers every time."
+   ],
+   [
+    "Actually crispy toast",
+    "Pan-toasting in olive oil makes the bread golden and sturdy enough to hold a generous topping."
+   ],
+   [
+    "Ready in 20 minutes",
+    "The avocado and toast come together while the eggs boil, so everything lands at once."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the jammy eggs",
+    "items": [
+     {
+      "q": 2,
+      "u": "",
+      "n": "large eggs",
+      "note": "straight from the fridge"
+     }
+    ]
+   },
+   {
+    "group": "For the smashed avocado",
+    "items": [
+     {
+      "q": 1,
+      "u": "",
+      "n": "large ripe avocado",
+      "note": "or 2 small"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "fresh lemon juice",
+      "note": "about half a lemon"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "kosher salt",
+      "note": "plus more to taste"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "red pepper flakes",
+      "note": "plus more for topping"
+     }
+    ]
+   },
+   {
+    "group": "For the toast and topping",
+    "items": [
+     {
+      "q": 2,
+      "u": "",
+      "n": "thick slices sourdough bread",
+      "note": "about 3/4 inch (2 cm) thick"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "extra-virgin olive oil",
+      "note": "plus a drizzle to finish"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "flaky sea salt",
+      "note": "to taste"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "black pepper",
+      "note": "to taste"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "fresh chives or microgreens",
+      "note": "optional, for topping"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Boil the water",
+    "d": "Bring a small saucepan of water, deep enough to cover the eggs by an inch, to a full rolling boil over high heat. Meanwhile, fill a bowl with ice and cold water."
+   },
+   {
+    "t": "Cook the jammy eggs",
+    "d": "Lower the cold eggs gently into the boiling water with a slotted spoon and set a timer for 6 minutes 30 seconds. Adjust the heat so the water stays at a steady, lively simmer rather than a violent boil, which can crack the shells.",
+    "tip": "For a runnier yolk, go 6 minutes. For a firmer, fudgy yolk, go 7 minutes."
+   },
+   {
+    "t": "Shock and peel",
+    "d": "When the timer goes off, move the eggs straight into the ice bath and leave them for at least 3 minutes to stop the cooking. Crack each egg all over on the counter and peel under a trickle of cold water, starting from the wider end where the air pocket is.",
+    "tip": "Slightly older eggs peel more easily than very fresh ones."
+   },
+   {
+    "t": "Smash the avocado",
+    "d": "While the eggs chill, halve and pit the avocado and scoop the flesh into a bowl. Add the lemon juice, salt, and red pepper flakes and smash with a fork until mostly smooth with a few chunky bits. Taste and add more salt or lemon if it tastes flat."
+   },
+   {
+    "t": "Toast the bread",
+    "d": "Heat the olive oil in a skillet over medium heat. Add the bread and toast for 2 to 3 minutes per side, pressing gently with a spatula, until deep golden and crisp on the outside but still a little chewy in the middle."
+   },
+   {
+    "t": "Assemble and serve",
+    "d": "Spread the smashed avocado thickly over the warm toast, all the way to the edges. Halve the eggs lengthwise and nestle them on top, then finish with flaky salt, black pepper, more chili flakes, a drizzle of olive oil, and chives if using. Eat right away while the toast is still crunchy."
+   }
+  ],
+  "tips": [
+   "Choose an avocado that yields to gentle pressure near the stem but does not feel mushy. Underripe avocado will not smash smoothly.",
+   "Season the avocado more than you think you need. Bread and eggs soak up salt, and under-seasoned avocado tastes dull.",
+   "Make extra jammy eggs. They keep, peeled, in the fridge for up to 3 days and make an instant snack or lunch topper."
+  ],
+  "storage": "Avocado toast is best eaten immediately, since the bread softens and the avocado browns quickly. Peeled jammy eggs keep in an airtight container in the fridge for up to 3 days, and leftover smashed avocado keeps for a day with plastic wrap pressed directly onto its surface.",
+  "variations": [
+   [
+    "Everything bagel style",
+    "Skip the chili flakes and shower the finished toast with everything bagel seasoning."
+   ],
+   [
+    "Tomato and feta",
+    "Top with halved cherry tomatoes and crumbled feta. Note that feta makes it no longer dairy-free."
+   ],
+   [
+    "Chili crisp kick",
+    "Spoon a little chili crisp over the eggs for crunch, heat, and a savory garlicky punch."
+   ]
+  ],
+  "nutrition": {
+   "calories": 490,
+   "protein": 15,
+   "carbs": 42,
+   "fat": 30,
+   "fiber": 8
+  },
+  "faq": [
+   [
+    "Why do you start with cold eggs?",
+    "Starting with eggs straight from the fridge makes the timing consistent every time. If your eggs are at room temperature, cut about 30 seconds off the cooking time."
+   ],
+   [
+    "How do I keep smashed avocado from browning?",
+    "Lemon juice slows browning, but air is the real enemy. Press plastic wrap directly onto the surface if you need to hold it, and scrape off any darkened layer before using."
+   ],
+   [
+    "Can I make this gluten-free?",
+    "Yes. Use your favorite sturdy gluten-free bread and toast it a little longer, since gluten-free loaves can take more time to crisp."
+   ]
+  ],
+  "img": "images/avocado-toast-jammy-eggs.webp",
+  "time": 20
+ },
+ {
+  "id": "breakfast-burritos",
+  "title": "Freezer-Friendly Breakfast Burritos",
+  "subtitle": "Crispy potatoes, savory sausage, soft scrambled eggs and melty cheddar rolled tight and ready to grab on busy mornings.",
+  "category": "Beyond Toast",
+  "tags": [],
+  "diet": [],
+  "prep": 25,
+  "cook": 25,
+  "serves": 8,
+  "servesLabel": "burritos",
+  "level": "Easy",
+  "desc": "Make once, eat breakfast all week",
+  "note": "We started making these on Sunday afternoons when weekday mornings kept ending with a sad granola bar in the car. Now the freezer drawer is labeled 'burrito bank' in marker, and nobody is allowed to make a withdrawal without restocking.",
+  "intro": [
+   "A good breakfast burrito is a whole breakfast you can hold in one hand. These are packed with golden pan-fried potatoes, browned sausage, soft scrambled eggs and plenty of cheddar, all wrapped in a warm flour tortilla.",
+   "The real magic is that they freeze beautifully. We cool the filling before rolling so the tortillas stay tender instead of soggy, then wrap each one individually so you can reheat exactly as many as you need."
+  ],
+  "why": [
+   [
+    "Built for the freezer",
+    "Cooling the filling and wrapping each burrito keeps them from turning soggy or icy."
+   ],
+   [
+    "Reheats in minutes",
+    "Microwave straight from frozen, or crisp in a skillet for a toasty shell."
+   ],
+   [
+    "Easy to customize",
+    "Swap the protein, add beans or change the cheese without changing the method."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the filling",
+    "items": [
+     {
+      "q": 1.5,
+      "u": "lb",
+      "n": "russet potatoes",
+      "note": "peeled and cut into 1/2-inch cubes (about 4 cups)",
+      "g": 680
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1,
+      "u": "lb",
+      "n": "breakfast sausage",
+      "note": "bulk or casings removed"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "red bell pepper",
+      "note": "finely diced (about 1 cup)",
+      "g": 150
+     },
+     {
+      "q": 12,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "milk"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "butter"
+     },
+     {
+      "q": 4,
+      "u": "",
+      "n": "green onions",
+      "note": "thinly sliced"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "smoked paprika"
+     },
+     {
+      "q": 1.5,
+      "u": "tsp",
+      "n": "kosher salt",
+      "note": "divided"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "black pepper"
+     }
+    ]
+   },
+   {
+    "group": "For assembly",
+    "items": [
+     {
+      "q": 8,
+      "u": "",
+      "n": "large flour tortillas",
+      "note": "10-inch burrito size"
+     },
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "shredded sharp cheddar",
+      "note": "or a Mexican blend",
+      "g": 226
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "thick salsa",
+      "note": "optional, drained if watery"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Crisp the potatoes",
+    "d": "Heat the olive oil in a large nonstick skillet over medium-high heat. Add the potatoes in an even layer with 1/2 teaspoon salt, cover, and cook 8 minutes, then uncover and cook 6 to 8 minutes more, stirring every few minutes, until golden and tender when pierced. Transfer to a large sheet pan to cool.",
+    "tip": "Covering the pan at first steams the potatoes through, so they finish crisp outside and fluffy inside."
+   },
+   {
+    "t": "Brown the sausage and pepper",
+    "d": "In the same skillet over medium heat, cook the sausage 6 to 7 minutes, breaking it into small crumbles, until no pink remains. Add the bell pepper and smoked paprika and cook 2 to 3 minutes until the pepper softens. Drain off excess fat and spread on the sheet pan with the potatoes."
+   },
+   {
+    "t": "Softly scramble the eggs",
+    "d": "Whisk the eggs, milk, remaining 1 teaspoon salt and pepper until no streaks remain. Wipe out the skillet, melt the butter over medium-low heat, then add the eggs and stir slowly with a spatula for 4 to 5 minutes until just set but still glossy. Stir in the green onions and add to the sheet pan.",
+    "tip": "Pull the eggs a little early. They finish cooking when reheated, and slightly underdone eggs stay tender after freezing."
+   },
+   {
+    "t": "Cool the filling completely",
+    "d": "Toss everything on the sheet pan together and spread it out. Let it cool at room temperature for about 15 minutes until no longer steaming. Warm filling makes condensation, which is what turns frozen burritos soggy."
+   },
+   {
+    "t": "Warm and roll",
+    "d": "Microwave the tortillas under a damp paper towel for 30 seconds so they are pliable. Divide the cheese and filling among them (about 3/4 cup filling each), spooning it in a log just below center, and add a spoonful of salsa if using. Fold in the sides, then roll up tightly from the bottom."
+   },
+   {
+    "t": "Wrap and freeze",
+    "d": "Wrap each burrito snugly in foil or parchment, then place them all in a zip-top freezer bag with the air pressed out. Label and freeze flat for up to 3 months, or refrigerate up to 4 days if eating soon.",
+    "tip": "Parchment wrap means you can microwave straight from frozen without unwrapping onto a plate."
+   }
+  ],
+  "tips": [
+   "Keep the salsa light and thick. Watery salsa is the fastest route to a soggy tortilla.",
+   "Use the biggest tortillas you can find. Anything smaller than 10 inches will split when rolled.",
+   "To reheat, microwave a frozen burrito (unwrapped from foil) in a damp paper towel for 1 minute, flip, and heat 1 to 1 1/2 minutes more until hot in the center."
+  ],
+  "storage": "Refrigerate wrapped burritos for up to 4 days or freeze for up to 3 months. Reheat from frozen in the microwave for 2 to 3 minutes, or bake foil-wrapped at 375\u00b0F (190\u00b0C) for 35 to 40 minutes and crisp in a dry skillet if you like.",
+  "variations": [
+   [
+    "Vegetarian black bean",
+    "Skip the sausage and add a drained 15-ounce can of black beans plus 1 teaspoon cumin to the peppers."
+   ],
+   [
+    "Bacon and pepper jack",
+    "Use 10 ounces of crumbled cooked bacon and swap the cheddar for pepper jack for a little heat."
+   ],
+   [
+    "Green chile",
+    "Stir a 4-ounce can of diced green chiles into the eggs just before they set."
+   ]
+  ],
+  "nutrition": {
+   "calories": 560,
+   "protein": 28,
+   "carbs": 42,
+   "fat": 31,
+   "fiber": 3
+  },
+  "faq": [
+   [
+    "Can I reheat them in an air fryer?",
+    "Yes. Microwave a frozen burrito for 1 1/2 minutes to thaw the center, then air fry at 375\u00b0F (190\u00b0C) for 5 to 6 minutes until the tortilla is crisp."
+   ],
+   [
+    "Why did my burritos get soggy in the freezer?",
+    "Usually the filling was still warm when rolled, or the salsa was too wet. Cool everything fully and drain any watery add-ins before assembling."
+   ],
+   [
+    "Can I use frozen hash browns?",
+    "Absolutely. Use about 4 cups of frozen diced hash browns and cook them straight from frozen until golden, 10 to 12 minutes."
+   ]
+  ],
+  "img": "images/breakfast-burritos.webp",
+  "time": 50
+ },
+ {
+  "id": "cinnamon-french-toast",
+  "title": "Custardy Cinnamon French Toast",
+  "subtitle": "Thick slices of brioche soaked in a rich vanilla cinnamon custard, griddled until crisp outside and creamy in the middle.",
+  "category": "Beyond Toast",
+  "tags": [
+   "quick"
+  ],
+  "diet": [
+   "vegetarian"
+  ],
+  "prep": 10,
+  "cook": 20,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Crisp edges, creamy custard center",
+  "note": "We call this the reason we named the site Bored of Toast, because it is toast that is anything but boring. Our one rule is that the bread must be a day old, so we buy brioche on Friday and hide it until Sunday.",
+  "intro": [
+   "Most French toast is either dry in the middle or soggy all the way through. This version gets the best of both: a quick soak in a custard made with milk and cream, then a slow sizzle in butter until the outside turns deep golden and crisp.",
+   "The cinnamon and a little brown sugar go right into the custard, so every bite tastes like a cinnamon roll. We cook it over medium-low heat, which gives the center time to set into something soft and almost pudding-like."
+  ],
+  "why": [
+   [
+    "Custard, not scrambled egg",
+    "Adding cream gives a silky center with no eggy flavor or streaks."
+   ],
+   [
+    "Caramelized, crisp edges",
+    "Brown sugar in the custard browns in the butter for a lightly crackly crust."
+   ],
+   [
+    "Ready in 30 minutes",
+    "No overnight soak needed, just day-old bread and a patient pan."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the custard",
+    "items": [
+     {
+      "q": 4,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "whole milk"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "heavy cream"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "light brown sugar",
+      "note": "packed",
+      "g": 25
+     },
+     {
+      "q": 1.5,
+      "u": "tsp",
+      "n": "ground cinnamon"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "fine salt"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "ground nutmeg"
+     }
+    ]
+   },
+   {
+    "group": "For cooking and serving",
+    "items": [
+     {
+      "q": 8,
+      "u": "",
+      "n": "slices brioche or challah",
+      "note": "3/4 to 1 inch thick, preferably a day old"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "unsalted butter",
+      "note": "divided"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "maple syrup",
+      "note": "for serving"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "powdered sugar and fresh berries",
+      "note": "optional, for serving"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Heat the oven and pan",
+    "d": "Set the oven to 200\u00b0F (95\u00b0C) and place a wire rack on a sheet pan inside to keep finished slices warm. Put a large nonstick skillet or griddle over medium-low heat to preheat for about 3 minutes."
+   },
+   {
+    "t": "Whisk the custard",
+    "d": "In a wide, shallow dish, whisk the eggs until completely smooth with no streaks of white. Add the milk, cream, brown sugar, cinnamon, vanilla, salt and nutmeg and whisk for 30 seconds until the sugar dissolves and the cinnamon is evenly suspended.",
+    "tip": "Cinnamon likes to float on top. Give the custard a quick whisk before each new batch of bread."
+   },
+   {
+    "t": "Soak the bread",
+    "d": "Lay 2 to 3 slices in the custard and soak 15 to 20 seconds per side for brioche, or up to 30 seconds per side for denser challah. The bread should feel heavy and saturated but still hold its shape when lifted. Let the excess drip off for a few seconds."
+   },
+   {
+    "t": "Cook low and slow",
+    "d": "Melt 1 tablespoon butter in the skillet until foaming, then add the soaked slices. Cook 3 to 4 minutes per side until deep golden brown and the center springs back when pressed gently. If the butter starts to smoke or the outside darkens before 3 minutes, lower the heat.",
+    "tip": "Medium-low heat is the secret. High heat browns the outside before the custard in the middle sets."
+   },
+   {
+    "t": "Keep warm and repeat",
+    "d": "Move cooked slices to the rack in the oven, where they stay crisp for up to 20 minutes. Wipe any dark bits from the pan, add more butter, and repeat with the remaining bread."
+   },
+   {
+    "t": "Serve",
+    "d": "Stack two slices per plate and dust with powdered sugar. Serve right away with warm maple syrup and berries."
+   }
+  ],
+  "tips": [
+   "Fresh bread soaks up custard too fast and turns mushy. If yours is fresh, dry the slices in a 300\u00b0F (150\u00b0C) oven for 8 to 10 minutes first.",
+   "A wire rack, not a plate, keeps the bottoms from steaming and going soft while you finish the batch.",
+   "Warm the maple syrup for 20 seconds in the microwave so it does not cool down your toast."
+  ],
+  "storage": "Cool leftovers completely, then refrigerate in an airtight container for up to 3 days or freeze in a single layer, then bag, for up to 2 months. Reheat in a toaster or a 350\u00b0F (175\u00b0C) oven for 8 to 10 minutes until hot and crisp again.",
+  "variations": [
+   [
+    "Orange cardamom",
+    "Add 1 teaspoon orange zest and 1/4 teaspoon ground cardamom to the custard in place of the nutmeg."
+   ],
+   [
+    "Cinnamon sugar crust",
+    "Sprinkle each side with a mix of 1/4 cup sugar and 1 teaspoon cinnamon right after it hits the pan."
+   ],
+   [
+    "Dairy-free",
+    "Use oat milk and full-fat canned coconut milk instead of the milk and cream, and cook in coconut oil or vegan butter."
+   ]
+  ],
+  "nutrition": {
+   "calories": 520,
+   "protein": 16,
+   "carbs": 58,
+   "fat": 25,
+   "fiber": 2
+  },
+  "faq": [
+   [
+    "What is the best bread for French toast?",
+    "Brioche or challah sliced about 1 inch thick gives the most custardy result. Thick-cut Texas toast or a sturdy sourdough also work but need a slightly longer soak."
+   ],
+   [
+    "Why is my French toast soggy in the middle?",
+    "Either the heat was too high, so the outside browned before the center cooked, or the bread was too fresh. Try medium-low heat and day-old bread."
+   ],
+   [
+    "Can I make the custard ahead?",
+    "Yes. Whisk it the night before and refrigerate it covered. Whisk again before using since the cinnamon settles."
+   ]
+  ],
+  "img": "images/cinnamon-french-toast.webp",
+  "time": 30
+ },
+ {
+  "id": "butternut-squash-soup",
+  "title": "Roasted Butternut Squash Soup",
+  "subtitle": "Deeply caramelized squash, sweet onion and garlic blended into a velvety, gently spiced soup that tastes like October in a bowl.",
+  "category": "Soups",
+  "tags": [
+   "fall",
+   "healthy"
+  ],
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "prep": 20,
+  "cook": 55,
+  "serves": 6,
+  "level": "Easy",
+  "desc": "Velvety, caramelized, cozy fall classic",
+  "note": "We tried the boil-everything shortcut for years and always ended up with soup that tasted like baby food. Roasting changed everything, and now the first squash from the farmers market is our official start to soup season.",
+  "intro": [
+   "Roasting is the step that makes this soup special. High heat caramelizes the squash, onion and garlic, turning their sugars nutty and golden before they ever meet the pot.",
+   "A tart apple adds brightness, a splash of cream makes it silky, and a spoonful of vinegar at the end wakes everything up. It is cozy enough for a cold night but light enough to eat all week."
+  ],
+  "why": [
+   [
+    "Roasted for deeper flavor",
+    "Caramelized edges give a sweet, nutty richness boiling never can."
+   ],
+   [
+    "Silky without much cream",
+    "Squash blends so smooth that half a cup of cream is plenty."
+   ],
+   [
+    "Great for meal prep",
+    "It tastes even better the next day and freezes well."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For roasting",
+    "items": [
+     {
+      "q": 1,
+      "u": "",
+      "n": "large butternut squash",
+      "note": "about 3 lb, peeled, seeded and cut into 1-inch cubes (about 8 cups)",
+      "g": 1100
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "large yellow onion",
+      "note": "cut into thick wedges"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "tart apple",
+      "note": "such as Granny Smith, cored and quartered"
+     },
+     {
+      "q": 5,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "peeled and left whole"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1.5,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "black pepper"
+     }
+    ]
+   },
+   {
+    "group": "For the soup",
+    "items": [
+     {
+      "q": 4,
+      "u": "cups",
+      "n": "vegetable broth",
+      "note": "check the label if you need it gluten-free"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "fresh thyme leaves",
+      "note": "or 1/2 tsp dried"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "ground nutmeg"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "ground cinnamon"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "heavy cream"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "maple syrup",
+      "note": "optional, depending on squash sweetness"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "apple cider vinegar"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and pepper",
+      "note": "to taste"
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "toasted pepitas",
+      "g": 35
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "extra cream or olive oil",
+      "note": "for drizzling"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Prep and season",
+    "d": "Heat the oven to 425\u00b0F (220\u00b0C) and line two large sheet pans with parchment. Toss the squash, onion, apple and garlic with the olive oil, salt and pepper, then spread in a single layer across both pans.",
+    "tip": "Crowding causes steaming. Two pans give you browned edges instead of pale, soft squash."
+   },
+   {
+    "t": "Roast until caramelized",
+    "d": "Roast 35 to 40 minutes, flipping everything and swapping the pans halfway through. The squash is ready when it is fork-tender with deep golden brown edges. Pull the garlic early if it starts to turn dark brown."
+   },
+   {
+    "t": "Simmer with broth",
+    "d": "Transfer the roasted vegetables to a large pot and add the broth, thyme, nutmeg and cinnamon. Bring to a boil over medium-high heat, then reduce to a gentle simmer for 10 minutes so the flavors meld."
+   },
+   {
+    "t": "Blend until silky",
+    "d": "Blend with an immersion blender for 1 to 2 minutes until completely smooth. If using a countertop blender, work in batches no more than half full, remove the center cap and cover with a towel so steam can escape.",
+    "tip": "For restaurant-smooth soup, blend a full 2 minutes in a countertop blender. It is worth the extra batch."
+   },
+   {
+    "t": "Finish and adjust",
+    "d": "Return the soup to low heat and stir in the cream, maple syrup if using and vinegar. If it is too thick, add broth or water 1/4 cup at a time until it coats a spoon but still pours easily. Taste and adjust salt and pepper."
+   },
+   {
+    "t": "Serve",
+    "d": "Ladle into warm bowls and top with a swirl of cream or olive oil and a handful of toasted pepitas. Serve with crusty bread or a grilled cheese."
+   }
+  ],
+  "tips": [
+   "Buy pre-cut squash to save 10 minutes of peeling. You need about 2 1/2 lb (1.1 kg) of cubes.",
+   "A sharp Y-shaped vegetable peeler works far better than a knife for removing butternut skin.",
+   "Do not skip the vinegar. That small splash balances the natural sweetness and makes the soup taste finished."
+  ],
+  "storage": "Refrigerate in airtight containers for up to 5 days or freeze for up to 3 months, ideally before adding the cream. Thaw overnight in the fridge and reheat gently over medium-low heat, stirring in the cream and a splash of broth if it has thickened.",
+  "variations": [
+   [
+    "Vegan",
+    "Swap the cream for full-fat canned coconut milk and use maple syrup. It is naturally dairy-free and just as silky."
+   ],
+   [
+    "Thai-style",
+    "Add 2 tablespoons red curry paste and a thumb of ginger to the simmer, use coconut milk, and finish with lime juice."
+   ],
+   [
+    "Brown butter sage",
+    "Top each bowl with sage leaves fried in 3 tablespoons of browned butter for a nutty, crispy garnish."
+   ]
+  ],
+  "nutrition": {
+   "calories": 230,
+   "protein": 4,
+   "carbs": 32,
+   "fat": 11,
+   "fiber": 6
+  },
+  "faq": [
+   [
+    "Can I use frozen butternut squash?",
+    "Yes. Roast it straight from frozen at 425\u00b0F (220\u00b0C) for 40 to 45 minutes. It browns a little less but still tastes great."
+   ],
+   [
+    "How do I safely cut a butternut squash?",
+    "Trim both ends so it sits flat, cut the neck from the bulb, then peel each piece and halve it. Scoop out the seeds before cubing."
+   ],
+   [
+    "My soup is too sweet. How do I fix it?",
+    "Add more vinegar or a squeeze of lemon a teaspoon at a time, plus a pinch of salt. Skip the maple syrup entirely next time."
+   ]
+  ],
+  "img": "images/butternut-squash-soup.webp",
+  "time": 75
+ },
+ {
+  "id": "lemon-chicken-orzo-soup",
+  "title": "Lemon Chicken Orzo Soup",
+  "subtitle": "Tender poached chicken, little orzo pearls and wilted spinach in a bright, lemony broth that feels like a warm hug.",
+  "category": "Soups",
+  "tags": [
+   "healthy"
+  ],
+  "diet": [
+   "dairy-free"
+  ],
+  "prep": 15,
+  "cook": 35,
+  "serves": 6,
+  "level": "Easy",
+  "desc": "Bright, lemony, one-pot comfort soup",
+  "note": "This is the soup we make the second someone in our house sniffles. We squeeze in more lemon than seems reasonable, and every single time someone asks if we can add a little more.",
+  "intro": [
+   "This soup takes everything we love about classic chicken noodle and makes it brighter. Chicken thighs poach right in the broth, so they stay juicy and flavor the soup as they cook.",
+   "Orzo gives it a cozy, spoonable body, and a generous hit of lemon juice and zest at the end keeps it fresh instead of heavy. Spinach and dill go in at the very last minute, so everything stays vibrant."
+  ],
+  "why": [
+   [
+    "Juicy, never stringy chicken",
+    "Poaching thighs gently in the broth keeps them tender and flavorful."
+   ],
+   [
+    "All in one pot",
+    "Vegetables, chicken and orzo cook together in about 35 minutes."
+   ],
+   [
+    "Bright and fresh",
+    "Lemon zest and juice added off the heat keep the flavor lively."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the soup",
+    "items": [
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "medium yellow onion",
+      "note": "diced (about 1 1/2 cups)",
+      "g": 200
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "medium carrots",
+      "note": "diced (about 1 cup)",
+      "g": 130
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "celery stalks",
+      "note": "diced (about 3/4 cup)",
+      "g": 90
+     },
+     {
+      "q": 4,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "minced"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "dried oregano"
+     },
+     {
+      "q": 8,
+      "u": "cups",
+      "n": "low-sodium chicken broth"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "bay leaves"
+     },
+     {
+      "q": 1.5,
+      "u": "lb",
+      "n": "boneless, skinless chicken thighs",
+      "note": "or breasts"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "kosher salt",
+      "note": "plus more to taste"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "black pepper"
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "orzo",
+      "g": 190
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "q": 2,
+      "u": "",
+      "n": "lemons",
+      "note": "zest of 1 and about 1/3 cup juice total"
+     },
+     {
+      "q": 3,
+      "u": "cups",
+      "n": "baby spinach",
+      "note": "roughly chopped",
+      "g": 90
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "fresh dill",
+      "note": "chopped, or parsley",
+      "g": 8
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and pepper",
+      "note": "to taste"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Soften the vegetables",
+    "d": "Heat the olive oil in a large Dutch oven over medium heat. Add the onion, carrots and celery with a pinch of salt and cook 6 to 8 minutes, stirring occasionally, until the onion is translucent and the carrots start to soften. Stir in the garlic and oregano and cook 1 minute until fragrant."
+   },
+   {
+    "t": "Poach the chicken",
+    "d": "Pour in the broth, add the bay leaves, salt and pepper, and nestle in the chicken thighs. Bring to a boil over medium-high heat, then reduce to a gentle simmer, partially cover, and cook 15 to 18 minutes until the chicken reaches 165\u00b0F (74\u00b0C) in the thickest part.",
+    "tip": "Keep it at a lazy simmer with small bubbles. A hard boil makes chicken tough."
+   },
+   {
+    "t": "Shred the chicken",
+    "d": "Transfer the chicken to a cutting board and let it cool for 5 minutes. Shred into bite-sized pieces with two forks. Fish out and discard the bay leaves."
+   },
+   {
+    "t": "Cook the orzo",
+    "d": "Return the broth to a simmer over medium heat and stir in the orzo. Cook 8 to 10 minutes, stirring every couple of minutes so it does not stick to the bottom, until tender with a slight bite.",
+    "tip": "The orzo keeps drinking broth as it sits, so stop cooking while it still has a little chew."
+   },
+   {
+    "t": "Add lemon and greens",
+    "d": "Turn off the heat and stir in the shredded chicken, spinach, lemon zest and lemon juice. Let it sit 1 to 2 minutes until the spinach wilts. Stir in the dill, then taste and add more salt, pepper or lemon until it tastes bright."
+   },
+   {
+    "t": "Serve",
+    "d": "Ladle into bowls and top with extra dill and a crack of black pepper. Serve with lemon wedges and crusty bread."
+   }
+  ],
+  "tips": [
+   "Thighs stay juicier than breasts, but if you use breasts, check them at 12 minutes so they do not dry out.",
+   "Always add lemon off the heat. Boiling lemon juice turns it dull and slightly bitter.",
+   "If you plan to have leftovers, cook the orzo separately and add it to each bowl so it does not soak up all the broth."
+  ],
+  "storage": "Refrigerate in airtight containers for up to 4 days. The orzo absorbs broth overnight, so reheat gently over medium heat with an extra 1/2 to 1 cup broth; for freezing, freeze the soup without orzo for up to 3 months and cook fresh orzo when reheating.",
+  "variations": [
+   [
+    "Greek avgolemono style",
+    "Whisk 2 eggs with the lemon juice, slowly temper with 2 cups hot broth, then stir back in off the heat for a creamy, silky soup."
+   ],
+   [
+    "Gluten-free",
+    "Swap the orzo for 3/4 cup long-grain white rice and simmer 15 to 18 minutes, or use a gluten-free orzo."
+   ],
+   [
+    "Parmesan finish",
+    "Drop a Parmesan rind into the broth while the chicken poaches and serve with grated Parmesan on top (no longer dairy-free)."
+   ]
+  ],
+  "nutrition": {
+   "calories": 310,
+   "protein": 28,
+   "carbs": 29,
+   "fat": 9,
+   "fiber": 2
+  },
+  "faq": [
+   [
+    "Can I use rotisserie chicken?",
+    "Yes. Skip the poaching step, simmer the broth 10 minutes with the vegetables, cook the orzo, then stir in 3 to 4 cups of shredded rotisserie chicken at the end."
+   ],
+   [
+    "Why did my soup get thick overnight?",
+    "Orzo keeps absorbing liquid as it sits. Just add more broth or water when reheating until it is as brothy as you like."
+   ],
+   [
+    "Can I make it in a slow cooker?",
+    "Cook everything except the orzo, lemon, spinach and dill on low for 6 hours. Shred the chicken, add the orzo for the last 20 minutes on high, then finish with lemon and greens."
+   ]
+  ],
+  "img": "images/lemon-chicken-orzo-soup.webp",
+  "time": 50
+ },
+ {
+  "id": "honey-garlic-chicken-thighs",
+  "title": "Sticky Honey Garlic Chicken Thighs",
+  "subtitle": "Juicy seared chicken thighs glazed in a glossy, garlicky honey soy sauce that clings to every bite and begs for rice.",
+  "category": "Main Dishes",
+  "tags": [
+   "fall"
+  ],
+  "diet": [
+   "dairy-free"
+  ],
+  "prep": 10,
+  "cook": 25,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Glossy, garlicky, one-pan weeknight chicken",
+  "note": "We have made this on more rainy Tuesdays than we can count, and the pan never has leftover sauce because someone always mops it up with rice. Our trick is to let the glaze bubble one minute longer than feels right. That is when it turns properly sticky.",
+  "intro": [
+   "This is the dinner we reach for when we want something that tastes like takeout but comes together in one skillet. Boneless thighs get a hard sear for color, then simmer in a quick sauce of honey, soy, garlic, and a splash of vinegar until it reduces into a shiny glaze.",
+   "Thighs are forgiving, so they stay tender even if you get distracted setting the table. Serve them over steamed rice with something green on the side, and spoon every last bit of the sauce over the top."
+  ],
+  "why": [
+   [
+    "One skillet, easy cleanup",
+    "Everything happens in a single pan, from searing to glazing, so there is only one thing to wash."
+   ],
+   [
+    "Pantry-friendly sauce",
+    "Honey, soy sauce, garlic, and vinegar are staples most of us already have on hand."
+   ],
+   [
+    "Hard to overcook",
+    "Chicken thighs stay juicy and tender, which makes this a low-stress weeknight win."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the chicken",
+    "items": [
+     {
+      "q": 2,
+      "u": "lb",
+      "n": "boneless, skinless chicken thighs",
+      "note": "about 8 thighs, patted dry"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "black pepper"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "smoked paprika"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "neutral oil",
+      "note": "such as avocado or canola"
+     }
+    ]
+   },
+   {
+    "group": "For the sauce",
+    "items": [
+     {
+      "q": 0.33,
+      "u": "cup",
+      "n": "honey",
+      "g": 113
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "low-sodium soy sauce",
+      "note": "use tamari for gluten-free"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "rice vinegar",
+      "note": "or apple cider vinegar"
+     },
+     {
+      "q": 6,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "minced"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "cornstarch"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "water"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "red pepper flakes",
+      "note": "optional"
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "q": 2,
+      "u": "",
+      "n": "green onions",
+      "note": "thinly sliced"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "toasted sesame seeds"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "steamed rice",
+      "note": "for serving"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Season the chicken",
+    "d": "Pat the thighs very dry with paper towels, then season both sides with the salt, pepper, and smoked paprika. Dry chicken browns faster and splatters less, so do not skip the paper towels.",
+    "tip": "If you have 15 minutes, season the chicken and let it sit at room temperature for a better sear."
+   },
+   {
+    "t": "Mix the sauce",
+    "d": "In a small bowl, whisk together the honey, soy sauce, vinegar, garlic, and red pepper flakes. In a separate cup, stir the cornstarch into the water until smooth and set it aside."
+   },
+   {
+    "t": "Sear the thighs",
+    "d": "Heat the oil in a large skillet over medium-high heat until it shimmers. Lay the thighs in smooth side down and cook without moving for 5 to 6 minutes, until deep golden brown. Flip and cook 4 to 5 minutes more.",
+    "tip": "Work in two batches if your skillet is smaller than 12 inches. Crowding makes the chicken steam instead of brown."
+   },
+   {
+    "t": "Simmer in the sauce",
+    "d": "Lower the heat to medium and pour the sauce around the chicken. Let it bubble gently for 5 to 6 minutes, turning the thighs once, until the chicken reaches 175\u00b0F (80\u00b0C) inside and the sauce has reduced by about a third."
+   },
+   {
+    "t": "Thicken the glaze",
+    "d": "Stir the cornstarch slurry again and pour it into the pan. Simmer for 1 to 2 minutes, spooning sauce over the chicken, until the glaze is thick, glossy, and coats the back of a spoon."
+   },
+   {
+    "t": "Garnish and serve",
+    "d": "Take the pan off the heat and let it rest for 2 minutes so the glaze sets slightly. Scatter the green onions and sesame seeds on top and serve over rice with extra sauce spooned over."
+   }
+  ],
+  "tips": [
+   "Honey burns quickly, so keep the heat at medium once the sauce goes in and stir if you see dark spots forming.",
+   "Thighs are best cooked to 175\u00b0F (80\u00b0C) rather than 165\u00b0F (74\u00b0C). The extra heat melts the connective tissue and makes them more tender.",
+   "Measure the honey with a lightly oiled measuring cup and it will slide right out."
+  ],
+  "storage": "Store leftovers in an airtight container in the fridge for up to 4 days. Reheat gently in a covered skillet with a splash of water so the glaze loosens without drying out the chicken.",
+  "variations": [
+   [
+    "Honey sriracha",
+    "Add 1 to 2 tablespoons of sriracha to the sauce for a sweet and spicy kick."
+   ],
+   [
+    "Orange ginger",
+    "Swap the vinegar for 3 tablespoons of orange juice and add 1 teaspoon of grated fresh ginger."
+   ],
+   [
+    "Sheet pan style",
+    "Roast seasoned thighs at 425\u00b0F (220\u00b0C) for 18 minutes, brush with the thickened sauce, and broil for 2 minutes."
+   ]
+  ],
+  "nutrition": {
+   "calories": 420,
+   "protein": 44,
+   "carbs": 28,
+   "fat": 14,
+   "fiber": 0
+  },
+  "faq": [
+   [
+    "Can I use chicken breasts instead?",
+    "Yes. Slice them into cutlets about 3/4 inch thick so they cook evenly, and pull them at 165\u00b0F (74\u00b0C) since breasts dry out faster than thighs."
+   ],
+   [
+    "Can I use bone-in, skin-on thighs?",
+    "You can. Sear them skin side down for 8 minutes, then finish in a 400\u00b0F (200\u00b0C) oven for about 20 minutes before adding the sauce on the stovetop to reduce."
+   ],
+   [
+    "Is this recipe gluten-free?",
+    "Not as written, because regular soy sauce contains wheat. Use tamari or coconut aminos and it becomes gluten-free."
+   ]
+  ],
+  "img": "images/honey-garlic-chicken-thighs.webp",
+  "time": 35
+ },
+ {
+  "id": "mushroom-risotto",
+  "title": "Creamy Mushroom Risotto",
+  "subtitle": "Silky, parmesan-rich risotto loaded with deeply browned mushrooms, fresh thyme, and a splash of white wine for cozy nights.",
+  "category": "Main Dishes",
+  "tags": [
+   "fall"
+  ],
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "prep": 15,
+  "cook": 35,
+  "serves": 4,
+  "level": "Medium",
+  "desc": "Silky, savory, and worth the stirring",
+  "note": "We treat risotto night as an excuse to pour a small glass of the cooking wine and stand at the stove talking. The stirring is not constant, we promise. Our one rule is to brown the mushrooms separately, because pale mushrooms make a sad risotto.",
+  "intro": [
+   "Good risotto is creamy without any cream, and the secret is patience plus starchy arborio rice. Warm broth goes in a ladle at a time, and gentle stirring coaxes the starch out of the rice until it turns silky and loose.",
+   "We brown the mushrooms first in a hot pan so they get meaty and golden, then fold most of them back in at the end. A handful of parmesan and a knob of butter finish it off, and fall dinner is served."
+  ],
+  "why": [
+   [
+    "Restaurant results at home",
+    "A few simple techniques give you the glossy, flowing texture you expect from a good Italian restaurant."
+   ],
+   [
+    "Big mushroom flavor",
+    "Browning the mushrooms separately and using porcini soaking liquid layers in deep, savory flavor."
+   ],
+   [
+    "Meatless but hearty",
+    "It is filling enough to stand on its own as a main course with a simple green salad."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the mushrooms",
+    "items": [
+     {
+      "q": 0.5,
+      "u": "oz",
+      "n": "dried porcini mushrooms",
+      "note": "optional but recommended"
+     },
+     {
+      "q": 1,
+      "u": "lb",
+      "n": "cremini mushrooms",
+      "note": "sliced about 1/4 inch thick"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "olive oil"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "unsalted butter"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "kosher salt"
+     }
+    ]
+   },
+   {
+    "group": "For the risotto",
+    "items": [
+     {
+      "q": 6,
+      "u": "cups",
+      "n": "low-sodium vegetable broth",
+      "note": "check the label if you need it gluten-free"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "unsalted butter"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "medium yellow onion",
+      "note": "finely chopped"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "n": "garlic cloves",
+      "note": "minced"
+     },
+     {
+      "q": 1.5,
+      "u": "cups",
+      "n": "arborio rice",
+      "g": 300
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "dry white wine",
+      "note": "such as Pinot Grigio or Sauvignon Blanc"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "fresh thyme leaves"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "finely grated Parmesan",
+      "note": "use a vegetarian rennet-free Parmesan-style cheese if needed",
+      "g": 90
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "unsalted butter"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "fresh parsley",
+      "note": "chopped"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "salt and black pepper",
+      "note": "to taste"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Warm the broth",
+    "d": "If using porcini, soak them in 1 cup of hot water for 10 minutes, then lift them out, chop finely, and pour the soaking liquid into a saucepan with the broth, leaving any grit behind. Bring the broth to a bare simmer over low heat and keep it warm.",
+    "tip": "Cold broth shocks the rice and slows cooking, so keeping it hot really matters."
+   },
+   {
+    "t": "Brown the mushrooms",
+    "d": "Heat the olive oil and 1 tablespoon butter in a large, heavy pot over medium-high heat. Add the cremini in an even layer and cook without stirring for 3 minutes, then stir and cook 4 to 5 minutes more until deep golden and any liquid has evaporated. Season with the salt, stir in the chopped porcini, and transfer everything to a bowl."
+   },
+   {
+    "t": "Toast the rice",
+    "d": "Lower the heat to medium and melt 1 tablespoon butter in the same pot. Cook the onion for 4 to 5 minutes until soft and translucent, add the garlic for 30 seconds, then stir in the rice and toast for 2 minutes until the edges of the grains look translucent."
+   },
+   {
+    "t": "Add the wine",
+    "d": "Pour in the wine and stir until it is almost fully absorbed, about 1 to 2 minutes. The sharp alcohol smell should fade before you add any broth."
+   },
+   {
+    "t": "Ladle in the broth",
+    "d": "Add the broth one ladle (about 3/4 cup) at a time with the thyme, stirring often and waiting until each addition is mostly absorbed before adding the next. Keep it at a lively simmer, and after 18 to 22 minutes the rice should be creamy and tender with a slight bite in the center.",
+    "tip": "You may not need every drop of broth. Start tasting the rice at 16 minutes."
+   },
+   {
+    "t": "Finish and rest",
+    "d": "Take the pot off the heat and stir in most of the mushrooms, the Parmesan, and the last tablespoon of butter vigorously for 30 seconds until glossy. Season with salt and pepper, add a splash more broth if it looks stiff, and let it sit for 1 minute."
+   },
+   {
+    "t": "Serve right away",
+    "d": "Spoon the risotto onto warm plates, where it should spread gently rather than hold a stiff mound. Top with the reserved mushrooms, parsley, and extra Parmesan."
+   }
+  ],
+  "tips": [
+   "Use a wide, heavy pot like a Dutch oven so the rice cooks in a shallow layer and absorbs broth evenly.",
+   "Do not rinse the rice. The surface starch is exactly what makes risotto creamy.",
+   "Aim for a texture Italians call all'onda, meaning wavy. It should slowly flow when you tilt the plate."
+  ],
+  "storage": "Refrigerate leftovers in an airtight container for up to 3 days, knowing the texture will firm up as it cools. Reheat in a saucepan over low heat with a few splashes of broth, or shape cold risotto into patties and pan-fry them until crisp.",
+  "variations": [
+   [
+    "Butternut squash",
+    "Replace half the mushrooms with 2 cups of small roasted butternut squash cubes, folded in at the end."
+   ],
+   [
+    "Wild mushroom mix",
+    "Use a mix of shiitake, oyster, and chanterelle mushrooms for more texture and a deeper, woodsy flavor."
+   ],
+   [
+    "Lemon and peas",
+    "Stir in 1 cup of thawed frozen peas and the zest of a lemon during the last 3 minutes for a brighter bowl."
+   ]
+  ],
+  "nutrition": {
+   "calories": 560,
+   "protein": 17,
+   "carbs": 72,
+   "fat": 22,
+   "fiber": 3
+  },
+  "faq": [
+   [
+    "Can I make risotto without wine?",
+    "Yes. Replace the wine with an equal amount of broth plus 1 teaspoon of lemon juice or white wine vinegar for a little acidity."
+   ],
+   [
+    "Can I use a different rice?",
+    "Carnaroli and Vialone Nano both work beautifully. Long-grain rice like jasmine or basmati does not release enough starch to get creamy."
+   ],
+   [
+    "Do I really have to stir the whole time?",
+    "No. Stirring every 30 seconds or so is plenty. Constant stirring is a myth, but walking away for 10 minutes will scorch the bottom."
+   ]
+  ],
+  "img": "images/mushroom-risotto.webp",
+  "time": 50
+ },
+ {
+  "id": "harvest-kale-salad",
+  "title": "Harvest Kale Salad with Apples and Pecans",
+  "subtitle": "Tender massaged kale tossed with crisp apples, toasted pecans, tangy goat cheese, and a bright maple Dijon dressing.",
+  "category": "Salads",
+  "tags": [
+   "fall",
+   "healthy",
+   "quick"
+  ],
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "prep": 20,
+  "cook": 8,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Crunchy, sweet, tangy fall salad",
+  "note": "We bring this salad to every fall potluck, and it always comes home in an empty bowl. Massaging the kale feels a little silly the first time, but it is the difference between chewing forever and actually enjoying it. We like to use one tart apple and one sweet apple for contrast.",
+  "intro": [
+   "This is the salad that converts kale skeptics. A quick massage with the dressing softens the leaves and takes away their bitter edge, leaving them tender but still sturdy enough to hold up for hours.",
+   "Crisp apple slices, toasted pecans, dried cranberries, and creamy goat cheese bring everything that makes fall produce great. It works as a side for roast chicken or a light lunch on its own."
+  ],
+  "why": [
+   [
+    "Holds up beautifully",
+    "Unlike delicate greens, dressed kale stays crisp for hours, which makes it perfect for potlucks and meal prep."
+   ],
+   [
+    "Every texture in one bowl",
+    "Crunchy nuts, juicy apples, chewy cranberries, and creamy cheese keep every bite interesting."
+   ],
+   [
+    "Five-minute dressing",
+    "The maple Dijon vinaigrette shakes up in a jar and tastes far better than anything bottled."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the maple Dijon dressing",
+    "items": [
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "extra-virgin olive oil"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "apple cider vinegar"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "pure maple syrup"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "Dijon mustard"
+     },
+     {
+      "q": 1,
+      "u": "",
+      "n": "small shallot",
+      "note": "finely minced"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "black pepper",
+      "note": "to taste"
+     }
+    ]
+   },
+   {
+    "group": "For the salad",
+    "items": [
+     {
+      "q": 1,
+      "u": "",
+      "n": "large bunch lacinato (Tuscan) kale",
+      "note": "about 10 oz, stems removed, leaves thinly sliced"
+     },
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "pecan halves",
+      "g": 75
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "crisp apples",
+      "note": "such as Honeycrisp and Granny Smith, cored and thinly sliced"
+     },
+     {
+      "q": 0.33,
+      "u": "cup",
+      "n": "dried cranberries",
+      "g": 45
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "crumbled goat cheese",
+      "note": "or feta",
+      "g": 60
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "roasted pepitas",
+      "note": "optional"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Toast the pecans",
+    "d": "Spread the pecans in a dry skillet over medium-low heat and toast for 6 to 8 minutes, shaking the pan often, until fragrant and a shade darker. Tip them onto a plate to cool, then roughly chop.",
+    "tip": "Nuts go from toasted to burnt fast. Stay close and trust your nose."
+   },
+   {
+    "t": "Shake the dressing",
+    "d": "Add the olive oil, vinegar, maple syrup, Dijon, shallot, salt, and a few grinds of pepper to a jar. Seal and shake hard for 20 seconds until creamy and emulsified, then taste and adjust."
+   },
+   {
+    "t": "Massage the kale",
+    "d": "Put the sliced kale in a large bowl and drizzle with about half the dressing. Use clean hands to squeeze and rub the leaves for 2 to 3 minutes, until they darken to a deep green, shrink by about a third, and feel silky.",
+    "tip": "Let the massaged kale sit for 10 minutes if you have time. It gets even more tender."
+   },
+   {
+    "t": "Slice the apples",
+    "d": "Core the apples and slice them into thin wedges or matchsticks just before assembling. If you are working ahead, toss them with a squeeze of lemon juice to keep them from browning."
+   },
+   {
+    "t": "Toss and serve",
+    "d": "Add the apples, pecans, cranberries, and pepitas to the kale with the remaining dressing and toss well. Scatter the goat cheese over the top last so it stays in creamy crumbles, then serve."
+   }
+  ],
+  "tips": [
+   "Lacinato kale is more tender than curly kale, but curly works too. Just massage it an extra minute.",
+   "Slice the kale into thin ribbons, about 1/4 inch wide, so it is easy to eat with a fork.",
+   "For a vegan version, skip the goat cheese and add sliced avocado or extra pepitas for richness."
+  ],
+  "storage": "Dressed kale without the apples and cheese keeps in the fridge for up to 2 days. Store the nuts at room temperature and add them, the apples, and the cheese just before serving so everything stays crisp.",
+  "variations": [
+   [
+    "Roasted squash",
+    "Add 2 cups of roasted delicata or butternut squash for a warmer, heartier salad."
+   ],
+   [
+    "Make it a meal",
+    "Top with shredded rotisserie chicken or 1.5 cups of cooked quinoa for a filling lunch."
+   ],
+   [
+    "Pear and blue cheese",
+    "Swap the apples for ripe but firm pears and use crumbled blue cheese instead of goat cheese."
+   ]
+  ],
+  "nutrition": {
+   "calories": 380,
+   "protein": 8,
+   "carbs": 30,
+   "fat": 27,
+   "fiber": 6
+  },
+  "faq": [
+   [
+    "Why do I need to massage kale?",
+    "Raw kale is tough and slightly bitter. Rubbing it with dressing breaks down its fibers so it becomes tender, sweeter, and easier to digest."
+   ],
+   [
+    "Can I make this salad ahead?",
+    "Yes. Massage the kale with dressing up to a day ahead, then add the apples, pecans, and cheese right before serving."
+   ]
+  ],
+  "img": "images/harvest-kale-salad.webp",
+  "time": 28
+ },
+ {
+  "id": "apple-crisp",
+  "title": "Easy Apple Crisp",
+  "subtitle": "Tender cinnamon-spiced apples baked under a buttery, golden oat topping that shatters beautifully under a scoop of vanilla ice cream.",
+  "category": "Desserts",
+  "tags": [
+   "fall"
+  ],
+  "diet": [
+   "vegetarian"
+  ],
+  "prep": 20,
+  "cook": 45,
+  "chill": 15,
+  "serves": 8,
+  "level": "Easy",
+  "desc": "Bubbly apples, buttery oat crumble topping",
+  "note": "We make this the first weekend apples show up at the farmers market, and the whole house smells like fall for hours. We always make extra topping and keep it in the freezer for crisp emergencies. Eating the leftovers cold for breakfast is strongly encouraged.",
+  "intro": [
+   "Apple crisp is everything we love about apple pie without the fuss of rolling dough. Sliced apples get tossed with cinnamon and a little brown sugar, then buried under a crumbly mix of oats, flour, and cold butter.",
+   "In the oven the fruit turns soft and jammy while the topping bakes into crunchy golden clusters. Let it rest a few minutes so the juices thicken, then serve it warm with ice cream melting into the cracks."
+  ],
+  "why": [
+   [
+    "No pie crust required",
+    "The rustic topping comes together in one bowl with your fingers, no rolling pin needed."
+   ],
+   [
+    "Perfectly crunchy topping",
+    "Plenty of oats and cold butter bake into crisp, craggy clusters instead of a soggy blanket."
+   ],
+   [
+    "Just sweet enough",
+    "A modest amount of sugar in the filling lets the apples taste like apples."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the apple filling",
+    "items": [
+     {
+      "q": 3,
+      "u": "lb",
+      "n": "apples",
+      "note": "about 6 to 7 medium, a mix of Granny Smith and Honeycrisp, peeled and sliced 1/4 inch thick"
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "packed light brown sugar",
+      "g": 50
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "lemon juice"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "all-purpose flour"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "ground cinnamon"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "ground nutmeg"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "salt"
+     }
+    ]
+   },
+   {
+    "group": "For the crisp topping",
+    "items": [
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "all-purpose flour",
+      "g": 94
+     },
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "old-fashioned rolled oats",
+      "g": 68
+     },
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "packed light brown sugar",
+      "g": 160
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "ground cinnamon"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "cold unsalted butter",
+      "note": "1 stick, cut into small cubes",
+      "g": 113
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "chopped pecans or walnuts",
+      "note": "optional",
+      "g": 55
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "q": null,
+      "u": "",
+      "n": "vanilla ice cream or whipped cream",
+      "note": "optional"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Heat the oven",
+    "d": "Position a rack in the center of the oven and preheat to 375\u00b0F (190\u00b0C). Lightly butter a 9-inch square or 2-quart baking dish and set it on a rimmed baking sheet to catch any drips."
+   },
+   {
+    "t": "Make the filling",
+    "d": "In a large bowl, toss the sliced apples with the brown sugar, lemon juice, flour, cinnamon, nutmeg, and salt until evenly coated. Spread them into the baking dish in an even layer, pressing down gently so there are no big gaps.",
+    "tip": "Mixing tart and sweet apples gives you the best flavor, and firm varieties hold their shape instead of turning to mush."
+   },
+   {
+    "t": "Rub in the topping",
+    "d": "In the same bowl, whisk together the flour, oats, brown sugar, cinnamon, and salt. Add the cold butter cubes and rub them in with your fingertips for 2 to 3 minutes, until the mixture looks like damp sand with some pea-sized clumps, then stir in the nuts.",
+    "tip": "Squeeze a few handfuls together to make bigger clusters. They bake into the best crunchy bits."
+   },
+   {
+    "t": "Top the apples",
+    "d": "Scatter the topping evenly over the apples all the way to the edges. Do not pack it down, since a loose layer bakes up crisper."
+   },
+   {
+    "t": "Bake until bubbling",
+    "d": "Bake for 40 to 45 minutes, until the topping is deep golden brown and the juices are bubbling thickly around the edges. A knife should slide easily into the apples in the center. If the top browns too fast, tent loosely with foil for the last 10 minutes."
+   },
+   {
+    "t": "Rest and serve",
+    "d": "Let the crisp cool on a wire rack for at least 15 minutes so the juices thicken and the topping firms up. Serve warm with a scoop of vanilla ice cream or a dollop of whipped cream."
+   }
+  ],
+  "tips": [
+   "Keep the butter cold right up until you use it. Warm butter makes a greasy, flat topping instead of crisp clusters.",
+   "Slice the apples evenly at about 1/4 inch so they all turn tender at the same time.",
+   "Make a double batch of topping and freeze half in a zip-top bag for up to 3 months. It goes straight from the freezer onto the fruit."
+  ],
+  "storage": "Cover and keep the crisp at room temperature for 1 day or in the fridge for up to 4 days. Reheat individual portions in a 350\u00b0F (175\u00b0C) oven for about 10 minutes to bring back the crunch.",
+  "variations": [
+   [
+    "Apple cranberry",
+    "Toss 1 cup of fresh or frozen cranberries into the filling and add 2 extra tablespoons of brown sugar."
+   ],
+   [
+    "Pear and ginger",
+    "Use firm Bosc pears instead of apples and add 1 teaspoon of ground ginger to the filling."
+   ],
+   [
+    "Gluten-free crisp",
+    "Swap the flour for a 1:1 gluten-free baking blend and use certified gluten-free oats."
+   ]
+  ],
+  "nutrition": {
+   "calories": 360,
+   "protein": 3,
+   "carbs": 60,
+   "fat": 13,
+   "fiber": 5
+  },
+  "faq": [
+   [
+    "What are the best apples for apple crisp?",
+    "Firm, slightly tart apples work best. We like a mix of Granny Smith with Honeycrisp, Braeburn, Pink Lady, or Jonagold."
+   ],
+   [
+    "What is the difference between a crisp and a crumble?",
+    "A crisp traditionally includes oats in the topping, which bake up crunchy. A crumble usually has a streusel of just flour, sugar, and butter."
+   ],
+   [
+    "Can I make apple crisp ahead of time?",
+    "Yes. Assemble it up to 1 day ahead, cover, and refrigerate, then add 5 to 10 minutes to the baking time. You can also bake it fully and rewarm it."
+   ]
+  ],
+  "img": "images/apple-crisp.webp",
+  "time": 80
+ }
+]
