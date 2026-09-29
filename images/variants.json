@@ -1,0 +1,278 @@
+{
+ "images/apple-crisp.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/avocado-toast-jammy-eggs.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/beef-tacos.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/breakfast-burritos.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/buttermilk-pancakes.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/butternut-squash-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/chicken-avocado-salad.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 824
+ },
+ "images/chocolate-chip-cookies.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/chocolate-mousse-cake.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/cinnamon-french-toast.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/creamy-garlic-pasta.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/guide-knife.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-pantry.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-rice.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/harvest-kale-salad.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/honey-garlic-chicken-thighs.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/lemon-chicken-orzo-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480
+  ],
+  "width": 733
+ },
+ "images/mediterranean-grain-bowl.webp": {
+  "variants": [
+   160,
+   320,
+   480
+  ],
+  "width": 733
+ },
+ "images/mushroom-risotto.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/our-story.webp": {
+  "variants": [
+   160,
+   320,
+   480
+  ],
+  "width": 733
+ },
+ "images/overnight-oats.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/shakshuka.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/sheet-pan-salmon.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ },
+ "images/step-cookies-dough.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/step-pancakes-batter.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/step-pancakes-flip.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/step-pasta-sauce.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/step-shakshuka-eggs.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/step-shakshuka-sauce.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/tomato-basil-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1100
+ }
+}
