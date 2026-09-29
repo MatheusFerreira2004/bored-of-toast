@@ -9,6 +9,7 @@ The pages are generated from content files by a small Python script, so every re
 - `_src/guides_legal.json`: kitchen guides, privacy policy and terms
 - `_src/build.py`: the generator (pages, Recipe schema for Google, sitemap, search index)
 - `_src/styles.css`, `_src/app.js`: design and interactive features
+- `fonts/`: self-hosted WOFF2 fonts (Fraunces, Inter, Caveat, latin subset). No request goes to Google Fonts.
 
 To add a recipe: add an object to `recipes.json`, add its photo to `images/<id>.webp`, then run `python3 _src/build.py` from a copy of the project.
 

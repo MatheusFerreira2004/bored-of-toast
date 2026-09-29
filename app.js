@@ -5,6 +5,7 @@
   const ROOT = document.body.dataset.root || '';
   const INDEX = window.BOT_INDEX || [];
   const LIST_KEY = 'bot_shopping_v1';
+  window.__botReady = true;
   document.documentElement.classList.add('js');
 
   /* ---------- helpers ---------- */

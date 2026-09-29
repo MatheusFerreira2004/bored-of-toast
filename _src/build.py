@@ -7,10 +7,11 @@ import json, os, html, re, datetime, shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20260929-1'
+VER = '20260929-2'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
+MODIFIED = '2026-09-29'   # bump when recipe content changes (Recipe schema dateModified)
 GISCUS = None      # e.g. {'repo': 'MatheusFerreira2004/bored-of-toast', 'repo_id': '...', 'category': 'Comments', 'category_id': '...'}
 ANALYTICS = None   # e.g. '<script defer data-domain="boredoftoast.com" src="https://plausible.io/js/script.js"></script>'
 
@@ -99,7 +100,7 @@ def header(root, active):
     return f'''<header class="site-header" id="site-header">
   <div class="container">
     <a href="{root}" class="brand" aria-label="Bored of Toast home"><img src="{root}images/logo-white.png" alt="Bored of Toast" width="128" height="46"></a>
-    <nav class="nav" id="nav">{links}</nav>
+    <nav class="nav" id="nav" aria-label="Main">{links}</nav>
     <div class="nav-tools">
       <button class="icon-btn" data-open-search aria-label="Search recipes">{ICON['search']}</button>
       <a class="icon-btn" href="{root}shopping-list/" aria-label="Shopping list">{ICON['bag']}<span class="bag-count" data-bag-count hidden>0</span></a>
@@ -121,9 +122,9 @@ def footer(root):
         <a href="#" aria-label="Facebook">{ICON['facebook']}</a>
       </div>
     </div>
-    <div><h4>Explore</h4><ul>{nav}</ul></div>
-    <div><h4>Recipes</h4><ul>{cats}</ul></div>
-    <div class="footer-cta"><h4>Can't decide?</h4><p>Let us pick something delicious for you.</p><button class="btn btn-yellow" data-random>Surprise me {ICON['arrow']}</button></div>
+    <div><p class="fh">Explore</p><ul>{nav}</ul></div>
+    <div><p class="fh">Recipes</p><ul>{cats}</ul></div>
+    <div class="footer-cta"><p class="fh">Can't decide?</p><p>Let us pick something delicious for you.</p><button class="btn btn-yellow" data-random>Surprise me {ICON['arrow']}</button></div>
   </div>
   <div class="container footer-bottom">
     <span>© {datetime.date.today().year} Bored of Toast. All rights reserved.</span>
@@ -160,11 +161,12 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
   <meta name="theme-color" content="#3f5130">
   <link rel="icon" href="{root}images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="{root}images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){{if(!window.__botReady)document.documentElement.classList.add('js-fallback')}},4000)</script>
   <link rel="stylesheet" href="{root}styles.css?v={VER}">
   {ld}{head_extra}{ANALYTICS or ''}
 </head>
 <body data-root="{root}" data-page="{active}" {body_attr}>
+<a class="skip-link" href="#main">Skip to content</a>
 {header(root, active)}
 <main id="main">
 {body}
@@ -191,7 +193,7 @@ def hero_bleed(root, img, eyebrow, h1, p, actions='', card='', short=False, trus
       {f'<div class="hero-actions">{actions}</div>' if actions else ''}
       {trust}
     </div>
-    <div class="hero-art art-bleed"><div class="bleed-img" role="img" aria-label="" style="background-image:url('{root}{img}')"></div>{card}</div>
+    <div class="hero-art art-bleed"><div class="bleed-img" aria-hidden="true" style="background-image:url('{root}{img}')"></div>{card}</div>
   </div>
   {WAVE}
 </section>'''
@@ -339,11 +341,11 @@ def recipe_ld(r):
           "image": [f"{SITE_URL}images/og/{r['id']}.jpg", f"{SITE_URL}images/pins/{r['id']}.jpg", SITE_URL + r['img']],
           "author": {"@type": "Organization", "name": "Bored of Toast", "url": SITE_URL},
           "publisher": {"@type": "Organization", "name": "Bored of Toast", "logo": {"@type": "ImageObject", "url": SITE_URL + "images/logo.png"}},
-          "datePublished": PUBLISHED, "prepTime": iso(r['prep']), "cookTime": iso(r['cook'] + r.get('chill', 0)), "totalTime": iso(r['time']),
+          "datePublished": PUBLISHED, "dateModified": MODIFIED, "prepTime": iso(r['prep']), "cookTime": iso(r['cook'] + r.get('chill', 0)), "totalTime": iso(r['time']),
           "recipeYield": f"{r['serves']} {r.get('servesLabel', 'servings')}", "recipeCategory": r['category'], "recipeCuisine": "American",
           "keywords": ', '.join([r['category']] + r['tags'] + r.get('diet', [])),
           "nutrition": {"@type": "NutritionInformation", "calories": f"{n['calories']} calories", "proteinContent": f"{n['protein']} g",
-                        "carbohydrateContent": f"{n['carbs']} g", "fatContent": f"{n['fat']} g", "fiberContent": f"{n['fiber']} g"},
+                        "carbohydrateContent": f"{n['carbs']} g", "fatContent": f"{n['fat']} g", "fiberContent": f"{n['fiber']} g", "servingSize": "1 " + r.get('servesLabel', 'serving').rstrip('s')},
           "recipeIngredient": ings, "recipeInstructions": steps}
     sd = [SCHEMA_DIET[d] for d in r.get('diet', []) if d in SCHEMA_DIET]
     if sd: ld['suitableForDiet'] = sd
@@ -361,7 +363,7 @@ def build_recipe(r):
     n = r['nutrition']
     tagline = ' · '.join([r['category']] + (['Quick & Easy'] if 'quick' in r['tags'] else []) + (['Healthy'] if 'healthy' in r['tags'] else []) + (['Fall'] if 'fall' in r['tags'] else []))
     pin_url = f"https://www.pinterest.com/pin/create/button/?url={url}&media={SITE_URL}images/pins/{r['id']}.jpg&description={html.escape(r['title'] + ' | Bored of Toast')}"
-    groups = ''.join(f'''<div class="ing-group"><h4>{e(g['group'])}</h4><ul class="ing-list">{''.join(f'<li><label><input type="checkbox"><span>{"<b>" + e(fmt_qty(i["q"]) + (" " + i["u"] if i["u"] else "")) + "</b> " if i.get("q") is not None else ""}{e(i["n"])}{f" <em>({e(i["note"])})</em>" if i.get("note") else ""}</span></label></li>' for i in g['items'])}</ul></div>''' for g in r['ingredients'])
+    groups = ''.join(f'''<div class="ing-group"><h3>{e(g['group'])}</h3><ul class="ing-list">{''.join(f'<li><label><input type="checkbox"><span>{"<b>" + e(fmt_qty(i["q"]) + (" " + i["u"] if i["u"] else "")) + "</b> " if i.get("q") is not None else ""}{e(i["n"])}{f" <em>({e(i["note"])})</em>" if i.get("note") else ""}</span></label></li>' for i in g['items'])}</ul></div>''' for g in r['ingredients'])
     steps = ''.join(f'''<li class="step" id="step-{k}"><div class="step-num" role="button" tabindex="0" aria-label="Mark step {k} done">{k}</div><div class="step-body"><h3>{e(s['t'])}</h3><p>{e(s['d'])}</p>{f'<figure class="step-img"><img src="{root}{s["img"]}" alt="{e(s["t"])}" loading="lazy" width="1200" height="800"></figure>' if s.get('img') else ''}{f'<div class="step-tip">{ICON["bulb"]}<div><strong>Tip:</strong> {e(s["tip"])}</div></div>' if s.get('tip') else ''}</div></li>''' for k, s in enumerate(r['steps'], 1))
     video = f'<section class="reveal"><h2>Watch how it\'s made</h2><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(r["video"])}" title="{e(r["title"])} video" loading="lazy" allowfullscreen></iframe></div></section>' if r.get('video') else ''
     comments = ''
@@ -402,7 +404,7 @@ def build_recipe(r):
 <div class="container section">
   <div class="recipe-layout">
     <article class="recipe-main">
-      <aside class="kitchen-note reveal"><span class="hand">From our kitchen</span><p>{e(r['note'])}</p><span class="sig">The Bored of Toast kitchen ♥</span></aside>
+      <div class="kitchen-note reveal"><span class="hand">From our kitchen</span><p>{e(r['note'])}</p><span class="sig">The Bored of Toast kitchen ♥</span></div>
       <section class="lead reveal">{''.join(f'<p>{e(p)}</p>' for p in r['intro'])}</section>
       <section class="reveal"><h2>Why you'll love it</h2><div class="why-grid">{''.join(f'<div class="why-card"><div class="icon-circle">{WHY_ICONS[i % 3]}</div><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(r['why']))}</div></section>
 
@@ -493,7 +495,7 @@ def build_guide(g):
         return out + '</section>'
     body = f'''<section class="hero page-hero">
   <div class="container narrow">
-    <nav class="breadcrumb"><a href="{root}">Home</a> / <a href="{root}guides/">Guides</a></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{root}">Home</a> / <a href="{root}guides/">Guides</a></nav>
     <p class="eyebrow">{e(g['category'])} · {g['readTime']} min read</p>
     <h1>{e(g['title'])}</h1><p class="hero-lead">{e(g['subtitle'])}</p>
   </div>{WAVE}
@@ -502,7 +504,7 @@ def build_guide(g):
 <div class="container section guide-layout">
   <article class="prose">
     <div class="lead">{''.join(f'<p>{e(p)}</p>' for p in g['intro'])}</div>
-    <div class="takeaways reveal"><h3>Key takeaways</h3><ul>{''.join(f'<li>{ICON["check"]}<span>{e(t)}</span></li>' for t in g['takeaways'])}</ul></div>
+    <div class="takeaways reveal"><h2>Key takeaways</h2><ul>{''.join(f'<li>{ICON["check"]}<span>{e(t)}</span></li>' for t in g['takeaways'])}</ul></div>
     {''.join(sec(i, s) for i, s in enumerate(g['sections'], 1))}
     <section class="faq reveal"><h2>Questions</h2>{''.join(f'<details><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in g.get('faq', []))}</section>
   </article>
@@ -643,6 +645,7 @@ def build_sitemap():
 if __name__ == '__main__':
     for f in ['styles.css', 'app.js']:
         shutil.copy(os.path.join(HERE, f), os.path.join(OUT, f))
+    shutil.copytree(os.path.join(HERE, '..', 'fonts'), os.path.join(OUT, 'fonts'), dirs_exist_ok=True)   # self-hosted fonts live in /fonts
     build_home(); build_recipes()
     for r in RECIPES: build_recipe(r)
     build_guides(); build_meal_plan(); build_shopping(); build_about()
