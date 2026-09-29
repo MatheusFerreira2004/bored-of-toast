@@ -118,7 +118,7 @@ def footer(root):
       <p class="footer-tagline">Good food without the fuss. Simple, tested recipes for real life.</p>
       <div class="socials">
         <a href="#" aria-label="Instagram">{ICON['instagram']}</a><a href="#" aria-label="Pinterest">{ICON['pin']}</a>
-        <a href="#" aria-label="Facebook">{ICON['facebook']}</a><a href="#" aria-label="YouTube">{ICON['youtube']}</a>
+        <a href="#" aria-label="Facebook">{ICON['facebook']}</a>
       </div>
     </div>
     <div><h4>Explore</h4><ul>{nav}</ul></div>

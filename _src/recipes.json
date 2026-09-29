@@ -2,7 +2,7 @@
  {
   "id": "chicken-avocado-salad",
   "title": "Grilled Chicken Avocado Salad",
-  "subtitle": "Smoky, juicy chicken over peppery greens with creamy avocado and a bright honey-lemon dressing.",
+  "subtitle": "Paprika-rubbed chicken, seared hard and sliced warm over arugula, with cool avocado and a honey-lemon dressing that shakes up in seconds.",
   "category": "Salads",
   "tags": [
    "quick",
@@ -12,23 +12,23 @@
   "cook": 15,
   "serves": 2,
   "level": "Easy",
-  "desc": "Juicy chicken, creamy avocado and peppery greens.",
+  "desc": "Warm smoky chicken, cool creamy avocado.",
   "intro": [
-   "This is the salad we make when we want something fresh but still want to feel full an hour later. The chicken gets a quick smoky rub and a hard sear, so it stays juicy inside with a golden crust outside.",
-   "Everything else comes together while the chicken rests: a handful of greens, sweet cherry tomatoes, ripe avocado and a three-ingredient dressing you will want to put on everything."
+   "Why do so many chicken salads taste like a punishment? Usually it is dry, pale chicken and a dressing that slides right off the leaves. Here the breasts get a smoky paprika rub and a hard, undisturbed sear, so you get a browned crust and a juicy center in about 12 minutes.",
+   "The trick is a dry surface. Patting the chicken with paper towels removes the moisture that would otherwise have to boil off before the Maillard reaction can start, which is why a wet breast steams and turns gray. While it rests, the honey in the dressing helps hold the oil and lemon in a creamy emulsion that actually clings to the arugula."
   ],
   "why": [
    [
-    "Ready in 25 minutes",
-    "Faster than delivery and far more satisfying."
+    "On the table in 25 minutes",
+    "The dressing and salad come together while the chicken rests, so nothing waits on anything else."
    ],
    [
-    "High in protein",
-    "About 40 g per serving to keep you full."
+    "About 42 g protein",
+    "Two chicken breasts split between two bowls makes this a full dinner, not a side."
    ],
    [
-    "Meal-prep friendly",
-    "Cook the chicken ahead and assemble in minutes."
+    "Built for meal prep",
+    "Cook the chicken and shake the dressing on Sunday, then assemble fresh bowls in five minutes."
    ]
   ],
   "ingredients": [
@@ -122,45 +122,46 @@
   ],
   "steps": [
    {
-    "t": "Season the chicken",
-    "d": "Pat the chicken dry with paper towels. If one end is much thicker, pound it to an even \u00be-inch thickness. Rub with olive oil, then season all over with smoked paprika, garlic powder and salt.",
-    "tip": "Even thickness means the chicken cooks evenly, with no dry edges and raw centers."
+    "t": "Dry and season the chicken",
+    "d": "Pat the chicken breasts thoroughly dry with paper towels. If one end is much thicker, pound it to an even 3/4-inch thickness between two sheets of plastic wrap. Rub all over with the olive oil, then season both sides with the smoked paprika, garlic powder and salt.",
+    "tip": "Even thickness is the whole game with breasts. A thin tail and a fat middle guarantees one part dries out while the other is still pink."
    },
    {
-    "t": "Sear until golden",
-    "d": "Heat a grill pan or skillet over medium-high heat. Cook the chicken for 5\u20136 minutes per side, without moving it, until deeply golden and the thickest part reaches 165\u00b0F (74\u00b0C)."
+    "t": "Sear without touching",
+    "d": "Heat a grill pan or skillet over medium-high heat until a drop of water hisses on contact. Lay in the chicken and leave it alone for 5 to 6 minutes, until it releases easily and the underside is deep golden with a toasty paprika smell. Flip and cook another 5 to 6 minutes, until the thickest part reads 165°F (74°C).",
+    "tip": "If the chicken sticks when you try to flip it, wait another minute. Once the crust forms, it releases on its own."
    },
    {
-    "t": "Let it rest",
-    "d": "Move the chicken to a cutting board and rest for 5 minutes before slicing against the grain. This keeps the juices inside the meat instead of on the board."
+    "t": "Rest, then slice",
+    "d": "Move the chicken to a cutting board and let it rest for 5 minutes. As it cools slightly, the muscle fibers relax and hold onto their juices instead of flooding the board. Slice against the grain into 1/2-inch strips."
    },
    {
     "t": "Shake the dressing",
-    "d": "Add the olive oil, lemon juice, honey, a pinch of salt and pepper to a small jar. Close and shake until creamy and emulsified."
+    "d": "Add the extra-virgin olive oil, lemon juice, honey and a pinch of salt and pepper to a small jar. Screw on the lid and shake hard for 15 seconds, until the dressing turns pale, cloudy and slightly thick. Taste and add more salt or lemon if it needs brightness."
    },
    {
-    "t": "Assemble and serve",
-    "d": "Toss the greens and tomatoes with half of the dressing and divide between two bowls. Top with sliced chicken and avocado, drizzle with the remaining dressing and finish with sesame seeds."
+    "t": "Toss and build the bowls",
+    "d": "Toss the greens and cherry tomatoes with half the dressing until the leaves look glossy, and divide between two bowls. Top with the warm sliced chicken and fresh avocado slices. Drizzle with the remaining dressing and scatter the toasted sesame seeds over the top."
    }
   ],
   "tips": [
-   "Slice the avocado at the very last minute and squeeze a little lemon over it so it stays bright green.",
-   "No grill pan? A cast-iron skillet gives you an even better crust.",
-   "Warm chicken over cold greens is part of the magic. Assemble just before eating."
+   "Salt the chicken up to a day ahead and leave it uncovered in the fridge. The salt draws out moisture, dissolves into it and is reabsorbed, seasoning the meat deeper and drying the surface for a better crust.",
+   "Toast the sesame seeds in a dry skillet over medium heat for 2 to 3 minutes, shaking the pan, until golden and fragrant. Raw seeds taste flat by comparison.",
+   "If your avocado is underripe, slice it thin and toss it with a little of the dressing first. The acid and salt soften its firmness and bring out more flavor."
   ],
-  "storage": "Store the chicken, greens and dressing separately in the fridge for up to 3 days. Slice the avocado fresh each time.",
+  "storage": "Keep the cooked chicken, washed greens and dressing in separate airtight containers in the fridge for up to 3 days. The dressing will firm up when cold, so let it sit 10 minutes and shake again. Eat the chicken cold, or warm it in a skillet over medium-low heat for 2 to 3 minutes, and slice the avocado fresh.",
   "variations": [
    [
-    "Make it vegetarian",
-    "Swap the chicken for crispy roasted chickpeas or grilled halloumi."
+    "Swap in halloumi",
+    "Replace the chicken with 8 oz sliced halloumi, seared 2 minutes per side over medium-high heat. Skip the salt in the rub, since the cheese is already salty."
    ],
    [
-    "Add some crunch",
-    "Toss in toasted almonds, pumpkin seeds or crushed tortilla chips."
+    "Use chicken thighs",
+    "Boneless thighs stay juicier and forgive overcooking. Cook 6 to 7 minutes per side, to 175°F (80°C)."
    ],
    [
-    "Turn it into a wrap",
-    "Roll everything into a large tortilla for a lunch you can take anywhere."
+    "Roll it into wraps",
+    "Chop everything smaller and roll into two large tortillas with the dressing on the side, so the wrap stays crisp until lunch."
    ]
   ],
   "nutrition": {
@@ -172,15 +173,19 @@
   },
   "faq": [
    [
-    "Can I use chicken thighs?",
-    "Yes. Boneless thighs are even juicier. Cook them for 6\u20137 minutes per side."
+    "How do I know the chicken is done without a thermometer?",
+    "Cut into the thickest part. The juices should run clear and the meat should be opaque all the way through with no pink. A thermometer is still the best $15 you can spend, since it takes the guessing out of lean breasts."
    ],
    [
     "Can I make the dressing ahead?",
-    "Absolutely. It keeps in the fridge for up to a week. Shake again before using."
+    "Yes. It keeps in a sealed jar in the fridge for up to a week. The olive oil solidifies when cold, so let it warm up for a few minutes and shake it well before using."
+   ],
+   [
+    "Why did my chicken turn out dry?",
+    "It was likely cooked past 165°F or sliced right away without resting. Pull it as soon as the thickest part hits temperature, and pound uneven breasts so the thin end does not overcook."
    ]
   ],
-  "note": "This is our default \"we should eat something green\" dinner. We keep a jar of the dressing in the fridge door all week, and it makes even a sad desk lunch feel like a treat.",
+  "note": "We think this salad is at its best when the chicken goes on still warm, so the greens wilt just slightly at the edges. Make a double batch of the dressing, since it keeps all week and wakes up roasted vegetables too. The one step not to skip is the rest after searing.",
   "diet": [
    "gluten-free",
    "dairy-free"
@@ -191,7 +196,7 @@
  {
   "id": "creamy-garlic-pasta",
   "title": "Creamy Garlic Pasta",
-  "subtitle": "Silky Parmesan cream sauce, two kinds of garlic and just one pan. Comfort food in 20 minutes.",
+  "subtitle": "Fettuccine tossed in a glossy Parmesan cream sauce built on butter-toasted garlic, done in the time it takes to boil water.",
   "category": "Main Dishes",
   "tags": [
    "quick"
@@ -200,23 +205,23 @@
   "cook": 15,
   "serves": 4,
   "level": "Easy",
-  "desc": "Rich, comforting and ready in 20 minutes.",
+  "desc": "Garlicky, silky, done in 20 minutes.",
   "intro": [
-   "Some nights you need a big bowl of pasta, and you need it fast. This one is built on pantry staples and gets its depth from using garlic two ways: minced for bold flavor and thinly sliced for sweet, golden bites.",
-   "The secret to a sauce that is glossy instead of greasy is starchy pasta water. It helps the cream and cheese cling to every strand."
+   "What if the best pasta sauce in your repertoire took fewer ingredients than a grocery list for toast? Six cloves of garlic, a cup of cream and a handful of good Parmesan are all it asks for, and the whole thing comes together in the same 15 minutes the fettuccine spends in the pot.",
+   "The quiet hero is the starchy pasta water. The starch released by the noodles acts as an emulsifier, helping the butterfat in the cream and the proteins in the cheese bind into one glossy sauce instead of separating into a greasy puddle. Splitting the garlic two ways helps too: the sliced pieces turn sweet and nutty, while the minced ones keep a sharper bite."
   ],
   "why": [
    [
-    "20 minutes, start to finish",
-    "The sauce cooks while the pasta boils."
+    "Ready in 20 minutes",
+    "The sauce simmers in the skillet while the pasta boils, so nothing waits on anything else."
    ],
    [
-    "Pantry ingredients",
-    "Pasta, garlic, butter, cream and cheese."
+    "Two textures of garlic",
+    "Sliced garlic mellows into sweet, golden chips while minced garlic keeps the sauce lively."
    ],
    [
-    "Crowd-pleaser",
-    "Kids and adults both go back for seconds."
+    "Sauce that never breaks",
+    "Low heat and starchy pasta water keep the Parmesan smooth, glossy and clinging to every strand."
    ]
   ],
   "ingredients": [
@@ -279,50 +284,51 @@
   ],
   "steps": [
    {
-    "t": "Boil the pasta",
-    "d": "Bring a large pot of water to a boil and add the salt. Cook the fettuccine 1 minute less than the package says. Before draining, scoop out 1 cup of the cooking water.",
-    "tip": "The water should taste like the sea. This is your only chance to season the pasta itself."
+    "t": "Boil and salt the pasta",
+    "d": "Bring a large pot of water to a rolling boil over high heat and add the salt. Cook the fettuccine 1 minute less than the package directs, so it can finish in the sauce without going soft. Before draining, scoop out 1 cup of the cloudy cooking water and set it by the stove.",
+    "tip": "Put a heatproof measuring cup in the colander as a reminder. It is the single easiest way to never pour the pasta water down the drain again."
    },
    {
-    "t": "Toast the garlic",
-    "d": "While the pasta cooks, melt the butter in a large skillet over medium-low heat. Add the sliced and minced garlic and cook for 2\u20133 minutes, stirring, until fragrant and just turning golden."
+    "t": "Toast the garlic gently",
+    "d": "While the pasta cooks, melt the butter in a large skillet over medium-low heat until it stops foaming. Add the sliced and minced garlic and cook for 2 to 3 minutes, stirring, until it smells nutty and the slices are just turning pale gold at the edges. Pull back the heat if it browns fast, since dark garlic turns bitter."
    },
    {
-    "t": "Build the sauce",
-    "d": "Pour in the cream and bring to a gentle simmer. Let it bubble softly for 3 minutes to thicken slightly.",
+    "t": "Simmer the cream",
+    "d": "Pour in the cream and bring it to a gentle simmer, with small, lazy bubbles around the edges. Let it bubble softly for 3 minutes, until it thickens just enough to coat the back of a spoon.",
     "img": "images/step-pasta-sauce.webp"
    },
    {
-    "t": "Melt in the cheese",
-    "d": "Turn the heat to low and stir in the Parmesan a handful at a time until smooth. Keeping the heat low stops the cheese from turning grainy."
+    "t": "Melt in the Parmesan",
+    "d": "Turn the heat to low and stir in the Parmesan a handful at a time, waiting for each addition to melt before adding the next. The sauce should turn smooth and pale gold. Gentle heat matters here, because boiling makes the cheese proteins seize into grainy clumps.",
+    "tip": "If the sauce does turn grainy, take the pan off the heat and whisk in a splash of hot pasta water. It often brings a slightly broken sauce back together."
    },
    {
-    "t": "Toss and loosen",
-    "d": "Add the pasta to the skillet with \u00bd cup of pasta water. Toss with tongs for 1\u20132 minutes until the sauce is glossy and coats every strand. Add more water if it looks thick."
+    "t": "Toss with pasta water",
+    "d": "Add the drained pasta to the skillet with 1/2 cup of the reserved pasta water. Toss with tongs over low heat for 1 to 2 minutes, until the sauce turns glossy and clings to every strand. If it looks tight or sticky, loosen it with more pasta water a splash at a time."
    },
    {
-    "t": "Finish and serve",
-    "d": "Season generously with black pepper, taste for salt and top with parsley and extra Parmesan. Serve right away."
+    "t": "Season and serve",
+    "d": "Finish with plenty of black pepper, taste for salt, and scatter over the parsley and extra Parmesan. Serve right away on warm plates, since cream sauces thicken as they cool."
    }
   ],
   "tips": [
-   "Grate your own Parmesan. Pre-shredded cheese has anti-caking agents that keep it from melting smoothly.",
-   "Do not let the garlic brown too much. It turns bitter in seconds.",
-   "The sauce thickens as it sits, so keep some pasta water nearby."
+   "Grate the Parmesan on the fine side of a box grater or a rasp. Fine shreds melt almost instantly on low heat, while coarse ones need more time and more heat, which is how sauces go grainy.",
+   "Warm your serving bowls with a ladle of hot pasta water while you toss the noodles. A warm bowl keeps the sauce loose to the last bite.",
+   "Reserve the full cup of pasta water even though the recipe calls for half. Cream sauces tighten quickly, and having extra on hand lets you rescue a thick sauce at the table."
   ],
-  "storage": "Keep leftovers in an airtight container in the fridge for up to 2 days. Reheat gently in a pan with a splash of milk or water, stirring until creamy again.",
+  "storage": "Refrigerate leftovers in an airtight container for up to 2 days. Reheat in a skillet over low heat with a splash of milk or water, stirring constantly until the sauce turns creamy again. Microwaving tends to split the sauce, so the stovetop is worth the extra minute.",
   "variations": [
    [
-    "Add protein",
-    "Top with grilled chicken, saut\u00e9ed shrimp or crispy pancetta."
+    "Lemon and pepper",
+    "Add the finely grated zest of 1 lemon with the Parmesan and a squeeze of juice at the end. Go heavier on the black pepper to balance the richness."
    ],
    [
-    "Add greens",
-    "Stir in two handfuls of baby spinach right at the end."
+    "Add a protein",
+    "Top each bowl with sliced grilled chicken, seared shrimp or crisp pancetta. Cook the protein first and keep it warm so the pasta timing stays the same."
    ],
    [
-    "Lemon twist",
-    "Add the zest of one lemon for a brighter, lighter sauce."
+    "Greens stirred in",
+    "Toss 2 big handfuls of baby spinach into the sauce with the pasta. It wilts in about a minute, so you may need an extra splash of pasta water."
    ]
   ],
   "nutrition": {
@@ -334,15 +340,19 @@
   },
   "faq": [
    [
-    "Can I use milk instead of cream?",
-    "Whole milk works, but the sauce will be thinner. Stir 1 tsp of cornstarch into the cold milk first to help it thicken."
+    "Can I use milk instead of heavy cream?",
+    "Whole milk works, but the sauce will be thinner and more likely to curdle. Whisk 1 teaspoon of cornstarch into the cold milk before adding it, and keep it at a bare simmer."
    ],
    [
-    "Which pasta works best?",
-    "Long, flat shapes like fettuccine or linguine hold creamy sauces best, but penne works too."
+    "Why did my sauce turn grainy or oily?",
+    "The heat was likely too high when the cheese went in, or you used pre-shredded Parmesan. Keep the pan on low, add the cheese in handfuls, and loosen with hot pasta water to bring it back."
+   ],
+   [
+    "Can I make it ahead?",
+    "It is best right away, since the sauce thickens as it sits. You can grate the cheese and slice the garlic up to a day ahead and keep them covered in the fridge."
    ]
   ],
-  "note": "This recipe was born on a night when the fridge held nothing but butter, cream and a very old wedge of Parmesan. It has since become the dish we make whenever someone has had a long day.",
+  "note": "We reach for this on nights when the fridge is thin and patience is thinner. Buy a real wedge of Parmesan and grate it fine, because pre-shredded cheese carries anti-caking starch that keeps it from melting smoothly. A green salad with a sharp lemon dressing is all it needs alongside.",
   "diet": [
    "vegetarian"
   ],
@@ -352,7 +362,7 @@
  {
   "id": "sheet-pan-salmon",
   "title": "Honey Dijon Sheet Pan Salmon",
-  "subtitle": "Tender, flaky salmon under a sticky honey-mustard glaze, roasted with lemon and fresh herbs.",
+  "subtitle": "Salmon fillets brushed with honey, Dijon and garlic, roasted hot under lemon and herbs until glossy and just flaking.",
   "category": "Main Dishes",
   "tags": [
    "healthy",
@@ -362,23 +372,23 @@
   "cook": 15,
   "serves": 4,
   "level": "Easy",
-  "desc": "Fresh, healthy and full of flavor.",
+  "desc": "Glazed salmon, one pan, 25 minutes.",
   "intro": [
-   "If cooking fish at home feels intimidating, start here. Roasting on a sheet pan is the most forgiving method there is: no flipping, no sticking and no fishy smell filling the kitchen.",
-   "A quick glaze of honey, Dijon and garlic caramelizes in the oven, while lemon slices and herbs steam on top and keep the salmon incredibly moist."
+   "Nervous about cooking fish at home? A hot sheet pan is the most forgiving method you can pick: no flipping, no fillets welded to a skillet, and no lingering smell. You brush, you top, you roast, and dinner is ready in about 25 minutes.",
+   "The glaze does two jobs. Honey browns quickly at 400°F, giving the top a sticky, caramelized edge, while the Dijon acts as an emulsifier that keeps the oil and honey clinging to the fish instead of sliding off into the pan. The lemon slices and herbs laid on top shield the flesh and release steam, so the center stays silky."
   ],
   "why": [
    [
-    "Weeknight-easy",
-    "10 minutes of prep, then the oven does the work."
+    "Ten minutes of prep",
+    "Whisk a glaze, lay on lemon, and the oven handles the rest."
    ],
    [
-    "Good for you",
-    "Packed with omega-3s and lean protein."
+    "No flipping required",
+    "High, even oven heat cooks the fillets through without touching them."
    ],
    [
-    "One pan to wash",
-    "Line it with parchment and cleanup is done."
+    "Parchment means no scrubbing",
+    "The glaze caramelizes on paper, not on your pan."
    ]
   ],
   "ingredients": [
@@ -439,44 +449,45 @@
   "steps": [
    {
     "t": "Heat the oven",
-    "d": "Preheat the oven to 400\u00b0F (200\u00b0C) and line a sheet pan with parchment paper."
+    "d": "Preheat the oven to 400°F (200°C) with a rack in the center, and line a rimmed sheet pan with parchment paper. Give the oven the full 15 minutes to heat so the glaze starts sizzling the moment the pan goes in."
    },
    {
     "t": "Season the fillets",
-    "d": "Pat the salmon dry and place it on the pan with a little space between each piece. Season with salt and pepper.",
-    "tip": "Take the salmon out of the fridge 15 minutes before cooking so it roasts more evenly."
+    "d": "Pat the salmon very dry with paper towels, pressing gently so the surface feels tacky rather than wet. Arrange the fillets on the pan with about an inch between them so hot air can circulate, then season both sides with salt and pepper.",
+    "tip": "Take the salmon out of the fridge 15 minutes before cooking. A less chilled center cooks at the same pace as the edges, so you avoid dry ends and a raw middle."
    },
    {
-    "t": "Glaze",
-    "d": "Whisk the olive oil, honey, Dijon and garlic in a small bowl. Brush it generously over the top and sides of each fillet."
+    "t": "Brush on the glaze",
+    "d": "In a small bowl, whisk the olive oil, honey, Dijon and garlic until the mixture looks smooth and slightly thickened, about 20 seconds. Brush it generously over the tops and sides of each fillet, using all of it."
    },
    {
     "t": "Top and roast",
-    "d": "Lay lemon slices and herb sprigs over the salmon. Roast for 12\u201315 minutes, until the thickest part flakes easily and reaches 125\u2013130\u00b0F (52\u201354\u00b0C) for medium."
+    "d": "Lay the lemon slices and herb sprigs over the salmon. Roast for 12 to 15 minutes, until the glaze bubbles at the edges, the flesh turns from translucent to opaque pink, and the thickest part flakes with a fork. An instant-read thermometer should read 125 to 130°F (52 to 54°C) for medium.",
+    "tip": "Seeing white beads on the surface? That is albumin, a protein squeezed out as the fish overcooks. Next time, pull it a minute or two sooner."
    },
    {
     "t": "Rest and serve",
-    "d": "Let it sit for 2 minutes, then spoon any glaze from the pan over the top. Serve with rice, roasted vegetables or a green salad."
+    "d": "Let the salmon rest on the pan for 2 minutes so the juices settle and the center finishes cooking. Spoon any glaze pooled on the parchment over the top, then serve with rice, roasted vegetables or a green salad."
    }
   ],
   "tips": [
-   "For a caramelized top, switch to broil for the last 1\u20132 minutes and watch closely.",
-   "Thinner fillets cook faster. Start checking at 10 minutes.",
-   "Add asparagus or green beans to the same pan for a complete meal."
+   "For a deeper, lacquered top, switch the oven to broil for the final 1 to 2 minutes and stay at the door. Honey goes from amber to burnt in under a minute.",
+   "Fillet thickness matters more than weight. Thin tail pieces can be done in 9 or 10 minutes, so start checking early and pull pieces as they finish.",
+   "Skin-on fillets lift cleanly off the parchment, leaving the skin behind. Slide a thin spatula between the flesh and skin for a boneless, skinless serving."
   ],
-  "storage": "Refrigerate leftovers for up to 2 days. Enjoy cold over salad or reheat at 275\u00b0F (135\u00b0C) for 10 minutes so the fish does not dry out.",
+  "storage": "Refrigerate leftovers in an airtight container for up to 2 days. Eat them cold, flaked over salad, or reheat covered at 275°F (135°C) for about 10 minutes so the fish warms through without drying out.",
   "variations": [
    [
-    "Spicy",
-    "Add 1 tsp sriracha or red pepper flakes to the glaze."
+    "Maple and whole-grain mustard",
+    "Swap the honey for maple syrup and use whole-grain mustard for a pleasantly seedy texture. The roasting time stays the same."
    ],
    [
-    "Asian-style",
-    "Use soy sauce, ginger and sesame oil instead of Dijon."
+    "Spicy glaze",
+    "Whisk 1 to 2 teaspoons of sriracha or 1/2 teaspoon of red pepper flakes into the glaze and use lime slices instead of lemon."
    ],
    [
-    "Maple",
-    "Swap the honey for maple syrup for a deeper sweetness."
+    "Whole-meal sheet pan",
+    "Toss asparagus or green beans with a little oil and salt and add them around the fish. They roast in the same 12 to 15 minutes."
    ]
   ],
   "nutrition": {
@@ -488,15 +499,19 @@
   },
   "faq": [
    [
-    "Can I use frozen salmon?",
-    "Yes. Thaw it overnight in the fridge and pat it very dry before glazing."
+    "How do I know when salmon is done without a thermometer?",
+    "Press a fork into the thickest part and twist gently. If it separates into flakes and the center has just turned opaque with a hint of deeper pink, it is ready. If it resists, give it 2 more minutes."
    ],
    [
-    "Should I remove the skin?",
-    "No need. It peels right off after roasting, and it keeps the fish extra moist."
+    "Can I use frozen salmon?",
+    "Yes, but thaw it first, ideally overnight in the fridge. Roasting from frozen leaves the outside overdone before the middle cooks, and the glaze slides off the icy surface."
+   ],
+   [
+    "Why did my glaze burn?",
+    "Honey sugars scorch quickly, especially near the pan edges or under a broiler. Keep the pan on the center rack, use parchment, and if your oven runs hot, check at 10 minutes."
    ]
   ],
-  "note": "The first time we made this, a friend who swore she hated fish asked for the recipe. We now make it on Sunday nights and pack the leftovers over greens for Monday lunch.",
+  "note": "We reach for this on nights when we want dinner to feel a little special without any real effort. Pull the fish at 125 to 130°F, because carryover heat finishes the job and overcooked salmon is the only way to ruin it. Serve it with rice to catch the pan glaze.",
   "diet": [
    "gluten-free",
    "dairy-free"
@@ -507,7 +522,7 @@
  {
   "id": "mediterranean-grain-bowl",
   "title": "Mediterranean Grain Bowl",
-  "subtitle": "Fluffy quinoa, crispy spiced chickpeas, crunchy vegetables and feta with a zesty lemon dressing.",
+  "subtitle": "Nutty quinoa, cumin-roasted chickpeas that actually crunch, briny olives and feta, all tied together with a sharp oregano-lemon dressing.",
   "category": "Salads",
   "tags": [
    "healthy"
@@ -516,23 +531,23 @@
   "cook": 20,
   "serves": 4,
   "level": "Medium",
-  "desc": "Colorful, fresh and satisfying.",
+  "desc": "Crunchy, briny, bright lunch bowl.",
   "intro": [
-   "This bowl is all about contrast: warm quinoa and cool cucumber, crispy chickpeas and creamy feta, salty olives and a squeeze of lemon. Every bite is a little different.",
-   "It is naturally vegetarian, keeps well in the fridge and tastes even better the next day, which makes it our favorite recipe for weekday lunches."
+   "Texture is what separates a great grain bowl from a sad desk lunch. Most fall flat because everything in them has the same soft texture and nothing is seasoned boldly enough. This one fixes both problems with chickpeas roasted until they rattle, cool crisp cucumber, salty olives and feta, and a dressing with real acidity.",
+   "The trick to crunchy chickpeas is getting the water off the surface before they hit the oven. Any moisture has to evaporate before the outsides can brown, so a thorough towel dry means the high heat goes straight into crisping rather than steaming. Letting the quinoa rest covered off the heat does something similar for the base: the last of the steam finishes the grains gently, so they come out separate and fluffy instead of wet."
   ],
   "why": [
    [
-    "Plant-powered",
-    "About 18 g of plant protein and plenty of fiber."
+    "Real crunch in every bite",
+    "Hot-roasted, bone-dry chickpeas stay crisp against the soft quinoa and juicy tomatoes."
    ],
    [
-    "Better the next day",
-    "Perfect for Sunday meal prep."
+    "Holds up for days",
+    "Stored undressed, the base and vegetables stay fresh for up to 4 days of lunches."
    ],
    [
-    "Fully customizable",
-    "Use whatever vegetables you have on hand."
+    "About 18 g protein",
+    "Quinoa, chickpeas and feta make it filling enough to count as a full meal."
    ]
   ],
   "ingredients": [
@@ -645,44 +660,46 @@
   "steps": [
    {
     "t": "Roast the chickpeas",
-    "d": "Heat the oven to 425\u00b0F (220\u00b0C). Toss the dried chickpeas with olive oil, cumin, paprika and a pinch of salt. Roast on a sheet pan for 20\u201325 minutes, shaking halfway, until crisp.",
-    "tip": "Dry the chickpeas very well with a towel. Moisture is the enemy of crunch."
+    "d": "Heat the oven to 425°F (220°C). Toss the well-dried chickpeas with the olive oil, cumin, smoked paprika and a pinch of salt, then spread them in a single layer on a sheet pan. Roast for 20 to 25 minutes, shaking the pan halfway, until they are deep golden, smell toasty and rattle when you shake the pan.",
+    "tip": "Roll the chickpeas in a clean kitchen towel and pull off any loose skins as you go. Dry chickpeas and fewer skins mean a crisper result, and a crowded pan will steam them, so use a large sheet."
    },
    {
     "t": "Cook the quinoa",
-    "d": "Bring the quinoa and water to a boil, then cover and simmer on low for 15 minutes. Turn off the heat and leave it covered for 5 minutes, then fluff with a fork."
+    "d": "Combine the rinsed quinoa and water or broth in a saucepan and bring to a boil over high heat. Cover, turn the heat to low and simmer for 15 minutes, until the liquid is absorbed and you can see little spiral tails on the grains. Take the pan off the heat, leave it covered for 5 minutes, then fluff with a fork.",
+    "tip": "Rinsing matters. Quinoa is coated in saponins, which taste bitter and soapy, so rub it under cold water in a fine-mesh strainer until the water runs clear."
    },
    {
     "t": "Prep the vegetables",
-    "d": "While everything cooks, dice the cucumber, halve the tomatoes and thinly slice the onion. Soak the onion in cold water for 5 minutes to soften its bite."
+    "d": "While everything cooks, dice the cucumber, halve the tomatoes and slice the red onion as thinly as you can. Soak the onion in cold water for 5 minutes, then drain. The soak rinses away some of the sulfur compounds, so it stays crunchy but loses its harsh bite."
    },
    {
     "t": "Make the dressing",
-    "d": "Whisk the olive oil, lemon juice, oregano, salt and pepper until combined."
+    "d": "Whisk the extra-virgin olive oil, lemon juice and dried oregano with a good pinch of salt and a few grinds of pepper until the dressing looks slightly thickened and cloudy. Taste it on a piece of cucumber: it should be sharp and a little salty, since the quinoa will soften it."
    },
    {
     "t": "Build the bowls",
-    "d": "Divide the quinoa into bowls and arrange the vegetables, olives and chickpeas in sections on top. Sprinkle with feta and parsley, then drizzle with dressing."
+    "d": "Divide the warm or room-temperature quinoa among 4 bowls. Arrange the cucumber, tomatoes, onion, olives and chickpeas in sections on top, scatter over the feta and parsley, and drizzle with the dressing just before eating so the chickpeas keep their crunch.",
+    "tip": "Toss a spoonful of dressing into the quinoa itself before topping. Seasoning the base means the bottom of the bowl tastes as good as the top."
    }
   ],
   "tips": [
-   "Rinse the quinoa before cooking to remove its natural bitter coating.",
-   "Add a spoonful of hummus to each bowl for extra creaminess.",
-   "Add the chickpeas just before eating so they stay crunchy."
+   "Season the quinoa cooking liquid with about 1/2 teaspoon of salt. Grains absorb salt as they cook, which seasons them all the way through in a way that sprinkling at the end cannot.",
+   "If your chickpeas soften after a day, spread them on a sheet pan and give them 5 minutes at 400°F (200°C). They crisp right back up once the absorbed moisture cooks off.",
+   "For meal prep, pack the dressing in a small separate jar and add the feta on the day. Feta weeps liquid in the fridge and will make the vegetables soggy if it sits on them for days."
   ],
-  "storage": "Store assembled bowls, without dressing or chickpeas, for up to 4 days. Keep the chickpeas in an open container at room temperature so they stay crisp.",
+  "storage": "Store the quinoa and vegetables, without dressing or chickpeas, in airtight containers in the fridge for up to 4 days. Keep the chickpeas in a loosely covered container at room temperature for up to 2 days so they stay crisp, and keep the dressing in a jar in the fridge, shaking it well before using. Eat the bowls cold or at room temperature; if you want warm quinoa, microwave it for 45 to 60 seconds before adding the toppings.",
   "variations": [
    [
-    "Swap the grain",
-    "Try farro, bulgur, couscous or brown rice."
+    "Swap in farro",
+    "Use 1 cup farro instead of quinoa. Simmer it in plenty of salted water for 25 to 30 minutes until chewy, then drain. Note that farro contains gluten."
    ],
    [
-    "Add protein",
-    "Top with grilled chicken, falafel or a jammy boiled egg."
+    "Add grilled chicken",
+    "Top each bowl with about 4 ounces of sliced grilled chicken or salmon for a heartier dinner. Use the same dressing as a quick marinade for 30 minutes."
    ],
    [
     "Make it vegan",
-    "Skip the feta and add avocado or a tahini drizzle."
+    "Leave out the feta and add a big spoonful of hummus or diced avocado for creaminess, plus an extra squeeze of lemon."
    ]
   ],
   "nutrition": {
@@ -694,15 +711,19 @@
   },
   "faq": [
    [
-    "Is this gluten-free?",
-    "Yes, as written. Just check that your broth is certified gluten-free."
+    "Can I use canned chickpeas straight from the can?",
+    "Yes, but drain, rinse and dry them thoroughly first. Wet chickpeas will steam in the oven and come out soft rather than crisp."
    ],
    [
-    "Can I serve it warm?",
-    "Definitely. Warm quinoa with cold toppings is delicious."
+    "Why is my quinoa mushy?",
+    "Usually too much liquid or skipping the covered rest. Stick to a 1 to 2 ratio, keep the heat low, and let it sit off the heat for 5 minutes before fluffing."
+   ],
+   [
+    "How far ahead can I make it?",
+    "Cook the quinoa, prep the vegetables and mix the dressing up to 4 days ahead. Roast the chickpeas no more than 2 days ahead, and assemble each bowl just before eating."
    ]
   ],
-  "note": "We make a big batch of this every Sunday and it carries us through the week. The crispy chickpeas rarely survive past Tuesday, because we keep snacking on them straight from the pan.",
+  "note": "We think this bowl is at its best on day two, once the quinoa has soaked up a little dressing, so make a full batch on Sunday. The one thing not to skip is drying the chickpeas properly. Wet chickpeas steam instead of roast, and you lose the crunch that makes the whole bowl work.",
   "diet": [
    "vegetarian",
    "gluten-free"
@@ -713,7 +734,7 @@
  {
   "id": "tomato-basil-soup",
   "title": "Creamy Tomato Basil Soup",
-  "subtitle": "Velvety, deeply flavorful tomato soup finished with fresh basil and a swirl of cream.",
+  "subtitle": "Canned whole tomatoes simmer down with sweet onion and garlic, then get blended silky with fresh basil and a splash of cream.",
   "category": "Soups",
   "tags": [
    "healthy",
@@ -723,23 +744,23 @@
   "cook": 25,
   "serves": 4,
   "level": "Easy",
-  "desc": "Simple, flavorful and cozy.",
+  "desc": "Silky, bright, and made from pantry cans.",
   "intro": [
-   "This is tomato soup the way it should taste: rich, a little sweet, a little tangy and so much better than the canned kind. Good canned whole tomatoes are the key. They taste like summer all year long.",
-   "Serve it with a grilled cheese or a slice of crusty bread for dunking, and you have the coziest dinner of the week."
+   "A pot of velvety tomato soup, steaming and brick-orange with a white swirl of cream on top, is one of the best things you can make from two cans. This version takes 35 minutes, and most of that is hands-off simmering. It is the kind of bowl that makes a rainy weeknight feel like a plan.",
+   "Two small moves do a lot of work. A teaspoon of sugar does not make the soup sweet; it softens the sharp acidity of canned tomatoes so their fruity flavor comes forward. And the cream goes in over low heat at the end, because boiling dairy in an acidic soup can make its proteins tighten and curdle into grainy flecks."
   ],
   "why": [
    [
-    "Made with pantry staples",
-    "Canned tomatoes, onion, garlic and broth."
+    "Pantry-friendly ingredients",
+    "Canned tomatoes, broth, an onion and garlic are all you need, plus a handful of basil."
    ],
    [
-    "Freezer-friendly",
-    "Make a double batch for busy weeks."
+    "Deep flavor, 25 minutes",
+    "An uncovered simmer evaporates water and concentrates the tomatoes without hours on the stove."
    ],
    [
-    "Easy to make vegan",
-    "Use coconut cream instead of dairy."
+    "Silky without flour",
+    "Blending the tomatoes and onion gives body naturally, and just 1/3 cup cream makes it velvety."
    ]
   ],
   "ingredients": [
@@ -815,45 +836,47 @@
   ],
   "steps": [
    {
-    "t": "Soften the aromatics",
-    "d": "Heat the olive oil in a large pot over medium heat. Add the onion with a pinch of salt and cook for 6\u20138 minutes, until soft and translucent. Add the garlic and cook for 1 minute more."
+    "t": "Soften the onion and garlic",
+    "d": "Heat the olive oil in a large pot over medium heat until it shimmers. Add the onion with a pinch of salt and cook, stirring now and then, for 6 to 8 minutes, until soft, translucent and sweet-smelling but not browned. Add the garlic and stir for 1 minute, just until fragrant.",
+    "tip": "The pinch of salt pulls moisture from the onion so it softens faster and does not scorch."
    },
    {
-    "t": "Simmer",
-    "d": "Add the tomatoes with their juices, crushing them with a spoon. Stir in the broth and sugar, bring to a boil, then simmer uncovered for 15 minutes.",
-    "tip": "Simmering uncovered concentrates the flavor and lets the soup thicken naturally."
+    "t": "Simmer uncovered",
+    "d": "Pour in the tomatoes with their juices and crush them against the side of the pot with a wooden spoon. Stir in the broth and sugar and bring to a boil over medium-high heat. Lower to a steady simmer and cook uncovered for 15 minutes, stirring occasionally, until the soup has reduced slightly and the raw, tinny edge of the tomatoes is gone.",
+    "tip": "If the tomatoes still taste sharp after simmering, add another pinch of sugar or a small knob of butter. Both round out the acidity."
    },
    {
-    "t": "Blend until silky",
-    "d": "Add the basil and blend with an immersion blender until completely smooth. If using a regular blender, work in batches and leave the lid vent open so steam can escape."
+    "t": "Blend with the basil",
+    "d": "Take the pot off the heat and add the basil leaves. Blend with an immersion blender for 1 to 2 minutes, until completely smooth and flecked with green. If using a countertop blender, fill it no more than halfway, work in batches and leave the lid vent open under a folded towel so steam can escape."
    },
    {
-    "t": "Add the cream",
-    "d": "Return the pot to low heat and stir in the cream. Taste and season with salt and pepper."
+    "t": "Stir in the cream",
+    "d": "Return the pot to low heat and stir in the heavy cream until the soup turns a soft, even orange. Warm gently for 2 minutes without letting it boil. Taste and season with salt and pepper; canned tomatoes vary a lot, so trust your tongue.",
+    "tip": "Keep the heat low once the cream is in. A rolling boil can make the dairy split and look grainy."
    },
    {
-    "t": "Serve",
-    "d": "Ladle into bowls, swirl in a little extra cream and top with torn basil and cracked pepper. Serve hot with crusty bread."
+    "t": "Ladle and serve",
+    "d": "Ladle the soup into warm bowls and swirl a spoonful of extra cream across each. Finish with a few torn basil leaves and plenty of cracked black pepper. Serve hot with thick slices of crusty bread for dunking."
    }
   ],
   "tips": [
-   "San Marzano tomatoes give the sweetest, least acidic result.",
-   "A Parmesan rind added during simmering brings incredible savory depth. Remove it before blending.",
-   "Too thick? Add broth. Too thin? Simmer a few more minutes."
+   "Buy whole peeled tomatoes rather than crushed or diced. Diced tomatoes are often treated with calcium chloride to keep their shape, which means they resist breaking down and blend less smoothly.",
+   "For a deeper, roasted flavor, let the onion go an extra 3 to 4 minutes until lightly golden before adding the garlic. The browning adds savory sweetness without any extra ingredients.",
+   "Make the soup through the blending step up to 2 days ahead and refrigerate. Add the cream only when you reheat it, so it tastes fresh and there is no risk of it splitting twice."
   ],
-  "storage": "Refrigerate for up to 5 days or freeze for up to 3 months. For best texture, freeze before adding the cream and stir it in when reheating.",
+  "storage": "Cool the soup and refrigerate in airtight containers for up to 4 days. Reheat gently in a saucepan over medium-low heat, stirring often, or microwave in 1-minute bursts. It freezes well for up to 3 months, though it is best frozen before the cream goes in; thaw overnight in the fridge and stir in the cream as it reheats.",
   "variations": [
    [
-    "Roasted red pepper",
-    "Blend in a jar of roasted red peppers for a smoky twist."
+    "Make it dairy-free",
+    "Swap the heavy cream for 1/3 cup full-fat canned coconut milk. It adds a faint sweetness that works well with the basil."
    ],
    [
-    "Vegan",
-    "Use coconut cream or blended soaked cashews."
+    "Add roasted red pepper",
+    "Blend in 1 cup jarred roasted red peppers, drained, with the basil for a smokier, sweeter soup. You may want an extra 1/2 cup broth to thin it."
    ],
    [
-    "Spicy",
-    "Add a pinch of chili flakes with the garlic."
+    "Give it a little heat",
+    "Add 1/4 teaspoon red pepper flakes with the garlic, and finish each bowl with a drizzle of chili oil instead of cream."
    ]
   ],
   "nutrition": {
@@ -866,14 +889,18 @@
   "faq": [
    [
     "Can I use fresh tomatoes?",
-    "Yes. Use about 3 lb (1.4 kg) of ripe tomatoes, roasted first for the deepest flavor."
+    "Yes, use about 4 pounds of ripe tomatoes, cored and roughly chopped. Simmer 25 to 30 minutes instead of 15 so they break down fully, and add broth only as needed, since fresh tomatoes release a lot of liquid."
    ],
    [
-    "Why add sugar?",
-    "Just a little balances the natural acidity of the tomatoes. You will not taste sweetness."
+    "Why did my soup curdle?",
+    "The cream probably went into soup that was boiling, or it was very cold. Temper it by stirring a ladle of hot soup into the cream first, then add it over low heat and do not let it boil."
+   ],
+   [
+    "How can I make it thicker?",
+    "Simmer it uncovered for another 5 to 10 minutes before blending, or use 1 1/2 cups broth instead of 2. You can also blend in a slice of crustless bread, a classic trick that adds body."
    ]
   ],
-  "note": "On the first cold, rainy evening of the year, this soup goes on the stove without anyone asking. A grilled cheese on the side is not optional in our house.",
+  "note": "Honestly, good canned tomatoes beat most supermarket fresh ones for this soup, and we would not bother waiting for summer. Serve it with a grilled cheese or thick slices of buttered toast for dunking. Do not skip the uncovered simmer, since that is where the flavor concentrates.",
   "diet": [
    "vegetarian",
    "gluten-free"
@@ -884,7 +911,7 @@
  {
   "id": "beef-tacos",
   "title": "Weeknight Beef Tacos",
-  "subtitle": "Saucy homemade taco meat with a from-scratch spice blend, fresh pico de gallo and all the toppings.",
+  "subtitle": "Crispy-edged ground beef in a smoky homemade spice blend, piled into warm shells with cool lettuce, pico and sharp cheddar.",
   "category": "Main Dishes",
   "tags": [
    "quick"
@@ -893,23 +920,23 @@
   "cook": 15,
   "serves": 4,
   "level": "Easy",
-  "desc": "Bold flavors, easy to make.",
+  "desc": "Homemade taco seasoning beats the packet.",
   "intro": [
-   "Taco night is a tradition for a reason: everyone builds their own, and dinner feels like a party. Our homemade spice blend takes one minute to mix and has way more flavor, and less salt, than the packets.",
-   "A splash of water at the end turns the spices into a light sauce, so the meat is juicy and never dry."
+   "Let's be honest: the seasoning packet has had its run. Six pantry spices and a little salt give you taco meat that tastes brighter, smokier and less salty, and you control every bit of it.",
+   "The trick is patience in the skillet. Letting the beef sit undisturbed for a minute or two between stirs gives it time to brown through the Maillard reaction, creating crisp, savory edges that plain gray crumbles never have. A splash of water at the end dissolves the spices and those browned bits into a light glaze that coats every crumble."
   ],
   "why": [
    [
-    "Ready in 25 minutes",
-    "Perfect for busy weeknights."
+    "Better than the packet",
+    "A homemade blend of chili powder, cumin and smoked paprika tastes fresher, with no fillers."
    ],
    [
-    "Homemade seasoning",
-    "Six spices you probably already have."
+    "Crispy, browned beef",
+    "Giving the meat time between stirs builds deep flavor and craggy texture."
    ],
    [
-    "Fun for everyone",
-    "Set out the toppings and let people build their own."
+    "Dinner in 25 minutes",
+    "Spices mix in a minute and the beef cooks in about 12, start to finish."
    ]
   ],
   "ingredients": [
@@ -995,45 +1022,46 @@
   ],
   "steps": [
    {
-    "t": "Mix the spices",
-    "d": "Stir together the chili powder, cumin, paprika, garlic powder, oregano and salt in a small bowl."
+    "t": "Stir together the spices",
+    "d": "In a small bowl, combine the chili powder, cumin, smoked paprika, garlic powder, oregano and salt. Mixing them first means they hit the pan all at once and coat the beef evenly."
    },
    {
-    "t": "Brown the beef",
-    "d": "Heat a large skillet over medium-high heat. Add the beef and cook for 6\u20138 minutes, breaking it into small crumbles, until browned with some crispy bits. Drain any excess fat.",
-    "tip": "Leave the meat alone for a minute or two between stirs. That is how you get flavorful browned edges."
+    "t": "Brown the beef well",
+    "d": "Heat a large skillet over medium-high heat until a drop of water sizzles on contact. Add the beef and cook for 6 to 8 minutes, breaking it into small crumbles, until deeply browned with crisp bits and no pink remains. Tilt the pan and spoon off any excess fat.",
+    "tip": "Resist stirring constantly. Let the meat sit for a minute or two between stirs, and listen for a steady sizzle rather than a wet simmer. That is when the browning happens."
    },
    {
-    "t": "Season and simmer",
-    "d": "Sprinkle the spice mix over the beef and stir for 30 seconds until fragrant. Add the water and simmer for 3\u20135 minutes, until the liquid thickens and coats the meat."
+    "t": "Bloom and simmer",
+    "d": "Sprinkle the spice mix over the beef and stir for 30 seconds, until the kitchen smells toasty and smoky. Pour in the water, scrape up the browned bits, and simmer for 3 to 5 minutes, until the liquid reduces to a thin glaze that coats the meat.",
+    "tip": "If the pan dries out before the meat looks glossy, add another tablespoon or two of water. You want saucy crumbles, not dusty ones."
    },
    {
     "t": "Warm the shells",
-    "d": "Warm taco shells in a 350\u00b0F (175\u00b0C) oven for 3\u20134 minutes, or heat tortillas in a dry skillet for 20 seconds per side."
+    "d": "Heat taco shells on a sheet pan in a 350°F (175°C) oven for 3 to 4 minutes, until fragrant and a shade darker. For soft tortillas, warm them in a dry skillet over medium heat for about 20 seconds per side, until pliable with a few toasty spots."
    },
    {
-    "t": "Build your tacos",
-    "d": "Fill each shell with beef, then top with lettuce, pico de gallo, cheese, cilantro and a squeeze of lime."
+    "t": "Build the tacos",
+    "d": "Spoon the beef into each shell and add the cheddar right away so the heat softens it, then top with lettuce and pico de gallo. Finish with cilantro, a spoonful of sour cream and a squeeze of lime."
    }
   ],
   "tips": [
-   "Make a big batch of the spice blend and keep it in a jar for next time.",
-   "Leftover taco meat makes a great nacho topping or burrito bowl.",
-   "For extra richness, stir in 1 tbsp tomato paste with the spices."
+   "Make a triple batch of the spice mix and keep it in a jar. A scant 2 tablespoons of the blend seasons each pound of beef.",
+   "Use 85% lean beef. Leaner beef dries out and browns poorly, and fattier beef leaves too much grease for the spices to cling.",
+   "Put the cheese directly on the hot meat, before the lettuce. It melts slightly and acts as a barrier that keeps crisp shells from going soggy."
   ],
-  "storage": "Refrigerate cooked taco meat for up to 4 days or freeze for up to 3 months. Reheat in a skillet with a splash of water.",
+  "storage": "Refrigerate cooked taco meat in an airtight container for up to 4 days, or freeze in a zip-top bag for up to 3 months. Reheat in a skillet over medium heat with a splash of water, stirring until hot and glossy. Keep the toppings and shells separate so they stay crisp.",
   "variations": [
    [
-    "Turkey or chicken",
-    "Ground turkey or chicken works perfectly with the same spices."
+    "Ground turkey",
+    "Swap in ground turkey and add 1 tablespoon of oil to the pan, since turkey is leaner. Skip draining, and simmer an extra minute to concentrate the flavor."
    ],
    [
-    "Vegetarian",
-    "Use black beans and diced sweet potato instead of beef."
+    "Plant-based filling",
+    "Use 2 cans of drained, rinsed black beans or lentils. Cook the spices in 1 tablespoon of oil for 30 seconds, add the beans and water, and mash lightly as they simmer."
    ],
    [
-    "Bowl style",
-    "Serve over rice with beans, corn and avocado."
+    "Spicier version",
+    "Add 1/4 teaspoon cayenne to the spice mix and a finely chopped chipotle in adobo with the water for smoky heat."
    ]
   ],
   "nutrition": {
@@ -1045,15 +1073,19 @@
   },
   "faq": [
    [
-    "Hard or soft shells?",
-    "Both work. Soft corn tortillas are the most traditional choice."
+    "Can I use store-bought taco seasoning?",
+    "Yes, use 2 to 3 tablespoons per pound and skip the salt in the recipe, since packets are usually well salted. Taste before adding more."
    ],
    [
-    "How spicy is it?",
-    "Mild and family-friendly. Add cayenne or jalape\u00f1os for heat."
+    "Why is my taco meat watery?",
+    "The pan was likely too crowded or not hot enough, so the beef steamed instead of browning. Use a large skillet, preheat it well, and simmer until the water has reduced to a glaze."
+   ],
+   [
+    "Can I make the meat ahead?",
+    "Yes. Cook it up to 4 days ahead, refrigerate, and reheat in a skillet with a splash of water. It is also easy to keep warm in a slow cooker on low for a party."
    ]
   ],
-  "note": "Taco Tuesday is a real rule in our kitchen. We once tried to skip it, and there was a small revolt, so now we double the spice mix and keep a jar ready.",
+  "note": "We think the homemade spice mix is the whole point here, and it takes one minute to stir together. Don't skip draining the fat, or the seasoning turns greasy instead of clinging to the meat. Serve with a bowl of black beans and a stack of extra lime wedges.",
   "diet": [
    "gluten-free"
   ],
@@ -1063,7 +1095,7 @@
  {
   "id": "chocolate-chip-cookies",
   "title": "Chewy Chocolate Chip Cookies",
-  "subtitle": "Crisp golden edges, soft chewy centers and pools of melted chocolate with a touch of sea salt.",
+  "subtitle": "Melted-butter cookies with crackly golden edges, soft centers that bend without breaking, and pools of dark chocolate under flaky salt.",
   "category": "Desserts",
   "tags": [
    "quick"
@@ -1073,23 +1105,23 @@
   "serves": 24,
   "servesLabel": "cookies",
   "level": "Easy",
-  "desc": "Soft, chewy and classic.",
+  "desc": "Chewy centers, crisp edges, big chocolate.",
   "intro": [
-   "After many (delicious) test batches, this is our forever chocolate chip cookie. Melted butter and extra brown sugar give it the chewiness, and chopped chocolate instead of chips creates those irresistible melty pools.",
-   "No mixer, no chilling required, just one bowl and a spoon. Although if you can wait, an overnight rest in the fridge makes them even better."
+   "Melted butter is the whole secret here. Creamed butter traps air and gives you a cakey cookie, but melted butter coats the flour and limits gluten development, so you get a dense, chewy center that bends instead of crumbling. A generous share of brown sugar helps too, since its molasses holds on to moisture.",
+   "The other lever is time. When the scooped dough rests in the fridge, the flour fully absorbs the liquid and the butter firms up, so the cookies spread less and brown more deeply. You can bake right away and still be happy, but a rest turns good cookies into ones people ask about."
   ],
   "why": [
    [
-    "One bowl, no mixer",
-    "Minimal dishes and maximum reward."
+    "Chewy by design",
+    "Melted butter and brown sugar keep the centers soft for days."
    ],
    [
-    "Chewy every time",
-    "Melted butter plus brown sugar is the secret."
+    "No mixer needed",
+    "Everything comes together with a whisk and a spatula."
    ],
    [
-    "Freezer-friendly dough",
-    "Bake fresh cookies whenever you want."
+    "Bake on your schedule",
+    "Scooped dough waits in the fridge or freezer until you want it."
    ]
   ],
   "ingredients": [
@@ -1170,50 +1202,51 @@
   ],
   "steps": [
    {
-    "t": "Preheat",
-    "d": "Heat the oven to 350\u00b0F (175\u00b0C) and line two baking sheets with parchment paper."
+    "t": "Heat the oven",
+    "d": "Heat the oven to 350°F (175°C) with a rack in the center and line two baking sheets with parchment paper. Baking one sheet at a time on the middle rack gives the most even color."
    },
    {
-    "t": "Mix the wet ingredients",
-    "d": "Whisk the melted butter with both sugars for about 1 minute, until smooth and glossy. Add the eggs and vanilla and whisk until lighter in color."
+    "t": "Whisk butter and sugars",
+    "d": "Whisk the melted, slightly cooled butter with the brown and granulated sugars for about 1 minute, until the mixture looks smooth and glossy rather than grainy. Add the eggs and vanilla and whisk another 30 to 45 seconds, until the batter lightens in color and turns thick and ribbony. Warm butter can scramble eggs, so make sure it feels just warm to the touch."
    },
    {
-    "t": "Add the dry ingredients",
-    "d": "Add the flour, baking soda and salt. Stir with a spatula until just combined and no dry streaks remain, then fold in the chocolate.",
-    "tip": "Stop mixing as soon as the flour disappears. Overmixing makes cookies tough.",
+    "t": "Fold in the dry ingredients",
+    "d": "Add the flour, baking soda and salt. Stir with a spatula until just combined and no dry streaks remain, then fold in the chocolate. The dough will be soft and shiny.",
+    "tip": "Stop mixing as soon as the flour disappears. Every extra stir develops gluten, which makes cookies tough instead of chewy.",
     "img": "images/step-cookies-dough.webp"
    },
    {
-    "t": "Scoop",
-    "d": "Scoop 2-tablespoon balls of dough onto the sheets, leaving 2 inches (5 cm) between them. For the best texture, chill the scooped dough for 30 minutes or up to 24 hours."
+    "t": "Scoop and chill",
+    "d": "Scoop 2-tablespoon balls of dough onto the sheets, leaving 2 inches (5 cm) between them. For the best texture, chill the scooped dough for at least 30 minutes or up to 24 hours. Chilled dough spreads less and bakes up thicker, with a more caramelized flavor."
    },
    {
     "t": "Bake",
-    "d": "Bake one sheet at a time for 10\u201312 minutes, until the edges are golden but the centers still look slightly underdone."
+    "d": "Bake one sheet at a time for 10 to 12 minutes, until the edges are golden brown and set but the centers look puffy, pale and slightly underdone. Your kitchen should smell like brown butter and toffee.",
+    "tip": "Cookies look raw in the middle when they are actually ready. Trust the golden edges and pull them. Carryover heat on the pan finishes the centers."
    },
    {
     "t": "Finish and cool",
-    "d": "Sprinkle with flaky salt right away. Cool on the pan for 5 minutes, which lets the centers set, then move to a wire rack."
+    "d": "Sprinkle with flaky salt right away, while the tops are still tacky enough to hold it. Cool on the pan for 5 minutes so the centers set, then move to a wire rack to cool completely or eat warm."
    }
   ],
   "tips": [
-   "Pull them out when they look a little underbaked. They keep cooking on the hot pan.",
-   "For perfectly round cookies, swirl a large glass around each one right out of the oven.",
-   "Mix dark and milk chocolate for a deeper flavor."
+   "Measure flour by spooning it into the cup and leveling it, or weigh 375 g. Scooping straight from the bag packs in extra flour and gives you dry, puffy cookies that barely spread.",
+   "For round, bakery-style cookies, set a large glass or cookie cutter over each cookie right out of the oven and swirl it in small circles to tuck the edges in.",
+   "Chopping a bar of chocolate beats chips. The shards and dust melt into streaks and puddles, while chips are made with stabilizers to hold their shape."
   ],
-  "storage": "Keep baked cookies in an airtight container for up to 5 days. Freeze dough balls for up to 3 months and bake from frozen, adding 1\u20132 minutes.",
+  "storage": "Keep baked cookies in an airtight container at room temperature for up to 5 days, and warm them at 300°F (150°C) for 3 to 4 minutes to bring back the soft centers. Freeze scooped dough balls in a zip-top bag for up to 3 months and bake straight from frozen, adding 1 to 2 minutes.",
   "variations": [
    [
     "Brown butter",
-    "Brown the butter first for a nutty, toffee-like flavor."
+    "Cook the butter in a light-colored pan over medium heat until it foams and smells nutty with brown flecks, about 5 minutes. Cool for 10 minutes before whisking with the sugars."
    ],
    [
-    "Add nuts",
-    "Fold in 1 cup of toasted walnuts or pecans."
+    "Mixed chocolate",
+    "Use half dark and half milk chocolate for a sweeter, deeper chocolate flavor, keeping the total at 2 cups."
    ],
    [
-    "Double chocolate",
-    "Replace \u00bc cup flour with cocoa powder."
+    "Toasted nuts",
+    "Replace 1/2 cup of the chocolate with toasted, chopped walnuts or pecans for crunch."
    ]
   ],
   "nutrition": {
@@ -1225,15 +1258,19 @@
   },
   "faq": [
    [
-    "Why did my cookies spread too much?",
-    "The butter was probably too warm. Let it cool, or chill the dough for 30 minutes before baking."
+    "Why did my cookies spread flat?",
+    "Usually the butter was too hot when mixed, the dough was not chilled, or the flour was under-measured. Let the butter cool until just warm, chill the scoops for 30 minutes, and weigh the flour if you can."
    ],
    [
-    "Can I use chocolate chips?",
-    "Yes, but chopped chocolate melts into bigger, gooier pools."
+    "Can I use salted butter?",
+    "Yes. Cut the fine salt down to 1/2 teaspoon so the cookies do not taste overly salty, especially with the flaky salt on top."
+   ],
+   [
+    "Can I bake both sheets at once?",
+    "You can, on the upper and lower thirds of the oven, but swap and rotate the sheets halfway through and expect to add a minute or two. One at a time gives more even browning."
    ]
   ],
-  "note": "We baked more than a dozen test batches to land on this one, and nobody complained. Keep a few dough balls in the freezer and you are always ten minutes away from warm cookies.",
+  "note": "If you can spare the time, chill the scooped dough. Even 30 minutes gives you thicker cookies with a toffee edge, and a full day is better still. We like them best still warm, with a glass of cold milk.",
   "diet": [
    "vegetarian"
   ],
@@ -1243,7 +1280,7 @@
  {
   "id": "chocolate-mousse-cake",
   "title": "No-Bake Chocolate Mousse Cake",
-  "subtitle": "A crunchy cookie crust topped with a cloud of silky dark chocolate mousse and fresh raspberries.",
+  "subtitle": "A crunchy cookie crust under thick, silky dark chocolate mousse that sets in the fridge while you get on with your day.",
   "category": "Desserts",
   "tags": [],
   "prep": 30,
@@ -1251,23 +1288,23 @@
   "chill": 360,
   "serves": 10,
   "level": "Medium",
-  "desc": "Silky, rich and made for celebrations.",
+  "desc": "Silky chocolate mousse, zero oven time.",
   "intro": [
-   "This cake looks like it came from a fancy bakery, but it only takes about 30 minutes of hands-on time and no oven at all. The fridge does most of the work.",
-   "It is rich without being heavy. Whipped cream folded into melted chocolate creates a mousse that is light, airy and melts on your tongue."
+   "A dessert this dramatic has no business being this easy. There are only a handful of ingredients, the stove is on for about five minutes, and the fridge does the rest of the work overnight. What you get is a tall, glossy slab of mousse that slices cleanly over a crisp chocolate cookie base.",
+   "The mousse sets because of two things working together: air and cocoa butter. Whipping cream to soft peaks traps tiny air bubbles in a network of fat, and as the chocolate cools in the fridge, its cocoa butter firms up and locks those bubbles in place. That is also why temperature matters so much when you fold. Chocolate that is too warm melts the fat in the cream and the air collapses, while chocolate that is too cold seizes into little flecks."
   ],
   "why": [
    [
-    "No oven needed",
-    "Perfect for hot days or small kitchens."
+    "No baking at all",
+    "Just a brief warm-up of cream, then the fridge sets it into something sliceable."
    ],
    [
-    "Make-ahead friendly",
-    "Prepare it the day before your party."
+    "Rich but still light",
+    "Folded whipped cream gives an airy texture that does not feel heavy after dinner."
    ],
    [
-    "Show-stopping",
-    "Looks impressive with very little effort."
+    "Made the day before",
+    "It needs at least 6 hours to set, which makes it an ideal make-ahead party dessert."
    ]
   ],
   "ingredients": [
@@ -1294,7 +1331,7 @@
      {
       "q": 10,
       "u": "oz",
-      "n": "dark chocolate (60\u201370%)",
+      "n": "dark chocolate (60–70%)",
       "note": "280 g, chopped"
      },
      {
@@ -1339,49 +1376,50 @@
   ],
   "steps": [
    {
-    "t": "Make the crust",
-    "d": "Mix the cookie crumbs with the melted butter until it looks like wet sand. Press firmly into the bottom of a 9-inch (23 cm) springform pan and refrigerate while you make the mousse."
+    "t": "Press the cookie crust",
+    "d": "Stir the crushed cookie crumbs with the melted butter until the mixture looks like wet sand and holds together when squeezed. Press it firmly and evenly into the bottom of a 9-inch (23 cm) springform pan, using the flat base of a measuring cup to pack it tight. Refrigerate while you make the mousse so the butter firms up."
    },
    {
     "t": "Melt the chocolate",
-    "d": "Heat \u00bd cup of the cream until steaming, pour it over the chopped chocolate and let it sit for 2 minutes. Stir until smooth and glossy, add the salt and let it cool until just barely warm.",
-    "tip": "If the chocolate is too warm, it will melt the whipped cream and the mousse will not set."
+    "d": "Heat 1/2 cup of the cream in a small saucepan over medium heat until it is steaming with small bubbles around the edge, about 2 minutes, but not boiling. Pour it over the chopped chocolate, leave it alone for 2 minutes, then stir slowly from the center outward until smooth and glossy. Stir in the salt and let it cool until it feels just barely warm on your lip, about 10 to 15 minutes.",
+    "tip": "If the chocolate turns grainy or stiff, whisk in hot cream a teaspoon at a time until it loosens. If it is still warm when you fold, the whipped cream will melt and the mousse will not set."
    },
    {
     "t": "Whip the cream",
-    "d": "Beat the remaining 1\u00bd cups of cold cream with the powdered sugar and vanilla until soft peaks form, when the peaks gently fold over."
+    "d": "Beat the remaining 1 1/2 cups of cold cream with the powdered sugar and vanilla on medium-high speed until soft peaks form, about 2 to 3 minutes. When you lift the whisk, the peaks should hold their shape but gently flop over at the tip. Stop there, since stiffer cream is harder to fold and can turn the mousse grainy.",
+    "tip": "Chill the bowl and beaters for 10 minutes first. Cold fat traps air more easily, so the cream whips faster and holds more volume."
    },
    {
-    "t": "Fold gently",
-    "d": "Fold one third of the whipped cream into the chocolate to lighten it, then gently fold in the rest in two additions until no white streaks remain."
+    "t": "Fold it together",
+    "d": "Stir about one third of the whipped cream into the chocolate to loosen it. Add the rest in two additions, using a flexible spatula to cut down through the middle, sweep along the bottom and turn the mixture over, rotating the bowl as you go. Stop as soon as no white streaks remain."
    },
    {
-    "t": "Chill",
-    "d": "Spread the mousse over the crust and smooth the top. Cover and refrigerate for at least 6 hours, or overnight, until set."
+    "t": "Chill until set",
+    "d": "Scrape the mousse onto the crust and smooth the top with an offset spatula. Cover the pan with plastic wrap and refrigerate for at least 6 hours, or overnight, until the mousse is firm to a gentle touch and no longer wobbles in the center."
    },
    {
     "t": "Decorate and slice",
-    "d": "Release the springform ring and top with raspberries and chocolate curls. Slice with a knife dipped in hot water and wiped dry between cuts."
+    "d": "Run a thin knife around the edge and release the springform ring. Pile the raspberries on top and finish with chocolate curls or a dusting of cocoa powder. For clean slices, dip a long knife in hot water, wipe it dry, and repeat between every cut."
    }
   ],
   "tips": [
-   "Use a good chocolate bar, not chips. It is the star of the dessert.",
-   "Fold with a spatula in big, gentle strokes to keep the air in the mousse.",
-   "A thin layer of raspberry jam on the crust adds a lovely fruity surprise."
+   "Chop the chocolate finely and evenly. Small pieces melt completely from the residual heat of the cream, so you avoid lumps and never need to put the chocolate back on the stove.",
+   "Choose chocolate in the 60 to 70% range. Higher percentages have less sugar and more cocoa solids, which makes the mousse firmer and more bitter, and they are more likely to seize when cream is added.",
+   "Make chocolate curls by warming a bar in your hands for a minute, then dragging a vegetable peeler along its long side. A slightly warm bar curls instead of shattering."
   ],
-  "storage": "Keep covered in the fridge for up to 4 days. You can also freeze the whole cake, without toppings, for up to 1 month and thaw it overnight in the fridge.",
+  "storage": "Keep the cake covered in the fridge for up to 4 days, adding the raspberries shortly before serving so they do not bleed into the mousse. To freeze, wrap the undecorated cake tightly in plastic wrap and foil and freeze for up to 1 month. Thaw it overnight in the fridge and serve cold; do not microwave it, as the mousse will melt.",
   "variations": [
    [
-    "Mocha",
-    "Dissolve 1 tsp instant espresso into the warm cream."
+    "Mocha mousse cake",
+    "Dissolve 2 teaspoons of instant espresso powder in the hot cream before pouring it over the chocolate. It deepens the chocolate without tasting strongly of coffee."
    ],
    [
-    "Orange",
-    "Add orange zest to the mousse and top with candied peel."
+    "Graham cracker crust",
+    "Use about 1 1/2 cups of graham cracker crumbs with the same melted butter plus 2 tablespoons of sugar for a lighter, honeyed base."
    ],
    [
-    "Graham crust",
-    "Use graham crackers for a lighter, honeyed base."
+    "Orange chocolate",
+    "Add the finely grated zest of 1 orange to the whipping cream and top the cake with segmented oranges instead of raspberries."
    ]
   ],
   "nutrition": {
@@ -1394,14 +1432,18 @@
   "faq": [
    [
     "Can I use milk chocolate?",
-    "You can, but the mousse will be sweeter and softer. Reduce the powdered sugar to 1 tbsp."
+    "You can, but milk chocolate has less cocoa butter and more sugar, so the mousse will be softer and sweeter. Use 12 ounces instead of 10 to help it set, and skip the powdered sugar."
    ],
    [
-    "I don't have a springform pan.",
-    "Use a pie dish and serve it straight from the dish, or line a regular cake pan with plastic wrap."
+    "Why didn't my mousse set?",
+    "Usually the chocolate was too warm when folded, which deflated the cream, or the cream was underwhipped. Give it the full 6 hours too. Mousse that is still soft after that can be frozen for 2 hours and served semifreddo-style."
+   ],
+   [
+    "Can I make it without a springform pan?",
+    "Yes. Use a 9-inch pie dish and serve it straight from the dish, or line a regular cake pan with a plastic wrap sling so you can lift it out once set."
    ]
   ],
-  "note": "This is our go-to birthday cake for people who \"do not really like cake\". It disappears faster than anything else we bring to a party, and nobody guesses it took no oven at all.",
+  "note": "This is our pick when you need an impressive dessert but your oven is busy or it is too hot to turn it on. Use a chocolate you would happily eat on its own, since there is nothing to hide behind. Tart raspberries on top are not just decoration; they cut the richness beautifully.",
   "diet": [
    "vegetarian"
   ],
@@ -1411,7 +1453,7 @@
  {
   "id": "buttermilk-pancakes",
   "title": "Fluffy Buttermilk Pancakes",
-  "subtitle": "Tall, tender diner-style pancakes with crisp buttery edges and a gentle tang, ready in thirty minutes from one bowl.",
+  "subtitle": "Tangy buttermilk batter, left lumpy and rested for ten minutes, cooks into tall, tender stacks with lacy golden edges.",
   "category": "Beyond Toast",
   "tags": [
    "quick"
@@ -1423,24 +1465,24 @@
   "cook": 20,
   "serves": 4,
   "level": "Easy",
-  "desc": "Tall, tangy, diner-style weekend stacks",
-  "note": "We tested this batter on a lot of sleepy Saturdays, and the one rule that stuck is leaving the lumps alone. The first pancake is always the cook's snack in our kitchen, no exceptions. If you have leftover buttermilk, this recipe is the best excuse to buy another carton.",
+  "desc": "Tall, tangy, and properly fluffy.",
+  "note": "We love these on a slow Saturday with salted butter, warm maple syrup and a bowl of berries on the side. The one thing not to skip is the rest, which gives you a thicker batter and a taller pancake. Resist the urge to stir out the lumps.",
   "intro": [
-   "These are the pancakes we make when someone in the house says the word 'brunch' out loud. Buttermilk and baking soda team up to give you a thick, bubbly batter that puffs high on the griddle and stays soft in the middle.",
-   "There is nothing fancy here, just pantry staples and a couple of small habits that make a big difference. Rest the batter while the pan heats, keep the heat at medium, and you will get golden, even stacks every time."
+   "Flat, rubbery pancakes almost always come down to one mistake: a smooth batter. This recipe leans into lumps, a short rest and real buttermilk, and the result is a stack that stands tall on the plate and stays soft in the middle, even after a drizzle of syrup.",
+   "Here is the chemistry. Buttermilk is acidic, and when it meets baking soda it releases carbon dioxide right away, while baking powder adds a second lift once the batter hits the heat. Resting the batter for 5 to 10 minutes lets the flour fully hydrate and the gluten relax, so the batter thickens and traps those bubbles instead of letting them escape."
   ],
   "why": [
    [
-    "Seriously fluffy stacks",
-    "Buttermilk reacts with baking soda for extra lift, so each pancake rises tall and stays airy."
+    "Double lift, taller stacks",
+    "Baking soda and baking powder work together, one in the bowl and one on the griddle."
    ],
    [
-    "One bowl, no mixer",
-    "Whisk the dry ingredients, pour in the wet, and fold. That is the whole method."
+    "Tender, never chewy",
+    "Minimal mixing keeps gluten in check, so the crumb stays soft and open."
    ],
    [
-    "Freezer friendly",
-    "Make a double batch and toast leftovers straight from frozen on busy weekday mornings."
+    "Ready in 30 minutes",
+    "The rest happens while the pan heats, so it adds no real time to breakfast."
    ]
   ],
   "ingredients": [
@@ -1526,56 +1568,56 @@
   "steps": [
    {
     "t": "Whisk the dry ingredients",
-    "d": "In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt for about 20 seconds. Make sure there are no clumps of baking soda hiding in the flour, since those taste bitter."
+    "d": "In a large bowl, whisk the flour, sugar, baking powder, baking soda and salt for about 20 seconds. Break up any small clumps of baking soda you spot, since those leave bitter, soapy pockets in the finished pancakes."
    },
    {
-    "t": "Mix the wet ingredients",
-    "d": "In a separate bowl or a large measuring jug, whisk the buttermilk, eggs, and vanilla until smooth. Slowly whisk in the melted butter. If it seizes into little flecks from cold buttermilk, that is fine and will melt on the griddle.",
-    "tip": "Room-temperature buttermilk and eggs keep the melted butter from clumping and give a more even rise."
+    "t": "Whisk the wet ingredients",
+    "d": "In a second bowl or a large measuring jug, whisk the buttermilk, eggs and vanilla until smooth and evenly pale. Slowly drizzle in the melted butter while whisking. If cold buttermilk makes the butter firm up into little flecks, that is fine; they melt on the griddle and add pockets of richness.",
+    "tip": "Take the buttermilk and eggs out 30 minutes early if you can. Room-temperature liquids keep the butter fluid and give a more even rise."
    },
    {
     "t": "Fold and rest",
-    "d": "Pour the wet ingredients into the dry and fold with a spatula just until no dry streaks of flour remain, about 10 to 12 strokes. The batter should be thick and lumpy. Let it rest for 5 to 10 minutes while the pan heats, and you will see bubbles form on the surface.",
-    "tip": "Do not stir out the lumps. Overmixing develops gluten and makes pancakes tough and flat.",
+    "d": "Pour the wet ingredients into the dry and fold with a flexible spatula just until no dry streaks of flour remain, about 10 to 12 strokes. The batter should look thick and lumpy. Let it rest for 5 to 10 minutes while the pan heats; you will see small bubbles rise to the surface and the batter will puff slightly.",
+    "tip": "Leave the lumps alone. Every extra stir develops gluten, and gluten is what turns pancakes tough, chewy and flat.",
     "img": "images/step-pancakes-batter.webp"
    },
    {
-    "t": "Heat the pan",
-    "d": "Set a large nonstick skillet or griddle over medium heat for 2 to 3 minutes. Brush lightly with butter or oil. The pan is ready when a drop of water sizzles and dances before evaporating."
+    "t": "Heat the pan properly",
+    "d": "Set a large nonstick skillet or griddle over medium heat for 2 to 3 minutes, then brush it lightly with butter or oil. Flick in a drop of water: it should sizzle and skitter across the surface before evaporating. If it just sits there, wait another minute; if it vanishes instantly with a hiss, lower the heat."
    },
    {
     "t": "Cook the first side",
-    "d": "Scoop 1/3 cup of batter per pancake onto the pan, leaving space between them, and gently nudge each into a round. Cook for 2 to 3 minutes, until bubbles pop on the surface, the edges look set and matte, and the underside is golden brown."
+    "d": "Scoop 1/3 cup of batter per pancake onto the pan, leaving a couple of inches between them, and nudge each into a round with the back of the cup. Cook for 2 to 3 minutes, until bubbles open and pop on the surface, the edges look matte and set, and the underside is an even golden brown."
    },
    {
-    "t": "Flip and finish",
-    "d": "Flip once with a thin spatula and cook for another 1 1/2 to 2 minutes, until the center springs back when lightly pressed. Transfer to a baking sheet in a 200\u00b0F (95\u00b0C) oven to keep warm while you cook the rest, adding a little more butter to the pan between batches.",
-    "tip": "If the outsides brown before the centers cook, turn the heat down slightly. Most stovetops need a small adjustment after the first batch.",
+    "t": "Flip once and finish",
+    "d": "Slide a thin spatula underneath and flip in one confident motion. Cook 1 1/2 to 2 minutes more, until the center springs back when lightly pressed. Transfer to a baking sheet in a 200°F (95°C) oven to stay warm, and add a little more butter to the pan before the next batch.",
+    "tip": "If the outsides brown before the centers cook through, the pan is too hot. Nudge the heat down a notch; most stoves need a small adjustment after the first batch.",
     "img": "images/step-pancakes-flip.webp"
    },
    {
-    "t": "Serve",
-    "d": "Stack the pancakes on warm plates and serve right away with maple syrup, a pat of butter, and fresh fruit. This recipe makes about 12 pancakes, or 3 per person."
+    "t": "Stack and serve",
+    "d": "Stack the pancakes on warm plates and serve right away with maple syrup, a pat of butter and fresh berries or sliced banana. The batter makes about 12 pancakes, or 3 per person."
    }
   ],
   "tips": [
-   "No buttermilk? Stir 2 tbsp lemon juice or white vinegar into 2 cups of regular milk and let it sit for 5 minutes until slightly thickened.",
-   "Measure flour by spooning it into the cup and leveling it off, or weigh it. Scooping straight from the bag packs in extra flour and makes dense pancakes.",
-   "Add blueberries or chocolate chips by dropping them onto each pancake right after you pour it, rather than stirring them into the batter."
+   "Treat the first pancake as a test. Its color and rise tell you whether to adjust the heat or thin the batter with a tablespoon of buttermilk if it spreads too little.",
+   "Do not press the pancakes with your spatula after flipping. It squeezes out the gas bubbles you worked to trap and leaves them dense.",
+   "No buttermilk? Stir 2 tablespoons lemon juice or white vinegar into 2 cups whole milk and let it stand 5 minutes. It will not be as thick, so expect a slightly thinner batter."
   ],
-  "storage": "Cool leftover pancakes completely, then refrigerate in an airtight container for up to 3 days or freeze in a zip-top bag with parchment between layers for up to 2 months. Reheat in the toaster or on a baking sheet at 350\u00b0F (175\u00b0C) for 8 to 10 minutes.",
+  "storage": "Cool leftover pancakes completely, then refrigerate in an airtight container for up to 3 days or freeze in a zip-top bag, separated by parchment, for up to 2 months. Reheat straight from the fridge or freezer in a toaster until hot and crisp at the edges, or warm on a sheet pan in a 350°F (175°C) oven for 8 to 10 minutes. The batter itself does not keep well, since the baking soda loses its lift after about 30 minutes.",
   "variations": [
    [
-    "Lemon ricotta",
-    "Add the zest of 1 lemon to the wet ingredients and dot small spoonfuls of ricotta onto each pancake before flipping."
+    "Blueberry pancakes",
+    "Pour the batter first, then drop 6 to 8 blueberries onto each pancake before flipping. Stirring them into the bowl bleeds purple streaks and weighs the batter down."
    ],
    [
-    "Whole wheat",
-    "Swap 1 cup of the all-purpose flour for white whole wheat flour for a nuttier flavor and a little more fiber."
+    "Brown butter and cinnamon",
+    "Cook the 3 tablespoons butter until it smells nutty and turns amber, cool it slightly, and add 1 teaspoon cinnamon to the dry ingredients."
    ],
    [
-    "Cinnamon spice",
-    "Whisk 1 tsp ground cinnamon and a pinch of nutmeg into the dry ingredients, then serve with sliced apples."
+    "Half whole wheat",
+    "Swap 1 cup of the flour for white whole wheat flour and rest the batter the full 10 minutes, since the bran needs more time to hydrate."
    ]
   ],
   "nutrition": {
@@ -1587,16 +1629,16 @@
   },
   "faq": [
    [
-    "Why are my pancakes flat?",
-    "The usual culprits are overmixed batter, expired baking powder, or a pan that is not hot enough. Fold gently, check the date on your leaveners, and give the pan a few minutes to heat through."
-   ],
-   [
     "Can I make the batter the night before?",
-    "It is best made fresh, since the leaveners start working as soon as the buttermilk hits them. You can mix the dry and wet ingredients separately the night before, refrigerate the wet bowl, and combine them in the morning."
+    "Not recommended. The baking soda reacts with the buttermilk right away, so overnight batter bakes up flat. Instead, whisk the dry and wet ingredients separately the night before, refrigerate the wet bowl, and combine in the morning."
    ],
    [
-    "Can I use a nondairy milk?",
-    "Yes. Mix unsweetened soy or oat milk with 2 tbsp lemon juice to mimic buttermilk. The pancakes will be slightly less tender but still fluffy."
+    "Why are my pancakes flat and dense?",
+    "Usually the batter was overmixed, or the leaveners are old. Baking powder loses strength after about 6 months; test it by dropping a spoonful into hot water, which should bubble vigorously."
+   ],
+   [
+    "Why are they raw inside but dark outside?",
+    "The pan is too hot. Lower the heat to medium-low and give the next batch an extra 30 seconds per side so the centers cook before the surface over-browns."
    ]
   ],
   "img": "images/buttermilk-pancakes.webp",
@@ -1605,7 +1647,7 @@
  {
   "id": "shakshuka",
   "title": "One-Pan Shakshuka",
-  "subtitle": "Eggs gently poached in a smoky, garlicky tomato and pepper sauce, finished with salty feta and fresh herbs.",
+  "subtitle": "Eggs gently poached in a smoky, cumin-scented tomato and pepper sauce, finished with salty feta and served straight from the skillet.",
   "category": "Beyond Toast",
   "tags": [
    "healthy"
@@ -1618,24 +1660,24 @@
   "cook": 25,
   "serves": 4,
   "level": "Easy",
-  "desc": "Eggs poached in spiced tomato sauce",
-  "note": "We started making shakshuka on Sunday mornings when the fridge was down to eggs, an onion, and a lonely bell pepper. Now we keep a can of tomatoes around just for this. Please do not skip the crusty bread for dunking, it is half the fun.",
+  "desc": "Eggs, tomato sauce, bread for dunking.",
+  "note": "We love this as a lazy weekend brunch that also works as a Tuesday dinner. The one thing not to skip is the bread, because the spiced sauce is half the reason to make it. Pull the pan off the heat while the yolks still wobble, since they keep cooking on the way to the table.",
   "intro": [
-   "Shakshuka is a North African and Middle Eastern classic, and it is one of the easiest ways to feed a crowd at breakfast with a single pan. Onions and peppers melt into a spiced tomato sauce, then the eggs cook right on top until the whites are set and the yolks are still runny.",
-   "It works just as well for a lazy brunch as it does for a quick weeknight dinner. Everything happens in one skillet, and you can bring it straight to the table for everyone to scoop from."
+   "Picture a skillet of brick-red tomato sauce, bubbling gently, with six glossy eggs set into it like jewels. Shakshuka, a dish loved across North Africa and the Middle East, looks like a showpiece but relies almost entirely on pantry staples.",
+   "Its depth comes from blooming the spices. Cumin and smoked paprika hold much of their flavor in fat-soluble compounds, so a minute in hot olive oil releases far more aroma than stirring them straight into tomatoes. Covering the pan at the end traps steam, which cooks the tops of the eggs while the undersides stay soft."
   ],
   "why": [
    [
-    "Pantry-friendly ingredients",
-    "Canned tomatoes, eggs, and a few spices are all you really need to make it happen."
+    "Pantry-friendly",
+    "Canned tomatoes, an onion and a pepper are the backbone, so it's easy any day."
    ],
    [
-    "One pan, easy cleanup",
-    "The sauce and eggs cook in the same skillet, which also doubles as your serving dish."
+    "One pan, few dishes",
+    "Sauce and eggs cook in the same skillet, which goes right to the table."
    ],
    [
-    "Breakfast or dinner",
-    "It is hearty enough for supper, especially with a green salad and warm bread on the side."
+    "Sauce freezes well",
+    "Make a double batch and poach fresh eggs in it on a busy night."
    ]
   ],
   "ingredients": [
@@ -1738,52 +1780,52 @@
   ],
   "steps": [
    {
-    "t": "Soften the vegetables",
-    "d": "Heat the olive oil in a 10 to 12 inch skillet over medium heat. Add the onion and bell pepper with a pinch of salt and cook, stirring occasionally, for 7 to 8 minutes, until soft and the onion is translucent and just starting to turn golden."
+    "t": "Soften the onion and pepper",
+    "d": "Heat the olive oil in a 10 to 12 inch skillet over medium heat until it shimmers. Add the onion and bell pepper with a pinch of salt and cook, stirring occasionally, for 7 to 8 minutes, until soft, sweet-smelling, and the onion is translucent with golden edges. The salt draws out moisture so the vegetables soften instead of scorching."
    },
    {
     "t": "Bloom the spices",
-    "d": "Add the garlic, cumin, smoked paprika, and red pepper flakes and stir constantly for about 1 minute, until fragrant. Keep things moving so the garlic does not brown.",
-    "tip": "Toasting the spices in oil for a minute wakes up their flavor far more than stirring them into the tomatoes later."
+    "d": "Add the garlic, cumin, smoked paprika and red pepper flakes and stir constantly for about 1 minute, until the oil turns rusty red and smells toasty. Keep everything moving so the garlic softens without browning.",
+    "tip": "If the spices start to smell sharp or look dark, add the tomatoes right away. They cool the pan instantly and stop any scorching."
    },
    {
     "t": "Simmer the sauce",
-    "d": "Pour in the crushed tomatoes, sugar if using, salt, and a few grinds of black pepper. Bring to a gentle simmer and cook for 8 to 10 minutes, stirring now and then, until the sauce thickens enough that a spoon dragged through it leaves a trail for a second or two. Taste and adjust the salt.",
+    "d": "Stir in the crushed tomatoes, sugar if using, salt and a few grinds of black pepper. Bring to a gentle simmer and cook for 8 to 10 minutes, stirring now and then, until the sauce thickens enough that a spoon dragged through it leaves a trail for a second or two. Taste and adjust the salt, since the eggs will need a well-seasoned bed.",
     "img": "images/step-shakshuka-sauce.webp"
    },
    {
-    "t": "Add the eggs",
-    "d": "Use the back of a spoon to make 6 small wells in the sauce. Crack an egg into each well, then sprinkle the eggs with a little salt and pepper.",
-    "tip": "Crack each egg into a small cup first, then slide it into its well. It keeps the yolks whole and catches any stray shell.",
+    "t": "Nestle in the eggs",
+    "d": "Use the back of a spoon to press 6 small wells into the sauce, spacing them evenly. Crack an egg into each well and season the eggs lightly with salt and pepper. A thick sauce holds the eggs in place, while a thin one lets the whites run.",
+    "tip": "Crack each egg into a small cup first, then slide it into its well. The yolks stay whole and any stray shell is easy to fish out.",
     "img": "images/step-shakshuka-eggs.webp"
    },
    {
-    "t": "Cook until just set",
-    "d": "Reduce the heat to medium-low, cover the pan, and cook for 5 to 8 minutes. The eggs are ready when the whites are opaque and set but the yolks still jiggle when you gently shake the pan. Check at 5 minutes, since the eggs keep cooking from residual heat."
+    "t": "Cover and cook gently",
+    "d": "Reduce the heat to medium-low, cover the pan, and cook for 5 to 8 minutes. The eggs are ready when the whites are opaque and set but the yolks still jiggle when you gently shake the pan. Start checking at 5 minutes, because the eggs keep cooking from residual heat."
    },
    {
     "t": "Finish and serve",
-    "d": "Take the skillet off the heat and scatter the feta and chopped herbs over the top. Serve straight from the pan with crusty bread or warm pita for scooping up the sauce."
+    "d": "Take the skillet off the heat and scatter the feta and chopped herbs over the top. Bring the pan to the table and serve with crusty bread or warm pita for scooping up the sauce and runny yolks."
    }
   ],
   "tips": [
-   "Use a pan with a lid. If you do not have one that fits, a baking sheet or large plate laid over the top works fine.",
-   "If the sauce gets too thick before the eggs go in, loosen it with a few tablespoons of water so the eggs have something to settle into.",
-   "Fire-roasted crushed tomatoes add an extra layer of smokiness with zero extra work."
+   "If the whites set slowly while the yolks race ahead, spoon a little hot sauce over the whites before covering. It jump-starts them without overcooking the yolks.",
+   "Make the sauce up to 3 days ahead. Reheat it in the skillet until it simmers, then add the eggs and cook as directed.",
+   "Use a lid that fits well. Trapped steam cooks the tops of the eggs, and a loose lid means longer cooking and firmer yolks."
   ],
-  "storage": "The tomato sauce keeps in the fridge for up to 4 days or in the freezer for up to 3 months, so it is worth making a double batch. Cooked eggs do not reheat well, so reheat the sauce in a skillet until simmering and poach fresh eggs in it.",
+  "storage": "Refrigerate the sauce on its own in an airtight container for up to 4 days, or freeze it for up to 3 months. Cooked eggs turn rubbery when reheated, so reheat the sauce in a skillet over medium heat until simmering and poach fresh eggs in it.",
   "variations": [
    [
     "Green shakshuka",
-    "Skip the tomatoes and wilt a big pile of spinach, chard, and leeks with a splash of broth before adding the eggs."
+    "Replace the tomatoes and pepper with 1 lb chopped chard or spinach and a diced zucchini, wilted with the onion. Add 1/4 cup of broth so the eggs have something to poach in."
    ],
    [
-    "Spicy harissa",
-    "Stir 1 to 2 tbsp harissa paste into the sauce along with the tomatoes for a deeper, spicier flavor."
+    "Add merguez or chorizo",
+    "Brown 8 oz sliced sausage before the vegetables and cook them in its fat. Cut the salt back slightly, since cured sausage is salty."
    ],
    [
-    "Hearty chickpea",
-    "Add a drained 15 oz can of chickpeas to the sauce as it simmers to make it more filling for dinner."
+    "Harissa heat",
+    "Stir 1 to 2 tablespoons of harissa paste in with the spices and skip the red pepper flakes. Top with a spoonful of yogurt to cool it down."
    ]
   ],
   "nutrition": {
@@ -1795,16 +1837,16 @@
   },
   "faq": [
    [
-    "Can I make shakshuka ahead of time?",
-    "Make the sauce up to 4 days ahead and refrigerate it. When you are ready to eat, bring it back to a simmer in the skillet and add the eggs, which only take a few minutes."
+    "How do I know when the eggs are done?",
+    "The whites should be fully opaque with no clear, glassy patches, while the yolks still wobble when you shake the pan. Check at 5 minutes and remember they firm up a little more off the heat."
    ],
    [
-    "How do I make it dairy-free?",
-    "Leave off the feta or use a dairy-free crumbly cheese. A drizzle of tahini or a spoonful of dairy-free yogurt is also lovely on top."
+    "Can I use fresh tomatoes instead of canned?",
+    "Yes, use about 2 1/2 pounds of ripe tomatoes, chopped. Simmer them 5 to 10 minutes longer, until they break down and thicken."
    ],
    [
-    "Can I use fresh tomatoes?",
-    "Yes. Use about 2 1/2 lb of ripe tomatoes, chopped, and simmer the sauce a little longer, 15 to 20 minutes, until it thickens."
+    "My sauce is too thin and the eggs spread. What happened?",
+    "The sauce needed more time to reduce before the eggs went in. Simmer until a spoon leaves a visible trail, and it will hold neat wells."
    ]
   ],
   "img": "images/shakshuka.webp",
@@ -1813,7 +1855,7 @@
  {
   "id": "overnight-oats",
   "title": "Blueberry Vanilla Overnight Oats",
-  "subtitle": "Creamy, no-cook vanilla oats loaded with juicy blueberries, stirred together in five minutes and waiting for you at breakfast.",
+  "subtitle": "Rolled oats soaked overnight with Greek yogurt, chia and vanilla, then crowned in the morning with jammy blueberries.",
   "category": "Beyond Toast",
   "tags": [
    "healthy"
@@ -1826,24 +1868,24 @@
   "chill": 480,
   "serves": 2,
   "level": "Easy",
-  "desc": "Five-minute prep, zero morning effort",
-  "note": "We make these jars on Sunday night while the kettle boils and feel very smug about it all week. A little lemon zest is our secret, it makes the blueberries taste brighter. Eat them cold straight from the jar, or give them 60 seconds in the microwave on chilly mornings.",
+  "desc": "Five minutes tonight, breakfast tomorrow.",
+  "note": "This is our answer to chaotic mornings, and it tastes best on day one or two while the berries are still bright. Do not skip the pinch of salt, since it makes the vanilla and blueberries taste sweeter. A handful of toasted nuts on top is worth the extra step.",
   "intro": [
-   "Overnight oats are the breakfast equivalent of a favor from your past self. You stir oats, milk, yogurt, and chia together at night, and by morning they have soaked into something thick, creamy, and pudding-like.",
-   "This version leans on vanilla and plenty of blueberries, with Greek yogurt for extra protein. No stove, no blender, and no excuse to skip breakfast on a busy morning."
+   "Five minutes of stirring tonight saves you from a sad granola bar tomorrow. You mix, you pour into jars, and the fridge does all the cooking while you sleep. In the morning you open the lid to a thick, creamy, pudding-like breakfast that is ready to eat.",
+   "Overnight oats work because rolled oats have been steamed and flattened, so they soften fully in cold liquid given enough hours. Chia seeds form a gel as they absorb liquid, which thickens everything, and Greek yogurt adds a gentle tang plus enough protein to keep you full through lunch."
   ],
   "why": [
    [
-    "No cooking at all",
-    "The oats soften overnight in the fridge, so all you do in the morning is grab a spoon."
+    "No morning effort",
+    "Grab a jar, stir, and eat cold or warm."
    ],
    [
-    "Meal prep friendly",
-    "Mix up four or five jars at once and they will keep happily through the workweek."
+    "Thick and creamy",
+    "Chia and Greek yogurt give a pudding-like texture, not soggy porridge."
    ],
    [
-    "Filling and balanced",
-    "Oats, chia, and Greek yogurt bring fiber and protein to keep you full until lunch."
+    "Meal-prep friendly",
+    "Make four days' worth at once and it holds up."
    ]
   ],
   "ingredients": [
@@ -1920,46 +1962,46 @@
   ],
   "steps": [
    {
-    "t": "Mix the base",
-    "d": "In a medium bowl, stir together the oats, milk, Greek yogurt, chia seeds, maple syrup, vanilla, salt, and lemon zest if using. Mix for about 30 seconds, until the yogurt is fully blended and no dry oats are floating on top.",
-    "tip": "Stir well now. Chia seeds love to clump, and a good mix at the start means an even texture in the morning."
+    "t": "Stir the base",
+    "d": "In a medium bowl, stir together the oats, milk, Greek yogurt, chia seeds, maple syrup, vanilla, salt and lemon zest if using. Mix for about 30 seconds, until the yogurt disappears into the milk and no dry oats float on top.",
+    "tip": "Stir well now. Chia seeds clump the moment they hit liquid, and a thorough mix at the start means an even texture in the morning instead of gummy pockets."
    },
    {
-    "t": "Add the berries",
-    "d": "Fold in about two-thirds of the blueberries. If you are using frozen berries, add them straight from the freezer, no need to thaw."
+    "t": "Fold in the berries",
+    "d": "Gently fold in about two-thirds of the blueberries, saving the rest for topping. Frozen berries can go in straight from the freezer. They thaw overnight and bleed a lovely purple swirl into the oats."
    },
    {
     "t": "Portion into jars",
-    "d": "Divide the mixture between two 12 to 16 oz jars or airtight containers, leaving a little room at the top. Seal tightly."
+    "d": "Divide the mixture between two 12 to 16 oz jars or airtight containers, leaving about an inch of room at the top for stirring later. Seal tightly so the oats do not pick up fridge odors."
    },
    {
     "t": "Chill overnight",
-    "d": "Refrigerate for at least 6 hours and ideally 8 hours or overnight. The oats and chia will absorb the liquid and turn thick and creamy.",
-    "tip": "Want to eat sooner? Four hours will do in a pinch, though the oats will be a little chewier."
+    "d": "Refrigerate for at least 6 hours, and ideally 8 hours or overnight. The oats and chia absorb the liquid and turn thick, creamy and spoonable.",
+    "tip": "Short on time? Four hours will do in a pinch, though the oats will be a bit chewier and the mixture looser."
    },
    {
     "t": "Top and serve",
-    "d": "In the morning, give each jar a good stir and add a splash of milk if it seems too thick. Top with the remaining blueberries and a sprinkle of nuts, then eat cold, or microwave for 60 to 90 seconds, stirring halfway, if you prefer it warm."
+    "d": "In the morning, stir each jar well and add a splash of milk if it feels too stiff. Top with the remaining blueberries and a sprinkle of nuts. Eat cold, or microwave for 60 to 90 seconds, stirring halfway, until just warm and steaming at the edges."
    }
   ],
   "tips": [
-   "Stick with old-fashioned rolled oats. Quick oats turn mushy, and steel-cut oats stay too hard without cooking.",
-   "Taste before adding more sweetener. Ripe blueberries add plenty of natural sweetness by morning.",
-   "Frozen wild blueberries are small and intensely flavored, and they tint the oats a pretty purple as they thaw."
+   "Use old-fashioned rolled oats. Quick oats are cut thinner and turn to mush overnight, while steel-cut oats are too dense to soften without cooking.",
+   "Sweeten lightly at night and adjust in the morning. The blueberries release juice as they sit, and the oats taste sweeter after soaking than they do raw.",
+   "Frozen wild blueberries are smaller and more intensely flavored than cultivated ones, so they spread their flavor through every bite."
   ],
-  "storage": "Keep sealed jars in the fridge for up to 4 days, adding any crunchy toppings just before eating so they stay crisp. The oats thicken over time, so loosen them with a splash of milk as needed.",
+  "storage": "Keep sealed jars in the fridge for up to 4 days. The oats keep thickening, so loosen them with a splash of milk before eating, and add nuts or other crunchy toppings just before serving so they stay crisp.",
   "variations": [
    [
-    "Blueberry lemon cheesecake",
-    "Stir 2 tbsp softened cream cheese into the base and top with a crumbled graham cracker before serving."
+    "Peanut butter and banana",
+    "Swap the blueberries for sliced banana and stir 1 tablespoon of peanut butter into each jar. Add the banana in the morning so it does not brown."
    ],
    [
-    "Vegan and dairy-free",
-    "Use oat or almond milk and a plant-based yogurt, and sweeten with maple syrup rather than honey."
+    "Dairy-free",
+    "Use unsweetened plant milk and a coconut or almond yogurt. Plant yogurts tend to be thinner, so reduce the milk by 2 tablespoons."
    ],
    [
-    "Peanut butter berry",
-    "Swirl 1 tbsp peanut butter into each jar for a PB and J style breakfast with extra staying power."
+    "Raspberry lemon",
+    "Use raspberries instead of blueberries and increase the lemon zest to 1 teaspoon for a brighter, tangier jar."
    ]
   ],
   "nutrition": {
@@ -1971,16 +2013,16 @@
   },
   "faq": [
    [
-    "Do I have to use chia seeds?",
-    "No, but they help thicken the oats and add fiber. If you leave them out, reduce the milk by about 2 tablespoons so the oats are not too loose."
+    "Can I use steel-cut or quick oats?",
+    "Stick with rolled oats. Quick oats go mushy and steel-cut oats stay hard and gritty without cooking."
    ],
    [
-    "Can I heat overnight oats?",
-    "Yes. Transfer them to a microwave-safe bowl if your jar is not, and heat for 60 to 90 seconds, stirring halfway through. Add the fresh blueberries after heating."
+    "Are overnight oats eaten cold?",
+    "Traditionally, yes, and they taste like a creamy oat pudding. If you prefer warm, microwave a jar for 60 to 90 seconds, stirring halfway, and add a splash of milk."
    ],
    [
-    "Are overnight oats gluten-free?",
-    "Oats are naturally gluten-free but are often processed alongside wheat. Use oats labeled certified gluten-free if you need to avoid gluten."
+    "Why are my oats too thick or too runny?",
+    "Chia and yogurt brands absorb differently. If it is too thick, stir in milk a tablespoon at a time. If it is runny, give it a few more hours, or add another teaspoon of chia next time."
    ]
   ],
   "img": "images/overnight-oats.webp",
@@ -1989,7 +2031,7 @@
  {
   "id": "avocado-toast-jammy-eggs",
   "title": "Smashed Avocado Toast with Jammy Eggs",
-  "subtitle": "Crunchy sourdough piled with zesty smashed avocado and a soft, golden jammy egg. Proof that toast can still be exciting.",
+  "subtitle": "Olive oil-fried sourdough, lemony chili-flecked avocado and a soft-centered egg with a yolk the texture of warm marmalade.",
   "category": "Beyond Toast",
   "tags": [
    "quick",
@@ -2003,24 +2045,24 @@
   "cook": 10,
   "serves": 2,
   "level": "Easy",
-  "desc": "Toast, finally done right",
-  "note": "Yes, we named our whole site Bored of Toast, and yes, we still eat this about twice a week. The trick is treating each layer like it matters: properly crisp bread, well-seasoned avocado, and eggs timed to the second. We keep a phone timer set to 6 minutes 30 seconds for exactly this.",
+  "desc": "Crisp toast, jammy yolks, bright avocado.",
+  "note": "We like this best on a slow weekend morning, with strong coffee and nothing else on the plate. The one thing not to skip is frying the bread in olive oil rather than using the toaster. It gives you a crunchy, savory crust that holds up under the avocado instead of going limp.",
   "intro": [
-   "We are not against toast, we are against boring toast. This one earns its place with thick, olive oil crisped sourdough, avocado smashed with lemon and chili, and an egg with a yolk somewhere between runny and fudgy.",
-   "Jammy eggs sound fussy, but they come down to a timer and a bowl of ice water. Once you have nailed them, you will want them on salads, noodles, and pretty much everything else."
+   "Picture a thick slice of sourdough, crackling at the edges from a hot pan, spread with lemony avocado and topped with a halved egg whose yolk is set like fudge at the rim and glossy in the middle. It takes 20 minutes and a timer. That is it.",
+   "The jammy yolk comes down to precise timing and a cold start. Egg whites set at around 180°F while yolks thicken between roughly 150°F and 158°F, so a short, exact boil gets the white firm while the yolk stays in that soft, spoonable zone. The ice bath matters just as much: it stops carryover heat from cooking the yolk further, and the quick temperature drop makes the membrane pull away from the shell so the eggs peel cleanly."
   ],
   "why": [
    [
-    "Perfect jammy yolks",
-    "A precise boil and an ice bath give you set whites and rich, spoonable centers every time."
+    "Reliable jammy eggs",
+    "A 6 1/2 minute boil and ice bath gives the same soft yolk every time."
    ],
    [
-    "Actually crispy toast",
-    "Pan-toasting in olive oil makes the bread golden and sturdy enough to hold a generous topping."
+    "Toast that stays crunchy",
+    "Pan-frying in olive oil builds a sturdy crust that holds the avocado."
    ],
    [
-    "Ready in 20 minutes",
-    "The avocado and toast come together while the eggs boil, so everything lands at once."
+    "Seasoned all the way",
+    "Lemon, salt and chili go into the avocado, not just on top."
    ]
   ],
   "ingredients": [
@@ -2103,49 +2145,49 @@
   "steps": [
    {
     "t": "Boil the water",
-    "d": "Bring a small saucepan of water, deep enough to cover the eggs by an inch, to a full rolling boil over high heat. Meanwhile, fill a bowl with ice and cold water."
+    "d": "Fill a small saucepan with enough water to cover the eggs by an inch and bring it to a full rolling boil over high heat. While it heats, fill a bowl with ice and cold water and set it beside the stove."
    },
    {
     "t": "Cook the jammy eggs",
-    "d": "Lower the cold eggs gently into the boiling water with a slotted spoon and set a timer for 6 minutes 30 seconds. Adjust the heat so the water stays at a steady, lively simmer rather than a violent boil, which can crack the shells.",
-    "tip": "For a runnier yolk, go 6 minutes. For a firmer, fudgy yolk, go 7 minutes."
+    "d": "Lower the cold eggs into the boiling water with a slotted spoon and start a timer for 6 minutes 30 seconds. Turn the heat down slightly so the water holds a steady, lively simmer instead of a violent boil, which can knock the eggs into the pan and crack their shells.",
+    "tip": "For a runnier yolk, go 6 minutes. For a firmer, fudgy yolk, go 7 minutes. Stick with the same pan and number of eggs and your timing will stay consistent."
    },
    {
     "t": "Shock and peel",
-    "d": "When the timer goes off, move the eggs straight into the ice bath and leave them for at least 3 minutes to stop the cooking. Crack each egg all over on the counter and peel under a trickle of cold water, starting from the wider end where the air pocket is.",
-    "tip": "Slightly older eggs peel more easily than very fresh ones."
+    "d": "When the timer goes off, move the eggs straight into the ice bath and leave them for at least 3 minutes, until they feel cool to the touch. Tap each egg all over on the counter to create a web of fine cracks, then peel under a trickle of cold water, starting at the wide end where the air pocket is.",
+    "tip": "Slightly older eggs peel more easily than very fresh ones. As eggs age, their pH rises and the white clings less to the inner membrane."
    },
    {
     "t": "Smash the avocado",
-    "d": "While the eggs chill, halve and pit the avocado and scoop the flesh into a bowl. Add the lemon juice, salt, and red pepper flakes and smash with a fork until mostly smooth with a few chunky bits. Taste and add more salt or lemon if it tastes flat."
+    "d": "While the eggs chill, halve and pit the avocado and scoop the flesh into a bowl. Add the lemon juice, salt and red pepper flakes and mash with a fork until mostly smooth with a few chunky bits left for texture. Taste it: if it seems flat, add another pinch of salt or squeeze of lemon."
    },
    {
     "t": "Toast the bread",
-    "d": "Heat the olive oil in a skillet over medium heat. Add the bread and toast for 2 to 3 minutes per side, pressing gently with a spatula, until deep golden and crisp on the outside but still a little chewy in the middle."
+    "d": "Heat the olive oil in a skillet over medium heat until it shimmers. Add the bread and fry for 2 to 3 minutes per side, pressing gently with a spatula, until it is deep golden, sizzling and crisp outside but still slightly chewy in the middle."
    },
    {
     "t": "Assemble and serve",
-    "d": "Spread the smashed avocado thickly over the warm toast, all the way to the edges. Halve the eggs lengthwise and nestle them on top, then finish with flaky salt, black pepper, more chili flakes, a drizzle of olive oil, and chives if using. Eat right away while the toast is still crunchy."
+    "d": "Spread the avocado thickly over the warm toast, right to the edges so every bite gets some. Halve the eggs lengthwise and nestle them on top, then finish with flaky salt, black pepper, extra chili flakes, a thin drizzle of olive oil and chives or microgreens if using. Eat right away while the toast still crunches."
    }
   ],
   "tips": [
-   "Choose an avocado that yields to gentle pressure near the stem but does not feel mushy. Underripe avocado will not smash smoothly.",
-   "Season the avocado more than you think you need. Bread and eggs soak up salt, and under-seasoned avocado tastes dull.",
-   "Make extra jammy eggs. They keep, peeled, in the fridge for up to 3 days and make an instant snack or lunch topper."
+   "Cook the eggs straight from the fridge. The timing here assumes a cold egg, and a room-temperature egg will overcook by the same clock.",
+   "To tell if an avocado is ripe, flick off the little stem cap. If it comes away easily and the flesh beneath is green, it is ready; brown underneath means it is overripe.",
+   "Make the eggs up to 3 days ahead and keep them peeled in the fridge. Warm them for 1 minute in a bowl of hot tap water before slicing so the yolks loosen and are not fridge-cold."
   ],
-  "storage": "Avocado toast is best eaten immediately, since the bread softens and the avocado browns quickly. Peeled jammy eggs keep in an airtight container in the fridge for up to 3 days, and leftover smashed avocado keeps for a day with plastic wrap pressed directly onto its surface.",
+  "storage": "Avocado toast is best eaten right away, since the bread softens and the avocado browns within minutes. Peeled jammy eggs keep in an airtight container in the fridge for up to 3 days; warm them in hot tap water for a minute before serving. Leftover smashed avocado keeps for 1 day in a small container with plastic wrap pressed directly onto its surface to block air.",
   "variations": [
    [
     "Everything bagel style",
-    "Skip the chili flakes and shower the finished toast with everything bagel seasoning."
+    "Skip the red pepper flakes on top and sprinkle the eggs with 1 teaspoon of everything bagel seasoning, going lighter on the flaky salt."
    ],
    [
-    "Tomato and feta",
-    "Top with halved cherry tomatoes and crumbled feta. Note that feta makes it no longer dairy-free."
+    "Add feta and tomato",
+    "Top with crumbled feta and a few sliced cherry tomatoes. Note that the feta makes it no longer dairy-free."
    ],
    [
-    "Chili crisp kick",
-    "Spoon a little chili crisp over the eggs for crunch, heat, and a savory garlicky punch."
+    "Gluten-free toast",
+    "Use thick slices of gluten-free bread and fry them over slightly lower heat, since they tend to brown faster than sourdough."
    ]
   ],
   "nutrition": {
@@ -2157,16 +2199,16 @@
   },
   "faq": [
    [
-    "Why do you start with cold eggs?",
-    "Starting with eggs straight from the fridge makes the timing consistent every time. If your eggs are at room temperature, cut about 30 seconds off the cooking time."
+    "Why won't my eggs peel cleanly?",
+    "Very fresh eggs stick to their shells, so use eggs that are at least a week old if you can. Skipping or rushing the ice bath also makes peeling harder."
    ],
    [
-    "How do I keep smashed avocado from browning?",
-    "Lemon juice slows browning, but air is the real enemy. Press plastic wrap directly onto the surface if you need to hold it, and scrape off any darkened layer before using."
+    "How do I keep the avocado from turning brown?",
+    "The lemon juice slows browning by lowering the pH, which slows the enzyme responsible. Pressing plastic wrap onto the surface helps even more by keeping out oxygen."
    ],
    [
-    "Can I make this gluten-free?",
-    "Yes. Use your favorite sturdy gluten-free bread and toast it a little longer, since gluten-free loaves can take more time to crisp."
+    "Can I use a toaster instead of a skillet?",
+    "Yes. Toast the bread until well browned, then brush it with the olive oil. It will be a bit drier and less crunchy than pan-fried, but still good."
    ]
   ],
   "img": "images/avocado-toast-jammy-eggs.webp",
@@ -2175,7 +2217,7 @@
  {
   "id": "breakfast-burritos",
   "title": "Freezer-Friendly Breakfast Burritos",
-  "subtitle": "Crispy potatoes, savory sausage, soft scrambled eggs and melty cheddar rolled tight and ready to grab on busy mornings.",
+  "subtitle": "Crispy potatoes, sausage, soft-scrambled eggs and sharp cheddar, rolled tight and frozen so a hot breakfast is always two minutes away.",
   "category": "Beyond Toast",
   "tags": [],
   "diet": [],
@@ -2184,24 +2226,24 @@
   "serves": 8,
   "servesLabel": "burritos",
   "level": "Easy",
-  "desc": "Make once, eat breakfast all week",
-  "note": "We started making these on Sunday afternoons when weekday mornings kept ending with a sad granola bar in the car. Now the freezer drawer is labeled 'burrito bank' in marker, and nobody is allowed to make a withdrawal without restocking.",
+  "desc": "Eight hot breakfasts, waiting in the freezer.",
+  "note": "We think a stash of these is worth one busy Sunday morning, especially heading into a hectic week. Serve them with hot sauce, extra salsa or a spoonful of sour cream. Whatever you do, let the filling cool completely before rolling.",
   "intro": [
-   "A good breakfast burrito is a whole breakfast you can hold in one hand. These are packed with golden pan-fried potatoes, browned sausage, soft scrambled eggs and plenty of cheddar, all wrapped in a warm flour tortilla.",
-   "The real magic is that they freeze beautifully. We cool the filling before rolling so the tortillas stay tender instead of soggy, then wrap each one individually so you can reheat exactly as many as you need."
+   "Most frozen breakfast burritos fail in the same way: the tortilla goes soggy and the eggs turn rubbery. These are built to avoid both, with crisp-edged potatoes, well-browned sausage, softly scrambled eggs and a full cool-down before anything gets wrapped. Make eight at once, and weekday mornings get a lot easier.",
+   "The cooling step matters more than it looks. Warm filling keeps releasing steam inside the wrap, and in the freezer that moisture condenses and turns to ice crystals that soak the tortilla when it thaws. Spreading everything on a sheet pan lets the steam escape fast, and pulling the eggs while they are still glossy leaves room for the second cook when you reheat."
   ],
   "why": [
    [
-    "Built for the freezer",
-    "Cooling the filling and wrapping each burrito keeps them from turning soggy or icy."
+    "Makes 8 at once",
+    "One session of cooking covers more than a week of breakfasts for one, or several mornings for a family."
    ],
    [
-    "Reheats in minutes",
-    "Microwave straight from frozen, or crisp in a skillet for a toasty shell."
+    "No soggy tortillas",
+    "Cooling the filling fully prevents the condensation that ruins most homemade freezer burritos."
    ],
    [
-    "Easy to customize",
-    "Swap the protein, add beans or change the cheese without changing the method."
+    "Microwave straight from frozen",
+    "Parchment wrapping goes right into the microwave, so there is no thawing or plate juggling."
    ]
   ],
   "ingredients": [
@@ -2299,51 +2341,51 @@
   ],
   "steps": [
    {
-    "t": "Crisp the potatoes",
-    "d": "Heat the olive oil in a large nonstick skillet over medium-high heat. Add the potatoes in an even layer with 1/2 teaspoon salt, cover, and cook 8 minutes, then uncover and cook 6 to 8 minutes more, stirring every few minutes, until golden and tender when pierced. Transfer to a large sheet pan to cool.",
-    "tip": "Covering the pan at first steams the potatoes through, so they finish crisp outside and fluffy inside."
+    "t": "Steam, then crisp the potatoes",
+    "d": "Heat the olive oil in a large nonstick skillet over medium-high heat. Add the potatoes in an even layer with 1/2 teaspoon salt, cover and cook for 8 minutes. Uncover and cook 6 to 8 minutes more, stirring every couple of minutes, until the cubes are golden on several sides and a knife slides in easily. Spread on a large sheet pan to cool.",
+    "tip": "Covering the pan first steams the potatoes through, then uncovering drives off the moisture so the outsides can crisp while the insides stay fluffy."
    },
    {
     "t": "Brown the sausage and pepper",
-    "d": "In the same skillet over medium heat, cook the sausage 6 to 7 minutes, breaking it into small crumbles, until no pink remains. Add the bell pepper and smoked paprika and cook 2 to 3 minutes until the pepper softens. Drain off excess fat and spread on the sheet pan with the potatoes."
+    "d": "In the same skillet over medium heat, cook the sausage for 6 to 7 minutes, breaking it into small crumbles, until browned with no pink remaining. Add the bell pepper and smoked paprika and cook 2 to 3 minutes, until the pepper softens and the paprika smells toasty. Tip off the excess fat and spread the mixture on the sheet pan with the potatoes."
    },
    {
     "t": "Softly scramble the eggs",
-    "d": "Whisk the eggs, milk, remaining 1 teaspoon salt and pepper until no streaks remain. Wipe out the skillet, melt the butter over medium-low heat, then add the eggs and stir slowly with a spatula for 4 to 5 minutes until just set but still glossy. Stir in the green onions and add to the sheet pan.",
-    "tip": "Pull the eggs a little early. They finish cooking when reheated, and slightly underdone eggs stay tender after freezing."
+    "d": "Whisk the eggs, milk, remaining 1 teaspoon salt and the black pepper until no streaks of white remain. Wipe out the skillet, melt the butter over medium-low heat until foamy, then add the eggs. Stir slowly with a spatula for 4 to 5 minutes, pushing the curds from the edges to the center, until just set but still glossy and a little wet. Fold in the green onions and add to the sheet pan.",
+    "tip": "Pull the eggs while they still look a touch underdone. They finish cooking on reheating, and eggs cooked all the way now will turn rubbery later."
    },
    {
     "t": "Cool the filling completely",
-    "d": "Toss everything on the sheet pan together and spread it out. Let it cool at room temperature for about 15 minutes until no longer steaming. Warm filling makes condensation, which is what turns frozen burritos soggy."
+    "d": "Toss everything on the sheet pan together and spread it into a thin, even layer. Let it cool at room temperature for about 15 minutes, until it stops steaming and feels barely warm to the touch. This step keeps condensation, the main cause of soggy burritos, out of the wrap."
    },
    {
-    "t": "Warm and roll",
-    "d": "Microwave the tortillas under a damp paper towel for 30 seconds so they are pliable. Divide the cheese and filling among them (about 3/4 cup filling each), spooning it in a log just below center, and add a spoonful of salsa if using. Fold in the sides, then roll up tightly from the bottom."
+    "t": "Warm the tortillas and roll",
+    "d": "Stack the tortillas under a damp paper towel and microwave for 30 seconds, until soft and pliable. Sprinkle each with cheese, then spoon about 3/4 cup filling in a log just below the center and add a spoonful of salsa if using. Fold in the sides, then roll up tightly from the bottom, tucking the filling in as you go."
    },
    {
     "t": "Wrap and freeze",
-    "d": "Wrap each burrito snugly in foil or parchment, then place them all in a zip-top freezer bag with the air pressed out. Label and freeze flat for up to 3 months, or refrigerate up to 4 days if eating soon.",
-    "tip": "Parchment wrap means you can microwave straight from frozen without unwrapping onto a plate."
+    "d": "Wrap each burrito snugly in foil or parchment, then slide them into a large zip-top freezer bag and press out as much air as possible. Label with the date and freeze flat for up to 3 months, or refrigerate for up to 4 days if you plan to eat them soon.",
+    "tip": "Choose parchment if you will reheat in the microwave. You can heat the burrito right in its wrapper without unwrapping it first."
    }
   ],
   "tips": [
-   "Keep the salsa light and thick. Watery salsa is the fastest route to a soggy tortilla.",
-   "Use the biggest tortillas you can find. Anything smaller than 10 inches will split when rolled.",
-   "To reheat, microwave a frozen burrito (unwrapped from foil) in a damp paper towel for 1 minute, flip, and heat 1 to 1 1/2 minutes more until hot in the center."
+   "Drain watery salsa in a fine-mesh strainer for 10 minutes before using it. Excess liquid is the second biggest cause of soggy burritos after warm filling.",
+   "For the crispest result, reheat in two stages: microwave the unwrapped burrito for 1 1/2 to 2 minutes, then toast it in a dry skillet over medium heat for 1 to 2 minutes per side until the tortilla blisters.",
+   "Put the cheese down first, directly on the tortilla. It acts as a moisture barrier between the filling and the wrap, and it melts into glue that holds the roll together."
   ],
-  "storage": "Refrigerate wrapped burritos for up to 4 days or freeze for up to 3 months. Reheat from frozen in the microwave for 2 to 3 minutes, or bake foil-wrapped at 375\u00b0F (190\u00b0C) for 35 to 40 minutes and crisp in a dry skillet if you like.",
+  "storage": "Refrigerate wrapped burritos for up to 4 days or freeze in a zip-top freezer bag for up to 3 months. To reheat from frozen, remove any foil, wrap in a damp paper towel or keep in parchment, and microwave for 2 1/2 to 3 minutes, flipping halfway. For a crisper tortilla, bake foil-wrapped burritos straight from frozen at 375°F (190°C) for 35 to 40 minutes.",
   "variations": [
    [
-    "Vegetarian black bean",
-    "Skip the sausage and add a drained 15-ounce can of black beans plus 1 teaspoon cumin to the peppers."
+    "Go vegetarian",
+    "Swap the sausage for one 15-oz can black beans, rinsed and patted very dry, and add 1/2 teaspoon cumin with the smoked paprika."
    ],
    [
-    "Bacon and pepper jack",
-    "Use 10 ounces of crumbled cooked bacon and swap the cheddar for pepper jack for a little heat."
+    "Use chorizo",
+    "Replace the breakfast sausage with 1 lb fresh Mexican chorizo. It releases more fat, so drain it well and skip the smoked paprika."
    ],
    [
-    "Green chile",
-    "Stir a 4-ounce can of diced green chiles into the eggs just before they set."
+    "Add greens",
+    "Wilt 4 cups baby spinach in the skillet after the sausage, then squeeze it dry in a towel before adding. Any leftover water will soften the tortillas."
    ]
   ],
   "nutrition": {
@@ -2355,16 +2397,16 @@
   },
   "faq": [
    [
-    "Can I reheat them in an air fryer?",
-    "Yes. Microwave a frozen burrito for 1 1/2 minutes to thaw the center, then air fry at 375\u00b0F (190\u00b0C) for 5 to 6 minutes until the tortilla is crisp."
+    "Can I skip the potatoes?",
+    "Yes. Add an extra 4 eggs or another 1/2 lb sausage to keep the filling hearty, and expect about 7 burritos instead of 8."
    ],
    [
-    "Why did my burritos get soggy in the freezer?",
-    "Usually the filling was still warm when rolled, or the salsa was too wet. Cool everything fully and drain any watery add-ins before assembling."
+    "Why are my frozen burritos soggy?",
+    "The filling was probably still warm when you rolled it, or the salsa was watery. Cool everything until it stops steaming, drain the salsa, and press all the air out of the freezer bag."
    ],
    [
-    "Can I use frozen hash browns?",
-    "Absolutely. Use about 4 cups of frozen diced hash browns and cook them straight from frozen until golden, 10 to 12 minutes."
+    "Do I need to thaw them before reheating?",
+    "No. They reheat well straight from frozen. Thawing overnight in the fridge cuts microwave time to about 1 1/2 minutes."
    ]
   ],
   "img": "images/breakfast-burritos.webp",
@@ -2373,7 +2415,7 @@
  {
   "id": "cinnamon-french-toast",
   "title": "Custardy Cinnamon French Toast",
-  "subtitle": "Thick slices of brioche soaked in a rich vanilla cinnamon custard, griddled until crisp outside and creamy in the middle.",
+  "subtitle": "Thick slices of day-old brioche soaked in a vanilla-cinnamon custard, then cooked slowly in butter until crisp outside and pudding-soft within.",
   "category": "Beyond Toast",
   "tags": [
    "quick"
@@ -2385,24 +2427,24 @@
   "cook": 20,
   "serves": 4,
   "level": "Easy",
-  "desc": "Crisp edges, creamy custard center",
-  "note": "We call this the reason we named the site Bored of Toast, because it is toast that is anything but boring. Our one rule is that the bread must be a day old, so we buy brioche on Friday and hide it until Sunday.",
+  "desc": "Crisp edges, custardy centers, warm cinnamon.",
+  "note": "If any recipe explains our name, it is this one: toast, but far from boring. Day-old bread is the one thing we won't bend on, because fresh brioche collapses into mush in the custard. Serve it with warm maple syrup, berries and crisp bacon on the side.",
   "intro": [
-   "Most French toast is either dry in the middle or soggy all the way through. This version gets the best of both: a quick soak in a custard made with milk and cream, then a slow sizzle in butter until the outside turns deep golden and crisp.",
-   "The cinnamon and a little brown sugar go right into the custard, so every bite tastes like a cinnamon roll. We cook it over medium-low heat, which gives the center time to set into something soft and almost pudding-like."
+   "Soggy centers and scorched outsides are the two ways French toast goes wrong, and both come down to heat and bread. Fix those, and you get slices that are crisp and caramelized on the surface with a center like bread pudding.",
+   "Day-old brioche or challah is slightly drier, so it drinks up more custard without falling apart. The rich mix of eggs, milk and cream needs gentle heat to set, since egg proteins firm up gradually, and medium-low heat gives the middle time to cook before the sugar and butter on the surface go past golden to burnt."
   ],
   "why": [
    [
-    "Custard, not scrambled egg",
-    "Adding cream gives a silky center with no eggy flavor or streaks."
+    "Truly custardy centers",
+    "A rich egg, milk and cream custard soaks deep and sets like bread pudding."
    ],
    [
-    "Caramelized, crisp edges",
-    "Brown sugar in the custard browns in the butter for a lightly crackly crust."
+    "Browned, never burnt",
+    "Medium-low heat gives crisp, caramelized edges while the middle cooks through."
    ],
    [
-    "Ready in 30 minutes",
-    "No overnight soak needed, just day-old bread and a patient pan."
+    "Everyone eats together",
+    "A warm oven holds finished slices crisp so the whole batch hits the table hot."
    ]
   ],
   "ingredients": [
@@ -2485,50 +2527,50 @@
   ],
   "steps": [
    {
-    "t": "Heat the oven and pan",
-    "d": "Set the oven to 200\u00b0F (95\u00b0C) and place a wire rack on a sheet pan inside to keep finished slices warm. Put a large nonstick skillet or griddle over medium-low heat to preheat for about 3 minutes."
+    "t": "Preheat oven and skillet",
+    "d": "Heat the oven to 200°F (95°C) and set a wire rack on a sheet pan inside to hold finished slices. Place a large nonstick skillet or griddle over medium-low heat for about 3 minutes, so it heats evenly without hot spots."
    },
    {
     "t": "Whisk the custard",
-    "d": "In a wide, shallow dish, whisk the eggs until completely smooth with no streaks of white. Add the milk, cream, brown sugar, cinnamon, vanilla, salt and nutmeg and whisk for 30 seconds until the sugar dissolves and the cinnamon is evenly suspended.",
-    "tip": "Cinnamon likes to float on top. Give the custard a quick whisk before each new batch of bread."
+    "d": "In a wide, shallow dish, whisk the eggs until completely smooth with no streaks of white, which would otherwise cook into patches of plain egg. Add the milk, cream, brown sugar, cinnamon, vanilla, salt and nutmeg and whisk for 30 seconds, until the sugar dissolves and the cinnamon is evenly suspended.",
+    "tip": "Cinnamon floats and clumps on top of the custard. Give it a quick whisk before each new batch so every slice gets its share."
    },
    {
     "t": "Soak the bread",
-    "d": "Lay 2 to 3 slices in the custard and soak 15 to 20 seconds per side for brioche, or up to 30 seconds per side for denser challah. The bread should feel heavy and saturated but still hold its shape when lifted. Let the excess drip off for a few seconds."
+    "d": "Lay 2 or 3 slices in the custard and soak 15 to 20 seconds per side for brioche, or up to 30 seconds per side for denser challah. The bread should feel heavy and saturated but still hold its shape when lifted. Let the excess drip off for a few seconds so the surface browns instead of steaming."
    },
    {
     "t": "Cook low and slow",
-    "d": "Melt 1 tablespoon butter in the skillet until foaming, then add the soaked slices. Cook 3 to 4 minutes per side until deep golden brown and the center springs back when pressed gently. If the butter starts to smoke or the outside darkens before 3 minutes, lower the heat.",
-    "tip": "Medium-low heat is the secret. High heat browns the outside before the custard in the middle sets."
+    "d": "Melt 1 tablespoon of butter in the skillet until it foams and smells nutty, then add the soaked slices. Cook 3 to 4 minutes per side, until deep golden brown and the center springs back when pressed gently. If the butter starts to smoke or the outside darkens before 3 minutes, lower the heat.",
+    "tip": "Unsure if the middle is set? Press the center with a spatula. Liquid custard seeping out means it needs another minute per side on slightly lower heat."
    },
    {
     "t": "Keep warm and repeat",
-    "d": "Move cooked slices to the rack in the oven, where they stay crisp for up to 20 minutes. Wipe any dark bits from the pan, add more butter, and repeat with the remaining bread."
+    "d": "Move cooked slices to the rack in the oven, where they stay crisp for up to 20 minutes. Wipe any dark bits from the pan with a paper towel, add more butter, and repeat with the remaining bread."
    },
    {
     "t": "Serve",
-    "d": "Stack two slices per plate and dust with powdered sugar. Serve right away with warm maple syrup and berries."
+    "d": "Stack two slices per plate and dust with powdered sugar. Serve right away with warm maple syrup and fresh berries."
    }
   ],
   "tips": [
-   "Fresh bread soaks up custard too fast and turns mushy. If yours is fresh, dry the slices in a 300\u00b0F (150\u00b0C) oven for 8 to 10 minutes first.",
-   "A wire rack, not a plate, keeps the bottoms from steaming and going soft while you finish the batch.",
-   "Warm the maple syrup for 20 seconds in the microwave so it does not cool down your toast."
+   "No day-old bread? Dry fresh slices on a rack in a 300°F (150°C) oven for 8 to 10 minutes, flipping once. They should feel dry to the touch but not toasted.",
+   "Whisk the custard the night before and refrigerate it covered. Whisk again in the morning, since the cinnamon settles overnight.",
+   "Wiping the pan between batches matters. Browned milk solids and sugar left behind will burn and leave bitter dark spots on the next slices."
   ],
-  "storage": "Cool leftovers completely, then refrigerate in an airtight container for up to 3 days or freeze in a single layer, then bag, for up to 2 months. Reheat in a toaster or a 350\u00b0F (175\u00b0C) oven for 8 to 10 minutes until hot and crisp again.",
+  "storage": "Cool leftovers completely, then refrigerate in an airtight container for up to 3 days. To freeze, lay slices on a sheet pan until solid, then transfer to a freezer bag for up to 2 months. Reheat in a toaster or a 350°F (175°C) oven for 8 to 10 minutes until hot and crisp.",
   "variations": [
    [
-    "Orange cardamom",
-    "Add 1 teaspoon orange zest and 1/4 teaspoon ground cardamom to the custard in place of the nutmeg."
-   ],
-   [
-    "Cinnamon sugar crust",
-    "Sprinkle each side with a mix of 1/4 cup sugar and 1 teaspoon cinnamon right after it hits the pan."
+    "Orange and cardamom",
+    "Swap the nutmeg for 1/4 teaspoon ground cardamom and add the finely grated zest of 1 orange to the custard."
    ],
    [
     "Dairy-free",
-    "Use oat milk and full-fat canned coconut milk instead of the milk and cream, and cook in coconut oil or vegan butter."
+    "Use 1 1/2 cups of full-fat oat milk or canned coconut milk in place of the milk and cream, and cook in coconut oil or vegan butter. Soak a few seconds less, as thinner custards absorb faster."
+   ],
+   [
+    "Stuffed with cream cheese",
+    "Sandwich 2 thinner slices with sweetened cream cheese and a little jam before soaking. Cook a minute longer per side on low so the filling warms through."
    ]
   ],
   "nutrition": {
@@ -2540,16 +2582,16 @@
   },
   "faq": [
    [
-    "What is the best bread for French toast?",
-    "Brioche or challah sliced about 1 inch thick gives the most custardy result. Thick-cut Texas toast or a sturdy sourdough also work but need a slightly longer soak."
-   ],
-   [
     "Why is my French toast soggy in the middle?",
-    "Either the heat was too high, so the outside browned before the center cooked, or the bread was too fresh. Try medium-low heat and day-old bread."
+    "The heat was probably too high, so the outside browned before the custard set, or the bread was too fresh and soaked too long. Use day-old bread, stick to medium-low heat, and press the center to check."
    ],
    [
-    "Can I make the custard ahead?",
-    "Yes. Whisk it the night before and refrigerate it covered. Whisk again before using since the cinnamon settles."
+    "Can I use regular sandwich bread?",
+    "Yes, but it is thinner and softer, so soak it just 5 to 10 seconds per side and expect a less custardy center. Thick-cut or day-old bread gives the best result."
+   ],
+   [
+    "Can I make this ahead for a crowd?",
+    "Cook all the slices, then hold them on the rack in the 200°F (95°C) oven for up to 20 minutes. For longer, cool, freeze, and reheat in a 350°F (175°C) oven."
    ]
   ],
   "img": "images/cinnamon-french-toast.webp",
@@ -2558,7 +2600,7 @@
  {
   "id": "butternut-squash-soup",
   "title": "Roasted Butternut Squash Soup",
-  "subtitle": "Deeply caramelized squash, sweet onion and garlic blended into a velvety, gently spiced soup that tastes like October in a bowl.",
+  "subtitle": "Oven-caramelized squash, apple and garlic blended into a velvety soup, warmed with nutmeg and brightened by a splash of cider vinegar.",
   "category": "Soups",
   "tags": [
    "fall",
@@ -2572,24 +2614,24 @@
   "cook": 55,
   "serves": 6,
   "level": "Easy",
-  "desc": "Velvety, caramelized, cozy fall classic",
-  "note": "We tried the boil-everything shortcut for years and always ended up with soup that tasted like baby food. Roasting changed everything, and now the first squash from the farmers market is our official start to soup season.",
+  "desc": "Roasted, silky, and deeply savory.",
+  "note": "Roasting instead of boiling is what makes this soup, so give the squash the full time and room on two pans. The vinegar at the end is small but essential. We love it with a grilled cheese on a cold night.",
   "intro": [
-   "Roasting is the step that makes this soup special. High heat caramelizes the squash, onion and garlic, turning their sugars nutty and golden before they ever meet the pot.",
-   "A tart apple adds brightness, a splash of cream makes it silky, and a spoonful of vinegar at the end wakes everything up. It is cozy enough for a cold night but light enough to eat all week."
+   "Most butternut squash soup tastes like baby food because the squash is boiled. We roast it instead. At 425°F, the natural sugars caramelize and the surface browns through the Maillard reaction, creating toasty, nutty flavors that water simply cannot produce.",
+   "A tart apple and whole garlic cloves roast alongside the squash, adding brightness and mellow sweetness, and a pinch each of nutmeg and cinnamon keeps things warm rather than dessert-like. The last-minute splash of cider vinegar is the quiet hero, because acid balances sweetness and makes every other flavor come into focus."
   ],
   "why": [
    [
-    "Roasted for deeper flavor",
-    "Caramelized edges give a sweet, nutty richness boiling never can."
+    "Roasted, not boiled",
+    "Caramelized edges give the soup real depth and savoriness."
    ],
    [
     "Silky without much cream",
-    "Squash blends so smooth that half a cup of cream is plenty."
+    "Blended squash is naturally velvety; cream just rounds it out."
    ],
    [
-    "Great for meal prep",
-    "It tastes even better the next day and freezes well."
+    "Freezes beautifully",
+    "Stash portions for up to 3 months."
    ]
   ],
   "ingredients": [
@@ -2708,49 +2750,49 @@
   "steps": [
    {
     "t": "Prep and season",
-    "d": "Heat the oven to 425\u00b0F (220\u00b0C) and line two large sheet pans with parchment. Toss the squash, onion, apple and garlic with the olive oil, salt and pepper, then spread in a single layer across both pans.",
-    "tip": "Crowding causes steaming. Two pans give you browned edges instead of pale, soft squash."
+    "d": "Heat the oven to 425°F (220°C) and line two large sheet pans with parchment. Toss the squash, onion, apple and garlic with the olive oil, salt and pepper until everything glistens, then spread in a single layer across both pans with some space between pieces.",
+    "tip": "Crowded vegetables steam in their own moisture and stay pale. Two pans give you browned, caramelized edges, which is where the flavor lives."
    },
    {
     "t": "Roast until caramelized",
-    "d": "Roast 35 to 40 minutes, flipping everything and swapping the pans halfway through. The squash is ready when it is fork-tender with deep golden brown edges. Pull the garlic early if it starts to turn dark brown."
+    "d": "Roast for 35 to 40 minutes, flipping everything and swapping the pans between racks halfway through. The squash is ready when a fork slides in easily and the edges are deep golden brown, and the kitchen smells sweet and toasty. Pull the garlic early if it starts turning dark brown, since burnt garlic tastes bitter."
    },
    {
     "t": "Simmer with broth",
-    "d": "Transfer the roasted vegetables to a large pot and add the broth, thyme, nutmeg and cinnamon. Bring to a boil over medium-high heat, then reduce to a gentle simmer for 10 minutes so the flavors meld."
+    "d": "Transfer the roasted vegetables and any browned bits from the parchment to a large pot. Add the broth, thyme, nutmeg and cinnamon and bring to a boil over medium-high heat, then reduce to a gentle simmer for 10 minutes so the flavors meld and the apple softens completely."
    },
    {
     "t": "Blend until silky",
-    "d": "Blend with an immersion blender for 1 to 2 minutes until completely smooth. If using a countertop blender, work in batches no more than half full, remove the center cap and cover with a towel so steam can escape.",
-    "tip": "For restaurant-smooth soup, blend a full 2 minutes in a countertop blender. It is worth the extra batch."
+    "d": "Blend with an immersion blender for 1 to 2 minutes, until completely smooth with no flecks of fiber. If using a countertop blender, work in batches no more than half full, remove the center cap and cover the opening with a folded towel so steam can escape safely.",
+    "tip": "For the silkiest texture, run a countertop blender a full 2 minutes per batch. Its higher speed shears the squash fibers finer than a stick blender can."
    },
    {
     "t": "Finish and adjust",
-    "d": "Return the soup to low heat and stir in the cream, maple syrup if using and vinegar. If it is too thick, add broth or water 1/4 cup at a time until it coats a spoon but still pours easily. Taste and adjust salt and pepper."
+    "d": "Return the soup to low heat and stir in the cream, maple syrup if using and vinegar. If it is too thick, add broth or water 1/4 cup at a time until it coats a spoon but still pours easily. Taste and adjust salt and pepper; it should taste bright and rounded, not flat."
    },
    {
     "t": "Serve",
-    "d": "Ladle into warm bowls and top with a swirl of cream or olive oil and a handful of toasted pepitas. Serve with crusty bread or a grilled cheese."
+    "d": "Ladle into warm bowls and finish with a swirl of cream or olive oil and a handful of toasted pepitas for crunch. Serve with crusty bread or a grilled cheese for dunking."
    }
   ],
   "tips": [
-   "Buy pre-cut squash to save 10 minutes of peeling. You need about 2 1/2 lb (1.1 kg) of cubes.",
-   "A sharp Y-shaped vegetable peeler works far better than a knife for removing butternut skin.",
-   "Do not skip the vinegar. That small splash balances the natural sweetness and makes the soup taste finished."
+   "Pre-cut squash saves about 10 minutes of peeling. You need roughly 2 1/2 lb (1.1 kg) of cubes, and cut any oversized pieces down to 1 inch so everything roasts evenly.",
+   "Peel whole squash with a sharp Y-shaped peeler rather than a knife, and microwave it for 2 to 3 minutes first to soften the skin.",
+   "Season in stages. Salting the vegetables before roasting draws out moisture for better browning, and a final taste after the cream and vinegar lets you dial it in."
   ],
-  "storage": "Refrigerate in airtight containers for up to 5 days or freeze for up to 3 months, ideally before adding the cream. Thaw overnight in the fridge and reheat gently over medium-low heat, stirring in the cream and a splash of broth if it has thickened.",
+  "storage": "Refrigerate in airtight containers for up to 5 days, or freeze for up to 3 months, ideally before adding the cream. Thaw overnight in the fridge and reheat gently over medium-low heat, stirring in the cream and a splash of broth if the soup has thickened.",
   "variations": [
    [
-    "Vegan",
-    "Swap the cream for full-fat canned coconut milk and use maple syrup. It is naturally dairy-free and just as silky."
+    "Vegan and dairy-free",
+    "Swap the heavy cream for full-fat canned coconut milk. It adds a subtle coconut note that pairs well with the warm spices."
    ],
    [
-    "Thai-style",
-    "Add 2 tablespoons red curry paste and a thumb of ginger to the simmer, use coconut milk, and finish with lime juice."
+    "Curried squash",
+    "Add 2 teaspoons of curry powder and a 1-inch piece of grated ginger with the broth, and skip the cinnamon."
    ],
    [
-    "Brown butter sage",
-    "Top each bowl with sage leaves fried in 3 tablespoons of browned butter for a nutty, crispy garnish."
+    "Smoky chipotle",
+    "Replace the nutmeg and cinnamon with 1/2 teaspoon of smoked paprika and 1 minced chipotle in adobo, then finish with lime juice instead of vinegar."
    ]
   ],
   "nutrition": {
@@ -2763,15 +2805,15 @@
   "faq": [
    [
     "Can I use frozen butternut squash?",
-    "Yes. Roast it straight from frozen at 425\u00b0F (220\u00b0C) for 40 to 45 minutes. It browns a little less but still tastes great."
+    "Yes. Roast it from frozen at the same temperature, spreading it out well, and expect it to take 10 to 15 minutes longer and brown a little less."
    ],
    [
-    "How do I safely cut a butternut squash?",
-    "Trim both ends so it sits flat, cut the neck from the bulb, then peel each piece and halve it. Scoop out the seeds before cubing."
+    "Why does my soup taste flat?",
+    "It usually needs salt or acid. Add salt a pinch at a time, then a few more drops of vinegar, tasting after each addition."
    ],
    [
-    "My soup is too sweet. How do I fix it?",
-    "Add more vinegar or a squeeze of lemon a teaspoon at a time, plus a pinch of salt. Skip the maple syrup entirely next time."
+    "My soup is grainy. What went wrong?",
+    "It was not blended long enough, or the squash was undercooked. Roast until fully fork-tender and blend in a countertop blender for a full 2 minutes per batch."
    ]
   ],
   "img": "images/butternut-squash-soup.webp",
@@ -2780,7 +2822,7 @@
  {
   "id": "lemon-chicken-orzo-soup",
   "title": "Lemon Chicken Orzo Soup",
-  "subtitle": "Tender poached chicken, little orzo pearls and wilted spinach in a bright, lemony broth that feels like a warm hug.",
+  "subtitle": "Tender shredded chicken, silky orzo and wilted spinach in a garlicky broth, finished with a big hit of lemon and fresh dill.",
   "category": "Soups",
   "tags": [
    "healthy"
@@ -2792,24 +2834,24 @@
   "cook": 35,
   "serves": 6,
   "level": "Easy",
-  "desc": "Bright, lemony, one-pot comfort soup",
-  "note": "This is the soup we make the second someone in our house sniffles. We squeeze in more lemon than seems reasonable, and every single time someone asks if we can add a little more.",
+  "desc": "Bright, lemony chicken soup in one pot.",
+  "note": "We would happily bring a pot of this to a friend with a cold, or make it on a gray Sunday to eat all week. Add the lemon off the heat and taste as you go; the soup should taste noticeably bright, not just a little tart. Serve it with crusty bread for dunking.",
   "intro": [
-   "This soup takes everything we love about classic chicken noodle and makes it brighter. Chicken thighs poach right in the broth, so they stay juicy and flavor the soup as they cook.",
-   "Orzo gives it a cozy, spoonable body, and a generous hit of lemon juice and zest at the end keeps it fresh instead of heavy. Spinach and dill go in at the very last minute, so everything stays vibrant."
+   "Most chicken soups are cozy but a bit sleepy. This one wakes up at the finish line with lemon zest, plenty of juice, and a handful of dill, which turns a humble pot of chicken and pasta into something you want to keep eating straight from the ladle.",
+   "Poaching the thighs right in the broth does double duty: the chicken cooks gently, and its juices and collagen enrich the soup as it simmers. Keep the heat low, since meat proteins tighten and squeeze out moisture when they are boiled hard, which is what makes chicken stringy. The lemon goes in last, off the heat, because long cooking dulls the bright citrus aromas and can turn the juice bitter."
   ],
   "why": [
    [
-    "Juicy, never stringy chicken",
-    "Poaching thighs gently in the broth keeps them tender and flavorful."
+    "Juicy, tender chicken",
+    "A gentle poach in the broth keeps thighs moist and flavors the soup."
    ],
    [
-    "All in one pot",
-    "Vegetables, chicken and orzo cook together in about 35 minutes."
+    "Bright, not heavy",
+    "Lemon juice, zest and dill finish it with plenty of freshness."
    ],
    [
-    "Bright and fresh",
-    "Lemon zest and juice added off the heat keep the flavor lively."
+    "One pot, 50 minutes",
+    "Everything, including the orzo, cooks in a single Dutch oven."
    ]
   ],
   "ingredients": [
@@ -2923,49 +2965,50 @@
   "steps": [
    {
     "t": "Soften the vegetables",
-    "d": "Heat the olive oil in a large Dutch oven over medium heat. Add the onion, carrots and celery with a pinch of salt and cook 6 to 8 minutes, stirring occasionally, until the onion is translucent and the carrots start to soften. Stir in the garlic and oregano and cook 1 minute until fragrant."
+    "d": "Heat the olive oil in a large Dutch oven over medium heat until it shimmers. Add the onion, carrots and celery with a pinch of salt and cook for 6 to 8 minutes, stirring occasionally, until the onion is translucent and the carrots begin to soften. Stir in the garlic and oregano and cook for 1 minute, until the kitchen smells fragrant."
    },
    {
     "t": "Poach the chicken",
-    "d": "Pour in the broth, add the bay leaves, salt and pepper, and nestle in the chicken thighs. Bring to a boil over medium-high heat, then reduce to a gentle simmer, partially cover, and cook 15 to 18 minutes until the chicken reaches 165\u00b0F (74\u00b0C) in the thickest part.",
-    "tip": "Keep it at a lazy simmer with small bubbles. A hard boil makes chicken tough."
+    "d": "Pour in the broth, add the bay leaves, salt and pepper, and nestle the chicken into the liquid. Bring to a boil over medium-high heat, then lower to a gentle simmer, partially cover and cook for 15 to 18 minutes, until the thickest part of the chicken registers 165°F (74°C).",
+    "tip": "Keep it at a lazy simmer with small bubbles breaking the surface. A hard boil makes the chicken tough and the broth cloudy."
    },
    {
     "t": "Shred the chicken",
-    "d": "Transfer the chicken to a cutting board and let it cool for 5 minutes. Shred into bite-sized pieces with two forks. Fish out and discard the bay leaves."
+    "d": "Move the chicken to a cutting board and let it cool for 5 minutes, just enough to handle. Shred it into bite-sized pieces with two forks, pulling along the grain. Fish out the bay leaves and discard them."
    },
    {
     "t": "Cook the orzo",
-    "d": "Return the broth to a simmer over medium heat and stir in the orzo. Cook 8 to 10 minutes, stirring every couple of minutes so it does not stick to the bottom, until tender with a slight bite.",
-    "tip": "The orzo keeps drinking broth as it sits, so stop cooking while it still has a little chew."
+    "d": "Bring the broth back to a simmer over medium heat and stir in the orzo. Cook for 8 to 10 minutes, stirring every couple of minutes so it does not stick and scorch on the bottom, until it is tender with a slight bite in the center.",
+    "tip": "The orzo keeps drinking broth as it sits, so pull it off the heat while it still has a little chew."
    },
    {
     "t": "Add lemon and greens",
-    "d": "Turn off the heat and stir in the shredded chicken, spinach, lemon zest and lemon juice. Let it sit 1 to 2 minutes until the spinach wilts. Stir in the dill, then taste and add more salt, pepper or lemon until it tastes bright."
+    "d": "Turn off the heat and stir in the shredded chicken, spinach, lemon zest and lemon juice. Let the pot sit for 1 to 2 minutes, until the spinach has wilted to dark green. Stir in the dill, then taste and add more salt, pepper or lemon until the broth tastes bright and well seasoned.",
+    "tip": "Add the lemon juice in stages. Start with about two thirds, taste, and add the rest if the soup still tastes flat. Salt and acid work together, so if it tastes sour but thin, add salt rather than more lemon."
    },
    {
     "t": "Serve",
-    "d": "Ladle into bowls and top with extra dill and a crack of black pepper. Serve with lemon wedges and crusty bread."
+    "d": "Ladle the soup into bowls and top with extra dill and a crack of black pepper. Serve with lemon wedges and crusty bread on the side."
    }
   ],
   "tips": [
-   "Thighs stay juicier than breasts, but if you use breasts, check them at 12 minutes so they do not dry out.",
-   "Always add lemon off the heat. Boiling lemon juice turns it dull and slightly bitter.",
-   "If you plan to have leftovers, cook the orzo separately and add it to each bowl so it does not soak up all the broth."
+   "Thighs are more forgiving than breasts. Their extra fat and connective tissue keep them juicy even if they simmer a few minutes too long, while breasts dry out quickly past 165°F.",
+   "If you plan to eat the soup over several days, cook the orzo separately in salted water and add it to each bowl. That way the pasta does not swell and soak up all the broth in the fridge.",
+   "Zest the lemons before you juice them. It is much easier on a whole lemon, and the zest carries most of the fragrant oils, so do not skip it."
   ],
-  "storage": "Refrigerate in airtight containers for up to 4 days. The orzo absorbs broth overnight, so reheat gently over medium heat with an extra 1/2 to 1 cup broth; for freezing, freeze the soup without orzo for up to 3 months and cook fresh orzo when reheating.",
+  "storage": "Refrigerate the soup in airtight containers for up to 4 days. The orzo absorbs broth overnight, so reheat it in a saucepan over medium heat with an extra 1/2 to 1 cup of broth, stirring until steaming. To freeze, make the soup without orzo and freeze for up to 3 months, then cook fresh orzo when you reheat it.",
   "variations": [
    [
     "Greek avgolemono style",
-    "Whisk 2 eggs with the lemon juice, slowly temper with 2 cups hot broth, then stir back in off the heat for a creamy, silky soup."
+    "Whisk 2 eggs with the lemon juice, slowly whisk in 2 cups of the hot broth to temper, then stir the mixture back into the pot off the heat for a creamy, silky soup."
    ],
    [
-    "Gluten-free",
-    "Swap the orzo for 3/4 cup long-grain white rice and simmer 15 to 18 minutes, or use a gluten-free orzo."
+    "Use rotisserie chicken",
+    "Skip the poaching and simmer the broth with the bay leaves for 10 minutes, then add 4 cups of shredded rotisserie chicken with the spinach."
    ],
    [
-    "Parmesan finish",
-    "Drop a Parmesan rind into the broth while the chicken poaches and serve with grated Parmesan on top (no longer dairy-free)."
+    "Swap the pasta",
+    "Use 1 cup of long-grain rice instead of orzo and simmer it for 15 to 18 minutes, or use a gluten-free small pasta and follow the package time."
    ]
   ],
   "nutrition": {
@@ -2977,16 +3020,16 @@
   },
   "faq": [
    [
-    "Can I use rotisserie chicken?",
-    "Yes. Skip the poaching step, simmer the broth 10 minutes with the vegetables, cook the orzo, then stir in 3 to 4 cups of shredded rotisserie chicken at the end."
+    "Can I use chicken breasts instead of thighs?",
+    "Yes. Start checking them at 12 minutes and pull them as soon as they hit 165°F (74°C), since breasts dry out faster than thighs."
    ],
    [
-    "Why did my soup get thick overnight?",
-    "Orzo keeps absorbing liquid as it sits. Just add more broth or water when reheating until it is as brothy as you like."
+    "Why did my soup turn thick and stodgy?",
+    "The orzo kept absorbing liquid as it sat. Stir in more broth or water until it loosens, then re-season with salt and lemon."
    ],
    [
-    "Can I make it in a slow cooker?",
-    "Cook everything except the orzo, lemon, spinach and dill on low for 6 hours. Shred the chicken, add the orzo for the last 20 minutes on high, then finish with lemon and greens."
+    "Can I make it ahead?",
+    "Yes. Make the soup through the chicken step up to 2 days ahead, then reheat, cook the orzo and finish with lemon, spinach and dill just before serving."
    ]
   ],
   "img": "images/lemon-chicken-orzo-soup.webp",
@@ -2995,7 +3038,7 @@
  {
   "id": "honey-garlic-chicken-thighs",
   "title": "Sticky Honey Garlic Chicken Thighs",
-  "subtitle": "Juicy seared chicken thighs glazed in a glossy, garlicky honey soy sauce that clings to every bite and begs for rice.",
+  "subtitle": "Golden-seared thighs simmered in honey, soy and a heap of garlic until the sauce turns glossy, sticky and dark as lacquer.",
   "category": "Main Dishes",
   "tags": [
    "fall"
@@ -3007,24 +3050,24 @@
   "cook": 25,
   "serves": 4,
   "level": "Easy",
-  "desc": "Glossy, garlicky, one-pan weeknight chicken",
-  "note": "We have made this on more rainy Tuesdays than we can count, and the pan never has leftover sauce because someone always mops it up with rice. Our trick is to let the glaze bubble one minute longer than feels right. That is when it turns properly sticky.",
+  "desc": "Sticky, garlicky, and ready in 35.",
+  "note": "Serve these over plenty of steamed rice so none of the glaze goes to waste, with some quick stir-fried broccoli or cucumber salad on the side. We would take thighs over breasts here every time, since they stay juicy through the simmer. Do not rush the sear.",
   "intro": [
-   "This is the dinner we reach for when we want something that tastes like takeout but comes together in one skillet. Boneless thighs get a hard sear for color, then simmer in a quick sauce of honey, soy, garlic, and a splash of vinegar until it reduces into a shiny glaze.",
-   "Thighs are forgiving, so they stay tender even if you get distracted setting the table. Serve them over steamed rice with something green on the side, and spoon every last bit of the sauce over the top."
+   "Here is a bold claim: boneless thighs are the most forgiving cut in your grocery store, and this sticky glaze proves it. The chicken gets a hard sear, a short simmer in honey, soy and six cloves of garlic, and a last-minute thickening that leaves every piece shiny and coated. It tastes like takeout and costs a fraction of it.",
+   "Thighs work so well because they carry more fat and connective tissue than breasts, so they stay moist even at 175°F, where collagen starts softening into gelatin. The cornstarch slurry goes in last for a reason: starch granules only swell and thicken once the sauce comes near a boil, so a brief, bubbling simmer turns thin liquid into a glaze that clings."
   ],
   "why": [
    [
-    "One skillet, easy cleanup",
-    "Everything happens in a single pan, from searing to glazing, so there is only one thing to wash."
-   ],
-   [
-    "Pantry-friendly sauce",
-    "Honey, soy sauce, garlic, and vinegar are staples most of us already have on hand."
+    "One skillet, 35 minutes",
+    "Searing, simmering and glazing all happen in the same pan, which also keeps the browned bits in the sauce."
    ],
    [
     "Hard to overcook",
-    "Chicken thighs stay juicy and tender, which makes this a low-stress weeknight win."
+    "Thighs stay tender and juicy well past the point where breasts would turn dry."
+   ],
+   [
+    "Pantry sauce, big flavor",
+    "Honey, soy sauce, vinegar and garlic are probably in your kitchen already."
    ]
   ],
   "ingredients": [
@@ -3130,50 +3173,51 @@
   ],
   "steps": [
    {
-    "t": "Season the chicken",
-    "d": "Pat the thighs very dry with paper towels, then season both sides with the salt, pepper, and smoked paprika. Dry chicken browns faster and splatters less, so do not skip the paper towels.",
-    "tip": "If you have 15 minutes, season the chicken and let it sit at room temperature for a better sear."
+    "t": "Dry and season the thighs",
+    "d": "Pat the thighs very dry on both sides with paper towels. Season all over with the salt, pepper and smoked paprika. Dry chicken browns faster and splatters less, so take the extra minute here.",
+    "tip": "If you have 15 minutes, let the seasoned thighs sit at room temperature. The salt starts to season the meat and the surface dries a little more for a deeper sear."
    },
    {
-    "t": "Mix the sauce",
-    "d": "In a small bowl, whisk together the honey, soy sauce, vinegar, garlic, and red pepper flakes. In a separate cup, stir the cornstarch into the water until smooth and set it aside."
+    "t": "Mix the sauce and slurry",
+    "d": "In a small bowl, whisk the honey, soy sauce, vinegar, garlic and red pepper flakes, if using, until the honey dissolves. In a separate cup, stir the cornstarch into the water until completely smooth with no lumps, and set it aside."
    },
    {
-    "t": "Sear the thighs",
-    "d": "Heat the oil in a large skillet over medium-high heat until it shimmers. Lay the thighs in smooth side down and cook without moving for 5 to 6 minutes, until deep golden brown. Flip and cook 4 to 5 minutes more.",
-    "tip": "Work in two batches if your skillet is smaller than 12 inches. Crowding makes the chicken steam instead of brown."
+    "t": "Sear until deep golden",
+    "d": "Heat the oil in a large skillet over medium-high heat until it shimmers and moves like water. Lay the thighs in smooth side down; they should sizzle loudly. Cook without moving for 5 to 6 minutes, until deep golden brown and releasing easily, then flip and cook 4 to 5 minutes more.",
+    "tip": "Use a 12-inch skillet or work in two batches. Crowded chicken traps steam and turns pale instead of browning."
    },
    {
     "t": "Simmer in the sauce",
-    "d": "Lower the heat to medium and pour the sauce around the chicken. Let it bubble gently for 5 to 6 minutes, turning the thighs once, until the chicken reaches 175\u00b0F (80\u00b0C) inside and the sauce has reduced by about a third."
+    "d": "Lower the heat to medium and pour the sauce around the chicken, scraping up the browned bits from the pan. Let it bubble gently for 5 to 6 minutes, turning the thighs once, until the chicken reaches 175°F (80°C) inside and the sauce has reduced by about a third. The garlic should smell sweet and mellow, not raw.",
+    "tip": "Watch the heat closely. Honey scorches quickly, so if the sauce starts to smell bitter or darken at the edges, turn it down right away."
    },
    {
     "t": "Thicken the glaze",
-    "d": "Stir the cornstarch slurry again and pour it into the pan. Simmer for 1 to 2 minutes, spooning sauce over the chicken, until the glaze is thick, glossy, and coats the back of a spoon."
+    "d": "Stir the cornstarch slurry again, since the starch settles fast, and pour it into the pan. Simmer for 1 to 2 minutes, spooning the sauce over the chicken, until it turns thick, glossy and coats the back of a spoon."
    },
    {
-    "t": "Garnish and serve",
-    "d": "Take the pan off the heat and let it rest for 2 minutes so the glaze sets slightly. Scatter the green onions and sesame seeds on top and serve over rice with extra sauce spooned over."
+    "t": "Rest, garnish and serve",
+    "d": "Take the pan off the heat and let it sit for 2 minutes so the glaze sets slightly as it cools. Scatter the green onions and sesame seeds over the top. Serve over steamed rice, spooning the extra sauce over everything."
    }
   ],
   "tips": [
-   "Honey burns quickly, so keep the heat at medium once the sauce goes in and stir if you see dark spots forming.",
-   "Thighs are best cooked to 175\u00b0F (80\u00b0C) rather than 165\u00b0F (74\u00b0C). The extra heat melts the connective tissue and makes them more tender.",
-   "Measure the honey with a lightly oiled measuring cup and it will slide right out."
+   "Mince the garlic by hand rather than using a press. Pressed garlic releases more of its harsh compounds and can taste sharp even after simmering, while chopped garlic stays sweeter.",
+   "If the glaze gets too thick or gluey, loosen it with 1 to 2 tablespoons of hot water. If it is too thin, simmer another minute; do not add more cornstarch without mixing it into cold water first, or it will clump.",
+   "Mix the sauce and slurry up to 3 days ahead and keep them in separate sealed jars in the fridge. Dinner becomes a 20-minute sear-and-simmer."
   ],
-  "storage": "Store leftovers in an airtight container in the fridge for up to 4 days. Reheat gently in a covered skillet with a splash of water so the glaze loosens without drying out the chicken.",
+  "storage": "Refrigerate the chicken and sauce together in an airtight container for up to 4 days. Reheat in a covered skillet over medium-low heat with 1 to 2 tablespoons water for 5 to 7 minutes, or microwave in 1-minute bursts, since the glaze thickens in the fridge. It freezes well for up to 3 months; thaw overnight in the fridge before reheating.",
   "variations": [
    [
-    "Honey sriracha",
-    "Add 1 to 2 tablespoons of sriracha to the sauce for a sweet and spicy kick."
+    "Use chicken breasts",
+    "Slice 2 lb breasts into 1-inch strips, sear 2 to 3 minutes per side, and simmer in the sauce only until they reach 165°F (74°C), about 3 to 4 minutes."
    ],
    [
-    "Orange ginger",
-    "Swap the vinegar for 3 tablespoons of orange juice and add 1 teaspoon of grated fresh ginger."
+    "Make it gluten-free",
+    "Use tamari instead of soy sauce. Everything else in the recipe is already gluten-free, including the cornstarch."
    ],
    [
-    "Sheet pan style",
-    "Roast seasoned thighs at 425\u00b0F (220\u00b0C) for 18 minutes, brush with the thickened sauce, and broil for 2 minutes."
+    "Add ginger and lime",
+    "Grate 1 tablespoon fresh ginger into the sauce and swap the rice vinegar for fresh lime juice for a brighter, zippier glaze."
    ]
   ],
   "nutrition": {
@@ -3185,16 +3229,16 @@
   },
   "faq": [
    [
-    "Can I use chicken breasts instead?",
-    "Yes. Slice them into cutlets about 3/4 inch thick so they cook evenly, and pull them at 165\u00b0F (74\u00b0C) since breasts dry out faster than thighs."
+    "Can I use bone-in thighs?",
+    "Yes, but they need longer. Sear skin side down for 8 to 10 minutes, then cover and simmer in the sauce for 15 to 20 minutes, until they reach 175°F (80°C), before adding the slurry."
    ],
    [
-    "Can I use bone-in, skin-on thighs?",
-    "You can. Sear them skin side down for 8 minutes, then finish in a 400\u00b0F (200\u00b0C) oven for about 20 minutes before adding the sauce on the stovetop to reduce."
+    "Why is my sauce not thickening?",
+    "It likely did not come to a real simmer after the slurry went in. Cornstarch only thickens near boiling, so turn up the heat until the sauce bubbles steadily for a full minute."
    ],
    [
-    "Is this recipe gluten-free?",
-    "Not as written, because regular soy sauce contains wheat. Use tamari or coconut aminos and it becomes gluten-free."
+    "Can I make it less sweet?",
+    "Cut the honey to 1/4 cup and add an extra 1 teaspoon rice vinegar. The glaze will be slightly thinner, so simmer it an extra minute."
    ]
   ],
   "img": "images/honey-garlic-chicken-thighs.webp",
@@ -3203,7 +3247,7 @@
  {
   "id": "mushroom-risotto",
   "title": "Creamy Mushroom Risotto",
-  "subtitle": "Silky, parmesan-rich risotto loaded with deeply browned mushrooms, fresh thyme, and a splash of white wine for cozy nights.",
+  "subtitle": "Arborio rice stirred slowly into creamy, glossy risotto, deepened with porcini and crowned with deeply browned cremini and Parmesan.",
   "category": "Main Dishes",
   "tags": [
    "fall"
@@ -3216,24 +3260,24 @@
   "cook": 35,
   "serves": 4,
   "level": "Medium",
-  "desc": "Silky, savory, and worth the stirring",
-  "note": "We treat risotto night as an excuse to pour a small glass of the cooking wine and stand at the stove talking. The stirring is not constant, we promise. Our one rule is to brown the mushrooms separately, because pale mushrooms make a sad risotto.",
+  "desc": "Earthy, creamy, worth every stir.",
+  "note": "Risotto is one of the best reasons we know to stay near the stove with a glass of the white wine you're cooking with. Brown the mushrooms separately and hard, because pale, steamed mushrooms add little flavor. A crisp green salad and the rest of that bottle round out the meal.",
   "intro": [
-   "Good risotto is creamy without any cream, and the secret is patience plus starchy arborio rice. Warm broth goes in a ladle at a time, and gentle stirring coaxes the starch out of the rice until it turns silky and loose.",
-   "We brown the mushrooms first in a hot pan so they get meaty and golden, then fold most of them back in at the end. A handful of parmesan and a knob of butter finish it off, and fall dinner is served."
+   "Risotto has a reputation for being fussy, and it's mostly undeserved. You don't need to stir nonstop, you just need to stay nearby, keep the broth hot, and add it a ladle at a time.",
+   "The creaminess comes from the rice itself, not from cream. Arborio grains are rich in amylopectin, a starch that washes off the surface as you stir and thickens the broth into a silky sauce. Browning the cremini hard on their own first builds savory depth, and the porcini soaking liquid adds a woodsy backbone that plain broth can't match."
   ],
   "why": [
    [
-    "Restaurant results at home",
-    "A few simple techniques give you the glossy, flowing texture you expect from a good Italian restaurant."
+    "Creamy without cream",
+    "Starch released from the arborio rice makes the sauce silky on its own."
    ],
    [
-    "Big mushroom flavor",
-    "Browning the mushrooms separately and using porcini soaking liquid layers in deep, savory flavor."
+    "Double mushroom depth",
+    "Dried porcini flavor the broth while browned cremini bring meaty texture."
    ],
    [
-    "Meatless but hearty",
-    "It is filling enough to stand on its own as a main course with a simple green salad."
+    "Vegetarian main course",
+    "Vegetable broth and a rennet-free cheese keep it meat-free but hearty."
    ]
   ],
   "ingredients": [
@@ -3346,54 +3390,55 @@
   ],
   "steps": [
    {
-    "t": "Warm the broth",
-    "d": "If using porcini, soak them in 1 cup of hot water for 10 minutes, then lift them out, chop finely, and pour the soaking liquid into a saucepan with the broth, leaving any grit behind. Bring the broth to a bare simmer over low heat and keep it warm.",
-    "tip": "Cold broth shocks the rice and slows cooking, so keeping it hot really matters."
+    "t": "Soak porcini, heat broth",
+    "d": "If using porcini, soak them in 1 cup of hot water for 10 minutes until soft and pliable, then lift them out, chop finely, and pour the soaking liquid into a saucepan with the broth, leaving any grit in the bottom of the bowl. Bring the broth to a bare simmer over low heat and keep it steaming.",
+    "tip": "Hot broth matters. Cold broth drops the pot temperature with each ladle, which slows cooking and makes the rice gummy on the outside before the center softens."
    },
    {
     "t": "Brown the mushrooms",
-    "d": "Heat the olive oil and 1 tablespoon butter in a large, heavy pot over medium-high heat. Add the cremini in an even layer and cook without stirring for 3 minutes, then stir and cook 4 to 5 minutes more until deep golden and any liquid has evaporated. Season with the salt, stir in the chopped porcini, and transfer everything to a bowl."
+    "d": "Heat the olive oil and 1 tablespoon of butter in a large, heavy pot over medium-high heat until the butter foams. Spread the cremini in an even layer and leave them alone for 3 minutes, then stir and cook 4 to 5 minutes more, until deep golden, smelling nutty, and the pan is dry. Season with the salt, stir in the chopped porcini, and transfer everything to a bowl.",
+    "tip": "Hold off on salting until the mushrooms are browned. Salt added early draws out water and they steam instead of sear."
    },
    {
-    "t": "Toast the rice",
-    "d": "Lower the heat to medium and melt 1 tablespoon butter in the same pot. Cook the onion for 4 to 5 minutes until soft and translucent, add the garlic for 30 seconds, then stir in the rice and toast for 2 minutes until the edges of the grains look translucent."
+    "t": "Soften onion, toast rice",
+    "d": "Lower the heat to medium and melt 1 tablespoon of butter in the same pot. Cook the onion for 4 to 5 minutes until soft and translucent, add the garlic for 30 seconds until fragrant, then stir in the rice. Toast for 2 minutes, until the edges of the grains look translucent and you hear a faint crackle."
    },
    {
-    "t": "Add the wine",
-    "d": "Pour in the wine and stir until it is almost fully absorbed, about 1 to 2 minutes. The sharp alcohol smell should fade before you add any broth."
+    "t": "Deglaze with wine",
+    "d": "Pour in the wine, which will hiss and steam, and stir, scraping up the browned bits, until it is almost fully absorbed, about 1 to 2 minutes. Wait until the sharp alcohol smell fades before adding any broth."
    },
    {
-    "t": "Ladle in the broth",
-    "d": "Add the broth one ladle (about 3/4 cup) at a time with the thyme, stirring often and waiting until each addition is mostly absorbed before adding the next. Keep it at a lively simmer, and after 18 to 22 minutes the rice should be creamy and tender with a slight bite in the center.",
-    "tip": "You may not need every drop of broth. Start tasting the rice at 16 minutes."
+    "t": "Add broth gradually",
+    "d": "Add the hot broth one ladle (about 3/4 cup) at a time along with the thyme, stirring often and waiting until each addition is mostly absorbed before adding the next. Keep it at a lively simmer. After 18 to 22 minutes the rice should be creamy and tender, with a slight bite in the center.",
+    "tip": "You may not need every drop of broth. Start tasting at 16 minutes, and stop adding broth once the grains are tender with just a hint of firmness."
    },
    {
-    "t": "Finish and rest",
-    "d": "Take the pot off the heat and stir in most of the mushrooms, the Parmesan, and the last tablespoon of butter vigorously for 30 seconds until glossy. Season with salt and pepper, add a splash more broth if it looks stiff, and let it sit for 1 minute."
+    "t": "Beat in cheese and butter",
+    "d": "Take the pot off the heat and vigorously stir in most of the mushrooms, the Parmesan, and the last tablespoon of butter for 30 seconds, until glossy and flowing. Season with salt and pepper, add a splash more broth if it looks stiff, and let it rest for 1 minute."
    },
    {
     "t": "Serve right away",
-    "d": "Spoon the risotto onto warm plates, where it should spread gently rather than hold a stiff mound. Top with the reserved mushrooms, parsley, and extra Parmesan."
+    "d": "Spoon the risotto onto warm plates, where it should spread gently into a loose wave rather than hold a stiff mound. Top with the reserved mushrooms, parsley and extra Parmesan."
    }
   ],
   "tips": [
-   "Use a wide, heavy pot like a Dutch oven so the rice cooks in a shallow layer and absorbs broth evenly.",
-   "Do not rinse the rice. The surface starch is exactly what makes risotto creamy.",
-   "Aim for a texture Italians call all'onda, meaning wavy. It should slowly flow when you tilt the plate."
+   "Don't rinse the rice. The surface starch you would wash away is exactly what thickens the risotto.",
+   "Stop cooking when the risotto looks slightly looser than you want. It keeps absorbing liquid on the plate and thickens within a minute or two.",
+   "To get a head start for guests, cook the risotto through the wine and 2 ladles of broth, spread it on a sheet pan to cool, and refrigerate for up to 1 day. Finish with hot broth in about 10 minutes."
   ],
-  "storage": "Refrigerate leftovers in an airtight container for up to 3 days, knowing the texture will firm up as it cools. Reheat in a saucepan over low heat with a few splashes of broth, or shape cold risotto into patties and pan-fry them until crisp.",
+  "storage": "Refrigerate leftovers in an airtight container for up to 3 days; the texture will firm up as it cools. Reheat in a saucepan over low heat with a few splashes of broth, stirring until creamy. Cold risotto also makes excellent patties, pan-fried in oil until crisp and golden, about 3 minutes per side.",
   "variations": [
    [
-    "Butternut squash",
-    "Replace half the mushrooms with 2 cups of small roasted butternut squash cubes, folded in at the end."
+    "Peas and lemon",
+    "Stir in 1 cup of frozen peas during the last 3 minutes of cooking and finish with the grated zest of 1 lemon."
    ],
    [
-    "Wild mushroom mix",
-    "Use a mix of shiitake, oyster, and chanterelle mushrooms for more texture and a deeper, woodsy flavor."
+    "Wine-free",
+    "Replace the wine with the same amount of broth plus 1 teaspoon of lemon juice or white wine vinegar for brightness."
    ],
    [
-    "Lemon and peas",
-    "Stir in 1 cup of thawed frozen peas and the zest of a lemon during the last 3 minutes for a brighter bowl."
+    "Chicken broth version",
+    "Use low-sodium chicken broth for a richer, more savory result. The recipe will no longer be vegetarian, and you may need less salt."
    ]
   ],
   "nutrition": {
@@ -3405,16 +3450,16 @@
   },
   "faq": [
    [
-    "Can I make risotto without wine?",
-    "Yes. Replace the wine with an equal amount of broth plus 1 teaspoon of lemon juice or white wine vinegar for a little acidity."
+    "Can I use another rice instead of arborio?",
+    "Carnaroli or vialone nano both work, and carnaroli holds its shape especially well. Long-grain or basmati rice won't release enough starch to turn creamy."
    ],
    [
-    "Can I use a different rice?",
-    "Carnaroli and Vialone Nano both work beautifully. Long-grain rice like jasmine or basmati does not release enough starch to get creamy."
+    "Why is my risotto gluey or mushy?",
+    "It was likely overcooked, stirred with cold broth, or left to sit too long before serving. Start tasting at 16 minutes and serve it the moment it is loose and glossy."
    ],
    [
     "Do I really have to stir the whole time?",
-    "No. Stirring every 30 seconds or so is plenty. Constant stirring is a myth, but walking away for 10 minutes will scorch the bottom."
+    "No. Stir often, every minute or so, to release starch and prevent sticking, but you can step away briefly between ladles."
    ]
   ],
   "img": "images/mushroom-risotto.webp",
@@ -3423,7 +3468,7 @@
  {
   "id": "harvest-kale-salad",
   "title": "Harvest Kale Salad with Apples and Pecans",
-  "subtitle": "Tender massaged kale tossed with crisp apples, toasted pecans, tangy goat cheese, and a bright maple Dijon dressing.",
+  "subtitle": "Tender massaged kale tossed with crisp apples, toasted pecans, tart cranberries and goat cheese in a shallot-maple dressing.",
   "category": "Salads",
   "tags": [
    "fall",
@@ -3438,24 +3483,24 @@
   "cook": 8,
   "serves": 4,
   "level": "Easy",
-  "desc": "Crunchy, sweet, tangy fall salad",
-  "note": "We bring this salad to every fall potluck, and it always comes home in an empty bowl. Massaging the kale feels a little silly the first time, but it is the difference between chewing forever and actually enjoying it. We like to use one tart apple and one sweet apple for contrast.",
+  "desc": "Crunchy, tangy fall salad that holds up.",
+  "note": "It is our pick for potlucks and holiday tables, because it sits happily for hours without wilting. Massaging the kale is the one step you cannot skip. Add the apples, nuts and cheese at the last minute and it will taste freshly made.",
   "intro": [
-   "This is the salad that converts kale skeptics. A quick massage with the dressing softens the leaves and takes away their bitter edge, leaving them tender but still sturdy enough to hold up for hours.",
-   "Crisp apple slices, toasted pecans, dried cranberries, and creamy goat cheese bring everything that makes fall produce great. It works as a side for roast chicken or a light lunch on its own."
+   "Kale salad has a reputation for being chewy and punishing, but that is a technique problem, not a kale problem. A two-minute massage with dressing turns tough leaves tender, glossy and sweet. From there, it is all about contrast: crisp apple, crunchy pecans, chewy cranberries and creamy goat cheese.",
+   "Rubbing the leaves breaks down their cell walls and fibrous structure, while the vinegar and salt in the dressing start to soften them further, a bit like a quick pickle. That sturdiness is also a gift, because unlike lettuce, dressed kale does not wilt into a puddle, so this salad can sit on a buffet for hours."
   ],
   "why": [
    [
-    "Holds up beautifully",
-    "Unlike delicate greens, dressed kale stays crisp for hours, which makes it perfect for potlucks and meal prep."
+    "Holds for hours",
+    "Sturdy kale stays crisp-tender long after it is dressed."
    ],
    [
-    "Every texture in one bowl",
-    "Crunchy nuts, juicy apples, chewy cranberries, and creamy cheese keep every bite interesting."
+    "Big textural contrast",
+    "Crunch, chew and creaminess land in every forkful."
    ],
    [
-    "Five-minute dressing",
-    "The maple Dijon vinaigrette shakes up in a jar and tastes far better than anything bottled."
+    "Make-ahead friendly",
+    "Dress the kale a day early and assemble at serving time."
    ]
   ],
   "ingredients": [
@@ -3547,45 +3592,45 @@
   "steps": [
    {
     "t": "Toast the pecans",
-    "d": "Spread the pecans in a dry skillet over medium-low heat and toast for 6 to 8 minutes, shaking the pan often, until fragrant and a shade darker. Tip them onto a plate to cool, then roughly chop.",
-    "tip": "Nuts go from toasted to burnt fast. Stay close and trust your nose."
+    "d": "Spread the pecans in a dry skillet over medium-low heat and toast for 6 to 8 minutes, shaking the pan often, until they smell warm and buttery and turn a shade darker. Tip them onto a plate to stop the cooking, let cool, then roughly chop.",
+    "tip": "Nuts go from toasted to burnt fast, and the pan keeps cooking them after you turn off the heat. Stay close, trust your nose, and move them to a plate right away."
    },
    {
     "t": "Shake the dressing",
-    "d": "Add the olive oil, vinegar, maple syrup, Dijon, shallot, salt, and a few grinds of pepper to a jar. Seal and shake hard for 20 seconds until creamy and emulsified, then taste and adjust."
+    "d": "Add the olive oil, vinegar, maple syrup, Dijon, shallot, salt and a few grinds of pepper to a jar. Seal and shake hard for 20 seconds, until the dressing looks creamy and emulsified; the mustard is what holds it together. Taste and adjust with more salt or maple."
    },
    {
     "t": "Massage the kale",
-    "d": "Put the sliced kale in a large bowl and drizzle with about half the dressing. Use clean hands to squeeze and rub the leaves for 2 to 3 minutes, until they darken to a deep green, shrink by about a third, and feel silky.",
-    "tip": "Let the massaged kale sit for 10 minutes if you have time. It gets even more tender."
+    "d": "Put the sliced kale in a large bowl and drizzle with about half the dressing. Use clean hands to squeeze and rub the leaves for 2 to 3 minutes, until they darken to a deep green, shrink by about a third and feel silky rather than squeaky.",
+    "tip": "If you have time, let the massaged kale sit for 10 minutes. The acid keeps working and the leaves get even more tender."
    },
    {
     "t": "Slice the apples",
-    "d": "Core the apples and slice them into thin wedges or matchsticks just before assembling. If you are working ahead, toss them with a squeeze of lemon juice to keep them from browning."
+    "d": "Core the apples and slice them into thin wedges or matchsticks just before assembling, so they stay crisp and bright. If you are working ahead, toss them with a squeeze of lemon juice to keep them from browning."
    },
    {
     "t": "Toss and serve",
-    "d": "Add the apples, pecans, cranberries, and pepitas to the kale with the remaining dressing and toss well. Scatter the goat cheese over the top last so it stays in creamy crumbles, then serve."
+    "d": "Add the apples, pecans, cranberries and pepitas to the kale with the remaining dressing and toss until everything is glossy. Scatter the goat cheese over the top last so it stays in creamy crumbles instead of smearing, then serve."
    }
   ],
   "tips": [
-   "Lacinato kale is more tender than curly kale, but curly works too. Just massage it an extra minute.",
-   "Slice the kale into thin ribbons, about 1/4 inch wide, so it is easy to eat with a fork.",
-   "For a vegan version, skip the goat cheese and add sliced avocado or extra pepitas for richness."
+   "Curly kale works, but it is tougher than lacinato. Massage it an extra minute and slice it a little finer.",
+   "Cut the kale into thin ribbons, about 1/4 inch wide. Smaller pieces tenderize faster and are much easier to eat with a fork.",
+   "Rinse the minced shallot under cold water or let it sit in the vinegar for 5 minutes before adding the rest of the dressing. It tames the harsh bite without losing the flavor."
   ],
-  "storage": "Dressed kale without the apples and cheese keeps in the fridge for up to 2 days. Store the nuts at room temperature and add them, the apples, and the cheese just before serving so everything stays crisp.",
+  "storage": "Dressed kale without the apples and cheese keeps in a covered container in the fridge for up to 2 days. Store the toasted nuts in a sealed jar at room temperature, then add them, freshly sliced apples and the cheese just before serving so everything stays crisp.",
   "variations": [
    [
     "Roasted squash",
-    "Add 2 cups of roasted delicata or butternut squash for a warmer, heartier salad."
+    "Add 2 cups of roasted delicata or butternut squash, cooled to room temperature so it does not wilt the kale."
    ],
    [
     "Make it a meal",
-    "Top with shredded rotisserie chicken or 1.5 cups of cooked quinoa for a filling lunch."
+    "Top with shredded rotisserie chicken or 1 1/2 cups of cooked, cooled quinoa and add an extra tablespoon of dressing."
    ],
    [
     "Pear and blue cheese",
-    "Swap the apples for ripe but firm pears and use crumbled blue cheese instead of goat cheese."
+    "Swap the apples for ripe but firm pears and the goat cheese for crumbled blue cheese. Use walnuts instead of pecans if you like."
    ]
   ],
   "nutrition": {
@@ -3598,11 +3643,15 @@
   "faq": [
    [
     "Why do I need to massage kale?",
-    "Raw kale is tough and slightly bitter. Rubbing it with dressing breaks down its fibers so it becomes tender, sweeter, and easier to digest."
+    "Raw kale is tough and slightly bitter. Rubbing it with dressing breaks down its fibers, so it becomes tender, sweeter and easier to eat."
    ],
    [
     "Can I make this salad ahead?",
-    "Yes. Massage the kale with dressing up to a day ahead, then add the apples, pecans, and cheese right before serving."
+    "Yes. Massage the kale with dressing up to a day ahead and refrigerate it, then add the apples, pecans, cranberries and cheese right before serving."
+   ],
+   [
+    "How do I make it vegan?",
+    "Skip the goat cheese and add sliced avocado or extra pepitas for richness. Check that your Dijon is vegan, which most are."
    ]
   ],
   "img": "images/harvest-kale-salad.webp",
@@ -3611,7 +3660,7 @@
  {
   "id": "apple-crisp",
   "title": "Easy Apple Crisp",
-  "subtitle": "Tender cinnamon-spiced apples baked under a buttery, golden oat topping that shatters beautifully under a scoop of vanilla ice cream.",
+  "subtitle": "Soft, cinnamon-spiced apples bubbling under a craggy oat and brown sugar topping with big, buttery clusters worth fighting over.",
   "category": "Desserts",
   "tags": [
    "fall"
@@ -3624,24 +3673,24 @@
   "chill": 15,
   "serves": 8,
   "level": "Easy",
-  "desc": "Bubbly apples, buttery oat crumble topping",
-  "note": "We make this the first weekend apples show up at the farmers market, and the whole house smells like fall for hours. We always make extra topping and keep it in the freezer for crisp emergencies. Eating the leftovers cold for breakfast is strongly encouraged.",
+  "desc": "Jammy apples, crunchy buttery oat topping.",
+  "note": "We like this warm, about 30 minutes out of the oven, with vanilla ice cream melting into the juices. Do not skip the mix of tart and sweet apples. Granny Smiths keep their shape and bring acidity, while Honeycrisp adds sweetness, and together they taste far more interesting than either alone.",
   "intro": [
-   "Apple crisp is everything we love about apple pie without the fuss of rolling dough. Sliced apples get tossed with cinnamon and a little brown sugar, then buried under a crumbly mix of oats, flour, and cold butter.",
-   "In the oven the fruit turns soft and jammy while the topping bakes into crunchy golden clusters. Let it rest a few minutes so the juices thicken, then serve it warm with ice cream melting into the cracks."
+   "Apple crisp is the most forgiving dessert in the fall baking lineup. No crust to roll, no lattice to weave, just sliced fruit in a dish and a topping you rub together with your fingers. It still delivers everything you want from an apple pie: syrupy spiced fruit and a golden, crunchy lid.",
+   "Cold butter is what makes the topping crisp rather than cakey. When you rub it into the flour and oats, the butter stays in separate little pieces, and in the oven the water in those pieces turns to steam while the fat browns the sugar around it, leaving crunchy, craggy clusters. The spoonful of flour in the filling matters too: it thickens the apple juices as they bubble so you get a glossy sauce instead of a watery pool."
   ],
   "why": [
    [
-    "No pie crust required",
-    "The rustic topping comes together in one bowl with your fingers, no rolling pin needed."
+    "Big crunchy clusters",
+    "Cold butter rubbed in by hand bakes into a craggy, golden topping."
    ],
    [
-    "Perfectly crunchy topping",
-    "Plenty of oats and cold butter bake into crisp, craggy clusters instead of a soggy blanket."
+    "Thick, glossy filling",
+    "A little flour thickens the juices so nothing turns watery."
    ],
    [
-    "Just sweet enough",
-    "A modest amount of sugar in the filling lets the apples taste like apples."
+    "Easy to make ahead",
+    "Assemble it a day early and bake straight from the fridge."
    ]
   ],
   "ingredients": [
@@ -3749,41 +3798,42 @@
   "steps": [
    {
     "t": "Heat the oven",
-    "d": "Position a rack in the center of the oven and preheat to 375\u00b0F (190\u00b0C). Lightly butter a 9-inch square or 2-quart baking dish and set it on a rimmed baking sheet to catch any drips."
+    "d": "Set a rack in the center of the oven and preheat to 375°F (190°C). Lightly butter a 9-inch square or 2-quart baking dish and place it on a rimmed baking sheet to catch any drips."
    },
    {
     "t": "Make the filling",
-    "d": "In a large bowl, toss the sliced apples with the brown sugar, lemon juice, flour, cinnamon, nutmeg, and salt until evenly coated. Spread them into the baking dish in an even layer, pressing down gently so there are no big gaps.",
-    "tip": "Mixing tart and sweet apples gives you the best flavor, and firm varieties hold their shape instead of turning to mush."
+    "d": "In a large bowl, toss the sliced apples with the brown sugar, lemon juice, flour, cinnamon, nutmeg and salt until every slice is evenly coated. Spread them into the baking dish in an even layer, pressing down gently to close up any big gaps so the fruit cooks evenly.",
+    "tip": "Slice the apples an even 1/4 inch thick. Uneven slices cook at different rates, so you end up with some mushy pieces and some that are still crunchy."
    },
    {
     "t": "Rub in the topping",
-    "d": "In the same bowl, whisk together the flour, oats, brown sugar, cinnamon, and salt. Add the cold butter cubes and rub them in with your fingertips for 2 to 3 minutes, until the mixture looks like damp sand with some pea-sized clumps, then stir in the nuts.",
+    "d": "In the same bowl, whisk together the flour, oats, brown sugar, cinnamon and salt. Add the cold butter cubes and rub them in with your fingertips for 2 to 3 minutes, until the mixture looks like damp sand with some pea-sized clumps, then stir in the nuts if using. Work quickly so your warm hands do not melt the butter.",
     "tip": "Squeeze a few handfuls together to make bigger clusters. They bake into the best crunchy bits."
    },
    {
     "t": "Top the apples",
-    "d": "Scatter the topping evenly over the apples all the way to the edges. Do not pack it down, since a loose layer bakes up crisper."
+    "d": "Scatter the topping evenly over the apples, all the way to the edges of the dish. Leave it loose and craggy rather than pressing it down, since a loose layer lets steam escape and bakes up crisper."
    },
    {
     "t": "Bake until bubbling",
-    "d": "Bake for 40 to 45 minutes, until the topping is deep golden brown and the juices are bubbling thickly around the edges. A knife should slide easily into the apples in the center. If the top browns too fast, tent loosely with foil for the last 10 minutes."
+    "d": "Bake for 40 to 45 minutes, until the topping is deep golden brown and the juices are bubbling thickly around the edges. A knife should slide easily into the apples in the center. If the top browns before the apples are tender, tent it loosely with foil for the last 10 minutes.",
+    "tip": "Look for slow, thick bubbles, not just thin juice around the edges. The flour needs to boil to fully thicken the filling, so thin bubbles mean it needs more time."
    },
    {
     "t": "Rest and serve",
-    "d": "Let the crisp cool on a wire rack for at least 15 minutes so the juices thicken and the topping firms up. Serve warm with a scoop of vanilla ice cream or a dollop of whipped cream."
+    "d": "Cool the crisp on a wire rack for at least 15 minutes so the juices thicken and the topping firms up. Serve warm with a scoop of vanilla ice cream or a spoonful of whipped cream."
    }
   ],
   "tips": [
-   "Keep the butter cold right up until you use it. Warm butter makes a greasy, flat topping instead of crisp clusters.",
-   "Slice the apples evenly at about 1/4 inch so they all turn tender at the same time.",
-   "Make a double batch of topping and freeze half in a zip-top bag for up to 3 months. It goes straight from the freezer onto the fruit."
+   "Freeze the butter cubes for 10 minutes before rubbing them in, especially in a warm kitchen. Colder butter stays in distinct pieces longer, which means crisper topping.",
+   "Make a double batch of topping and freeze half in a zip-top bag for up to 3 months. Sprinkle it straight from frozen over any fruit, adding a few minutes to the bake time.",
+   "If your crisp comes out soupy, the apples were likely very juicy or it was cut too soon. Next time add an extra tablespoon of flour to the filling and let it rest the full 15 minutes."
   ],
-  "storage": "Cover and keep the crisp at room temperature for 1 day or in the fridge for up to 4 days. Reheat individual portions in a 350\u00b0F (175\u00b0C) oven for about 10 minutes to bring back the crunch.",
+  "storage": "Cover the crisp and keep it at room temperature for 1 day or in the fridge for up to 4 days. Reheat individual portions on a baking sheet in a 350°F (175°C) oven for about 10 minutes to bring back the crunch; the microwave warms it faster but softens the topping. You can also freeze the baked, cooled crisp, well wrapped, for up to 3 months and reheat it from thawed.",
   "variations": [
    [
-    "Apple cranberry",
-    "Toss 1 cup of fresh or frozen cranberries into the filling and add 2 extra tablespoons of brown sugar."
+    "Apple and berry",
+    "Swap 1 pound of the apples for 3 cups of blueberries or blackberries and add 1 extra tablespoon of flour to thicken the extra juice."
    ],
    [
     "Pear and ginger",
@@ -3791,7 +3841,7 @@
    ],
    [
     "Gluten-free crisp",
-    "Swap the flour for a 1:1 gluten-free baking blend and use certified gluten-free oats."
+    "Swap the flour in both the filling and topping for a 1:1 gluten-free baking blend and use certified gluten-free oats."
    ]
   ],
   "nutrition": {
@@ -3804,15 +3854,15 @@
   "faq": [
    [
     "What are the best apples for apple crisp?",
-    "Firm, slightly tart apples work best. We like a mix of Granny Smith with Honeycrisp, Braeburn, Pink Lady, or Jonagold."
+    "Firm, slightly tart apples work best because they hold their shape. We like Granny Smith mixed with Honeycrisp, Braeburn, Pink Lady or Jonagold. Avoid soft varieties like McIntosh, which turn to applesauce."
    ],
    [
     "What is the difference between a crisp and a crumble?",
-    "A crisp traditionally includes oats in the topping, which bake up crunchy. A crumble usually has a streusel of just flour, sugar, and butter."
+    "A crisp traditionally includes oats in the topping, which bake up crunchy. A crumble usually has a streusel of just flour, sugar and butter."
    ],
    [
     "Can I make apple crisp ahead of time?",
-    "Yes. Assemble it up to 1 day ahead, cover, and refrigerate, then add 5 to 10 minutes to the baking time. You can also bake it fully and rewarm it."
+    "Yes. Assemble it up to 1 day ahead, cover and refrigerate, then add 5 to 10 minutes to the baking time. You can also bake it fully and rewarm it in the oven before serving."
    ]
   ],
   "img": "images/apple-crisp.webp",
