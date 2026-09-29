@@ -700,3 +700,13 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
   .category { flex: 0 0 96px; scroll-snap-align: start; }
   .category .circle { max-width: 96px; border-width: 4px; }
 }
+
+.photo-credit { font-size: .74rem; opacity: .7; margin-top: 16px; }
+.photo-credit a { text-decoration: underline; }
+.guide-cover .photo-credit { color: var(--muted); opacity: 1; margin-top: 8px; text-align: right; }
+.credit-list { display: grid; gap: 12px; }
+.credit-row { display: flex; gap: 16px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; }
+.credit-row img { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; }
+.credit-row strong { font-family: var(--serif); font-weight: 500; font-size: 1.05rem; }
+.credit-row small { display: block; color: var(--muted); }
+.credit-row small a { text-decoration: underline; }

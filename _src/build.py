@@ -15,6 +15,7 @@ GISCUS = None      # e.g. {'repo': 'MatheusFerreira2004/bored-of-toast', 'repo_i
 ANALYTICS = None   # e.g. '<script defer data-domain="boredoftoast.com" src="https://plausible.io/js/script.js"></script>'
 
 RECIPES = json.load(open(os.path.join(HERE, 'recipes.json')))
+CREDITS = json.load(open(os.path.join(HERE, 'credits.json')))
 GL = json.load(open(os.path.join(HERE, 'guides_legal.json')))
 GUIDES = GL['guides']
 BY_ID = {r['id']: r for r in RECIPES}
@@ -126,7 +127,7 @@ def footer(root):
   </div>
   <div class="container footer-bottom">
     <span>© {datetime.date.today().year} Bored of Toast. All rights reserved.</span>
-    <span><a href="{root}privacy/">Privacy</a> · <a href="{root}terms/">Terms</a> · <a href="{root}sitemap.xml">Sitemap</a></span>
+    <span><a href="{root}privacy/">Privacy</a> · <a href="{root}terms/">Terms</a> · <a href="{root}photo-credits/">Photo credits</a> · <a href="{root}sitemap.xml">Sitemap</a></span>
   </div>
 </footer>
 <div class="search-overlay" id="search-overlay" hidden>
@@ -215,6 +216,11 @@ def guide_card(root, g):
   <div class="guide-img"><img src="{root}images/{GUIDE_IMG[g['id']]}.webp" alt="{e(g['title'])}" loading="lazy" width="700" height="466"></div>
   <div class="guide-body"><span class="tag">{e(g['category'])} · {g['readTime']} min read</span><h3>{e(g['title'])}</h3><p>{e(g['subtitle'])}</p><span class="view-all">Read the guide →</span></div>
 </a>'''
+
+def credit(key):
+    c = CREDITS.get(key)
+    if not c: return ''
+    return f'<p class="photo-credit">Photo: <a href="{e(c['photo_url'])}" target="_blank" rel="noopener">{e(c['photographer'])}</a> on {c['source']}</p>'
 
 def section_head(title, sub='', link=''):
     return f'<div class="section-head"><div><h2>{title}</h2>{f"<p>{sub}</p>" if sub else ""}</div>{link}</div>'
@@ -381,6 +387,7 @@ def build_recipe(r):
         <a href="{e(pin_url)}" target="_blank" rel="noopener" class="btn btn-pin">{ICON['pin']} Save</a>
         <button class="btn btn-ghost" data-print>{ICON['print']} Print</button>
       </div>
+      {credit(r['id'])}
     </div>
     <div class="hero-art">
       <div class="arch"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="360" height="440" fetchpriority="high"></div>
@@ -491,7 +498,7 @@ def build_guide(g):
     <h1>{e(g['title'])}</h1><p class="hero-lead">{e(g['subtitle'])}</p>
   </div>{WAVE}
 </section>
-<div class="container guide-cover"><img src="{root}{img}" alt="{e(g['title'])}" width="1400" height="933" fetchpriority="high"></div>
+<div class="container guide-cover"><img src="{root}{img}" alt="{e(g['title'])}" width="1400" height="933" fetchpriority="high">{credit(GUIDE_IMG[g['id']])}</div>
 <div class="container section guide-layout">
   <article class="prose">
     <div class="lead">{''.join(f'<p>{e(p)}</p>' for p in g['intro'])}</div>
@@ -593,6 +600,18 @@ def build_legal(key, path):
 <article class="container section narrow prose">{''.join(f'<section><h2>{e(s["h"])}</h2>' + ''.join(f'<p>{e(p)}</p>' for p in s['p']) + '</section>' for s in d['sections'])}</article>'''
     page(path, f"{d['title']} | Bored of Toast", f"{d['title']} for Bored of Toast.", body, '', root)
 
+def build_credits():
+    root = '../'
+    rows = []
+    for r in RECIPES + [{'id': GUIDE_IMG[g['id']], 'title': g['title'], 'img': f"images/{GUIDE_IMG[g['id']]}.webp", 'guide': g['id']} for g in GUIDES]:
+        c = CREDITS.get(r['id'])
+        if not c: continue
+        link = f"{root}guides/{r['guide']}/" if r.get('guide') else f"{root}recipes/{r['id']}/"
+        rows.append(f'''<div class="credit-row"><img src="{root}{r['img']}" alt="" loading="lazy" width="72" height="72"><div><a href="{link}"><strong>{e(r['title'])}</strong></a><small>Photo by <a href="{e(c['photographer_url'])}" target="_blank" rel="noopener">{e(c['photographer'])}</a> · <a href="{e(c['photo_url'])}" target="_blank" rel="noopener">View on {c['source']}</a></small></div></div>''')
+    body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Thank you</p><h1>Photo credits</h1><p class="hero-lead">Our main recipe and guide photos come from talented photographers on <a href="https://www.pexels.com" target="_blank" rel="noopener" style="text-decoration:underline">Pexels</a>, shared under the free Pexels License. Step-by-step photos and pins are made by us.</p></div>{WAVE}</section>
+<section class="container section narrow"><div class="credit-list">{''.join(rows)}</div></section>'''
+    page('photo-credits/', 'Photo Credits | Bored of Toast', 'Credits for the photographers whose work appears on Bored of Toast.', body, '', root)
+
 def build_404():
     root = SITE_URL
     picks = [BY_ID[i] for i in ['buttermilk-pancakes', 'creamy-garlic-pasta', 'apple-crisp']]
@@ -614,7 +633,7 @@ def build_index_js():
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
 def build_sitemap():
-    urls = ['', 'recipes/', 'guides/', 'meal-plan/', 'about/', 'privacy/', 'terms/'] + [f"recipes/{r['id']}/" for r in RECIPES] + [f"guides/{g['id']}/" for g in GUIDES]
+    urls = ['', 'recipes/', 'guides/', 'meal-plan/', 'about/', 'privacy/', 'terms/', 'photo-credits/'] + [f"recipes/{r['id']}/" for r in RECIPES] + [f"guides/{g['id']}/" for g in GUIDES]
     today = datetime.date.today().isoformat()
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write(xml)
@@ -628,5 +647,5 @@ if __name__ == '__main__':
     for r in RECIPES: build_recipe(r)
     build_guides(); build_meal_plan(); build_shopping(); build_about()
     build_legal('privacy', 'privacy/'); build_legal('terms', 'terms/')
-    build_404(); build_redirects(); build_index_js(); build_sitemap()
+    build_credits(); build_404(); build_redirects(); build_index_js(); build_sitemap()
     print('built', len(RECIPES), 'recipes,', len(GUIDES), 'guides')
