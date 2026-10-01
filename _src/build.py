@@ -7,7 +7,7 @@ import json, os, html, re, datetime, shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20260929-3'
+VER = '20261001-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -35,7 +35,7 @@ SIZES = {
     'guide': '(max-width: 520px) calc(100vw - 50px), (max-width: 700px) 262px, 366px',
     'spot': '(max-width: 900px) calc(100vw - 48px), 640px',
     'step': '(max-width: 1080px) calc(100vw - 110px), 668px',
-    'arch': '(max-width: 520px) 170px, (max-width: 960px) 264px, 344px',
+    'arch': '(max-width: 960px) min(78vw, 340px), 344px',
     'story': '(max-width: 900px) calc(100vw - 48px), 500px',
     'cover': '(max-width: 1000px) calc(100vw - 48px), 952px',
     'bleed': '(max-width: 960px) 100vw, 52vw',
@@ -422,12 +422,12 @@ def build_recipe(r):
       <div class="hero-actions no-print">
         <a href="#ingredients" class="btn btn-yellow">Jump to recipe {ICON['down']}</a>
         <a href="{e(pin_url)}" target="_blank" rel="noopener" class="btn btn-pin">{ICON['pin']} Save</a>
-        <button class="btn btn-ghost" data-print>{ICON['print']} Print</button>
+        <button class="btn btn-ghost" data-print aria-label="Print recipe">{ICON['print']}<span class="btn-label"> Print</span></button>
       </div>
-      {credit(r['id'])}
     </div>
     <div class="hero-art">
       <div class="arch"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="360" height="440" fetchpriority="high"{rimg(root, r['img'], SIZES['arch'])}></div>
+      {credit(r['id'])}
       {stamp(root)}
       <img src="{root}images/whisk.svg" alt="" class="doodle whisk"><img src="{root}images/sparkle.svg" alt="" class="doodle sparkle"><img src="{root}images/chili.svg" alt="" class="doodle chili">
     </div>
