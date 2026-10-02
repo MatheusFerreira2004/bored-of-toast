@@ -14,7 +14,7 @@
   "alt": "Delicious creamy fettuccine Alfredo with basil garnish, perfect for dinner."
  },
  "sheet-pan-salmon": {
-  "photographer": "\u0e18\u0e31\u0e19\u0e22\u0e01\u0e23 \u0e44\u0e01\u0e23\u0e2a\u0e23",
+  "photographer": "ธันยกร ไกรสร",
   "photographer_url": "https://www.pexels.com/@tanyakorn",
   "photo_url": "https://www.pexels.com/photo/mouthwatering-food-on-ceramic-plate-12017478/",
   "source": "Pexels",
@@ -42,18 +42,18 @@
   "alt": "Close-up of beef tacos with cilantro and lime on a plate, showcasing Mexican cuisine."
  },
  "chocolate-chip-cookies": {
-  "photographer": "Maur\u00edcio Mascaro",
+  "photographer": "Maurício Mascaro",
   "photographer_url": "https://www.pexels.com/@maumascaro",
   "photo_url": "https://www.pexels.com/photo/chocolate-chip-cookies-on-a-plate-8081574/",
   "source": "Pexels",
   "alt": "Close-up of freshly baked chocolate chip cookies on a plate, perfect for dessert."
  },
  "chocolate-mousse-cake": {
-  "photographer": "ready made",
-  "photographer_url": "https://www.pexels.com/@readymade",
-  "photo_url": "https://www.pexels.com/photo/chocolate-cake-on-a-plate-3851093/",
+  "photographer": "Елена Селищева",
+  "photographer_url": "https://www.pexels.com/@76505859",
+  "photo_url": "https://www.pexels.com/photo/slices-of-chocolate-mousse-cake-in-close-up-photography-8601851/",
   "source": "Pexels",
-  "alt": "Indulgent chocolate mousse and raspberry cheesecake desserts with rich flavors."
+  "alt": "Indulgent chocolate mousse cake slices topped with whipped cream and nuts."
  },
  "buttermilk-pancakes": {
   "photographer": "Tea Creative",
@@ -70,11 +70,11 @@
   "alt": "A pan of shakshuka with eggs, served with bread on a patterned tablecloth."
  },
  "overnight-oats": {
-  "photographer": "Livilla Latini",
-  "photographer_url": "https://www.pexels.com/@livilla-latini-1678510737",
-  "photo_url": "https://www.pexels.com/photo/a-bowl-of-oatmeal-with-berries-and-milk-27850091/",
+  "photographer": "Antoni Shkraba",
+  "photographer_url": "https://www.pexels.com/@shkrabaanthony",
+  "photo_url": "https://www.pexels.com/photo/jar-of-chia-seed-pudding-with-almond-flakes-and-blueberries-4397288/",
   "source": "Pexels",
-  "alt": "Delicious overnight oats topped with fresh berries, perfect for a nutritious breakfast."
+  "alt": "Delicious chia pudding topped with blueberries and almond flakes in a jar."
  },
  "avocado-toast-jammy-eggs": {
   "photographer": "Jane  T D.",
@@ -93,9 +93,9 @@
  "cinnamon-french-toast": {
   "photographer": "Amar  Preciado",
   "photographer_url": "https://www.pexels.com/@amar",
-  "photo_url": "https://www.pexels.com/photo/bread-with-berries-on-top-9597589/",
+  "photo_url": "https://www.pexels.com/photo/delicious-french-toast-with-fresh-berries-36904808/",
   "source": "Pexels",
-  "alt": "A tantalizing plate of French toast topped with fresh strawberries and blackberries for a perfect breakfast."
+  "alt": "Close-up of French toast topped with strawberries, raspberries, and blackberries on a plate."
  },
  "butternut-squash-soup": {
   "photographer": "Nataliya Vaitkevich",
@@ -105,11 +105,11 @@
   "alt": "A warm, homemade butternut squash soup garnished with seeds and rosemary."
  },
  "lemon-chicken-orzo-soup": {
-  "photographer": "Henny Wiyanti",
-  "photographer_url": "https://www.pexels.com/@henny-wiyanti-2157442242",
-  "photo_url": "https://www.pexels.com/photo/delicious-asian-chicken-noodle-soup-with-lemons-36877936/",
+  "photographer": "DΛVΞ GΛRCIΛ",
+  "photographer_url": "https://www.pexels.com/@davegarcia",
+  "photo_url": "https://www.pexels.com/photo/traditional-ecuadorian-chicken-soup-in-white-bowl-32655226/",
   "source": "Pexels",
-  "alt": "Warm bowl of chicken noodle soup garnished with fresh vegetables and lemon slices."
+  "alt": "Warm and hearty Ecuadorian soup with chicken leg, vegetables, and herbs served in a white bowl."
  },
  "honey-garlic-chicken-thighs": {
   "photographer": "Marvin  Sacdalan",
@@ -126,14 +126,14 @@
   "alt": "Savor the rich and creamy mushroom risotto topped with fresh Parmesan cheese."
  },
  "harvest-kale-salad": {
-  "photographer": "Dario Garcia",
-  "photographer_url": "https://www.pexels.com/@dariogarcia",
-  "photo_url": "https://www.pexels.com/photo/sliced-strawberries-and-green-vegetable-on-white-ceramic-bowl-6094525/",
+  "photographer": "Denys Gromov",
+  "photographer_url": "https://www.pexels.com/@jdgromov",
+  "photo_url": "https://www.pexels.com/photo/close-up-shot-of-a-dish-on-a-plate-4899800/",
   "source": "Pexels",
-  "alt": "A vibrant salad with kale, cherry tomatoes, and apples, paired with fresh berries for a healthy meal."
+  "alt": "A fresh kale salad topped with walnuts and pomegranate seeds, served with lemon."
  },
  "apple-crisp": {
-  "photographer": "Sof\u00eda  Falco",
+  "photographer": "Sofía  Falco",
   "photographer_url": "https://www.pexels.com/@sofia-falco-1148410914",
   "photo_url": "https://www.pexels.com/photo/delicious-apple-crumble-tart-with-ice-cream-32318139/",
   "source": "Pexels",
@@ -147,7 +147,7 @@
   "alt": "A variety of spices stored in glass jars lined on a shelf, perfect for kitchen organization."
  },
  "guide-rice": {
-  "photographer": "Tu\u011fba",
+  "photographer": "Tuğba",
   "photographer_url": "https://www.pexels.com/@tugba",
   "photo_url": "https://www.pexels.com/photo/close-up-of-steamed-rice-in-wooden-bowl-31346219/",
   "source": "Pexels",
