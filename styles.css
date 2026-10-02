@@ -609,7 +609,7 @@ body.cooking .step-body p { font-size: 1.12rem; }
 
 /* Listing extras */
 .toolbar { flex-direction: column; align-items: stretch; }
-.toolbar .search { max-width: none; }
+.toolbar .search { max-width: none; flex: 0 0 auto; }   /* column layout: flex-basis was acting as a 260px height */
 .chips-label { font-size: .8rem; color: var(--muted); align-self: center; margin-right: 4px; }
 .chip-diet { display: inline-flex; align-items: center; gap: 6px; padding-left: 6px; }
 .chip-diet .diet { min-width: 22px; height: 22px; box-shadow: none; background: var(--green-tint); }

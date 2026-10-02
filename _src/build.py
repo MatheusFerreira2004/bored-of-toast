@@ -7,7 +7,7 @@ import json, os, html, re, datetime, shutil
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261001-1'
+VER = '20261002-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -271,7 +271,7 @@ def build_home():
     root = ''
     wk = BY_ID['creamy-garlic-pasta']
     trust = '<div class="hero-trust">' + ''.join(f'<span>{ICON["check"]}{t}</span>' for t in ['Tested at home', 'Everyday ingredients', 'Step-by-step guides']) + '</div>'
-    hero = hero_bleed(root, 'images/chicken-avocado-salad.webp', 'Recipes · Tips · Inspiration', 'Good food,<br><em>every day.</em>',
+    hero = hero_bleed(root, 'images/avocado-toast-jammy-eggs.webp', 'Recipes · Tips · Inspiration', 'Good food,<br><em>every day.</em>',
         'Simple, delicious recipes made for real life: easy enough for a weekday, special enough for the weekend.',
         f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><button class="btn btn-ghost" data-random>Surprise me</button>',
         float_card(root, wk, 'Recipe of the week'), trust=trust)
