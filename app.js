@@ -58,7 +58,21 @@
     header && header.classList.toggle('scrolled', window.scrollY > 10);
     const tt = $('.to-top'); tt && tt.classList.toggle('show', window.scrollY > 700);
   }, { passive: true });
-  $('#menu-toggle') && $('#menu-toggle').addEventListener('click', () => $('#nav').classList.toggle('open'));
+  const menuButton = $('#menu-toggle'), menu = $('#nav');
+  function setMenu(open) {
+    if (!menuButton || !menu) return;
+    menu.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuButton && menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+  menu && menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu && menu.classList.contains('open')) { setMenu(false); menuButton.focus(); }
+  });
+  document.addEventListener('click', e => {
+    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !menuButton.contains(e.target)) setMenu(false);
+  });
   $('.to-top') && $('.to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => {

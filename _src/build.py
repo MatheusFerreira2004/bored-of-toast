@@ -8,7 +8,7 @@ from storefront import build_storefront, marketing_block, contextual_link, valid
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261006-dinners-1'
+VER = '20261006-visual-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -141,7 +141,7 @@ def header(root, active):
     <div class="nav-tools">
       <button class="icon-btn" data-open-search aria-label="Search recipes">{ICON['search']}</button>
       <a class="icon-btn" href="{root}shopping-list/" aria-label="Shopping list">{ICON['bag']}<span class="bag-count" data-bag-count hidden>0</span></a>
-      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu">{ICON['menu']}</button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="nav" aria-expanded="false">{ICON['menu']}</button>
     </div>
   </div>
 </header>'''
@@ -570,7 +570,7 @@ def build_meal_plan():
     root = '../'
     days = ''.join(f'''<div class="plan-day reveal"><div class="plan-label"><span>{n}</span><small>Dinner idea</small></div>
   <a class="plan-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]['img']}" alt="{e(BY_ID[rid]['title'])}" loading="lazy" width="160" height="120"{rimg(root, BY_ID[rid]['img'], SIZES['plan'])}>
-  <div><span class="tag">{e(BY_ID[rid]['category'])}</span><h3>{e(BY_ID[rid]['title'])}</h3><div class="meta"><span>{ICON['clock']}{fmt_time(BY_ID[rid]['time'])}</span><span>{ICON['chef']}{BY_ID[rid]['level']}</span><span>{BY_ID[rid]['serves']} {e(BY_ID[rid].get('servesLabel', 'servings'))}</span></div><p class="plan-tip">{ICON['bulb']} {e(tip)}</p><span class="view-all">Open recipe →</span></div></a><div class="dinner-action"><button class="btn btn-outline" data-add-dinner="{rid}">{ICON['bag']} Add this dinner</button></div></div>''' for n, (d, rid, tip) in enumerate(PLAN, 1))
+  <div><span class="tag">{e(BY_ID[rid]['category'])}</span><h3>{e(BY_ID[rid]['title'])}</h3><div class="meta"><span>{ICON['clock']}{fmt_time(BY_ID[rid]['time'])}</span><span>{ICON['chef']}{BY_ID[rid]['level']}</span><span>{BY_ID[rid]['serves']} {e(BY_ID[rid].get('servesLabel', 'servings'))}</span></div><p class="plan-tip">{ICON['bulb']} {e(tip)}</p><span class="view-all">Open recipe →</span></div></a><div class="dinner-action"><button class="btn btn-outline" data-add-dinner="{rid}" aria-label="Add {e(BY_ID[rid]['title'])} to shopping list">{ICON['bag']} Add this dinner</button></div></div>''' for n, (d, rid, tip) in enumerate(PLAN, 1))
     bonus = ''.join(card(root, BY_ID[rid]) for _, rid in BONUS)
     ids = [rid for _, rid, _ in PLAN]
     pdata = [{'id': rid, 'title': BY_ID[rid]['title'], 'url': f'recipes/{rid}/', 'serves': f"{BY_ID[rid]['serves']} {BY_ID[rid].get('servesLabel', 'servings')}", 'items': [ing_text(i) for g in BY_ID[rid]['ingredients'] for i in g['items']]} for rid in ids]
