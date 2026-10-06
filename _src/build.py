@@ -8,7 +8,7 @@ from storefront import build_storefront, marketing_block, contextual_link, valid
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261006-visual-1'
+VER = '20261006-copy-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -478,7 +478,7 @@ def build_recipe(r):
         <div class="info-card"><h3>{ICON['box']} Storage & reheating</h3><p>{e(r['storage'])}</p></div>
       </div></section>
       <section class="faq reveal"><h2>Recipe FAQ</h2>{''.join(f'<details {"open" if i == 0 else ""}><summary>{e(q)}</summary><p>{e(a)}</p></details>' for i, (q, a) in enumerate(r['faq']))}</section>
-      {contextual_link(root) if r['id'] in ['overnight-oats', 'tomato-basil-soup', 'lemon-chicken-orzo-soup', 'mediterranean-grain-bowl'] else ''}
+      {contextual_link(root) if r['id'] in ['overnight-oats', 'tomato-basil-soup', 'lemon-chicken-orzo-soup', 'mediterranean-grain-bowl', 'chicken-avocado-salad'] else ''}
       {comments}
     </article>
 
