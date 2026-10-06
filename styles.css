@@ -872,7 +872,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 .commerce-hero h1 { font-size: clamp(2.3rem, 4.1vw, 3.8rem); text-wrap: balance; }
 .commerce-cover-stage { max-width: 460px; width: 100%; justify-self: center; padding: 32px 42px; }
 .commerce-cover-stage img { max-height: 500px; max-width: 100%; width: auto; }
-.commerce-seal { right: 12px; bottom: 20px; padding: 12px; font-size: 1.05rem; width: 100px; height: 100px; }
+.commerce-seal { display: block; right: 12px; bottom: 20px; padding: 24px 6px; font-size: 1.05rem; width: 100px; height: 100px; }
 .commerce-small { font-size: .875rem; }
 .commerce-facts { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .commerce-facts span { display: inline-block; }
@@ -900,11 +900,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
  .commerce-lead { font-size: 1rem; }
  .commerce-cover-stage { max-width: 310px; padding: 24px 32px; }
  .commerce-cover-stage img { max-height: 340px; }
- .commerce-seal { width: 84px; height: 84px; right: 4px; bottom: 12px; font-size: .9rem; padding: 8px; }
+ .commerce-seal { width: 84px; height: 84px; right: 4px; bottom: 12px; font-size: .9rem; padding: 15px 6px; }
  .commerce-actions { gap: 14px; }
  .commerce-actions .btn { justify-content: center; min-height: 46px; }
  .commerce-pack-grid { grid-template-columns: 1fr; }
- .commerce-pack-main { grid-template-columns: 88px minmax(0, 1fr); gap: 18px; }
+ .commerce-pack-main { grid-template-columns: 1fr; gap: 18px; }
  .commerce-pack-main img { width: 80px; }
  .commerce-pack-main h3 { font-size: 1.8rem; }
  .commerce-pack-main .eyebrow { font-size: .75rem; letter-spacing: .08em; }
