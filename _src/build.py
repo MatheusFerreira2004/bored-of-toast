@@ -8,7 +8,7 @@ from storefront import build_storefront, marketing_block, contextual_link, valid
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261006-copy-1'
+VER = '20261006-print-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -446,8 +446,8 @@ def build_recipe(r):
   <div class="recipe-layout">
     <article class="recipe-main">
       <div class="kitchen-note reveal"><span class="hand">From our kitchen</span><p>{e(r['note'])}</p><span class="sig">The Bored of Toast kitchen ♥</span></div>
-      <section class="lead reveal">{''.join(f'<p>{e(p)}</p>' for p in r['intro'])}</section>
-      <section class="reveal"><h2>Why you'll love it</h2><div class="why-grid">{''.join(f'<div class="why-card"><div class="icon-circle">{WHY_ICONS[i % 3]}</div><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(r['why']))}</div></section>
+      <section class="lead reveal no-print">{''.join(f'<p>{e(p)}</p>' for p in r['intro'])}</section>
+      <section class="reveal no-print"><h2>Why you'll love it</h2><div class="why-grid">{''.join(f'<div class="why-card"><div class="icon-circle">{WHY_ICONS[i % 3]}</div><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(r['why']))}</div></section>
 
       <section id="ingredients" class="ingredients-card reveal">
         <div class="ing-head">
@@ -457,6 +457,7 @@ def build_recipe(r):
             <div class="scaler"><button data-step="-1" aria-label="Fewer">−</button><span id="serves-label">{r['serves']} {e(unit)}</span><button data-step="1" aria-label="More">+</button></div>
           </div>
         </div>
+        <p class="print-only" id="print-serves">{r['serves']} {e(unit)} · US measurements</p>
         <p class="ing-note no-print">Tap an ingredient to check it off as you go.</p>
         <div id="ing-groups">{groups}</div>
         <div class="ing-actions no-print">
@@ -688,6 +689,7 @@ def build_sitemap():
     open(os.path.join(OUT, '.nojekyll'), 'w').write('')
 
 if __name__ == '__main__':
+    shutil.copytree(os.path.join(HERE, 'printables'), os.path.join(OUT, 'printables'), dirs_exist_ok=True)
     for f in ['styles.css', 'app.js']:
         shutil.copy(os.path.join(HERE, f), os.path.join(OUT, f))
     shutil.copytree(os.path.join(HERE, '..', 'fonts'), os.path.join(OUT, 'fonts'), dirs_exist_ok=True)   # self-hosted fonts live in /fonts

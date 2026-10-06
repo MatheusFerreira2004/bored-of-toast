@@ -914,3 +914,42 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
  .commerce-compare h2, .commerce-faq h2 { font-size: 2rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Show the practical printable beside the collection, using the existing palette. */
+.commerce-print-layout { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+.commerce-print-layout > * { min-width:0; }
+.commerce-print-layout h2 { font-size:clamp(2rem,3.4vw,3rem); line-height:1.15; margin:14px 0 22px; }
+.commerce-print-layout p { margin:14px 0; }
+.commerce-print-preview img { width:100%; height:auto; border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow); }
+.print-only { display:none; }
+@media (max-width:760px) {
+ .commerce-print-layout { grid-template-columns:1fr; gap:30px; }
+ .commerce-print-layout .commerce-actions { align-items:flex-start; gap:16px; }
+}
+@media print {
+ @page { margin:14mm; }
+ .commerce-context, .commerce-promo-wrap, .commerce-print-layout .commerce-actions { display:none !important; }
+ .print-only { display:block; font-size:10pt; color:#000; }
+ body[data-recipe-page] { font-size:10pt; line-height:1.4; color:#000; }
+ body[data-recipe-page] .container { max-width:none; width:100%; padding:0; }
+ body[data-recipe-page] .section { padding:12pt 0; }
+ body[data-recipe-page] .hero-grid, body[data-recipe-page] .recipe-layout { display:block; }
+ body[data-recipe-page] .hero { padding:0 0 12pt; }
+ body[data-recipe-page] .recipe-facts div:last-child { display:none; }
+ body[data-recipe-page] h1 { font-size:25pt; color:#000; margin:8pt 0; }
+ body[data-recipe-page] h2 { font-size:16pt; color:#000; break-after:avoid; }
+ body[data-recipe-page] h3 { color:#000; break-after:avoid; }
+ body[data-recipe-page] .breadcrumb, body[data-recipe-page] .eyebrow, body[data-recipe-page] .hero-diets, body[data-recipe-page] .video, body[data-recipe-page] .faq { display:none !important; }
+ body[data-recipe-page] .ingredients-card { border:1px solid #bbb; box-shadow:none; padding:12pt; background:#fff; }
+ body[data-recipe-page] .ing-list input { display:none; }
+ body[data-recipe-page] .ing-list input:checked + span { text-decoration:none; opacity:1; }
+ body[data-recipe-page] .step { break-inside:avoid; opacity:1; }
+ body[data-recipe-page] .step.done .step-body, body[data-recipe-page] .step.done .step-body > p { opacity:1; }
+ body[data-recipe-page] .step-num { color:#000; background:#fff; border:1px solid #999; }
+ body[data-recipe-page] .callout, body[data-recipe-page] .info-card { padding:12pt; background:#fff; color:#000; box-shadow:none; }
+ body[data-recipe-page] .sidebar { display:block !important; margin-top:12pt; }
+ body[data-recipe-page] .sidebar .side-card:not(#nutrition) { display:none !important; }
+ body[data-recipe-page] #nutrition { border:1px solid #bbb; background:#fff; color:#000; padding:12pt; break-inside:avoid; }
+ body[data-recipe-page] .nutrition-row { display:inline-flex; gap:8pt; margin-right:16pt; }
+ body[data-recipe-page] a { color:#000; text-decoration:none; }
+}
