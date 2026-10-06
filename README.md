@@ -66,3 +66,7 @@ Rebuild the site after changing the URLs. The thanks page is noindex and exclude
 Before launch, verify the checkout price and one-time purchase setting, actual signup consent and unsubscribe flow, support address, delivery and purchase conditions, update Privacy/Terms for the selected services, connect the real social profile URLs, add measurement, and choose hosting appropriate for the commercial site. GitHub Pages has restrictions on sites primarily facilitating commercial transactions; a custom domain does not remove those restrictions.
 
 The three integrations are deliberately unconfigured in this draft. The existing recipe site's "tested" and weekly-update statements were not extended to Nourished; their support remains a separate editorial review item.
+
+## Five easy dinners
+
+The existing `meal-plan/` URL is retained, but navigation and copy now describe a fixed collection of five dinner ideas. Visitors can add one or all five original recipe batches, see the portions, and open the shopping list directly. Existing saved recipes retain their adjusted quantities and checked items on repeated additions. Ingredients remain grouped by recipe; optional sides and weekend extras are separate. No complete-day or weekly nutrition claim is made.
