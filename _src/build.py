@@ -8,7 +8,7 @@ from storefront import build_storefront, marketing_block, contextual_link, valid
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261006-print-1'
+VER = '20261006-journey-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -130,7 +130,7 @@ WHY_ICONS = [ICON['bolt'], ICON['heart'], ICON['check']]
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
-NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', '5 Easy Dinners', 'meal-plan'), ('nourished/', 'Cookbooks', 'cookbooks'), ('about/', 'About', 'about')]
+NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', '5 Easy Dinners', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
 
 def header(root, active):
     links = ''.join(f'<a href="{root}{h}" class="{"active" if k == active else ""}">{l}</a>' for h, l, k in NAV)
@@ -149,15 +149,14 @@ def header(root, active):
 def footer(root):
     cats = ''.join(f'<li><a href="{root}recipes/?cat={e(k)}">{l}</a></li>' for k, l, _ in CATS[:6])
     nav = ''.join(f'<li><a href="{root}{h}">{l}</a></li>' for h, l, _ in NAV)
+    nav += f'<li><a href="{root}starter-kit/">Free GLP-1 kit</a></li>'
+    socials = ''.join(f'<a href="{e(url)}" aria-label="{name.title()}" target="_blank" rel="noopener">{ICON["pin" if name == "pinterest" else name]}</a>' for name,url in STOREFRONT.get('social_urls', {}).items() if url)
     return f'''<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <a href="{root}" class="brand" aria-label="Bored of Toast home"><img src="{root}images/logo-white.png" alt="Bored of Toast" width="150" height="54" loading="lazy"></a>
       <p class="footer-tagline">Good food without the fuss. Simple, tested recipes for real life.</p>
-      <div class="socials">
-        <a href="#" aria-label="Instagram">{ICON['instagram']}</a><a href="#" aria-label="Pinterest">{ICON['pin']}</a>
-        <a href="#" aria-label="Facebook">{ICON['facebook']}</a>
-      </div>
+      {f'<div class="socials">{socials}</div>' if socials else ''}
     </div>
     <div><p class="fh">Explore</p><ul>{nav}</ul></div>
     <div><p class="fh">Recipes</p><ul>{cats}</ul></div>
@@ -631,11 +630,11 @@ def build_about():
   <div class="values">{''.join(f'<div class="value reveal"><div class="icon-circle">{ICON[i]}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in vals)}</div></div></section>
 <section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we're here for every meal, big or small.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"{rimg(root, 'images/chicken-avocado-salad.webp', SIZES['cta'])}></div></section>
 <section class="container section" id="contact" style="padding-top:0"><div class="contact">
-  <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? We read every message.</p>
+  <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? Use the form to prepare a draft, then send it from your email app.</p>
     <ul class="contact-list"><li><span class="icon-circle">{ICON['box']}</span>{EMAIL}</li><li><span class="icon-circle">{ICON['instagram']}</span>{INSTAGRAM}</li></ul></div>
   <form id="contact-form" class="reveal" data-email="{EMAIL}"><div class="row"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" required placeholder="you@example.com"></label></div>
     <label>Message<textarea name="message" required placeholder="Tell us what's cooking…"></textarea></label>
-    <div><button type="submit" class="btn btn-dark">Send message {ICON['arrow']}</button></div><p class="form-note" id="form-note">Thanks! Your email app should open to send the message.</p></form>
+    <div><button type="submit" class="btn btn-dark">Open email draft {ICON['arrow']}</button></div><p class="form-note" id="form-note">Your email app should open with a draft. Review and send it there. If it does not open, your text stays in this form.</p></form>
 </div></section>'''
     page('about/', 'About | Bored of Toast', "We believe great food doesn't have to be complicated. Meet the kitchen behind Bored of Toast.", body, 'about', root)
 

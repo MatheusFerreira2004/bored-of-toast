@@ -273,6 +273,6 @@
     const subject = encodeURIComponent('Hello from ' + d.get('name'));
     const body = encodeURIComponent(d.get('message') + '\n\n— ' + d.get('name') + ' (' + d.get('email') + ')');
     location.href = `mailto:${form.dataset.email}?subject=${subject}&body=${body}`;
-    $('#form-note').style.display = 'block'; form.reset();
+    $('#form-note').style.display = 'block';
   });
 })();

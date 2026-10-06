@@ -1,5 +1,10 @@
 {
   "signup_url": null,
   "download_url": null,
-  "checkout_url": null
+  "checkout_url": null,
+  "social_urls": {
+    "instagram": null,
+    "pinterest": null,
+    "facebook": null
+  }
 }
