@@ -167,6 +167,7 @@
     function render() {
       const f = serves / R.serves;
       $('#serves-label').textContent = `${serves} ${R.unit}`;
+      $('#print-serves').textContent = `${serves} ${R.unit} · ${units === 'metric' ? 'Metric' : 'US'} measurements`;
       $$('.seg button').forEach(b => b.classList.toggle('active', b.dataset.units === units));
       $('#ing-groups').innerHTML = lines(f).map(g => `<div class="ing-group"><h4>${g.group}</h4><ul class="ing-list">${g.items.map(i =>
         `<li><label><input type="checkbox"><span>${i.q ? `<b>${i.q}</b> ` : ''}${i.n}${i.note ? ` <em>(${i.note})</em>` : ''}</span></label></li>`).join('')}</ul></div>`).join('');
