@@ -48,3 +48,25 @@ To turn analytics on, put its `<script>` tag in `ANALYTICS` in `_src/build.py`, 
 
 ## Features
 Recipe pages with servings scaler, US/metric toggle, cook mode (keeps screen awake), shopping list, step photos, Pinterest pins, print view, search, diet badges, weekly meal plan, guides and a sitemap.
+
+## Nourished storefront (draft)
+
+The generated site now includes `starter-kit/`, `starter-kit/thanks/`, and `nourished/`, two homepage sections, a Cookbooks navigation entry, search entries and contextual kit links on four related recipes. The previews under `images/commerce/` are rendered from the actual product PDFs; they are samples, not the paid files. No full paid PDF is stored in this repository.
+
+`_src/storefront.py` contains the templates and `_src/storefront.json` contains three public integration URLs:
+
+- `signup_url`: HTTPS URL of the hosted email signup page. Set the provider's successful-signup redirect to the deployed `starter-kit/thanks/` page.
+- `download_url`: HTTPS URL for authorized delivery of the free kit. The thanks page does not provide access control; use provider delivery or access controls if the download must be gated.
+- `checkout_url`: HTTPS URL for the US$20 collection checkout. Configure payment, applicable taxes, confirmation and paid-file delivery in the provider.
+
+Leave a value `null` until that destination exists. The pages show an honest "opens soon" message when a service is not connected. There is no pretend form submission, success event, or payment button. Never put passwords, API keys, private download credentials, or the complete paid bundle in this public configuration/repository.
+
+Rebuild the site after changing the URLs. The thanks page is noindex and excluded from the sitemap. Public URLs must be absolute HTTPS URLs; invalid configured URLs stop the build.
+
+Before launch, verify the checkout price and one-time purchase setting, actual signup consent and unsubscribe flow, support address, delivery and purchase conditions, update Privacy/Terms for the selected services, connect the real social profile URLs, add measurement, and choose hosting appropriate for the commercial site. GitHub Pages has restrictions on sites primarily facilitating commercial transactions; a custom domain does not remove those restrictions.
+
+The three integrations are deliberately unconfigured in this draft. The existing recipe site's "tested" and weekly-update statements were not extended to Nourished; their support remains a separate editorial review item.
+
+## Five easy dinners
+
+The existing `meal-plan/` URL is retained, but navigation and copy now describe a fixed collection of five dinner ideas. Visitors can add one or all five original recipe batches, see the portions, and open the shopping list directly. Existing saved recipes retain their adjusted quantities and checked items on repeated additions. Ingredients remain grouped by recipe; optional sides and weekend extras are separate. No complete-day or weekly nutrition claim is made.

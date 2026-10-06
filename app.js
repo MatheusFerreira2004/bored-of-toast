@@ -205,10 +205,23 @@
   /* ---------- meal plan ---------- */
   const pj = $('#plan-json');
   if (pj && $('#add-plan')) {
-    $('#add-plan').addEventListener('click', () => {
-      JSON.parse(pj.textContent).forEach(r => addToList({ id: r.id, title: r.title, url: r.url, serves: '', items: r.items.map(t => ({ t, done: false })) }));
-      toast('The whole week is on your shopping list ✓');
-    });
+    const dinners = JSON.parse(pj.textContent);
+    const status = $('#plan-status');
+    function addDinners(recipes) {
+      try {
+        const existing = getList();
+        const additions = recipes.filter(r => !existing.some(saved => saved.id === r.id));
+        setList(existing.concat(additions.map(r => ({ id: r.id, title: r.title, url: r.url, serves: r.serves, items: r.items.map(t => ({ t, done: false })) }))));
+        status.textContent = additions.length ? `${additions.length} dinner${additions.length === 1 ? '' : 's'} added. Open your shopping list below to review ingredients.` : 'These dinners are already on your list. Your quantities and checked items have been kept.';
+      } catch (_) {
+        status.textContent = 'Your browser could not save the list. Open a recipe to view or print its ingredients.';
+      }
+    }
+    $('#add-plan').addEventListener('click', () => addDinners(dinners));
+    $$('[data-add-dinner]').forEach(b => b.addEventListener('click', () => {
+      addDinners(dinners.filter(r => r.id === b.dataset.addDinner));
+      status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }));
   }
 
   /* ---------- shopping list page ---------- */
