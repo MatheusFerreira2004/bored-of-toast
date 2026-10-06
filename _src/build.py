@@ -3,17 +3,20 @@
 Content lives in recipes.json and guides_legal.json. Run: python3 build.py
 Output goes to ./site (images must already be in ./site/images)."""
 import json, os, html, re, datetime, shutil
+from storefront import build_storefront, marketing_block, contextual_link, validate_config
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261002-1'
+VER = '20261005-storefront-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
 MODIFIED = '2026-09-29'   # bump when recipe content changes (Recipe schema dateModified)
 GISCUS = None      # e.g. {'repo': 'MatheusFerreira2004/bored-of-toast', 'repo_id': '...', 'category': 'Comments', 'category_id': '...'}
 ANALYTICS = None   # e.g. '<script defer data-domain="boredoftoast.com" src="https://plausible.io/js/script.js"></script>'
+
+STOREFRONT = validate_config(json.load(open(os.path.join(HERE, 'storefront.json'))))
 
 RECIPES = json.load(open(os.path.join(HERE, 'recipes.json')))
 CREDITS = json.load(open(os.path.join(HERE, 'credits.json')))
@@ -127,7 +130,7 @@ WHY_ICONS = [ICON['bolt'], ICON['heart'], ICON['check']]
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
-NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', 'Meal Plan', 'meal-plan'), ('about/', 'About', 'about')]
+NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', 'Meal Plan', 'meal-plan'), ('nourished/', 'Cookbooks', 'cookbooks'), ('about/', 'About', 'about')]
 
 def header(root, active):
     links = ''.join(f'<a href="{root}{h}" class="{"active" if k == active else ""}">{l}</a>' for h, l, k in NAV)
@@ -210,6 +213,7 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
 <script src="{root}app.js?v={VER}"></script>
 </body>
 </html>'''
+    doc = '\n'.join(line.rstrip() for line in doc.split('\n'))
     full = os.path.join(OUT, path, 'index.html') if (path == '' or path.endswith('/')) else os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w').write(doc)
@@ -286,6 +290,7 @@ def build_home():
   {section_head('Browse by category', 'From ten-minute breakfasts to weekend baking projects.', f'<a href="{root}recipes/" class="view-all">All recipes →</a>')}
   {cats_grid(root)}
 </section>
+{marketing_block(root, 'free')}
 
 <section class="section">
   <div class="container beyond">
@@ -330,6 +335,7 @@ def build_home():
   </div>
 </section>
 
+{marketing_block(root, 'paid')}
 <section class="container section">
   <div class="cta reveal">
     <div><span class="tag light">New every week</span><h2>Dinner is planned. You're welcome.</h2><p>Five weeknight dinners, a Sunday prep list and one shopping list for everything.</p></div>
@@ -472,6 +478,7 @@ def build_recipe(r):
         <div class="info-card"><h3>{ICON['box']} Storage & reheating</h3><p>{e(r['storage'])}</p></div>
       </div></section>
       <section class="faq reveal"><h2>Recipe FAQ</h2>{''.join(f'<details {"open" if i == 0 else ""}><summary>{e(q)}</summary><p>{e(a)}</p></details>' for i, (q, a) in enumerate(r['faq']))}</section>
+      {contextual_link(root) if r['id'] in ['overnight-oats', 'tomato-basil-soup', 'lemon-chicken-orzo-soup', 'mediterranean-grain-bowl'] else ''}
       {comments}
     </article>
 
@@ -667,10 +674,11 @@ def build_index_js():
               's': ' '.join([r['title'], r['category'], r['desc']] + r['tags'] + r.get('diet', []) + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()} for r in RECIPES]
     items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': thumb(f"images/{GUIDE_IMG[g['id']]}.webp"), 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
                's': (g['title'] + ' ' + g['subtitle'] + ' guide').lower()} for g in GUIDES]
+    items += [{'t': 'The GLP-1 Kitchen Starter Kit', 'u': 'starter-kit/', 'i': 'images/commerce/starter-cover.jpg', 'c': 'Free guide', 'm': '9-page PDF', 'k': 'guide', 's': 'free glp-1 starter kit nourish recipes organizer shopping'}, {'t': 'Nourished - The GLP-1 Kitchen Companion', 'u': 'nourished/', 'i': 'images/commerce/nourished-cover.jpg', 'c': 'Cookbook collection', 'm': 'US$20', 'k': 'guide', 's': 'nourished glp-1 cookbook recipes collection meal planning shopping'}]
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
 def build_sitemap():
-    urls = ['', 'recipes/', 'guides/', 'meal-plan/', 'about/', 'privacy/', 'terms/', 'photo-credits/'] + [f"recipes/{r['id']}/" for r in RECIPES] + [f"guides/{g['id']}/" for g in GUIDES]
+    urls = ['', 'recipes/', 'guides/', 'meal-plan/', 'about/', 'privacy/', 'terms/', 'photo-credits/', 'starter-kit/', 'nourished/'] + [f"recipes/{r['id']}/" for r in RECIPES] + [f"guides/{g['id']}/" for g in GUIDES]
     today = datetime.date.today().isoformat()
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls) + '</urlset>\n'
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write(xml)
@@ -684,6 +692,7 @@ if __name__ == '__main__':
     build_home(); build_recipes()
     for r in RECIPES: build_recipe(r)
     build_guides(); build_meal_plan(); build_shopping(); build_about()
+    build_storefront(page, STOREFRONT)
     build_legal('privacy', 'privacy/'); build_legal('terms', 'terms/')
     build_credits(); build_404(); build_redirects(); build_index_js(); build_sitemap()
     print('built', len(RECIPES), 'recipes,', len(GUIDES), 'guides')
