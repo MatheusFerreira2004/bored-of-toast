@@ -28,3 +28,6 @@ jobs:
 
       - name: Site checks (links, SEO basics, structured data, fonts, image and page budgets)
         run: python3 _src/checks.py
+
+      - name: Visitor journey and integration states
+        run: python3 _src/journey_checks.py

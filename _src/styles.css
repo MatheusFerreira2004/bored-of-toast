@@ -953,3 +953,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
  body[data-recipe-page] .nutrition-row { display:inline-flex; gap:8pt; margin-right:16pt; }
  body[data-recipe-page] a { color:#000; text-decoration:none; }
 }
+
+/* Availability is explanatory text; visible primary actions have real destinations. */
+.commerce-availability { color:var(--muted); font-size:.9rem; margin:14px 0; }
+.commerce-hero-paid .commerce-availability, .commerce-offer .commerce-availability { color:var(--cream); }
