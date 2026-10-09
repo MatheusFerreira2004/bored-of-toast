@@ -1542,39 +1542,39 @@
   "img": "images/chocolate-yogurt-mousse-cups.webp"
  },
  {
-  "id": "buttermilk-pancakes",
-  "title": "Fluffy Buttermilk Pancakes",
-  "subtitle": "Tangy buttermilk batter, left lumpy and rested for ten minutes, cooks into tall, tender stacks with lacy golden edges.",
+  "id": "cottage-cheese-pancakes",
+  "title": "Cottage Cheese Pancakes",
+  "subtitle": "Soft, small pancakes blended from cottage cheese, eggs and oats, served with berries and a spoonful of Greek yogurt. About 15 g protein per serving.",
   "category": "Beyond Toast",
   "tags": [
    "quick",
-   "everyday"
-  ],
-  "diet": [
-   "vegetarian"
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "gentle"
   ],
   "prep": 10,
-  "cook": 20,
+  "cook": 15,
+  "time": 25,
   "serves": 4,
   "level": "Easy",
-  "desc": "Tall, tangy, and properly fluffy.",
-  "note": "We love these on a slow Saturday with salted butter, warm maple syrup and a bowl of berries on the side. The one thing not to skip is the rest, which gives you a thicker batter and a taller pancake. Resist the urge to stir out the lumps.",
+  "desc": "Blender pancakes with cottage cheese and oats.",
   "intro": [
-   "Flat, rubbery pancakes almost always come down to one mistake: a smooth batter. This recipe leans into lumps, a short rest and real buttermilk, and the result is a stack that stands tall on the plate and stays soft in the middle, even after a drizzle of syrup.",
-   "Here is the chemistry. Buttermilk is acidic, and when it meets baking soda it releases carbon dioxide right away, while baking powder adds a second lift once the batter hits the heat. Resting the batter for 5 to 10 minutes lets the flour fully hydrate and the gluten relax, so the batter thickens and traps those bubbles instead of letting them escape."
+   "These are not tall diner pancakes. They are small, soft and tender, made by blending cottage cheese, eggs and rolled oats into a smooth batter. Two pancakes with berries and a spoonful of Greek yogurt make a small breakfast with about 15 g of protein.",
+   "Blending matters here. It turns the oats into flour and the cottage cheese curds into a creamy base, so the pancakes cook up custardy rather than lumpy. Because the batter is mostly eggs and cheese, it browns faster than a flour batter, so medium-low heat and a little patience give the best results."
   ],
   "why": [
    [
-    "Double lift, taller stacks",
-    "Baking soda and baking powder work together, one in the bowl and one on the griddle."
+    "About 15 g protein per serving",
+    "Cottage cheese, eggs and a spoonful of Greek yogurt."
    ],
    [
-    "Tender, never chewy",
-    "Minimal mixing keeps gluten in check, so the crumb stays soft and open."
+    "One blender, no flour",
+    "Oats blend into the batter, so there is no separate mixing bowl."
    ],
    [
-    "Ready in 30 minutes",
-    "The rest happens while the pan heats, so it adds no real time to breakfast."
+    "Small and soft",
+    "Little pancakes are easy to eat a few bites at a time."
    ]
   ],
   "ingredients": [
@@ -1582,159 +1582,149 @@
     "group": "For the batter",
     "items": [
      {
-      "q": 2,
-      "u": "cups",
-      "n": "all-purpose flour",
-      "note": "spooned and leveled",
-      "g": 250
+      "q": 1,
+      "u": "cup",
+      "n": "low-fat cottage cheese",
+      "note": "226 g",
+      "g": 226
      },
      {
-      "q": 2,
+      "q": 3,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "old-fashioned rolled oats",
+      "note": "use certified gluten-free oats if needed",
+      "g": 45
+     },
+     {
+      "q": 1,
       "u": "tbsp",
-      "n": "granulated sugar",
-      "g": 25
+      "n": "maple syrup"
      },
      {
-      "q": 2,
+      "q": 1,
       "u": "tsp",
       "n": "baking powder"
      },
      {
       "q": 0.5,
       "u": "tsp",
-      "n": "baking soda"
+      "n": "vanilla extract"
      },
      {
-      "q": 0.5,
-      "u": "tsp",
+      "q": 1,
+      "u": "pinch",
       "n": "fine salt"
-     },
-     {
-      "q": 2,
-      "u": "cups",
-      "n": "buttermilk",
-      "note": "about 480 ml, at room temperature if possible"
-     },
-     {
-      "q": 2,
-      "u": "",
-      "n": "large eggs"
-     },
-     {
-      "q": 3,
-      "u": "tbsp",
-      "n": "unsalted butter",
-      "note": "melted and slightly cooled, about 42 g"
      },
      {
       "q": 1,
       "u": "tsp",
-      "n": "vanilla extract"
+      "n": "butter or neutral oil",
+      "note": "for the pan"
      }
     ]
    },
    {
-    "group": "For cooking and serving",
+    "group": "To serve",
     "items": [
      {
       "q": 1,
-      "u": "tbsp",
-      "n": "butter or neutral oil",
-      "note": "for the pan, plus more as needed"
+      "u": "cup",
+      "n": "fresh berries",
+      "g": 150
      },
      {
-      "q": null,
-      "u": "",
-      "n": "maple syrup",
-      "note": "to serve"
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "fresh berries or sliced banana",
-      "note": "optional, to serve"
+      "q": 0.5,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 120
      }
     ]
    }
   ],
   "steps": [
    {
-    "t": "Whisk the dry ingredients",
-    "d": "In a large bowl, whisk the flour, sugar, baking powder, baking soda and salt for about 20 seconds. Break up any small clumps of baking soda you spot, since those leave bitter, soapy pockets in the finished pancakes."
+    "t": "Blend the batter",
+    "d": "Add the cottage cheese, eggs, oats, maple syrup, baking powder, vanilla and salt to a blender. Blend for about 30 seconds, until completely smooth. Let the batter rest for 5 minutes so the oats can thicken it slightly.",
+    "tip": "If the batter looks very thick after resting, blend in a tablespoon of milk."
    },
    {
-    "t": "Whisk the wet ingredients",
-    "d": "In a second bowl or a large measuring jug, whisk the buttermilk, eggs and vanilla until smooth and evenly pale. Slowly drizzle in the melted butter while whisking. If cold buttermilk makes the butter firm up into little flecks, that is fine; they melt on the griddle and add pockets of richness.",
-    "tip": "Take the buttermilk and eggs out 30 minutes early if you can. Room-temperature liquids keep the butter fluid and give a more even rise."
+    "t": "Heat the pan",
+    "d": "Heat a nonstick skillet over medium-low heat and brush it lightly with butter or oil."
    },
    {
-    "t": "Fold and rest",
-    "d": "Pour the wet ingredients into the dry and fold with a flexible spatula just until no dry streaks of flour remain, about 10 to 12 strokes. The batter should look thick and lumpy. Let it rest for 5 to 10 minutes while the pan heats; you will see small bubbles rise to the surface and the batter will puff slightly.",
-    "tip": "Leave the lumps alone. Every extra stir develops gluten, and gluten is what turns pancakes tough, chewy and flat.",
-    "img": "images/step-pancakes-batter.webp"
+    "t": "Cook small pancakes",
+    "d": "Pour 2 to 3 tablespoons of batter per pancake, leaving space between them. Cook for 2 to 3 minutes, until the edges look set and a few bubbles appear on top, then flip and cook 1 to 2 minutes more.",
+    "tip": "These brown faster than flour pancakes. If they darken before the middle sets, turn the heat down a little."
    },
    {
-    "t": "Heat the pan properly",
-    "d": "Set a large nonstick skillet or griddle over medium heat for 2 to 3 minutes, then brush it lightly with butter or oil. Flick in a drop of water: it should sizzle and skitter across the surface before evaporating. If it just sits there, wait another minute; if it vanishes instantly with a hiss, lower the heat."
+    "t": "Keep warm",
+    "d": "Move the cooked pancakes to a plate and cover loosely with a clean towel while you cook the rest. The batter makes about 8 small pancakes."
    },
    {
-    "t": "Cook the first side",
-    "d": "Scoop 1/3 cup of batter per pancake onto the pan, leaving a couple of inches between them, and nudge each into a round with the back of the cup. Cook for 2 to 3 minutes, until bubbles open and pop on the surface, the edges look matte and set, and the underside is an even golden brown."
-   },
-   {
-    "t": "Flip once and finish",
-    "d": "Slide a thin spatula underneath and flip in one confident motion. Cook 1 1/2 to 2 minutes more, until the center springs back when lightly pressed. Transfer to a baking sheet in a 200°F (95°C) oven to stay warm, and add a little more butter to the pan before the next batch.",
-    "tip": "If the outsides brown before the centers cook through, the pan is too hot. Nudge the heat down a notch; most stoves need a small adjustment after the first batch.",
-    "img": "images/step-pancakes-flip.webp"
-   },
-   {
-    "t": "Stack and serve",
-    "d": "Stack the pancakes on warm plates and serve right away with maple syrup, a pat of butter and fresh berries or sliced banana. The batter makes about 12 pancakes, or 3 per person."
+    "t": "Serve",
+    "d": "Serve two pancakes per plate with a spoonful of Greek yogurt and a handful of berries."
    }
   ],
   "tips": [
-   "Treat the first pancake as a test. Its color and rise tell you whether to adjust the heat or thin the batter with a tablespoon of buttermilk if it spreads too little.",
-   "Do not press the pancakes with your spatula after flipping. It squeezes out the gas bubbles you worked to trap and leaves them dense.",
-   "No buttermilk? Stir 2 tablespoons lemon juice or white vinegar into 2 cups whole milk and let it stand 5 minutes. It will not be as thick, so expect a slightly thinner batter."
+   "Small pancakes are easier to flip. Keep each one to about 3 inches across.",
+   "Full-fat or low-fat cottage cheese both work. Small-curd blends a little smoother.",
+   "Blend the batter right before cooking. It thickens as it stands.",
+   "Small-portion tip: start with one pancake and a spoonful of yogurt. A second one can wait."
   ],
-  "storage": "Cool leftover pancakes completely, then refrigerate in an airtight container for up to 3 days or freeze in a zip-top bag, separated by parchment, for up to 2 months. Reheat straight from the fridge or freezer in a toaster until hot and crisp at the edges, or warm on a sheet pan in a 350°F (175°C) oven for 8 to 10 minutes. The batter itself does not keep well, since the baking soda loses its lift after about 30 minutes.",
+  "storage": "Cool leftover pancakes completely, then refrigerate in an airtight container for up to 3 days or freeze with parchment between them for up to 2 months. Reheat in a toaster or in a dry skillet over low heat.",
   "variations": [
    [
-    "Blueberry pancakes",
-    "Pour the batter first, then drop 6 to 8 blueberries onto each pancake before flipping. Stirring them into the bowl bleeds purple streaks and weighs the batter down."
+    "Banana",
+    "Blend half a ripe banana into the batter and skip the maple syrup."
    ],
    [
-    "Brown butter and cinnamon",
-    "Cook the 3 tablespoons butter until it smells nutty and turns amber, cool it slightly, and add 1 teaspoon cinnamon to the dry ingredients."
+    "Blueberry",
+    "Drop a few blueberries onto each pancake right after pouring the batter."
    ],
    [
-    "Half whole wheat",
-    "Swap 1 cup of the flour for white whole wheat flour and rest the batter the full 10 minutes, since the bran needs more time to hydrate."
+    "Cinnamon",
+    "Add 1/2 teaspoon ground cinnamon to the blender."
+   ],
+   [
+    "Make it gentler",
+    "Skip the berries and serve with plain yogurt and a drizzle of maple syrup. Eat them warm, not hot."
+   ],
+   [
+    "Protein boost",
+    "Blend 1 scoop of vanilla protein powder into the batter with 2 extra tablespoons of milk."
    ]
   ],
   "nutrition": {
-   "calories": 425,
-   "protein": 13,
-   "carbs": 60,
-   "fat": 14,
+   "calories": 200,
+   "protein": 15,
+   "carbs": 19,
+   "fat": 7,
    "fiber": 2
   },
   "faq": [
    [
-    "Can I make the batter the night before?",
-    "Not recommended. The baking soda reacts with the buttermilk right away, so overnight batter bakes up flat. Instead, whisk the dry and wet ingredients separately the night before, refrigerate the wet bowl, and combine in the morning."
+    "Can I taste the cottage cheese?",
+    "Not really. Once blended and cooked it tastes mild and slightly tangy, a bit like a soft cheese pancake."
    ],
    [
-    "Why are my pancakes flat and dense?",
-    "Usually the batter was overmixed, or the leaveners are old. Baking powder loses strength after about 6 months; test it by dropping a spoonful into hot water, which should bubble vigorously."
+    "Can I use flour instead of oats?",
+    "Yes. Use 1/3 cup all-purpose flour instead of the oats. The pancakes will be a little lighter."
    ],
    [
-    "Why are they raw inside but dark outside?",
-    "The pan is too hot. Lower the heat to medium-low and give the next batch an extra 30 seconds per side so the centers cook before the surface over-browns."
+    "Are they gluten-free?",
+    "They can be, if you use oats labeled certified gluten-free and a gluten-free baking powder."
    ]
   ],
-  "img": "images/buttermilk-pancakes.webp",
-  "time": 30
+  "note": "Make the whole batch even if you only want one or two. Leftovers freeze well and reheat in the toaster in a couple of minutes, which is useful on mornings when cooking feels like too much.",
+  "diet": [
+   "vegetarian"
+  ],
+  "img": "images/cottage-cheese-pancakes.webp"
  },
  {
   "id": "shakshuka",
@@ -2561,190 +2551,189 @@
   "time": 50
  },
  {
-  "id": "cinnamon-french-toast",
-  "title": "Custardy Cinnamon French Toast",
-  "subtitle": "Thick slices of day-old brioche soaked in a vanilla-cinnamon custard, then cooked slowly in butter until crisp outside and pudding-soft within.",
+  "id": "spinach-feta-mini-frittata",
+  "title": "Spinach & Feta Mini Frittata",
+  "subtitle": "A small oven frittata with spinach, feta and a little cottage cheese for a soft, custardy texture. Cut it into six wedges and reheat one or two at a time.",
   "category": "Beyond Toast",
   "tags": [
-   "quick",
-   "everyday"
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "make-ahead"
   ],
-  "diet": [
-   "vegetarian"
-  ],
-  "prep": 10,
-  "cook": 20,
-  "serves": 4,
+  "prep": 15,
+  "cook": 30,
+  "time": 45,
+  "serves": 6,
   "level": "Easy",
-  "desc": "Crisp edges, custardy centers, warm cinnamon.",
-  "note": "If any recipe explains our name, it is this one: toast, but far from boring. Day-old bread is the one thing we won't bend on, because fresh brioche collapses into mush in the custard. Serve it with warm maple syrup, berries and crisp bacon on the side.",
+  "desc": "Six make-ahead wedges from one small pan.",
   "intro": [
-   "Soggy centers and scorched outsides are the two ways French toast goes wrong, and both come down to heat and bread. Fix those, and you get slices that are crisp and caramelized on the surface with a center like bread pudding.",
-   "Day-old brioche or challah is slightly drier, so it drinks up more custard without falling apart. The rich mix of eggs, milk and cream needs gentle heat to set, since egg proteins firm up gradually, and medium-low heat gives the middle time to cook before the sugar and butter on the surface go past golden to burnt."
+   "A frittata is one of the easiest make-ahead breakfasts there is: one small pan in the oven gives you six wedges for the week, and a warm, high-protein small plate is about a minute away. Each wedge has about 15 g of protein.",
+   "A little blended cottage cheese is what keeps it soft and custardy instead of rubbery. Squeezing the thawed spinach very dry keeps the frittata from turning watery, and a moderate oven lets the eggs set gently all the way to the center."
   ],
   "why": [
    [
-    "Truly custardy centers",
-    "A rich egg, milk and cream custard soaks deep and sets like bread pudding."
+    "About 15 g protein per wedge",
+    "Eggs, egg whites, cottage cheese and feta."
    ],
    [
-    "Browned, never burnt",
-    "Medium-low heat gives crisp, caramelized edges while the middle cooks through."
+    "Made once, eaten all week",
+    "Keeps in the fridge for 4 days and in the freezer for 2 months."
    ],
    [
-    "Everyone eats together",
-    "A warm oven holds finished slices crisp so the whole batch hits the table hot."
+    "Ready in a minute",
+    "Reheat a wedge in the microwave for a fast breakfast."
    ]
   ],
   "ingredients": [
    {
-    "group": "For the custard",
-    "items": [
-     {
-      "q": 4,
-      "u": "",
-      "n": "large eggs"
-     },
-     {
-      "q": 1,
-      "u": "cup",
-      "n": "whole milk"
-     },
-     {
-      "q": 0.5,
-      "u": "cup",
-      "n": "heavy cream"
-     },
-     {
-      "q": 2,
-      "u": "tbsp",
-      "n": "light brown sugar",
-      "note": "packed",
-      "g": 25
-     },
-     {
-      "q": 1.5,
-      "u": "tsp",
-      "n": "ground cinnamon"
-     },
-     {
-      "q": 2,
-      "u": "tsp",
-      "n": "vanilla extract"
-     },
-     {
-      "q": 0.25,
-      "u": "tsp",
-      "n": "fine salt"
-     },
-     {
-      "q": 1,
-      "u": "pinch",
-      "n": "ground nutmeg"
-     }
-    ]
-   },
-   {
-    "group": "For cooking and serving",
+    "group": "For the frittata",
     "items": [
      {
       "q": 8,
       "u": "",
-      "n": "slices brioche or challah",
-      "note": "3/4 to 1 inch thick, preferably a day old"
+      "n": "large eggs"
      },
      {
-      "q": 3,
-      "u": "tbsp",
-      "n": "unsalted butter",
-      "note": "divided"
+      "q": 0.5,
+      "u": "cup",
+      "n": "liquid egg whites",
+      "g": 120
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "low-fat cottage cheese",
+      "g": 113
+     },
+     {
+      "q": 5,
+      "u": "oz",
+      "n": "frozen chopped spinach",
+      "note": "thawed and squeezed very dry",
+      "g": 140
+     },
+     {
+      "q": 0.33,
+      "u": "cup",
+      "n": "crumbled feta",
+      "g": 50
+     },
+     {
+      "q": 0.5,
+      "u": "",
+      "n": "small red bell pepper",
+      "note": "finely diced"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "green onions",
+      "note": "thinly sliced"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "kosher salt"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "black pepper"
      },
      {
       "q": null,
       "u": "",
-      "n": "maple syrup",
-      "note": "for serving"
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "powdered sugar and fresh berries",
-      "note": "optional, for serving"
+      "n": "olive oil spray",
+      "note": "for the pan"
      }
     ]
    }
   ],
   "steps": [
    {
-    "t": "Preheat oven and skillet",
-    "d": "Heat the oven to 200°F (95°C) and set a wire rack on a sheet pan inside to hold finished slices. Place a large nonstick skillet or griddle over medium-low heat for about 3 minutes, so it heats evenly without hot spots."
+    "t": "Heat the oven",
+    "d": "Heat the oven to 350°F (175°C). Spray a 9-inch oven-safe skillet or pie dish generously with oil."
    },
    {
-    "t": "Whisk the custard",
-    "d": "In a wide, shallow dish, whisk the eggs until completely smooth with no streaks of white, which would otherwise cook into patches of plain egg. Add the milk, cream, brown sugar, cinnamon, vanilla, salt and nutmeg and whisk for 30 seconds, until the sugar dissolves and the cinnamon is evenly suspended.",
-    "tip": "Cinnamon floats and clumps on top of the custard. Give it a quick whisk before each new batch so every slice gets its share."
+    "t": "Blend the base",
+    "d": "Blend the eggs, egg whites, cottage cheese, salt and pepper for about 20 seconds, until smooth and slightly frothy.",
+    "tip": "No blender? Whisk well instead. The frittata will be a little less smooth but still good."
    },
    {
-    "t": "Soak the bread",
-    "d": "Lay 2 or 3 slices in the custard and soak 15 to 20 seconds per side for brioche, or up to 30 seconds per side for denser challah. The bread should feel heavy and saturated but still hold its shape when lifted. Let the excess drip off for a few seconds so the surface browns instead of steaming."
+    "t": "Add the fillings",
+    "d": "Scatter the spinach, feta, bell pepper and green onions evenly over the bottom of the pan. Pour the egg mixture over the top."
    },
    {
-    "t": "Cook low and slow",
-    "d": "Melt 1 tablespoon of butter in the skillet until it foams and smells nutty, then add the soaked slices. Cook 3 to 4 minutes per side, until deep golden brown and the center springs back when pressed gently. If the butter starts to smoke or the outside darkens before 3 minutes, lower the heat.",
-    "tip": "Unsure if the middle is set? Press the center with a spatula. Liquid custard seeping out means it needs another minute per side on slightly lower heat."
+    "t": "Bake gently",
+    "d": "Bake for 25 to 30 minutes, until the edges are lightly golden and the center is just set, with only a slight wobble when you nudge the pan.",
+    "tip": "Take it out when the center barely wobbles. It finishes setting as it cools and stays softer."
    },
    {
-    "t": "Keep warm and repeat",
-    "d": "Move cooked slices to the rack in the oven, where they stay crisp for up to 20 minutes. Wipe any dark bits from the pan with a paper towel, add more butter, and repeat with the remaining bread."
-   },
-   {
-    "t": "Serve",
-    "d": "Stack two slices per plate and dust with powdered sugar. Serve right away with warm maple syrup and fresh berries."
+    "t": "Rest and cut",
+    "d": "Let the frittata rest for 10 minutes, then cut it into 6 wedges. Serve one or two per plate, or cool completely for storage."
    }
   ],
   "tips": [
-   "No day-old bread? Dry fresh slices on a rack in a 300°F (150°C) oven for 8 to 10 minutes, flipping once. They should feel dry to the touch but not toasted.",
-   "Whisk the custard the night before and refrigerate it covered. Whisk again in the morning, since the cinnamon settles overnight.",
-   "Wiping the pan between batches matters. Browned milk solids and sugar left behind will burn and leave bitter dark spots on the next slices."
+   "Squeeze the spinach in a clean towel until no more water comes out. Wet spinach makes a watery frittata.",
+   "A cast iron or nonstick oven-safe skillet releases the wedges most easily.",
+   "Swap in any finely chopped cooked vegetable, as long as it is not watery.",
+   "Small-portion tip: one wedge with a piece of fruit is a complete small breakfast on low-appetite days."
   ],
-  "storage": "Cool leftovers completely, then refrigerate in an airtight container for up to 3 days. To freeze, lay slices on a sheet pan until solid, then transfer to a freezer bag for up to 2 months. Reheat in a toaster or a 350°F (175°C) oven for 8 to 10 minutes until hot and crisp.",
+  "storage": "Refrigerate cooled wedges in an airtight container for up to 4 days. To freeze, wrap each wedge and keep in a freezer bag for up to 2 months. Reheat a wedge in the microwave for 45 to 60 seconds from the fridge, or about 90 seconds from frozen.",
   "variations": [
    [
-    "Orange and cardamom",
-    "Swap the nutmeg for 1/4 teaspoon ground cardamom and add the finely grated zest of 1 orange to the custard."
+    "Sun-dried tomato",
+    "Replace the bell pepper with 2 tablespoons chopped sun-dried tomatoes."
+   ],
+   [
+    "Ham and cheddar",
+    "Swap the feta for cheddar and add 1/2 cup diced lean ham."
    ],
    [
     "Dairy-free",
-    "Use 1 1/2 cups of full-fat oat milk or canned coconut milk in place of the milk and cream, and cook in coconut oil or vegan butter. Soak a few seconds less, as thinner custards absorb faster."
+    "Skip the cottage cheese and feta and add 2 extra egg whites. The frittata will be firmer."
    ],
    [
-    "Stuffed with cream cheese",
-    "Sandwich 2 thinner slices with sweetened cream cheese and a little jam before soaking. Cook a minute longer per side on low so the filling warms through."
+    "Make it gentler",
+    "Leave out the green onions and pepper and use a mild cheese. Eat it warm rather than hot."
+   ],
+   [
+    "Protein boost",
+    "Serve with a small cup of Greek yogurt or a glass of milk."
    ]
   ],
   "nutrition": {
-   "calories": 520,
-   "protein": 16,
-   "carbs": 58,
-   "fat": 25,
-   "fiber": 2
+   "calories": 160,
+   "protein": 15,
+   "carbs": 3,
+   "fat": 9,
+   "fiber": 1
   },
   "faq": [
    [
-    "Why is my French toast soggy in the middle?",
-    "The heat was probably too high, so the outside browned before the custard set, or the bread was too fresh and soaked too long. Use day-old bread, stick to medium-low heat, and press the center to check."
+    "Why is my frittata watery?",
+    "Usually the spinach was not squeezed dry enough. Wring it out in a towel until no more liquid comes out."
    ],
    [
-    "Can I use regular sandwich bread?",
-    "Yes, but it is thinner and softer, so soak it just 5 to 10 seconds per side and expect a less custardy center. Thick-cut or day-old bread gives the best result."
+    "Can I use fresh spinach?",
+    "Yes. Wilt about 5 cups of fresh spinach in a dry pan, cool it, then squeeze it dry and chop it."
    ],
    [
-    "Can I make this ahead for a crowd?",
-    "Cook all the slices, then hold them on the rack in the 200°F (95°C) oven for up to 20 minutes. For longer, cool, freeze, and reheat in a 350°F (175°C) oven."
+    "Can I make egg bites instead?",
+    "Yes. Divide the fillings and egg mixture among a greased 12-cup muffin pan and bake at 325°F (165°C) for 22 to 25 minutes. Two bites make a serving."
+   ],
+   [
+    "Is it gluten-free?",
+    "Yes, as written. Check your feta label if you are very sensitive."
    ]
   ],
-  "img": "images/cinnamon-french-toast.webp",
-  "time": 30
+  "note": "One wedge, a minute in the microwave, done. This is the recipe to make on a day you have energy, so the days you do not still start with something warm.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/spinach-feta-mini-frittata.webp"
  },
  {
   "id": "butternut-squash-soup",
@@ -3645,73 +3634,59 @@
   "time": 50
  },
  {
-  "id": "harvest-kale-salad",
-  "title": "Harvest Kale Salad with Apples and Pecans",
-  "subtitle": "Tender massaged kale tossed with crisp apples, toasted pecans, tart cranberries and goat cheese in a shallot-maple dressing.",
+  "id": "tuna-white-bean-salad",
+  "title": "Tuna & White Bean Salad",
+  "subtitle": "Canned tuna and cannellini beans tossed with tomatoes, cucumber, parsley and a lemon dressing. No cooking, about 26 g protein per serving.",
   "category": "Salads",
   "tags": [
-   "fall",
-   "healthy",
    "quick",
-   "everyday"
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "make-ahead"
   ],
-  "diet": [
-   "vegetarian",
-   "gluten-free"
-  ],
-  "prep": 20,
-  "cook": 8,
-  "serves": 4,
+  "prep": 15,
+  "cook": 0,
+  "time": 15,
+  "serves": 3,
   "level": "Easy",
-  "desc": "Crunchy, tangy fall salad that holds up.",
-  "note": "It is our pick for potlucks and holiday tables, because it sits happily for hours without wilting. Massaging the kale is the one step you cannot skip. Add the apples, nuts and cheese at the last minute and it will taste freshly made.",
+  "desc": "No-cook tuna and beans with a lemon dressing.",
   "intro": [
-   "Kale salad has a reputation for being chewy and punishing, but that is a technique problem, not a kale problem. A two-minute massage with dressing turns tough leaves tender, glossy and sweet. From there, it is all about contrast: crisp apple, crunchy pecans, chewy cranberries and creamy goat cheese.",
-   "Rubbing the leaves breaks down their cell walls and fibrous structure, while the vinegar and salt in the dressing start to soften them further, a bit like a quick pickle. That sturdiness is also a gift, because unlike lettuce, dressed kale does not wilt into a puddle, so this salad can sit on a buffet for hours."
+   "This is a pantry salad: two cans of tuna and one can of white beans, brightened with lemon, parsley and a few crunchy vegetables. There is no stove involved, and each small bowl has about 26 g of protein.",
+   "The dressing goes on the beans first. Letting them sit in the lemon and olive oil for a few minutes helps them absorb flavor, so the salad tastes seasoned all the way through instead of just on the surface. The tuna goes in last, folded gently so it stays in flakes."
   ],
   "why": [
    [
-    "Holds for hours",
-    "Sturdy kale stays crisp-tender long after it is dressed."
+    "About 26 g protein per bowl",
+    "Tuna and cannellini beans do most of the work."
    ],
    [
-    "Big textural contrast",
-    "Crunch, chew and creaminess land in every forkful."
+    "No cooking",
+    "Open the cans, chop a few vegetables and toss."
    ],
    [
-    "Make-ahead friendly",
-    "Dress the kale a day early and assemble at serving time."
+    "Good the next day",
+    "Keeps well in the fridge for packed lunches."
    ]
   ],
   "ingredients": [
    {
-    "group": "For the maple Dijon dressing",
+    "group": "For the dressing",
     "items": [
      {
-      "q": 0.25,
-      "u": "cup",
+      "q": 1.5,
+      "u": "tbsp",
       "n": "extra-virgin olive oil"
      },
      {
       "q": 2,
       "u": "tbsp",
-      "n": "apple cider vinegar"
-     },
-     {
-      "q": 1,
-      "u": "tbsp",
-      "n": "pure maple syrup"
+      "n": "fresh lemon juice"
      },
      {
       "q": 1,
       "u": "tsp",
       "n": "Dijon mustard"
-     },
-     {
-      "q": 1,
-      "u": "",
-      "n": "small shallot",
-      "note": "finely minced"
      },
      {
       "q": 0.25,
@@ -3730,112 +3705,130 @@
     "group": "For the salad",
     "items": [
      {
-      "q": 1,
-      "u": "",
-      "n": "large bunch lacinato (Tuscan) kale",
-      "note": "about 10 oz, stems removed, leaves thinly sliced"
-     },
-     {
-      "q": 0.75,
-      "u": "cup",
-      "n": "pecan halves",
-      "g": 75
+      "q": 15,
+      "u": "oz",
+      "n": "cannellini beans",
+      "note": "1 can, rinsed and drained"
      },
      {
       "q": 2,
       "u": "",
-      "n": "crisp apples",
-      "note": "such as Honeycrisp and Granny Smith, cored and thinly sliced"
+      "n": "cans light tuna in water",
+      "note": "5 oz each, drained"
      },
      {
-      "q": 0.33,
+      "q": 1,
       "u": "cup",
-      "n": "dried cranberries",
-      "g": 45
+      "n": "cherry tomatoes",
+      "note": "halved",
+      "g": 150
      },
      {
       "q": 0.5,
-      "u": "cup",
-      "n": "crumbled goat cheese",
-      "note": "or feta",
-      "g": 60
+      "u": "",
+      "n": "English cucumber",
+      "note": "diced"
      },
      {
       "q": 2,
       "u": "tbsp",
-      "n": "roasted pepitas",
-      "note": "optional"
+      "n": "red onion",
+      "note": "finely chopped, optional"
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "fresh parsley",
+      "note": "chopped"
+     },
+     {
+      "q": 3,
+      "u": "cups",
+      "n": "arugula or mixed greens",
+      "note": "to serve"
      }
     ]
    }
   ],
   "steps": [
    {
-    "t": "Toast the pecans",
-    "d": "Spread the pecans in a dry skillet over medium-low heat and toast for 6 to 8 minutes, shaking the pan often, until they smell warm and buttery and turn a shade darker. Tip them onto a plate to stop the cooking, let cool, then roughly chop.",
-    "tip": "Nuts go from toasted to burnt fast, and the pan keeps cooking them after you turn off the heat. Stay close, trust your nose, and move them to a plate right away."
+    "t": "Make the dressing",
+    "d": "In a large bowl, whisk the olive oil, lemon juice, Dijon, salt and a few grinds of pepper."
    },
    {
-    "t": "Shake the dressing",
-    "d": "Add the olive oil, vinegar, maple syrup, Dijon, shallot, salt and a few grinds of pepper to a jar. Seal and shake hard for 20 seconds, until the dressing looks creamy and emulsified; the mustard is what holds it together. Taste and adjust with more salt or maple."
+    "t": "Dress the beans",
+    "d": "Add the rinsed beans to the bowl and toss to coat. Let them sit for 5 minutes while you prepare the vegetables.",
+    "tip": "Dressing the beans first gives them time to absorb the lemon, which seasons the whole salad."
    },
    {
-    "t": "Massage the kale",
-    "d": "Put the sliced kale in a large bowl and drizzle with about half the dressing. Use clean hands to squeeze and rub the leaves for 2 to 3 minutes, until they darken to a deep green, shrink by about a third and feel silky rather than squeaky.",
-    "tip": "If you have time, let the massaged kale sit for 10 minutes. The acid keeps working and the leaves get even more tender."
+    "t": "Add the vegetables",
+    "d": "Add the tomatoes, cucumber, red onion if using and parsley, and toss gently."
    },
    {
-    "t": "Slice the apples",
-    "d": "Core the apples and slice them into thin wedges or matchsticks just before assembling, so they stay crisp and bright. If you are working ahead, toss them with a squeeze of lemon juice to keep them from browning."
+    "t": "Fold in the tuna",
+    "d": "Break the tuna into large flakes and fold it in gently. Taste and add more lemon, salt or pepper if needed."
    },
    {
-    "t": "Toss and serve",
-    "d": "Add the apples, pecans, cranberries and pepitas to the kale with the remaining dressing and toss until everything is glossy. Scatter the goat cheese over the top last so it stays in creamy crumbles instead of smearing, then serve."
+    "t": "Serve",
+    "d": "Divide the greens among three small bowls and spoon the salad over the top."
    }
   ],
   "tips": [
-   "Curly kale works, but it is tougher than lacinato. Massage it an extra minute and slice it a little finer.",
-   "Cut the kale into thin ribbons, about 1/4 inch wide. Smaller pieces tenderize faster and are much easier to eat with a fork.",
-   "Rinse the minced shallot under cold water or let it sit in the vinegar for 5 minutes before adding the rest of the dressing. It tames the harsh bite without losing the flavor."
+   "Light tuna in water keeps the salad lighter; tuna packed in olive oil is richer and you can reduce the dressing oil.",
+   "Rinse canned beans well to remove the starchy liquid and some of the salt.",
+   "Keep the greens separate until serving if you are packing it for later.",
+   "Small-portion tip: serve a half bowl on a few crackers or a slice of toast. The rest keeps for tomorrow."
   ],
-  "storage": "Dressed kale without the apples and cheese keeps in a covered container in the fridge for up to 2 days. Store the toasted nuts in a sealed jar at room temperature, then add them, freshly sliced apples and the cheese just before serving so everything stays crisp.",
+  "storage": "Refrigerate the salad, without the greens, in an airtight container for up to 3 days. Stir and add a squeeze of lemon before serving.",
   "variations": [
    [
-    "Roasted squash",
-    "Add 2 cups of roasted delicata or butternut squash, cooled to room temperature so it does not wilt the kale."
+    "Chickpeas",
+    "Use chickpeas instead of cannellini beans."
    ],
    [
-    "Make it a meal",
-    "Top with shredded rotisserie chicken or 1 1/2 cups of cooked, cooled quinoa and add an extra tablespoon of dressing."
+    "Salmon",
+    "Swap the tuna for canned salmon, flaked and with skin and bones removed if you prefer."
    ],
    [
-    "Pear and blue cheese",
-    "Swap the apples for ripe but firm pears and the goat cheese for crumbled blue cheese. Use walnuts instead of pecans if you like."
+    "Vegetarian",
+    "Skip the tuna, use two cans of beans and add crumbled feta (no longer dairy-free)."
+   ],
+   [
+    "Make it gentler",
+    "Leave out the red onion and Dijon and serve it cool rather than cold."
+   ],
+   [
+    "Protein boost",
+    "Add a chopped hard-boiled egg to each bowl."
    ]
   ],
   "nutrition": {
-   "calories": 380,
-   "protein": 8,
-   "carbs": 30,
-   "fat": 27,
-   "fiber": 6
+   "calories": 250,
+   "protein": 26,
+   "carbs": 19,
+   "fat": 8,
+   "fiber": 5
   },
   "faq": [
    [
-    "Why do I need to massage kale?",
-    "Raw kale is tough and slightly bitter. Rubbing it with dressing breaks down its fibers, so it becomes tender, sweeter and easier to eat."
+    "Which tuna should I use?",
+    "Light tuna in water, drained, is what the nutrition estimate is based on. Brands vary, so check the label."
    ],
    [
-    "Can I make this salad ahead?",
-    "Yes. Massage the kale with dressing up to a day ahead and refrigerate it, then add the apples, pecans, cranberries and cheese right before serving."
+    "Can I make it ahead?",
+    "Yes. It keeps for 3 days in the fridge. Add the greens just before serving."
    ],
    [
-    "How do I make it vegan?",
-    "Skip the goat cheese and add sliced avocado or extra pepitas for richness. Check that your Dijon is vegan, which most are."
+    "Is it gluten-free?",
+    "Yes, as written. Check your mustard label if you are very sensitive."
    ]
   ],
-  "img": "images/harvest-kale-salad.webp",
-  "time": 28
+  "note": "This is the salad for days when turning on the stove sounds like too much. Everything comes from a can or the crisper drawer, and a small bowl still covers a good share of the day's protein.",
+  "diet": [
+   "gluten-free",
+   "dairy-free"
+  ],
+  "img": "images/tuna-white-bean-salad.webp"
  },
  {
   "id": "baked-cinnamon-apples",

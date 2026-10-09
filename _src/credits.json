@@ -41,13 +41,6 @@
   "source": "Pexels",
   "alt": "Close-up of beef tacos with cilantro and lime on a plate, showcasing Mexican cuisine."
  },
- "buttermilk-pancakes": {
-  "photographer": "Tea Creative",
-  "photographer_url": "https://www.pexels.com/@teacreativelife",
-  "photo_url": "https://www.pexels.com/photo/syrup-falling-on-a-stack-of-pancakes-5317627/",
-  "source": "Pexels",
-  "alt": "Delicious pancakes stacked high, drenched in syrup, perfect for breakfast lovers."
- },
  "shakshuka": {
   "photographer": "Boryslav Shoot",
   "photographer_url": "https://www.pexels.com/@boryslav",
@@ -76,13 +69,6 @@
   "source": "Pexels",
   "alt": "Tasty breakfast burrito served with salsa and sour cream on a metal tray."
  },
- "cinnamon-french-toast": {
-  "photographer": "Amar  Preciado",
-  "photographer_url": "https://www.pexels.com/@amar",
-  "photo_url": "https://www.pexels.com/photo/delicious-french-toast-with-fresh-berries-36904808/",
-  "source": "Pexels",
-  "alt": "Close-up of French toast topped with strawberries, raspberries, and blackberries on a plate."
- },
  "butternut-squash-soup": {
   "photographer": "Nataliya Vaitkevich",
   "photographer_url": "https://www.pexels.com/@n-voitkevich",
@@ -110,13 +96,6 @@
   "photo_url": "https://www.pexels.com/photo/delicious-mushroom-risotto-with-parmesan-cheese-31779539/",
   "source": "Pexels",
   "alt": "Savor the rich and creamy mushroom risotto topped with fresh Parmesan cheese."
- },
- "harvest-kale-salad": {
-  "photographer": "Denys Gromov",
-  "photographer_url": "https://www.pexels.com/@jdgromov",
-  "photo_url": "https://www.pexels.com/photo/close-up-shot-of-a-dish-on-a-plate-4899800/",
-  "source": "Pexels",
-  "alt": "A fresh kale salad topped with walnuts and pomegranate seeds, served with lemon."
  },
  "guide-gentle": {
   "photographer": "Foodie Factor",
@@ -159,5 +138,26 @@
   "photo_url": "https://www.pexels.com/photo/tasty-apples-with-assorted-filling-in-baking-pan-6210957/",
   "source": "Pexels",
   "alt": "Red apples filled with walnuts, cashews and dried cranberries in a baking dish."
+ },
+ "cottage-cheese-pancakes": {
+  "photographer": "Natalia Sevruk",
+  "photographer_url": "https://www.pexels.com/@natalia-sevruk-636238602/",
+  "photo_url": "https://www.pexels.com/photo/delicious-homemade-cheese-pancakes-on-a-plate-38917193/",
+  "source": "Pexels",
+  "alt": "Golden brown cottage cheese pancakes on a decorative plate."
+ },
+ "spinach-feta-mini-frittata": {
+  "photographer": "Shameel mukkath",
+  "photographer_url": "https://www.pexels.com/@shameel-mukkath-3421394/",
+  "photo_url": "https://www.pexels.com/photo/scrambled-eggs-with-green-onions-on-black-skillet-pan-5639282/",
+  "source": "Pexels",
+  "alt": "A spinach and cheese frittata in a cast iron skillet."
+ },
+ "tuna-white-bean-salad": {
+  "photographer": "Tuğba ÖZTÜRK",
+  "photographer_url": "https://www.pexels.com/@tugba-ozturk-368300535/",
+  "photo_url": "https://www.pexels.com/photo/bowl-of-salad-and-fork-near-19572489/",
+  "source": "Pexels",
+  "alt": "Top view of a tuna salad with fresh vegetables and a fork."
  }
 }
