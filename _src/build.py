@@ -618,8 +618,8 @@ def build_about():
         "Eating less shouldn’t mean eating badly. We make small, high-protein meals simple, practical and still delicious.",
         f'<a href="#story" class="btn btn-yellow">Read our story {ICON["down"]}</a><a href="#contact" class="btn btn-ghost">Say hello</a>',
         f'<a class="float-card" href="#story"><img src="{root}images/our-story.webp" alt=""{rimg(root, "images/our-story.webp", SIZES["avatar"])}><div><small>Our story</small><strong>It started with toast</strong><span>Read how it began →</span></div></a>', short=True)
-    vals = [('leaf', 'Real food', 'Fresh ingredients and real flavor, nothing overly processed.'), ('chef', 'Simple cooking', 'Clear steps and honest timing, so you are never left guessing.'),
-            ('heart', 'Quality ingredients', 'Better ingredients make better meals, and they are easy to find.'), ('users', 'Everyday joy', 'Food brings people together. That is the best part.')]
+    vals = [('leaf', 'Protein first', 'Start with the protein, before fullness kicks in.'), ('chef', 'Small and often', 'A small plate you finish beats a big one you don’t.'),
+            ('heart', 'Gentle on hard days', 'Cold, mild and soft options for when nothing sounds good.'), ('users', 'Real food', 'Everyday ingredients from a regular grocery store.')]
     body = f'''{hero}
 <section class="container section" id="story"><div class="story">
   <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="main" loading="lazy"{rimg(root, 'images/our-story.webp', SIZES['story'])}><div class="note"><span class="hand">made with love ♥</span></div></div>
@@ -633,7 +633,7 @@ def build_about():
   <div class="values">{''.join(f'<div class="value reveal"><div class="icon-circle">{ICON[i]}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in vals)}</div></div></section>
 <section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we’re here for every meal, especially the small ones.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"{rimg(root, 'images/chicken-avocado-salad.webp', SIZES['cta'])}></div></section>
 <section class="container section" id="contact" style="padding-top:0"><div class="contact">
-  <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? Use the form to prepare a draft, then send it from your email app.</p>
+  <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? Use the form to prepare a draft, then send it from your email app. We can’t give personal medical or nutrition advice, but we’re always happy to help with a recipe.</p>
     <ul class="contact-list"><li><span class="icon-circle">{ICON['box']}</span>{EMAIL}</li><li><span class="icon-circle">{ICON['instagram']}</span>{INSTAGRAM}</li></ul></div>
   <form id="contact-form" class="reveal" data-email="{EMAIL}"><div class="row"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" required placeholder="you@example.com"></label></div>
     <label>Message<textarea name="message" required placeholder="Tell us what's cooking…"></textarea></label>
