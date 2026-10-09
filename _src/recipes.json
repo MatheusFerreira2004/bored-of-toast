@@ -3652,8 +3652,8 @@
  },
  {
   "id": "tuna-white-bean-salad",
-  "title": "Tuna & White Bean Salad",
-  "subtitle": "Canned tuna and cannellini beans tossed with tomatoes, cucumber, parsley and a lemon dressing. No cooking, about 26 g protein per serving.",
+  "title": "Tuna & Chickpea Salad with Soft Eggs",
+  "subtitle": "Canned tuna and chickpeas tossed with tomatoes, cucumber, parsley and a lemon dressing, topped with a soft-boiled egg. About 33 g protein per serving.",
   "category": "Salads",
   "tags": [
    "quick",
@@ -3663,35 +3663,45 @@
    "make-ahead"
   ],
   "prep": 15,
-  "cook": 0,
-  "time": 15,
+  "cook": 10,
+  "time": 25,
   "serves": 3,
   "level": "Easy",
-  "desc": "No-cook tuna and beans with a lemon dressing.",
+  "desc": "Tuna, chickpeas and a soft egg with lemon.",
   "intro": [
-   "This is a pantry salad: two cans of tuna and one can of white beans, brightened with lemon, parsley and a few crunchy vegetables. There is no stove involved, and each small bowl has about 26 g of protein.",
-   "The dressing goes on the beans first. Letting them sit in the lemon and olive oil for a few minutes helps them absorb flavor, so the salad tastes seasoned all the way through instead of just on the surface. The tuna goes in last, folded gently so it stays in flakes."
+   "This is a pantry salad with a soft egg on top: two cans of tuna and one can of chickpeas, brightened with lemon, parsley and a few crunchy vegetables. The only cooking is a pot of water for the eggs, and each small bowl has about 33 g of protein.",
+   "The dressing goes on the chickpeas first. Letting them sit in the lemon and olive oil while the eggs cook helps them absorb flavor, so the salad tastes seasoned all the way through. The tuna goes in last, folded gently so it stays in flakes, and the eggs are halved on top just before serving."
   ],
   "why": [
    [
-    "About 26 g protein per bowl",
-    "Tuna and cannellini beans do most of the work."
+    "About 33 g protein per bowl",
+    "Tuna, chickpeas and a soft-boiled egg."
    ],
    [
-    "No cooking",
-    "Open the cans, chop a few vegetables and toss."
+    "Almost no cooking",
+    "Just a pot of water for the eggs; everything else comes from a can or the fridge."
    ],
    [
     "Good the next day",
-    "Keeps well in the fridge for packed lunches."
+    "Keeps well in the fridge for packed lunches, with the eggs stored separately."
    ]
   ],
   "ingredients": [
    {
+    "group": "For the eggs",
+    "items": [
+     {
+      "q": 3,
+      "u": "",
+      "n": "large eggs"
+     }
+    ]
+   },
+   {
     "group": "For the dressing",
     "items": [
      {
-      "q": 1.5,
+      "q": 1,
       "u": "tbsp",
       "n": "extra-virgin olive oil"
      },
@@ -3724,7 +3734,7 @@
      {
       "q": 15,
       "u": "oz",
-      "n": "cannellini beans",
+      "n": "chickpeas",
       "note": "1 can, rinsed and drained"
      },
      {
@@ -3750,7 +3760,7 @@
       "q": 2,
       "u": "tbsp",
       "n": "red onion",
-      "note": "finely chopped, optional"
+      "note": "thinly sliced, optional"
      },
      {
       "q": 0.25,
@@ -3769,13 +3779,14 @@
   ],
   "steps": [
    {
-    "t": "Make the dressing",
-    "d": "In a large bowl, whisk the olive oil, lemon juice, Dijon, salt and a few grinds of pepper."
+    "t": "Cook the eggs",
+    "d": "Bring a small pot of water to a boil. Lower in the eggs with a spoon, reduce to a gentle boil and cook for 7 minutes for soft, jammy yolks. Move them to a bowl of ice water for 3 minutes, then peel.",
+    "tip": "Cook 9 to 10 minutes if you prefer fully set yolks; they travel better in a packed lunch."
    },
    {
-    "t": "Dress the beans",
-    "d": "Add the rinsed beans to the bowl and toss to coat. Let them sit for 5 minutes while you prepare the vegetables.",
-    "tip": "Dressing the beans first gives them time to absorb the lemon, which seasons the whole salad."
+    "t": "Dress the chickpeas",
+    "d": "While the eggs cook, whisk the olive oil, lemon juice, Dijon, salt and a few grinds of pepper in a large bowl. Add the chickpeas and toss to coat. Let them sit while you prepare the vegetables.",
+    "tip": "Dressing the chickpeas first gives them time to absorb the lemon, which seasons the whole salad."
    },
    {
     "t": "Add the vegetables",
@@ -3787,20 +3798,20 @@
    },
    {
     "t": "Serve",
-    "d": "Divide the greens among three small bowls and spoon the salad over the top."
+    "d": "Divide the greens among three small bowls, spoon the salad over the top and finish each bowl with a halved egg."
    }
   ],
   "tips": [
-   "Light tuna in water keeps the salad lighter; tuna packed in olive oil is richer and you can reduce the dressing oil.",
-   "Rinse canned beans well to remove the starchy liquid and some of the salt.",
-   "Keep the greens separate until serving if you are packing it for later.",
-   "Small-portion tip: serve a half bowl on a few crackers or a slice of toast. The rest keeps for tomorrow."
+   "Light tuna in water keeps the salad lighter; tuna packed in olive oil is richer, so you can skip the oil in the dressing.",
+   "Rinse canned chickpeas well to remove the starchy liquid and some of the salt.",
+   "Keep the greens and eggs separate until serving if you are packing it for later.",
+   "Small-portion tip: half a bowl with one egg half is a complete small lunch. The rest keeps for tomorrow."
   ],
-  "storage": "Refrigerate the salad, without the greens, in an airtight container for up to 3 days. Stir and add a squeeze of lemon before serving.",
+  "storage": "Refrigerate the salad, without the greens, in an airtight container for up to 3 days. Keep peeled eggs in a separate container in the fridge for up to 2 days. Stir the salad and add a squeeze of lemon before serving.",
   "variations": [
    [
-    "Chickpeas",
-    "Use chickpeas instead of cannellini beans."
+    "White beans",
+    "Use cannellini beans instead of chickpeas for a softer, creamier salad."
    ],
    [
     "Salmon",
@@ -3808,23 +3819,23 @@
    ],
    [
     "Vegetarian",
-    "Skip the tuna, use two cans of beans and add crumbled feta (no longer dairy-free)."
+    "Skip the tuna, add a second egg per bowl and a little crumbled feta (no longer dairy-free)."
    ],
    [
     "Make it gentler",
-    "Leave out the red onion and Dijon and serve it cool rather than cold."
+    "Leave out the red onion and Dijon, use fully set eggs and serve it cool rather than cold."
    ],
    [
     "Protein boost",
-    "Add a chopped hard-boiled egg to each bowl."
+    "Add a second egg half to each bowl."
    ]
   ],
   "nutrition": {
-   "calories": 250,
-   "protein": 26,
-   "carbs": 19,
-   "fat": 8,
-   "fiber": 5
+   "calories": 345,
+   "protein": 33,
+   "carbs": 25,
+   "fat": 13,
+   "fiber": 7
   },
   "faq": [
    [
@@ -3833,14 +3844,14 @@
    ],
    [
     "Can I make it ahead?",
-    "Yes. It keeps for 3 days in the fridge. Add the greens just before serving."
+    "Yes. The salad keeps for 3 days in the fridge. Add the greens and eggs just before serving."
    ],
    [
     "Is it gluten-free?",
     "Yes, as written. Check your mustard label if you are very sensitive."
    ]
   ],
-  "note": "This is the salad for days when turning on the stove sounds like too much. Everything comes from a can or the crisper drawer, and a small bowl still covers a good share of the day's protein.",
+  "note": "This is the salad for days when cooking sounds like too much. Everything except the eggs comes from a can or the crisper drawer, and a small bowl still covers a good share of the day's protein.",
   "diet": [
    "gluten-free",
    "dairy-free"
