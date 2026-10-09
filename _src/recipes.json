@@ -768,8 +768,8 @@
  },
  {
   "id": "tomato-basil-soup",
-  "title": "Creamy Tomato Basil Soup",
-  "subtitle": "Canned whole tomatoes simmer down with sweet onion and garlic, then get blended silky with fresh basil and a splash of cream.",
+  "title": "Creamy Tomato Basil Soup with White Beans",
+  "subtitle": "Pantry tomatoes and two cans of white beans blended silky with fresh basil, finished with Greek yogurt instead of cream. About 11 g protein in a small bowl.",
   "category": "Soups",
   "tags": [
    "healthy",
@@ -779,26 +779,26 @@
    "make-ahead"
   ],
   "prep": 10,
-  "cook": 25,
-  "serves": 4,
+  "cook": 30,
+  "serves": 6,
   "level": "Easy",
-  "desc": "Silky, bright, and made from pantry cans.",
+  "desc": "Silky tomato soup, thickened with white beans.",
   "intro": [
-   "A pot of velvety tomato soup, steaming and brick-orange with a white swirl of cream on top, is one of the best things you can make from two cans. This version takes 35 minutes, and most of that is hands-off simmering. It is the kind of bowl that makes a rainy weeknight feel like a plan.",
-   "Two small moves do a lot of work. A teaspoon of sugar does not make the soup sweet; it softens the sharp acidity of canned tomatoes so their fruity flavor comes forward. And the cream goes in over low heat at the end, because boiling dairy in an acidic soup can make its proteins tighten and curdle into grainy flecks."
+   "Tomato soup is one of the easiest things to eat when your appetite is small: it is warm, smooth and goes down slowly. The classic version is mostly tomatoes and cream, though, which makes it light on protein. This one swaps the cream for two cans of white beans and a little Greek yogurt, so each small bowl carries about 11 g of protein and still tastes like tomato soup.",
+   "The beans disappear when you blend them. Their starch thickens the soup the way cream or flour would, so the texture stays silky. The yogurt goes in last, off the heat and warmed with a little hot soup first, because yogurt proteins tighten and turn grainy if they hit a boiling, acidic pot all at once."
   ],
   "why": [
    [
-    "Pantry-friendly ingredients",
-    "Canned tomatoes, broth, an onion and garlic are all you need, plus a handful of basil."
+    "About 11 g protein per cup",
+    "White beans and Greek yogurt replace the cream and keep the soup thick and creamy."
    ],
    [
-    "Deep flavor, 25 minutes",
-    "An uncovered simmer evaporates water and concentrates the tomatoes without hours on the stove."
+    "Six small bowls from one pot",
+    "Portion it into 1-cup servings and freeze the extras for harder days."
    ],
    [
-    "Silky without flour",
-    "Blending the tomatoes and onion gives body naturally, and just 1/3 cup cream makes it velvety."
+    "Silky without heavy cream",
+    "Blended beans give the soup body naturally, with no flour needed."
    ]
   ],
   "ingredients": [
@@ -806,7 +806,7 @@
     "group": "For the soup",
     "items": [
      {
-      "q": 2,
+      "q": 1,
       "u": "tbsp",
       "n": "olive oil"
      },
@@ -830,8 +830,15 @@
      },
      {
       "q": 2,
+      "u": "cans",
+      "n": "cannellini beans",
+      "note": "15 oz / 425 g each, drained and rinsed"
+     },
+     {
+      "q": 2,
       "u": "cups",
-      "n": "vegetable broth"
+      "n": "vegetable broth",
+      "note": "check the label if you need it gluten-free"
      },
      {
       "q": 1,
@@ -852,22 +859,17 @@
     "group": "To finish",
     "items": [
      {
-      "q": 0.33,
+      "q": 0.75,
       "u": "cup",
-      "n": "heavy cream",
-      "note": "plus extra to swirl"
+      "n": "plain nonfat Greek yogurt",
+      "note": "170 g, at room temperature",
+      "g": 170
      },
      {
       "q": null,
       "u": "",
       "n": "salt and black pepper",
       "note": "to taste"
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "crusty bread",
-      "note": "to serve"
      }
     ]
    }
@@ -875,47 +877,43 @@
   "steps": [
    {
     "t": "Soften the onion and garlic",
-    "d": "Heat the olive oil in a large pot over medium heat until it shimmers. Add the onion with a pinch of salt and cook, stirring now and then, for 6 to 8 minutes, until soft, translucent and sweet-smelling but not browned. Add the garlic and stir for 1 minute, just until fragrant.",
+    "d": "Heat the olive oil in a large pot over medium heat until it shimmers. Add the onion with a pinch of salt and cook, stirring now and then, for 6 to 8 minutes, until soft and translucent but not browned. Add the garlic and stir for 1 minute, just until fragrant.",
     "tip": "The pinch of salt pulls moisture from the onion so it softens faster and does not scorch."
    },
    {
-    "t": "Simmer uncovered",
-    "d": "Pour in the tomatoes with their juices and crush them against the side of the pot with a wooden spoon. Stir in the broth and sugar and bring to a boil over medium-high heat. Lower to a steady simmer and cook uncovered for 15 minutes, stirring occasionally, until the soup has reduced slightly and the raw, tinny edge of the tomatoes is gone.",
-    "tip": "If the tomatoes still taste sharp after simmering, add another pinch of sugar or a small knob of butter. Both round out the acidity."
+    "t": "Simmer the tomatoes and beans",
+    "d": "Pour in the tomatoes with their juices and crush them against the side of the pot with a wooden spoon. Add the drained beans, broth and sugar and bring to a boil over medium-high heat. Lower to a steady simmer and cook uncovered for 15 to 20 minutes, stirring occasionally, until the beans are very soft and the raw edge of the tomatoes is gone."
    },
    {
     "t": "Blend with the basil",
-    "d": "Take the pot off the heat and add the basil leaves. Blend with an immersion blender for 1 to 2 minutes, until completely smooth and flecked with green. If using a countertop blender, fill it no more than halfway, work in batches and leave the lid vent open under a folded towel so steam can escape."
+    "d": "Take the pot off the heat and add the basil. Blend with an immersion blender for about 2 minutes, until completely smooth. If you use a countertop blender, fill it no more than halfway, work in batches and leave the lid vent open under a folded towel so steam can escape.",
+    "tip": "Blend longer than you think. The smoother the beans, the more the soup tastes like cream."
    },
    {
-    "t": "Stir in the cream",
-    "d": "Return the pot to low heat and stir in the heavy cream until the soup turns a soft, even orange. Warm gently for 2 minutes without letting it boil. Taste and season with salt and pepper; canned tomatoes vary a lot, so trust your tongue.",
-    "tip": "Keep the heat low once the cream is in. A rolling boil can make the dairy split and look grainy."
+    "t": "Temper the yogurt",
+    "d": "Put the yogurt in a bowl and whisk in a ladle of hot soup, then a second one, until smooth and warm. Stir the mixture back into the pot off the heat. Do not let the soup boil again once the yogurt is in.",
+    "tip": "Warming the yogurt gradually is what keeps it from splitting into grainy flecks."
    },
    {
-    "t": "Ladle and serve",
-    "d": "Ladle the soup into warm bowls and swirl a spoonful of extra cream across each. Finish with a few torn basil leaves and plenty of cracked black pepper. Serve hot with thick slices of crusty bread for dunking."
+    "t": "Season and serve small",
+    "d": "Taste and season with salt and pepper; canned tomatoes and broth vary a lot. Ladle into 1-cup portions and finish with torn basil and black pepper."
    }
   ],
   "tips": [
-   "Buy whole peeled tomatoes rather than crushed or diced. Diced tomatoes are often treated with calcium chloride to keep their shape, which means they resist breaking down and blend less smoothly.",
-   "For a deeper, roasted flavor, let the onion go an extra 3 to 4 minutes until lightly golden before adding the garlic. The browning adds savory sweetness without any extra ingredients.",
-   "Make the soup through the blending step up to 2 days ahead and refrigerate. Add the cream only when you reheat it, so it tastes fresh and there is no risk of it splitting twice.",
+   "Buy whole peeled tomatoes rather than diced. Diced tomatoes are often treated with calcium chloride to keep their shape, so they blend less smoothly.",
+   "The soup keeps thickening as it cools because of the beans. Loosen it with broth, 1/4 cup at a time, when you reheat it.",
+   "For freezing, stop before the yogurt step. Freeze the blended base and add the yogurt when you reheat a portion.",
    "Small-portion tip: serve half a portion and save the rest for later. A half bowl still counts."
   ],
-  "storage": "Cool the soup and refrigerate in airtight containers for up to 4 days. Reheat gently in a saucepan over medium-low heat, stirring often, or microwave in 1-minute bursts. It freezes well for up to 3 months, though it is best frozen before the cream goes in; thaw overnight in the fridge and stir in the cream as it reheats.",
+  "storage": "Cool the soup and refrigerate in airtight containers for up to 4 days. Reheat gently in a saucepan over medium-low heat, stirring often and without boiling, or microwave in 1-minute bursts. The blended base, before the yogurt goes in, freezes well for up to 3 months; thaw overnight in the fridge and stir in the tempered yogurt as it reheats.",
   "variations": [
    [
     "Make it dairy-free",
-    "Swap the heavy cream for 1/3 cup full-fat canned coconut milk. It adds a faint sweetness that works well with the basil."
+    "Skip the yogurt and blend 7 oz (200 g) silken tofu into the soup with the basil. It adds creaminess and some protein."
    ],
    [
     "Add roasted red pepper",
-    "Blend in 1 cup jarred roasted red peppers, drained, with the basil for a smokier, sweeter soup. You may want an extra 1/2 cup broth to thin it."
-   ],
-   [
-    "Give it a little heat",
-    "Add 1/4 teaspoon red pepper flakes with the garlic, and finish each bowl with a drizzle of chili oil instead of cream."
+    "Blend in 1 cup jarred roasted red peppers, drained, with the basil for a smokier, sweeter soup. Add an extra 1/2 cup broth if it gets too thick."
    ],
    [
     "Make it gentler",
@@ -923,37 +921,37 @@
    ],
    [
     "Protein boost",
-    "Blend in a can of rinsed white beans, or top with plain Greek yogurt."
+    "Top each bowl with an extra spoonful of Greek yogurt, or serve it with a boiled egg on the side."
    ]
   ],
   "nutrition": {
-   "calories": 210,
-   "protein": 4,
-   "carbs": 20,
-   "fat": 14,
-   "fiber": 5
+   "calories": 190,
+   "protein": 11,
+   "carbs": 32,
+   "fat": 3,
+   "fiber": 7
   },
   "faq": [
    [
-    "Can I use fresh tomatoes?",
-    "Yes, use about 4 pounds of ripe tomatoes, cored and roughly chopped. Simmer 25 to 30 minutes instead of 15 so they break down fully, and add broth only as needed, since fresh tomatoes release a lot of liquid."
+    "Will it taste like beans?",
+    "Cannellini beans are mild, and once blended with tomatoes and basil they mostly add body. If you are unsure, start with one can; the soup will be thinner and lower in protein."
    ],
    [
-    "Why did my soup curdle?",
-    "The cream probably went into soup that was boiling, or it was very cold. Temper it by stirring a ladle of hot soup into the cream first, then add it over low heat and do not let it boil."
+    "Why did the yogurt turn grainy?",
+    "It was likely added to soup that was boiling, or added cold all at once. Warm it with a couple of ladles of hot soup first, stir it in off the heat, and do not boil the soup afterwards."
    ],
    [
-    "How can I make it thicker?",
-    "Simmer it uncovered for another 5 to 10 minutes before blending, or use 1 1/2 cups broth instead of 2. You can also blend in a slice of crustless bread, a classic trick that adds body."
+    "Can I use other white beans?",
+    "Yes. Great Northern or navy beans work the same way. Drain and rinse them first."
    ]
   ],
-  "note": "Honestly, good canned tomatoes beat most supermarket fresh ones for this soup, and we would not bother waiting for summer. Serve it with a grilled cheese or thick slices of buttered toast for dunking. Do not skip the uncovered simmer, since that is where the flavor concentrates.",
+  "note": "If you change only one thing about your usual tomato soup, make it the beans. They thicken it the way cream does and add most of the protein. Keep the yogurt step gentle, and on days when a full bowl feels like too much, serve it in a small mug.",
   "diet": [
    "vegetarian",
    "gluten-free"
   ],
   "img": "images/tomato-basil-soup.webp",
-  "time": 35
+  "time": 40
  },
  {
   "id": "beef-tacos",

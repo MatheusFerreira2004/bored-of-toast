@@ -12,7 +12,7 @@ VER = '20261006-journey-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
-MODIFIED = '2026-09-29'   # bump when recipe content changes (Recipe schema dateModified)
+MODIFIED = '2026-10-09'   # bump when recipe content changes (Recipe schema dateModified)
 GISCUS = None      # e.g. {'repo': 'MatheusFerreira2004/bored-of-toast', 'repo_id': '...', 'category': 'Comments', 'category_id': '...'}
 ANALYTICS = None   # e.g. '<script defer data-domain="boredoftoast.com" src="https://plausible.io/js/script.js"></script>'
 
