@@ -2,12 +2,19 @@
 """New recipes 2/3: replace three more off-focus recipes.
 
   buttermilk-pancakes    -> cottage-cheese-pancakes
-  cinnamon-french-toast  -> spinach-feta-egg-bites
+  cinnamon-french-toast  -> spinach-feta-mini-frittata
   harvest-kale-salad     -> tuna-white-bean-salad
 
 Same approach as update_013: small-plates format, new Pexels photos (free license, no AI) with credits,
 recipe image + Open Graph image + Pinterest pin generated here, old URLs become redirect stubs
 (listed in _src/redirects.json), old photos, step photos and credits removed.
+
+Photo check (done by reading the Pexels photo pages before choosing):
+  cottage-cheese-pancakes    38917193  "Delicious homemade cheese pancakes on a plate" (Natalia Sevruk)
+  spinach-feta-mini-frittata 5639282   "Homemade frittata in a skillet, garnished with fresh spinach and cheese" (Shameel mukkath)
+  tuna-white-bean-salad      19572489  "Top view of a fresh tuna salad with vibrant vegetables and a fork" (Tugba Ozturk)
+The first version of this lote used an egg-bites photo that did not show egg bites; no free Pexels photo of
+egg bites was found, so the recipe became a small oven frittata, which has real photos.
 
 Nutrition per serving is an ESTIMATE from USDA FoodData Central reference values and typical labels
 (rounded; double-check before relying on them):
@@ -15,7 +22,7 @@ Nutrition per serving is an ESTIMATE from USDA FoodData Central reference values
     eggs 150 g 215/18.9 P/14.3 F; oats 45 g 171/6 P/30 C; maple 20 g 52; butter 5 g 36;
     berries 150 g 75/1 P; nonfat Greek yogurt 120 g 71/12.2 P
     -> 803 kcal, 62 P, 75 C, 27 F, 8 fiber / 4 = ~200 kcal, 15 P, 19 C, 7 F, 2 fiber
-  Spinach feta egg bites (6 servings of 2 bites): eggs 400 g 572/50.4 P/38 F; egg whites 120 g 62/13 P;
+  Spinach feta mini frittata (6 wedges): eggs 400 g 572/50.4 P/38 F; egg whites 120 g 62/13 P;
     2% cottage cheese 113 g 92/11.9 P; spinach 140 g 32/4 P; feta 50 g 132/7.1 P/10.6 F;
     red pepper 60 g 19; green onions 10; oil 4.5 g 40
     -> 959 kcal, 88 P, 21 C, 57 F, 5 fiber / 6 = ~160 kcal, 15 P, 3 C, 9 F, 1 fiber
@@ -28,6 +35,9 @@ Nothing in recipes.json changes unless every download succeeds. Safe to re-run.
 """
 import glob, io, json, os, re, subprocess, sys, urllib.request
 
+# Send errors and tracebacks to stdout so they show up in the Auto build summary.
+sys.stderr = sys.stdout
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..'))
 IMG = os.path.join(ROOT, 'images')
@@ -35,7 +45,7 @@ P = lambda n: os.path.join(HERE, n)
 
 OLD_TO_NEW = {
     'buttermilk-pancakes': 'cottage-cheese-pancakes',
-    'cinnamon-french-toast': 'spinach-feta-egg-bites',
+    'cinnamon-french-toast': 'spinach-feta-mini-frittata',
     'harvest-kale-salad': 'tuna-white-bean-salad',
 }
 EXTRA_OLD_IMAGES = ['step-pancakes-batter', 'step-pancakes-flip']
@@ -48,17 +58,18 @@ if all(n in ids for n in OLD_TO_NEW.values()) and not any(o in ids for o in OLD_
     sys.exit(0)
 missing = [o for o in OLD_TO_NEW if o not in ids]
 if missing:
-    sys.exit(f'ERROR: old recipes not found: {missing}. Nothing was saved.')
+    print(f'ERROR: old recipes not found: {missing}. Nothing was saved.')
+    sys.exit(1)
 
 PHOTOS = {
     'cottage-cheese-pancakes': {
         'id': 38917193, 'photographer': 'Natalia Sevruk', 'photographer_url': 'https://www.pexels.com/@natalia-sevruk-636238602/',
         'photo_url': 'https://www.pexels.com/photo/delicious-homemade-cheese-pancakes-on-a-plate-38917193/',
         'alt': 'Golden brown cottage cheese pancakes on a decorative plate.'},
-    'spinach-feta-egg-bites': {
-        'id': 19964400, 'photographer': 'Jonathan Borba', 'photographer_url': 'https://www.pexels.com/@jonathanborba/',
-        'photo_url': 'https://www.pexels.com/photo/abundance-of-food-19964400/',
-        'alt': 'Small baked egg bites topped with fresh herbs and cheese.'},
+    'spinach-feta-mini-frittata': {
+        'id': 5639282, 'photographer': 'Shameel mukkath', 'photographer_url': 'https://www.pexels.com/@shameel-mukkath-3421394/',
+        'photo_url': 'https://www.pexels.com/photo/scrambled-eggs-with-green-onions-on-black-skillet-pan-5639282/',
+        'alt': 'A spinach and cheese frittata in a cast iron skillet.'},
     'tuna-white-bean-salad': {
         'id': 19572489, 'photographer': 'Tuğba ÖZTÜRK', 'photographer_url': 'https://www.pexels.com/@tugba-ozturk-368300535/',
         'photo_url': 'https://www.pexels.com/photo/bowl-of-salad-and-fork-near-19572489/',
@@ -130,24 +141,24 @@ NEW['cottage-cheese-pancakes'] = {
     "note": "Make the whole batch even if you only want one or two. Leftovers freeze well and reheat in the toaster in a couple of minutes, which is useful on mornings when cooking feels like too much.",
     "diet": ["vegetarian"],
 }
-NEW['spinach-feta-egg-bites'] = {
-    "title": "Spinach & Feta Egg Bites",
-    "subtitle": "Small baked egg bites with spinach, feta and a little cottage cheese for a soft, custardy texture. Bake a tray on Sunday and reheat two at a time.",
+NEW['spinach-feta-mini-frittata'] = {
+    "title": "Spinach & Feta Mini Frittata",
+    "subtitle": "A small oven frittata with spinach, feta and a little cottage cheese for a soft, custardy texture. Cut it into six wedges and reheat one or two at a time.",
     "category": "Beyond Toast",
     "tags": ["healthy", "high-protein", "small-plates", "make-ahead"],
-    "prep": 15, "cook": 25, "time": 40, "serves": 6, "level": "Easy",
-    "desc": "Twelve make-ahead egg bites, two per serving.",
+    "prep": 15, "cook": 30, "time": 45, "serves": 6, "level": "Easy",
+    "desc": "Six make-ahead wedges from one small pan.",
     "intro": [
-        "Egg bites are a make-ahead breakfast in the most literal sense: a tray of twelve in the fridge means a warm, high-protein small plate is about a minute away. Two bites make a serving with about 15 g of protein.",
-        "A little blended cottage cheese is what makes them soft and custardy instead of rubbery. Squeezing the thawed spinach very dry keeps the bites from turning watery, and baking at a moderate temperature lets the eggs set gently without puffing up and collapsing."
+        "A frittata is one of the easiest make-ahead breakfasts there is: one small pan in the oven gives you six wedges for the week, and a warm, high-protein small plate is about a minute away. Each wedge has about 15 g of protein.",
+        "A little blended cottage cheese is what keeps it soft and custardy instead of rubbery. Squeezing the thawed spinach very dry keeps the frittata from turning watery, and a moderate oven lets the eggs set gently all the way to the center."
     ],
     "why": [
-        ["About 15 g protein per serving", "Eggs, egg whites, cottage cheese and feta in two small bites."],
+        ["About 15 g protein per wedge", "Eggs, egg whites, cottage cheese and feta."],
         ["Made once, eaten all week", "Keeps in the fridge for 4 days and in the freezer for 2 months."],
-        ["Ready in a minute", "Reheat two bites in the microwave for a fast breakfast."]
+        ["Ready in a minute", "Reheat a wedge in the microwave for a fast breakfast."]
     ],
     "ingredients": [
-        {"group": "For the egg bites", "items": [
+        {"group": "For the frittata", "items": [
             {"q": 8, "u": "", "n": "large eggs"},
             {"q": 0.5, "u": "cup", "n": "liquid egg whites", "g": 120},
             {"q": 0.5, "u": "cup", "n": "low-fat cottage cheese", "g": 113},
@@ -161,35 +172,36 @@ NEW['spinach-feta-egg-bites'] = {
         ]}
     ],
     "steps": [
-        {"t": "Heat the oven", "d": "Heat the oven to 325°F (165°C). Spray a 12-cup muffin pan generously with oil, or use silicone liners."},
+        {"t": "Heat the oven", "d": "Heat the oven to 350°F (175°C). Spray a 9-inch oven-safe skillet or pie dish generously with oil."},
         {"t": "Blend the base", "d": "Blend the eggs, egg whites, cottage cheese, salt and pepper for about 20 seconds, until smooth and slightly frothy.",
-         "tip": "No blender? Whisk well instead. The bites will be a little less smooth but still good."},
-        {"t": "Fill the cups", "d": "Divide the spinach, feta, bell pepper and green onions among the 12 cups. Pour the egg mixture over the fillings, filling each cup about three quarters full."},
-        {"t": "Bake gently", "d": "Bake for 22 to 25 minutes, until the centers are just set and no longer jiggle when you nudge the pan.",
-         "tip": "Lower heat keeps the texture soft. At higher temperatures egg bites puff up, then sink and turn spongy."},
-        {"t": "Cool and release", "d": "Let the bites cool in the pan for 5 minutes, then run a thin knife around each one and lift it out. Serve two per plate, or cool completely for storage."}
+         "tip": "No blender? Whisk well instead. The frittata will be a little less smooth but still good."},
+        {"t": "Add the fillings", "d": "Scatter the spinach, feta, bell pepper and green onions evenly over the bottom of the pan. Pour the egg mixture over the top."},
+        {"t": "Bake gently", "d": "Bake for 25 to 30 minutes, until the edges are lightly golden and the center is just set, with only a slight wobble when you nudge the pan.",
+         "tip": "Take it out when the center barely wobbles. It finishes setting as it cools and stays softer."},
+        {"t": "Rest and cut", "d": "Let the frittata rest for 10 minutes, then cut it into 6 wedges. Serve one or two per plate, or cool completely for storage."}
     ],
     "tips": [
-        "Squeeze the spinach in a clean towel until no more water comes out. Wet spinach makes watery bites.",
-        "Silicone muffin cups release more easily than metal, even without much oil.",
+        "Squeeze the spinach in a clean towel until no more water comes out. Wet spinach makes a watery frittata.",
+        "A cast iron or nonstick oven-safe skillet releases the wedges most easily.",
         "Swap in any finely chopped cooked vegetable, as long as it is not watery.",
-        "Small-portion tip: one bite with a piece of fruit is a complete small breakfast on low-appetite days."
+        "Small-portion tip: one wedge with a piece of fruit is a complete small breakfast on low-appetite days."
     ],
-    "storage": "Refrigerate cooled egg bites in an airtight container for up to 4 days. To freeze, set them on a tray until firm, then transfer to a freezer bag for up to 2 months. Reheat two bites in the microwave for 45 to 60 seconds from the fridge, or about 90 seconds from frozen.",
+    "storage": "Refrigerate cooled wedges in an airtight container for up to 4 days. To freeze, wrap each wedge and keep in a freezer bag for up to 2 months. Reheat a wedge in the microwave for 45 to 60 seconds from the fridge, or about 90 seconds from frozen.",
     "variations": [
         ["Sun-dried tomato", "Replace the bell pepper with 2 tablespoons chopped sun-dried tomatoes."],
         ["Ham and cheddar", "Swap the feta for cheddar and add 1/2 cup diced lean ham."],
-        ["Dairy-free", "Skip the cottage cheese and feta and add 2 extra egg whites. The bites will be firmer."],
-        ["Make it gentler", "Leave out the green onions and pepper and use a mild cheese. Eat them warm rather than hot."],
+        ["Dairy-free", "Skip the cottage cheese and feta and add 2 extra egg whites. The frittata will be firmer."],
+        ["Make it gentler", "Leave out the green onions and pepper and use a mild cheese. Eat it warm rather than hot."],
         ["Protein boost", "Serve with a small cup of Greek yogurt or a glass of milk."]
     ],
     "nutrition": {"calories": 160, "protein": 15, "carbs": 3, "fat": 9, "fiber": 1},
     "faq": [
-        ["Why did my egg bites sink?", "They were probably baked too hot. A moderate oven lets them set evenly without puffing up and collapsing."],
+        ["Why is my frittata watery?", "Usually the spinach was not squeezed dry enough. Wring it out in a towel until no more liquid comes out."],
         ["Can I use fresh spinach?", "Yes. Wilt about 5 cups of fresh spinach in a dry pan, cool it, then squeeze it dry and chop it."],
-        ["Are they gluten-free?", "Yes, as written. Check your feta label if you are very sensitive."]
+        ["Can I make egg bites instead?", "Yes. Divide the fillings and egg mixture among a greased 12-cup muffin pan and bake at 325°F (165°C) for 22 to 25 minutes. Two bites make a serving."],
+        ["Is it gluten-free?", "Yes, as written. Check your feta label if you are very sensitive."]
     ],
-    "note": "Two bites, a minute in the microwave, done. This is the recipe to make on a day you have energy, so the days you do not still start with something warm.",
+    "note": "One wedge, a minute in the microwave, done. This is the recipe to make on a day you have energy, so the days you do not still start with something warm.",
     "diet": ["vegetarian", "gluten-free"],
 }
 NEW['tuna-white-bean-salad'] = {
@@ -330,9 +342,10 @@ for rid, ph in PHOTOS.items():
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (bored-of-toast site build)'})
     try:
         data = urllib.request.urlopen(req, timeout=60).read()
+        im = Image.open(io.BytesIO(data)).convert('RGB')
     except Exception as ex:
-        sys.exit(f'ERROR: could not download {rid} from Pexels ({ex}). Nothing was saved.')
-    im = Image.open(io.BytesIO(data)).convert('RGB')
+        print(f'ERROR: could not download or open the {rid} photo from Pexels ({ex}). Nothing was saved.')
+        sys.exit(1)
     main = cover(im, 1200, 900)
     for q in (80, 74, 68, 62, 56):
         buf = io.BytesIO()
@@ -340,7 +353,8 @@ for rid, ph in PHOTOS.items():
         if buf.tell() <= 195 * 1024:
             break
     else:
-        sys.exit(f'ERROR: {rid} photo is still over 200 KB. Nothing was saved.')
+        print(f'ERROR: {rid} photo is still over 200 KB. Nothing was saved.')
+        sys.exit(1)
     out[rid] = {'webp': buf.getvalue(), 'og': jpg(cover(im, 1200, 630)), 'pin': jpg(make_pin(im, NEW[rid]['title']))}
     print(f"- photo {rid}: {len(out[rid]['webp']) // 1024} KB webp, og and pin generated")
 
@@ -383,7 +397,8 @@ with open(rpath, 'w', encoding='utf-8') as f:
 # ------------------------------------------------------------------ build.py (focus list and NEW_IDS)
 b = open(P('build.py'), encoding='utf-8').read()
 if 'RECIPE_REDIRECTS' not in b:
-    sys.exit('ERROR: build.py has no recipe redirect support (run update_013 first). Nothing else was changed.')
+    print('ERROR: build.py has no recipe redirect support (run update_013 first).')
+    sys.exit(1)
 m = re.search(r'FOCUS_IDS = (\[.*?\])', b)
 focus = json.loads(m.group(1))
 for rid in NEW:
