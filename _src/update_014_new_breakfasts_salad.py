@@ -157,7 +157,7 @@ NEW['spinach-feta-egg-bites'] = {
             {"q": 2, "u": "", "n": "green onions", "note": "thinly sliced"},
             {"q": 0.25, "u": "tsp", "n": "kosher salt"},
             {"q": 0.25, "u": "tsp", "n": "black pepper"},
-            {"q": null, "u": "", "n": "olive oil spray", "note": "for the pan"}
+            {"q": None, "u": "", "n": "olive oil spray", "note": "for the pan"}
         ]}
     ],
     "steps": [
@@ -214,7 +214,7 @@ NEW['tuna-white-bean-salad'] = {
             {"q": 2, "u": "tbsp", "n": "fresh lemon juice"},
             {"q": 1, "u": "tsp", "n": "Dijon mustard"},
             {"q": 0.25, "u": "tsp", "n": "kosher salt"},
-            {"q": null, "u": "", "n": "black pepper", "note": "to taste"}
+            {"q": None, "u": "", "n": "black pepper", "note": "to taste"}
         ]},
         {"group": "For the salad", "items": [
             {"q": 15, "u": "oz", "n": "cannellini beans", "note": "1 can, rinsed and drained"},
