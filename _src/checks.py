@@ -53,7 +53,7 @@ class Page(HTMLParser):
         if self._ld is not None: self._ld.append(data)
 
 pages = sorted(p for p in glob.glob('**/*.html', recursive=True) if not p.startswith(('_src/', 'node_modules/')))
-REDIRECT_STUBS = {'about.html', 'recipes.html', 'recipe.html'}
+REDIRECT_STUBS = {'about.html', 'recipes.html', 'recipe.html', 'guides/pantry-staples/index.html', 'guides/perfect-rice/index.html', 'guides/knife-skills/index.html'}
 for path in pages:
     text = open(path, encoding='utf8').read()
     pg = Page(); pg.feed(text)

@@ -57,10 +57,11 @@ def thumb(path):
     """Smallest variant for tiny thumbnails (search overlay)."""
     v = VARIANTS.get(path)
     return f"{path[:-5]}-{v['variants'][0]}w.webp" if v and v['variants'] else path
-GUIDE_IMG = {'pantry-staples': 'guide-pantry', 'perfect-rice': 'guide-rice', 'knife-skills': 'guide-knife'}
-GUIDE_RELATED = {'pantry-staples': ['tomato-basil-soup', 'creamy-garlic-pasta', 'mediterranean-grain-bowl'],
-                 'perfect-rice': ['honey-garlic-chicken-thighs', 'mushroom-risotto', 'beef-tacos'],
-                 'knife-skills': ['shakshuka', 'lemon-chicken-orzo-soup', 'harvest-kale-salad']}
+GUIDE_IMG = {'nothing-sounds-good': 'tomato-basil-soup', 'protein-first': 'shakshuka', 'small-portion-meal-prep': 'overnight-oats'}
+GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 'butternut-squash-soup'],
+                 'protein-first': ['shakshuka', 'avocado-toast-jammy-eggs', 'chicken-avocado-salad'],
+                 'small-portion-meal-prep': ['lemon-chicken-orzo-soup', 'breakfast-burritos', 'mediterranean-grain-bowl']}
+GUIDE_REDIRECTS = {'pantry-staples': 'small-portion-meal-prep', 'perfect-rice': 'protein-first', 'knife-skills': ''}
 NEW_IDS = ['buttermilk-pancakes', 'shakshuka', 'butternut-squash-soup', 'honey-garlic-chicken-thighs', 'avocado-toast-jammy-eggs', 'mushroom-risotto', 'apple-crisp', 'lemon-chicken-orzo-soup']
 
 FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl"]
@@ -132,7 +133,7 @@ WHY_ICONS = [ICON['bolt'], ICON['heart'], ICON['check']]
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
-NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', 'Small-Plate Week', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
+NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'GLP-1 Kitchen', 'guides'), ('meal-plan/', 'Small-Plate Week', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
 
 def header(root, active):
     links = ''.join(f'<a href="{root}{h}" class="{"active" if k == active else ""}">{l}</a>' for h, l, k in NAV)
@@ -332,7 +333,7 @@ def build_home():
 
 <section class="section bg-paper">
   <div class="container">
-    {section_head('Kitchen basics', 'Short, practical guides that make every recipe easier.', f'<a href="{root}guides/" class="view-all">All guides →</a>')}
+    {section_head('From the GLP-1 Kitchen', 'Short guides for small appetites and harder days.', f'<a href="{root}guides/" class="view-all">All guides →</a>')}
     <div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div>
   </div>
 </section>
@@ -513,13 +514,21 @@ def build_recipe(r):
 
 def build_guides():
     root = '../'
-    hero = hero_bleed(root, 'images/guide-pantry.webp', 'Kitchen basics', 'Cook smarter,<br><em>not harder.</em>',
-        'Short, practical guides to the skills and staples behind every good meal. Read one tonight and cook better tomorrow.', short=True)
-    body = f'''{hero}<section class="container section"><div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div>
-<div class="coming reveal"><span class="hand">coming soon</span><p>Next up: how to season like a pro, the only 5 sauces you need, and meal prep without the boring boxes.</p></div></section>'''
-    page('guides/', 'Kitchen Guides | Bored of Toast', 'Practical cooking guides: pantry staples, perfect rice every time and knife skills for home cooks.', body, 'guides', root)
+    hero = hero_bleed(root, 'images/lemon-chicken-orzo-soup.webp', 'GLP-1 Kitchen', 'Eating less?<br><em>Make every bite count.</em>',
+        'Short, practical guides for small appetites: what to eat on harder days, how to fit protein into small meals, and how to cook once for the week. General cooking education, not medical advice.', short=True)
+    focus = [BY_ID[i] for i in FOCUS_IDS if i in BY_ID][:6]
+    body = f'''{hero}<section class="container section">{section_head('Start with a guide', 'Three short reads, each linked to recipes you can cook this week.')}<div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div></section>
+{marketing_block(root, 'free')}
+<section class="container section">{section_head('Small plates to cook next', 'Smaller portions, protein listed, gentler swaps included.', f'<a href="{root}recipes/?cat=small-plates" class="view-all">All small plates →</a>')}<div class="recipe-grid three">{''.join(card(root, r) for r in focus)}</div></section>
+{marketing_block(root, 'paid')}'''
+    page('guides/', 'GLP-1 Kitchen: Guides for Small Appetites | Bored of Toast', 'Practical guides for small appetites: what to eat when nothing sounds good, protein-first swaps and small-portion meal prep.', body, 'guides', root)
     for g in GUIDES:
         build_guide(g)
+    for old, new in GUIDE_REDIRECTS.items():
+        target = f'{new}/' if new else ''
+        full = os.path.join(OUT, 'guides', old, 'index.html')
+        os.makedirs(os.path.dirname(full), exist_ok=True)
+        open(full, 'w').write(f'<!DOCTYPE html><meta charset="utf-8"><title>Redirecting…</title><link rel="canonical" href="{SITE_URL}guides/{target}"><meta http-equiv="refresh" content="0; url=../{target}"><a href="../{target}">Continue</a>')
 
 def build_guide(g):
     root = '../../'
@@ -540,7 +549,7 @@ def build_guide(g):
         return out + '</section>'
     body = f'''<section class="hero page-hero">
   <div class="container narrow">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{root}">Home</a> / <a href="{root}guides/">Guides</a></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{root}">Home</a> / <a href="{root}guides/">GLP-1 Kitchen</a></nav>
     <p class="eyebrow">{e(g['category'])} · {g['readTime']} min read</p>
     <h1>{e(g['title'])}</h1><p class="hero-lead">{e(g['subtitle'])}</p>
   </div>{WAVE}
@@ -556,7 +565,7 @@ def build_guide(g):
   <aside class="sidebar"><div class="side-card side-toc"><h3>In this guide</h3>{toc}</div>
     <div class="side-card"><h3>Put it into practice</h3>{''.join(f'<a class="mini-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]["img"]}" alt="" loading="lazy" width="64" height="64"{rimg(root, BY_ID[rid]["img"], SIZES["mini"])}><span><strong>{e(BY_ID[rid]["title"])}</strong><small>{fmt_time(BY_ID[rid]["time"])}</small></span></a>' for rid in GUIDE_RELATED[g['id']])}</div></aside>
 </div>
-<section class="container related">{section_head('More kitchen basics', '', f'<a href="{root}guides/" class="view-all">All guides →</a>')}<div class="guide-grid">{''.join(guide_card(root, x) for x in GUIDES if x['id'] != g['id'])}</div></section>'''
+<section class="container related">{section_head('More from the GLP-1 Kitchen', '', f'<a href="{root}guides/" class="view-all">All guides →</a>')}<div class="guide-grid">{''.join(guide_card(root, x) for x in GUIDES if x['id'] != g['id'])}</div></section>'''
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g['title'], "description": g['subtitle'], "image": SITE_URL + img,
            "author": {"@type": "Organization", "name": "Bored of Toast"}, "publisher": {"@type": "Organization", "name": "Bored of Toast", "logo": {"@type": "ImageObject", "url": SITE_URL + "images/logo.png"}},
            "datePublished": PUBLISHED, "mainEntityOfPage": f"{SITE_URL}guides/{g['id']}/"}]
