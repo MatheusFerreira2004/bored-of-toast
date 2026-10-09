@@ -410,21 +410,34 @@
   ],
   "privacy": {
     "title": "Privacy Policy",
-    "updated": "September 29, 2026",
+    "updated": "October 9, 2026",
     "sections": [
       {
         "h": "The Short Version",
         "p": [
-          "Bored of Toast is a small, free recipe website. We do not ask you to create an account, and we do not sell your personal information. This page explains, in plain English, what little information is involved when you visit our site and what we do with it.",
+          "Bored of Toast is a small recipe website that also sells downloadable cookbooks. We do not ask you to create an account, and we do not sell your personal information. This page explains, in plain English, what information is involved when you visit the site, sign up for our emails or buy a product, and what we do with it.",
           "By using Bored of Toast, you agree to the practices described here. If you have any questions, you can always reach us at hello@boredoftoast.com."
         ]
       },
       {
         "h": "Information You Choose to Share",
         "p": [
-          "Our contact form works by opening your own email app with a pre-filled message to us. We do not store form entries on our servers. When you send that email, we receive your email address, your name if you include it, and whatever you write.",
-          "We use this only to read and reply to your message. We will not add you to a mailing list or share your email with anyone else without asking you first.",
-          "If we launch a newsletter in the future, it will be strictly opt-in, and every email will include a simple way to unsubscribe."
+          "Our contact form works by opening your own email app with a pre-filled message to us. We do not store form entries on our servers. When you send that email, we receive your email address, your name if you include it, and whatever you write. We use it only to read and reply to your message."
+        ]
+      },
+      {
+        "h": "Email Sign-Ups",
+        "p": [
+          "When you sign up for a free resource such as the GLP-1 Kitchen Starter Kit, you give us your email address and, if you choose, your first name. We use MailerLite to store this information and send our emails.",
+          "We use your email to deliver what you asked for and to send occasional recipes, tips and information about our products. Every email includes a link to unsubscribe, and you can ask us to delete your details at any time.",
+          "MailerLite may record whether an email is opened or a link is clicked, which helps us understand what is useful. MailerLite’s privacy policy applies to how it processes this data."
+        ]
+      },
+      {
+        "h": "Purchases",
+        "p": [
+          "When you buy a digital product, the checkout is run by Lemon Squeezy, our reseller and merchant of record. Lemon Squeezy collects your name, email address, billing details and payment information to process the order, calculate taxes and deliver your files. We do not see or store your full card details.",
+          "Lemon Squeezy shares with us the information we need to support your order, such as your name, email address, the product you bought and the order status. Lemon Squeezy’s privacy policy applies to the checkout."
         ]
       },
       {
@@ -439,7 +452,8 @@
         "p": [
           "Right now, Bored of Toast uses very few, if any, cookies of its own. Some third-party services we rely on may still receive information from your browser.",
           "Our fonts are hosted on this site, so your browser does not connect to Google or any other font service to load them.",
-          "In the future we may add comments powered by GitHub Discussions. If you choose to comment, you will sign in with GitHub, and GitHub's privacy policy will apply to that activity. We may also add advertising or affiliate links. Ad networks and affiliate partners may use cookies to show relevant ads or to credit us for a referral. When these features arrive, we will update this policy and provide any required cookie choices."
+          "In the future we may add comments powered by GitHub Discussions. If you choose to comment, you will sign in with GitHub, and GitHub's privacy policy will apply to that activity. We may also add advertising or affiliate links. Ad networks and affiliate partners may use cookies to show relevant ads or to credit us for a referral. When these features arrive, we will update this policy and provide any required cookie choices.",
+          "Our email sign-up and checkout pages are hosted by MailerLite and Lemon Squeezy and may use their own cookies, for example to keep your checkout session working."
         ]
       },
       {
@@ -478,8 +492,8 @@
       {
         "h": "Welcome to Bored of Toast",
         "p": [
-          "These terms apply to your use of the Bored of Toast website. By browsing or using the site, you agree to them. If you do not agree, please do not use the site.",
-          "Bored of Toast is free to read. We share recipes, cooking guides, and tips for personal, non-commercial home cooking."
+          "These terms apply to your use of the Bored of Toast website and to the digital products you buy from us. By browsing the site or making a purchase, you agree to them. If you do not agree, please do not use the site.",
+          "Our recipes and guides are free to read. We also sell downloadable digital products, such as the Nourished cookbook collection. The sections on purchases and refunds below apply to those products."
         ]
       },
       {
@@ -490,16 +504,32 @@
         ]
       },
       {
+        "h": "Digital Products and Purchases",
+        "p": [
+          "Our digital products are delivered as downloadable PDF files. Prices are shown in US dollars on the product page.",
+          "Purchases are processed by Lemon Squeezy, which acts as our reseller and merchant of record. Lemon Squeezy handles payment and any applicable sales tax or VAT, and sends your receipt and download access by email. Its own terms and privacy policy apply to the checkout.",
+          "When you buy a product, you receive a personal, non-transferable license to download, read and print it for use in your own household. Please do not share, resell or republish the files, or upload them to other websites."
+        ]
+      },
+      {
+        "h": "Refunds",
+        "p": [
+          "If a product is not right for you, email hello@boredoftoast.com within 14 days of your purchase and we will refund you in full. You do not need to give a reason.",
+          "Refunds are returned to your original payment method through Lemon Squeezy. After a refund, please delete your copies of the files."
+        ]
+      },
+      {
         "h": "Recipe Results, Food Safety, and Allergies",
         "p": [
           "We do our best to make our recipes clear and reliable, but results depend on your ingredients, equipment, altitude, and technique. We cannot guarantee that every recipe will turn out exactly as described.",
-          "You are responsible for safe food handling, including cooking foods to safe internal temperatures and storing leftovers properly. Always read ingredient labels. Recipes may contain or come into contact with common allergens such as nuts, dairy, eggs, gluten, soy, fish, shellfish, and sesame. If you have allergies, dietary restrictions, or health concerns, please check with a qualified health professional. Our content is for general information and is not medical or nutritional advice."
+          "You are responsible for safe food handling, including cooking foods to safe internal temperatures and storing leftovers properly. Always read ingredient labels. Recipes may contain or come into contact with common allergens such as nuts, dairy, eggs, gluten, soy, fish, shellfish, and sesame. If you have allergies, dietary restrictions, or health concerns, please check with a qualified health professional. Our content is for general information and is not medical or nutritional advice.",
+          "Our digital products, including those written for adults using GLP-1 medication, are general cooking education. They are not medical or nutrition advice and do not replace guidance from your doctor, dietitian or care team."
         ]
       },
       {
         "h": "Nutrition Information",
         "p": [
-          "Any nutrition facts shown on our recipes are estimates, calculated with online tools from typical ingredient values. Actual numbers will vary based on brands, portion sizes, substitutions, and preparation. Please do not rely on them for medical decisions, and consult a professional if you need precise nutritional data."
+          "Any nutrition facts shown on our recipes are estimates, calculated from typical ingredient values. Actual numbers will vary based on brands, portion sizes, substitutions, and preparation. Please do not rely on them for medical decisions, and consult a professional if you need precise nutritional data."
         ]
       },
       {
