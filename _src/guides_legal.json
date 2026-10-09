@@ -473,7 +473,7 @@
   },
   "terms": {
     "title": "Terms of Use",
-    "updated": "September 28, 2026",
+    "updated": "October 9, 2026",
     "sections": [
       {
         "h": "Welcome to Bored of Toast",
@@ -492,7 +492,7 @@
       {
         "h": "Recipe Results, Food Safety, and Allergies",
         "p": [
-          "We test our recipes and do our best to make them clear and reliable, but results depend on your ingredients, equipment, altitude, and technique. We cannot guarantee that every recipe will turn out exactly as described.",
+          "We do our best to make our recipes clear and reliable, but results depend on your ingredients, equipment, altitude, and technique. We cannot guarantee that every recipe will turn out exactly as described.",
           "You are responsible for safe food handling, including cooking foods to safe internal temperatures and storing leftovers properly. Always read ingredient labels. Recipes may contain or come into contact with common allergens such as nuts, dairy, eggs, gluten, soy, fish, shellfish, and sesame. If you have allergies, dietary restrictions, or health concerns, please check with a qualified health professional. Our content is for general information and is not medical or nutritional advice."
         ]
       },
@@ -521,12 +521,6 @@
         "p": [
           "The site and its content are provided as is, without warranties of any kind. To the fullest extent allowed by law, Bored of Toast is not liable for any damages arising from your use of the site or from preparing or eating any recipe, including kitchen accidents, allergic reactions, or food that did not turn out as hoped.",
           "We may update these terms from time to time. When we do, we will change the date at the top of this page. Continuing to use the site after changes means you accept the updated terms. Questions? Write to hello@boredoftoast.com."
-        ]
-      },
-      {
-        "h": "About this page",
-        "p": [
-          "This page is a general template written for a small, independent recipe blog. It is not legal advice, and it may not cover every situation or legal requirement where you live. If you need advice about your specific circumstances, please consult a qualified lawyer."
         ]
       }
     ]
