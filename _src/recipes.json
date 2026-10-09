@@ -1697,11 +1697,12 @@
  {
   "id": "shakshuka",
   "title": "One-Pan Shakshuka",
-  "subtitle": "Eggs gently poached in a smoky, cumin-scented tomato and pepper sauce, finished with salty feta and served straight from the skillet.",
+  "subtitle": "Eggs gently poached in a smoky tomato and pepper sauce, finished with feta and a spoonful of Greek yogurt. Two eggs per small plate, about 20 g protein.",
   "category": "Beyond Toast",
   "tags": [
    "healthy",
-   "small-plates"
+   "small-plates",
+   "high-protein"
   ],
   "diet": [
    "vegetarian",
@@ -1711,16 +1712,16 @@
   "cook": 25,
   "serves": 4,
   "level": "Easy",
-  "desc": "Eggs, tomato sauce, bread for dunking.",
-  "note": "We love this as a lazy weekend brunch that also works as a Tuesday dinner. The one thing not to skip is the bread, because the spiced sauce is half the reason to make it. Pull the pan off the heat while the yolks still wobble, since they keep cooking on the way to the table.",
+  "desc": "Two eggs, smoky tomato sauce, a spoon of yogurt.",
+  "note": "The easiest way to make this a small plate is to think in pairs: two eggs, a ladle of sauce and a spoonful of yogurt. Keep the extra sauce in the fridge, and on a day when cooking feels like too much, poach two eggs in a single portion in a small pan.",
   "intro": [
-   "Picture a skillet of brick-red tomato sauce, bubbling gently, with six glossy eggs set into it like jewels. Shakshuka, a dish loved across North Africa and the Middle East, looks like a showpiece but relies almost entirely on pantry staples.",
-   "Its depth comes from blooming the spices. Cumin and smoked paprika hold much of their flavor in fat-soluble compounds, so a minute in hot olive oil releases far more aroma than stirring them straight into tomatoes. Covering the pan at the end traps steam, which cooks the tops of the eggs while the undersides stay soft."
+   "Shakshuka is a dish loved across North Africa and the Middle East: eggs cooked right in a pan of spiced tomato and pepper sauce. It is soft, warm and easy to portion, which makes it a good fit for small appetites. This version uses eight eggs instead of six, so each plate gets two, and finishes with a spoonful of Greek yogurt for extra protein and a cool, mild contrast.",
+   "Most of the flavor comes from blooming the spices. Cumin and smoked paprika hold much of their aroma in fat-soluble compounds, so a minute in hot oil releases far more flavor than stirring them into the tomatoes. That means you can use less oil than usual and still get a deep, rounded sauce. Covering the pan at the end traps steam, which sets the tops of the eggs while the yolks stay soft."
   ],
   "why": [
    [
-    "Pantry-friendly",
-    "Canned tomatoes, an onion and a pepper are the backbone, so it's easy any day."
+    "About 20 g protein per plate",
+    "Two eggs, feta and Greek yogurt in one small serving."
    ],
    [
     "One pan, few dishes",
@@ -1728,7 +1729,7 @@
    ],
    [
     "Sauce freezes well",
-    "Make a double batch and poach fresh eggs in it on a busy night."
+    "Make a double batch of sauce and poach fresh eggs in a small portion whenever you need it."
    ]
   ],
   "ingredients": [
@@ -1736,7 +1737,7 @@
     "group": "For the sauce",
     "items": [
      {
-      "q": 2,
+      "q": 1,
       "u": "tbsp",
       "n": "extra-virgin olive oil"
      },
@@ -1772,7 +1773,7 @@
       "q": 0.25,
       "u": "tsp",
       "n": "red pepper flakes",
-      "note": "or more to taste"
+      "note": "optional"
      },
      {
       "q": 1,
@@ -1804,7 +1805,7 @@
     "group": "For the eggs and topping",
     "items": [
      {
-      "q": 6,
+      "q": 8,
       "u": "",
       "n": "large eggs"
      },
@@ -1815,6 +1816,12 @@
       "g": 50
      },
      {
+      "q": 0.5,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 120
+     },
+     {
       "q": 2,
       "u": "tbsp",
       "n": "fresh cilantro or parsley",
@@ -1823,8 +1830,8 @@
      {
       "q": null,
       "u": "",
-      "n": "crusty bread or pita",
-      "note": "to serve; use gluten-free bread if needed"
+      "n": "bread or pita",
+      "note": "optional, to serve; use gluten-free bread if needed"
      }
     ]
    }
@@ -1832,77 +1839,73 @@
   "steps": [
    {
     "t": "Soften the onion and pepper",
-    "d": "Heat the olive oil in a 10 to 12 inch skillet over medium heat until it shimmers. Add the onion and bell pepper with a pinch of salt and cook, stirring occasionally, for 7 to 8 minutes, until soft, sweet-smelling, and the onion is translucent with golden edges. The salt draws out moisture so the vegetables soften instead of scorching."
+    "d": "Heat the olive oil in a 12-inch skillet over medium heat until it shimmers. Add the onion and bell pepper with a pinch of salt and cook, stirring occasionally, for 7 to 8 minutes, until soft and the onion is translucent. The salt draws out moisture so the vegetables soften instead of scorching, which matters when you are using less oil."
    },
    {
     "t": "Bloom the spices",
-    "d": "Add the garlic, cumin, smoked paprika and red pepper flakes and stir constantly for about 1 minute, until the oil turns rusty red and smells toasty. Keep everything moving so the garlic softens without browning.",
+    "d": "Add the garlic, cumin, smoked paprika and red pepper flakes if using, and stir constantly for about 1 minute, until the oil turns rusty red and smells toasty. Keep everything moving so the garlic softens without browning.",
     "tip": "If the spices start to smell sharp or look dark, add the tomatoes right away. They cool the pan instantly and stop any scorching."
    },
    {
     "t": "Simmer the sauce",
-    "d": "Stir in the crushed tomatoes, sugar if using, salt and a few grinds of black pepper. Bring to a gentle simmer and cook for 8 to 10 minutes, stirring now and then, until the sauce thickens enough that a spoon dragged through it leaves a trail for a second or two. Taste and adjust the salt, since the eggs will need a well-seasoned bed.",
+    "d": "Stir in the crushed tomatoes, sugar if using, salt and a few grinds of black pepper. Bring to a gentle simmer and cook for 8 to 10 minutes, stirring now and then, until a spoon dragged through the sauce leaves a trail for a second or two. Taste and adjust the salt.",
     "img": "images/step-shakshuka-sauce.webp"
    },
    {
     "t": "Nestle in the eggs",
-    "d": "Use the back of a spoon to press 6 small wells into the sauce, spacing them evenly. Crack an egg into each well and season the eggs lightly with salt and pepper. A thick sauce holds the eggs in place, while a thin one lets the whites run.",
-    "tip": "Crack each egg into a small cup first, then slide it into its well. The yolks stay whole and any stray shell is easy to fish out.",
-    "img": "images/step-shakshuka-eggs.webp"
+    "d": "Use the back of a spoon to press 8 small wells into the sauce, in pairs if you can, so each serving is easy to lift out. Crack an egg into each well and season lightly with salt and pepper. A thick sauce holds the eggs in place, while a thin one lets the whites run.",
+    "img": "images/step-shakshuka-eggs.webp",
+    "tip": "Crack each egg into a small cup first, then slide it into its well. The yolks stay whole and any stray shell is easy to fish out."
    },
    {
     "t": "Cover and cook gently",
-    "d": "Reduce the heat to medium-low, cover the pan, and cook for 5 to 8 minutes. The eggs are ready when the whites are opaque and set but the yolks still jiggle when you gently shake the pan. Start checking at 5 minutes, because the eggs keep cooking from residual heat."
+    "d": "Reduce the heat to medium-low, cover the pan and cook for 6 to 9 minutes, until the whites are opaque and set but the yolks still jiggle when you gently shake the pan. With eight eggs the pan is fuller, so start checking at 6 minutes. If you prefer firmer yolks, cook 2 to 3 minutes longer."
    },
    {
-    "t": "Finish and serve",
-    "d": "Take the skillet off the heat and scatter the feta and chopped herbs over the top. Bring the pan to the table and serve with crusty bread or warm pita for scooping up the sauce and runny yolks."
+    "t": "Finish and serve small",
+    "d": "Take the skillet off the heat and scatter the feta and herbs over the top. Lift two eggs with some sauce onto each plate and add a spoonful of Greek yogurt. Bread or pita is optional; a small piece is enough for scooping."
    }
   ],
   "tips": [
-   "If the whites set slowly while the yolks race ahead, spoon a little hot sauce over the whites before covering. It jump-starts them without overcooking the yolks.",
-   "Make the sauce up to 3 days ahead. Reheat it in the skillet until it simmers, then add the eggs and cook as directed.",
+   "If the whites set slowly while the yolks race ahead, spoon a little hot sauce over the whites before covering.",
+   "Make the sauce up to 3 days ahead. Reheat only the amount you need in a small pan and poach two eggs in it for a single serving.",
    "Use a lid that fits well. Trapped steam cooks the tops of the eggs, and a loose lid means longer cooking and firmer yolks.",
    "Small-portion tip: serve half a portion and save the rest for later. A half bowl still counts."
   ],
-  "storage": "Refrigerate the sauce on its own in an airtight container for up to 4 days, or freeze it for up to 3 months. Cooked eggs turn rubbery when reheated, so reheat the sauce in a skillet over medium heat until simmering and poach fresh eggs in it.",
+  "storage": "Refrigerate leftover sauce on its own in an airtight container for up to 4 days, or freeze it in 1-cup portions for up to 3 months. Cooked eggs turn rubbery when reheated, so warm a portion of sauce in a small skillet until simmering and poach fresh eggs in it.",
   "variations": [
    [
     "Green shakshuka",
-    "Replace the tomatoes and pepper with 1 lb chopped chard or spinach and a diced zucchini, wilted with the onion. Add 1/4 cup of broth so the eggs have something to poach in."
+    "Replace the tomatoes and pepper with 1 lb chopped chard or spinach and a diced zucchini, wilted with the onion. Add 1/4 cup broth so the eggs have something to poach in."
    ],
    [
-    "Add merguez or chorizo",
-    "Brown 8 oz sliced sausage before the vegetables and cook them in its fat. Cut the salt back slightly, since cured sausage is salty."
-   ],
-   [
-    "Harissa heat",
-    "Stir 1 to 2 tablespoons of harissa paste in with the spices and skip the red pepper flakes. Top with a spoonful of yogurt to cool it down."
+    "Add white beans",
+    "Stir a drained 15 oz can of cannellini beans into the sauce before the eggs for more protein and fiber."
    ],
    [
     "Make it gentler",
-    "Use mild paprika instead of chili and let the sauce cool a little before eating."
+    "Skip the red pepper flakes, use sweet paprika instead of smoked, and let the plate cool a little before eating."
    ],
    [
     "Protein boost",
-    "Crack in one extra egg, or serve with a spoonful of plain Greek yogurt."
+    "Add a third egg to your plate, or a larger spoonful of Greek yogurt."
    ]
   ],
   "nutrition": {
-   "calories": 290,
-   "protein": 14,
-   "carbs": 17,
-   "fat": 17,
+   "calories": 310,
+   "protein": 20,
+   "carbs": 18,
+   "fat": 16,
    "fiber": 4
   },
   "faq": [
    [
     "How do I know when the eggs are done?",
-    "The whites should be fully opaque with no clear, glassy patches, while the yolks still wobble when you shake the pan. Check at 5 minutes and remember they firm up a little more off the heat."
+    "The whites should be fully opaque with no clear, glassy patches, while the yolks still wobble when you shake the pan. They firm up a little more off the heat."
    ],
    [
-    "Can I use fresh tomatoes instead of canned?",
-    "Yes, use about 2 1/2 pounds of ripe tomatoes, chopped. Simmer them 5 to 10 minutes longer, until they break down and thicken."
+    "Can I make just one serving?",
+    "Yes. Warm about 1 cup of the sauce in a small skillet, make two wells and poach two eggs, covered, for 4 to 6 minutes."
    ],
    [
     "My sauce is too thin and the eggs spread. What happened?",
@@ -1915,7 +1918,7 @@
  {
   "id": "overnight-oats",
   "title": "Blueberry Vanilla Overnight Oats",
-  "subtitle": "Rolled oats soaked overnight with Greek yogurt, chia and vanilla, then crowned in the morning with jammy blueberries.",
+  "subtitle": "Rolled oats soaked overnight with plenty of Greek yogurt, chia and vanilla, topped with blueberries. Three small jars, about 15 g protein each.",
   "category": "Beyond Toast",
   "tags": [
    "healthy",
@@ -1930,26 +1933,26 @@
   "prep": 5,
   "cook": 0,
   "chill": 480,
-  "serves": 2,
+  "serves": 3,
   "level": "Easy",
-  "desc": "Five minutes tonight, breakfast tomorrow.",
-  "note": "This is our answer to chaotic mornings, and it tastes best on day one or two while the berries are still bright. Do not skip the pinch of salt, since it makes the vanilla and blueberries taste sweeter. A handful of toasted nuts on top is worth the extra step.",
+  "desc": "Three small jars, made the night before.",
+  "note": "Three smaller jars instead of two big ones is the whole idea: each one is a full breakfast you can actually finish. The pinch of salt is worth keeping, since it makes the vanilla and blueberries taste sweeter with less syrup.",
   "intro": [
-   "Five minutes of stirring tonight saves you from a sad granola bar tomorrow. You mix, you pour into jars, and the fridge does all the cooking while you sleep. In the morning you open the lid to a thick, creamy, pudding-like breakfast that is ready to eat.",
-   "Overnight oats work because rolled oats have been steamed and flattened, so they soften fully in cold liquid given enough hours. Chia seeds form a gel as they absorb liquid, which thickens everything, and Greek yogurt adds a gentle tang plus enough protein to keep you full through lunch."
+   "Overnight oats are one of the easiest breakfasts to eat on a low-appetite morning: they are cold, soft and already portioned. This version doubles the Greek yogurt and divides the batch into three smaller jars, so each one carries about 15 g of protein without feeling heavy.",
+   "Rolled oats have been steamed and flattened, so they soften fully in cold liquid given enough hours. Chia seeds form a gel as they absorb liquid, which thickens everything, and the extra yogurt makes the texture closer to a creamy pudding. A little less maple syrup keeps it from tasting too sweet once the blueberries release their juice."
   ],
   "why": [
    [
-    "No morning effort",
-    "Grab a jar, stir, and eat cold or warm."
+    "About 15 g protein per jar",
+    "A full cup of Greek yogurt in the batch, plus milk, oats and chia."
    ],
    [
-    "Thick and creamy",
-    "Chia and Greek yogurt give a pudding-like texture, not soggy porridge."
+    "Small jars, no morning effort",
+    "Three ready portions that you can eat cold, straight from the fridge."
    ],
    [
     "Meal-prep friendly",
-    "Make four days' worth at once and it holds up."
+    "The jars keep for up to 4 days, so one session covers most of the week."
    ]
   ],
   "ingredients": [
@@ -1967,13 +1970,13 @@
       "q": 1,
       "u": "cup",
       "n": "milk",
-      "note": "dairy or any unsweetened plant milk, about 240 ml"
+      "note": "dairy or unsweetened soy milk, about 240 ml"
      },
      {
-      "q": 0.5,
+      "q": 1,
       "u": "cup",
-      "n": "plain Greek yogurt",
-      "g": 120
+      "n": "plain nonfat Greek yogurt",
+      "g": 240
      },
      {
       "q": 1,
@@ -1982,7 +1985,7 @@
       "g": 12
      },
      {
-      "q": 1.5,
+      "q": 1,
       "u": "tbsp",
       "n": "maple syrup",
       "note": "or honey, adjust to taste"
@@ -2027,75 +2030,75 @@
   "steps": [
    {
     "t": "Stir the base",
-    "d": "In a medium bowl, stir together the oats, milk, Greek yogurt, chia seeds, maple syrup, vanilla, salt and lemon zest if using. Mix for about 30 seconds, until the yogurt disappears into the milk and no dry oats float on top.",
-    "tip": "Stir well now. Chia seeds clump the moment they hit liquid, and a thorough mix at the start means an even texture in the morning instead of gummy pockets."
+    "d": "In a medium bowl, stir together the oats, milk, Greek yogurt, chia seeds, maple syrup, vanilla, salt and lemon zest if using. Mix for about 30 seconds, until the yogurt is fully blended and no dry oats float on top.",
+    "tip": "Stir well now. Chia seeds clump the moment they hit liquid, and a thorough mix at the start means an even texture in the morning."
    },
    {
     "t": "Fold in the berries",
-    "d": "Gently fold in about two-thirds of the blueberries, saving the rest for topping. Frozen berries can go in straight from the freezer. They thaw overnight and bleed a lovely purple swirl into the oats."
+    "d": "Gently fold in about two-thirds of the blueberries, saving the rest for topping. Frozen berries can go in straight from the freezer; they thaw overnight."
    },
    {
-    "t": "Portion into jars",
-    "d": "Divide the mixture between two 12 to 16 oz jars or airtight containers, leaving about an inch of room at the top for stirring later. Seal tightly so the oats do not pick up fridge odors."
+    "t": "Portion into small jars",
+    "d": "Divide the mixture between three 8 to 12 oz jars or airtight containers, leaving a little room at the top for stirring. Seal tightly so the oats do not pick up fridge odors."
    },
    {
     "t": "Chill overnight",
-    "d": "Refrigerate for at least 6 hours, and ideally 8 hours or overnight. The oats and chia absorb the liquid and turn thick, creamy and spoonable.",
-    "tip": "Short on time? Four hours will do in a pinch, though the oats will be a bit chewier and the mixture looser."
+    "d": "Refrigerate for at least 6 hours, and ideally 8 hours or overnight, until thick, creamy and spoonable.",
+    "tip": "Short on time? Four hours will do, though the oats will be a bit chewier."
    },
    {
     "t": "Top and serve",
-    "d": "In the morning, stir each jar well and add a splash of milk if it feels too stiff. Top with the remaining blueberries and a sprinkle of nuts. Eat cold, or microwave for 60 to 90 seconds, stirring halfway, until just warm and steaming at the edges."
+    "d": "In the morning, stir a jar and add a splash of milk if it feels too stiff. Top with a few of the remaining blueberries and nuts if using. Eat cold, or microwave for 45 to 60 seconds, stirring halfway, until just warm."
    }
   ],
   "tips": [
-   "Use old-fashioned rolled oats. Quick oats are cut thinner and turn to mush overnight, while steel-cut oats are too dense to soften without cooking.",
-   "Sweeten lightly at night and adjust in the morning. The blueberries release juice as they sit, and the oats taste sweeter after soaking than they do raw.",
-   "Frozen wild blueberries are smaller and more intensely flavored than cultivated ones, so they spread their flavor through every bite.",
+   "Use old-fashioned rolled oats. Quick oats turn to mush overnight, and steel-cut oats stay too hard without cooking.",
+   "Sweeten lightly at night and adjust in the morning. The blueberries release juice as they sit, so the oats taste sweeter after soaking.",
+   "With more yogurt the mixture is thicker. Add milk a tablespoon at a time in the morning until it is as loose as you like.",
    "Small-portion tip: serve half a portion and save the rest for later. A half bowl still counts."
   ],
-  "storage": "Keep sealed jars in the fridge for up to 4 days. The oats keep thickening, so loosen them with a splash of milk before eating, and add nuts or other crunchy toppings just before serving so they stay crisp.",
+  "storage": "Keep sealed jars in the fridge for up to 4 days. The oats keep thickening, so loosen them with a splash of milk before eating, and add nuts just before serving so they stay crisp.",
   "variations": [
    [
     "Peanut butter and banana",
-    "Swap the blueberries for sliced banana and stir 1 tablespoon of peanut butter into each jar. Add the banana in the morning so it does not brown."
+    "Swap the blueberries for sliced banana, added in the morning, and stir 2 teaspoons of peanut butter into each jar."
    ],
    [
     "Dairy-free",
-    "Use unsweetened plant milk and a coconut or almond yogurt. Plant yogurts tend to be thinner, so reduce the milk by 2 tablespoons."
+    "Use unsweetened soy milk and a high-protein plant yogurt. Plant yogurts are often thinner and lower in protein, so check the label."
    ],
    [
     "Raspberry lemon",
-    "Use raspberries instead of blueberries and increase the lemon zest to 1 teaspoon for a brighter, tangier jar."
+    "Use raspberries instead of blueberries and increase the lemon zest to 1 teaspoon."
    ],
    [
     "Make it gentler",
-    "Already cold and soft. Eat half the jar now and keep the rest for later."
+    "Already cold and soft. Eat half a jar now and keep the rest for later."
    ],
    [
     "Protein boost",
-    "Swap half of the milk for plain Greek yogurt."
+    "Stir 1 tablespoon of unflavored protein powder into each jar with a splash of extra milk, or top with a spoonful of Greek yogurt."
    ]
   ],
   "nutrition": {
-   "calories": 390,
-   "protein": 17,
-   "carbs": 62,
-   "fat": 8,
-   "fiber": 8
+   "calories": 275,
+   "protein": 15,
+   "carbs": 41,
+   "fat": 6,
+   "fiber": 5
   },
   "faq": [
    [
     "Can I use steel-cut or quick oats?",
-    "Stick with rolled oats. Quick oats go mushy and steel-cut oats stay hard and gritty without cooking."
+    "Stick with rolled oats. Quick oats go mushy and steel-cut oats stay hard without cooking."
    ],
    [
     "Are overnight oats eaten cold?",
-    "Traditionally, yes, and they taste like a creamy oat pudding. If you prefer warm, microwave a jar for 60 to 90 seconds, stirring halfway, and add a splash of milk."
+    "Traditionally, yes. If you prefer warm, microwave a jar for 45 to 60 seconds, stirring halfway, with a splash of milk."
    ],
    [
     "Why are my oats too thick or too runny?",
-    "Chia and yogurt brands absorb differently. If it is too thick, stir in milk a tablespoon at a time. If it is runny, give it a few more hours, or add another teaspoon of chia next time."
+    "Yogurt and chia brands absorb differently. If too thick, stir in milk a tablespoon at a time. If runny, give it a few more hours, or add a teaspoon more chia next time."
    ]
   ],
   "img": "images/overnight-oats.webp",
@@ -2103,8 +2106,8 @@
  },
  {
   "id": "avocado-toast-jammy-eggs",
-  "title": "Smashed Avocado Toast with Jammy Eggs",
-  "subtitle": "Olive oil-fried sourdough, lemony chili-flecked avocado and a soft-centered egg with a yolk the texture of warm marmalade.",
+  "title": "Avocado Cottage Cheese Toast with Jammy Eggs",
+  "subtitle": "One slice of crisp sourdough, avocado whipped with cottage cheese and a soft-centered egg. About 20 g protein in a small breakfast.",
   "category": "Beyond Toast",
   "tags": [
    "quick",
@@ -2114,31 +2117,30 @@
    "gentle"
   ],
   "diet": [
-   "vegetarian",
-   "dairy-free"
+   "vegetarian"
   ],
   "prep": 10,
   "cook": 10,
   "serves": 2,
   "level": "Easy",
-  "desc": "Crisp toast, jammy yolks, bright avocado.",
-  "note": "We like this best on a slow weekend morning, with strong coffee and nothing else on the plate. The one thing not to skip is frying the bread in olive oil rather than using the toaster. It gives you a crunchy, savory crust that holds up under the avocado instead of going limp.",
+  "desc": "One slice, a creamy protein spread, a jammy egg.",
+  "note": "Whipping cottage cheese into the avocado is the one change that makes the biggest difference here: same green spread, about twice the protein. One slice with one egg is a complete small breakfast; if you are still hungry, add the second egg rather than a second slice.",
   "intro": [
-   "Picture a thick slice of sourdough, crackling at the edges from a hot pan, spread with lemony avocado and topped with a halved egg whose yolk is set like fudge at the rim and glossy in the middle. It takes 20 minutes and a timer. That is it.",
-   "The jammy yolk comes down to precise timing and a cold start. Egg whites set at around 180°F while yolks thicken between roughly 150°F and 158°F, so a short, exact boil gets the white firm while the yolk stays in that soft, spoonable zone. The ice bath matters just as much: it stops carryover heat from cooking the yolk further, and the quick temperature drop makes the membrane pull away from the shell so the eggs peel cleanly."
+   "Avocado toast is easy to eat, but on its own it is mostly bread and avocado. This version mashes a smaller avocado with cottage cheese, which keeps the spread creamy and green while roughly doubling the protein, then tops one slice of toast with a jammy egg. It is a small breakfast that still feels like a treat.",
+   "The jammy yolk comes down to timing and a cold start. Egg whites set at a higher temperature than yolks, so a short, exact boil firms the white while the yolk stays soft and spoonable. The ice bath stops the cooking and helps the shell peel away cleanly."
   ],
   "why": [
    [
-    "Reliable jammy eggs",
-    "A 6 1/2 minute boil and ice bath gives the same soft yolk every time."
+    "About 20 g protein per slice",
+    "Cottage cheese in the spread plus a jammy egg on top."
    ],
    [
-    "Toast that stays crunchy",
-    "Pan-frying in olive oil builds a sturdy crust that holds the avocado."
+    "One slice is the serving",
+    "A small, complete breakfast instead of two heavy slices."
    ],
    [
-    "Seasoned all the way",
-    "Lemon, salt and chili go into the avocado, not just on top."
+    "Creamy and mild",
+    "The cottage cheese softens the avocado into a smooth, gentle spread."
    ]
   ],
   "ingredients": [
@@ -2154,13 +2156,19 @@
     ]
    },
    {
-    "group": "For the smashed avocado",
+    "group": "For the avocado spread",
     "items": [
      {
       "q": 1,
       "u": "",
-      "n": "large ripe avocado",
-      "note": "or 2 small"
+      "n": "small ripe avocado",
+      "note": "about 3.5 oz / 100 g flesh"
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "low-fat cottage cheese",
+      "g": 113
      },
      {
       "q": 1,
@@ -2178,7 +2186,7 @@
       "q": 0.25,
       "u": "tsp",
       "n": "red pepper flakes",
-      "note": "plus more for topping"
+      "note": "optional"
      }
     ]
    },
@@ -2188,31 +2196,24 @@
      {
       "q": 2,
       "u": "",
-      "n": "thick slices sourdough bread",
-      "note": "about 3/4 inch (2 cm) thick"
+      "n": "slices sourdough bread",
+      "note": "about 1/2 inch (1.5 cm) thick"
      },
      {
       "q": 1,
-      "u": "tbsp",
-      "n": "extra-virgin olive oil",
-      "note": "plus a drizzle to finish"
+      "u": "tsp",
+      "n": "extra-virgin olive oil"
      },
      {
       "q": null,
       "u": "",
-      "n": "flaky sea salt",
+      "n": "flaky sea salt and black pepper",
       "note": "to taste"
      },
      {
       "q": null,
       "u": "",
-      "n": "black pepper",
-      "note": "to taste"
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "fresh chives or microgreens",
+      "n": "fresh chives",
       "note": "optional, for topping"
      }
     ]
@@ -2221,79 +2222,79 @@
   "steps": [
    {
     "t": "Boil the water",
-    "d": "Fill a small saucepan with enough water to cover the eggs by an inch and bring it to a full rolling boil over high heat. While it heats, fill a bowl with ice and cold water and set it beside the stove."
+    "d": "Fill a small saucepan with enough water to cover the eggs by an inch and bring it to a full boil over high heat. Fill a bowl with ice and cold water and set it beside the stove."
    },
    {
     "t": "Cook the jammy eggs",
-    "d": "Lower the cold eggs into the boiling water with a slotted spoon and start a timer for 6 minutes 30 seconds. Turn the heat down slightly so the water holds a steady, lively simmer instead of a violent boil, which can knock the eggs into the pan and crack their shells.",
-    "tip": "For a runnier yolk, go 6 minutes. For a firmer, fudgy yolk, go 7 minutes. Stick with the same pan and number of eggs and your timing will stay consistent."
+    "d": "Lower the cold eggs into the boiling water with a slotted spoon and set a timer for 6 minutes 30 seconds. Turn the heat down slightly so the water holds a lively simmer instead of a violent boil, which can crack the shells.",
+    "tip": "For a runnier yolk, go 6 minutes. For a firmer yolk, go 7 minutes. Keep the same pan and number of eggs and your timing will stay consistent."
    },
    {
     "t": "Shock and peel",
-    "d": "When the timer goes off, move the eggs straight into the ice bath and leave them for at least 3 minutes, until they feel cool to the touch. Tap each egg all over on the counter to create a web of fine cracks, then peel under a trickle of cold water, starting at the wide end where the air pocket is.",
-    "tip": "Slightly older eggs peel more easily than very fresh ones. As eggs age, their pH rises and the white clings less to the inner membrane."
+    "d": "Move the eggs straight into the ice bath and leave them for at least 3 minutes. Tap each egg all over on the counter to crack the shell, then peel under a trickle of cold water, starting at the wide end."
    },
    {
-    "t": "Smash the avocado",
-    "d": "While the eggs chill, halve and pit the avocado and scoop the flesh into a bowl. Add the lemon juice, salt and red pepper flakes and mash with a fork until mostly smooth with a few chunky bits left for texture. Taste it: if it seems flat, add another pinch of salt or squeeze of lemon."
+    "t": "Whip the avocado spread",
+    "d": "Scoop the avocado into a bowl and add the cottage cheese, lemon juice, salt and red pepper flakes if using. Mash with a fork until mostly smooth; for a silkier spread, blend it for a few seconds with a stick blender. Taste and add a pinch more salt or lemon if it seems flat.",
+    "tip": "Cottage cheese curds blend almost completely into the avocado. If you dislike the texture, a quick blitz makes it fully smooth."
    },
    {
     "t": "Toast the bread",
-    "d": "Heat the olive oil in a skillet over medium heat until it shimmers. Add the bread and fry for 2 to 3 minutes per side, pressing gently with a spatula, until it is deep golden, sizzling and crisp outside but still slightly chewy in the middle."
+    "d": "Brush the bread on both sides with the olive oil and toast it in a skillet over medium heat for 2 to 3 minutes per side, until golden and crisp. A toaster works too; brush with the oil afterwards."
    },
    {
     "t": "Assemble and serve",
-    "d": "Spread the avocado thickly over the warm toast, right to the edges so every bite gets some. Halve the eggs lengthwise and nestle them on top, then finish with flaky salt, black pepper, extra chili flakes, a thin drizzle of olive oil and chives or microgreens if using. Eat right away while the toast still crunches."
+    "d": "Spread the avocado mixture over each slice, right to the edges. Halve an egg onto each toast and finish with flaky salt, black pepper and chives if using. Eat right away while the toast still crunches."
    }
   ],
   "tips": [
-   "Cook the eggs straight from the fridge. The timing here assumes a cold egg, and a room-temperature egg will overcook by the same clock.",
-   "To tell if an avocado is ripe, flick off the little stem cap. If it comes away easily and the flesh beneath is green, it is ready; brown underneath means it is overripe.",
-   "Make the eggs up to 3 days ahead and keep them peeled in the fridge. Warm them for 1 minute in a bowl of hot tap water before slicing so the yolks loosen and are not fridge-cold.",
+   "Cook the eggs straight from the fridge. The timing assumes a cold egg.",
+   "Make the eggs up to 3 days ahead and keep them peeled in the fridge. Warm them for 1 minute in hot tap water before slicing.",
+   "The spread keeps for a day in the fridge with plastic wrap pressed onto its surface, so you can make it the night before.",
    "Small-portion tip: serve half a portion and save the rest for later. A half bowl still counts."
   ],
-  "storage": "Avocado toast is best eaten right away, since the bread softens and the avocado browns within minutes. Peeled jammy eggs keep in an airtight container in the fridge for up to 3 days; warm them in hot tap water for a minute before serving. Leftover smashed avocado keeps for 1 day in a small container with plastic wrap pressed directly onto its surface to block air.",
+  "storage": "The toast is best eaten right away. Peeled jammy eggs keep in an airtight container in the fridge for up to 3 days. Leftover avocado spread keeps for 1 day in a small container with plastic wrap pressed directly onto its surface.",
   "variations": [
    [
-    "Everything bagel style",
-    "Skip the red pepper flakes on top and sprinkle the eggs with 1 teaspoon of everything bagel seasoning, going lighter on the flaky salt."
+    "Dairy-free",
+    "Skip the cottage cheese and use the whole large avocado, then add a second egg to each toast to keep the protein up."
    ],
    [
-    "Add feta and tomato",
-    "Top with crumbled feta and a few sliced cherry tomatoes. Note that the feta makes it no longer dairy-free."
+    "Everything bagel style",
+    "Sprinkle the eggs with 1 teaspoon everything bagel seasoning and go lighter on the flaky salt."
    ],
    [
     "Gluten-free toast",
-    "Use thick slices of gluten-free bread and fry them over slightly lower heat, since they tend to brown faster than sourdough."
+    "Use gluten-free bread and toast it over slightly lower heat, since it browns faster."
    ],
    [
     "Make it gentler",
-    "Use one slice instead of two and keep the egg soft and jammy."
+    "Skip the chili, use a softer sandwich bread and cook the egg 7 minutes for a firmer, milder yolk."
    ],
    [
     "Protein boost",
-    "Spread a spoonful of cottage cheese under the avocado."
+    "Add a second jammy egg, or a few slices of smoked salmon under the egg."
    ]
   ],
   "nutrition": {
-   "calories": 490,
-   "protein": 15,
-   "carbs": 42,
-   "fat": 30,
-   "fiber": 8
+   "calories": 420,
+   "protein": 20,
+   "carbs": 40,
+   "fat": 19,
+   "fiber": 5
   },
   "faq": [
    [
-    "Why won't my eggs peel cleanly?",
-    "Very fresh eggs stick to their shells, so use eggs that are at least a week old if you can. Skipping or rushing the ice bath also makes peeling harder."
+    "Can I taste the cottage cheese?",
+    "Only a little. Blended with avocado, lemon and salt it reads as a creamy, slightly tangy spread. Start with 1/4 cup if you are unsure."
    ],
    [
-    "How do I keep the avocado from turning brown?",
-    "The lemon juice slows browning by lowering the pH, which slows the enzyme responsible. Pressing plastic wrap onto the surface helps even more by keeping out oxygen."
+    "Why will my eggs not peel cleanly?",
+    "Very fresh eggs stick to their shells, so use eggs that are at least a week old if you can, and do not rush the ice bath."
    ],
    [
-    "Can I use a toaster instead of a skillet?",
-    "Yes. Toast the bread until well browned, then brush it with the olive oil. It will be a bit drier and less crunchy than pan-fried, but still good."
+    "How do I keep the spread from turning brown?",
+    "The lemon juice slows browning, and pressing plastic wrap onto the surface keeps out the air."
    ]
   ],
   "img": "images/avocado-toast-jammy-eggs.webp",
