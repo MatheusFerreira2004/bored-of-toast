@@ -1185,365 +1185,361 @@
   "time": 25
  },
  {
-  "id": "chocolate-chip-cookies",
-  "title": "Chewy Chocolate Chip Cookies",
-  "subtitle": "Melted-butter cookies with crackly golden edges, soft centers that bend without breaking, and pools of dark chocolate under flaky salt.",
+  "id": "peanut-butter-protein-bites",
+  "title": "No-Bake Peanut Butter Protein Bites",
+  "subtitle": "Oats, peanut butter, a scoop of protein powder and a few dark chocolate chips, rolled into small bites. About 6 g protein each, no oven needed.",
   "category": "Desserts",
   "tags": [
    "quick",
-   "everyday"
+   "healthy",
+   "small-plates",
+   "make-ahead"
   ],
   "prep": 15,
-  "cook": 12,
-  "serves": 24,
-  "servesLabel": "cookies",
+  "cook": 0,
+  "chill": 30,
+  "time": 45,
+  "serves": 16,
+  "servesLabel": "bites",
   "level": "Easy",
-  "desc": "Chewy centers, crisp edges, big chocolate.",
+  "desc": "Small no-bake bites, about 6 g protein each.",
   "intro": [
-   "Melted butter is the whole secret here. Creamed butter traps air and gives you a cakey cookie, but melted butter coats the flour and limits gluten development, so you get a dense, chewy center that bends instead of crumbling. A generous share of brown sugar helps too, since its molasses holds on to moisture.",
-   "The other lever is time. When the scooped dough rests in the fridge, the flour fully absorbs the liquid and the butter firms up, so the cookies spread less and brown more deeply. You can bake right away and still be happy, but a rest turns good cookies into ones people ask about."
+   "Sometimes a small appetite still wants something sweet. These bites are built for that moment: one or two is a satisfying treat, and each one carries about 6 g of protein from peanut butter and a scoop of protein powder. There is no oven involved, and a batch keeps in the fridge all week.",
+   "The texture depends on balance. Rolled oats and ground flaxseed absorb moisture from the peanut butter and honey, so the mixture firms up as it rests. Chilling it for 15 minutes before rolling makes it much less sticky, and a splash of milk fixes a mix that feels too dry, since protein powders vary a lot in how much liquid they soak up."
   ],
   "why": [
    [
-    "Chewy by design",
-    "Melted butter and brown sugar keep the centers soft for days."
+    "About 6 g protein per bite",
+    "Peanut butter and protein powder in a one- or two-bite treat."
    ],
    [
-    "No mixer needed",
-    "Everything comes together with a whisk and a spatula."
+    "No oven, one bowl",
+    "Stir, chill and roll. Ready in about 45 minutes, most of it hands-off."
    ],
    [
-    "Bake on your schedule",
-    "Scooped dough waits in the fridge or freezer until you want it."
+    "Portioned by design",
+    "Sixteen small bites make it easy to stop at one or two."
    ]
   ],
   "ingredients": [
    {
-    "group": "Wet ingredients",
+    "group": "For the bites",
     "items": [
      {
       "q": 1,
       "u": "cup",
-      "n": "unsalted butter",
-      "note": "225 g, melted and slightly cooled",
-      "g": 225
-     },
-     {
-      "q": 1,
-      "u": "cup",
-      "n": "packed brown sugar",
-      "g": 220
+      "n": "old-fashioned rolled oats",
+      "note": "use certified gluten-free oats if needed",
+      "g": 90
      },
      {
       "q": 0.5,
       "u": "cup",
-      "n": "granulated sugar",
-      "g": 100
+      "n": "natural creamy peanut butter",
+      "note": "stirred well",
+      "g": 128
+     },
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "vanilla protein powder",
+      "note": "whey or plant-based, about 2 scoops",
+      "g": 60
+     },
+     {
+      "q": 0.25,
+      "u": "cup",
+      "n": "honey",
+      "note": "or maple syrup",
+      "g": 85
      },
      {
       "q": 2,
-      "u": "",
-      "n": "large eggs",
-      "note": "room temperature"
-     },
-     {
-      "q": 2,
-      "u": "tsp",
-      "n": "vanilla extract"
-     }
-    ]
-   },
-   {
-    "group": "Dry ingredients",
-    "items": [
-     {
-      "q": 3,
-      "u": "cups",
-      "n": "all-purpose flour",
-      "note": "375 g, spooned and leveled",
-      "g": 375
-     },
-     {
-      "q": 1,
-      "u": "tsp",
-      "n": "baking soda"
-     },
-     {
-      "q": 1,
-      "u": "tsp",
-      "n": "fine salt"
-     }
-    ]
-   },
-   {
-    "group": "Mix-ins",
-    "items": [
-     {
-      "q": 2,
-      "u": "cups",
-      "n": "chopped dark chocolate or chunks",
-      "g": 340
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "flaky sea salt",
-      "note": "to finish"
-     }
-    ]
-   }
-  ],
-  "steps": [
-   {
-    "t": "Heat the oven",
-    "d": "Heat the oven to 350°F (175°C) with a rack in the center and line two baking sheets with parchment paper. Baking one sheet at a time on the middle rack gives the most even color."
-   },
-   {
-    "t": "Whisk butter and sugars",
-    "d": "Whisk the melted, slightly cooled butter with the brown and granulated sugars for about 1 minute, until the mixture looks smooth and glossy rather than grainy. Add the eggs and vanilla and whisk another 30 to 45 seconds, until the batter lightens in color and turns thick and ribbony. Warm butter can scramble eggs, so make sure it feels just warm to the touch."
-   },
-   {
-    "t": "Fold in the dry ingredients",
-    "d": "Add the flour, baking soda and salt. Stir with a spatula until just combined and no dry streaks remain, then fold in the chocolate. The dough will be soft and shiny.",
-    "tip": "Stop mixing as soon as the flour disappears. Every extra stir develops gluten, which makes cookies tough instead of chewy.",
-    "img": "images/step-cookies-dough.webp"
-   },
-   {
-    "t": "Scoop and chill",
-    "d": "Scoop 2-tablespoon balls of dough onto the sheets, leaving 2 inches (5 cm) between them. For the best texture, chill the scooped dough for at least 30 minutes or up to 24 hours. Chilled dough spreads less and bakes up thicker, with a more caramelized flavor."
-   },
-   {
-    "t": "Bake",
-    "d": "Bake one sheet at a time for 10 to 12 minutes, until the edges are golden brown and set but the centers look puffy, pale and slightly underdone. Your kitchen should smell like brown butter and toffee.",
-    "tip": "Cookies look raw in the middle when they are actually ready. Trust the golden edges and pull them. Carryover heat on the pan finishes the centers."
-   },
-   {
-    "t": "Finish and cool",
-    "d": "Sprinkle with flaky salt right away, while the tops are still tacky enough to hold it. Cool on the pan for 5 minutes so the centers set, then move to a wire rack to cool completely or eat warm."
-   }
-  ],
-  "tips": [
-   "Measure flour by spooning it into the cup and leveling it, or weigh 375 g. Scooping straight from the bag packs in extra flour and gives you dry, puffy cookies that barely spread.",
-   "For round, bakery-style cookies, set a large glass or cookie cutter over each cookie right out of the oven and swirl it in small circles to tuck the edges in.",
-   "Chopping a bar of chocolate beats chips. The shards and dust melt into streaks and puddles, while chips are made with stabilizers to hold their shape."
-  ],
-  "storage": "Keep baked cookies in an airtight container at room temperature for up to 5 days, and warm them at 300°F (150°C) for 3 to 4 minutes to bring back the soft centers. Freeze scooped dough balls in a zip-top bag for up to 3 months and bake straight from frozen, adding 1 to 2 minutes.",
-  "variations": [
-   [
-    "Brown butter",
-    "Cook the butter in a light-colored pan over medium heat until it foams and smells nutty with brown flecks, about 5 minutes. Cool for 10 minutes before whisking with the sugars."
-   ],
-   [
-    "Mixed chocolate",
-    "Use half dark and half milk chocolate for a sweeter, deeper chocolate flavor, keeping the total at 2 cups."
-   ],
-   [
-    "Toasted nuts",
-    "Replace 1/2 cup of the chocolate with toasted, chopped walnuts or pecans for crunch."
-   ]
-  ],
-  "nutrition": {
-   "calories": 230,
-   "protein": 3,
-   "carbs": 29,
-   "fat": 12,
-   "fiber": 1
-  },
-  "faq": [
-   [
-    "Why did my cookies spread flat?",
-    "Usually the butter was too hot when mixed, the dough was not chilled, or the flour was under-measured. Let the butter cool until just warm, chill the scoops for 30 minutes, and weigh the flour if you can."
-   ],
-   [
-    "Can I use salted butter?",
-    "Yes. Cut the fine salt down to 1/2 teaspoon so the cookies do not taste overly salty, especially with the flaky salt on top."
-   ],
-   [
-    "Can I bake both sheets at once?",
-    "You can, on the upper and lower thirds of the oven, but swap and rotate the sheets halfway through and expect to add a minute or two. One at a time gives more even browning."
-   ]
-  ],
-  "note": "If you can spare the time, chill the scooped dough. Even 30 minutes gives you thicker cookies with a toffee edge, and a full day is better still. We like them best still warm, with a glass of cold milk.",
-  "diet": [
-   "vegetarian"
-  ],
-  "img": "images/chocolate-chip-cookies.webp",
-  "time": 27
- },
- {
-  "id": "chocolate-mousse-cake",
-  "title": "No-Bake Chocolate Mousse Cake",
-  "subtitle": "A crunchy cookie crust under thick, silky dark chocolate mousse that sets in the fridge while you get on with your day.",
-  "category": "Desserts",
-  "tags": [
-   "everyday"
-  ],
-  "prep": 30,
-  "cook": 5,
-  "chill": 360,
-  "serves": 10,
-  "level": "Medium",
-  "desc": "Silky chocolate mousse, zero oven time.",
-  "intro": [
-   "A dessert this dramatic has no business being this easy. There are only a handful of ingredients, the stove is on for about five minutes, and the fridge does the rest of the work overnight. What you get is a tall, glossy slab of mousse that slices cleanly over a crisp chocolate cookie base.",
-   "The mousse sets because of two things working together: air and cocoa butter. Whipping cream to soft peaks traps tiny air bubbles in a network of fat, and as the chocolate cools in the fridge, its cocoa butter firms up and locks those bubbles in place. That is also why temperature matters so much when you fold. Chocolate that is too warm melts the fat in the cream and the air collapses, while chocolate that is too cold seizes into little flecks."
-  ],
-  "why": [
-   [
-    "No baking at all",
-    "Just a brief warm-up of cream, then the fridge sets it into something sliceable."
-   ],
-   [
-    "Rich but still light",
-    "Folded whipped cream gives an airy texture that does not feel heavy after dinner."
-   ],
-   [
-    "Made the day before",
-    "It needs at least 6 hours to set, which makes it an ideal make-ahead party dessert."
-   ]
-  ],
-  "ingredients": [
-   {
-    "group": "For the crust",
-    "items": [
-     {
-      "q": 20,
-      "u": "",
-      "n": "chocolate sandwich cookies",
-      "note": "finely crushed"
-     },
-     {
-      "q": 4,
       "u": "tbsp",
-      "n": "unsalted butter",
-      "note": "melted"
-     }
-    ]
-   },
-   {
-    "group": "For the mousse",
-    "items": [
-     {
-      "q": 10,
-      "u": "oz",
-      "n": "dark chocolate (60–70%)",
-      "note": "280 g, chopped"
+      "n": "ground flaxseed",
+      "g": 14
      },
      {
-      "q": 2,
-      "u": "cups",
-      "n": "cold heavy cream",
-      "note": "divided"
-     },
-     {
-      "q": 3,
-      "u": "tbsp",
-      "n": "powdered sugar"
-     },
-     {
-      "q": 1,
+      "q": 0.5,
       "u": "tsp",
       "n": "vanilla extract"
      },
      {
       "q": 1,
       "u": "pinch",
-      "n": "salt"
+      "n": "fine salt"
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "milk",
+      "note": "any kind, plus more as needed"
      }
     ]
    },
    {
-    "group": "To decorate",
+    "group": "To finish",
     "items": [
      {
-      "q": 1,
+      "q": 0.25,
       "u": "cup",
-      "n": "fresh raspberries",
-      "g": 125
-     },
-     {
-      "q": null,
-      "u": "",
-      "n": "chocolate curls or cocoa powder"
+      "n": "mini dark chocolate chips",
+      "g": 45
      }
     ]
    }
   ],
   "steps": [
    {
-    "t": "Press the cookie crust",
-    "d": "Stir the crushed cookie crumbs with the melted butter until the mixture looks like wet sand and holds together when squeezed. Press it firmly and evenly into the bottom of a 9-inch (23 cm) springform pan, using the flat base of a measuring cup to pack it tight. Refrigerate while you make the mousse so the butter firms up."
+    "t": "Stir the base",
+    "d": "In a medium bowl, stir together the peanut butter, honey, vanilla and salt until smooth. If the peanut butter is very thick, warm it in the microwave for 10 to 15 seconds first.",
+    "tip": "Use a drippy, natural-style peanut butter. Very stiff no-stir brands make a crumbly mix."
    },
    {
-    "t": "Melt the chocolate",
-    "d": "Heat 1/2 cup of the cream in a small saucepan over medium heat until it is steaming with small bubbles around the edge, about 2 minutes, but not boiling. Pour it over the chopped chocolate, leave it alone for 2 minutes, then stir slowly from the center outward until smooth and glossy. Stir in the salt and let it cool until it feels just barely warm on your lip, about 10 to 15 minutes.",
-    "tip": "If the chocolate turns grainy or stiff, whisk in hot cream a teaspoon at a time until it loosens. If it is still warm when you fold, the whipped cream will melt and the mousse will not set."
+    "t": "Add the dry ingredients",
+    "d": "Add the oats, protein powder and ground flaxseed and stir with a sturdy spoon until no dry pockets remain. Add the milk a tablespoon at a time until the mixture holds together when you squeeze a little in your hand. Fold in the chocolate chips.",
+    "tip": "Protein powders absorb very different amounts of liquid. Go by feel: the mix should be sticky but not wet."
    },
    {
-    "t": "Whip the cream",
-    "d": "Beat the remaining 1 1/2 cups of cold cream with the powdered sugar and vanilla on medium-high speed until soft peaks form, about 2 to 3 minutes. When you lift the whisk, the peaks should hold their shape but gently flop over at the tip. Stop there, since stiffer cream is harder to fold and can turn the mousse grainy.",
-    "tip": "Chill the bowl and beaters for 10 minutes first. Cold fat traps air more easily, so the cream whips faster and holds more volume."
+    "t": "Chill briefly",
+    "d": "Cover the bowl and refrigerate for 15 minutes. The oats and flax absorb moisture and the mixture firms up, which makes rolling much easier."
    },
    {
-    "t": "Fold it together",
-    "d": "Stir about one third of the whipped cream into the chocolate to loosen it. Add the rest in two additions, using a flexible spatula to cut down through the middle, sweep along the bottom and turn the mixture over, rotating the bowl as you go. Stop as soon as no white streaks remain."
+    "t": "Roll into bites",
+    "d": "Scoop level tablespoons of the mixture and roll them between your palms into 16 balls, about 1 inch across. Dampen your hands slightly if the mix sticks."
    },
    {
-    "t": "Chill until set",
-    "d": "Scrape the mousse onto the crust and smooth the top with an offset spatula. Cover the pan with plastic wrap and refrigerate for at least 6 hours, or overnight, until the mousse is firm to a gentle touch and no longer wobbles in the center."
-   },
-   {
-    "t": "Decorate and slice",
-    "d": "Run a thin knife around the edge and release the springform ring. Pile the raspberries on top and finish with chocolate curls or a dusting of cocoa powder. For clean slices, dip a long knife in hot water, wipe it dry, and repeat between every cut."
+    "t": "Chill and serve",
+    "d": "Arrange the bites on a plate or in a container and refrigerate for another 15 minutes, until firm. Serve cold, one or two at a time."
    }
   ],
   "tips": [
-   "Chop the chocolate finely and evenly. Small pieces melt completely from the residual heat of the cream, so you avoid lumps and never need to put the chocolate back on the stove.",
-   "Choose chocolate in the 60 to 70% range. Higher percentages have less sugar and more cocoa solids, which makes the mousse firmer and more bitter, and they are more likely to seize when cream is added.",
-   "Make chocolate curls by warming a bar in your hands for a minute, then dragging a vegetable peeler along its long side. A slightly warm bar curls instead of shattering."
+   "Weigh the protein powder if you can. Scoops vary, and 60 g is roughly two standard scoops.",
+   "If the mix is too wet to roll, add a tablespoon of oats. If it cracks, add a teaspoon of milk.",
+   "Mini chocolate chips spread through the bites more evenly than regular ones, so every bite gets some.",
+   "Small-portion tip: start with one bite. Two bites with a glass of milk make a small snack with about 20 g protein."
   ],
-  "storage": "Keep the cake covered in the fridge for up to 4 days, adding the raspberries shortly before serving so they do not bleed into the mousse. To freeze, wrap the undecorated cake tightly in plastic wrap and foil and freeze for up to 1 month. Thaw it overnight in the fridge and serve cold; do not microwave it, as the mousse will melt.",
+  "storage": "Keep the bites in an airtight container in the fridge for up to 1 week, with parchment between layers. They also freeze well for up to 2 months; let them sit at room temperature for 10 minutes before eating.",
   "variations": [
    [
-    "Mocha mousse cake",
-    "Dissolve 2 teaspoons of instant espresso powder in the hot cream before pouring it over the chocolate. It deepens the chocolate without tasting strongly of coffee."
+    "Nut-free",
+    "Use sunflower seed butter instead of peanut butter and check that your protein powder and chocolate are made in a nut-free facility."
    ],
    [
-    "Graham cracker crust",
-    "Use about 1 1/2 cups of graham cracker crumbs with the same melted butter plus 2 tablespoons of sugar for a lighter, honeyed base."
+    "Chocolate peanut butter",
+    "Replace 2 tablespoons of the oats with unsweetened cocoa powder and add a splash more milk."
    ],
    [
-    "Orange chocolate",
-    "Add the finely grated zest of 1 orange to the whipping cream and top the cake with segmented oranges instead of raspberries."
+    "Without protein powder",
+    "Replace the protein powder with 1/2 cup more oats. The bites will have about 3 g protein each."
+   ],
+   [
+    "Make it gentler",
+    "Skip the chocolate chips and roll the bites a little smaller. A mild, soft bite is easier on unsettled days."
+   ],
+   [
+    "Protein boost",
+    "Eat two bites with a glass of milk or a small cup of Greek yogurt."
    ]
   ],
   "nutrition": {
-   "calories": 440,
-   "protein": 4,
-   "carbs": 30,
-   "fat": 35,
-   "fiber": 3
+   "calories": 120,
+   "protein": 6,
+   "carbs": 12,
+   "fat": 6,
+   "fiber": 1
   },
   "faq": [
    [
-    "Can I use milk chocolate?",
-    "You can, but milk chocolate has less cocoa butter and more sugar, so the mousse will be softer and sweeter. Use 12 ounces instead of 10 to help it set, and skip the powdered sugar."
+    "Do I have to use protein powder?",
+    "No. Swap it for 1/2 cup more oats. The bites will taste much the same but have about half the protein."
    ],
    [
-    "Why didn't my mousse set?",
-    "Usually the chocolate was too warm when folded, which deflated the cream, or the cream was underwhipped. Give it the full 6 hours too. Mousse that is still soft after that can be frozen for 2 hours and served semifreddo-style."
+    "Why is my mixture too sticky to roll?",
+    "It probably needs more time in the fridge, or a tablespoon more oats. Chilling helps the oats and flax absorb moisture."
    ],
    [
-    "Can I make it without a springform pan?",
-    "Yes. Use a 9-inch pie dish and serve it straight from the dish, or line a regular cake pan with a plastic wrap sling so you can lift it out once set."
+    "Are these gluten-free?",
+    "They can be, if you use oats labeled certified gluten-free and check your protein powder and chocolate labels."
    ]
   ],
-  "note": "This is our pick when you need an impressive dessert but your oven is busy or it is too hot to turn it on. Use a chocolate you would happily eat on its own, since there is nothing to hide behind. Tart raspberries on top are not just decoration; they cut the richness beautifully.",
+  "note": "These are meant to be small. One bite with a cup of tea is a perfectly good snack, and two with a glass of milk is close to a light meal on low-appetite days. Keep them in the fridge where you can see them; that is half the reason they get eaten.",
   "diet": [
    "vegetarian"
   ],
-  "img": "images/chocolate-mousse-cake.webp",
-  "time": 395
+  "img": "images/peanut-butter-protein-bites.webp"
+ },
+ {
+  "id": "chocolate-yogurt-mousse-cups",
+  "title": "Chocolate Greek Yogurt Mousse Cups",
+  "subtitle": "Thick Greek yogurt whipped with cocoa and a little melted dark chocolate, chilled in small cups and topped with raspberries. About 14 g protein per cup.",
+  "category": "Desserts",
+  "tags": [
+   "healthy",
+   "small-plates",
+   "gentle",
+   "make-ahead"
+  ],
+  "prep": 10,
+  "cook": 5,
+  "chill": 60,
+  "time": 75,
+  "serves": 4,
+  "level": "Easy",
+  "desc": "Cool, creamy chocolate cups with Greek yogurt.",
+  "intro": [
+   "A classic chocolate mousse is mostly cream, eggs and sugar. This version starts with thick Greek yogurt, so it is cool, smooth and spoonable like mousse, with about 14 g of protein in a small cup. A little melted dark chocolate gives it a deeper, richer flavor than cocoa alone.",
+   "The trick is to combine the chocolate and yogurt gently. Cold yogurt can make melted chocolate seize into small flecks, so the chocolate is cooled slightly and whisked into a spoonful of yogurt first, then folded into the rest. A short chill sets the cups and lets the cocoa flavor bloom."
+  ],
+  "why": [
+   [
+    "About 14 g protein per cup",
+    "Two cups of Greek yogurt shared across four small servings."
+   ],
+   [
+    "Cool and soft",
+    "Easy to eat a few spoonfuls at a time on days when hot food does not appeal."
+   ],
+   [
+    "Ready in about an hour",
+    "Ten minutes of work, then the fridge does the rest."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the mousse",
+    "items": [
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "plain nonfat Greek yogurt",
+      "note": "480 g, well chilled",
+      "g": 480
+     },
+     {
+      "q": 2,
+      "u": "oz",
+      "n": "dark chocolate",
+      "note": "about 70% cocoa, chopped",
+      "g": 56
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "unsweetened cocoa powder",
+      "g": 15
+     },
+     {
+      "q": 3,
+      "u": "tbsp",
+      "n": "maple syrup",
+      "note": "or honey, adjust to taste",
+      "g": 60
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "fine salt"
+     }
+    ]
+   },
+   {
+    "group": "To serve",
+    "items": [
+     {
+      "q": 0.5,
+      "u": "cup",
+      "n": "fresh raspberries",
+      "g": 60
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Melt the chocolate",
+    "d": "Put the chopped chocolate in a small heatproof bowl and microwave in 20-second bursts, stirring between each, until about three quarters melted. Stir until smooth, then let it cool for 5 minutes, until barely warm.",
+    "tip": "Stopping before it is fully melted and stirring the rest smooth keeps the chocolate from overheating and turning grainy."
+   },
+   {
+    "t": "Mix the cocoa base",
+    "d": "In a medium bowl, whisk the cocoa powder, maple syrup, vanilla and salt into a thick paste. Whisking the cocoa with the syrup first prevents dry lumps in the mousse."
+   },
+   {
+    "t": "Temper the chocolate",
+    "d": "Whisk 2 heaped tablespoons of the yogurt into the melted chocolate until glossy. Scrape this mixture into the cocoa paste and whisk until smooth.",
+    "tip": "Adding cold yogurt to warm chocolate a little at a time keeps it from seizing into flecks."
+   },
+   {
+    "t": "Fold in the yogurt",
+    "d": "Add the rest of the yogurt and fold gently with a spatula until evenly brown with no streaks. Taste and add a little more maple syrup if you like it sweeter."
+   },
+   {
+    "t": "Portion and chill",
+    "d": "Divide the mousse among four small cups or jars, about 1/2 cup each. Cover and refrigerate for at least 1 hour, until set. Top with raspberries just before serving."
+   }
+  ],
+  "tips": [
+   "Use 2% Greek yogurt for a richer, softer mousse. The protein stays about the same.",
+   "If your yogurt looks watery, strain it in a coffee filter for 30 minutes. Thicker yogurt gives a more mousse-like texture.",
+   "Dark chocolate around 70% gives the most flavor with the least sugar. Milk chocolate makes a sweeter, milder cup.",
+   "Small-portion tip: eat half a cup now and cover the rest. A few spoonfuls still count."
+  ],
+  "storage": "Cover the cups and refrigerate for up to 4 days. Add the raspberries on the day you eat them. The mousse does not freeze well, since the yogurt turns grainy when thawed.",
+  "variations": [
+   [
+    "Mocha",
+    "Dissolve 1 teaspoon instant espresso powder in the maple syrup before whisking in the cocoa."
+   ],
+   [
+    "Peanut butter swirl",
+    "Swirl 1 teaspoon warmed peanut butter into each cup before chilling."
+   ],
+   [
+    "Dairy-free",
+    "Use a thick, high-protein plant yogurt. Check the label, since many plant yogurts are thinner and lower in protein."
+   ],
+   [
+    "Make it gentler",
+    "Skip the raspberries and use milk chocolate for a milder, sweeter cup. Serve straight from the fridge."
+   ],
+   [
+    "Protein boost",
+    "Stir 1 tablespoon of chocolate protein powder into each cup with a splash of milk."
+   ]
+  ],
+  "nutrition": {
+   "calories": 210,
+   "protein": 14,
+   "carbs": 25,
+   "fat": 7,
+   "fiber": 4
+  },
+  "faq": [
+   [
+    "Can I skip the dark chocolate?",
+    "Yes. Use 4 tablespoons of cocoa instead of 3 and a little more maple syrup. The mousse will be lighter and slightly less rich."
+   ],
+   [
+    "Why did my mousse turn grainy?",
+    "The chocolate likely seized when it hit the cold yogurt. Cool the chocolate slightly and loosen it with a little yogurt before folding it into the rest."
+   ],
+   [
+    "Is it gluten-free?",
+    "Cocoa, chocolate and yogurt are naturally gluten-free, but check your chocolate label, since some brands are made alongside wheat."
+   ]
+  ],
+  "note": "This tastes like dessert first and protein second, which is the point. A half cup straight from the fridge is often easier to face than anything warm, and the raspberries add a little brightness. Make all four on a good day and they wait for you.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/chocolate-yogurt-mousse-cups.webp"
  },
  {
   "id": "buttermilk-pancakes",
@@ -3842,129 +3838,96 @@
   "time": 28
  },
  {
-  "id": "apple-crisp",
-  "title": "Easy Apple Crisp",
-  "subtitle": "Soft, cinnamon-spiced apples bubbling under a craggy oat and brown sugar topping with big, buttery clusters worth fighting over.",
+  "id": "baked-cinnamon-apples",
+  "title": "Baked Cinnamon Apples with Greek Yogurt",
+  "subtitle": "Small apples filled with oats, walnuts and dried cranberries, baked until soft and served warm with a spoonful of vanilla Greek yogurt.",
   "category": "Desserts",
   "tags": [
-   "fall",
-   "everyday"
+   "healthy",
+   "small-plates",
+   "gentle",
+   "make-ahead"
   ],
-  "diet": [
-   "vegetarian"
-  ],
-  "prep": 20,
-  "cook": 45,
-  "chill": 15,
-  "serves": 8,
+  "prep": 15,
+  "cook": 35,
+  "time": 50,
+  "serves": 4,
   "level": "Easy",
-  "desc": "Jammy apples, crunchy buttery oat topping.",
-  "note": "We like this warm, about 30 minutes out of the oven, with vanilla ice cream melting into the juices. Do not skip the mix of tart and sweet apples. Granny Smiths keep their shape and bring acidity, while Honeycrisp adds sweetness, and together they taste far more interesting than either alone.",
+  "desc": "Soft baked apples with a spoonful of yogurt.",
   "intro": [
-   "Apple crisp is the most forgiving dessert in the fall baking lineup. No crust to roll, no lattice to weave, just sliced fruit in a dish and a topping you rub together with your fingers. It still delivers everything you want from an apple pie: syrupy spiced fruit and a golden, crunchy lid.",
-   "Cold butter is what makes the topping crisp rather than cakey. When you rub it into the flour and oats, the butter stays in separate little pieces, and in the oven the water in those pieces turns to steam while the fat browns the sugar around it, leaving crunchy, craggy clusters. The spoonful of flour in the filling matters too: it thickens the apple juices as they bubble so you get a glossy sauce instead of a watery pool."
+   "Baked apples are soft, warm and gently sweet, the kind of dessert that is easy to eat in small spoonfuls. Each small apple is filled with oats, walnuts and dried cranberries, baked until tender and served with a spoonful of vanilla Greek yogurt for about 8 g of protein.",
+   "Coring the apples while leaving the bottoms intact turns each one into a little cup that holds the filling and catches the juices. A splash of water in the dish creates steam, which softens the apples evenly before the tops start to brown. Baking until a knife slides in with no resistance gives a texture closer to apple sauce than crisp fruit."
   ],
   "why": [
    [
-    "Big crunchy clusters",
-    "Cold butter rubbed in by hand bakes into a craggy, golden topping."
+    "Soft and warm",
+    "Fork-tender apples that are easy to eat in small spoonfuls."
    ],
    [
-    "Thick, glossy filling",
-    "A little flour thickens the juices so nothing turns watery."
+    "About 8 g protein",
+    "A spoonful of vanilla Greek yogurt on each apple."
    ],
    [
-    "Easy to make ahead",
-    "Assemble it a day early and bake straight from the fridge."
+    "Make ahead and reheat",
+    "Bake a pan, then warm one apple at a time during the week."
    ]
   ],
   "ingredients": [
    {
-    "group": "For the apple filling",
+    "group": "For the apples",
     "items": [
      {
-      "q": 3,
-      "u": "lb",
-      "n": "apples",
-      "note": "about 6 to 7 medium, a mix of Granny Smith and Honeycrisp, peeled and sliced 1/4 inch thick"
+      "q": 4,
+      "u": "",
+      "n": "small apples",
+      "note": "such as Gala or Honeycrisp, about 5 oz / 150 g each",
+      "g": 600
      },
      {
       "q": 0.25,
       "u": "cup",
-      "n": "packed light brown sugar",
-      "g": 50
+      "n": "old-fashioned rolled oats",
+      "g": 22
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "walnuts",
+      "note": "chopped",
+      "g": 15
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "n": "dried cranberries",
+      "g": 20
      },
      {
       "q": 1,
       "u": "tbsp",
-      "n": "lemon juice"
+      "n": "butter",
+      "note": "melted, or coconut oil"
      },
      {
       "q": 1,
       "u": "tbsp",
-      "n": "all-purpose flour"
+      "n": "maple syrup"
      },
      {
       "q": 1,
       "u": "tsp",
       "n": "ground cinnamon"
-     },
-     {
-      "q": 0.25,
-      "u": "tsp",
-      "n": "ground nutmeg"
      },
      {
       "q": 1,
       "u": "pinch",
-      "n": "salt"
-     }
-    ]
-   },
-   {
-    "group": "For the crisp topping",
-    "items": [
+      "n": "fine salt"
+     },
      {
-      "q": 0.75,
+      "q": 0.33,
       "u": "cup",
-      "n": "all-purpose flour",
-      "g": 94
-     },
-     {
-      "q": 0.75,
-      "u": "cup",
-      "n": "old-fashioned rolled oats",
-      "g": 68
-     },
-     {
-      "q": 0.75,
-      "u": "cup",
-      "n": "packed light brown sugar",
-      "g": 160
-     },
-     {
-      "q": 0.5,
-      "u": "tsp",
-      "n": "ground cinnamon"
-     },
-     {
-      "q": 0.5,
-      "u": "tsp",
-      "n": "kosher salt"
-     },
-     {
-      "q": 0.5,
-      "u": "cup",
-      "n": "cold unsalted butter",
-      "note": "1 stick, cut into small cubes",
-      "g": 113
-     },
-     {
-      "q": 0.5,
-      "u": "cup",
-      "n": "chopped pecans or walnuts",
-      "note": "optional",
-      "g": 55
+      "n": "water",
+      "note": "for the baking dish"
      }
     ]
    },
@@ -3972,10 +3935,20 @@
     "group": "To serve",
     "items": [
      {
-      "q": null,
-      "u": "",
-      "n": "vanilla ice cream or whipped cream",
-      "note": "optional"
+      "q": 1,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 240
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": 1,
+      "u": "pinch",
+      "n": "ground cinnamon"
      }
     ]
    }
@@ -3983,74 +3956,81 @@
   "steps": [
    {
     "t": "Heat the oven",
-    "d": "Set a rack in the center of the oven and preheat to 375°F (190°C). Lightly butter a 9-inch square or 2-quart baking dish and place it on a rimmed baking sheet to catch any drips."
+    "d": "Heat the oven to 375°F (190°C) and choose a small baking dish that holds the four apples snugly."
+   },
+   {
+    "t": "Core the apples",
+    "d": "Use a melon baller or small spoon to scoop the core out of each apple from the top, leaving about 1/2 inch at the bottom so the filling stays in. Widen the opening to about 1 1/2 inches.",
+    "tip": "If an apple wobbles, slice a thin piece off the bottom so it sits flat."
    },
    {
     "t": "Make the filling",
-    "d": "In a large bowl, toss the sliced apples with the brown sugar, lemon juice, flour, cinnamon, nutmeg and salt until every slice is evenly coated. Spread them into the baking dish in an even layer, pressing down gently to close up any big gaps so the fruit cooks evenly.",
-    "tip": "Slice the apples an even 1/4 inch thick. Uneven slices cook at different rates, so you end up with some mushy pieces and some that are still crunchy."
+    "d": "In a small bowl, stir together the oats, walnuts, cranberries, melted butter, maple syrup, cinnamon and salt until the oats are evenly coated."
    },
    {
-    "t": "Rub in the topping",
-    "d": "In the same bowl, whisk together the flour, oats, brown sugar, cinnamon and salt. Add the cold butter cubes and rub them in with your fingertips for 2 to 3 minutes, until the mixture looks like damp sand with some pea-sized clumps, then stir in the nuts if using. Work quickly so your warm hands do not melt the butter.",
-    "tip": "Squeeze a few handfuls together to make bigger clusters. They bake into the best crunchy bits."
+    "t": "Fill and bake",
+    "d": "Set the apples in the dish and pack the filling into each one, mounding any extra on top. Pour the water into the dish, cover loosely with foil and bake for 20 minutes. Uncover and bake 10 to 15 minutes more, until a knife slides into the side of an apple with no resistance and the tops are golden.",
+    "tip": "Covering for the first part of baking steams the apples so they soften all the way through before the filling browns."
    },
    {
-    "t": "Top the apples",
-    "d": "Scatter the topping evenly over the apples, all the way to the edges of the dish. Leave it loose and craggy rather than pressing it down, since a loose layer lets steam escape and bakes up crisper."
-   },
-   {
-    "t": "Bake until bubbling",
-    "d": "Bake for 40 to 45 minutes, until the topping is deep golden brown and the juices are bubbling thickly around the edges. A knife should slide easily into the apples in the center. If the top browns before the apples are tender, tent it loosely with foil for the last 10 minutes.",
-    "tip": "Look for slow, thick bubbles, not just thin juice around the edges. The flour needs to boil to fully thicken the filling, so thin bubbles mean it needs more time."
-   },
-   {
-    "t": "Rest and serve",
-    "d": "Cool the crisp on a wire rack for at least 15 minutes so the juices thicken and the topping firms up. Serve warm with a scoop of vanilla ice cream or a spoonful of whipped cream."
+    "t": "Serve warm",
+    "d": "Stir the vanilla into the yogurt. Let the apples cool for 5 minutes, spoon a little of the pan juices over each one and serve with a spoonful of the yogurt and a pinch of cinnamon."
    }
   ],
   "tips": [
-   "Freeze the butter cubes for 10 minutes before rubbing them in, especially in a warm kitchen. Colder butter stays in distinct pieces longer, which means crisper topping.",
-   "Make a double batch of topping and freeze half in a zip-top bag for up to 3 months. Sprinkle it straight from frozen over any fruit, adding a few minutes to the bake time.",
-   "If your crisp comes out soupy, the apples were likely very juicy or it was cut too soon. Next time add an extra tablespoon of flour to the filling and let it rest the full 15 minutes."
+   "Choose apples that hold their shape when baked, such as Gala, Honeycrisp or Braeburn. Very soft varieties can collapse.",
+   "Smaller apples cook faster and make a better single portion than large ones.",
+   "Spoon the pan juices back over the apples before serving; that is where much of the flavor ends up.",
+   "Small-portion tip: half an apple with yogurt is a complete small dessert. Cover the other half and warm it later."
   ],
-  "storage": "Cover the crisp and keep it at room temperature for 1 day or in the fridge for up to 4 days. Reheat individual portions on a baking sheet in a 350°F (175°C) oven for about 10 minutes to bring back the crunch; the microwave warms it faster but softens the topping. You can also freeze the baked, cooled crisp, well wrapped, for up to 3 months and reheat it from thawed.",
+  "storage": "Refrigerate cooled apples in an airtight container for up to 4 days, with the yogurt kept separately. Reheat in the microwave for 45 to 60 seconds, or in a 350°F (175°C) oven for about 10 minutes, until warm through.",
   "variations": [
    [
-    "Apple and berry",
-    "Swap 1 pound of the apples for 3 cups of blueberries or blackberries and add 1 extra tablespoon of flour to thicken the extra juice."
+    "Pears instead",
+    "Use small ripe but firm pears, halved and cored, and bake cut side up for 20 to 25 minutes."
    ],
    [
-    "Pear and ginger",
-    "Use firm Bosc pears instead of apples and add 1 teaspoon of ground ginger to the filling."
+    "Nut-free",
+    "Replace the walnuts with pumpkin seeds."
    ],
    [
-    "Gluten-free crisp",
-    "Swap the flour in both the filling and topping for a 1:1 gluten-free baking blend and use certified gluten-free oats."
+    "Dairy-free",
+    "Use coconut oil instead of butter and serve with a thick plant yogurt."
+   ],
+   [
+    "Make it gentler",
+    "Peel the apples before baking and skip the walnuts for a softer, smoother texture."
+   ],
+   [
+    "Protein boost",
+    "Serve with a larger spoonful of Greek yogurt, or stir a little vanilla protein powder into the yogurt."
    ]
   ],
   "nutrition": {
-   "calories": 360,
-   "protein": 3,
-   "carbs": 60,
-   "fat": 13,
+   "calories": 210,
+   "protein": 8,
+   "carbs": 35,
+   "fat": 6,
    "fiber": 5
   },
   "faq": [
    [
-    "What are the best apples for apple crisp?",
-    "Firm, slightly tart apples work best because they hold their shape. We like Granny Smith mixed with Honeycrisp, Braeburn, Pink Lady or Jonagold. Avoid soft varieties like McIntosh, which turn to applesauce."
+    "Do I need to peel the apples?",
+    "No. The skin helps the apples keep their shape. Peel them if you prefer a softer texture, and expect them to cook a few minutes faster."
    ],
    [
-    "What is the difference between a crisp and a crumble?",
-    "A crisp traditionally includes oats in the topping, which bake up crunchy. A crumble usually has a streusel of just flour, sugar and butter."
+    "How do I know when they are done?",
+    "A thin knife should slide into the side of the apple with no resistance, and the skin will look slightly wrinkled."
    ],
    [
-    "Can I make apple crisp ahead of time?",
-    "Yes. Assemble it up to 1 day ahead, cover and refrigerate, then add 5 to 10 minutes to the baking time. You can also bake it fully and rewarm it in the oven before serving."
+    "Can I make them gluten-free?",
+    "Yes. Use oats labeled certified gluten-free."
    ]
   ],
-  "img": "images/apple-crisp.webp",
-  "time": 80
+  "note": "Warm, soft and gently sweet, this is the kind of dessert that does not ask much of a small appetite. A spoonful of yogurt on top turns it into something closer to a small meal. Bake the whole pan; the leftovers reheat well.",
+  "diet": [
+   "vegetarian"
+  ],
+  "img": "images/baked-cinnamon-apples.webp"
  }
 ]
