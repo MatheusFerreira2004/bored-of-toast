@@ -132,7 +132,7 @@ WHY_ICONS = [ICON['bolt'], ICON['heart'], ICON['check']]
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
-NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', '5 Easy Dinners', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
+NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'Guides', 'guides'), ('meal-plan/', 'Small-Plate Week', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
 
 def header(root, active):
     links = ''.join(f'<a href="{root}{h}" class="{"active" if k == active else ""}">{l}</a>' for h, l, k in NAV)
@@ -340,8 +340,8 @@ def build_home():
 {marketing_block(root, 'paid')}
 <section class="container section">
   <div class="cta reveal">
-    <div><span class="tag light">5 easy dinners</span><h2>Less deciding.<br>More cooking.</h2><p>Five dinner ideas, clear recipes and ingredients you can save to your shopping list.</p></div>
-    <a href="{root}meal-plan/" class="btn btn-yellow">Explore the five dinners {ICON['arrow']}</a>
+    <div><span class="tag light">Small-Plate Week</span><h2>Five small plates.<br>One easy week.</h2><p>Five smaller, protein-first meals, with prep tips and ingredients you can save to your shopping list.</p></div>
+    <a href="{root}meal-plan/" class="btn btn-yellow">See the week {ICON['arrow']}</a>
   </div>
 </section>'''
     ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Bored of Toast", "url": SITE_URL,
@@ -562,46 +562,46 @@ def build_guide(g):
            "datePublished": PUBLISHED, "mainEntityOfPage": f"{SITE_URL}guides/{g['id']}/"}]
     page(f"guides/{g['id']}/", f"{g['title']} | Bored of Toast", g['subtitle'], body, 'guides', root, og='images/og/home.jpg', jsonld=ld)
 
-PLAN = [('Monday', 'honey-garlic-chicken-thighs', 'Open the recipe for the method and serving suggestions. Any rice or other sides are your choice; add their quantities separately.'),
-        ('Tuesday', 'beef-tacos', 'Taco Tuesday. Mix the spice blend on Sunday so dinner is on the table in 25 minutes.'),
-        ('Wednesday', 'lemon-chicken-orzo-soup', 'Use the recipe page to adjust portions before adding ingredients if you want a smaller batch.'),
-        ('Thursday', 'sheet-pan-salmon', 'The shopping list covers the salmon recipe. If you choose a vegetable side, add it to your own shopping notes.'),
-        ('Friday', 'creamy-garlic-pasta', 'Comfort food to start the weekend. Twenty minutes, one pan, zero stress.')]
-BONUS = [('Saturday breakfast', 'buttermilk-pancakes'), ('Sunday treat', 'apple-crisp')]
+PLAN = [('Monday', 'lemon-chicken-orzo-soup', 'Make the full pot on Monday. It reheats well, so a few small bowls are ready for later in the week.'),
+        ('Tuesday', 'shakshuka', 'Two eggs per plate. Keep the extra sauce and poach fresh eggs in a single portion another day.'),
+        ('Wednesday', 'sheet-pan-salmon', 'Six small pieces from one fillet. Leftovers are good cold the next day, flaked over greens.'),
+        ('Thursday', 'chicken-avocado-salad', 'Cook the chicken and whisk the dressing ahead, then build a bowl in about five minutes.'),
+        ('Friday', 'butternut-squash-soup', 'Roast the squash while you do something else, and freeze the base in 1-cup portions for harder days.')]
+BONUS = [('Make-ahead breakfast', 'overnight-oats'), ('Freezer breakfast', 'breakfast-burritos')]
 
 def build_meal_plan():
     root = '../'
-    days = ''.join(f'''<div class="plan-day reveal"><div class="plan-label"><span>{n}</span><small>Dinner idea</small></div>
+    days = ''.join(f'''<div class="plan-day reveal"><div class="plan-label"><span>{n}</span><small>Small plate</small></div>
   <a class="plan-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]['img']}" alt="{e(BY_ID[rid]['title'])}" loading="lazy" width="160" height="120"{rimg(root, BY_ID[rid]['img'], SIZES['plan'])}>
-  <div><span class="tag">{e(BY_ID[rid]['category'])}</span><h3>{e(BY_ID[rid]['title'])}</h3><div class="meta"><span>{ICON['clock']}{fmt_time(BY_ID[rid]['time'])}</span><span>{ICON['chef']}{BY_ID[rid]['level']}</span><span>{BY_ID[rid]['serves']} {e(BY_ID[rid].get('servesLabel', 'servings'))}</span></div><p class="plan-tip">{ICON['bulb']} {e(tip)}</p><span class="view-all">Open recipe →</span></div></a><div class="dinner-action"><button class="btn btn-outline" data-add-dinner="{rid}" aria-label="Add {e(BY_ID[rid]['title'])} to shopping list">{ICON['bag']} Add this dinner</button></div></div>''' for n, (d, rid, tip) in enumerate(PLAN, 1))
+  <div><span class="tag">{e(BY_ID[rid]['category'])}</span><h3>{e(BY_ID[rid]['title'])}</h3><div class="meta"><span>{ICON['clock']}{fmt_time(BY_ID[rid]['time'])}</span><span>{ICON['chef']}{BY_ID[rid]['level']}</span><span>{BY_ID[rid]['serves']} {e(BY_ID[rid].get('servesLabel', 'servings'))}</span></div><p class="plan-tip">{ICON['bulb']} {e(tip)}</p><span class="view-all">Open recipe →</span></div></a><div class="dinner-action"><button class="btn btn-outline" data-add-dinner="{rid}" aria-label="Add {e(BY_ID[rid]['title'])} to shopping list">{ICON['bag']} Add this meal</button></div></div>''' for n, (d, rid, tip) in enumerate(PLAN, 1))
     bonus = ''.join(card(root, BY_ID[rid]) for _, rid in BONUS)
     ids = [rid for _, rid, _ in PLAN]
     pdata = [{'id': rid, 'title': BY_ID[rid]['title'], 'url': f'recipes/{rid}/', 'serves': f"{BY_ID[rid]['serves']} {BY_ID[rid].get('servesLabel', 'servings')}", 'items': [ing_text(i) for g in BY_ID[rid]['ingredients'] for i in g['items']]} for rid in ids]
-    hero = hero_bleed(root, 'images/honey-garlic-chicken-thighs.webp', '5 easy dinners', 'Less deciding.<br><em>More cooking.</em>',
-        'Five ready-to-use dinner ideas from our free recipes. Cook them in any order, pick a favorite, or save all five to your shopping list.',
-        f'<button class="btn btn-yellow" id="add-plan">{ICON["bag"]} Add all 5 dinners</button><a class="btn btn-ghost" href="{root}shopping-list/">View my shopping list →</a>', short=True)
+    hero = hero_bleed(root, 'images/lemon-chicken-orzo-soup.webp', 'Small-Plate Week', 'Five small plates.<br><em>One easy week.</em>',
+        'Five recipes in smaller portions, with protein listed and gentler swaps on every page. Cook them in any order, pick a favorite, or save all five to your shopping list.',
+        f'<button class="btn btn-yellow" id="add-plan">{ICON["bag"]} Add all 5 meals</button><a class="btn btn-ghost" href="{root}shopping-list/">View my shopping list →</a>', short=True)
     body = f'''{hero}
 <section class="container section">
-  <div class="dinner-help"><h2>Start here</h2><ol><li><strong>Choose a dinner.</strong> Open its recipe for the method and adjustable portions.</li><li><strong>Save ingredients.</strong> Add one dinner below or all five above. These buttons use each recipe’s original portions.</li><li><strong>Review your list.</strong> Check your pantry, then copy, share or print the ingredients.</li></ol><p>Your list stays in this browser on this device. Ingredients are grouped by recipe; repeated ingredients are not combined. Side dishes and weekend extras are separate.</p><p id="plan-status" class="dinner-status" role="status" aria-live="polite">Ready when you are. Saved recipes are kept if you add them again.</p><a class="btn btn-dark" href="{root}shopping-list/">Open my shopping list →</a></div>
-  {section_head('Your five dinner ideas', 'A flexible dinner collection: choose the order that suits you.')}
+  <div class="dinner-help"><h2>Start here</h2><ol><li><strong>Choose a meal.</strong> Open its recipe for the method and adjustable portions.</li><li><strong>Save ingredients.</strong> Add one meal below or all five above. These buttons use each recipe’s original portions.</li><li><strong>Review your list.</strong> Check your pantry, then copy, share or print the ingredients.</li></ol><p>Your list stays in this browser on this device. Ingredients are grouped by recipe; repeated ingredients are not combined. Side dishes and the make-ahead extras are separate.</p><p id="plan-status" class="dinner-status" role="status" aria-live="polite">Ready when you are. Saved recipes are kept if you add them again.</p><a class="btn btn-dark" href="{root}shopping-list/">Open my shopping list →</a></div>
+  {section_head('Your five small plates', 'A flexible week of smaller portions: choose the order that suits you.')}
   <div class="plan">{days}</div>
 </section>
 <section class="section bg-paper"><div class="container two-col prep-wrap">
   <div class="reveal"><h2 class="title">A little prep ahead</h2><ul class="prep-list">
-    <li>{ICON['check']}<span>Mix the taco spice blend and store it in a jar.</span></li>
-    <li>{ICON['check']}<span>Before cooking the soup, chop the onions, carrots and celery.</span></li>
-    <li>{ICON['check']}<span>Measure the honey garlic sauce ingredients before you start the chicken.</span></li>
-    <li>{ICON['check']}<span>Grate the Parmesan just before making the pasta.</span></li>
+    <li>{ICON['check']}<span>Chop the onion, carrots and celery for the orzo soup ahead of time.</span></li>
+    <li>{ICON['check']}<span>Make the shakshuka sauce up to 3 days ahead, then poach the eggs fresh.</span></li>
+    <li>{ICON['check']}<span>Whisk the salmon's dill yogurt sauce and the salad's lemon dressing at the same time.</span></li>
+    <li>{ICON['check']}<span>Peel and cube the squash, or buy it pre-cut.</span></li>
     <li>{ICON['check']}<span>Check your pantry before shopping so you only buy what you need.</span></li>
   </ul></div>
-  <div class="reveal"><h2 class="title">Optional weekend extras</h2><p class="fine">Not included in “Add all 5 dinners”. Open either recipe to add its ingredients separately.</p><div class="recipe-grid two">{bonus}</div></div>
+  <div class="reveal"><h2 class="title">Make-ahead extras</h2><p class="fine">Breakfasts you can prepare once and eat all week. Not included in “Add all 5 meals”; open either recipe to add its ingredients separately.</p><div class="recipe-grid two">{bonus}</div></div>
 </div></section>
 <script type="application/json" id="plan-json">{json.dumps(pdata, ensure_ascii=False)}</script>'''
-    page('meal-plan/', '5 Easy Dinners | Bored of Toast', 'Five free dinner ideas with recipe portions, simple prep tips and ingredients you can save to your shopping list.', body, 'meal-plan', root)
+    page('meal-plan/', 'Small-Plate Week | Bored of Toast', 'Five small, high-protein meals for one easy week, with prep tips and ingredients you can save to your shopping list.', body, 'meal-plan', root)
 
 def build_shopping():
     root = '../'
-    body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Your shopping list</p><h1>Everything you need,<br><em>in one place.</em></h1><p class="hero-lead">Add ingredients from any recipe or the five dinner ideas. Your list is saved on this device.</p></div>{WAVE}</section>
+    body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Your shopping list</p><h1>Everything you need,<br><em>in one place.</em></h1><p class="hero-lead">Add ingredients from any recipe or the Small-Plate Week. Your list is saved on this device.</p></div>{WAVE}</section>
 <section class="container section narrow">
   <div class="list-toolbar no-print">
     <button class="btn btn-dark" id="list-copy">Copy list</button><button class="btn btn-outline" id="list-share">{ICON['share']} Share</button>
