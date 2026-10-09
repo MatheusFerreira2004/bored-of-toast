@@ -640,7 +640,7 @@ def build_about():
             ('heart', 'Gentle on hard days', 'Cold, mild and soft options for when nothing sounds good.'), ('users', 'Real food', 'Everyday ingredients from a regular grocery store.')]
     body = f'''{hero}
 <section class="container section" id="story"><div class="story">
-  <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="main" loading="lazy"{rimg(root, 'images/our-story.webp', SIZES['story'])}><div class="note"><span class="hand">made with love ♥</span></div></div>
+  <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Fresh tomatoes and herbs on a kitchen table" class="main" loading="lazy"{rimg(root, 'images/our-story.webp', SIZES['story'])}><div class="note"><span class="hand">made with love ♥</span></div><p class="photo-credit">Photo: <a href="https://www.pexels.com/photo/fresh-tomatoes-and-herbs-on-a-kitchen-table-37314037/" target="_blank" rel="noopener">Salva Amin Azad</a> on Pexels</p></div>
   <div class="reveal"><p class="tag">Our story</p><h2>It started with one<br>too many slices of toast.</h2>
     <p>Bored of Toast started with a simple idea: real food, made easy. Over time, the question changed: what do you cook when your appetite is small but your body still needs protein?</p>
     <p>That’s the kitchen we write for now: people eating smaller portions, people on GLP-1 medication, and anyone who has opened the fridge and found that nothing sounds good.</p>

@@ -159,5 +159,12 @@
   "photo_url": "https://www.pexels.com/photo/delicious-meatballs-in-rich-tomato-sauce-34314421/",
   "source": "Pexels",
   "alt": "Meatballs in tomato sauce garnished with parsley."
+ },
+ "our-story": {
+  "photographer": "Salva Amin Azad",
+  "photographer_url": "https://www.pexels.com/@salva-amin-azad-736234677/",
+  "photo_url": "https://www.pexels.com/photo/fresh-tomatoes-and-herbs-on-a-kitchen-table-37314037/",
+  "source": "Pexels",
+  "alt": "Fresh tomatoes and herbs on a kitchen table."
  }
 }
