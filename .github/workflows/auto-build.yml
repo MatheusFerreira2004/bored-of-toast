@@ -1,0 +1,70 @@
+name: Auto build
+
+on:
+  push:
+    branches: ['content/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run update scripts
+        run: |
+          shopt -s nullglob
+          echo '## Update scripts' >> "$GITHUB_STEP_SUMMARY"
+          for f in _src/update_*.py; do
+            echo "### $f" >> "$GITHUB_STEP_SUMMARY"
+            python3 "$f" | tee -a "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: Regenerate the site
+        run: |
+          rm -rf _src/site && mkdir -p _src/site
+          cp -r images _src/site/images
+          python3 _src/build.py
+          cp -r _src/site/. ./
+          rm -rf _src/site
+          find . -name __pycache__ -type d -prune -exec rm -rf {} +
+
+      - name: Compare with a fresh build (same test as checks.yml)
+        run: |
+          mkdir -p _src/site && cp -r images _src/site/images
+          python3 _src/build.py
+          diff -r -q _src/site . -x images -x _src -x .git -x .github -x README.md -x sitemap.xml
+          rm -rf _src/site
+          find . -name __pycache__ -type d -prune -exec rm -rf {} +
+
+      - name: Site checks
+        run: |
+          echo '## Site checks' >> "$GITHUB_STEP_SUMMARY"
+          python3 _src/checks.py | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 _src/journey_checks.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit regenerated site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Regenerate site (auto build)"
+            git push
+          fi
