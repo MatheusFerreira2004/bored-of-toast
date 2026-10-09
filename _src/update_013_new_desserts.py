@@ -9,6 +9,7 @@
 - New photos from Pexels (free license, no AI), credited on the site. Recipe image (4:3 WebP),
   Open Graph image (1200x630) and Pinterest pin (1000x1500 with title) are generated here.
 - Old URLs become redirect stubs (recipes/<old>/ -> recipes/<new>/), listed in _src/redirects.json.
+  Old ids still used elsewhere in build.py (for example the 404 page) resolve to the new recipes.
 - Old photos, step photos and their credits are removed.
 - build.py: recipe redirects, new recipes added to FOCUS_IDS, leftover "Fall" filter chip removed.
 - checks.py: any "Redirecting…" stub is treated as a redirect page.
@@ -400,6 +401,13 @@ if 'RECIPE_REDIRECTS' not in b:
     if b.count(CALL_OLD) != 1:
         sys.exit('ERROR: guide build loop not found in build.py.')
     b = b.replace(CALL_OLD, '    for g in GUIDES:\n        build_guide(g)\n    build_recipe_redirects()\n    for old, new in GUIDE_REDIRECTS.items():')
+
+# Old ids still referenced elsewhere in build.py (for example the 404 page) resolve to the new recipes.
+ALIAS = "BY_ID.update({old: BY_ID[new] for old, new in RECIPE_REDIRECTS.items() if new in BY_ID and old not in BY_ID})\n"
+if ALIAS not in b:
+    b, n = re.subn(r"(RECIPE_REDIRECTS = [^\n]*\n)", lambda mm: mm.group(1) + ALIAS, b, count=1)
+    if n != 1:
+        sys.exit('ERROR: RECIPE_REDIRECTS line not found in build.py.')
 
 b = b.replace(" + [('fall', 'Fall')]", '')
 
