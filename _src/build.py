@@ -63,14 +63,16 @@ GUIDE_RELATED = {'pantry-staples': ['tomato-basil-soup', 'creamy-garlic-pasta', 
                  'knife-skills': ['shakshuka', 'lemon-chicken-orzo-soup', 'harvest-kale-salad']}
 NEW_IDS = ['buttermilk-pancakes', 'shakshuka', 'butternut-squash-soup', 'honey-garlic-chicken-thighs', 'avocado-toast-jammy-eggs', 'mushroom-risotto', 'apple-crisp', 'lemon-chicken-orzo-soup']
 
+FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl"]
+
 CATS = [
-    ('Beyond Toast', 'Beyond Toast', 'buttermilk-pancakes'),
-    ('Main Dishes', 'Main Dishes', 'honey-garlic-chicken-thighs'),
-    ('Salads', 'Salads', 'harvest-kale-salad'),
+    ('high-protein', 'High Protein', 'sheet-pan-salmon'),
+    ('small-plates', 'Small Plates', 'avocado-toast-jammy-eggs'),
+    ('gentle', 'Gentle', 'tomato-basil-soup'),
+    ('make-ahead', 'Make-Ahead', 'overnight-oats'),
     ('Soups', 'Soups', 'butternut-squash-soup'),
-    ('Desserts', 'Desserts', 'apple-crisp'),
-    ('quick', 'Quick & Easy', 'creamy-garlic-pasta'),
-    ('healthy', 'Healthy', 'mediterranean-grain-bowl'),
+    ('Beyond Toast', 'Beyond Toast', 'shakshuka'),
+    ('everyday', 'Everyday Favorites', 'creamy-garlic-pasta'),
 ]
 DIET = {'vegetarian': ('V', 'Vegetarian'), 'vegan': ('VG', 'Vegan'), 'gluten-free': ('GF', 'Gluten-free'), 'dairy-free': ('DF', 'Dairy-free')}
 SCHEMA_DIET = {'vegetarian': 'https://schema.org/VegetarianDiet', 'vegan': 'https://schema.org/VeganDiet', 'gluten-free': 'https://schema.org/GlutenFreeDiet'}
@@ -155,7 +157,7 @@ def footer(root):
   <div class="container footer-grid">
     <div>
       <a href="{root}" class="brand" aria-label="Bored of Toast home"><img src="{root}images/logo-white.png" alt="Bored of Toast" width="150" height="54" loading="lazy"></a>
-      <p class="footer-tagline">Good food without the fuss. Simple, tested recipes for real life.</p>
+      <p class="footer-tagline">Small plates, big protein. Simple recipes for small appetites.</p>
       {f'<div class="socials">{socials}</div>' if socials else ''}
     </div>
     <div><p class="fh">Explore</p><ul>{nav}</ul></div>
@@ -163,7 +165,7 @@ def footer(root):
     <div class="footer-cta"><p class="fh">Can't decide?</p><p>Let us pick something delicious for you.</p><button class="btn btn-yellow" data-random>Surprise me {ICON['arrow']}</button></div>
   </div>
   <div class="container footer-bottom">
-    <span>© {datetime.date.today().year} Bored of Toast. All rights reserved.</span>
+    <span>© {datetime.date.today().year} Bored of Toast. All rights reserved. General cooking education, not medical or nutrition advice.</span>
     <span><a href="{root}privacy/">Privacy</a> · <a href="{root}terms/">Terms</a> · <a href="{root}photo-credits/">Photo credits</a> · <a href="{root}sitemap.xml">Sitemap</a></span>
   </div>
 </footer>
@@ -218,7 +220,7 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
     open(full, 'w').write(doc)
 
 def stamp(root):
-    return f'''<div class="stamp" aria-hidden="true"><svg class="ring" viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text font-family="Inter, sans-serif" font-size="11.5" font-weight="600" letter-spacing="3.2" fill="#f7f2e7"><textPath href="#circ">GOOD FOOD • NO FUSS • TESTED AT HOME •</textPath></text></svg><div class="stamp-core"><img src="{root}images/favicon.png" alt=""></div></div>'''
+    return f'''<div class="stamp" aria-hidden="true"><svg class="ring" viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text font-family="Inter, sans-serif" font-size="11.5" font-weight="600" letter-spacing="3.2" fill="#f7f2e7"><textPath href="#circ">SMALL PLATES • BIG PROTEIN • NO FUSS •</textPath></text></svg><div class="stamp-core"><img src="{root}images/favicon.png" alt=""></div></div>'''
 
 def hero_bleed(root, img, eyebrow, h1, p, actions='', card='', short=False, trust=''):
     return f'''<section class="hero hero-bleed{' hero-short' if short else ''}">
@@ -272,31 +274,32 @@ def cats_grid(root):
 # ---------------------------------------------------------------- pages
 def build_home():
     root = ''
-    wk = BY_ID['creamy-garlic-pasta']
-    trust = '<div class="hero-trust">' + ''.join(f'<span>{ICON["check"]}{t}</span>' for t in ['Tested at home', 'Everyday ingredients', 'Step-by-step guides']) + '</div>'
-    hero = hero_bleed(root, 'images/avocado-toast-jammy-eggs.webp', 'Recipes · Tips · Inspiration', 'Good food,<br><em>every day.</em>',
-        'Simple, delicious recipes made for real life: easy enough for a weekday, special enough for the weekend.',
-        f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><button class="btn btn-ghost" data-random>Surprise me</button>',
+    wk = BY_ID['lemon-chicken-orzo-soup']
+    trust = '<div class="hero-trust">' + ''.join(f'<span>{ICON["check"]}{t}</span>' for t in ['Small portions', 'Gentle swaps', 'Everyday ingredients']) + '</div>'
+    hero = hero_bleed(root, 'images/avocado-toast-jammy-eggs.webp', 'High protein · Small plates · Gentle food', 'Small plates,<br><em>big protein.</em>',
+        'Simple recipes with the protein counted, in portions you can actually finish. Made for small appetites, busy days and everything in between.',
+        f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><a href="{root}starter-kit/" class="btn btn-ghost">Get the free starter kit</a>',
         float_card(root, wk, 'Recipe of the week'), trust=trust)
-    words = ['Fresh ingredients', 'Simple steps', 'Better breakfasts', 'Weeknight dinners', 'Cozy soups', 'Sweet treats', 'No fuss']
+    words = ['High protein', 'Small portions', 'Cold & gentle', 'Make-ahead', 'No-cook', 'Freezer-friendly']
     marquee = '<div class="marquee" aria-hidden="true"><div class="marquee-track">' + ''.join(f'<span>{w}</span>' for w in words * 2) + '</div></div>'
-    bt = [BY_ID[i] for i in ['buttermilk-pancakes', 'shakshuka', 'avocado-toast-jammy-eggs', 'overnight-oats']]
+    bt = [BY_ID[i] for i in ['shakshuka', 'avocado-toast-jammy-eggs', 'overnight-oats', 'breakfast-burritos']]
     fall = [r for r in RECIPES if 'fall' in r['tags']][:4]
-    latest = [BY_ID[i] for i in NEW_IDS]
+    latest = [BY_ID[i] for i in FOCUS_IDS[:8]]
     ing = [i['n'].split(',')[0] for g in wk['ingredients'] for i in g['items'] if i.get('q') is not None][:5]
     body = f'''{hero}{marquee}
+{marketing_block(root, 'free')}
 <section class="container section" style="padding-bottom:24px">
-  {section_head('Browse by category', 'From ten-minute breakfasts to weekend baking projects.', f'<a href="{root}recipes/" class="view-all">All recipes →</a>')}
+  {section_head('Browse by category', 'From five-minute breakfasts to freezer-friendly soups.', f'<a href="{root}recipes/" class="view-all">All recipes →</a>')}
   {cats_grid(root)}
 </section>
-{marketing_block(root, 'free')}
+
 
 <section class="section">
   <div class="container beyond">
     <div class="beyond-copy reveal">
       <span class="tag">Our signature category</span>
       <h2>Bored of toast?<br><em>Good.</em> Start here.</h2>
-      <p>Breakfast deserves better than the same slice every morning. Fluffy pancakes, eggs baked in spicy tomato sauce, oats that make themselves overnight, and yes, avocado toast done properly.</p>
+      <p>Breakfast is the easiest place to fit protein in. Eggs that barely need chewing, oats that make themselves overnight, and yes, avocado toast with a jammy egg on top.</p>
       <a href="{root}recipes/?cat=Beyond%20Toast" class="btn btn-dark">See all breakfast recipes {ICON['arrow']}</a>
     </div>
     <div class="beyond-grid">{''.join(card(root, r, desc=False) for r in bt)}</div>
@@ -304,7 +307,7 @@ def build_home():
 </section>
 
 <section class="container section">
-  {section_head('Fresh from our kitchen', 'The newest recipes, tested and ready for yours.', f'<a href="{root}recipes/" class="view-all">View all →</a>')}
+  {section_head('Small plates to start with', 'Smaller portions, protein listed, gentler swaps included.', f'<a href="{root}recipes/" class="view-all">View all →</a>')}
   <div class="recipe-grid four">{''.join(card(root, r) for r in latest)}</div>
 </section>
 
@@ -343,13 +346,13 @@ def build_home():
 </section>'''
     ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Bored of Toast", "url": SITE_URL,
            "potentialAction": {"@type": "SearchAction", "target": SITE_URL + "recipes/?q={search_term_string}", "query-input": "required name=search_term_string"}}]
-    page('', 'Bored of Toast | Good food, every day', 'Simple, delicious, tested recipes made for real life: easy enough for a weekday, special enough for the weekend.', body, 'home', root, jsonld=ld)
+    page('', 'Bored of Toast | Small plates, big protein', 'Simple high-protein recipes in small portions, with protein per serving and gentler swaps for low-appetite days.', body, 'home', root, jsonld=ld)
 
 def build_recipes():
     root = '../'
     pick = BY_ID['mediterranean-grain-bowl']
-    hero = hero_bleed(root, 'images/mediterranean-grain-bowl.webp', 'The recipe library', 'Explore, cook,<br><em>enjoy.</em>',
-        f'{len(RECIPES)} tested recipes for every kind of day, each with step-by-step instructions, tips, swaps and storage notes.',
+    hero = hero_bleed(root, 'images/mediterranean-grain-bowl.webp', 'The recipe library', 'Find your next<br><em>small plate.</em>',
+        f'{len(RECIPES)} recipes with step-by-step instructions, protein per serving and storage notes. Featured recipes add a small-portion tip and a gentler swap.',
         f'<button class="btn btn-yellow" data-random>Pick one for me {ICON["arrow"]}</button>', float_card(root, pick, "Editor's pick"), short=True)
     chips = [('all', 'All')] + [(k, l) for k, l, _ in CATS] + [('fall', 'Fall')]
     diets = [('vegetarian', 'Vegetarian'), ('gluten-free', 'Gluten-free'), ('dairy-free', 'Dairy-free')]
@@ -367,7 +370,7 @@ def build_recipes():
   <div class="cta reveal" style="margin-top:72px"><div><h2>Can't decide what to cook?</h2><p>Let us pick a recipe for you. No scrolling required.</p></div><button class="btn btn-yellow" data-random>Surprise me {ICON['arrow']}</button></div>
 </div>'''
     ld = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}recipes/{r['id']}/"} for i, r in enumerate(RECIPES)]}]
-    page('recipes/', 'All Recipes | Bored of Toast', f'Browse {len(RECIPES)} simple, tested recipes: breakfasts, weeknight dinners, soups, salads and desserts.', body, 'recipes', root, jsonld=ld)
+    page('recipes/', 'All Recipes | Bored of Toast', 'High-protein recipes in small portions: breakfasts, soups, small plates and make-ahead meals, with gentler swaps.', body, 'recipes', root, jsonld=ld)
 
 def recipe_ld(r):
     ings = [ing_text(i) for g in r['ingredients'] for i in g['items']]
@@ -478,7 +481,7 @@ def build_recipe(r):
         <div class="info-card"><h3>{ICON['box']} Storage & reheating</h3><p>{e(r['storage'])}</p></div>
       </div></section>
       <section class="faq reveal"><h2>Recipe FAQ</h2>{''.join(f'<details {"open" if i == 0 else ""}><summary>{e(q)}</summary><p>{e(a)}</p></details>' for i, (q, a) in enumerate(r['faq']))}</section>
-      {contextual_link(root) if r['id'] in ['overnight-oats', 'tomato-basil-soup', 'lemon-chicken-orzo-soup', 'mediterranean-grain-bowl', 'chicken-avocado-salad'] else ''}
+      {contextual_link(root) if r['id'] in FOCUS_IDS else ''}
       {comments}
     </article>
 
@@ -611,8 +614,8 @@ def build_shopping():
 
 def build_about():
     root = '../'
-    hero = hero_bleed(root, 'images/tomato-basil-soup.webp', 'About Bored of Toast', 'Our passion is<br><em>good food.</em>',
-        "We believe great food doesn't have to be complicated. Bored of Toast is here to make everyday cooking easier, more enjoyable and a little more delicious.",
+    hero = hero_bleed(root, 'images/tomato-basil-soup.webp', 'About Bored of Toast', 'Good food,<br><em>in smaller bites.</em>',
+        "Eating less shouldn’t mean eating badly. We make small, high-protein meals simple, practical and still delicious.",
         f'<a href="#story" class="btn btn-yellow">Read our story {ICON["down"]}</a><a href="#contact" class="btn btn-ghost">Say hello</a>',
         f'<a class="float-card" href="#story"><img src="{root}images/our-story.webp" alt=""{rimg(root, "images/our-story.webp", SIZES["avatar"])}><div><small>Our story</small><strong>It started with toast</strong><span>Read how it began →</span></div></a>', short=True)
     vals = [('leaf', 'Real food', 'Fresh ingredients and real flavor, nothing overly processed.'), ('chef', 'Simple cooking', 'Clear steps and honest timing, so you are never left guessing.'),
@@ -621,14 +624,14 @@ def build_about():
 <section class="container section" id="story"><div class="story">
   <div class="story-media reveal"><img src="{root}images/our-story.webp" alt="Home cook chopping fresh parsley next to ripe tomatoes" class="main" loading="lazy"{rimg(root, 'images/our-story.webp', SIZES['story'])}><div class="note"><span class="hand">made with love ♥</span></div></div>
   <div class="reveal"><p class="tag">Our story</p><h2>It started with one<br>too many slices of toast.</h2>
-    <p>Bored of Toast started with a simple idea: real food, made easy. We were tired of eating the same thing every night, so we started collecting the recipes that got us excited to cook again.</p>
-    <p>What began as a small collection of favorites has grown into a place for home cooks, food lovers and anyone who believes that good food makes life better.</p>
-    <p>Every recipe here is cooked in a real home kitchen, written in plain language and tested until it works every single time.</p>
+    <p>Bored of Toast started with a simple idea: real food, made easy. Over time, the question changed: what do you cook when your appetite is small but your body still needs protein?</p>
+    <p>That’s the kitchen we write for now: people eating smaller portions, people on GLP-1 medication, and anyone who has opened the fridge and found that nothing sounds good.</p>
+    <p>Every recipe here is written in plain language, with a smaller portion in mind and a gentler option for harder days.</p>
     <a href="{root}recipes/" class="btn btn-dark" style="margin-top:10px">Browse our recipes {ICON['arrow']}</a></div>
 </div></section>
 <section class="section bg-paper"><div class="container">{section_head('What we believe in', 'Four simple ideas behind every recipe we share.')}
   <div class="values">{''.join(f'<div class="value reveal"><div class="icon-circle">{ICON[i]}</div><h3>{t}</h3><p>{d}</p></div>' for i, t, d in vals)}</div></div></section>
-<section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we're here for every meal, big or small.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"{rimg(root, 'images/chicken-avocado-salad.webp', SIZES['cta'])}></div></section>
+<section class="container section"><div class="cta cta-photo reveal"><div class="cta-text"><h2>Cooking is a small<br>act of care.</h2><p>And we’re here for every meal, especially the small ones.</p></div><img src="{root}images/chicken-avocado-salad.webp" alt="" class="bg" loading="lazy"{rimg(root, 'images/chicken-avocado-salad.webp', SIZES['cta'])}></div></section>
 <section class="container section" id="contact" style="padding-top:0"><div class="contact">
   <div class="reveal"><p class="tag">Get in touch</p><h2>Say hello</h2><p>Have a question about a recipe, a dish you'd love to see here, or an idea to work together? Use the form to prepare a draft, then send it from your email app.</p>
     <ul class="contact-list"><li><span class="icon-circle">{ICON['box']}</span>{EMAIL}</li><li><span class="icon-circle">{ICON['instagram']}</span>{INSTAGRAM}</li></ul></div>
@@ -636,7 +639,7 @@ def build_about():
     <label>Message<textarea name="message" required placeholder="Tell us what's cooking…"></textarea></label>
     <div><button type="submit" class="btn btn-dark">Open email draft {ICON['arrow']}</button></div><p class="form-note" id="form-note">Your email app should open with a draft. Review and send it there. If it does not open, your text stays in this form.</p></form>
 </div></section>'''
-    page('about/', 'About | Bored of Toast', "We believe great food doesn't have to be complicated. Meet the kitchen behind Bored of Toast.", body, 'about', root)
+    page('about/', 'About | Bored of Toast', "Bored of Toast shares small, high-protein recipes for small appetites, with gentle options for harder days.", body, 'about', root)
 
 def build_legal(key, path):
     root = '../'
