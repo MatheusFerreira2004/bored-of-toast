@@ -6,13 +6,6 @@
   "source": "Pexels",
   "alt": "Fresh salad with grilled chicken, avocado, lettuce, and sesame seeds drizzled with dressing."
  },
- "creamy-garlic-pasta": {
-  "photographer": "Shameel mukkath",
-  "photographer_url": "https://www.pexels.com/@shameel-mukkath-3421394",
-  "photo_url": "https://www.pexels.com/photo/overhead-view-of-meal-with-cheese-5639532/",
-  "source": "Pexels",
-  "alt": "Delicious creamy fettuccine Alfredo with basil garnish, perfect for dinner."
- },
  "sheet-pan-salmon": {
   "photographer": "ธันยกร ไกรสร",
   "photographer_url": "https://www.pexels.com/@tanyakorn",
@@ -33,13 +26,6 @@
   "photo_url": "https://www.pexels.com/photo/brown-soup-in-white-ceramic-bowl-539451/",
   "source": "Pexels",
   "alt": "Delicious homemade tomato soup served with basil leaves and rustic bread."
- },
- "beef-tacos": {
-  "photographer": "Chitokan C.",
-  "photographer_url": "https://www.pexels.com/@chitokan",
-  "photo_url": "https://www.pexels.com/photo/close-up-photograph-of-a-plate-with-tacos-3264572/",
-  "source": "Pexels",
-  "alt": "Close-up of beef tacos with cilantro and lime on a plate, showcasing Mexican cuisine."
  },
  "shakshuka": {
   "photographer": "Boryslav Shoot",
@@ -82,20 +68,6 @@
   "photo_url": "https://www.pexels.com/photo/traditional-ecuadorian-chicken-soup-in-white-bowl-32655226/",
   "source": "Pexels",
   "alt": "Warm and hearty Ecuadorian soup with chicken leg, vegetables, and herbs served in a white bowl."
- },
- "honey-garlic-chicken-thighs": {
-  "photographer": "Marvin  Sacdalan",
-  "photographer_url": "https://www.pexels.com/@marvin-sacdalan-276316567",
-  "photo_url": "https://www.pexels.com/photo/chicken-barbeque-topped-with-slices-of-onion-leeks-on-white-ceramic-plate-13065185/",
-  "source": "Pexels",
-  "alt": "Delicious grilled chicken teriyaki topped with fresh leeks and sesame seeds, served on a white plate."
- },
- "mushroom-risotto": {
-  "photographer": "Adriano Bragi",
-  "photographer_url": "https://www.pexels.com/@adriano-bragi-1288014591",
-  "photo_url": "https://www.pexels.com/photo/delicious-mushroom-risotto-with-parmesan-cheese-31779539/",
-  "source": "Pexels",
-  "alt": "Savor the rich and creamy mushroom risotto topped with fresh Parmesan cheese."
  },
  "guide-gentle": {
   "photographer": "Foodie Factor",
@@ -159,5 +131,33 @@
   "photo_url": "https://www.pexels.com/photo/bowl-of-salad-and-fork-near-19572489/",
   "source": "Pexels",
   "alt": "Top view of a tuna salad with fresh vegetables and a fork."
+ },
+ "lighter-chicken-alfredo": {
+  "photographer": "Kemal Can",
+  "photographer_url": "https://www.pexels.com/@kemalcanfilm/",
+  "photo_url": "https://www.pexels.com/photo/delicious-chicken-alfredo-pasta-dish-37118296/",
+  "source": "Pexels",
+  "alt": "Creamy chicken Alfredo pasta topped with Parmesan and parsley."
+ },
+ "turkey-taco-rice-bowls": {
+  "photographer": "Justin Doherty",
+  "photographer_url": "https://www.pexels.com/@justindoherty/",
+  "photo_url": "https://www.pexels.com/photo/traditional-meal-of-vegetables-with-rice-and-meat-4929692/",
+  "source": "Pexels",
+  "alt": "A rice bowl with seasoned ground meat, corn and salsa."
+ },
+ "crispy-baked-chicken-bites": {
+  "photographer": "Đậu Photograph",
+  "photographer_url": "https://www.pexels.com/@dauphotographer/",
+  "photo_url": "https://www.pexels.com/photo/golden-crispy-chicken-bites-with-fresh-salad-30882821/",
+  "source": "Pexels",
+  "alt": "Golden crispy chicken bites with a dipping sauce and fresh salad."
+ },
+ "turkey-meatballs-tomato-sauce": {
+  "photographer": "ERIVELTO Martins",
+  "photographer_url": "https://www.pexels.com/@erivas/",
+  "photo_url": "https://www.pexels.com/photo/delicious-meatballs-in-rich-tomato-sauce-34314421/",
+  "source": "Pexels",
+  "alt": "Meatballs in tomato sauce garnished with parsley."
  }
 }

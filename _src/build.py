@@ -64,9 +64,9 @@ GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 
 GUIDE_REDIRECTS = {'pantry-staples': 'small-portion-meal-prep', 'perfect-rice': 'protein-first', 'knife-skills': ''}
 RECIPE_REDIRECTS = json.load(open(os.path.join(HERE, 'redirects.json'))) if os.path.exists(os.path.join(HERE, 'redirects.json')) else {}
 BY_ID.update({old: BY_ID[new] for old, new in RECIPE_REDIRECTS.items() if new in BY_ID and old not in BY_ID})
-NEW_IDS = ["cottage-cheese-pancakes", "shakshuka", "butternut-squash-soup", "honey-garlic-chicken-thighs", "avocado-toast-jammy-eggs", "mushroom-risotto", "baked-cinnamon-apples", "lemon-chicken-orzo-soup"]
+NEW_IDS = ["cottage-cheese-pancakes", "shakshuka", "butternut-squash-soup", "crispy-baked-chicken-bites", "avocado-toast-jammy-eggs", "turkey-meatballs-tomato-sauce", "baked-cinnamon-apples", "lemon-chicken-orzo-soup"]
 
-FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "peanut-butter-protein-bites", "chocolate-yogurt-mousse-cups", "baked-cinnamon-apples", "cottage-cheese-pancakes", "spinach-feta-mini-frittata", "tuna-white-bean-salad"]
+FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "peanut-butter-protein-bites", "chocolate-yogurt-mousse-cups", "baked-cinnamon-apples", "cottage-cheese-pancakes", "spinach-feta-mini-frittata", "tuna-white-bean-salad", "lighter-chicken-alfredo", "turkey-taco-rice-bowls", "crispy-baked-chicken-bites", "turkey-meatballs-tomato-sauce"]
 
 CATS = [
     ('high-protein', 'High Protein', 'sheet-pan-salmon'),
@@ -75,7 +75,6 @@ CATS = [
     ('make-ahead', 'Make-Ahead', 'overnight-oats'),
     ('Soups', 'Soups', 'butternut-squash-soup'),
     ('Beyond Toast', 'Beyond Toast', 'shakshuka'),
-    ('everyday', 'Everyday Favorites', 'creamy-garlic-pasta'),
 ]
 DIET = {'vegetarian': ('V', 'Vegetarian'), 'vegan': ('VG', 'Vegan'), 'gluten-free': ('GF', 'Gluten-free'), 'dairy-free': ('DF', 'Dairy-free')}
 SCHEMA_DIET = {'vegetarian': 'https://schema.org/VegetarianDiet', 'vegan': 'https://schema.org/VeganDiet', 'gluten-free': 'https://schema.org/GlutenFreeDiet'}
@@ -680,7 +679,7 @@ def build_credits():
 
 def build_404():
     root = SITE_URL
-    picks = [BY_ID[i] for i in ['buttermilk-pancakes', 'creamy-garlic-pasta', 'apple-crisp']]
+    picks = [BY_ID[i] for i in ['buttermilk-pancakes', 'lighter-chicken-alfredo', 'apple-crisp']]
     body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Error 404</p><h1>This page is <em>toast.</em></h1><p class="hero-lead">We couldn't find what you were looking for. Try a search, or start with one of these favorites.</p><div class="hero-actions"><button class="btn btn-yellow" data-open-search>{ICON['search']} Search recipes</button><a class="btn btn-ghost" href="{root}">Back home</a></div></div>{WAVE}</section>
 <section class="container section"><div class="recipe-grid three">{''.join(card(root, r) for r in picks)}</div></section>'''
     page('404.html', 'Page not found | Bored of Toast', 'Page not found.', body, '', root, head_extra='<meta name="robots" content="noindex">')
@@ -696,7 +695,7 @@ def build_index_js():
               's': ' '.join([r['title'], r['category'], r['desc']] + r['tags'] + r.get('diet', []) + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()} for r in RECIPES]
     items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': thumb(f"images/{GUIDE_IMG[g['id']]}.webp"), 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
                's': (g['title'] + ' ' + g['subtitle'] + ' guide').lower()} for g in GUIDES]
-    items += [{'t': '5 Easy Dinners', 'u': 'meal-plan/', 'i': 'images/honey-garlic-chicken-thighs.webp', 'c': 'Dinner ideas', 'm': '5 free recipes', 'k': 'guide', 's': 'five 5 easy dinners meal plan shopping list weeknight'}]
+    items += [{'t': '5 Easy Dinners', 'u': 'meal-plan/', 'i': 'images/crispy-baked-chicken-bites.webp', 'c': 'Dinner ideas', 'm': '5 free recipes', 'k': 'guide', 's': 'five 5 easy dinners meal plan shopping list weeknight'}]
     items += [{'t': 'The GLP-1 Kitchen Starter Kit', 'u': 'starter-kit/', 'i': 'images/commerce/starter-cover.jpg', 'c': 'Free guide', 'm': '9-page PDF', 'k': 'guide', 's': 'free glp-1 starter kit nourish recipes organizer shopping'}, {'t': 'Nourished - The GLP-1 Kitchen Companion', 'u': 'nourished/', 'i': 'images/commerce/nourished-cover.jpg', 'c': 'Cookbook collection', 'm': 'US$20', 'k': 'guide', 's': 'nourished glp-1 cookbook recipes collection meal planning shopping'}]
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
