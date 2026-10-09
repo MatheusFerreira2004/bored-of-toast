@@ -70,7 +70,6 @@ FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-sal
 
 CATS = [
     ('high-protein', 'High Protein', 'sheet-pan-salmon'),
-    ('small-plates', 'Small Plates', 'avocado-toast-jammy-eggs'),
     ('gentle', 'Gentle', 'tomato-basil-soup'),
     ('make-ahead', 'Make-Ahead', 'overnight-oats'),
     ('Soups', 'Soups', 'butternut-squash-soup'),
@@ -284,9 +283,11 @@ def build_home():
         float_card(root, wk, 'Recipe of the week'), trust=trust)
     words = ['High protein', 'Small portions', 'Gentle swaps', 'Make-ahead', 'Protein first', 'Small and often']
     marquee = '<div class="marquee" aria-hidden="true"><div class="marquee-track">' + ''.join(f'<span>{w}</span>' for w in words * 2) + '</div></div>'
-    bt = [BY_ID[i] for i in ['shakshuka', 'avocado-toast-jammy-eggs', 'overnight-oats', 'breakfast-burritos']]
+    bt = [BY_ID[i] for i in ['cottage-cheese-pancakes', 'spinach-feta-mini-frittata', 'shakshuka', 'avocado-toast-jammy-eggs']]
     fall = [r for r in RECIPES if 'make-ahead' in r['tags']][:4]
-    latest = [BY_ID[i] for i in FOCUS_IDS[:8]]
+    latest = [BY_ID[i] for i in ['lighter-chicken-alfredo', 'turkey-taco-rice-bowls', 'crispy-baked-chicken-bites', 'tuna-white-bean-salad', 'sheet-pan-salmon', 'chicken-avocado-salad', 'peanut-butter-protein-bites', 'chocolate-yogurt-mousse-cups']]
+    shown = {r['id'] for r in bt + latest} | {wk['id']}
+    fall = [r for r in RECIPES if 'make-ahead' in r['tags'] and r['id'] not in shown][:4]
     ing = [i['n'].split(',')[0] for g in wk['ingredients'] for i in g['items'] if i.get('q') is not None][:5]
     body = f'''{hero}{marquee}
 {marketing_block(root, 'free')}
@@ -354,7 +355,7 @@ def build_recipes():
     root = '../'
     pick = BY_ID['mediterranean-grain-bowl']
     hero = hero_bleed(root, 'images/mediterranean-grain-bowl.webp', 'The recipe library', 'Find your next<br><em>small plate.</em>',
-        f'{len(RECIPES)} recipes with step-by-step instructions, protein per serving and storage notes. Featured recipes add a small-portion tip and a gentler swap.',
+        f'{len(RECIPES)} recipes with step-by-step instructions, protein per serving and storage notes. Every recipe includes a small-portion tip and a gentler swap.',
         f'<button class="btn btn-yellow" data-random>Pick one for me {ICON["arrow"]}</button>', float_card(root, pick, "Editor's pick"), short=True)
     chips = [('all', 'All')] + [(k, l) for k, l, _ in CATS]
     diets = [('vegetarian', 'Vegetarian'), ('gluten-free', 'Gluten-free'), ('dairy-free', 'Dairy-free')]
@@ -614,7 +615,7 @@ def build_meal_plan():
   <div class="reveal"><h2 class="title">Make-ahead extras</h2><p class="fine">Breakfasts you can prepare once and eat all week. Not included in “Add all 5 meals”; open either recipe to add its ingredients separately.</p><div class="recipe-grid two">{bonus}</div></div>
 </div></section>
 <script type="application/json" id="plan-json">{json.dumps(pdata, ensure_ascii=False)}</script>'''
-    page('meal-plan/', 'Small-Plate Week | Bored of Toast', 'Five small, high-protein meals for one easy week, with prep tips and ingredients you can save to your shopping list.', body, 'meal-plan', root)
+    page('meal-plan/', 'Small-Plate Week | Bored of Toast', 'Five small, protein-first meals for one easy week, with prep tips and ingredients you can save to your shopping list.', body, 'meal-plan', root)
 
 def build_shopping():
     root = '../'
