@@ -98,7 +98,7 @@
   ],
   "width": 1100
  },
- "images/guide-knife.webp": {
+ "images/guide-gentle.webp": {
   "variants": [
    160,
    320,
@@ -108,7 +108,7 @@
   ],
   "width": 1400
  },
- "images/guide-pantry.webp": {
+ "images/guide-mealprep.webp": {
   "variants": [
    160,
    320,
@@ -118,7 +118,7 @@
   ],
   "width": 1400
  },
- "images/guide-rice.webp": {
+ "images/guide-protein.webp": {
   "variants": [
    160,
    320,

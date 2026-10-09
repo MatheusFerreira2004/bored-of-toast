@@ -1,409 +1,395 @@
 {
   "guides": [
     {
-      "id": "pantry-staples",
-      "title": "The Pantry Staples Every Home Cook Needs",
-      "subtitle": "A short, realistic list of shelf-stable basics that turn a random Tuesday into a real dinner.",
-      "category": "Kitchen Basics",
-      "readTime": 7,
+      "id": "nothing-sounds-good",
+      "title": "What to Eat When Nothing Sounds Good",
+      "subtitle": "Gentle, small, mostly no-cook ideas for low-appetite days, and a few habits that make eating a little easier.",
+      "category": "GLP-1 Kitchen",
+      "readTime": 5,
       "intro": [
-        "We have all been there. You open the cupboard, stare at a lonely can of chickpeas and a bag of something from 2023, and order takeout. A well-stocked pantry fixes that. It is not about owning forty spices. It is about keeping a small set of hard-working basics on hand so that a handful of fresh ingredients can always become a meal.",
-        "This guide covers what we keep in our own kitchens, why each item earns its shelf space, and how to store it so it actually lasts. Start with the essentials, then add the flavor boosters as your cooking grows. You do not need to buy everything this week. Pick up a few things each shopping trip and you will be set within a month."
+        "Some days, food just does not sound good. Maybe your appetite is smaller than it used to be, maybe smells feel stronger, or maybe you are simply tired. On those days, the goal is not a perfect meal. It is getting something useful in, in a form that feels manageable.",
+        "This guide collects the foods and habits we lean on when appetite is low: cooler temperatures, milder flavors, softer textures and portions small enough to finish. It is general cooking education, not medical advice. If you are struggling to eat or drink for more than a day or two, talk to your care team."
       ],
       "takeaways": [
-        "Start with oil, salt, acid, and a few dry carbs.",
-        "Canned tomatoes, beans, and stock cover dozens of dinners.",
-        "A few bold flavor boosters do more than a wall of spices.",
-        "Store oils and whole grains cool and dark, and date your jars."
+        "Smaller portions, more often, can feel easier than three full meals.",
+        "Cool or warm food usually smells less than hot food.",
+        "Start with the protein while your appetite is at its best.",
+        "Keep a few no-cook options ready so a hard day needs no cooking."
       ],
       "sections": [
         {
-          "h": "The Absolute Essentials",
+          "h": "Start Small, Then Stop",
           "p": [
-            "If you only buy one group from this list, make it this one. These items show up in almost every savory recipe on Bored of Toast, and with them alone you can cook a surprising amount."
+            "A full plate can feel like a wall on a low-appetite day. Serve half of what you think you can eat, finish it, and go back only if you want to. A half bowl you finish counts for more than a full one you push away."
           ],
           "list": [
-            "Kosher salt: Larger flakes are easier to pinch and harder to overdo than fine table salt. Keep fine sea salt for baking if you like.",
-            "Black peppercorns: Buy whole and grind them fresh. Pre-ground pepper loses its punch fast.",
-            "Neutral oil: Canola, vegetable, or avocado oil for high-heat searing and frying.",
-            "Extra-virgin olive oil: For dressings, drizzling, and gentle sautéing.",
-            "Vinegar: One red wine or apple cider vinegar plus one rice vinegar covers most needs.",
-            "Garlic and onions: Technically fresh, but they keep for weeks in a cool, dark spot and start almost everything."
+            "Use smaller plates and bowls: A dessert plate or a mug makes a small portion look like a complete meal.",
+            "Eat at regular times: Small meals every few hours can be easier than waiting until you feel hungry.",
+            "Sip between meals: Drinking a lot with a meal can make you feel full sooner, so many people sip between meals instead."
           ]
         },
         {
-          "h": "Grains, Pasta, and Other Dry Carbs",
+          "h": "Cooler, Milder, Softer",
           "p": [
-            "Dry carbs are the backbone of quick dinners. They are cheap, they keep for months, and they stretch a little protein into a full meal.",
-            "Keep at least one long-cooking and one fast-cooking option so you are covered on busy nights."
-          ],
-          "list": [
-            "Long-grain white rice: Jasmine or basmati for everyday use. See our perfect rice guide for ratios.",
-            "Pasta: One long shape (spaghetti) and one short shape (penne or rigatoni).",
-            "Rolled oats: Breakfast, baking, and even meatball binder.",
-            "All-purpose flour: For thickening sauces, dredging, and weekend baking.",
-            "Breadcrumbs or panko: Crunchy toppings and crispy coatings in minutes.",
-            "Lentils: Red lentils cook in 15 minutes with no soaking."
-          ]
-        },
-        {
-          "h": "Cans and Jars That Save Dinner",
-          "p": [
-            "Canned goods get a bad reputation, but good canned tomatoes and beans are often better than out-of-season fresh ones. These are the items we reach for when the fridge looks empty."
-          ],
-          "list": [
-            "Whole peeled tomatoes: Crush them by hand for sauces, soups, and braises.",
-            "Tomato paste: Buy it in a tube so you can use a spoonful at a time.",
-            "Beans: Chickpeas, black beans, and white beans. Rinse before using to cut the sodium.",
-            "Chicken or vegetable stock: Cartons or bouillon paste, which takes up far less space.",
-            "Coconut milk: Curries, soups, and creamy rice.",
-            "Canned tuna or salmon: Instant protein for salads, pasta, and sandwiches."
-          ]
-        },
-        {
-          "h": "Flavor Boosters Worth the Space",
-          "p": [
-            "This is where a pantry goes from functional to fun. A splash or spoonful of one of these can rescue a bland dish in seconds. You do not need all of them, so start with the ones that match the food you like to eat.",
-            "Most of these live happily in the fridge door once opened and last for months."
-          ],
-          "list": [
-            "Soy sauce: Salty, savory depth for far more than stir-fries.",
-            "Dijon mustard: Emulsifies dressings and perks up pan sauces.",
-            "Hot sauce or chili crisp: Heat plus flavor, and a great fix for boring eggs.",
-            "Honey or maple syrup: Balances acidity and adds gloss to glazes.",
-            "Fish sauce: A few drops add savory depth without tasting fishy.",
-            "Parmesan: A hard wedge keeps for weeks and grates onto almost anything."
-          ]
-        },
-        {
-          "h": "A Spice Rack That Actually Gets Used",
-          "p": [
-            "Skip the pre-filled spice carousel. Buy small jars of the spices you will use in the next six months, because ground spices fade after about a year. If a spice smells like dust when you open it, it will taste like dust too."
+            "Temperature and texture make a big difference. Hot food releases more aroma, which can be off-putting when your stomach feels unsettled. Cool or lukewarm food, mild seasoning and soft textures are often easier to face."
           ],
           "table": {
             "head": [
-              "Spice",
-              "Best for",
-              "Swap if you are out"
+              "Instead of",
+              "Try"
             ],
             "rows": [
               [
-                "Ground cumin",
-                "Tacos, chili, lentils, roasted carrots",
-                "Chili powder"
+                "A steaming bowl of soup",
+                "Soup served warm, sipped from a mug"
               ],
               [
-                "Smoked paprika",
-                "Roast potatoes, chicken, beans",
-                "Sweet paprika plus a pinch of cumin"
+                "Spicy or garlicky dishes",
+                "The same dish with sweet paprika and less garlic"
               ],
               [
-                "Red pepper flakes",
-                "Pasta, pizza, stir-fries",
-                "Cayenne (use half as much)"
+                "Crunchy, dry foods",
+                "Soft eggs, yogurt, blended soups, flaky fish"
               ],
               [
-                "Dried oregano",
-                "Tomato sauce, marinades, Greek salads",
-                "Dried thyme or Italian seasoning"
+                "A big plate of pasta",
+                "A small bowl with more protein than pasta"
               ],
               [
-                "Ground cinnamon",
-                "Oatmeal, baking, stews",
-                "Pumpkin pie spice"
-              ],
-              [
-                "Bay leaves",
-                "Soups, stocks, rice, braises",
-                "Leave it out, it is subtle"
+                "Fish cooked hot indoors",
+                "Salmon served at room temperature, or canned tuna"
               ]
             ]
           }
         },
         {
-          "h": "Storing It All So It Lasts",
+          "h": "No-Cook Options to Keep on Hand",
           "p": [
-            "Heat, light, and air are the enemies of pantry food. Keep oils and spices away from the stove, even though that is where it is most convenient. Transfer flour, oats, and grains to airtight containers to keep pests out and freshness in.",
-            "Whole-grain flours, nuts, and brown rice contain oils that go rancid faster, so store them in the fridge or freezer if you do not use them often. Finally, grab a marker and write the purchase date on every jar. Future you will be grateful."
+            "On the hardest days, cooking is the barrier. Keep a few of these in the fridge or pantry so there is always something ready. Protein amounts are estimates; check labels."
+          ],
+          "list": [
+            "Plain Greek yogurt: About 17 g protein in a 3/4-cup serving. Add berries or a little honey.",
+            "Cottage cheese: About 12 g protein in 1/2 cup. Good with fruit or on a cracker.",
+            "Hard-boiled eggs: About 6 g protein each. Make a batch and keep them peeled.",
+            "Overnight oats: Cold, soft and already portioned in small jars.",
+            "Milk or soy milk: About 7 to 8 g protein per cup, easy to sip slowly.",
+            "String cheese and crackers: Small, mild and easy to carry."
+          ]
+        },
+        {
+          "h": "Gentle Recipes From the Site",
+          "p": [
+            "Each of these recipes has a \"Make it gentler\" variation, with milder seasoning or a cooler way to serve it."
+          ],
+          "list": [
+            "Tomato Basil Soup with White Beans: Smooth, mild and easy to sip from a mug.",
+            "Blueberry Vanilla Overnight Oats: Cold, soft and made the night before.",
+            "Butternut Squash Soup with White Beans: Gently sweet and velvety.",
+            "Lemon Chicken Orzo Soup: Brothy and light. Start with a mug of the broth."
+          ]
+        },
+        {
+          "h": "When to Ask for Help",
+          "p": [
+            "Low appetite is common, but some signs mean it is time to call your doctor or care team rather than adjust your menu."
+          ],
+          "list": [
+            "You cannot keep food or fluids down for more than a day.",
+            "You feel dizzy or very weak, or notice signs of dehydration such as very dark urine.",
+            "You have severe or persistent stomach pain.",
+            "You have been eating very little for several days in a row."
           ]
         }
       ],
       "faq": [
         [
-          "How long do dried spices really last?",
-          "Whole spices keep their flavor for two to three years. Ground spices are best within about a year. They will not make you sick after that, but they lose aroma and taste."
+          "Is it okay to eat the same few foods every day?",
+          "On hard days, yes. Repeating a handful of foods you can manage is a practical way to keep eating. Add variety again as your appetite returns, and talk to a dietitian if your options stay very limited."
         ],
         [
-          "Do I need to refrigerate soy sauce or hot sauce?",
-          "Not strictly, since both are high in salt or vinegar. Refrigerating after opening keeps the flavor fresher for longer, so we do it when there is room."
+          "Should I skip meals if I am not hungry?",
+          "Many people find small, regular meals easier than waiting for hunger. If you are unsure what is right for you, your care team can help you set a plan."
         ],
         [
-          "What is the cheapest way to build a pantry from scratch?",
-          "Buy a few items per shopping trip, start with the essentials section, and look at the bulk aisle for grains, lentils, and spices, where you can buy only what you need."
+          "What if smells bother me while cooking?",
+          "Cook ahead on a better day, open a window, choose no-cook foods, or let food cool before eating. Cooler food usually smells less."
         ]
       ]
     },
     {
-      "id": "perfect-rice",
-      "title": "How to Cook Perfect Rice, Every Time",
-      "subtitle": "Simple stovetop methods, reliable ratios, and quick fixes for when rice goes mushy or crunchy.",
-      "category": "Kitchen Basics",
-      "readTime": 8,
+      "id": "protein-first",
+      "title": "Protein First: Easy Ways to Add Protein to Small Meals",
+      "subtitle": "Simple swaps and add-ins that fit more protein into a smaller plate, with estimated amounts for each.",
+      "category": "GLP-1 Kitchen",
+      "readTime": 6,
       "intro": [
-        "Rice should be the easiest thing on the table, yet it is one of the most common kitchen frustrations. Gummy clumps, crunchy centers, a scorched layer stuck to the pot. The good news is that perfect rice is not luck. It comes down to three things: the right ratio of water to rice, steady low heat, and patience while it rests.",
-        "In this guide we walk through our go-to stovetop method for white rice, explain why brown rice needs different treatment, break down the difference between basmati and jasmine, and share a ratio table you can bookmark. We also cover how to rescue rice that went wrong, because it happens to all of us."
+        "When you eat less, each bite has to do more. Starting a meal with its protein, and choosing ingredients that carry more protein per spoonful, helps make sure the part your body needs most does not get left on the plate.",
+        "This guide covers the protein-first habit, a table of easy add-ins with estimated amounts, and swaps that change a familiar recipe without changing how it feels to eat. How much protein you need is personal; your doctor or a registered dietitian can help you set a target."
       ],
       "takeaways": [
-        "Rinse white rice until the water runs mostly clear.",
-        "Use a tight lid and the lowest heat, and do not peek.",
-        "Always rest rice off the heat for 10 minutes before fluffing.",
-        "Brown rice needs more water and roughly twice the time."
+        "Eat the protein on your plate first, while your appetite is at its best.",
+        "Swap cream and oil for Greek yogurt, cottage cheese or white beans.",
+        "Add a protein to snacks, not just meals.",
+        "Protein amounts here are estimates; labels and portions vary."
       ],
       "sections": [
         {
-          "h": "Our Foolproof Stovetop White Rice",
+          "h": "Why Protein First",
           "p": [
-            "This method works for long-grain white rice like jasmine or basmati. You need a heavy-bottomed pot with a tight-fitting lid. A thin pot creates hot spots that scorch the bottom before the top is cooked.",
-            "Plan on about 1 cup of dry rice for 2 to 3 people. It roughly triples in volume as it cooks."
-          ],
-          "list": [
-            "Rinse: Put 1 cup rice in a bowl, cover with cold water, swish, and drain. Repeat 2 to 3 times until the water is only slightly cloudy.",
-            "Combine: Add the rice, 1 1/2 cups water, and 1/2 teaspoon salt to the pot.",
-            "Boil: Bring to a boil over medium-high heat, uncovered, and give it one gentle stir.",
-            "Simmer: Cover, drop the heat to the lowest setting, and cook for 15 minutes without lifting the lid.",
-            "Rest: Turn off the heat and leave it covered for 10 minutes. The steam finishes the job.",
-            "Fluff: Use a fork or rice paddle to lift and separate the grains before serving."
+            "Fullness can arrive early when your appetite is small. If you start with toast or pasta, you may be full before you reach the eggs or chicken. Eating the protein first is a simple habit that keeps it from being left behind.",
+            "It does not mean skipping everything else. Vegetables, fruit and grains still matter. It just changes the order on the plate."
           ]
         },
         {
-          "h": "Why Rinsing and Resting Matter",
+          "h": "Easy Add-Ins and Their Protein",
           "p": [
-            "Rinsing washes away loose surface starch. That starch is what turns cooking water into glue and makes rice clump. Skip it for risotto or rice pudding, where you want creaminess, but rinse for fluffy side-dish rice.",
-            "Resting is the step most people skip. Right after cooking, the grains at the bottom are wetter than the top. Ten minutes off the heat lets moisture redistribute, so every grain is evenly tender and the rice releases cleanly from the pot."
-          ]
-        },
-        {
-          "h": "Brown Rice Needs a Different Plan",
-          "p": [
-            "Brown rice still has its bran layer, which is great for fiber and nutty flavor but slows down how fast water gets in. It needs more water and a lot more time, usually 40 to 45 minutes of simmering plus a 10 minute rest.",
-            "Our favorite shortcut is the pasta method. Boil brown rice in a big pot of salted water for about 30 minutes, drain it well, return it to the pot, cover, and let it steam off the heat for 10 minutes. You do not need to measure the water, and the grains come out distinct and never gummy."
-          ]
-        },
-        {
-          "h": "Basmati vs. Jasmine: What Is the Difference?",
-          "p": [
-            "Both are fragrant long-grain rices, and they are often used interchangeably, but they behave a little differently in the pot and on the plate."
-          ],
-          "list": [
-            "Basmati: Long, slender grains that get even longer as they cook. Dry, separate, and fluffy with a nutty aroma. Best for pilafs, biryani, and curries. Soaking for 20 to 30 minutes before cooking gives extra-long grains.",
-            "Jasmine: Slightly shorter and plumper, with a floral scent. Softer and a little sticky, so it is easy to eat with chopsticks. Great with stir-fries and Thai or Vietnamese dishes. It needs slightly less water than basmati.",
-            "Short-grain and sushi rice: Round grains with more starch, meant to be sticky. Rinse well and use a bit less water than long-grain."
-          ]
-        },
-        {
-          "h": "Rice-to-Water Ratio Cheat Sheet",
-          "p": [
-            "These ratios are for the stovetop absorption method with a tight lid. Rice varies by brand and age, so treat them as a starting point and adjust by a tablespoon or two once you know your rice. Times do not include the 10 minute rest."
+            "These are rough estimates based on typical USDA reference values and package labels. Brands vary, so check the label when it matters."
           ],
           "table": {
             "head": [
-              "Rice type",
-              "Rice : Water",
-              "Simmer time",
+              "Add-in",
+              "Amount",
+              "Protein (estimate)",
+              "Easy ways to use it"
+            ],
+            "rows": [
+              [
+                "Plain nonfat Greek yogurt",
+                "3/4 cup (170 g)",
+                "about 17 g",
+                "Oats, soups, dressings, dips"
+              ],
+              [
+                "Low-fat cottage cheese",
+                "1/2 cup (113 g)",
+                "about 12 g",
+                "Toast spread, eggs, fruit bowls"
+              ],
+              [
+                "Large egg",
+                "1 egg",
+                "about 6 g",
+                "Shakshuka, toast, salads"
+              ],
+              [
+                "Canned tuna, drained",
+                "3 oz (85 g)",
+                "about 17 to 20 g",
+                "Salads, wraps, crackers"
+              ],
+              [
+                "Cooked chicken breast",
+                "3 oz (85 g)",
+                "about 26 g",
+                "Soups, bowls, salads"
+              ],
+              [
+                "Shelled edamame",
+                "1/2 cup (78 g)",
+                "about 9 g",
+                "Grain bowls, snacks"
+              ],
+              [
+                "Canned white beans, drained",
+                "1/2 cup (about 125 g)",
+                "about 9 g",
+                "Blended into soups and sauces"
+              ],
+              [
+                "Milk or soy milk",
+                "1 cup",
+                "about 7 to 8 g",
+                "Oats, smoothies, sipping"
+              ]
+            ]
+          }
+        },
+        {
+          "h": "Swaps That Keep the Same Feel",
+          "p": [
+            "You do not need new recipes to eat more protein. Small changes to familiar ones go a long way."
+          ],
+          "list": [
+            "Cream in soups: Blend in a can of white beans, then stir in warmed Greek yogurt off the heat.",
+            "Oily dressings: Whisk Greek yogurt with lemon, a little olive oil and water until pourable.",
+            "Plain avocado toast: Mash the avocado with cottage cheese before spreading.",
+            "Pasta-heavy bowls: Use less pasta and more chicken, beans or edamame.",
+            "Pork sausage: Use lean turkey sausage and add egg whites to scrambles."
+          ]
+        },
+        {
+          "h": "Protein for Snacks, Too",
+          "p": [
+            "Small meals leave room for snacks between them. Pairing a snack with a protein makes it count for more."
+          ],
+          "list": [
+            "Apple slices with a spoonful of peanut butter",
+            "Cottage cheese with berries",
+            "A hard-boiled egg and a few crackers",
+            "Greek yogurt with a little granola",
+            "Edamame with a pinch of salt"
+          ]
+        },
+        {
+          "h": "Recipes Built Around It",
+          "p": [
+            "These recipes put the protein first. Values per serving are estimates."
+          ],
+          "list": [
+            "One-Pan Shakshuka: Two eggs per plate with Greek yogurt, about 20 g protein.",
+            "Avocado Cottage Cheese Toast: About 20 g protein on one slice.",
+            "Lemon Chicken Orzo Soup: More chicken than pasta, about 27 g protein per bowl.",
+            "Grilled Chicken Avocado Salad: About 30 g protein per bowl."
+          ]
+        }
+      ],
+      "faq": [
+        [
+          "How much protein do I need?",
+          "It depends on your body, health and goals, so there is no single number that fits everyone. Your doctor or a registered dietitian can help you set a target that is right for you."
+        ],
+        [
+          "Are protein shakes a good idea?",
+          "They can be a convenient option for some people, especially on hard days. Check the label for protein and sugar, and ask your care team if you are unsure whether they fit your plan."
+        ],
+        [
+          "Why does Greek yogurt sometimes split in hot soup?",
+          "Its proteins tighten when they hit boiling, acidic liquid. Warm the yogurt with a ladle of soup first, stir it in off the heat and do not boil the soup afterwards."
+        ]
+      ]
+    },
+    {
+      "id": "small-portion-meal-prep",
+      "title": "Small-Portion Meal Prep: Cook Once, Eat All Week",
+      "subtitle": "How to cook on a good day and portion food so a small, ready meal is always waiting in the fridge or freezer.",
+      "category": "GLP-1 Kitchen",
+      "readTime": 6,
+      "intro": [
+        "Low-appetite days and low-energy days often arrive together. Meal prep in small portions means you do the cooking when you feel up to it, and on the harder days you only need to reheat a container.",
+        "This guide covers what to cook, how to portion it, what freezes well, and how to store and reheat food safely. Pick one or two recipes to start; you do not need to prep the whole week at once."
+      ],
+      "takeaways": [
+        "Cook on a good day, portion small, and label everything.",
+        "Soups, sauces and burritos freeze well; cooked eggs and dressed salads do not.",
+        "Cool food quickly and refrigerate it within two hours.",
+        "Reheat until steaming, and keep sauces and dressings separate."
+      ],
+      "sections": [
+        {
+          "h": "Pick Recipes That Hold Up",
+          "p": [
+            "Some foods taste just as good on day three; others fall apart. These are good places to start."
+          ],
+          "list": [
+            "Soups: Tomato, butternut squash and lemon chicken soups all keep for days. Leave out the pasta or yogurt if you plan to freeze them.",
+            "Sauces: Make shakshuka sauce ahead and poach fresh eggs in a single portion.",
+            "Breakfasts: Overnight oats in small jars keep for up to 4 days, and breakfast burritos freeze for months.",
+            "Grains and proteins: Cooked quinoa, edamame and chicken keep well for grain bowls and salads."
+          ]
+        },
+        {
+          "h": "Portion Small From the Start",
+          "p": [
+            "Portion food into containers right after cooking, in the size you can realistically finish. One cup is a good starting point for soups; a single small burrito or one 4 oz piece of fish is a full plate.",
+            "Small containers also cool faster and reheat more evenly than one big pot."
+          ],
+          "list": [
+            "Use 8 to 16 oz containers: Small glass jars and deli containers make portions easy to see.",
+            "Label everything: Write the recipe name and date on the lid.",
+            "Freeze flat: Lay bags of soup flat to freeze, then stack them like books."
+          ]
+        },
+        {
+          "h": "What Keeps and What Freezes",
+          "p": [
+            "These times match the storage notes on our recipes."
+          ],
+          "table": {
+            "head": [
+              "Food",
+              "Fridge",
+              "Freezer",
               "Notes"
             ],
             "rows": [
               [
-                "Long-grain white",
-                "1 : 1 1/2",
-                "15 min",
-                "Rinse first"
+                "Blended soups, before adding yogurt",
+                "Up to 4 days",
+                "Up to 3 months",
+                "Stir in warmed yogurt when reheating"
               ],
               [
-                "Jasmine",
-                "1 : 1 1/4",
-                "15 min",
-                "Rinse first, slightly sticky"
+                "Chicken soup without pasta",
+                "Up to 4 days",
+                "Up to 3 months",
+                "Cook a little fresh pasta when reheating"
               ],
               [
-                "Basmati",
-                "1 : 1 1/2",
-                "15 min",
-                "Soak 20 min for longer grains"
+                "Shakshuka sauce",
+                "Up to 4 days",
+                "Up to 3 months",
+                "Poach the eggs fresh"
               ],
               [
-                "Short-grain / sushi",
-                "1 : 1 1/4",
-                "15 to 18 min",
-                "Rinse very well"
+                "Breakfast burritos",
+                "Up to 4 days",
+                "Up to 3 months",
+                "Reheat straight from frozen"
               ],
               [
-                "Long-grain brown",
-                "1 : 2",
-                "40 to 45 min",
-                "Or boil like pasta for 30 min"
+                "Overnight oats",
+                "Up to 4 days",
+                "Not recommended",
+                "Texture suffers once thawed"
               ],
               [
-                "Wild rice blend",
-                "1 : 2 1/2",
-                "45 to 50 min",
-                "Check package, blends vary"
+                "Cooked eggs, dressed salads",
+                "1 to 3 days",
+                "Not recommended",
+                "They turn rubbery or soggy"
               ]
             ]
           }
         },
         {
-          "h": "How to Fix Rice That Went Wrong",
+          "h": "Store and Reheat Safely",
           "p": [
-            "Do not throw it out. Most rice mistakes can be rescued, or at least repurposed into something delicious."
+            "Food safety matters more when you cook ahead. These points follow general USDA food safety guidance."
           ],
           "list": [
-            "Crunchy in the middle: Add 2 to 3 tablespoons of water, cover tightly, and cook on the lowest heat for 5 more minutes, then rest.",
-            "Water left in the pot: Drain what you can, then return to low heat uncovered for a few minutes to steam off the rest.",
-            "Mushy or gummy: Spread it on a sheet pan and bake at 300°F (150°C) for 5 to 10 minutes to dry it out. Or lean in and make fried rice, rice pudding, or soup.",
-            "Burned on the bottom: Do not scrape. Spoon the good rice off the top into a clean bowl. Place a slice of bread on top for a few minutes to absorb any smoky smell.",
-            "Bland: Next time, salt the water and try cooking it in stock, or add a bay leaf or a knob of butter."
+            "Cool quickly: Refrigerate cooked food within 2 hours. Shallow containers cool faster.",
+            "Keep it cold: Keep your fridge at 40°F (4°C) or below and your freezer at 0°F (-18°C).",
+            "Use leftovers within 3 to 4 days: Freeze anything you will not eat in time.",
+            "Reheat thoroughly: Heat leftovers to 165°F (74°C), until steaming hot all the way through.",
+            "Thaw in the fridge: Move frozen portions to the fridge the night before."
+          ]
+        },
+        {
+          "h": "A Simple Two-Hour Prep Session",
+          "p": [
+            "If you have one good afternoon, this covers most of a week of small meals."
+          ],
+          "list": [
+            "In the oven: Roast the squash for the butternut soup.",
+            "On the stove: Simmer the lemon chicken soup without the orzo.",
+            "In a bowl: Stir together three jars of overnight oats.",
+            "While things cook: Whisk a Greek yogurt dressing and cook a pot of quinoa.",
+            "To finish: Blend the squash soup, portion everything into small containers, label, and refrigerate or freeze."
           ]
         }
       ],
       "faq": [
         [
-          "Can I double the recipe?",
-          "Yes. Double the rice and water, but use a wider pot so the rice layer is not too deep. The simmer time stays about the same, maybe a couple of minutes longer."
+          "Do I need special containers?",
+          "No. Any airtight container works. Small glass jars and deli containers are inexpensive and make portion sizes easy to see."
         ],
         [
-          "How do I store and reheat leftover rice safely?",
-          "Cool it quickly and refrigerate within an hour of cooking. Use it within 3 to 4 days. Reheat with a splash of water, covered, until steaming hot all the way through."
+          "Can I refreeze thawed soup?",
+          "Food thawed in the fridge can generally be refrozen, but the texture may suffer. Freezing in single portions means you only thaw what you need."
         ],
         [
-          "Why does my rice always stick to the pot?",
-          "Usually the heat is too high or the pot is too thin. Use the lowest setting during the simmer and always let the rice rest before serving so it releases."
-        ]
-      ]
-    },
-    {
-      "id": "knife-skills",
-      "title": "Knife Skills 101: Chop Faster and Safer",
-      "subtitle": "How to choose, hold, and care for a knife, plus the handful of cuts that make everyday cooking quicker.",
-      "category": "Kitchen Basics",
-      "readTime": 8,
-      "intro": [
-        "Good knife skills are the single biggest time-saver in a home kitchen. When chopping an onion takes you two minutes instead of ten, weeknight cooking stops feeling like a chore. Evenly cut pieces also cook evenly, so your food simply turns out better.",
-        "You do not need a chef's roll full of expensive blades or restaurant-level speed. You need one sharp knife, a stable board, and a few habits that keep your fingers safe. In this guide we cover the knives worth owning, how to grip them, the core cuts, and how to keep your edge sharp. Slow down, practice a little every time you cook, and speed will come on its own."
-      ],
-      "takeaways": [
-        "A sharp knife is safer than a dull one.",
-        "Pinch the blade and curl your guiding fingers into a claw.",
-        "Anchor your board with a damp towel so it never slides.",
-        "Hone often, sharpen a few times a year, and never use the dishwasher."
-      ],
-      "sections": [
-        {
-          "h": "The Only Three Knives You Really Need",
-          "p": [
-            "Knife block sets look impressive, but most of those knives never leave the block. Put your money into one good chef's knife and add two helpers."
-          ],
-          "list": [
-            "Chef's knife (8 inch / 20 cm): Your everyday workhorse for chopping, slicing, dicing, and mincing. Pick one that feels balanced and comfortable in your hand.",
-            "Paring knife (3 to 4 inch): For small, detailed jobs like hulling strawberries, trimming, and peeling.",
-            "Serrated bread knife: Saws through crusty bread, tomatoes, and cakes without crushing them.",
-            "Nice to have: A sturdy cutting board, wood or plastic, at least 12 by 18 inches. Skip glass, stone, and marble, which destroy edges."
-          ]
-        },
-        {
-          "h": "Set Up Your Station and Grip",
-          "p": [
-            "Safety starts before you cut anything. Place a damp paper towel or thin kitchen towel under your cutting board so it cannot slip. Keep your board clear, with a bowl nearby for scraps.",
-            "For the knife hand, use the pinch grip. Pinch the flat of the blade just in front of the handle between your thumb and the side of your index finger, then wrap your remaining three fingers around the handle. It feels odd at first, but it gives far more control than holding the handle alone.",
-            "For the guiding hand, make a claw. Curl your fingertips under and rest your knuckles against the side of the blade. The knife can then glide against your knuckles, and your fingertips stay safely tucked away."
-          ]
-        },
-        {
-          "h": "The Basic Motions",
-          "p": [
-            "Most cutting uses a smooth rocking or forward-slicing motion, not a straight chop downward. Let the tip of the knife stay near the board and roll the blade forward and down through the food. Let the sharp edge do the work instead of forcing it.",
-            "Before cutting anything round, like an onion, potato, or carrot, slice a thin piece off one side to create a flat base. Stable food is safe food. A rolling vegetable is the number one cause of kitchen cuts."
-          ]
-        },
-        {
-          "h": "Core Cuts and Sizes",
-          "p": [
-            "Recipes use a handful of terms for cut size. Consistency matters more than precision, since same-size pieces cook at the same rate. Here is a quick reference."
-          ],
-          "table": {
-            "head": [
-              "Cut",
-              "Approximate size",
-              "Common uses"
-            ],
-            "rows": [
-              [
-                "Mince",
-                "Smaller than 1/8 inch (3 mm)",
-                "Garlic, ginger, herbs, shallots"
-              ],
-              [
-                "Small dice",
-                "1/4 inch (6 mm) cubes",
-                "Sauces, salsas, fillings"
-              ],
-              [
-                "Medium dice",
-                "1/2 inch (1.25 cm) cubes",
-                "Soups, stews, sautés"
-              ],
-              [
-                "Large dice",
-                "3/4 inch (2 cm) cubes",
-                "Roasting, braising"
-              ],
-              [
-                "Julienne",
-                "Thin matchsticks, about 1/8 inch",
-                "Stir-fries, slaws, garnishes"
-              ],
-              [
-                "Chiffonade",
-                "Thin ribbons",
-                "Basil, mint, leafy greens"
-              ]
-            ]
-          }
-        },
-        {
-          "h": "How to Dice an Onion",
-          "p": [
-            "Master this one and half your prep is covered. The root holds the layers together, so leave it on until the end."
-          ],
-          "list": [
-            "Halve: Cut the onion in half from the root to the tip. Peel off the skin and trim the tip end, leaving the root intact.",
-            "Slice lengthwise: Place a half flat side down. Make vertical cuts toward the root, stopping just short of it.",
-            "Optional horizontal cuts: Make one or two cuts parallel to the board toward the root for a finer dice.",
-            "Cross-cut: Slice across your earlier cuts, moving your claw hand back as you go. Perfect little cubes will fall away.",
-            "Finish: Discard the root end, or save it with other scraps for stock."
-          ]
-        },
-        {
-          "h": "Keep Your Knife Sharp",
-          "p": [
-            "A dull knife slips off food instead of biting into it, and that is when accidents happen. It also crushes herbs and tomatoes rather than slicing them cleanly.",
-            "A honing steel does not sharpen. It straightens the tiny edge that bends as you work. Give your knife a few strokes on each side every few uses. Actual sharpening removes metal to create a new edge, and most home cooks need it only two to four times a year. Use a whetstone, a quality pull-through sharpener, or a local sharpening service.",
-            "Finally, wash knives by hand and dry them right away. Dishwashers dull and chip the edge and can crack wooden handles. Store knives on a magnetic strip, in a block, or with blade guards, never loose in a drawer."
-          ]
-        }
-      ],
-      "faq": [
-        [
-          "What should I do if I cut myself?",
-          "For minor cuts, rinse with clean water, apply firm pressure with a clean cloth until the bleeding stops, and cover with a bandage. Seek medical care for deep cuts, cuts that will not stop bleeding, or any sign of infection."
-        ],
-        [
-          "Wood or plastic cutting board?",
-          "Both are fine and both are gentle on knives. Many cooks keep a plastic board for raw meat since it can be sanitized easily, and a wooden board for everything else."
-        ],
-        [
-          "How do I know when my knife needs sharpening?",
-          "Try slicing a ripe tomato or a sheet of paper. If the blade slides off the tomato skin or tears the paper instead of cutting cleanly, it is time."
+          "How do I keep prepped meals from getting boring?",
+          "Prep two or three recipes rather than one, and vary the toppings: a spoonful of yogurt, fresh herbs, a squeeze of lemon or a few toasted seeds."
         ]
       ]
     }
