@@ -41,20 +41,6 @@
   "source": "Pexels",
   "alt": "Close-up of beef tacos with cilantro and lime on a plate, showcasing Mexican cuisine."
  },
- "chocolate-chip-cookies": {
-  "photographer": "Maurício Mascaro",
-  "photographer_url": "https://www.pexels.com/@maumascaro",
-  "photo_url": "https://www.pexels.com/photo/chocolate-chip-cookies-on-a-plate-8081574/",
-  "source": "Pexels",
-  "alt": "Close-up of freshly baked chocolate chip cookies on a plate, perfect for dessert."
- },
- "chocolate-mousse-cake": {
-  "photographer": "Елена Селищева",
-  "photographer_url": "https://www.pexels.com/@76505859",
-  "photo_url": "https://www.pexels.com/photo/slices-of-chocolate-mousse-cake-in-close-up-photography-8601851/",
-  "source": "Pexels",
-  "alt": "Indulgent chocolate mousse cake slices topped with whipped cream and nuts."
- },
  "buttermilk-pancakes": {
   "photographer": "Tea Creative",
   "photographer_url": "https://www.pexels.com/@teacreativelife",
@@ -132,13 +118,6 @@
   "source": "Pexels",
   "alt": "A fresh kale salad topped with walnuts and pomegranate seeds, served with lemon."
  },
- "apple-crisp": {
-  "photographer": "Sofía  Falco",
-  "photographer_url": "https://www.pexels.com/@sofia-falco-1148410914",
-  "photo_url": "https://www.pexels.com/photo/delicious-apple-crumble-tart-with-ice-cream-32318139/",
-  "source": "Pexels",
-  "alt": "Savory apple crumble tart topped with vanilla ice cream on a white plate, perfect for dessert."
- },
  "guide-gentle": {
   "photographer": "Foodie Factor",
   "photographer_url": "https://www.pexels.com/@foodie-factor-162291",
@@ -159,5 +138,26 @@
   "photo_url": "https://www.pexels.com/photo/food-in-containers-6995259/",
   "source": "Pexels",
   "alt": "Meal prep containers filled with broccoli, beans and polenta."
+ },
+ "peanut-butter-protein-bites": {
+  "photographer": "Milan",
+  "photographer_url": "https://www.pexels.com/@milan-3053700",
+  "photo_url": "https://www.pexels.com/photo/brown-energy-balls-on-plate-for-dessert-4637456/",
+  "source": "Pexels",
+  "alt": "Homemade oat energy bites arranged on a textured glass plate."
+ },
+ "chocolate-yogurt-mousse-cups": {
+  "photographer": "Eva Bronzini",
+  "photographer_url": "https://www.pexels.com/@eva-bronzini",
+  "photo_url": "https://www.pexels.com/photo/chocolate-mousse-in-tall-glass-6261275/",
+  "source": "Pexels",
+  "alt": "Chocolate mousse in a glass topped with fresh raspberries."
+ },
+ "baked-cinnamon-apples": {
+  "photographer": "Tim Douglas",
+  "photographer_url": "https://www.pexels.com/@tim-douglas",
+  "photo_url": "https://www.pexels.com/photo/tasty-apples-with-assorted-filling-in-baking-pan-6210957/",
+  "source": "Pexels",
+  "alt": "Red apples filled with walnuts, cashews and dried cranberries in a baking dish."
  }
 }

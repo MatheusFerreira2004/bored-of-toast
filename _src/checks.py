@@ -57,7 +57,7 @@ REDIRECT_STUBS = {'about.html', 'recipes.html', 'recipe.html', 'guides/pantry-st
 for path in pages:
     text = open(path, encoding='utf8').read()
     pg = Page(); pg.feed(text)
-    stub = path in REDIRECT_STUBS
+    stub = path in REDIRECT_STUBS or '<title>Redirecting…</title>' in text
     # 1) local references
     for ref in pg.refs:
         if re.match(r'^(https?:|mailto:|tel:|javascript:|data:|#|//)', ref) or '{' in ref:

@@ -1,13 +1,4 @@
 {
- "images/apple-crisp.webp": {
-  "variants": [
-   160,
-   320,
-   480,
-   720
-  ],
-  "width": 1100
- },
  "images/avocado-toast-jammy-eggs.webp": {
   "variants": [
    160,
@@ -16,6 +7,15 @@
    720
   ],
   "width": 1100
+ },
+ "images/baked-cinnamon-apples.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
  },
  "images/beef-tacos.webp": {
   "variants": [
@@ -62,23 +62,14 @@
   ],
   "width": 824
  },
- "images/chocolate-chip-cookies.webp": {
+ "images/chocolate-yogurt-mousse-cups.webp": {
   "variants": [
    160,
    320,
    480,
    720
   ],
-  "width": 1100
- },
- "images/chocolate-mousse-cake.webp": {
-  "variants": [
-   160,
-   320,
-   480,
-   720
-  ],
-  "width": 1100
+  "width": 1200
  },
  "images/cinnamon-french-toast.webp": {
   "variants": [
@@ -189,6 +180,15 @@
   ],
   "width": 1100
  },
+ "images/peanut-butter-protein-bites.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/shakshuka.webp": {
   "variants": [
    160,
@@ -206,16 +206,6 @@
    720
   ],
   "width": 1100
- },
- "images/step-cookies-dough.webp": {
-  "variants": [
-   160,
-   320,
-   480,
-   720,
-   1100
-  ],
-  "width": 1400
  },
  "images/step-pancakes-batter.webp": {
   "variants": [

@@ -62,9 +62,11 @@ GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 
                  'protein-first': ['shakshuka', 'avocado-toast-jammy-eggs', 'chicken-avocado-salad'],
                  'small-portion-meal-prep': ['lemon-chicken-orzo-soup', 'breakfast-burritos', 'mediterranean-grain-bowl']}
 GUIDE_REDIRECTS = {'pantry-staples': 'small-portion-meal-prep', 'perfect-rice': 'protein-first', 'knife-skills': ''}
-NEW_IDS = ['buttermilk-pancakes', 'shakshuka', 'butternut-squash-soup', 'honey-garlic-chicken-thighs', 'avocado-toast-jammy-eggs', 'mushroom-risotto', 'apple-crisp', 'lemon-chicken-orzo-soup']
+RECIPE_REDIRECTS = json.load(open(os.path.join(HERE, 'redirects.json'))) if os.path.exists(os.path.join(HERE, 'redirects.json')) else {}
+BY_ID.update({old: BY_ID[new] for old, new in RECIPE_REDIRECTS.items() if new in BY_ID and old not in BY_ID})
+NEW_IDS = ["buttermilk-pancakes", "shakshuka", "butternut-squash-soup", "honey-garlic-chicken-thighs", "avocado-toast-jammy-eggs", "mushroom-risotto", "baked-cinnamon-apples", "lemon-chicken-orzo-soup"]
 
-FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl"]
+FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "peanut-butter-protein-bites", "chocolate-yogurt-mousse-cups", "baked-cinnamon-apples"]
 
 CATS = [
     ('high-protein', 'High Protein', 'sheet-pan-salmon'),
@@ -355,7 +357,7 @@ def build_recipes():
     hero = hero_bleed(root, 'images/mediterranean-grain-bowl.webp', 'The recipe library', 'Find your next<br><em>small plate.</em>',
         f'{len(RECIPES)} recipes with step-by-step instructions, protein per serving and storage notes. Featured recipes add a small-portion tip and a gentler swap.',
         f'<button class="btn btn-yellow" data-random>Pick one for me {ICON["arrow"]}</button>', float_card(root, pick, "Editor's pick"), short=True)
-    chips = [('all', 'All')] + [(k, l) for k, l, _ in CATS] + [('fall', 'Fall')]
+    chips = [('all', 'All')] + [(k, l) for k, l, _ in CATS]
     diets = [('vegetarian', 'Vegetarian'), ('gluten-free', 'Gluten-free'), ('dairy-free', 'Dairy-free')]
     body = f'''{hero}
 <div class="container">
@@ -512,6 +514,12 @@ def build_recipe(r):
 <script type="application/json" id="recipe-json">{json.dumps(rdata, ensure_ascii=False)}</script>'''
     page(f"recipes/{r['id']}/", f"{r['title']} | Bored of Toast", r['subtitle'], body, 'recipes', root, og=f"images/og/{r['id']}.jpg", jsonld=recipe_ld(r), body_attr='data-recipe-page')
 
+def build_recipe_redirects():
+    for old, new in RECIPE_REDIRECTS.items():
+        full = os.path.join(OUT, 'recipes', old, 'index.html')
+        os.makedirs(os.path.dirname(full), exist_ok=True)
+        open(full, 'w').write(f'<!DOCTYPE html><meta charset="utf-8"><title>Redirecting…</title><link rel="canonical" href="{SITE_URL}recipes/{new}/"><meta http-equiv="refresh" content="0; url=../{new}/"><a href="../{new}/">Continue</a>')
+
 def build_guides():
     root = '../'
     hero = hero_bleed(root, 'images/lemon-chicken-orzo-soup.webp', 'GLP-1 Kitchen', 'Eating less?<br><em>Make every bite count.</em>',
@@ -524,6 +532,7 @@ def build_guides():
     page('guides/', 'GLP-1 Kitchen: Guides for Small Appetites | Bored of Toast', 'Practical guides for small appetites: what to eat when nothing sounds good, protein-first swaps and small-portion meal prep.', body, 'guides', root)
     for g in GUIDES:
         build_guide(g)
+    build_recipe_redirects()
     for old, new in GUIDE_REDIRECTS.items():
         target = f'{new}/' if new else ''
         full = os.path.join(OUT, 'guides', old, 'index.html')
