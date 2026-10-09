@@ -32,7 +32,9 @@ for signup,download,checkout in product([False,True],repeat=3):
     assert (c['checkout_url'] in pu)==checkout
     assert ('Purchasing is not open yet' in paid)==(not checkout)
     assert ('Four English PDFs' in paid) and ('US$20' in paid)
-    assert ('89 pages' in paid) and ('26 pages' in paid)
+    # Page counts must match the real PDFs: main guide 60, 28-Day Meal Plan 9, Recipe Pack 14, Printable Pack 12.
+    assert all(f'{n} pages' in paid for n in (60, 9, 14, 12)), 'Nourished page counts do not match the PDFs'
+    assert not any(f'{n} pages' in paid for n in (89, 26, 18)), 'Old Nourished page counts still present'
     if signup:
         assert c['signup_url'] in ku and 'Get the free starter kit' in kit
     elif download:
