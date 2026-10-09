@@ -139,25 +139,25 @@
   "source": "Pexels",
   "alt": "Savory apple crumble tart topped with vanilla ice cream on a white plate, perfect for dessert."
  },
- "guide-pantry": {
-  "photographer": "Mathias Reding",
-  "photographer_url": "https://www.pexels.com/@matreding",
-  "photo_url": "https://www.pexels.com/photo/jars-of-spices-on-a-shelf-11911870/",
+ "guide-gentle": {
+  "photographer": "Foodie Factor",
+  "photographer_url": "https://www.pexels.com/@foodie-factor-162291",
+  "photo_url": "https://www.pexels.com/photo/acai-bowl-with-mixed-berries-566564/",
   "source": "Pexels",
-  "alt": "A variety of spices stored in glass jars lined on a shelf, perfect for kitchen organization."
+  "alt": "A bowl of yogurt topped with fresh blueberries, strawberries and granola."
  },
- "guide-rice": {
-  "photographer": "Tuğba",
-  "photographer_url": "https://www.pexels.com/@tugba",
-  "photo_url": "https://www.pexels.com/photo/close-up-of-steamed-rice-in-wooden-bowl-31346219/",
+ "guide-protein": {
+  "photographer": "Natali Yakovleva",
+  "photographer_url": "https://www.pexels.com/@natali-yakovleva-501836818",
+  "photo_url": "https://www.pexels.com/photo/eggs-and-milk-breakfast-preparation-16149475/",
   "source": "Pexels",
-  "alt": "A detailed close-up view of freshly steamed white rice served in a wooden bowl."
+  "alt": "Fresh eggs and a jug of milk on a rustic wooden kitchen table."
  },
- "guide-knife": {
-  "photographer": "Michael Burrows",
-  "photographer_url": "https://www.pexels.com/@michael-burrows",
-  "photo_url": "https://www.pexels.com/photo/faceless-ethnic-man-cutting-spinach-leaves-in-house-kitchen-7129393/",
+ "guide-mealprep": {
+  "photographer": "Julia M Cameron",
+  "photographer_url": "https://www.pexels.com/@julia-m-cameron",
+  "photo_url": "https://www.pexels.com/photo/food-in-containers-6995259/",
   "source": "Pexels",
-  "alt": "Crop anonymous ethnic male in striped shirt cutting fresh spinach on chopping board while cooking at home"
+  "alt": "Meal prep containers filled with broccoli, beans and polenta."
  }
 }

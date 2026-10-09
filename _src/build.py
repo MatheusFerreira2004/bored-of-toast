@@ -57,7 +57,7 @@ def thumb(path):
     """Smallest variant for tiny thumbnails (search overlay)."""
     v = VARIANTS.get(path)
     return f"{path[:-5]}-{v['variants'][0]}w.webp" if v and v['variants'] else path
-GUIDE_IMG = {'nothing-sounds-good': 'tomato-basil-soup', 'protein-first': 'shakshuka', 'small-portion-meal-prep': 'overnight-oats'}
+GUIDE_IMG = {'nothing-sounds-good': 'guide-gentle', 'protein-first': 'guide-protein', 'small-portion-meal-prep': 'guide-mealprep'}
 GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 'butternut-squash-soup'],
                  'protein-first': ['shakshuka', 'avocado-toast-jammy-eggs', 'chicken-avocado-salad'],
                  'small-portion-meal-prep': ['lemon-chicken-orzo-soup', 'breakfast-burritos', 'mediterranean-grain-bowl']}
