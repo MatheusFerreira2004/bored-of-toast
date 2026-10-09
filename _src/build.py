@@ -280,10 +280,10 @@ def build_home():
         'Simple recipes with the protein counted, in portions you can actually finish. Made for small appetites, busy days and everything in between.',
         f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><a href="{root}starter-kit/" class="btn btn-ghost">Get the free starter kit</a>',
         float_card(root, wk, 'Recipe of the week'), trust=trust)
-    words = ['High protein', 'Small portions', 'Cold & gentle', 'Make-ahead', 'No-cook', 'Freezer-friendly']
+    words = ['High protein', 'Small portions', 'Gentle swaps', 'Make-ahead', 'Protein first', 'Small and often']
     marquee = '<div class="marquee" aria-hidden="true"><div class="marquee-track">' + ''.join(f'<span>{w}</span>' for w in words * 2) + '</div></div>'
     bt = [BY_ID[i] for i in ['shakshuka', 'avocado-toast-jammy-eggs', 'overnight-oats', 'breakfast-burritos']]
-    fall = [r for r in RECIPES if 'fall' in r['tags']][:4]
+    fall = [r for r in RECIPES if 'make-ahead' in r['tags']][:4]
     latest = [BY_ID[i] for i in FOCUS_IDS[:8]]
     ing = [i['n'].split(',')[0] for g in wk['ingredients'] for i in g['items'] if i.get('q') is not None][:5]
     body = f'''{hero}{marquee}
@@ -313,7 +313,7 @@ def build_home():
 
 <section class="section seasonal">
   <div class="container">
-    {section_head('Fall favorites <span class="season-leaf">' + ICON['leaf'] + '</span>', 'Cozy, golden and made for sweater weather.', f'<a href="{root}recipes/?cat=fall" class="view-all">All fall recipes →</a>')}
+    {section_head('Make-ahead for <em>harder days</em>', 'Cook once on a good day, then reheat a small portion when you need it.', f'<a href="{root}recipes/?cat=make-ahead" class="view-all">All make-ahead recipes →</a>')}
     <div class="recipe-grid four">{''.join(card(root, r) for r in fall)}</div>
   </div>
 </section>
@@ -404,7 +404,7 @@ def build_recipe(r):
     unit = r.get('servesLabel', 'servings')
     related = sorted([x for x in RECIPES if x['id'] != r['id']], key=lambda x: (x['category'] != r['category'], 'fall' not in x['tags'] if 'fall' in r['tags'] else 0))[:3]
     n = r['nutrition']
-    tagline = ' · '.join([r['category']] + (['Quick & Easy'] if 'quick' in r['tags'] else []) + (['Healthy'] if 'healthy' in r['tags'] else []) + (['Fall'] if 'fall' in r['tags'] else []))
+    tagline = ' · '.join([r['category']] + (['Quick & Easy'] if 'quick' in r['tags'] else []) + (['Healthy'] if 'healthy' in r['tags'] else []) + (['Small Plates'] if 'small-plates' in r['tags'] else []))
     pin_url = f"https://www.pinterest.com/pin/create/button/?url={url}&media={SITE_URL}images/pins/{r['id']}.jpg&description={html.escape(r['title'] + ' | Bored of Toast')}"
     groups = ''.join(f'''<div class="ing-group"><h3>{e(g['group'])}</h3><ul class="ing-list">{''.join(f'<li><label><input type="checkbox"><span>{"<b>" + e(fmt_qty(i["q"]) + (" " + i["u"] if i["u"] else "")) + "</b> " if i.get("q") is not None else ""}{e(i["n"])}{f" <em>({e(i["note"])})</em>" if i.get("note") else ""}</span></label></li>' for i in g['items'])}</ul></div>''' for g in r['ingredients'])
     steps = ''.join(f'''<li class="step" id="step-{k}"><div class="step-num" role="button" tabindex="0" aria-label="Mark step {k} done">{k}</div><div class="step-body"><h3>{e(s['t'])}</h3><p>{e(s['d'])}</p>{f'<figure class="step-img"><img src="{root}{s["img"]}" alt="{e(s["t"])}" loading="lazy" width="1200" height="800"{rimg(root, s["img"], SIZES["step"])}></figure>' if s.get('img') else ''}{f'<div class="step-tip">{ICON["bulb"]}<div><strong>Tip:</strong> {e(s["tip"])}</div></div>' if s.get('tip') else ''}</div></li>''' for k, s in enumerate(r['steps'], 1))
