@@ -696,7 +696,7 @@ def build_index_js():
               's': ' '.join([r['title'], r['category'], r['desc']] + r['tags'] + r.get('diet', []) + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()} for r in RECIPES]
     items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': thumb(f"images/{GUIDE_IMG[g['id']]}.webp"), 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
                's': (g['title'] + ' ' + g['subtitle'] + ' guide').lower()} for g in GUIDES]
-    items += [{'t': '5 Easy Dinners', 'u': 'meal-plan/', 'i': 'images/crispy-baked-chicken-bites.webp', 'c': 'Dinner ideas', 'm': '5 free recipes', 'k': 'guide', 's': 'five 5 easy dinners meal plan shopping list weeknight'}]
+    items += [{'t': 'Small-Plate Week', 'u': 'meal-plan/', 'i': 'images/lemon-chicken-orzo-soup.webp', 'c': 'Meal plan', 'm': '5 small plates', 'k': 'guide', 's': 'small-plate week five small plates meal plan shopping list high protein make-ahead'}]
     items += [{'t': 'The GLP-1 Kitchen Starter Kit', 'u': 'starter-kit/', 'i': 'images/commerce/starter-cover.jpg', 'c': 'Free guide', 'm': '9-page PDF', 'k': 'guide', 's': 'free glp-1 starter kit nourish recipes organizer shopping'}, {'t': 'Nourished - The GLP-1 Kitchen Companion', 'u': 'nourished/', 'i': 'images/commerce/nourished-cover.jpg', 'c': 'Cookbook collection', 'm': 'US$20', 'k': 'guide', 's': 'nourished glp-1 cookbook recipes collection meal planning shopping'}]
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
