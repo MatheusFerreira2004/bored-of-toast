@@ -6,13 +6,6 @@
   "source": "Pexels",
   "alt": "Fresh salad with grilled chicken, avocado, lettuce, and sesame seeds drizzled with dressing."
  },
- "creamy-garlic-pasta": {
-  "photographer": "Shameel mukkath",
-  "photographer_url": "https://www.pexels.com/@shameel-mukkath-3421394",
-  "photo_url": "https://www.pexels.com/photo/overhead-view-of-meal-with-cheese-5639532/",
-  "source": "Pexels",
-  "alt": "Delicious creamy fettuccine Alfredo with basil garnish, perfect for dinner."
- },
  "sheet-pan-salmon": {
   "photographer": "ธันยกร ไกรสร",
   "photographer_url": "https://www.pexels.com/@tanyakorn",
@@ -33,34 +26,6 @@
   "photo_url": "https://www.pexels.com/photo/brown-soup-in-white-ceramic-bowl-539451/",
   "source": "Pexels",
   "alt": "Delicious homemade tomato soup served with basil leaves and rustic bread."
- },
- "beef-tacos": {
-  "photographer": "Chitokan C.",
-  "photographer_url": "https://www.pexels.com/@chitokan",
-  "photo_url": "https://www.pexels.com/photo/close-up-photograph-of-a-plate-with-tacos-3264572/",
-  "source": "Pexels",
-  "alt": "Close-up of beef tacos with cilantro and lime on a plate, showcasing Mexican cuisine."
- },
- "chocolate-chip-cookies": {
-  "photographer": "Maurício Mascaro",
-  "photographer_url": "https://www.pexels.com/@maumascaro",
-  "photo_url": "https://www.pexels.com/photo/chocolate-chip-cookies-on-a-plate-8081574/",
-  "source": "Pexels",
-  "alt": "Close-up of freshly baked chocolate chip cookies on a plate, perfect for dessert."
- },
- "chocolate-mousse-cake": {
-  "photographer": "Елена Селищева",
-  "photographer_url": "https://www.pexels.com/@76505859",
-  "photo_url": "https://www.pexels.com/photo/slices-of-chocolate-mousse-cake-in-close-up-photography-8601851/",
-  "source": "Pexels",
-  "alt": "Indulgent chocolate mousse cake slices topped with whipped cream and nuts."
- },
- "buttermilk-pancakes": {
-  "photographer": "Tea Creative",
-  "photographer_url": "https://www.pexels.com/@teacreativelife",
-  "photo_url": "https://www.pexels.com/photo/syrup-falling-on-a-stack-of-pancakes-5317627/",
-  "source": "Pexels",
-  "alt": "Delicious pancakes stacked high, drenched in syrup, perfect for breakfast lovers."
  },
  "shakshuka": {
   "photographer": "Boryslav Shoot",
@@ -90,13 +55,6 @@
   "source": "Pexels",
   "alt": "Tasty breakfast burrito served with salsa and sour cream on a metal tray."
  },
- "cinnamon-french-toast": {
-  "photographer": "Amar  Preciado",
-  "photographer_url": "https://www.pexels.com/@amar",
-  "photo_url": "https://www.pexels.com/photo/delicious-french-toast-with-fresh-berries-36904808/",
-  "source": "Pexels",
-  "alt": "Close-up of French toast topped with strawberries, raspberries, and blackberries on a plate."
- },
  "butternut-squash-soup": {
   "photographer": "Nataliya Vaitkevich",
   "photographer_url": "https://www.pexels.com/@n-voitkevich",
@@ -110,34 +68,6 @@
   "photo_url": "https://www.pexels.com/photo/traditional-ecuadorian-chicken-soup-in-white-bowl-32655226/",
   "source": "Pexels",
   "alt": "Warm and hearty Ecuadorian soup with chicken leg, vegetables, and herbs served in a white bowl."
- },
- "honey-garlic-chicken-thighs": {
-  "photographer": "Marvin  Sacdalan",
-  "photographer_url": "https://www.pexels.com/@marvin-sacdalan-276316567",
-  "photo_url": "https://www.pexels.com/photo/chicken-barbeque-topped-with-slices-of-onion-leeks-on-white-ceramic-plate-13065185/",
-  "source": "Pexels",
-  "alt": "Delicious grilled chicken teriyaki topped with fresh leeks and sesame seeds, served on a white plate."
- },
- "mushroom-risotto": {
-  "photographer": "Adriano Bragi",
-  "photographer_url": "https://www.pexels.com/@adriano-bragi-1288014591",
-  "photo_url": "https://www.pexels.com/photo/delicious-mushroom-risotto-with-parmesan-cheese-31779539/",
-  "source": "Pexels",
-  "alt": "Savor the rich and creamy mushroom risotto topped with fresh Parmesan cheese."
- },
- "harvest-kale-salad": {
-  "photographer": "Denys Gromov",
-  "photographer_url": "https://www.pexels.com/@jdgromov",
-  "photo_url": "https://www.pexels.com/photo/close-up-shot-of-a-dish-on-a-plate-4899800/",
-  "source": "Pexels",
-  "alt": "A fresh kale salad topped with walnuts and pomegranate seeds, served with lemon."
- },
- "apple-crisp": {
-  "photographer": "Sofía  Falco",
-  "photographer_url": "https://www.pexels.com/@sofia-falco-1148410914",
-  "photo_url": "https://www.pexels.com/photo/delicious-apple-crumble-tart-with-ice-cream-32318139/",
-  "source": "Pexels",
-  "alt": "Savory apple crumble tart topped with vanilla ice cream on a white plate, perfect for dessert."
  },
  "guide-gentle": {
   "photographer": "Foodie Factor",
@@ -159,5 +89,75 @@
   "photo_url": "https://www.pexels.com/photo/food-in-containers-6995259/",
   "source": "Pexels",
   "alt": "Meal prep containers filled with broccoli, beans and polenta."
+ },
+ "cottage-cheese-pancakes": {
+  "photographer": "Eva Bronzini",
+  "photographer_url": "https://www.pexels.com/@eva-bronzini",
+  "photo_url": "https://www.pexels.com/photo/stacked-pancakes-garnished-with-berries-5738531/",
+  "source": "Pexels",
+  "alt": "A stack of pancakes topped with strawberries and blueberries."
+ },
+ "spinach-feta-omelette": {
+  "photographer": "Spencer Davis",
+  "photographer_url": "https://www.pexels.com/@spencer",
+  "photo_url": "https://www.pexels.com/photo/meal-on-plate-4393001/",
+  "source": "Pexels",
+  "alt": "A spinach omelette served with greens and toast."
+ },
+ "turkey-meatballs-marinara": {
+  "photographer": "ERIVELTO Martins",
+  "photographer_url": "https://www.pexels.com/@erivas",
+  "photo_url": "https://www.pexels.com/photo/delicious-meatballs-in-rich-tomato-sauce-34314421/",
+  "source": "Pexels",
+  "alt": "Meatballs in tomato sauce garnished with parsley."
+ },
+ "turkey-bean-chili": {
+  "photographer": "Julias Torten und Törtchen",
+  "photographer_url": "https://www.pexels.com/@julias-torten-und-tortchen-434418",
+  "photo_url": "https://www.pexels.com/photo/chili-con-carne-stew-15881322/",
+  "source": "Pexels",
+  "alt": "A bowl of chili with beans and corn, topped with a creamy garnish."
+ },
+ "lemon-herb-baked-cod": {
+  "photographer": "Mahi Mog",
+  "photographer_url": "https://www.pexels.com/@mahimoh",
+  "photo_url": "https://www.pexels.com/photo/delicious-baked-fish-with-lemon-and-herbs-37367757/",
+  "source": "Pexels",
+  "alt": "Baked white fish with lemon and herbs, served with rice."
+ },
+ "chicken-congee": {
+  "photographer": "ivi nnnnnn",
+  "photographer_url": "https://www.pexels.com/@ivi-nnnnnn-129330",
+  "photo_url": "https://www.pexels.com/photo/delicious-asian-congee-breakfast-with-tea-set-36340265/",
+  "source": "Pexels",
+  "alt": "A bowl of creamy congee with spring onions and chicken."
+ },
+ "southwest-chicken-salad-bowl": {
+  "photographer": "Tochukwu Ekeh",
+  "photographer_url": "https://www.pexels.com/@tochukwu-ekeh-2149052634",
+  "photo_url": "https://www.pexels.com/photo/fresh-colorful-chicken-salad-with-vegetables-37648022/",
+  "source": "Pexels",
+  "alt": "A chicken salad bowl with fresh vegetables and crunchy tortilla strips."
+ },
+ "blackberry-yogurt-parfait": {
+  "photographer": "Soumia Photography",
+  "photographer_url": "https://www.pexels.com/@soumia-photography-131641539",
+  "photo_url": "https://www.pexels.com/photo/milk-cereals-and-blackberries-14853978/",
+  "source": "Pexels",
+  "alt": "A glass parfait layered with yogurt, blackberries and granola."
+ },
+ "peanut-butter-oat-bites": {
+  "photographer": "Milan",
+  "photographer_url": "https://www.pexels.com/@milan-3053700",
+  "photo_url": "https://www.pexels.com/photo/brown-energy-balls-on-plate-for-dessert-4637456/",
+  "source": "Pexels",
+  "alt": "Homemade oat energy bites on a glass plate."
+ },
+ "cinnamon-baked-apples-pears": {
+  "photographer": "Dasha Klimova",
+  "photographer_url": "https://www.pexels.com/@doraklimova",
+  "photo_url": "https://www.pexels.com/photo/baked-apple-and-pear-slices-with-nuts-8551536/",
+  "source": "Pexels",
+  "alt": "Baked apple and pear slices with cinnamon and nuts."
  }
 }

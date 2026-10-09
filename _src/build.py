@@ -62,9 +62,9 @@ GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 
                  'protein-first': ['shakshuka', 'avocado-toast-jammy-eggs', 'chicken-avocado-salad'],
                  'small-portion-meal-prep': ['lemon-chicken-orzo-soup', 'breakfast-burritos', 'mediterranean-grain-bowl']}
 GUIDE_REDIRECTS = {'pantry-staples': 'small-portion-meal-prep', 'perfect-rice': 'protein-first', 'knife-skills': ''}
-NEW_IDS = ['buttermilk-pancakes', 'shakshuka', 'butternut-squash-soup', 'honey-garlic-chicken-thighs', 'avocado-toast-jammy-eggs', 'mushroom-risotto', 'apple-crisp', 'lemon-chicken-orzo-soup']
+NEW_IDS = ['cottage-cheese-pancakes', 'shakshuka', 'butternut-squash-soup', 'lemon-herb-baked-cod', 'avocado-toast-jammy-eggs', 'chicken-congee', 'cinnamon-baked-apples-pears', 'lemon-chicken-orzo-soup']
 
-FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl"]
+FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "cottage-cheese-pancakes", "spinach-feta-omelette", "turkey-meatballs-marinara", "turkey-bean-chili", "lemon-herb-baked-cod", "chicken-congee", "southwest-chicken-salad-bowl", "blackberry-yogurt-parfait", "peanut-butter-oat-bites", "cinnamon-baked-apples-pears"]
 
 CATS = [
     ('high-protein', 'High Protein', 'sheet-pan-salmon'),
@@ -73,7 +73,7 @@ CATS = [
     ('make-ahead', 'Make-Ahead', 'overnight-oats'),
     ('Soups', 'Soups', 'butternut-squash-soup'),
     ('Beyond Toast', 'Beyond Toast', 'shakshuka'),
-    ('everyday', 'Everyday Favorites', 'creamy-garlic-pasta'),
+    ('Snacks', 'Snacks', 'peanut-butter-oat-bites'),
 ]
 DIET = {'vegetarian': ('V', 'Vegetarian'), 'vegan': ('VG', 'Vegan'), 'gluten-free': ('GF', 'Gluten-free'), 'dairy-free': ('DF', 'Dairy-free')}
 SCHEMA_DIET = {'vegetarian': 'https://schema.org/VegetarianDiet', 'vegan': 'https://schema.org/VeganDiet', 'gluten-free': 'https://schema.org/GlutenFreeDiet'}
@@ -349,6 +349,19 @@ def build_home():
            "potentialAction": {"@type": "SearchAction", "target": SITE_URL + "recipes/?q={search_term_string}", "query-input": "required name=search_term_string"}}]
     page('', 'Bored of Toast | Small plates, big protein', 'Simple high-protein recipes in small portions, with protein per serving and gentler swaps for low-appetite days.', body, 'home', root, jsonld=ld)
 
+RECIPE_REDIRECTS = {
+    "buttermilk-pancakes": "cottage-cheese-pancakes",
+    "cinnamon-french-toast": "spinach-feta-omelette",
+    "creamy-garlic-pasta": "turkey-meatballs-marinara",
+    "beef-tacos": "turkey-bean-chili",
+    "honey-garlic-chicken-thighs": "lemon-herb-baked-cod",
+    "mushroom-risotto": "chicken-congee",
+    "harvest-kale-salad": "southwest-chicken-salad-bowl",
+    "chocolate-mousse-cake": "blackberry-yogurt-parfait",
+    "chocolate-chip-cookies": "peanut-butter-oat-bites",
+    "apple-crisp": "cinnamon-baked-apples-pears"
+}
+
 def build_recipes():
     root = '../'
     pick = BY_ID['mediterranean-grain-bowl']
@@ -372,6 +385,10 @@ def build_recipes():
 </div>'''
     ld = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}recipes/{r['id']}/"} for i, r in enumerate(RECIPES)]}]
     page('recipes/', 'All Recipes | Bored of Toast', 'High-protein recipes in small portions: breakfasts, soups, small plates and make-ahead meals, with gentler swaps.', body, 'recipes', root, jsonld=ld)
+    for old, new in RECIPE_REDIRECTS.items():
+        full = os.path.join(OUT, 'recipes', old, 'index.html')
+        os.makedirs(os.path.dirname(full), exist_ok=True)
+        open(full, 'w').write(f'<!DOCTYPE html><meta charset="utf-8"><title>Redirecting…</title><link rel="canonical" href="{SITE_URL}recipes/{new}/"><meta http-equiv="refresh" content="0; url=../{new}/"><a href="../{new}/">Continue</a>')
 
 def recipe_ld(r):
     ings = [ing_text(i) for g in r['ingredients'] for i in g['items']]
@@ -671,7 +688,7 @@ def build_credits():
 
 def build_404():
     root = SITE_URL
-    picks = [BY_ID[i] for i in ['buttermilk-pancakes', 'creamy-garlic-pasta', 'apple-crisp']]
+    picks = [BY_ID[i] for i in ['cottage-cheese-pancakes', 'turkey-meatballs-marinara', 'cinnamon-baked-apples-pears']]
     body = f'''<section class="hero page-hero"><div class="container narrow"><p class="eyebrow">Error 404</p><h1>This page is <em>toast.</em></h1><p class="hero-lead">We couldn't find what you were looking for. Try a search, or start with one of these favorites.</p><div class="hero-actions"><button class="btn btn-yellow" data-open-search>{ICON['search']} Search recipes</button><a class="btn btn-ghost" href="{root}">Back home</a></div></div>{WAVE}</section>
 <section class="container section"><div class="recipe-grid three">{''.join(card(root, r) for r in picks)}</div></section>'''
     page('404.html', 'Page not found | Bored of Toast', 'Page not found.', body, '', root, head_extra='<meta name="robots" content="noindex">')
