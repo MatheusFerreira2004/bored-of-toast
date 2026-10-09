@@ -402,7 +402,7 @@ def build_recipe(r):
     root = '../../'
     url = f"{SITE_URL}recipes/{r['id']}/"
     unit = r.get('servesLabel', 'servings')
-    related = sorted([x for x in RECIPES if x['id'] != r['id']], key=lambda x: (x['category'] != r['category'], 'fall' not in x['tags'] if 'fall' in r['tags'] else 0))[:3]
+    related = sorted([x for x in RECIPES if x['id'] != r['id']], key=lambda x: ('small-plates' not in x['tags'], x['category'] != r['category']))[:3]
     n = r['nutrition']
     tagline = ' · '.join([r['category']] + (['Quick & Easy'] if 'quick' in r['tags'] else []) + (['Healthy'] if 'healthy' in r['tags'] else []) + (['Small Plates'] if 'small-plates' in r['tags'] else []))
     pin_url = f"https://www.pinterest.com/pin/create/button/?url={url}&media={SITE_URL}images/pins/{r['id']}.jpg&description={html.escape(r['title'] + ' | Bored of Toast')}"
