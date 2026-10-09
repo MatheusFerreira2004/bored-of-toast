@@ -227,7 +227,7 @@
         const existing = getList();
         const additions = recipes.filter(r => !existing.some(saved => saved.id === r.id));
         setList(existing.concat(additions.map(r => ({ id: r.id, title: r.title, url: r.url, serves: r.serves, items: r.items.map(t => ({ t, done: false })) }))));
-        status.textContent = additions.length ? `${additions.length} dinner${additions.length === 1 ? '' : 's'} added. Open your shopping list below to review ingredients.` : 'These dinners are already on your list. Your quantities and checked items have been kept.';
+        status.textContent = additions.length ? `${additions.length} meal${additions.length === 1 ? '' : 's'} added. Open your shopping list below to review ingredients.` : 'These meals are already on your list. Your quantities and checked items have been kept.';
       } catch (_) {
         status.textContent = 'Your browser could not save the list. Open a recipe to view or print its ingredients.';
       }
