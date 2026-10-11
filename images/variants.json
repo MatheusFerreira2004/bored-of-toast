@@ -8,6 +8,15 @@
   ],
   "width": 1200
  },
+ "images/bacon-deviled-eggs.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/baked-cinnamon-apples.webp": {
   "variants": [
    160,
@@ -90,6 +99,24 @@
   "width": 1200
  },
  "images/crispy-baked-chicken-bites.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/frozen-yogurt-berry-bars.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/garlic-sesame-edamame.webp": {
   "variants": [
    160,
    320,
@@ -318,6 +345,24 @@
   "width": 1200
  },
  "images/turkey-taco-rice-bowls.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/tzatziki-yogurt-dip.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/yogurt-hummus.webp": {
   "variants": [
    160,
    320,

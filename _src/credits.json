@@ -236,5 +236,40 @@
   "photo_url": "https://www.pexels.com/photo/a-close-up-shot-of-a-delicious-soup-12913641/",
   "source": "Pexels",
   "alt": "A white bowl of egg drop soup with silky ribbons of egg."
+ },
+ "bacon-deviled-eggs": {
+  "photographer": "Adriana Coulson",
+  "photographer_url": "https://www.pexels.com/@adriana-coulson-1070894176/",
+  "photo_url": "https://www.pexels.com/photo/eggs-with-meat-23784968/",
+  "source": "Pexels",
+  "alt": "Deviled eggs topped with crispy bacon on a serving plate."
+ },
+ "garlic-sesame-edamame": {
+  "photographer": "Amine Kübranur Çakıroğlu",
+  "photographer_url": "https://www.pexels.com/@amine-kubranur-cakiroglu-689611212/",
+  "photo_url": "https://www.pexels.com/photo/steaming-bowl-of-fresh-edamame-on-table-38594582/",
+  "source": "Pexels",
+  "alt": "A steaming bowl of edamame pods on a table."
+ },
+ "yogurt-hummus": {
+  "photographer": "Anil Sharma",
+  "photographer_url": "https://www.pexels.com/@shootsaga/",
+  "photo_url": "https://www.pexels.com/photo/delicious-creamy-hummus-with-garnishes-31610382/",
+  "source": "Pexels",
+  "alt": "A bowl of creamy hummus topped with spiced chickpeas and herbs."
+ },
+ "tzatziki-yogurt-dip": {
+  "photographer": "Shameel mukkath",
+  "photographer_url": "https://www.pexels.com/@shameel-mukkath-3421394/",
+  "photo_url": "https://www.pexels.com/photo/overhead-shot-of-tzatziki-in-a-bowl-6271896/",
+  "source": "Pexels",
+  "alt": "A bowl of tzatziki garnished with mint, surrounded by fresh vegetables."
+ },
+ "frozen-yogurt-berry-bars": {
+  "photographer": "Meryemce",
+  "photographer_url": "https://www.pexels.com/@meryemce/",
+  "photo_url": "https://www.pexels.com/photo/frozen-berries-on-creamy-yogurt-bar-close-up-32055276/",
+  "source": "Pexels",
+  "alt": "A frozen Greek yogurt bar topped with raspberries and blackberries."
  }
 }
