@@ -157,6 +157,7 @@ def footer(root):
     cats = ''.join(f'<li><a href="{root}recipes/?cat={e(k)}">{l}</a></li>' for k, l, _ in CATS[:6])
     nav = ''.join(f'<li><a href="{root}{h}">{l}</a></li>' for h, l, _ in NAV)
     nav += f'<li><a href="{root}starter-kit/">Free GLP-1 kit</a></li>'
+    nav += f'<li><a href="{root}collections/">Collections</a></li>'
     socials = ''.join(f'<a href="{e(url)}" aria-label="{name.title()}" target="_blank" rel="noopener">{ICON["pin" if name == "pinterest" else name]}</a>' for name,url in STOREFRONT.get('social_urls', {}).items() if url)
     return f'''<footer class="site-footer">
   <div class="container footer-grid">
@@ -355,6 +356,52 @@ def build_home():
            "potentialAction": {"@type": "SearchAction", "target": SITE_URL + "recipes/?q={search_term_string}", "query-input": "required name=search_term_string"}}]
     page('', 'Bored of Toast | Small plates, big protein', 'Simple high-protein recipes in small portions, with protein per serving and gentler swaps for low-appetite days.', body, 'home', root, jsonld=ld)
 
+# ---------------------------------------------------------------- collections (added by update_030)
+COLLECTIONS = [{"id": "protein-first-breakfasts", "title": "Protein-First Breakfasts", "h1": "Protein-first<br><em>breakfasts.</em>", "subtitle": "Eggs, yogurt and cottage cheese in small portions, for the easiest meal of the day to fit protein into.", "desc": "Small, protein-first breakfast recipes: eggs, Greek yogurt and cottage cheese in portions you can finish, with estimated protein per serving.", "lead": "Breakfast is often the easiest place to fit protein in. These recipes keep portions small and put eggs, yogurt or cottage cheese first.", "intro": ["Several of these can be made ahead, so a small breakfast is ready even on slow mornings. Protein per serving is listed on every recipe as an estimate."], "cover": "cottage-cheese-scrambled-eggs", "ids": ["cottage-cheese-scrambled-eggs", "greek-yogurt-berry-parfaits", "strawberry-cottage-cheese-bowl", "shakshuka", "avocado-toast-jammy-eggs", "spinach-feta-mini-frittata", "cottage-cheese-pancakes", "smoked-salmon-bagel-halves", "overnight-oats", "breakfast-burritos", "savory-cottage-cheese-bowl", "greek-yogurt-chia-pudding", "berry-greek-yogurt-muffins"]}, {"id": "soft-and-gentle", "title": "Soft and Gentle Small Plates", "h1": "Soft and gentle<br><em>small plates.</em>", "subtitle": "Smooth soups, soft eggs and spoonable puddings for days when chewing and strong flavors feel like too much.", "desc": "Soft, mild recipes with protein for harder days: congee, smooth soups, soft eggs and puddings, in small portions.", "lead": "For the days when you want food that asks very little of you: soft, mild, warm or cool, and easy to stop halfway.", "intro": ["Each recipe includes a gentler swap. For more ideas, read the Soft Foods for Hard Days guide in the GLP-1 Kitchen. If you have trouble swallowing or follow a medical texture plan, follow your care team's guidance."], "cover": "chicken-rice-congee", "ids": ["chicken-rice-congee", "cottage-cheese-mashed-potatoes", "ginger-egg-drop-soup", "protein-rice-pudding", "greek-yogurt-chia-pudding", "tomato-basil-soup", "butternut-squash-soup", "red-lentil-lemon-soup", "split-pea-soup", "cottage-cheese-scrambled-eggs", "chocolate-yogurt-mousse-cups", "overnight-oats"]}, {"id": "freezer-friendly", "title": "Freezer-Friendly Small Plates", "h1": "Freezer-friendly<br><em>small plates.</em>", "subtitle": "Cook once on a good day, freeze in small portions, and reheat one when you need it.", "desc": "Freezer-friendly recipes in small portions: soups, stews, meatballs, burritos and breakfasts that reheat well.", "lead": "Soups, stews, meatballs and breakfasts that freeze well in 1-cup portions, so a ready meal is always waiting.", "intro": ["Check the storage notes on each recipe: some parts, like pasta or yogurt toppings, are best added when you reheat. The Freezer Basics guide in the GLP-1 Kitchen covers labeling, thawing and safe reheating."], "cover": "split-pea-soup", "ids": ["split-pea-soup", "red-lentil-lemon-soup", "chicken-minestrone", "tomato-white-bean-stew", "chickpea-black-bean-chili", "turkey-meatballs-tomato-sauce", "breakfast-burritos", "butternut-squash-soup", "tomato-basil-soup", "cottage-cheese-pancakes", "berry-greek-yogurt-muffins"]}, {"id": "sips", "title": "Sips for Low-Appetite Days", "h1": "Sips for<br><em>low-appetite days.</em>", "subtitle": "Small smoothies, a warm latte and a light soup you can sip slowly when solid food is hard.", "desc": "Sippable recipes with protein for low-appetite days: Greek yogurt smoothies, a golden milk latte and ginger egg drop soup.", "lead": "When chewing feels like work, something you can sip slowly may be easier. These are small servings built around protein.", "intro": ["The smoothies use Greek yogurt instead of protein powder; powder is an optional boost. The Smoothies That Actually Fill You guide explains the formula."], "cover": "strawberry-protein-smoothie", "ids": ["strawberry-protein-smoothie", "banana-protein-smoothie", "mixed-berry-protein-smoothie", "golden-milk-latte", "ginger-egg-drop-soup"]}, {"id": "small-snacks", "title": "Small Snacks with Protein", "h1": "Small snacks<br><em>with protein.</em>", "subtitle": "Dips, bites and bars in small portions, for when a full meal is too much.", "desc": "Small snacks with protein: yogurt dips, deviled eggs, edamame, frozen yogurt bars and no-bake protein bites.", "lead": "Small and often works. These snacks keep a little protein within reach between meals.", "intro": ["Most of these keep in the fridge or freezer for several days, so you can make a batch and grab one when you need it."], "cover": "garlic-sesame-edamame", "ids": ["garlic-sesame-edamame", "yogurt-hummus", "tzatziki-yogurt-dip", "bacon-deviled-eggs", "frozen-yogurt-berry-bars", "peanut-butter-protein-bites"]}]
+
+def _coll_recipes(c):
+    return [BY_ID[i] for i in c['ids'] if i in BY_ID and i not in RECIPE_REDIRECTS]
+
+def collection_card(root, c):
+    rs = _coll_recipes(c)
+    cov = BY_ID.get(c.get('cover')) or rs[0]
+    img = cov['img']
+    return ('<a class="guide-card reveal" href="' + root + 'collections/' + c['id'] + '/">'
+            '<div class="guide-img"><img src="' + root + img + '" alt="' + e(c['title']) + '" loading="lazy" width="600" height="450"' + rimg(root, img, SIZES['guide']) + '></div>'
+            '<div class="guide-body"><span class="tag">Collection · ' + str(len(rs)) + ' recipes</span><h3>' + e(c['title']) + '</h3><p>' + e(c['subtitle']) + '</p><span class="view-all">See the collection →</span></div></a>')
+
+def collections_strip(root):
+    links = ''.join('<a class="pill" href="' + root + 'collections/' + c['id'] + '/">' + e(c['title']) + '</a>' for c in COLLECTIONS)
+    return ('<section class="section" style="padding-bottom:0">' + section_head('Browse a collection', 'Hand-picked lists for the way you feel today.', '<a href="' + root + 'collections/" class="view-all">All collections →</a>')
+            + '<div class="pills">' + links + '</div></section>')
+
+def build_collections():
+    root = '../'
+    hub = hero_bleed(root, 'images/greek-yogurt-berry-parfaits.webp', 'Recipe collections', 'Small plates,<br><em>sorted for you.</em>',
+        'Hand-picked lists from the recipe library: protein-first breakfasts, soft foods for hard days, freezer-friendly meals, sips and small snacks. Every recipe lists estimated protein per serving.',
+        '<a href="' + root + 'recipes/" class="btn btn-yellow">All recipes ' + ICON['arrow'] + '</a><a href="' + root + 'starter-kit/" class="btn btn-ghost">Get the free starter kit</a>', short=True)
+    body = (hub + '<section class="container section">' + section_head('Pick a collection', 'Each list links to full recipes with small-portion tips and gentler swaps.')
+            + '<div class="guide-grid">' + ''.join(collection_card(root, c) for c in COLLECTIONS) + '</div></section>' + marketing_block(root, 'free'))
+    ld = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE_URL + 'collections/' + c['id'] + '/'} for i, c in enumerate(COLLECTIONS)]}]
+    page('collections/', 'Recipe Collections | Bored of Toast', 'Hand-picked recipe collections for small appetites: protein-first breakfasts, soft foods, freezer-friendly meals, sips and small snacks.', body, 'recipes', root, jsonld=ld)
+    r2 = '../../'
+    for c in COLLECTIONS:
+        rs = _coll_recipes(c)
+        cov = BY_ID.get(c.get('cover')) or rs[0]
+        hero = hero_bleed(r2, cov['img'], 'Collection · ' + str(len(rs)) + ' recipes', c['h1'], e(c['lead']),
+            '<a href="#list" class="btn btn-yellow">See the recipes ' + ICON['down'] + '</a><a href="' + r2 + 'collections/" class="btn btn-ghost">All collections</a>', short=True)
+        intro = ''.join('<p>' + e(p) + '</p>' for p in c['intro'])
+        others = [x for x in COLLECTIONS if x['id'] != c['id']][:3]
+        body = (hero + '<section class="container section" id="list"><div class="lead" style="max-width:760px;margin-bottom:28px">' + intro + '</div>'
+                + '<div class="recipe-grid">' + ''.join(card(r2, r, eager=i < 4) for i, r in enumerate(rs)) + '</div>'
+                + '<p class="fine" style="margin-top:24px">Protein values are estimates per serving. General cooking education, not medical or nutrition advice.</p></section>'
+                + marketing_block(r2, 'free')
+                + '<section class="container related">' + section_head('More collections', '', '<a href="' + r2 + 'collections/" class="view-all">All collections →</a>')
+                + '<div class="guide-grid">' + ''.join(collection_card(r2, x) for x in others) + '</div></section>')
+        ld = [{"@context": "https://schema.org", "@type": "ItemList", "name": c['title'], "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE_URL + 'recipes/' + r['id'] + '/'} for i, r in enumerate(rs)]}]
+        page('collections/' + c['id'] + '/', c['title'] + ' | Bored of Toast', c['desc'], body, 'recipes', r2, og='images/og/' + cov['id'] + '.jpg', jsonld=ld)
+
+
 def build_recipes():
     root = '../'
     pick = BY_ID['mediterranean-grain-bowl']
@@ -374,6 +421,7 @@ def build_recipes():
   <p class="results-count" id="results-count"></p>
   <div class="recipe-grid" id="recipe-grid">{''.join(card(root, r, eager=i < 4) for i, r in enumerate(RECIPES))}</div>
   <div class="empty" id="empty"><p>No recipes match those filters yet.</p><button class="btn btn-outline" id="clear-filters">Clear filters</button></div>
+  {collections_strip(root)}
   <div class="cta reveal" style="margin-top:72px"><div><h2>Can't decide what to cook?</h2><p>Let us pick a recipe for you. No scrolling required.</p></div><button class="btn btn-yellow" data-random>Surprise me {ICON['arrow']}</button></div>
 </div>'''
     ld = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE_URL}recipes/{r['id']}/"} for i, r in enumerate(RECIPES)]}]
@@ -531,7 +579,7 @@ def build_guides():
     focus = [BY_ID[i] for i in FOCUS_IDS if i in BY_ID][:6]
     body = f'''{hero}<section class="container section">{section_head('Start with a guide', 'Eight short reads, each linked to recipes you can cook this week.')}<div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div></section>
 {marketing_block(root, 'free')}
-<section class="container section">{section_head('Small plates to cook next', 'Smaller portions, protein listed, gentler swaps included.', f'<a href="{root}recipes/?cat=small-plates" class="view-all">All small plates →</a>')}<div class="recipe-grid three">{''.join(card(root, r) for r in focus)}</div></section>
+<section class="container section">{section_head('Small plates to cook next', 'Smaller portions, protein listed, gentler swaps included.', f'<a href="{root}collections/" class="view-all">Browse collections →</a>')}<div class="recipe-grid three">{''.join(card(root, r) for r in focus)}</div></section>
 {marketing_block(root, 'paid')}'''
     page('guides/', 'GLP-1 Kitchen: Guides for Small Appetites | Bored of Toast', 'Practical guides for small appetites: gentle foods, protein-first swaps, smoothies, eating out, grocery lists, meal prep and freezer basics.', body, 'guides', root)
     for g in GUIDES:
@@ -724,3 +772,15 @@ if __name__ == '__main__':
     build_legal('privacy', 'privacy/'); build_legal('terms', 'terms/')
     build_credits(); build_404(); build_redirects(); build_index_js(); build_sitemap()
     print('built', len(RECIPES), 'recipes,', len(GUIDES), 'guides')
+
+
+# ---------------------------------------------------------------- collections pages (added by update_030)
+build_collections()
+_sm = os.path.join(OUT, 'sitemap.xml')
+if os.path.exists(_sm):
+    _x = open(_sm, encoding='utf-8').read()
+    _urls = ['collections/'] + ['collections/' + c['id'] + '/' for c in COLLECTIONS]
+    _add = ''.join('<url><loc>' + SITE_URL + u + '</loc></url>\n' for u in _urls if (SITE_URL + u + '<') not in _x)
+    if _add and '</urlset>' in _x:
+        open(_sm, 'w', encoding='utf-8').write(_x.replace('</urlset>', _add + '</urlset>'))
+print(f'built {len(COLLECTIONS)} collections')
