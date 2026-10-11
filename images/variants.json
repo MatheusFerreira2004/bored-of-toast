@@ -224,7 +224,37 @@
   ],
   "width": 1200
  },
+ "images/guide-eating-out.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-freezer.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
  "images/guide-gentle.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-grocery.webp": {
   "variants": [
    160,
    320,
@@ -245,6 +275,26 @@
   "width": 1400
  },
  "images/guide-protein.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-smoothies.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720,
+   1100
+  ],
+  "width": 1400
+ },
+ "images/guide-soft.webp": {
   "variants": [
    160,
    320,

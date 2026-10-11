@@ -62,6 +62,8 @@ GUIDE_RELATED = {'nothing-sounds-good': ['tomato-basil-soup', 'overnight-oats', 
                  'protein-first': ['shakshuka', 'avocado-toast-jammy-eggs', 'chicken-avocado-salad'],
                  'small-portion-meal-prep': ['lemon-chicken-orzo-soup', 'breakfast-burritos', 'mediterranean-grain-bowl']}
 GUIDE_REDIRECTS = {'pantry-staples': 'small-portion-meal-prep', 'perfect-rice': 'protein-first', 'knife-skills': ''}
+GUIDE_IMG.update({"smoothies-that-fill-you": "guide-smoothies", "eating-out-small-appetite": "guide-eating-out", "high-protein-grocery-list": "guide-grocery", "soft-foods-hard-days": "guide-soft", "freezer-basics": "guide-freezer"})
+GUIDE_RELATED.update({"smoothies-that-fill-you": ["strawberry-protein-smoothie", "banana-protein-smoothie", "mixed-berry-protein-smoothie"], "eating-out-small-appetite": ["egg-salad-lettuce-wraps", "lemon-herb-baked-cod", "chicken-avocado-salad"], "high-protein-grocery-list": ["greek-yogurt-berry-parfaits", "cottage-cheese-scrambled-eggs", "tuna-white-bean-salad"], "soft-foods-hard-days": ["chicken-rice-congee", "cottage-cheese-mashed-potatoes", "greek-yogurt-chia-pudding"], "freezer-basics": ["split-pea-soup", "turkey-meatballs-tomato-sauce", "breakfast-burritos"]})
 RECIPE_REDIRECTS = json.load(open(os.path.join(HERE, 'redirects.json'))) if os.path.exists(os.path.join(HERE, 'redirects.json')) else {}
 BY_ID.update({old: BY_ID[new] for old, new in RECIPE_REDIRECTS.items() if new in BY_ID and old not in BY_ID})
 NEW_IDS = ["cottage-cheese-pancakes", "shakshuka", "butternut-squash-soup", "crispy-baked-chicken-bites", "avocado-toast-jammy-eggs", "turkey-meatballs-tomato-sauce", "baked-cinnamon-apples", "lemon-chicken-orzo-soup"]
@@ -338,7 +340,7 @@ def build_home():
 <section class="section bg-paper">
   <div class="container">
     {section_head('From the GLP-1 Kitchen', 'Short guides for small appetites and harder days.', f'<a href="{root}guides/" class="view-all">All guides →</a>')}
-    <div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div>
+    <div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES[:3])}</div>
   </div>
 </section>
 
@@ -527,11 +529,11 @@ def build_guides():
     hero = hero_bleed(root, 'images/lemon-chicken-orzo-soup.webp', 'GLP-1 Kitchen', 'Eating less?<br><em>Make every bite count.</em>',
         'Short, practical guides for small appetites: what to eat on harder days, how to fit protein into small meals, and how to cook once for the week. General cooking education, not medical advice.', short=True)
     focus = [BY_ID[i] for i in FOCUS_IDS if i in BY_ID][:6]
-    body = f'''{hero}<section class="container section">{section_head('Start with a guide', 'Three short reads, each linked to recipes you can cook this week.')}<div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div></section>
+    body = f'''{hero}<section class="container section">{section_head('Start with a guide', 'Eight short reads, each linked to recipes you can cook this week.')}<div class="guide-grid">{''.join(guide_card(root, g) for g in GUIDES)}</div></section>
 {marketing_block(root, 'free')}
 <section class="container section">{section_head('Small plates to cook next', 'Smaller portions, protein listed, gentler swaps included.', f'<a href="{root}recipes/?cat=small-plates" class="view-all">All small plates →</a>')}<div class="recipe-grid three">{''.join(card(root, r) for r in focus)}</div></section>
 {marketing_block(root, 'paid')}'''
-    page('guides/', 'GLP-1 Kitchen: Guides for Small Appetites | Bored of Toast', 'Practical guides for small appetites: what to eat when nothing sounds good, protein-first swaps and small-portion meal prep.', body, 'guides', root)
+    page('guides/', 'GLP-1 Kitchen: Guides for Small Appetites | Bored of Toast', 'Practical guides for small appetites: gentle foods, protein-first swaps, smoothies, eating out, grocery lists, meal prep and freezer basics.', body, 'guides', root)
     for g in GUIDES:
         build_guide(g)
     build_recipe_redirects()
@@ -576,7 +578,7 @@ def build_guide(g):
   <aside class="sidebar"><div class="side-card side-toc"><h3>In this guide</h3>{toc}</div>
     <div class="side-card"><h3>Put it into practice</h3>{''.join(f'<a class="mini-recipe" href="{root}recipes/{rid}/"><img src="{root}{BY_ID[rid]["img"]}" alt="" loading="lazy" width="64" height="64"{rimg(root, BY_ID[rid]["img"], SIZES["mini"])}><span><strong>{e(BY_ID[rid]["title"])}</strong><small>{fmt_time(BY_ID[rid]["time"])}</small></span></a>' for rid in GUIDE_RELATED[g['id']])}</div></aside>
 </div>
-<section class="container related">{section_head('More from the GLP-1 Kitchen', '', f'<a href="{root}guides/" class="view-all">All guides →</a>')}<div class="guide-grid">{''.join(guide_card(root, x) for x in GUIDES if x['id'] != g['id'])}</div></section>'''
+<section class="container related">{section_head('More from the GLP-1 Kitchen', '', f'<a href="{root}guides/" class="view-all">All guides →</a>')}<div class="guide-grid">{''.join(guide_card(root, x) for x in [y for y in GUIDES if y['id'] != g['id']][:3])}</div></section>'''
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": g['title'], "description": g['subtitle'], "image": SITE_URL + img,
            "author": {"@type": "Organization", "name": "Bored of Toast"}, "publisher": {"@type": "Organization", "name": "Bored of Toast", "logo": {"@type": "ImageObject", "url": SITE_URL + "images/logo.png"}},
            "datePublished": PUBLISHED, "mainEntityOfPage": f"{SITE_URL}guides/{g['id']}/"}]
