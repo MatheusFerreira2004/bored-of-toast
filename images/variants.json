@@ -80,6 +80,15 @@
   ],
   "width": 1200
  },
+ "images/chicken-rice-congee.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/chicken-zucchini-stir-fry.webp": {
   "variants": [
    160,
@@ -99,6 +108,15 @@
   "width": 1200
  },
  "images/chocolate-yogurt-mousse-cups.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/cottage-cheese-mashed-potatoes.webp": {
   "variants": [
    160,
    320,
@@ -189,6 +207,15 @@
   "width": 1200
  },
  "images/greek-yogurt-berry-parfaits.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/greek-yogurt-chia-pudding.webp": {
   "variants": [
    160,
    320,
@@ -297,7 +324,25 @@
   ],
   "width": 1200
  },
+ "images/protein-rice-pudding.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/red-lentil-lemon-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/savory-cottage-cheese-bowl.webp": {
   "variants": [
    160,
    320,
