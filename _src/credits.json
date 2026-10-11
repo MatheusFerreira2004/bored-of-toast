@@ -341,5 +341,40 @@
   "photo_url": "https://www.pexels.com/photo/healthy-lettuce-wraps-on-wooden-platter-37112189/",
   "source": "Pexels",
   "alt": "Lettuce wraps filled with egg salad, with crackers, on a wooden platter."
+ },
+ "chicken-rice-congee": {
+  "photographer": "Archudio Studio",
+  "photographer_url": "https://www.pexels.com/@archudio/",
+  "photo_url": "https://www.pexels.com/photo/traditional-thai-chicken-congee-with-toppings-38790905/",
+  "source": "Pexels",
+  "alt": "A bowl of chicken rice congee topped with fresh herbs and a soft-boiled egg."
+ },
+ "cottage-cheese-mashed-potatoes": {
+  "photographer": "IARA MELO",
+  "photographer_url": "https://www.pexels.com/@iara-melo-558346607/",
+  "photo_url": "https://www.pexels.com/photo/creamy-mashed-potatoes-with-green-onions-30635679/",
+  "source": "Pexels",
+  "alt": "Creamy mashed potatoes topped with green onions in a white bowl."
+ },
+ "savory-cottage-cheese-bowl": {
+  "photographer": "Kaboompics",
+  "photographer_url": "https://www.pexels.com/@karola-g/",
+  "photo_url": "https://www.pexels.com/photo/bowl-with-healthy-food-in-kitchen-4198171/",
+  "source": "Pexels",
+  "alt": "Cottage cheese with chopped green onions in a white bowl."
+ },
+ "greek-yogurt-chia-pudding": {
+  "photographer": "Antoni Shkraba",
+  "photographer_url": "https://www.pexels.com/@shkrabaanthony/",
+  "photo_url": "https://www.pexels.com/photo/homemade-chia-seed-pudding-with-almond-flakes-and-blueberries-4397294/",
+  "source": "Pexels",
+  "alt": "A jar of chia pudding topped with blueberries and almond flakes."
+ },
+ "protein-rice-pudding": {
+  "photographer": "Markus Spiske",
+  "photographer_url": "https://www.pexels.com/@markusspiske/",
+  "photo_url": "https://www.pexels.com/photo/food-healthy-meal-breakfast-116725/",
+  "source": "Pexels",
+  "alt": "Creamy rice pudding topped with fresh red berries."
  }
 }
