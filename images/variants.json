@@ -80,6 +80,15 @@
   ],
   "width": 1200
  },
+ "images/chicken-zucchini-stir-fry.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/chickpea-black-bean-chili.webp": {
   "variants": [
    160,
@@ -125,6 +134,15 @@
   ],
   "width": 1200
  },
+ "images/egg-salad-lettuce-wraps.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/frozen-yogurt-berry-bars.webp": {
   "variants": [
    160,
@@ -135,6 +153,15 @@
   "width": 1200
  },
  "images/garlic-sesame-edamame.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/garlic-shrimp-zucchini-noodles.webp": {
   "variants": [
    160,
    320,
@@ -201,6 +228,15 @@
   "width": 1400
  },
  "images/lemon-chicken-orzo-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/lemon-herb-baked-cod.webp": {
   "variants": [
    160,
    320,
@@ -381,6 +417,15 @@
   "width": 1200
  },
  "images/turkey-meatballs-tomato-sauce.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/turkey-stuffed-peppers.webp": {
   "variants": [
    160,
    320,
