@@ -376,5 +376,40 @@
   "photo_url": "https://www.pexels.com/photo/food-healthy-meal-breakfast-116725/",
   "source": "Pexels",
   "alt": "Creamy rice pudding topped with fresh red berries."
+ },
+ "guide-smoothies": {
+  "photographer": "Element5 Digital",
+  "photographer_url": "https://www.pexels.com/@element5/",
+  "photo_url": "https://www.pexels.com/photo/strawberry-smoothie-on-glass-jar-775032/",
+  "source": "Pexels",
+  "alt": "A fruit smoothie with berries and banana in a glass jar."
+ },
+ "guide-eating-out": {
+  "photographer": "Bas Linders",
+  "photographer_url": "https://www.pexels.com/@studio1345/",
+  "photo_url": "https://www.pexels.com/photo/food-on-table-14009280/",
+  "source": "Pexels",
+  "alt": "Several small tapas plates served on a rustic wooden restaurant table."
+ },
+ "guide-grocery": {
+  "photographer": "Selma Nigar Baştürk",
+  "photographer_url": "https://www.pexels.com/@selma-nigar-basturk-1546567251/",
+  "photo_url": "https://www.pexels.com/photo/a-table-with-various-vegetables-and-eggs-28216090/",
+  "source": "Pexels",
+  "alt": "Fresh groceries, including eggs, pears and greens, laid out on a white table."
+ },
+ "guide-soft": {
+  "photographer": "Rachel Loughman",
+  "photographer_url": "https://www.pexels.com/@rachel-loughman-3513722/",
+  "photo_url": "https://www.pexels.com/photo/mashed-potato-in-a-clear-glass-mini-bowl-5440960/",
+  "source": "Pexels",
+  "alt": "A small glass bowl of smooth mashed potatoes."
+ },
+ "guide-freezer": {
+  "photographer": "Iara Melo",
+  "photographer_url": "https://www.pexels.com/@iara-melo-558346607/",
+  "photo_url": "https://www.pexels.com/photo/stack-of-healthy-meal-prep-containers-30635719/",
+  "source": "Pexels",
+  "alt": "A stack of meal prep containers filled with rice and vegetables."
  }
 }
