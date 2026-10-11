@@ -71,6 +71,24 @@
   ],
   "width": 824
  },
+ "images/chicken-minestrone.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/chickpea-black-bean-chili.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/chocolate-yogurt-mousse-cups.webp": {
   "variants": [
    160,
@@ -243,6 +261,15 @@
   ],
   "width": 1200
  },
+ "images/red-lentil-lemon-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/shakshuka.webp": {
   "variants": [
    160,
@@ -271,6 +298,15 @@
   "width": 1200
  },
  "images/spinach-feta-mini-frittata.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/split-pea-soup.webp": {
   "variants": [
    160,
    320,
@@ -318,6 +354,15 @@
   "width": 1200
  },
  "images/tomato-basil-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/tomato-white-bean-stew.webp": {
   "variants": [
    160,
    320,

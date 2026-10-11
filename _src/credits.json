@@ -271,5 +271,40 @@
   "photo_url": "https://www.pexels.com/photo/frozen-berries-on-creamy-yogurt-bar-close-up-32055276/",
   "source": "Pexels",
   "alt": "A frozen Greek yogurt bar topped with raspberries and blackberries."
+ },
+ "split-pea-soup": {
+  "photographer": "Nic Wood",
+  "photographer_url": "https://www.pexels.com/@nic-scrollstoppingphotos/",
+  "photo_url": "https://www.pexels.com/photo/vegan-split-pea-watercress-soup-28354410/",
+  "source": "Pexels",
+  "alt": "Two bowls of creamy green split pea soup seen from above."
+ },
+ "chicken-minestrone": {
+  "photographer": "fajri nugroho",
+  "photographer_url": "https://www.pexels.com/@fajrinugroho/",
+  "photo_url": "https://www.pexels.com/photo/minestrone-soup-with-noodles-16811678/",
+  "source": "Pexels",
+  "alt": "A bowl of minestrone with small pasta and vegetables."
+ },
+ "chickpea-black-bean-chili": {
+  "photographer": "Alesia Kozik",
+  "photographer_url": "https://www.pexels.com/@alesiakozik/",
+  "photo_url": "https://www.pexels.com/photo/vegan-chili-bowl-6546422/",
+  "source": "Pexels",
+  "alt": "A bowl of chickpea chili with fresh vegetables."
+ },
+ "tomato-white-bean-stew": {
+  "photographer": "Boryslav Shoot",
+  "photographer_url": "https://www.pexels.com/@boryslav/",
+  "photo_url": "https://www.pexels.com/photo/soup-with-beans-19870150/",
+  "source": "Pexels",
+  "alt": "A bowl of hearty tomato bean stew with slices of bread."
+ },
+ "red-lentil-lemon-soup": {
+  "photographer": "Alex Bayev",
+  "photographer_url": "https://www.pexels.com/@alexbayev/",
+  "photo_url": "https://www.pexels.com/photo/turkish-creamy-soup-12077978/",
+  "source": "Pexels",
+  "alt": "Bowls of smooth red lentil soup drizzled with oil."
  }
 }
