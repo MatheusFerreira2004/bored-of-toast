@@ -17,6 +17,15 @@
   ],
   "width": 1200
  },
+ "images/banana-protein-smoothie.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/berry-greek-yogurt-muffins.webp": {
   "variants": [
    160,
@@ -89,6 +98,24 @@
   ],
   "width": 1200
  },
+ "images/ginger-egg-drop-soup.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/golden-milk-latte.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/greek-yogurt-berry-parfaits.webp": {
   "variants": [
    160,
@@ -153,6 +180,15 @@
    480
   ],
   "width": 733
+ },
+ "images/mixed-berry-protein-smoothie.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
  },
  "images/our-story.webp": {
   "variants": [
@@ -237,6 +273,15 @@
   "width": 1400
  },
  "images/strawberry-cottage-cheese-bowl.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/strawberry-protein-smoothie.webp": {
   "variants": [
    160,
    320,

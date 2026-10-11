@@ -4888,5 +4888,795 @@
    "gluten-free"
   ],
   "img": "images/strawberry-cottage-cheese-bowl.webp"
+ },
+ {
+  "id": "strawberry-protein-smoothie",
+  "title": "Strawberry Greek Yogurt Smoothie",
+  "subtitle": "Frozen strawberries blended with Greek yogurt and milk into a thick, cold smoothie. About 16 g protein per small glass, no protein powder needed.",
+  "category": "Sips",
+  "tags": [
+   "quick",
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "gentle"
+  ],
+  "prep": 5,
+  "cook": 0,
+  "time": 5,
+  "serves": 2,
+  "servesLabel": "small glasses",
+  "level": "Easy",
+  "desc": "Thick, cold and about 16 g protein a glass.",
+  "intro": [
+   "On days when chewing feels like work, a smoothie is often the easiest way to get some protein in. This one uses Greek yogurt instead of protein powder, so it tastes like strawberries and cream rather than a supplement, with about 16 g of protein in each small glass.",
+   "Frozen strawberries do two jobs: they make the smoothie cold and thick without ice, and they keep well in the freezer so you can make a glass whenever you want one."
+  ],
+  "why": [
+   [
+    "About 16 g protein per glass",
+    "From Greek yogurt and milk, no powder."
+   ],
+   [
+    "Five minutes",
+    "Everything goes straight into the blender."
+   ],
+   [
+    "Easy to sip slowly",
+    "A small glass you can finish over half an hour."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the smoothie",
+    "items": [
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "frozen strawberries",
+      "g": 280
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 227
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "milk",
+      "note": "any kind"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "honey",
+      "note": "optional"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "vanilla extract"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Add the liquid first",
+    "d": "Pour the milk into the blender, then add the yogurt, honey and vanilla.",
+    "tip": "Liquid at the bottom helps the blades move and keeps the blender from stalling."
+   },
+   {
+    "t": "Add the strawberries",
+    "d": "Add the frozen strawberries on top."
+   },
+   {
+    "t": "Blend",
+    "d": "Blend on low for a few seconds, then on high for 45 to 60 seconds, until completely smooth. Add a splash more milk if it is too thick to pour."
+   },
+   {
+    "t": "Serve small",
+    "d": "Pour into two small glasses. Drink one now and keep the other covered in the fridge for later in the day."
+   }
+  ],
+  "tips": [
+   "Taste before adding honey; ripe frozen strawberries are often sweet enough.",
+   "For a thicker, spoonable smoothie, use 3/4 cup milk.",
+   "Fresh strawberries work too; add a few ice cubes for chill.",
+   "Small-portion tip: sip it slowly over 20 to 30 minutes. It does not need to be finished in one go."
+  ],
+  "storage": "Best fresh. Refrigerate a covered glass for up to 24 hours and shake or stir before drinking. Freeze leftovers in ice pop molds for up to 1 month.",
+  "variations": [
+   [
+    "Strawberry banana",
+    "Replace 1 cup of strawberries with half a frozen banana."
+   ],
+   [
+    "Dairy-free",
+    "Use a soy yogurt and soy milk; the protein will be a little lower."
+   ],
+   [
+    "Oat boost",
+    "Blend in 2 tablespoons rolled oats for a more filling glass."
+   ],
+   [
+    "Make it gentler",
+    "Use a mild, plain yogurt, skip the honey and let it sit for a few minutes so it is cool rather than icy."
+   ],
+   [
+    "Protein boost",
+    "Blend in one scoop of vanilla protein powder for about 12 g more protein per glass."
+   ]
+  ],
+  "nutrition": {
+   "calories": 184,
+   "protein": 16,
+   "carbs": 24,
+   "fat": 3,
+   "fiber": 3
+  },
+  "faq": [
+   [
+    "Can I make it ahead?",
+    "Yes, up to a day. It separates a little; shake or stir it before drinking."
+   ],
+   [
+    "Do I need a high-powered blender?",
+    "No. Add the milk first and blend in short bursts if your blender struggles."
+   ],
+   [
+    "Is it gluten-free?",
+    "Yes, as written."
+   ]
+  ],
+  "note": "When a plate of food feels like too much, a small glass often does not. Keep a bag of frozen strawberries in the freezer for exactly those days.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/strawberry-protein-smoothie.webp"
+ },
+ {
+  "id": "banana-protein-smoothie",
+  "title": "Banana Vanilla Protein Smoothie",
+  "subtitle": "A creamy banana smoothie with Greek yogurt, milk, vanilla and a pinch of cinnamon. Tastes like a milkshake, with about 16 g protein per small glass.",
+  "category": "Sips",
+  "tags": [
+   "quick",
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "gentle"
+  ],
+  "prep": 5,
+  "cook": 0,
+  "time": 5,
+  "serves": 2,
+  "servesLabel": "small glasses",
+  "level": "Easy",
+  "desc": "A milkshake-style smoothie with real protein.",
+  "intro": [
+   "A frozen banana blends into something that tastes surprisingly close to a vanilla milkshake. Add Greek yogurt and milk and each small glass has about 16 g of protein, with nothing more than a pinch of cinnamon for flavor.",
+   "Bananas are also one of the mildest fruits there is, which makes this a good choice on days when strong flavors or acidic fruit do not sit well."
+  ],
+  "why": [
+   [
+    "About 16 g protein per glass",
+    "Greek yogurt and milk do the work."
+   ],
+   [
+    "Mild and creamy",
+    "Banana, vanilla and a little cinnamon."
+   ],
+   [
+    "No added sugar needed",
+    "A ripe banana sweetens it."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the smoothie",
+    "items": [
+     {
+      "q": 1,
+      "u": "",
+      "n": "ripe banana",
+      "note": "sliced and frozen",
+      "g": 118
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 227
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "milk",
+      "note": "any kind"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "vanilla extract"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "pinch of ground cinnamon"
+     },
+     {
+      "q": 3,
+      "u": "",
+      "n": "ice cubes",
+      "note": "optional"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Freeze the banana",
+    "d": "Peel a ripe banana, slice it and freeze the slices on a plate or in a bag for at least 2 hours.",
+    "tip": "Freeze several bananas at once. Spotty, very ripe bananas make the sweetest smoothies."
+   },
+   {
+    "t": "Blend",
+    "d": "Add the milk, yogurt, vanilla and cinnamon to the blender, then the frozen banana. Blend until smooth and thick, about 45 seconds."
+   },
+   {
+    "t": "Adjust",
+    "d": "Add ice for a colder, frothier smoothie, or a splash of milk if it is too thick."
+   },
+   {
+    "t": "Serve",
+    "d": "Pour into two small glasses and dust with a little more cinnamon."
+   }
+  ],
+  "tips": [
+   "No frozen banana? Use a fresh one and add 4 or 5 ice cubes.",
+   "The riper the banana, the sweeter and less starchy the smoothie.",
+   "Vanilla Greek yogurt works too; skip the vanilla extract.",
+   "Small-portion tip: one small glass is a full snack. Save the second for the afternoon."
+  ],
+  "storage": "Best fresh. Refrigerate a covered glass for up to 12 hours; banana smoothies darken a little as they sit, which is harmless. Stir before drinking.",
+  "variations": [
+   [
+    "Peanut butter",
+    "Blend in 1 tablespoon peanut butter for extra flavor and about 2 g more protein per glass."
+   ],
+   [
+    "Coffee",
+    "Replace half the milk with cold brewed coffee."
+   ],
+   [
+    "Dairy-free",
+    "Use soy yogurt and soy milk."
+   ],
+   [
+    "Make it gentler",
+    "Skip the cinnamon and ice, and use a very ripe banana for the softest flavor."
+   ],
+   [
+    "Protein boost",
+    "Add a scoop of vanilla protein powder and a splash more milk for about 12 g more protein per glass."
+   ]
+  ],
+  "nutrition": {
+   "calories": 187,
+   "protein": 16,
+   "carbs": 24,
+   "fat": 3,
+   "fiber": 2
+  },
+  "faq": [
+   [
+    "Why freeze the banana?",
+    "It makes the smoothie thick and cold without watering it down with lots of ice."
+   ],
+   [
+    "Can I use a green banana?",
+    "It works, but it tastes starchy and less sweet. Ripe is best."
+   ],
+   [
+    "Is it gluten-free?",
+    "Yes, as written."
+   ]
+  ],
+  "note": "This is the smoothie for days when nothing sounds good. Mild, sweet, cold, and easy to sip slowly.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/banana-protein-smoothie.webp"
+ },
+ {
+  "id": "mixed-berry-protein-smoothie",
+  "title": "Mixed Berry Protein Smoothie",
+  "subtitle": "Frozen mixed berries, Greek yogurt, milk and a spoonful of chia blended into a thick, deep-purple smoothie. About 16 g protein and 5 g fiber per small glass.",
+  "category": "Sips",
+  "tags": [
+   "quick",
+   "healthy",
+   "high-protein",
+   "small-plates",
+   "gentle"
+  ],
+  "prep": 5,
+  "cook": 0,
+  "time": 5,
+  "serves": 2,
+  "servesLabel": "small glasses",
+  "level": "Easy",
+  "desc": "Bright berries, 16 g protein, 5 g fiber.",
+  "intro": [
+   "A bag of frozen mixed berries is one of the most useful things to keep in the freezer. Blended with Greek yogurt and milk, it makes a thick, bright smoothie with about 16 g of protein in each small glass.",
+   "A spoonful of chia seeds adds fiber and makes the smoothie a little thicker as it sits, which is helpful when you want something that feels more like a small meal."
+  ],
+  "why": [
+   [
+    "About 16 g protein per glass",
+    "Greek yogurt plus milk."
+   ],
+   [
+    "5 g fiber",
+    "Berries and chia seeds."
+   ],
+   [
+    "Freezer staples",
+    "Ready any day of the week."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the smoothie",
+    "items": [
+     {
+      "q": 1.5,
+      "u": "cups",
+      "n": "frozen mixed berries",
+      "note": "strawberries, blueberries, raspberries",
+      "g": 210
+     },
+     {
+      "q": 1,
+      "u": "cup",
+      "n": "plain nonfat Greek yogurt",
+      "g": 227
+     },
+     {
+      "q": 0.75,
+      "u": "cup",
+      "n": "milk",
+      "note": "any kind"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "chia seeds"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "honey",
+      "note": "optional"
+     }
+    ]
+   },
+   {
+    "group": "To serve (optional)",
+    "items": [
+     {
+      "q": null,
+      "u": "",
+      "n": "a few fresh berries or edible flowers"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Load the blender",
+    "d": "Add the milk, yogurt, chia seeds and honey to the blender, then the frozen berries."
+   },
+   {
+    "t": "Blend",
+    "d": "Blend on high for about 60 seconds, until completely smooth and no chia specks remain whole.",
+    "tip": "If you prefer a smoother texture, soak the chia in the milk for 5 minutes before blending."
+   },
+   {
+    "t": "Thin if needed",
+    "d": "Add milk a tablespoon at a time if the smoothie is too thick to sip through a straw."
+   },
+   {
+    "t": "Serve",
+    "d": "Pour into two small glasses and top with a few fresh berries if you like."
+   }
+  ],
+  "tips": [
+   "Mixed berries vary in tartness; taste and add honey only if needed.",
+   "Raspberries and blackberries have seeds. Strain through a sieve for a seed-free smoothie.",
+   "The smoothie thickens as it sits because of the chia. Stir in a splash of milk before drinking.",
+   "Small-portion tip: a small glass now and the rest later counts just as much."
+  ],
+  "storage": "Refrigerate a covered glass for up to 24 hours. It will thicken; stir in a little milk before drinking.",
+  "variations": [
+   [
+    "Blueberry only",
+    "Use all blueberries for a milder, sweeter smoothie."
+   ],
+   [
+    "Green",
+    "Blend in a small handful of baby spinach; the berries hide the color and flavor."
+   ],
+   [
+    "Dairy-free",
+    "Use soy yogurt and soy milk."
+   ],
+   [
+    "Make it gentler",
+    "Use blueberries and strawberries only, skip the chia and strain out any seeds."
+   ],
+   [
+    "Protein boost",
+    "Blend in a scoop of unflavored or vanilla protein powder for about 12 g more protein per glass."
+   ]
+  ],
+  "nutrition": {
+   "calories": 205,
+   "protein": 16,
+   "carbs": 27,
+   "fat": 4,
+   "fiber": 5
+  },
+  "faq": [
+   [
+    "Fresh or frozen berries?",
+    "Frozen give the best thick, cold texture. With fresh berries, add a handful of ice."
+   ],
+   [
+    "Can I skip the chia?",
+    "Yes. The smoothie will be a little thinner, with about 2 g less fiber per glass."
+   ],
+   [
+    "Is it gluten-free?",
+    "Yes, as written."
+   ]
+  ],
+  "note": "Bright, cold and a little tart. On slow mornings, one small glass of this is often enough to get started.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/mixed-berry-protein-smoothie.webp"
+ },
+ {
+  "id": "golden-milk-latte",
+  "title": "Golden Milk Turmeric Latte",
+  "subtitle": "Warm or iced milk gently spiced with turmeric, cinnamon and ginger. Made with ultra-filtered milk for about 13 g protein per glass.",
+  "category": "Sips",
+  "tags": [
+   "quick",
+   "small-plates",
+   "gentle"
+  ],
+  "prep": 2,
+  "cook": 5,
+  "time": 7,
+  "serves": 2,
+  "servesLabel": "glasses",
+  "level": "Easy",
+  "desc": "A soothing spiced milk with real protein.",
+  "intro": [
+   "Golden milk is warm milk spiced with turmeric, cinnamon and ginger. It is soothing, lightly sweet and easy to sip slowly, which makes it a good evening drink or a gentle start to the day.",
+   "Using ultra-filtered milk, the kind sold with higher protein on the label, gives each glass about 13 g of protein without changing the taste. Regular milk works too, with about 8 g per glass."
+  ],
+  "why": [
+   [
+    "About 13 g protein per glass",
+    "From ultra-filtered milk."
+   ],
+   [
+    "Warm or iced",
+    "Sip it hot in winter or over ice in summer."
+   ],
+   [
+    "Gently spiced",
+    "Turmeric, cinnamon and a little ginger."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the golden milk",
+    "items": [
+     {
+      "q": 2,
+      "u": "cups",
+      "n": "ultra-filtered 2% milk",
+      "note": "or regular milk"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "ground turmeric"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "ground cinnamon"
+     },
+     {
+      "q": 0.25,
+      "u": "tsp",
+      "n": "ground ginger"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "pinch of black pepper"
+     },
+     {
+      "q": 2,
+      "u": "tsp",
+      "n": "honey or maple syrup"
+     },
+     {
+      "q": 0.5,
+      "u": "tsp",
+      "n": "vanilla extract"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Whisk the spices",
+    "d": "Add the milk, turmeric, cinnamon, ginger and pepper to a small saucepan and whisk until no lumps remain."
+   },
+   {
+    "t": "Warm gently",
+    "d": "Heat over medium-low, whisking often, until steaming but not boiling, about 4 to 5 minutes.",
+    "tip": "Do not let it boil. Ultra-filtered milk can catch on the bottom of the pan if the heat is too high."
+   },
+   {
+    "t": "Sweeten",
+    "d": "Take the pan off the heat and stir in the honey and vanilla. Taste and adjust."
+   },
+   {
+    "t": "Serve warm or iced",
+    "d": "Pour into two glasses or mugs. For iced golden milk, let it cool, then pour over ice."
+   }
+  ],
+  "tips": [
+   "Turmeric stains. Rinse the pan and whisk right away.",
+   "Whisking or frothing the milk before serving gives it a latte-style foam.",
+   "A pinch of black pepper is traditional; leave it out if you prefer.",
+   "Small-portion tip: half a glass is perfectly fine. Keep the rest in the fridge and warm it later."
+  ],
+  "storage": "Refrigerate in a covered jar for up to 3 days. Shake well, then warm gently or serve over ice.",
+  "variations": [
+   [
+    "Dairy-free",
+    "Use soy milk for the most protein among plant milks."
+   ],
+   [
+    "Chai-style",
+    "Add a pinch of cardamom and a small pinch of cloves."
+   ],
+   [
+    "Fresh spices",
+    "Use 1 teaspoon each grated fresh turmeric and ginger, then strain."
+   ],
+   [
+    "Make it gentler",
+    "Halve the turmeric, skip the pepper and ginger, and serve it warm rather than hot."
+   ],
+   [
+    "Protein boost",
+    "Whisk in a scoop of unflavored collagen or vanilla protein powder off the heat."
+   ]
+  ],
+  "nutrition": {
+   "calories": 152,
+   "protein": 13,
+   "carbs": 14,
+   "fat": 5,
+   "fiber": 1
+  },
+  "faq": [
+   [
+    "What is ultra-filtered milk?",
+    "Milk filtered to concentrate the protein and reduce the sugar. Check labels; most have around 13 g protein per cup."
+   ],
+   [
+    "Does it contain caffeine?",
+    "No. That makes it a good evening drink."
+   ],
+   [
+    "Is it gluten-free?",
+    "Yes, as written."
+   ]
+  ],
+  "note": "A warm glass of golden milk is one of the gentlest ways to end the day. It counts as a small meal on nights when dinner does not happen.",
+  "diet": [
+   "vegetarian",
+   "gluten-free"
+  ],
+  "img": "images/golden-milk-latte.webp"
+ },
+ {
+  "id": "ginger-egg-drop-soup",
+  "title": "Ginger Egg Drop Soup",
+  "subtitle": "Hot chicken bone broth with fresh ginger and silky ribbons of egg, ready in 15 minutes. About 16 g protein per mug, easy to sip on hard days.",
+  "category": "Sips",
+  "tags": [
+   "quick",
+   "high-protein",
+   "small-plates",
+   "gentle",
+   "make-ahead"
+  ],
+  "prep": 5,
+  "cook": 10,
+  "time": 15,
+  "serves": 4,
+  "servesLabel": "mugs",
+  "level": "Easy",
+  "desc": "Silky egg ribbons in a gingery broth.",
+  "intro": [
+   "Egg drop soup is one of the fastest soups there is: hot broth, a little cornstarch to give it body, and beaten eggs poured in slowly so they turn into soft, silky ribbons. It is light, warm and easy to sip from a mug.",
+   "Using chicken bone broth instead of regular stock adds a surprising amount of protein. With the eggs, each mug has about 16 g, and fresh ginger keeps it bright and soothing."
+  ],
+  "why": [
+   [
+    "About 16 g protein per mug",
+    "Bone broth and eggs together."
+   ],
+   [
+    "15 minutes",
+    "Faster than most takeout."
+   ],
+   [
+    "Sippable",
+    "Soft, warm and light."
+   ]
+  ],
+  "ingredients": [
+   {
+    "group": "For the broth",
+    "items": [
+     {
+      "q": 4,
+      "u": "cups",
+      "n": "low-sodium chicken bone broth"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "fresh ginger",
+      "note": "thinly sliced or grated"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "low-sodium soy sauce or tamari"
+     },
+     {
+      "q": 1,
+      "u": "tbsp",
+      "n": "cornstarch",
+      "note": "mixed with 2 tbsp cold water"
+     }
+    ]
+   },
+   {
+    "group": "To finish",
+    "items": [
+     {
+      "q": 4,
+      "u": "",
+      "n": "large eggs"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "n": "toasted sesame oil"
+     },
+     {
+      "q": 2,
+      "u": "",
+      "n": "scallions",
+      "note": "thinly sliced"
+     },
+     {
+      "q": null,
+      "u": "",
+      "n": "white pepper",
+      "note": "to taste"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "t": "Infuse the broth",
+    "d": "Bring the broth, ginger and soy sauce to a simmer in a saucepan and simmer for 5 minutes. Remove the ginger slices if you used them."
+   },
+   {
+    "t": "Thicken",
+    "d": "Stir the cornstarch slurry, then whisk it into the simmering broth. Cook for 1 minute, until the broth turns slightly glossy."
+   },
+   {
+    "t": "Beat the eggs",
+    "d": "Beat the eggs in a jug or bowl until completely smooth."
+   },
+   {
+    "t": "Make the ribbons",
+    "d": "Stir the broth in a slow circle with one hand while you pour the eggs in a thin stream with the other. Stop stirring and let the soup sit for 30 seconds, until the ribbons set.",
+    "tip": "A slow, thin stream gives fine, silky ribbons. Pouring fast gives larger, fluffier pieces. Both are good."
+   },
+   {
+    "t": "Finish",
+    "d": "Turn off the heat, stir in the sesame oil and season with white pepper. Ladle into mugs or small bowls and scatter with scallions."
+   }
+  ],
+  "tips": [
+   "Bone broth brands vary a lot in protein. Check the label; most have 8 to 10 g per cup.",
+   "Taste before adding more soy sauce; broth is often salty enough.",
+   "For the softest ribbons, keep the broth at a gentle simmer, not a rolling boil.",
+   "Small-portion tip: a single mug is a full small meal. Reheat the rest one mug at a time."
+  ],
+  "storage": "Refrigerate in a covered container for up to 3 days. Reheat gently on the stove or in the microwave; the ribbons stay soft. Not ideal for freezing, as the eggs turn spongy.",
+  "variations": [
+   [
+    "Tofu",
+    "Add 1/2 cup diced soft tofu with the eggs for about 3 g more protein per mug."
+   ],
+   [
+    "Spinach",
+    "Stir in a handful of baby spinach just before the eggs."
+   ],
+   [
+    "Corn",
+    "Add 1/2 cup sweet corn for a classic egg drop and corn soup."
+   ],
+   [
+    "Make it gentler",
+    "Skip the white pepper and scallions, use less ginger and let it cool to warm before sipping."
+   ],
+   [
+    "Protein boost",
+    "Stir in 1/2 cup shredded cooked chicken per mug."
+   ]
+  ],
+  "nutrition": {
+   "calories": 134,
+   "protein": 16,
+   "carbs": 3,
+   "fat": 6,
+   "fiber": 0
+  },
+  "faq": [
+   [
+    "Is it gluten-free?",
+    "Use tamari or a gluten-free soy sauce and check that your broth is gluten-free."
+   ],
+   [
+    "Can I use regular chicken broth?",
+    "Yes, but the protein will drop to about 8 g per mug."
+   ],
+   [
+    "Why add cornstarch?",
+    "It gives the broth a little body so the egg ribbons stay suspended."
+   ]
+  ],
+  "note": "This is the soup to make when you are tired, cold or not very hungry. Ten minutes on the stove, then a warm mug to sip slowly.",
+  "diet": [
+   "dairy-free"
+  ],
+  "img": "images/ginger-egg-drop-soup.webp"
  }
 ]

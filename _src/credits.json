@@ -201,5 +201,40 @@
   "photo_url": "https://www.pexels.com/photo/strawberry-and-cottage-cheese-morning-delight-32065590/",
   "source": "Pexels",
   "alt": "Cottage cheese with fresh strawberries on a sunlit plate."
+ },
+ "strawberry-protein-smoothie": {
+  "photographer": "alleksana",
+  "photographer_url": "https://www.pexels.com/@alleksana/",
+  "photo_url": "https://www.pexels.com/photo/drink-with-strawberries-4051784/",
+  "source": "Pexels",
+  "alt": "A strawberry smoothie in a glass with fresh strawberries in sunlight."
+ },
+ "banana-protein-smoothie": {
+  "photographer": "alleksana",
+  "photographer_url": "https://www.pexels.com/@alleksana/",
+  "photo_url": "https://www.pexels.com/photo/banana-smoothie-in-glass-4051764/",
+  "source": "Pexels",
+  "alt": "A creamy banana smoothie in a glass with a banana slice on the rim."
+ },
+ "mixed-berry-protein-smoothie": {
+  "photographer": "Antoni Shkraba",
+  "photographer_url": "https://www.pexels.com/@shkrabaanthony/",
+  "photo_url": "https://www.pexels.com/photo/close-up-of-a-smoothie-in-a-glass-4753639/",
+  "source": "Pexels",
+  "alt": "A mixed berry smoothie in a clear glass topped with edible flower petals."
+ },
+ "golden-milk-latte": {
+  "photographer": "Masuma Rahaman",
+  "photographer_url": "https://www.pexels.com/@masuma-rahaman-437541976/",
+  "photo_url": "https://www.pexels.com/photo/golden-milk-with-spices-and-ingredients-38958695/",
+  "source": "Pexels",
+  "alt": "A glass of golden turmeric milk with spices around it."
+ },
+ "ginger-egg-drop-soup": {
+  "photographer": "FOX",
+  "photographer_url": "https://www.pexels.com/@fox-58267/",
+  "photo_url": "https://www.pexels.com/photo/a-close-up-shot-of-a-delicious-soup-12913641/",
+  "source": "Pexels",
+  "alt": "A white bowl of egg drop soup with silky ribbons of egg."
  }
 }
