@@ -66,7 +66,7 @@ RECIPE_REDIRECTS = json.load(open(os.path.join(HERE, 'redirects.json'))) if os.p
 BY_ID.update({old: BY_ID[new] for old, new in RECIPE_REDIRECTS.items() if new in BY_ID and old not in BY_ID})
 NEW_IDS = ["cottage-cheese-pancakes", "shakshuka", "butternut-squash-soup", "crispy-baked-chicken-bites", "avocado-toast-jammy-eggs", "turkey-meatballs-tomato-sauce", "baked-cinnamon-apples", "lemon-chicken-orzo-soup"]
 
-FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "peanut-butter-protein-bites", "chocolate-yogurt-mousse-cups", "baked-cinnamon-apples", "cottage-cheese-pancakes", "spinach-feta-mini-frittata", "tuna-white-bean-salad", "lighter-chicken-alfredo", "turkey-taco-rice-bowls", "crispy-baked-chicken-bites", "turkey-meatballs-tomato-sauce"]
+FOCUS_IDS = ["lemon-chicken-orzo-soup", "sheet-pan-salmon", "chicken-avocado-salad", "shakshuka", "overnight-oats", "breakfast-burritos", "avocado-toast-jammy-eggs", "butternut-squash-soup", "tomato-basil-soup", "mediterranean-grain-bowl", "peanut-butter-protein-bites", "chocolate-yogurt-mousse-cups", "baked-cinnamon-apples", "cottage-cheese-pancakes", "spinach-feta-mini-frittata", "tuna-white-bean-salad", "lighter-chicken-alfredo", "turkey-taco-rice-bowls", "crispy-baked-chicken-bites", "turkey-meatballs-tomato-sauce", "greek-yogurt-berry-parfaits", "smoked-salmon-bagel-halves", "cottage-cheese-scrambled-eggs", "berry-greek-yogurt-muffins", "strawberry-cottage-cheese-bowl"]
 
 CATS = [
     ('high-protein', 'High Protein', 'sheet-pan-salmon'),

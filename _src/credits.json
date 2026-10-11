@@ -166,5 +166,40 @@
   "photo_url": "https://www.pexels.com/photo/fresh-tomatoes-and-herbs-on-a-kitchen-table-37314037/",
   "source": "Pexels",
   "alt": "Fresh tomatoes and herbs on a kitchen table."
+ },
+ "greek-yogurt-berry-parfaits": {
+  "photographer": "Karina Ustiuzhanina",
+  "photographer_url": "https://www.pexels.com/@karina-ustiuzhanina-313369745/",
+  "photo_url": "https://www.pexels.com/photo/dessert-on-a-glass-jar-14122621/",
+  "source": "Pexels",
+  "alt": "A Greek yogurt parfait in a glass jar topped with strawberries and blueberries."
+ },
+ "smoked-salmon-bagel-halves": {
+  "photographer": "Eddie O.",
+  "photographer_url": "https://www.pexels.com/@eddieo/",
+  "photo_url": "https://www.pexels.com/photo/delicious-everything-bagel-with-salmon-and-cucumber-36392562/",
+  "source": "Pexels",
+  "alt": "An everything bagel topped with smoked salmon, cucumber and dill on a white plate."
+ },
+ "cottage-cheese-scrambled-eggs": {
+  "photographer": "Sai Kuen Leung",
+  "photographer_url": "https://www.pexels.com/@sai-kuen-leung-452610443/",
+  "photo_url": "https://www.pexels.com/photo/scrambled-eggs-served-for-breakfast-19745150/",
+  "source": "Pexels",
+  "alt": "Soft scrambled eggs with avocado, toast and salad greens on a plate."
+ },
+ "berry-greek-yogurt-muffins": {
+  "photographer": "alleksana",
+  "photographer_url": "https://www.pexels.com/@alleksana/",
+  "photo_url": "https://www.pexels.com/photo/baked-muffins-in-a-muffin-tin-4051608/",
+  "source": "Pexels",
+  "alt": "Homemade berry muffins in a muffin tin."
+ },
+ "strawberry-cottage-cheese-bowl": {
+  "photographer": "Helen Brudna",
+  "photographer_url": "https://www.pexels.com/@helen-brudna-2151730422/",
+  "photo_url": "https://www.pexels.com/photo/strawberry-and-cottage-cheese-morning-delight-32065590/",
+  "source": "Pexels",
+  "alt": "Cottage cheese with fresh strawberries on a sunlit plate."
  }
 }

@@ -17,6 +17,15 @@
   ],
   "width": 1200
  },
+ "images/berry-greek-yogurt-muffins.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/breakfast-burritos.webp": {
   "variants": [
    160,
@@ -62,7 +71,25 @@
   ],
   "width": 1200
  },
+ "images/cottage-cheese-scrambled-eggs.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/crispy-baked-chicken-bites.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
+ "images/greek-yogurt-berry-parfaits.webp": {
   "variants": [
    160,
    320,
@@ -171,6 +198,15 @@
   ],
   "width": 1100
  },
+ "images/smoked-salmon-bagel-halves.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
+ },
  "images/spinach-feta-mini-frittata.webp": {
   "variants": [
    160,
@@ -199,6 +235,15 @@
    1100
   ],
   "width": 1400
+ },
+ "images/strawberry-cottage-cheese-bowl.webp": {
+  "variants": [
+   160,
+   320,
+   480,
+   720
+  ],
+  "width": 1200
  },
  "images/tomato-basil-soup.webp": {
   "variants": [
