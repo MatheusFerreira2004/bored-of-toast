@@ -306,5 +306,40 @@
   "photo_url": "https://www.pexels.com/photo/turkish-creamy-soup-12077978/",
   "source": "Pexels",
   "alt": "Bowls of smooth red lentil soup drizzled with oil."
+ },
+ "chicken-zucchini-stir-fry": {
+  "photographer": "Sóc Năng Động",
+  "photographer_url": "https://www.pexels.com/@soc-nang-d-ng-2150345854/",
+  "photo_url": "https://www.pexels.com/photo/delicious-stir-fry-with-chicken-and-zucchini-36979925/",
+  "source": "Pexels",
+  "alt": "Sautéed chicken and zucchini in a pan."
+ },
+ "lemon-herb-baked-cod": {
+  "photographer": "Mahi Mog",
+  "photographer_url": "https://www.pexels.com/@mahimoh/",
+  "photo_url": "https://www.pexels.com/photo/delicious-baked-fish-with-lemon-and-herbs-37367757/",
+  "source": "Pexels",
+  "alt": "Baked white fish with lemon and herbs, served with rice."
+ },
+ "turkey-stuffed-peppers": {
+  "photographer": "Lena Ti",
+  "photographer_url": "https://www.pexels.com/@lena-ti-2153986577/",
+  "photo_url": "https://www.pexels.com/photo/delicious-stuffed-bell-peppers-in-white-bowl-39206896/",
+  "source": "Pexels",
+  "alt": "Green bell peppers stuffed with rice and herbs in a white bowl."
+ },
+ "garlic-shrimp-zucchini-noodles": {
+  "photographer": "Kenan Giffard",
+  "photographer_url": "https://www.pexels.com/@kenan-giffard-3777259/",
+  "photo_url": "https://www.pexels.com/photo/zuchini-and-shrimp-in-white-sauce-5597691/",
+  "source": "Pexels",
+  "alt": "Creamy zucchini noodles with shrimp and herbs, seen from above."
+ },
+ "egg-salad-lettuce-wraps": {
+  "photographer": "Mike Art",
+  "photographer_url": "https://www.pexels.com/@mike-art-visual-creator-photography-and-video-2159421235/",
+  "photo_url": "https://www.pexels.com/photo/healthy-lettuce-wraps-on-wooden-platter-37112189/",
+  "source": "Pexels",
+  "alt": "Lettuce wraps filled with egg salad, with crackers, on a wooden platter."
  }
 }
