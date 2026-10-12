@@ -143,7 +143,7 @@ SPRITE = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
-NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'GLP-1 Kitchen', 'guides'), ('meal-plan/', 'Small-Plate Week', 'meal-plan'), ('nourished/', 'Cookbook', 'cookbooks'), ('about/', 'About', 'about')]
+NAV = [('', 'Home', 'home'), ('recipes/', 'Recipes', 'recipes'), ('guides/', 'GLP-1 Kitchen', 'guides'), ('meal-plan/', 'Small-Plate Week', 'meal-plan'), ('nourished/', 'Nourished', 'cookbooks'), ('about/', 'About', 'about')]
 
 def header(root, active):
     links = ''.join(f'<a href="{root}{h}" class="{"active" if k == active else ""}">{l}</a>' for h, l, k in NAV)
@@ -221,7 +221,7 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
   <link rel="icon" href="{root}images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="{root}images/favicon.png">
   <script>document.documentElement.classList.add('js');setTimeout(function(){{if(!window.__botReady)document.documentElement.classList.add('js-fallback')}},4000)</script>
-  <link rel="stylesheet" href="{root}styles.css?v={VER}{'-sales-2' if path == 'nourished/' else ''}">
+  <link rel="stylesheet" href="{root}styles.css?v={VER}{'-sales-3' if path == 'nourished/' else ''}">
   {ld}{head_extra}{ANALYTICS or ''}
 </head>
 <body data-root="{root}" data-page="{active}" {body_attr}>
