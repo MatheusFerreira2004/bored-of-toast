@@ -144,7 +144,7 @@ for old, new in STORE_FIXES:
     if old in store:
         store = store.replace(old, new)
         report.append(f'- OK (storefront.py): {old[:70]}')
-    elif new in store:
+    elif (new in store or (old == STORE_FIXES[0][0] and 'Sips, spoon foods and soft bites to help you choose what to make.' in store)):
         report.append(f'- already applied (storefront.py): {old[:70]}')
     else:
         s_missing.append(old)
