@@ -9,8 +9,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 p = os.path.join(HERE, 'storefront.py')
 s = open(p, encoding='utf-8').read()
 PAIRS = [
-    ('href=\\"#collection\\">Purchasing opens soon · see what’s included ↓</a>',
-     'href=\\"#collection\\">Purchasing opens soon · see what’s included</a>'),
+    ('href="#collection">Purchasing opens soon · see what’s included ↓</a>',
+     'href="#collection">Purchasing opens soon · see what’s included</a>'),
     ("else 'Planned as a one-time US$20 purchase. See how buying works below.')",
      "else 'Planned as a one-time US$20 purchase. Details are in How buying works on this page.')"),
 ]
