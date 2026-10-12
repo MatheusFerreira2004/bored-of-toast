@@ -8,7 +8,8 @@
   It links to the Starter Kit page and does not promise delivery that is not live yet.
 - Live-delivery labels checked by journey_checks.py are left untouched.
 
-Idempotent: each replacement is skipped when the new text is already present.
+Idempotent: each replacement is skipped when the new text is already present
+(checked first, because some new texts contain the old text, e.g. the import line).
 Exits with an error if neither the old nor the new text is found.
 """
 import os, sys
@@ -21,7 +22,7 @@ def patch(name, pairs, append=None):
     text = open(path).read()
     orig = text
     for old, new, label in pairs:
-        if new in text and old not in text:
+        if new in text:
             print(f'already applied ({name}): {label}')
         elif old in text:
             text = text.replace(old, new)
