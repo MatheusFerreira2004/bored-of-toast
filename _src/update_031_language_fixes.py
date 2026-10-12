@@ -12,6 +12,11 @@
 
 Nothing is saved unless every required phrase is found (or already replaced).
 Safe to re-run.
+
+Later scripts may rewrite a text that this script set. FINAL_VERSIONS lists those
+later versions, so this script treats them as "already applied" and never restores
+an earlier wording. Example: the congee tip set here ("start with a 3/4-cup bowl...")
+is rewritten by update_033 to "start with a smaller bowl..." (no unconfirmed volume).
 """
 import json, os, re, sys
 
@@ -19,8 +24,10 @@ sys.stderr = sys.stdout
 HERE = os.path.dirname(os.path.abspath(__file__))
 P = lambda n: os.path.join(HERE, n)
 
+CONGEE_OLD = 'Small-portion tip: a 3/4-cup bowl with half an egg is a complete small meal.'
+
 RECIPE_FIXES = [
-    ('Small-portion tip: a 3/4-cup bowl with half an egg is a complete small meal.',
+    (CONGEE_OLD,
      'Small-portion tip: start with a 3/4-cup bowl topped with half an egg. It is soft and easy to eat in small spoonfuls; add the other half of the egg if you want more.'),
     ('and this version quietly carries a good amount of protein.',
      'and this version adds finely shredded chicken and a soft egg.'),
@@ -31,6 +38,14 @@ RECIPE_FIXES = [
     ('and this one does more nutritional work than most.',
      'and blending in cottage cheese gives this one about three times the protein of a plain mash.'),
 ]
+
+# Later, final versions written by other scripts. If one of these is present,
+# the fix counts as applied and nothing is rewritten.
+FINAL_VERSIONS = {
+    CONGEE_OLD: (
+        'Small-portion tip: start with a smaller bowl topped with half an egg.',  # update_033
+    ),
+}
 
 GUIDE_FIXES = [
     ('helps make sure the part your body needs most does not get left on the plate.',
@@ -86,6 +101,7 @@ def apply_json(name, fixes, report):
     data = json.loads(raw)
     counts = {old: 0 for old, _ in fixes}
     done = {old: False for old, _ in fixes}
+    final = {old: False for old, _ in fixes}
 
     def fn(s, path):
         for old, new in fixes:
@@ -94,6 +110,9 @@ def apply_json(name, fixes, report):
                 counts[old] += 1
             elif new in s:
                 done[old] = True
+            elif any(f in s for f in FINAL_VERSIONS.get(old, ())):
+                done[old] = True
+                final[old] = True
         return s
 
     data = walk(data, fn)
@@ -101,6 +120,8 @@ def apply_json(name, fixes, report):
     for old, new in fixes:
         if counts[old]:
             report.append(f'- OK ({name}, {counts[old]}x): {old[:70]}')
+        elif final[old]:
+            report.append(f'- already applied, final version from a later script ({name}): {old[:70]}')
         elif done[old]:
             report.append(f'- already applied ({name}): {old[:70]}')
     return raw, data, missing
