@@ -423,7 +423,11 @@ def build_recipes():
     hero = hero_bleed(root, 'images/mediterranean-grain-bowl.webp', 'The recipe library', 'Find your next<br><em>small plate.</em>',
         f'{len(RECIPES)} recipes with step-by-step instructions, protein per serving and storage notes. Every recipe includes a small-portion tip and a gentler swap.',
         f'<button class="btn btn-yellow" data-random>Pick one for me {ICON["arrow"]}</button>', float_card(root, pick, "Editor's pick"), short=True)
-    chips = [('all', 'All')] + [(k, l) for k, l, _ in CATS]
+    # update_038: library filters (home grid and footer still use CATS)
+    CHIP_ORDER = [('high-protein', 'High Protein'), ('gentle', 'Gentle'), ('soft', 'Soft texture'), ('make-ahead', 'Make-Ahead'),
+                  ('Beyond Toast', 'Beyond Toast'), ('Main Dishes', 'Main Dishes'), ('Soups', 'Soups'), ('Salads', 'Salads'),
+                  ('Sips', 'Sips'), ('Snacks', 'Snacks'), ('Desserts', 'Desserts')]
+    chips = [('all', 'All')] + [(k, l) for k, l in CHIP_ORDER if count(k) > 0]
     diets = [('vegetarian', 'Vegetarian'), ('gluten-free', 'Gluten-free'), ('dairy-free', 'Dairy-free')]
     body = f'''{hero}
 <div class="container">
@@ -431,6 +435,7 @@ def build_recipes():
     <div class="search"><input type="search" id="list-search" placeholder="Search recipes or ingredients…" aria-label="Search recipes">{ICON['search']}</div>
     <div class="chips" id="chips">{''.join(f'<button class="chip" data-key="{e(k)}">{l}</button>' for k, l in chips)}</div>
     <div class="chips diet-chips" id="diet-chips"><span class="chips-label">Diet:</span>{''.join(f'<button class="chip chip-diet" data-diet="{k}"><span class="diet">{DIET[k][0]}</span>{l}</button>' for k, l in diets)}</div>
+    <p class="fine filter-note" style="margin:10px 0 0">Gentle: mild flavors, or a gentler swap is listed. Soft texture: smooth, spoonable or sippable. Neither is a guarantee that a food will suit you; follow your care team’s advice.</p>
   </div>
   <h2 class="sr-only">All recipes</h2>
   <p class="results-count" id="results-count"></p>
