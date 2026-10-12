@@ -30,7 +30,7 @@ def patch_text(text, pairs, label):
             'main button while checkout is closed': 'href="#collection">See what’s included</a>',
             'note under the price (no repeated closed notice)': 'Purchasing opens soon. See <a href="#buying">How buying works</a> for details.',
             'guarantee box in the hero': '<strong>14-day money-back guarantee.</strong>',
-            'stylesheet cache version': "'-sales-5' if path == 'nourished/'",
+            'stylesheet cache version': "'-sales-6' if path == 'nourished/'",
         }
         if new in text or (name in final_versions and final_versions[name] in text):
             report.append(f'- {label}: already applied: {name}')

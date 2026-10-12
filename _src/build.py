@@ -221,7 +221,7 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
   <link rel="icon" href="{root}images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="{root}images/favicon.png">
   <script>document.documentElement.classList.add('js');setTimeout(function(){{if(!window.__botReady)document.documentElement.classList.add('js-fallback')}},4000)</script>
-  <link rel="stylesheet" href="{root}styles.css?v={VER}{'-sales-5' if path == 'nourished/' else ''}">
+  <link rel="stylesheet" href="{root}styles.css?v={VER}{'-sales-6' if path == 'nourished/' else ''}">
   {ld}{head_extra}{ANALYTICS or ''}
 </head>
 <body data-root="{root}" data-page="{active}" {body_attr}>

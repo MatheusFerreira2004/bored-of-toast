@@ -1093,3 +1093,25 @@ body:has(.nourished-sticky) .to-top{bottom:84px}
 /* Sales copy refinements: visible detail links and a compact sample invitation. */
 .nourished-sales .commerce-small a { text-decoration:underline; text-underline-offset:3px; }
 .nourished-sales .commerce-offer .nourished-kit-description { margin-top:8px; margin-bottom:0; font-size:.85rem; }
+
+/* Warm paper arch frames the four-PDF collection. */
+.nourished-bundle-stage {
+ padding:44px 28px 30px;
+ border-radius:48% 48% 22px 22px / 110px 110px 22px 22px;
+ background-color:var(--cream-2);
+ background-image:radial-gradient(rgba(63,81,48,.055) .6px,transparent .8px),linear-gradient(135deg,rgba(255,253,248,.45),transparent 60%);
+ background-size:6px 6px,100% 100%;
+ border:1px solid rgba(255,253,248,.25);
+ box-shadow:0 20px 42px rgba(0,0,0,.12);
+ color:var(--green-dark);
+}
+.nourished-bundle-stage .nourished-bundle-heading,
+.nourished-bundle-stage .nourished-bundle-item span { color:var(--green); }
+.nourished-bundle-stage .nourished-bundle-label strong { color:var(--green-dark); }
+.nourished-bundle-stage .nourished-bundle::before { display:none; }
+.nourished-bundle-stage .nourished-bundle-item img { box-shadow:0 10px 24px rgba(47,61,36,.20); }
+@media(max-width:760px) {
+ .nourished-bundle-stage { padding:36px 18px 24px; border-radius:48% 48% 18px 18px / 80px 80px 18px 18px; }
+ .nourished-bundle-stage .nourished-bundle { gap:10px 14px; }
+ .nourished-bundle-stage .nourished-bundle-heading { font-size:.62rem; letter-spacing:.06em; }
+}
