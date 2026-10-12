@@ -4,26 +4,16 @@
 - chicken-avocado-salad: generic half-portion tip rewritten
 - sheet-pan-salmon: Small-portion tip rewritten
 - mediterranean-grain-bowl: generic half-portion tip rewritten
-- tomato-basil-soup: generic half-portion tip rewritten
-- turkey-taco-rice-bowls: Small-portion tip rewritten
-- peanut-butter-protein-bites: removed duplicate pairing tip
-- peanut-butter-protein-bites: Small-portion tip rewritten
-- chocolate-yogurt-mousse-cups: Small-portion tip rewritten
-- shakshuka: generic half-portion tip rewritten
-- overnight-oats: generic half-portion tip rewritten
-- avocado-toast-jammy-eggs: generic half-portion tip rewritten
-- butternut-squash-soup: generic half-portion tip rewritten
-- lemon-chicken-orzo-soup: generic half-portion tip rewritten
-- smoked-salmon-bagel-halves: Small-portion tip rewritten
-- berry-greek-yogurt-muffins: Small-portion tip rewritten
-- strawberry-cottage-cheese-bowl: Small-portion tip rewritten
-- chicken-rice-congee: Small-portion tip rewritten
 
 ## Sufficiency phrases replaced this run
-- a complete small lunch
-- a full small meal
-- and two with a glass of milk is close to a light meal on low-appetite days
+- A half bowl still counts.
+- Half still counts.
+- One slice with one egg is a complete small breakfast; if you are still hungry,
+- Small-portion tip: half a glass is perfectly fine.
+- a small, cold treat that still counts toward your protein.
+- half an apple with yogurt is a complete small dessert.
 - is what turns this into a small plate that still counts as a full lunch
+- one wedge with a piece of fruit is a complete small breakfast on low-appetite days.
 
 ## Numbers kept, with basis
 - chicken-avocado-salad: Standard serving (30 g); half a portion, every component halved = 15 g.
@@ -42,34 +32,20 @@
 - strawberry-cottage-cheese-bowl: Standard serving = 1 bowl (26 g). Smaller amount = half of the bowl, every component halved: 13 g.
 - turkey-stuffed-peppers: Standard serving = 1 pepper (19 g). Half a pepper, filling proportional = 9.5 g, stated as about 10 g (set in lote 1b).
 
-## Numbers removed (no confirmed basis)
-- turkey-taco-rice-bowls: number removed. The smaller amount is not a proportional part of a confirmed serving (see rule notes).
-- breakfast-burritos: automatic number removed; tip needs manual review: "Small-portion tip: eat half a burrito now and wrap the other half for later. Half still counts."
-- tuna-white-bean-salad: automatic number removed; tip needs manual review: "Small-portion tip: half a bowl with one egg half is a complete small lunch. The rest keeps for tomorrow."
-- baked-cinnamon-apples: automatic number removed; tip needs manual review: "Small-portion tip: half an apple with yogurt is a complete small dessert. Cover the other half and warm it later."
-- greek-yogurt-berry-parfaits: automatic number removed; tip needs manual review: "Small-portion tip: eat half a jar now and put the lid back on. It keeps well for later."
-- golden-milk-latte: automatic number removed; tip needs manual review: "Small-portion tip: half a glass is perfectly fine. Keep the rest in the fridge and warm it later."
-- lemon-herb-baked-cod: automatic number removed; tip needs manual review: "Small-portion tip: start with half a fillet and a spoonful of rice."
-- egg-salad-lettuce-wraps: automatic number removed; tip needs manual review: "Small-portion tip: one wrap and two crackers make a light small plate."
-- chicken-rice-congee: number removed. The smaller amount is not a proportional part of a confirmed serving (see rule notes).
+## Smaller amounts without a number (no confirmed basis)
+- turkey-taco-rice-bowls: no number. The smaller amount is not a proportional part of a confirmed serving.
+- breakfast-burritos: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: eat half a burrito now and wrap the other half for later."
+- spinach-feta-mini-frittata: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: serve one wedge with a piece of fruit."
+- tuna-white-bean-salad: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: half a bowl with one egg half is an easy small lunch. The rest keeps for tomorrow."
+- baked-cinnamon-apples: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: serve half an apple with a spoonful of yogurt. Cover the other half and warm it later."
+- greek-yogurt-berry-parfaits: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: eat half a jar now and put the lid back on. It keeps well for later."
+- golden-milk-latte: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: start with half a glass. Keep the rest in the fridge and warm it later."
+- lemon-herb-baked-cod: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: start with half a fillet and a spoonful of rice."
+- egg-salad-lettuce-wraps: no number (quantity not a confirmed fraction of the serving): "Small-portion tip: one wrap and two crackers make a light small plate."
+- chicken-rice-congee: no number. The smaller amount is not a proportional part of a confirmed serving.
 
 ## Rules skipped
 - none
 
 ## Remaining risky wording for manual review
-- shakshuka: ...gurt. Bread or pita is optional; a small piece is enough for scooping....
-- overnight-oats: ...ttened, so they soften fully in cold liquid given enough hours. Chia seeds form a gel as they absorb liqui...
-- avocado-toast-jammy-eggs: ...ut twice the protein. One slice with one egg is a complete small breakfast; if you are still hungry, add the secon...
-- breakfast-burritos: ...rrito now and wrap the other half for later. Half still counts....
-- spinach-feta-mini-frittata: ...portion tip: one wedge with a piece of fruit is a complete small breakfast on low-appetite days....
-- spinach-feta-mini-frittata: ...Usually the spinach was not squeezed dry enough. Wring it out in a towel until no more liquid com...
-- lemon-chicken-orzo-soup: ...carries about 27 g of protein while staying light enough to finish....
-- lemon-chicken-orzo-soup: ...cutting board and let it cool for 5 minutes, just enough to handle. Shred it into small, bite-sized pieces...
-- baked-cinnamon-apples: ...Small-portion tip: half an apple with yogurt is a complete small dessert. Cover the other half and warm it later....
-- smoked-salmon-bagel-halves: ...otein and spreads more easily, so a thin layer is enough....
-- smoked-salmon-bagel-halves: ...This is the weekend brunch plate made small enough for a weekday. One half, a cup of tea, done....
-- strawberry-protein-smoothie: ...g honey; ripe frozen strawberries are often sweet enough....
-- ginger-egg-drop-soup: ...efore adding more soy sauce; broth is often salty enough....
-- tzatziki-yogurt-dip: ...The cucumber was not squeezed enough. Pour off any liquid and stir....
-- frozen-yogurt-berry-bars: ... bar from the freezer is a small, cold treat that still counts toward your protein. Good on hot afternoons....
 - cottage-cheese-mashed-potatoes: ...tter, then stir in the blended cottage cheese and enough warm milk for a soft texture....
