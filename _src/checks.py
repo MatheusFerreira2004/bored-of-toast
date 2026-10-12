@@ -9,11 +9,7 @@ Checks
   4. Recipe JSON-LD parses and has the required fields (incl. nutrition.servingSize, dateModified)
   5. nothing loads from Google Fonts / gstatic (fonts are self-hosted)
   6. image budget: each .webp <= 200 KB; responsive variants match images/variants.json
-     (a variant is ONLY a file ending in -<number>w.webp, e.g. stew-480w.webp;
-      tomato-white-bean-stew.webp is an original, not a variant)
   7. weight budget: each HTML page <= 80 KB, styles.css <= 80 KB, app.js <= 40 KB
-
-The result is also written to _src/reports/checks-report.txt.
 """
 import glob, json, os, re, sys
 from html.parser import HTMLParser
@@ -104,11 +100,13 @@ if os.path.getsize('app.js') > 40 * 1024: fail(f'app.js is {os.path.getsize("app
 for m in re.findall(r'url\((fonts/[^)]+)\)', css):
     if not os.path.exists(m): fail(f'styles.css: missing font file {m}')
 
-# 6) images. A responsive variant is ONLY a name ending in -<number>w.webp.
+# 6) images
+# A responsive variant is only a file ending in -<number>w.webp (e.g. shakshuka-480w.webp).
+# Names that merely end in "w.webp" (e.g. tomato-white-bean-stew.webp) are originals.
 VAR = re.compile(r'-(\d+)w\.webp$')
-all_webp = sorted(glob.glob('images/*.webp'))
-originals = [p for p in all_webp if not VAR.search(p)]
-variants = [p for p in all_webp if VAR.search(p)]
+all_webp = glob.glob('images/*.webp')
+originals = sorted(p for p in all_webp if not VAR.search(p))
+variants = sorted(p for p in all_webp if VAR.search(p))
 manifest = json.load(open('images/variants.json')) if os.path.exists('images/variants.json') else {}
 if not manifest: fail('images/variants.json missing (run python3 _src/make_images.py)')
 for p in all_webp:
@@ -128,17 +126,12 @@ for p in variants:
     if base not in manifest or w not in manifest[base]['variants']:
         fail(f'{p}: variant not registered in images/variants.json (orphan)')
 
-lines = [f'checked {len(pages)} pages, {len(originals)} photos']
+# report the heaviest pages so the HTML budget can be watched over time
+heavy = sorted(((len(open(p, encoding='utf8').read().encode()), p) for p in pages), reverse=True)[:3]
+print('heaviest pages: ' + ', '.join(f'{p} {s // 1024} KB' for s, p in heavy))
+print(f'checked {len(pages)} pages, {len(originals)} photos')
 if errors:
-    lines.append(f'{len(errors)} problem(s):')
-    lines += [' - ' + e for e in errors[:60]]
-else:
-    lines.append('all checks passed')
-try:
-    os.makedirs(os.path.join(ROOT, '_src', 'reports'), exist_ok=True)
-    with open(os.path.join(ROOT, '_src', 'reports', 'checks-report.txt'), 'w', encoding='utf8') as f:
-        f.write('\n'.join(lines) + '\n')
-except OSError:
-    pass
-print('\n'.join(lines))
-sys.exit(1 if errors else 0)
+    print(f'\n{len(errors)} problem(s):')
+    for e in errors[:60]: print(' -', e)
+    sys.exit(1)
+print('all checks passed')
