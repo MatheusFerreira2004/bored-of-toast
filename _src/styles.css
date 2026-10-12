@@ -1071,3 +1071,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 @media(prefers-reduced-motion:reduce) {
  .nourished-sales .commerce-preview-card img { transition:none; }
 }
+
+/* update_041: Nourished guarantee box and mobile purchase bar */
+.nourished-guarantee{margin-top:14px;padding:12px 14px;border:1px dashed currentColor;border-radius:12px;font-size:.9rem;line-height:1.45}
+.nourished-guarantee strong{display:block;margin-bottom:2px}
+.nourished-sticky{display:none}
+@media (max-width:760px){
+.nourished-sticky{display:flex;align-items:center;justify-content:space-between;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#3f5130;color:#f7f2e7;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+.nourished-sticky div{display:flex;flex-direction:column;line-height:1.2}
+.nourished-sticky span{font-size:.8rem;opacity:.85}
+.nourished-sticky .btn{padding:10px 18px;white-space:nowrap}
+.nourished-sales{padding-bottom:72px}
+body:has(.nourished-sticky) .to-top{bottom:84px}
+}
+@media print{.nourished-sticky{display:none}}
