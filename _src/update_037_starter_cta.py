@@ -22,7 +22,10 @@ def patch(name, pairs, append=None):
     text = open(path).read()
     orig = text
     for old, new, label in pairs:
-        if new in text:
+        # The redesigned sales page replaces the table with a direct sample link.
+        replaced_table = (name == 'storefront.py' and label in ('compare table header', 'compare table link')
+                          and 'Prefer a small introduction? See the free Starter Kit →' in text)
+        if new in text or replaced_table:
             print(f'already applied ({name}): {label}')
         elif old in text:
             text = text.replace(old, new)

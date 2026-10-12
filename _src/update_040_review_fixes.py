@@ -98,7 +98,11 @@ def apply(path, pairs, label):
     s = open(path, encoding='utf-8').read()
     out = s
     for old, new in pairs:
-        if new in out:
+        # The product presentation supersedes these two sales-page paragraphs.
+        redesigned = (label == 'Nourished page' and old in (OLD_SITE, OLD_CLOSE)
+                      and 'The site’s recipes, guides, collections and Small-Plate Week stay free.' in out
+                      and 'four weeks of meal examples and weekly shopping lists together in files you can keep.' in out)
+        if new in out or redesigned:
             report.append(f'- {label}: already applied: {new[:70]}...')
         elif out.count(old) == 1:
             out = out.replace(old, new)
