@@ -1,19 +1,10 @@
 # Portion and protein review (lote 2, corrected)
 
 ## Changed this run
-- chicken-avocado-salad: generic half-portion tip rewritten
-- sheet-pan-salmon: Small-portion tip rewritten
-- mediterranean-grain-bowl: generic half-portion tip rewritten
+- nothing (already applied)
 
 ## Sufficiency phrases replaced this run
-- A half bowl still counts.
-- Half still counts.
-- One slice with one egg is a complete small breakfast; if you are still hungry,
-- Small-portion tip: half a glass is perfectly fine.
-- a small, cold treat that still counts toward your protein.
-- half an apple with yogurt is a complete small dessert.
-- is what turns this into a small plate that still counts as a full lunch
-- one wedge with a piece of fruit is a complete small breakfast on low-appetite days.
+- nothing (already applied)
 
 ## Numbers kept, with basis
 - chicken-avocado-salad: Standard serving (30 g); half a portion, every component halved = 15 g.
