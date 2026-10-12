@@ -973,12 +973,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 .nourished-hero .commerce-lead { font-size:1.04rem; line-height:1.75; }
 .nourished-hero .commerce-small { max-width:440px; font-size:.8rem; opacity:.85; }
 .nourished-bundle-stage { grid-area:art; padding:26px 12px 12px; }
-.nourished-bundle { position:relative; display:grid; grid-template-columns:1.1fr 1fr; grid-template-rows:repeat(3,1fr); gap:14px 30px; align-items:center; max-width:520px; margin:auto; }
+.nourished-bundle { position:relative; display:grid; grid-template-columns:1fr 1.12fr; grid-template-rows:repeat(3,1fr); gap:14px 30px; align-items:center; max-width:520px; margin:auto; }
 .nourished-bundle::before { content:""; position:absolute; inset:8% -2% 8% -2%; border-radius:50%; background:rgba(247,242,231,.075); }
 .nourished-bundle-item { position:relative; z-index:1; display:flex; align-items:center; gap:10px; }
 .nourished-bundle-item img { width:94px; height:auto; border-radius:3px; box-shadow:0 12px 24px rgba(0,0,0,.22); }
 .nourished-bundle-label { min-width:0; }
-.nourished-bundle-label strong { display:block; font-family:var(--serif); font-size:1rem; font-weight:400; line-height:1.2; margin-top:5px; }
+.nourished-bundle-label strong { text-wrap:balance; display:block; font-family:var(--serif); font-size:.95rem; font-weight:400; line-height:1.25; margin-top:5px; }
 .nourished-bundle-item img { flex-shrink:0; }
 .nourished-bundle-main .nourished-bundle-label strong { display:none; }
 .nourished-bundle-item span { font-size:.69rem; text-transform:uppercase; letter-spacing:.08em; color:var(--cream); }
@@ -1085,3 +1085,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visib
 body:has(.nourished-sticky) .to-top{bottom:84px}
 }
 @media print{.nourished-sticky{display:none}}
+
+/* Sales copy refinements: visible detail links and a compact sample invitation. */
+.nourished-sales .commerce-small a { text-decoration:underline; text-underline-offset:3px; }
+.nourished-sales .commerce-offer .nourished-kit-description { margin-top:8px; margin-bottom:0; font-size:.85rem; }

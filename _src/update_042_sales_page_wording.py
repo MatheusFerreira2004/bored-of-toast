@@ -15,7 +15,9 @@ PAIRS = [
      "else 'Planned as a one-time US$20 purchase. Details are in How buying works on this page.')"),
 ]
 for old, new in PAIRS:
-    if new in s:
+    final = ('href="#collection">See what’s included</a>' if 'href="#collection"' in new
+             else 'Purchasing opens soon. See <a href="#buying">How buying works</a> for details.')
+    if new in s or final in s:
         print('already applied:', new[:60])
     elif s.count(old) == 1:
         s = s.replace(old, new)

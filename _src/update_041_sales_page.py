@@ -26,7 +26,13 @@ report = ['# 041 Nourished sales page', '']
 
 def patch_text(text, pairs, label):
     for old, new, name in pairs:
-        if new in text:
+        final_versions = {
+            'main button while checkout is closed': 'href="#collection">See what’s included</a>',
+            'note under the price (no repeated closed notice)': 'Purchasing opens soon. See <a href="#buying">How buying works</a> for details.',
+            'guarantee box in the hero': '<strong>14-day money-back guarantee.</strong>',
+            'stylesheet cache version': "'-sales-4' if path == 'nourished/'",
+        }
+        if new in text or (name in final_versions and final_versions[name] in text):
             report.append(f'- {label}: already applied: {name}')
         elif text.count(old) == 1:
             text = text.replace(old, new)
