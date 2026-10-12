@@ -8,7 +8,7 @@ from storefront import build_storefront, marketing_block, contextual_link, valid
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
 SITE_URL = 'https://matheusferreira2004.github.io/bored-of-toast/'   # change when the custom domain is ready
-VER = '20261006-journey-1'
+VER = '20261012-light-1'
 EMAIL = 'hello@boredoftoast.com'
 INSTAGRAM = '@boredoftoast'
 PUBLISHED = '2026-09-28'
@@ -134,6 +134,12 @@ ICON = {
  'youtube': '<svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12a31 31 0 0 0 .4 3.8 3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15.1V8.9l5.2 3.1z"/></svg>',
 }
 WHY_ICONS = [ICON['bolt'], ICON['heart'], ICON['check']]
+# Card meta icons as a sprite (update_035): same drawing as ICON['clock'] and ICON['chef'], defined once per page.
+SPR = {'clock': '<svg width="15" height="15" aria-hidden="true"><use href="#i-clock"/></svg>',
+       'chef': '<svg width="15" height="15" aria-hidden="true"><use href="#i-chef"/></svg>'}
+SPRITE = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true">'
+          '<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>'
+          '<symbol id="i-chef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6z"/><path d="M6 17h12"/></symbol></svg>')
 WAVE = '<svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40c160 30 320 30 480 10s320-40 480-20 320 40 480 20v20H0z"/></svg>'
 
 # ---------------------------------------------------------------- layout
@@ -211,7 +217,7 @@ def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', j
 </head>
 <body data-root="{root}" data-page="{active}" {body_attr}>
 <a class="skip-link" href="#main">Skip to content</a>
-{header(root, active)}
+{SPRITE if SPR["clock"] in body else ""}{header(root, active)}
 <main id="main">
 {body}
 </main>
@@ -252,10 +258,10 @@ def diet_badges(r, cls='diet-badges'):
 
 def card(root, r, desc=True, eager=False):
     text = ' '.join([r['title'], r['desc'], r['category']] + [i['n'] for g in r['ingredients'] for i in g['items']]).lower()
-    return f'''<a class="card reveal" href="{root}recipes/{r['id']}/" data-cat="{e(r['category'])}" data-tags="{' '.join(r['tags'])}" data-diet="{' '.join(r.get('diet', []))}" data-text="{e(text)}">
+    return f'''<a class="card reveal" href="{root}recipes/{r['id']}/" data-cat="{e(r['category'])}" data-tags="{' '.join(r['tags'])}" data-diet="{' '.join(r.get('diet', []))}">
   <div class="card-img"><img src="{root}{r['img']}" alt="{e(r['title'])}" width="600" height="450" {'' if eager else 'loading="lazy"'} decoding="async"{rimg(root, r['img'], SIZES['card'])}><span class="card-badge">{e(r['category'])}</span>{diet_badges(r)}</div>
   <div class="card-body"><h3>{e(r['title'])}</h3>{f'<p class="desc">{e(r["desc"])}</p>' if desc else ''}
-    <div class="meta"><span>{ICON['clock']}{fmt_time(r['time'])}</span><span>{ICON['chef']}{r['level']}</span></div></div>
+    <div class="meta"><span>{SPR['clock']}{fmt_time(r['time'])}</span><span>{SPR['chef']}{r['level']}</span></div></div>
 </a>'''
 
 def guide_card(root, g):
