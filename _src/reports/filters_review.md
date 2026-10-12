@@ -1,25 +1,7 @@
 # Filters review (lote 5)
 
 ## Changed this run
-- chicken-rice-congee: + soft
-- cottage-cheese-mashed-potatoes: + soft
-- ginger-egg-drop-soup: + soft
-- protein-rice-pudding: + soft
-- greek-yogurt-chia-pudding: + soft
-- tomato-basil-soup: + soft
-- butternut-squash-soup: + soft
-- red-lentil-lemon-soup: + soft
-- split-pea-soup: + soft
-- cottage-cheese-scrambled-eggs: + soft
-- chocolate-yogurt-mousse-cups: + soft
-- overnight-oats: + soft
-- strawberry-protein-smoothie: + soft
-- banana-protein-smoothie: + soft
-- mixed-berry-protein-smoothie: + soft
-- golden-milk-latte: + soft
-- tzatziki-yogurt-dip: - gentle (crunchy vegetables)
-- ginger-egg-drop-soup: + Soups
-- cottage-cheese-mashed-potatoes: category Main Dishes -> Side Dishes
+- nothing (already applied)
 
 ## Recipes per filter
 - high-protein: 33
