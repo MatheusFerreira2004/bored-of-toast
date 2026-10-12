@@ -7,7 +7,11 @@
 - Recipe pages: eyebrow shows "Small Plates" instead of "Fall".
 - Marquee: remove "No-cook" and "Freezer-friendly" (no such categories exist).
 
-Nothing is saved unless every change is found. Safe to re-run.
+Idempotency: every change here REMOVES an old line. Later scripts (filters,
+home sections, etc.) rewrite some of the same lines again. So the check is
+"is the OLD line still there?", not "is my exact replacement still there?".
+If the old line is gone, the change counts as applied, whatever replaced it.
+Safe to re-run.
 """
 import json, os, sys
 
@@ -30,13 +34,14 @@ BUILD = [
 ]
 print('build.py:')
 for old, new in BUILD:
-    if new in b:
-        print(f'- already applied: {new[:70]}')
-    elif b.count(old) == 1:
+    n = b.count(old)
+    if n == 0:
+        print(f'- already applied (old line gone): {old[:60]}')
+    elif n == 1:
         b = b.replace(old, new)
         print(f'- OK: {new[:70]}')
     else:
-        sys.exit(f'ERROR: not found exactly once in build.py (nothing was saved):\n{old}')
+        sys.exit(f'ERROR: old line found {n} times in build.py (nothing was saved):\n{old}')
 
 # ------------------------------------------------------------------ Terms (guides_legal.json)
 gl = json.load(open(P('guides_legal.json'), encoding='utf-8'))
@@ -44,21 +49,19 @@ terms = gl['terms']
 OLD_TEST = 'We test our recipes and do our best to make them clear and reliable, but results depend on your ingredients, equipment, altitude, and technique.'
 NEW_TEST = 'We do our best to make our recipes clear and reliable, but results depend on your ingredients, equipment, altitude, and technique.'
 print('\nTerms:')
-found = False
+old_left = False
 for s in terms['sections']:
     for i, p in enumerate(s['p']):
         if OLD_TEST in p:
             s['p'][i] = p.replace(OLD_TEST, NEW_TEST)
-            found = True
-        elif NEW_TEST in p:
-            found = True
-if not found:
-    sys.exit('ERROR: "We test our recipes" sentence not found in the Terms (nothing was saved).')
-print('- OK: "We test our recipes" removed')
+            old_left = True
+print('- OK: "We test our recipes" removed' if old_left else '- already applied: "We test our recipes" removed')
 before = len(terms['sections'])
 terms['sections'] = [s for s in terms['sections'] if s['h'] != 'About this page']
+changed_terms = old_left or len(terms['sections']) < before
 print('- OK: "About this page" section removed' if len(terms['sections']) < before else '- already applied: "About this page" section removed')
-terms['updated'] = 'October 9, 2026'
+if changed_terms:
+    terms['updated'] = 'October 9, 2026'
 
 # ------------------------------------------------------------------ save
 open(P('build.py'), 'w', encoding='utf-8').write(b)
