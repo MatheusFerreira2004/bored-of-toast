@@ -97,17 +97,19 @@ css = open('styles.css', encoding='utf8').read()
 if re.search(r'fonts\.googleapis|fonts\.gstatic|@import\s+url', css): fail('styles.css: external @import / Google Fonts')
 if len(css.encode()) > 80 * 1024: fail(f'styles.css is {len(css.encode())//1024} KB (budget 80 KB)')
 if os.path.getsize('app.js') > 40 * 1024: fail(f'app.js is {os.path.getsize("app.js")//1024} KB (budget 40 KB)')
-for f in glob.glob('fonts/*.woff2'):
-    pass
 for m in re.findall(r'url\((fonts/[^)]+)\)', css):
     if not os.path.exists(m): fail(f'styles.css: missing font file {m}')
 
 # 6) images
-VAR = re.compile(r'-\d+w\.webp$')
-originals = sorted(p for p in glob.glob('images/*.webp') if not VAR.search(p))
+# A responsive variant is only a file ending in -<number>w.webp (e.g. shakshuka-480w.webp).
+# Names that merely end in "w.webp" (e.g. tomato-white-bean-stew.webp) are originals.
+VAR = re.compile(r'-(\d+)w\.webp$')
+all_webp = glob.glob('images/*.webp')
+originals = sorted(p for p in all_webp if not VAR.search(p))
+variants = sorted(p for p in all_webp if VAR.search(p))
 manifest = json.load(open('images/variants.json')) if os.path.exists('images/variants.json') else {}
 if not manifest: fail('images/variants.json missing (run python3 _src/make_images.py)')
-for p in glob.glob('images/*.webp'):
+for p in all_webp:
     kb = os.path.getsize(p) / 1024
     if kb > 200: fail(f'{p}: {kb:.0f} KB (image budget 200 KB)')
 for p in originals:
@@ -117,12 +119,16 @@ for p in originals:
         if not os.path.exists(f'{p[:-5]}-{w}w.webp'): fail(f'{p}: variant {w}w listed in manifest but missing')
 for k in manifest:
     if not os.path.exists(k): fail(f'manifest lists {k} but the file does not exist')
-for p in glob.glob('images/*-*w.webp'):
-    base = re.sub(r'-\d+w\.webp$', '.webp', p)
-    w = int(re.search(r'-(\d+)w\.webp$', p).group(1))
+for p in variants:
+    m = VAR.search(p)
+    base = p[:m.start()] + '.webp'
+    w = int(m.group(1))
     if base not in manifest or w not in manifest[base]['variants']:
         fail(f'{p}: variant not registered in images/variants.json (orphan)')
 
+# report the heaviest pages so the HTML budget can be watched over time
+heavy = sorted(((len(open(p, encoding='utf8').read().encode()), p) for p in pages), reverse=True)[:3]
+print('heaviest pages: ' + ', '.join(f'{p} {s // 1024} KB' for s, p in heavy))
 print(f'checked {len(pages)} pages, {len(originals)} photos')
 if errors:
     print(f'\n{len(errors)} problem(s):')

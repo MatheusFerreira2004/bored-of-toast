@@ -127,6 +127,8 @@
     const diets = new Set((params.get('diet') || '').split(',').filter(Boolean));
     const input = $('#list-search'); input.value = params.get('q') || '';
     const cards = $$('.card', grid);
+    const SX = {}; INDEX.forEach(x => { if (x.k === 'recipe') SX[x.u] = (x.s || '') + ' ' + x.t.toLowerCase(); });
+    const textOf = c => c.dataset.text || SX[(c.getAttribute('href') || '').replace(/^(\.\.\/)+/, '')] || c.textContent.toLowerCase();
     function apply() {
       const q = input.value.trim().toLowerCase();
       let n = 0;
@@ -134,7 +136,7 @@
         const okCat = cat === 'all' || c.dataset.cat === cat || c.dataset.tags.split(' ').includes(cat);
         const cd = c.dataset.diet.split(' ');
         const okDiet = [...diets].every(d => cd.includes(d));
-        const okQ = !q || c.dataset.text.includes(q);
+        const okQ = !q || textOf(c).includes(q);
         const show = okCat && okDiet && okQ;
         c.hidden = !show; if (show) { n++; c.classList.add('visible'); }
       });

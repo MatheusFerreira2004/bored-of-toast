@@ -12,6 +12,10 @@ concurrency:
   group: auto-build-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     if: github.actor != 'github-actions[bot]'
@@ -27,15 +31,17 @@ jobs:
 
       - name: Run update scripts
         run: |
+          set -euo pipefail
           shopt -s nullglob
           echo '## Update scripts' >> "$GITHUB_STEP_SUMMARY"
           for f in _src/update_*.py; do
             echo "### $f" >> "$GITHUB_STEP_SUMMARY"
-            python3 "$f" | tee -a "$GITHUB_STEP_SUMMARY"
+            python3 "$f" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
           done
 
       - name: Regenerate the site
         run: |
+          set -euo pipefail
           rm -rf _src/site && mkdir -p _src/site
           cp -r images _src/site/images
           python3 _src/build.py
@@ -45,6 +51,7 @@ jobs:
 
       - name: Compare with a fresh build (same test as checks.yml)
         run: |
+          set -euo pipefail
           mkdir -p _src/site && cp -r images _src/site/images
           python3 _src/build.py
           diff -r -q _src/site . -x images -x _src -x .git -x .github -x README.md -x sitemap.xml
@@ -53,12 +60,14 @@ jobs:
 
       - name: Site checks
         run: |
+          set -euo pipefail
           echo '## Site checks' >> "$GITHUB_STEP_SUMMARY"
-          python3 _src/checks.py | tee -a "$GITHUB_STEP_SUMMARY"
-          python3 _src/journey_checks.py | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 _src/checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 _src/journey_checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Commit regenerated site
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A

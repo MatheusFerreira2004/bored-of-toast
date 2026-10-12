@@ -8,7 +8,7 @@
       "readTime": 5,
       "intro": [
         "Some days, food just does not sound good. Maybe your appetite is smaller than it used to be, maybe smells feel stronger, or maybe you are simply tired. On those days, the goal is not a perfect meal. It is getting something useful in, in a form that feels manageable.",
-        "This guide collects the foods and habits we lean on when appetite is low: cooler temperatures, milder flavors, softer textures and portions small enough to finish. It is general cooking education, not medical advice. If you are struggling to eat or drink for more than a day or two, talk to your care team."
+        "This guide collects the foods and habits we lean on when appetite is low: cooler temperatures, milder flavors, softer textures and portions small enough to finish. It is general cooking education, not medical advice. If eating or drinking feels hard, or you are worried about how you feel, talk to your care team."
       ],
       "takeaways": [
         "Smaller portions, more often, can feel easier than three full meals.",
@@ -23,7 +23,7 @@
             "A full plate can feel like a wall on a low-appetite day. Serve half of what you think you can eat, finish it, and go back only if you want to. A half bowl you finish counts for more than a full one you push away."
           ],
           "list": [
-            "Use smaller plates and bowls: A dessert plate or a mug makes a small portion look like a complete meal.",
+            "Use smaller plates and bowls: A dessert plate or a mug makes a small portion look less daunting.",
             "Eat at regular times: Small meals every few hours can be easier than waiting until you feel hungry.",
             "Sip between meals: Drinking a lot with a meal can make you feel full sooner, so many people sip between meals instead."
           ]
@@ -94,10 +94,10 @@
             "Low appetite is common, but some signs mean it is time to call your doctor or care team rather than adjust your menu."
           ],
           "list": [
-            "You cannot keep food or fluids down for more than a day.",
+            "You are having trouble keeping food or fluids down.",
             "You feel dizzy or very weak, or notice signs of dehydration such as very dark urine.",
             "You have severe or persistent stomach pain.",
-            "You have been eating very little for several days in a row."
+            "You are eating much less than usual and feel worried about it."
           ]
         }
       ],
@@ -123,7 +123,7 @@
       "category": "GLP-1 Kitchen",
       "readTime": 6,
       "intro": [
-        "When you eat less, each bite has to do more. Starting a meal with its protein, and choosing ingredients that carry more protein per spoonful, helps make sure the part your body needs most does not get left on the plate.",
+        "When you eat less, each bite has to do more. Starting a meal with its protein, and choosing ingredients that carry more protein per spoonful, makes it less likely that the protein is left on the plate when fullness arrives early. The rest of the meal still matters; this is only about the order.",
         "This guide covers the protein-first habit, a table of easy add-ins with estimated amounts, and swaps that change a familiar recipe without changing how it feels to eat. How much protein you need is personal; your doctor or a registered dietitian can help you set a target."
       ],
       "takeaways": [
@@ -290,7 +290,7 @@
         {
           "h": "Portion Small From the Start",
           "p": [
-            "Portion food into containers right after cooking, in the size you can realistically finish. One cup is a good starting point for soups; a single small burrito or one 4 oz piece of fish is a full plate.",
+            "Portion food into containers right after cooking, in the size you can realistically finish. One cup is a good starting point for soups; a single small burrito or one 4 oz piece of fish is a good place to start.",
             "Small containers also cool faster and reheat more evenly than one big pot."
           ],
           "list": [
@@ -395,12 +395,12 @@
     },
     {
       "id": "smoothies-that-fill-you",
-      "title": "Smoothies That Actually Fill You",
+      "title": "Small Smoothies with Protein",
       "subtitle": "How to build a small, sippable smoothie with real protein in it, and how to keep it from tasting like a chalky shake.",
       "category": "GLP-1 Kitchen",
       "readTime": 5,
       "intro": [
-        "On days when chewing feels like work, a smoothie can be the easiest way to get something useful in. The catch is that many smoothies are mostly fruit and juice: sweet, big and not very filling.",
+        "On days when chewing feels like work, a smoothie can be the easiest way to get something useful in. The catch is that many smoothies are mostly fruit and juice: sweet, big and low in protein.",
         "This guide shows a simple formula for a smaller smoothie built around protein, with add-ins and their estimated protein, plus a few fixes for texture and taste. It is general cooking education, not medical or nutrition advice."
       ],
       "takeaways": [
@@ -513,8 +513,8 @@
           "Yes, for the same day. Keep them sealed in the fridge and shake well. You can also freeze the fruit and yogurt portions in bags and blend with milk when you want one."
         ],
         [
-          "Are smoothies a replacement for meals?",
-          "They can be a practical option on harder days. If you rely on them often, ask your care team or a registered dietitian whether your overall intake meets your needs."
+          "Can a smoothie stand in for a meal?",
+          "A smoothie is one easy option on harder days, not a replacement for varied meals. If you rely on them often, ask your care team or a registered dietitian whether your overall intake meets your needs."
         ]
       ]
     },
@@ -525,12 +525,12 @@
       "category": "GLP-1 Kitchen",
       "readTime": 5,
       "intro": [
-        "Restaurant portions are often built for big appetites. When yours is smaller, a night out can feel like a choice between leaving most of your plate or eating past comfortable.",
+        "Restaurant portions are often built for big appetites. When yours is smaller, a night out can feel like a choice between leaving most of your plate or eating more than feels comfortable.",
         "There is a middle path. This guide covers how to read a menu for protein, how to order smaller without making a fuss, and how to turn leftovers into tomorrow's small plate."
       ],
       "takeaways": [
         "Look for the protein on the menu first, then build around it.",
-        "Appetizers, half portions and sides can make a perfect small meal.",
+        "Appetizers, half portions and sides are often the right size.",
         "Ask for a to-go box when the food arrives, not at the end.",
         "Go easy on bread baskets and drinks before the meal arrives."
       ],
@@ -555,7 +555,7 @@
             "Order an appetizer as your meal: Shrimp cocktail, chicken skewers or a cup of soup is often the right size.",
             "Ask about half or lunch portions: Many places offer them even at dinner if you ask.",
             "Share an entree: Split one main and add a side or soup each.",
-            "Build from sides: A protein side plus a vegetable side makes a balanced small plate."
+            "Build from sides: A protein side plus a vegetable side makes an easy small plate."
           ]
         },
         {
@@ -623,7 +623,7 @@
         ],
         [
           "What if nothing on the menu works?",
-          "A cup of soup and a side of vegetables, or a couple of appetizers, can make a fine meal. You can also eat a small protein snack before you go so you are not choosing on an empty stomach."
+          "A cup of soup and a side of vegetables, or a couple of appetizers, can work well. You can also eat a small protein snack before you go so you are not choosing on an empty stomach."
         ]
       ]
     },

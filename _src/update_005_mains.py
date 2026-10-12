@@ -289,7 +289,7 @@ for rid, fields in NEW.items():
     r = BY.get(rid)
     if r is None:
         sys.exit(f'ERROR: recipe {rid} not found. Nothing was saved.')
-    if r.get('note') == fields['note']:
+    if r.get('desc') == fields['desc']:
         print(f'- already applied: {rid}')
         continue
     fields = dict(fields)
