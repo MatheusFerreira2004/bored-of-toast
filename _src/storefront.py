@@ -19,7 +19,7 @@ def validate_config(config):
     return config
 
 def picture(root, name, alt, eager=False):
-    return f'<img src="{root}images/commerce/{name}.jpg" alt="{e(alt)}" loading="{"eager" if eager else "lazy"}" decoding="async" width="760" height="{1647 if name.startswith("starter") else 984}">'
+    return f'<img src="{root}images/commerce/{name}.jpg{'?v=20261012-covers' if name.endswith('cover') and not name.startswith('starter') else ''}" alt="{e(alt)}" loading="{"eager" if eager else "lazy"}" decoding="async" width="760" height="{1647 if name.startswith("starter") else 984}">'
 
 def action(config, kind, label, style='btn-dark'):
     url = config.get(kind + '_url')
