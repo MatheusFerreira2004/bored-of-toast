@@ -5,7 +5,7 @@
 
 ## Recipes per filter
 - high-protein: 33
-- gentle: 27
+- gentle: 26
 - soft: 16
 - make-ahead: 31
 - Beyond Toast: 11
@@ -32,7 +32,6 @@
 - chocolate-yogurt-mousse-cups
 - cottage-cheese-pancakes
 - overnight-oats
-- avocado-toast-jammy-eggs
 - butternut-squash-soup
 - lemon-chicken-orzo-soup
 - turkey-meatballs-tomato-sauce

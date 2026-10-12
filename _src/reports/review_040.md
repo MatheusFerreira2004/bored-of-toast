@@ -1,21 +1,17 @@
 # Review 040 (PR #43, lotes 3-6)
 
 ## build.py
-- filter note: OK: Gentle: selected recipes with milder flavors, or a clearly described m...
-- search label: OK: "Free guide" -> "Free Starter Kit" (1 occurrence(s))
+- filter note: already applied: Gentle: selected recipes with milder flavors, or a clearly described m...
+- search label: already applied (no "Free guide" left in build.py)
 
 ## storefront.py
-- Nourished page: OK: <h3>The site: free to browse and plan</h3><p>Our recipes, guides, coll...
-- Nourished page: OK: Choose Nourished when you want recipes, weekly examples and shopping l...
-- Nourished page: OK: The site recipes, collections and Small-Plate Week stay free. Nourishe...
-- Nourished page: OK: Purchasing is not open yet. This summary follows our current Terms of ...
+- Nourished page: already applied: <h3>The site: free to browse and plan</h3><p>Our recipes, guides, coll...
+- Nourished page: already applied: Choose Nourished when you want recipes, weekly examples and shopping l...
+- Nourished page: already applied: The site recipes, collections and Small-Plate Week stay free. Nourishe...
+- Nourished page: already applied: Purchasing is not open yet. This summary follows our current Terms of ...
 
 ## Recipe changes this run
-- avocado-toast-jammy-eggs: - gentle
-- cottage-cheese-scrambled-eggs: + soft-texture tip
-- greek-yogurt-chia-pudding: + soft-texture tip
-- overnight-oats: + soft-texture tip
-- butternut-squash-soup: + soft-texture tip
+- nothing (already applied)
 
 ## Gentle criterion
 Selected recipes with milder flavors, or a clearly described mild variation. A gentle recipe that lists
@@ -50,13 +46,13 @@ a heat or strong-smoke ingredient (red pepper flakes, chili flakes, chili powder
 - protein-rice-pudding: no heat or strong-smoke ingredient
 
 ### Removed this run
-- avocado-toast-jammy-eggs: lists red pepper flakes with no skip/omit instruction
+- none this run
 
 ## Soft texture tips
-- cottage-cheese-scrambled-eggs: tip added
-- greek-yogurt-chia-pudding: tip added
-- overnight-oats: tip added
-- butternut-squash-soup: tip added
+- cottage-cheese-scrambled-eggs: soft-texture tip already present
+- greek-yogurt-chia-pudding: soft-texture tip already present
+- overnight-oats: soft-texture tip already present
+- butternut-squash-soup: soft-texture tip already present
 
 ## Counts after this run
 - gentle: 26
