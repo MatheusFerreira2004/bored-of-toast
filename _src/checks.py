@@ -9,7 +9,11 @@ Checks
   4. Recipe JSON-LD parses and has the required fields (incl. nutrition.servingSize, dateModified)
   5. nothing loads from Google Fonts / gstatic (fonts are self-hosted)
   6. image budget: each .webp <= 200 KB; responsive variants match images/variants.json
+     (a variant is ONLY a file ending in -<number>w.webp, e.g. stew-480w.webp;
+      tomato-white-bean-stew.webp is an original, not a variant)
   7. weight budget: each HTML page <= 80 KB, styles.css <= 80 KB, app.js <= 40 KB
+
+The result is also written to _src/reports/checks-report.txt.
 """
 import glob, json, os, re, sys
 from html.parser import HTMLParser
@@ -97,17 +101,17 @@ css = open('styles.css', encoding='utf8').read()
 if re.search(r'fonts\.googleapis|fonts\.gstatic|@import\s+url', css): fail('styles.css: external @import / Google Fonts')
 if len(css.encode()) > 80 * 1024: fail(f'styles.css is {len(css.encode())//1024} KB (budget 80 KB)')
 if os.path.getsize('app.js') > 40 * 1024: fail(f'app.js is {os.path.getsize("app.js")//1024} KB (budget 40 KB)')
-for f in glob.glob('fonts/*.woff2'):
-    pass
 for m in re.findall(r'url\((fonts/[^)]+)\)', css):
     if not os.path.exists(m): fail(f'styles.css: missing font file {m}')
 
-# 6) images
-VAR = re.compile(r'-\d+w\.webp$')
-originals = sorted(p for p in glob.glob('images/*.webp') if not VAR.search(p))
+# 6) images. A responsive variant is ONLY a name ending in -<number>w.webp.
+VAR = re.compile(r'-(\d+)w\.webp$')
+all_webp = sorted(glob.glob('images/*.webp'))
+originals = [p for p in all_webp if not VAR.search(p)]
+variants = [p for p in all_webp if VAR.search(p)]
 manifest = json.load(open('images/variants.json')) if os.path.exists('images/variants.json') else {}
 if not manifest: fail('images/variants.json missing (run python3 _src/make_images.py)')
-for p in glob.glob('images/*.webp'):
+for p in all_webp:
     kb = os.path.getsize(p) / 1024
     if kb > 200: fail(f'{p}: {kb:.0f} KB (image budget 200 KB)')
 for p in originals:
@@ -117,15 +121,24 @@ for p in originals:
         if not os.path.exists(f'{p[:-5]}-{w}w.webp'): fail(f'{p}: variant {w}w listed in manifest but missing')
 for k in manifest:
     if not os.path.exists(k): fail(f'manifest lists {k} but the file does not exist')
-for p in glob.glob('images/*-*w.webp'):
-    base = re.sub(r'-\d+w\.webp$', '.webp', p)
-    w = int(re.search(r'-(\d+)w\.webp$', p).group(1))
+for p in variants:
+    m = VAR.search(p)
+    base = p[:m.start()] + '.webp'
+    w = int(m.group(1))
     if base not in manifest or w not in manifest[base]['variants']:
         fail(f'{p}: variant not registered in images/variants.json (orphan)')
 
-print(f'checked {len(pages)} pages, {len(originals)} photos')
+lines = [f'checked {len(pages)} pages, {len(originals)} photos']
 if errors:
-    print(f'\n{len(errors)} problem(s):')
-    for e in errors[:60]: print(' -', e)
-    sys.exit(1)
-print('all checks passed')
+    lines.append(f'{len(errors)} problem(s):')
+    lines += [' - ' + e for e in errors[:60]]
+else:
+    lines.append('all checks passed')
+try:
+    os.makedirs(os.path.join(ROOT, '_src', 'reports'), exist_ok=True)
+    with open(os.path.join(ROOT, '_src', 'reports', 'checks-report.txt'), 'w', encoding='utf8') as f:
+        f.write('\n'.join(lines) + '\n')
+except OSError:
+    pass
+print('\n'.join(lines))
+sys.exit(1 if errors else 0)
