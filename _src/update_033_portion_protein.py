@@ -75,9 +75,16 @@ PHRASES = [
     ('is what turns this into a small plate that still counts as a full lunch',
      'is what keeps each bowl small while still carrying about 16 g protein'),
     (' A half bowl still counts.', ''),
+    # found by the scan in the second pass
+    (' Half still counts.', ''),
+    ('half an apple with yogurt is a complete small dessert.', 'serve half an apple with a spoonful of yogurt.'),
+    ('Small-portion tip: half a glass is perfectly fine.', 'Small-portion tip: start with half a glass.'),
+    ('One slice with one egg is a complete small breakfast; if you are still hungry,', 'One slice with one egg makes an easy small breakfast;'),
+    ('one wedge with a piece of fruit is a complete small breakfast on low-appetite days.', 'serve one wedge with a piece of fruit.'),
+    ('a small, cold treat that still counts toward your protein.', 'a small, cold treat with a little protein.'),
 ]
-RISKY = re.compile(r'complete small|full small|counts as|still counts|full meal|complete meal|\benough\b|\bminimum\b', re.I)
-SAFE_ENOUGH = re.compile(r'enough (?:water|liquid|broth|milk|oil|room|space|time|to cover|to coat|to loosen|to thin|heat)|long enough|big enough|large enough|hot enough|thick enough|thin enough|wide enough|warm enough|firm enough|soft enough|cool enough|deep enough', re.I)
+RISKY = re.compile(r'complete small|full small|counts as|still counts|perfectly fine|full meal|complete meal|\benough\b|\bminimum\b', re.I)
+SAFE_ENOUGH = re.compile(r'enough (?:water|liquid|broth|milk|oil|room|space|time|hours|to cover|to coat|to loosen|to thin|to handle|for scooping|heat)|long enough|big enough|large enough|hot enough|thick enough|thin enough|wide enough|warm enough|firm enough|soft enough|cool enough|deep enough|dry enough|sweet enough|salty enough|squeezed enough|light enough|small enough|is enough\.', re.I)
 
 
 def protein_of(r):
@@ -98,11 +105,11 @@ def dump(raw, data):
         f.write('\n')
 
 
-def walk(obj, fn, path=''):
+def walk(obj, fn):
     if isinstance(obj, dict):
-        return {k: walk(v, fn, path) for k, v in obj.items()}
+        return {k: walk(v, fn) for k, v in obj.items()}
     if isinstance(obj, list):
-        return [walk(v, fn, path) for v in obj]
+        return [walk(v, fn) for v in obj]
     return fn(obj) if isinstance(obj, str) else obj
 
 
@@ -115,6 +122,17 @@ except Exception as e:
 
 changes, numbers, removed, skipped, phrase_hits, risky = [], [], [], [], [], []
 
+# 1) sufficiency phrases first, so the report shows the final wording
+def fix(s):
+    for o, n in PHRASES:
+        if o in s:
+            s = s.replace(o, n)
+            phrase_hits.append(o.strip())
+    return s
+
+recipes = walk(recipes, fix)
+
+# 2) portion tips
 for r in recipes:
     rid = r.get('id', '?')
     p = protein_of(r)
@@ -127,14 +145,13 @@ for r in recipes:
         stripped = AUTO_SUFFIX.sub('', t)
         if stripped != t:
             had_auto = True
-        # duplicate pairing line added by the first version for the protein bites
+            changes.append(f'{rid}: automatic protein suffix removed')
         if rid == 'peanut-butter-protein-bites' and stripped.startswith('These are a small snack, not a meal.'):
             changes.append(f'{rid}: removed duplicate pairing tip')
             continue
         new_tips.append(stripped)
     tips = new_tips
 
-    # muffins: keep only one Greek yogurt pairing line
     if rid == 'berry-greek-yogurt-muffins':
         seen, dedup = False, []
         for t in tips:
@@ -161,7 +178,7 @@ for r in recipes:
             if basis:
                 numbers.append(f'{rid}: {basis}')
             else:
-                removed.append(f'{rid}: number removed. The smaller amount is not a proportional part of a confirmed serving (see rule notes).')
+                removed.append(f'{rid}: no number. The smaller amount is not a proportional part of a confirmed serving.')
     elif idx is not None and tips[idx].startswith(GENERIC):
         if p is None:
             skipped.append(f'{rid}: generic half-portion tip but protein not found; no number added')
@@ -170,32 +187,25 @@ for r in recipes:
             if tips[idx] != new_tip:
                 tips[idx] = new_tip
                 changes.append(f'{rid}: generic half-portion tip rewritten')
-            numbers.append(f'{rid}: Standard serving ({fmt(p)} g); half a portion, every component halved = {fmt(p / 2)} g.')
-    elif had_auto:
-        removed.append(f'{rid}: automatic number removed; tip needs manual review: "{tips[idx] if idx is not None else "(no tip)"}"')
+    elif idx is not None and tips[idx].startswith('Small-portion tip: serve half a portion and keep the rest for later. Half a serving has about'):
+        numbers.append(f'{rid}: Standard serving ({fmt(p)} g); half a portion, every component halved = {fmt(p / 2)} g.')
+    elif idx is not None and not re.search(r'\d+(?:\.\d+)?\s*g\b', tips[idx]) and re.search(r'\bhalf\b|one wrap|one wedge|one piece', tips[idx], re.I):
+        removed.append(f'{rid}: no number (quantity not a confirmed fraction of the serving): "{tips[idx]}"')
+
+    if rid not in EXPLICIT and idx is not None and tips[idx].startswith('Small-portion tip: serve half a portion and keep the rest for later. Half a serving has about') \
+            and not any(n.startswith(rid + ':') for n in numbers):
+        numbers.append(f'{rid}: Standard serving ({fmt(p)} g); half a portion, every component halved = {fmt(p / 2)} g.')
 
     r['tips'] = tips
 
-
-# sufficiency phrases (all recipe text)
-def fix(s):
-    for o, n in PHRASES:
-        if o in s:
-            s = s.replace(o, n)
-            phrase_hits.append(o.strip())
-    return s
-
-recipes = walk(recipes, fix)
-
-# scan for anything left
+# 3) scan for anything left
 for r in recipes:
     rid = r.get('id', '?')
     def scan(s):
         for m in RISKY.finditer(s):
-            ctx = s[max(0, m.start() - 50): m.end() + 50]
             if m.group().lower() == 'enough' and SAFE_ENOUGH.search(s[max(0, m.start() - 15): m.end() + 15]):
                 continue
-            risky.append(f'{rid}: ...{ctx}...')
+            risky.append(f'{rid}: ...{s[max(0, m.start() - 50): m.end() + 50]}...')
         return s
     walk(r, scan)
 
@@ -205,7 +215,7 @@ out = ['# Portion and protein review (lote 2, corrected)', '']
 out += ['## Changed this run'] + (['- ' + c for c in changes] or ['- nothing (already applied)'])
 out += ['', '## Sufficiency phrases replaced this run'] + (['- ' + h for h in sorted(set(phrase_hits))] or ['- nothing (already applied)'])
 out += ['', '## Numbers kept, with basis'] + ['- ' + n for n in numbers]
-out += ['', '## Numbers removed (no confirmed basis)'] + (['- ' + x for x in removed] or ['- none'])
+out += ['', '## Smaller amounts without a number (no confirmed basis)'] + (['- ' + x for x in removed] or ['- none'])
 out += ['', '## Rules skipped'] + (['- ' + s for s in skipped] or ['- none'])
 out += ['', '## Remaining risky wording for manual review'] + (['- ' + x for x in risky] or ['- none'])
 report = '\n'.join(out) + '\n'
