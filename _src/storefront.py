@@ -45,11 +45,11 @@ def kit_note(config):
 def checkout_action(config):
     if config.get('checkout_url'):
         return action(config, 'checkout', 'Get the full collection · US$20', 'btn-yellow')
-    return '<a class="btn btn-yellow" href="#collection">Purchasing opens soon · see what’s included ↓</a>'
+    return '<a class="btn btn-yellow" href="#collection">Purchasing opens soon · see what’s included</a>'
 
 def checkout_note(config):
     return ('One-time purchase. Review checkout for delivery details and any applicable taxes.'
-            if config.get('checkout_url') else 'Planned as a one-time US$20 purchase. See how buying works below.')
+            if config.get('checkout_url') else 'Planned as a one-time US$20 purchase. Details are in How buying works on this page.')
 
 def marketing_block(root, kind):
     free = kind == 'free'
