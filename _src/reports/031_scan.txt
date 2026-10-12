@@ -1,6 +1,4 @@
 Remaining phrases to review (report only, not changed):
-recipe:chicken-avocado-salad.note: Two breasts across three bowls, with a yogurt dressing instead of an oily one, is what makes this a small plate that still feels like a full meal.
-recipe:sheet-pan-salmon.note: Cutting the fillet into six smaller pieces is the main change here: each one is a complete small plate, and the cool yogurt sauce adds protein without adding effort.
 recipe:shakshuka.steps[5].d: Bread or pita is optional; a small piece is enough for scooping.
 recipe:overnight-oats.intro[1]: Rolled oats have been steamed and flattened, so they soften fully in cold liquid given enough hours.
 recipe:avocado-toast-jammy-eggs.steps[0].d: Fill a small saucepan with enough water to cover the eggs by an inch and bring it to a full boil over high heat.
@@ -51,4 +49,4 @@ guides[0].takeaways[0]: Smaller portions, more often, can feel easier than three
 guides[0].sections[0].p[0]: A full plate can feel like a wall on a low-appetite day.
 guides[4].sections[0].p[0]: Dishes built mostly on pasta, fries or bread can fill you up before you get much protein.
 guides[6].sections[0].table.rows[4][1]: Smooth and filling
-build.py:360: ...protein.</em>", "subtitle": "Dips, bites and bars in small portions, for when a full meal is too much.", "desc": "Small snacks with protein: yogurt dips, deviled eggs, e...
+build.py:366: ...protein.</em>", "subtitle": "Dips, bites and bars in small portions, for when a full meal is too much.", "desc": "Small snacks with protein: yogurt dips, deviled eggs, e...
