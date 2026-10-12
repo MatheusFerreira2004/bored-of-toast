@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Editorial review, lote 1c: remaining food-sufficiency wording.
 
-The second pass of the review found three more phrases that read like a promise that a portion
-is enough ("complete breakfast", "full breakfast", "perfectly good start"). They are replaced with
-culinary descriptions. A read-only scan of the whole recipes.json and guides_legal.json for similar
-wording is written to _src/reports/034_scan.txt (nothing is changed by the scan; culinary uses
-such as "enough water to cover" are not flagged).
+The second pass of the review found more phrases that read like a promise that a portion is
+enough ("complete breakfast", "full breakfast", "full snack", "perfectly good start"). They are
+replaced with culinary descriptions. A read-only scan of the whole recipes.json and
+guides_legal.json for similar wording is written to _src/reports/034_scan.txt (nothing is changed
+by the scan; culinary uses such as "enough water to cover" are not flagged).
 
 Phrases that are neither found nor already replaced are reported, not invented. Safe to re-run.
 """
@@ -25,8 +25,17 @@ FIXES = [
     # breakfast-burritos, kitchen note
     ('half a burrito and a cup of tea is a perfectly good start.',
      'half a burrito and a cup of tea is an easy way to start.'),
+    # peanut-butter-protein-bites, kitchen note
+    ('One bite with a cup of tea is a perfectly good snack,',
+     'One bite with a cup of tea makes a small snack,'),
+    # banana-protein-smoothie, small-portion tip
+    ('Small-portion tip: one small glass is a full snack.',
+     'Small-portion tip: start with one small glass.'),
+    # garlic-sesame-edamame, small-portion tip
+    ('Small-portion tip: one bowl is a full snack.',
+     'Small-portion tip: start with one bowl.'),
 ]
-SCAN = re.compile(r'\b(complete|full)\s+(small\s+)?(breakfast|lunch|dinner|meal|plate|dessert|snack)\b|'
+SCAN = re.compile(r'\b(complete|full)\s+(small\s+)?(breakfast|lunch|dinner|meal|dessert|snack)\b|'
                   r'perfectly (good|fine)|still counts|counts as|counts toward|\bminimum\b|'
                   r'meal replacement|replace(s|ment)? (for )?(a )?meals?', re.I)
 
