@@ -3,7 +3,7 @@
 Content lives in recipes.json and guides_legal.json. Run: python3 build.py
 Output goes to ./site (images must already be in ./site/images)."""
 import json, os, html, re, datetime, shutil
-from storefront import build_storefront, marketing_block, contextual_link, validate_config
+from storefront import build_storefront, marketing_block, contextual_link, validate_config, starter_cta
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -162,7 +162,7 @@ def header(root, active):
 def footer(root):
     cats = ''.join(f'<li><a href="{root}recipes/?cat={e(k)}">{l}</a></li>' for k, l, _ in CATS[:6])
     nav = ''.join(f'<li><a href="{root}{h}">{l}</a></li>' for h, l, _ in NAV)
-    nav += f'<li><a href="{root}starter-kit/">Free GLP-1 kit</a></li>'
+    nav += f'<li><a href="{root}starter-kit/">Free Starter Kit</a></li>'
     nav += f'<li><a href="{root}collections/">Collections</a></li>'
     socials = ''.join(f'<a href="{e(url)}" aria-label="{name.title()}" target="_blank" rel="noopener">{ICON["pin" if name == "pinterest" else name]}</a>' for name,url in STOREFRONT.get('social_urls', {}).items() if url)
     return f'''<footer class="site-footer">
@@ -190,7 +190,16 @@ def footer(root):
 <button class="to-top no-print" aria-label="Back to top">{ICON['up']}</button>
 <div class="toast-msg" id="toast-msg" role="status" aria-live="polite"></div>'''
 
+def add_starter_cta(path, root, body):
+    """update_037: Starter Kit CTA before the footer on the recipe library, single guides and Small-Plate Week."""
+    if 'data-starter-cta' in body:
+        return body
+    if path in ('recipes/', 'meal-plan/') or (path.startswith('guides/') and 'guide-layout' in body):
+        return body + starter_cta(root, STOREFRONT)
+    return body
+
 def page(path, title, desc, body, active='', root='', og='images/og/home.jpg', jsonld=None, head_extra='', body_attr=''):
+    body = add_starter_cta(path, root, body)
     canonical = SITE_URL + path
     ld = ''.join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     doc = f'''<!DOCTYPE html>
@@ -290,7 +299,7 @@ def build_home():
     trust = '<div class="hero-trust">' + ''.join(f'<span>{ICON["check"]}{t}</span>' for t in ['Small portions', 'Gentle swaps', 'Everyday ingredients']) + '</div>'
     hero = hero_bleed(root, 'images/avocado-toast-jammy-eggs.webp', 'High protein · Small plates · Gentle food', 'Small plates,<br><em>big protein.</em>',
         'Simple recipes with the protein counted, in portions you can actually finish. Made for small appetites, busy days and everything in between.',
-        f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><a href="{root}starter-kit/" class="btn btn-ghost">Get the free starter kit</a>',
+        f'<a href="{root}recipes/" class="btn btn-yellow">Explore recipes {ICON["arrow"]}</a><a href="{root}starter-kit/" class="btn btn-ghost">See the free Starter Kit</a>',
         float_card(root, wk, 'Recipe of the week'), trust=trust)
     words = ['High protein', 'Small portions', 'Gentle swaps', 'Make-ahead', 'Protein first', 'Small and often']
     marquee = '<div class="marquee" aria-hidden="true"><div class="marquee-track">' + ''.join(f'<span>{w}</span>' for w in words * 2) + '</div></div>'
@@ -385,7 +394,7 @@ def build_collections():
     root = '../'
     hub = hero_bleed(root, 'images/greek-yogurt-berry-parfaits.webp', 'Recipe collections', 'Small plates,<br><em>sorted for you.</em>',
         'Hand-picked lists from the recipe library: protein-first breakfasts, soft foods for hard days, freezer-friendly meals, sips and small snacks. Every recipe lists estimated protein per serving.',
-        '<a href="' + root + 'recipes/" class="btn btn-yellow">All recipes ' + ICON['arrow'] + '</a><a href="' + root + 'starter-kit/" class="btn btn-ghost">Get the free starter kit</a>', short=True)
+        '<a href="' + root + 'recipes/" class="btn btn-yellow">All recipes ' + ICON['arrow'] + '</a><a href="' + root + 'starter-kit/" class="btn btn-ghost">See the free Starter Kit</a>', short=True)
     body = (hub + '<section class="container section">' + section_head('Pick a collection', 'Each list links to full recipes with small-portion tips and gentler swaps.')
             + '<div class="guide-grid">' + ''.join(collection_card(root, c) for c in COLLECTIONS) + '</div></section>' + marketing_block(root, 'free'))
     ld = [{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": SITE_URL + 'collections/' + c['id'] + '/'} for i, c in enumerate(COLLECTIONS)]}]
