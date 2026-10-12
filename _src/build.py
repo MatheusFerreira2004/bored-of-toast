@@ -435,7 +435,7 @@ def build_recipes():
     <div class="search"><input type="search" id="list-search" placeholder="Search recipes or ingredients…" aria-label="Search recipes">{ICON['search']}</div>
     <div class="chips" id="chips">{''.join(f'<button class="chip" data-key="{e(k)}">{l}</button>' for k, l in chips)}</div>
     <div class="chips diet-chips" id="diet-chips"><span class="chips-label">Diet:</span>{''.join(f'<button class="chip chip-diet" data-diet="{k}"><span class="diet">{DIET[k][0]}</span>{l}</button>' for k, l in diets)}</div>
-    <p class="fine filter-note" style="margin:10px 0 0">Gentle: mild flavors, or a gentler swap is listed. Soft texture: smooth, spoonable or sippable. Neither is a guarantee that a food will suit you; follow your care team’s advice.</p>
+    <p class="fine filter-note" style="margin:10px 0 0">Gentle: selected recipes with milder flavors, or a clearly described mild variation. Soft texture: recipes with a soft base or a clearly described soft variation; toppings and sides may differ. These are cooking labels, not medical texture guidance or a guarantee that a food will suit you; follow your care team’s advice.</p>
   </div>
   <h2 class="sr-only">All recipes</h2>
   <p class="results-count" id="results-count"></p>
@@ -769,7 +769,7 @@ def build_index_js():
     items += [{'t': g['title'], 'u': f"guides/{g['id']}/", 'i': thumb(f"images/{GUIDE_IMG[g['id']]}.webp"), 'c': 'Guide', 'm': f"{g['readTime']} min read", 'k': 'guide',
                's': (g['title'] + ' ' + g['subtitle'] + ' guide').lower()} for g in GUIDES]
     items += [{'t': 'Small-Plate Week', 'u': 'meal-plan/', 'i': 'images/lemon-chicken-orzo-soup.webp', 'c': 'Meal plan', 'm': '5 small plates', 'k': 'guide', 's': 'small-plate week five small plates meal plan shopping list high protein make-ahead'}]
-    items += [{'t': 'The GLP-1 Kitchen Starter Kit', 'u': 'starter-kit/', 'i': 'images/commerce/starter-cover.jpg', 'c': 'Free guide', 'm': '9-page PDF', 'k': 'guide', 's': 'free glp-1 starter kit nourish recipes organizer shopping'}, {'t': 'Nourished - The GLP-1 Kitchen Companion', 'u': 'nourished/', 'i': 'images/commerce/nourished-cover.jpg', 'c': 'Cookbook collection', 'm': 'US$20', 'k': 'guide', 's': 'nourished glp-1 cookbook recipes collection meal planning shopping'}]
+    items += [{'t': 'The GLP-1 Kitchen Starter Kit', 'u': 'starter-kit/', 'i': 'images/commerce/starter-cover.jpg', 'c': 'Free Starter Kit', 'm': '9-page PDF', 'k': 'guide', 's': 'free glp-1 starter kit nourish recipes organizer shopping'}, {'t': 'Nourished - The GLP-1 Kitchen Companion', 'u': 'nourished/', 'i': 'images/commerce/nourished-cover.jpg', 'c': 'Cookbook collection', 'm': 'US$20', 'k': 'guide', 's': 'nourished glp-1 cookbook recipes collection meal planning shopping'}]
     open(os.path.join(OUT, 'search-index.js'), 'w').write('window.BOT_INDEX=' + json.dumps(items, ensure_ascii=False) + ';')
 
 def build_sitemap():
