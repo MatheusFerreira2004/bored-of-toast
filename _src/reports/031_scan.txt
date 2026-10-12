@@ -14,7 +14,6 @@ recipe:breakfast-burritos.faq[1][1]: The filling was probably still warm when yo
 recipe:spinach-feta-mini-frittata.faq[0][1]: Usually the spinach was not squeezed dry enough.
 recipe:lemon-chicken-orzo-soup.intro[0]: It uses a little less orzo and a little less oil than a classic pot, so each bowl carries about 27 g of protein while staying light enough to finish.
 recipe:lemon-chicken-orzo-soup.steps[2].d: Move the chicken to a cutting board and let it cool for 5 minutes, just enough to handle.
-recipe:lemon-chicken-orzo-soup.steps[5].d: Bread is optional; the soup is a full meal on its own.
 recipe:crispy-baked-chicken-bites.faq[0][1]: The pan was likely crowded or the oven not hot enough.
 recipe:baked-cinnamon-apples.intro[1]: Coring the apples while leaving the bottoms intact turns each one into a little cup that holds the filling and catches the juices.
 recipe:baked-cinnamon-apples.steps[1].d: Use a melon baller or small spoon to scoop the core out of each apple from the top, leaving about 1/2 inch at the bottom so the filling stays in.
@@ -25,7 +24,6 @@ recipe:smoked-salmon-bagel-halves.intro[1]: It tastes like the deli version but 
 recipe:smoked-salmon-bagel-halves.note: This is the weekend brunch plate made small enough for a weekday.
 recipe:strawberry-protein-smoothie.tips[0]: Taste before adding honey; ripe frozen strawberries are often sweet enough.
 recipe:strawberry-protein-smoothie.variations[2][1]: Blend in 2 tablespoons rolled oats for a more filling glass.
-recipe:mixed-berry-protein-smoothie.note: On slow mornings, one small glass of this is often enough to get started.
 recipe:ginger-egg-drop-soup.tips[1]: Taste before adding more soy sauce; broth is often salty enough.
 recipe:bacon-deviled-eggs.intro[0]: This version swaps most of the mayonnaise for Greek yogurt, so the filling stays creamy and tangy with a little less fat.
 recipe:bacon-deviled-eggs.ingredients[1].group: For the filling
@@ -39,25 +37,18 @@ recipe:bacon-deviled-eggs.faq[1][1]: Use 1/3 cup Greek yogurt in total; the fill
 recipe:tzatziki-yogurt-dip.faq[0][1]: The cucumber was not squeezed enough.
 recipe:split-pea-soup.desc: Smooth, filling and about 15 g protein.
 recipe:split-pea-soup.intro[0]: Simmered in chicken bone broth, each small bowl has about 15 g of protein and plenty of fiber, which makes it one of the most filling soups on the site for its size.
-recipe:split-pea-soup.note: A mug of this on a cold evening is about as comforting as food gets, and it quietly does a lot of nutritional work.
 recipe:chickpea-black-bean-chili.why[1][1]: Very filling for its size.
 recipe:chickpea-black-bean-chili.tips[2]: Serve over a little rice for a more filling meal.
 recipe:tomato-white-bean-stew.intro[0]: It is warming, filling and has about 17 g of protein per bowl.
-recipe:tomato-white-bean-stew.tips[3]: Small-portion tip: 3/4 cup with a small piece of bread is a complete small meal.
-recipe:red-lentil-lemon-soup.tips[3]: Small-portion tip: a mug of this counts as a small meal.
-recipe:lemon-herb-baked-cod.tips[3]: Small-portion tip: half a fillet with a spoonful of rice is a complete small plate.
 recipe:turkey-stuffed-peppers.intro[0]: This filling is lean ground turkey with a modest amount of rice, onion, herbs and tomato, so each pepper has about 19 g of protein.
 recipe:turkey-stuffed-peppers.steps[1].t: Cook the filling
 recipe:turkey-stuffed-peppers.steps[3].d: Spoon the filling into the peppers.
 recipe:turkey-stuffed-peppers.tips[2]: Leftover rice works perfectly in the filling.
-recipe:turkey-stuffed-peppers.tips[3]: Small-portion tip: half a pepper with a spoonful of yogurt is enough on low-appetite days.
-recipe:turkey-stuffed-peppers.variations[4][1]: Add 1/2 cup cottage cheese to the filling for about 3 g more protein per pepper.
+recipe:turkey-stuffed-peppers.variations[4][1]: Add 1/2 cup cottage cheese to the filling for about 2 g more protein per pepper.
 recipe:cottage-cheese-mashed-potatoes.steps[2].d: Mash with the butter, then stir in the blended cottage cheese and enough warm milk for a soft texture.
-recipe:greek-yogurt-chia-pudding.tips[3]: Small-portion tip: a few spoonfuls is enough on hard days; the rest keeps.
 guides[0].intro[1]: This guide collects the foods and habits we lean on when appetite is low: cooler temperatures, milder flavors, softer textures and portions small enough to finish.
 guides[0].takeaways[0]: Smaller portions, more often, can feel easier than three full meals.
 guides[0].sections[0].p[0]: A full plate can feel like a wall on a low-appetite day.
-guides[3].faq[2][0]: Are smoothies a replacement for meals?
 guides[4].sections[0].p[0]: Dishes built mostly on pasta, fries or bread can fill you up before you get much protein.
 guides[6].sections[0].table.rows[4][1]: Smooth and filling
 build.py:360: ...protein.</em>", "subtitle": "Dips, bites and bars in small portions, for when a full meal is too much.", "desc": "Small snacks with protein: yogurt dips, deviled eggs, e...
