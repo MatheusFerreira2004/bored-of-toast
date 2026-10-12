@@ -54,10 +54,11 @@ for rid, tags in EXTRA_TAGS.items():
         if t not in by[rid]['tags']:
             by[rid]['tags'].append(t); changes.append(f'{rid}: + {t}')
 for rid, (old, new) in RECATEGORY.items():
-    if by[rid]['category'] == old:
+    cur = by[rid]['category']
+    if cur == old:
         by[rid]['category'] = new; changes.append(f'{rid}: category {old} -> {new}')
-    elif by[rid]['category'] != new:
-        print(f'ERROR: {rid} category is {by[rid]["category"]!r}, expected {old!r} or {new!r}. Nothing was saved.')
+    elif cur != new:
+        print(f'ERROR: {rid} category is {cur}, expected {old} or {new}. Nothing was saved.')
         sys.exit(1)
 
 if changes:
@@ -85,7 +86,7 @@ else:
 
 NOTE = ('<p class="fine filter-note" style="margin:10px 0 0">Gentle: mild flavors, or a gentler swap is listed. '
         'Soft texture: smooth, spoonable or sippable. Neither is a guarantee that a food will suit you; '
-        'follow your care team\\'s advice.</p>')
+        'follow your care team\u2019s advice.</p>')
 ANCHOR = "for k, l in diets)}</div>\n  </div>"
 if 'filter-note' in b:
     print('- already applied: filter note')
@@ -98,11 +99,16 @@ if b != b0:
     open(P('build.py'), 'w', encoding='utf-8').write(b)
 
 # ---- report
-cnt = lambda k: sum(1 for r in recipes if r['category'] == k or k in r['tags'])
+def cnt(k):
+    return sum(1 for r in recipes if r['category'] == k or k in r['tags'])
+
 keys = ['high-protein', 'gentle', 'soft', 'make-ahead', 'Beyond Toast', 'Main Dishes', 'Soups', 'Salads', 'Sips', 'Snacks', 'Desserts', 'Side Dishes']
+cats = {}
+for r in recipes:
+    cats[r['category']] = cats.get(r['category'], 0) + 1
 out = ['# Filters review (lote 5)', '', '## Changed this run'] + (['- ' + c for c in changes] or ['- nothing (already applied)'])
-out += ['', '## Recipes per filter'] + [f'- {k}: {cnt(k)}' for k in keys]
-out += ['', '## Categories in use'] + [f'- {c}: {n}' for c, n in sorted({r["category"]: sum(1 for x in recipes if x["category"] == r["category"]) for r in recipes}.items())]
+out += ['', '## Recipes per filter'] + ['- %s: %d' % (k, cnt(k)) for k in keys]
+out += ['', '## Categories in use'] + ['- %s: %d' % (c, n) for c, n in sorted(cats.items())]
 out += ['', '## Recipes tagged gentle (for manual review)'] + ['- ' + r['id'] for r in recipes if 'gentle' in r['tags']]
 os.makedirs(P('reports'), exist_ok=True)
 open(P('reports', 'filters_review.md'), 'w', encoding='utf-8').write('\n'.join(out) + '\n')
