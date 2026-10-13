@@ -52,7 +52,7 @@ class Page(HTMLParser):
         if self._in_title: self.title = (self.title or '') + data
         if self._ld is not None: self._ld.append(data)
 
-pages = sorted(p for p in glob.glob('**/*.html', recursive=True) if not p.startswith(('_src/', 'node_modules/')))
+pages = sorted(p.replace(os.sep, '/') for p in glob.glob('**/*.html', recursive=True) if not p.replace(os.sep, '/').startswith(('_src/', 'node_modules/')))
 REDIRECT_STUBS = {'about.html', 'recipes.html', 'recipe.html', 'guides/pantry-staples/index.html', 'guides/perfect-rice/index.html', 'guides/knife-skills/index.html'}
 for path in pages:
     text = open(path, encoding='utf8').read()
@@ -104,7 +104,7 @@ for m in re.findall(r'url\((fonts/[^)]+)\)', css):
 # A responsive variant is only a file ending in -<number>w.webp (e.g. shakshuka-480w.webp).
 # Names that merely end in "w.webp" (e.g. tomato-white-bean-stew.webp) are originals.
 VAR = re.compile(r'-(\d+)w\.webp$')
-all_webp = glob.glob('images/*.webp')
+all_webp = [p.replace(os.sep, '/') for p in glob.glob('images/*.webp')]
 originals = sorted(p for p in all_webp if not VAR.search(p))
 variants = sorted(p for p in all_webp if VAR.search(p))
 manifest = json.load(open('images/variants.json')) if os.path.exists('images/variants.json') else {}

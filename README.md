@@ -88,8 +88,19 @@ The static site does not process payments, send email, control access or establi
 
 Connect the three destinations separately: `signup_url` for email signup, `download_url` for the kit's delivery destination, and `checkout_url` for the one-time US$20 checkout. If email capture is desired, connect signup first; a direct kit link is shown only when signup is absent and a download destination is available. Configure the provider's return URL as `starter-kit/thanks/`. Use provider-controlled email delivery or authorization for any gated download. The return page is public and cannot prove signup or unlock a purchase.
 
-The main guide and all three bonuses belong in the payment/delivery provider, not in this public repository. Use the current 89/26/18/12-page PDFs. Test a real provider test-mode order, actual receipt and access to every file before turning on the live checkout. No shipping or physical book is offered. Confirm actual support contact, purchase terms and provider privacy information before accepting orders.
+The main guide and all three bonuses belong in the payment/delivery provider, not in this public repository. Use the revised 64/26/16/13-page PDFs (119 paid pages total). Test a real provider test-mode order, actual receipt and access to every file before turning on the live checkout. No shipping or physical book is offered. Confirm actual support contact, purchase terms and provider privacy information before accepting orders.
 
 `social_urls` accepts the actual Instagram, Pinterest and Facebook profile HTTPS URLs. Until configured, their footer icons are omitted; no `href="#"` placeholder sends visitors to the top of the page. The About-page contact address and handle still need owner confirmation. Its form now explicitly opens an email draft and preserves the entered text; the website does not send or confirm that message.
 
 Run `python3 _src/journey_checks.py` alongside the existing site checks. It checks the rendered experience for missing integrations, signup-first, download-only and checkout-enabled states, and rejects non-HTTPS or credential-bearing URLs. It does not submit forms or payments. Visual mobile checks, physical printing, full-kit signup and a real order remain pending.
+
+
+## Revised Nourished offer — October 13, 2026
+
+The offer now describes the revised 64/26/16/13-page collection: 119 pages, 36 recipes, quantified batch shopping and selected fillable planning sheets. The price remains US$20. The full four paid PDFs are not stored here.
+
+The nine-page free Starter Kit is published in `_src/printables/nourished-free-starter-kit.pdf` and copied into the generated public `printables/` folder. `download_url` points to that PDF. With no signup URL configured, visitors can download it directly. The separate one-page planner sample now matches the revised landscape sheet and includes fillable fields.
+
+Commerce covers and sample images are rendered from the revised files. Support contact now matches the PDFs: `boredoftoast@gmail.com`. Checkout remains unconfigured, so purchasing is still shown as opening soon. No order or email-signup success is inferred from visiting a page.
+
+Before enabling checkout, put the four revised paid PDFs in the selected delivery provider, test an order and align the receipt and delivery filenames. Keep the paid files together for readers that support links between PDFs. Editorial revision does not establish clinical approval or kitchen testing.
