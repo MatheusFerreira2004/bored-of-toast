@@ -59,6 +59,9 @@ STICKY_FN = '''def sticky_bar(config):
 
 # ------------------------------------------------------------------ storefront.py
 s = open(P('storefront.py'), encoding='utf-8').read()
+if 'nourished-window-hero' in s:
+    print('Already superseded by the approved window-light hero. Nothing to do.')
+    sys.exit(0)
 s = patch_text(s, [
     ("    return '<a class=\"btn btn-yellow\" href=\"#print\">Try the free planner</a>'",
      "    return '<a class=\"btn btn-yellow\" href=\"#collection\">Purchasing opens soon · see what’s included ↓</a>'",
