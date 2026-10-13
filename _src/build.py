@@ -782,7 +782,7 @@ def build_sitemap():
 
 if __name__ == '__main__':
     shutil.copytree(os.path.join(HERE, 'printables'), os.path.join(OUT, 'printables'), dirs_exist_ok=True)
-    for f in ['styles.css', 'app.js']:
+    for f in ['styles.css', 'app.js', 'nourished.css']:
         shutil.copy(os.path.join(HERE, f), os.path.join(OUT, f))
     shutil.copytree(os.path.join(HERE, '..', 'fonts'), os.path.join(OUT, 'fonts'), dirs_exist_ok=True)   # self-hosted fonts live in /fonts
     build_home(); build_recipes()
