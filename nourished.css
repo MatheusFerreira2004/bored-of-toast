@@ -1,7 +1,11 @@
 /* Approved Nourished hero: real text and PDF covers over a decorative window-light surface. */
 body[data-page="cookbooks"] .bag-count { display: none !important; }
 .nourished-window-hero {
-  background: #2f3d24 url('images/commerce/nourished-window-light.webp') center / cover no-repeat;
+  background-color: #2f3d24;
+  background-image: linear-gradient(90deg, #2f3d24 0%, rgba(47,61,36,.92) 35%, rgba(47,61,36,0) 65%), url('images/commerce/nourished-window-light.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 56px 0 40px;
 }
 .nourished-hero-grid {
@@ -46,9 +50,21 @@ body[data-page="cookbooks"] .bag-count { display: none !important; }
   .nourished-subtitle { font-size: 1.65rem; }
   .nourished-window-hero .commerce-lead { font-size: .92rem; }
 }
+@media (min-width: 761px) and (max-width: 1449px) {
+  .nourished-window-hero { padding: 32px 0 24px; }
+  .nourished-hero-grid { row-gap: 22px; }
+  .nourished-bundle { max-width: 450px; }
+  .nourished-bundle-caption { margin-top: 18px; }
+}
 @media (max-width: 760px) {
-  .nourished-window-hero { padding: 32px 0 30px; background-position: 65% center; }
-  .nourished-hero-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "art" "purchase"; gap: 28px; }
+  /* A retained transform from pageIn traps fixed descendants inside main. */
+  body[data-page="cookbooks"] main { animation: none; transform: none; }
+  .nourished-window-hero {
+    padding: 32px 0 30px;
+    background-image: linear-gradient(180deg, #2f3d24 0%, rgba(47,61,36,.92) 35%, rgba(47,61,36,0) 65%), url('images/commerce/nourished-window-light.webp');
+    background-position: 65% center;
+  }
+  .nourished-hero-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "purchase" "art"; gap: 24px; }
   .nourished-window-hero h1 { font-size: clamp(3.6rem, 15vw, 5.6rem); margin-bottom: 18px; }
   .nourished-window-hero .eyebrow { font-size: .6rem; letter-spacing: .12em; }
   .nourished-subtitle { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 20px; }
