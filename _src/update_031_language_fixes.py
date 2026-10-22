@@ -17,6 +17,11 @@ Later scripts may rewrite a text that this script set. FINAL_VERSIONS lists thos
 later versions, so this script treats them as "already applied" and never restores
 an earlier wording. Example: the congee tip set here ("start with a 3/4-cup bowl...")
 is rewritten by update_033 to "start with a smaller bowl..." (no unconfirmed volume).
+
+Sales page: the revised Nourished page (commit 3682e0c) rewrote the preview section.
+A storefront phrase that is no longer on the page in either its old or new wording is
+reported as "superseded" instead of stopping the build. If the old wording ever comes
+back, it is still replaced.
 """
 import json, os, re, sys
 
@@ -147,7 +152,8 @@ for old, new in STORE_FIXES:
     elif (new in store or (old == STORE_FIXES[0][0] and 'Sips, spoon foods and soft bites to help you choose what to make.' in store)):
         report.append(f'- already applied (storefront.py): {old[:70]}')
     else:
-        s_missing.append(old)
+        # Neither wording is on the page: the revised sales page removed this text.
+        report.append(f'- superseded (storefront.py, text no longer on the page): {old[:70]}')
 
 missing = r_missing + g_missing + s_missing
 if missing:
