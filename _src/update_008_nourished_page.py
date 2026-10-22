@@ -63,7 +63,7 @@ CHANGES = [
     ('{checkout_action(config)}<p class="commerce-small">{checkout_note(config)}</p><a class="commerce-text-link" href="{root}starter-kit/">Preview the free starter kit</a>',
      '{checkout_action(config)}<p class="commerce-small">{checkout_note(config)}</p>' + REFUND + '<a class="commerce-text-link" href="{root}starter-kit/">Preview the free starter kit</a>'),
     ("('Can I try a sample first?',",
-     "('What if it is not right for me?',f'Email hello@boredoftoast.com within 14 days of your purchase for a full refund. No reason needed. Details are in our <a href=\"{root}terms/\">Terms of Use</a>.'),\n        ('Can I try a sample first?',"),
+     "('What if it is not right for me?',f'Email boredoftoast@gmail.com within 14 days of your purchase for a full refund. No reason needed. Details are in our <a href=\"{root}terms/\">Terms of Use</a>.'),\n        ('Can I try a sample first?',"),
 ]
 
 for old, new in CHANGES:
