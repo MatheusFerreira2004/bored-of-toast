@@ -19,6 +19,8 @@
    - The FAQ answer also names the free tools.
    - "How buying works", while purchasing is closed, says the summary follows the current
      Terms and will be updated if a detail changes (vendor and support email not confirmed).
+   Later sales-page rewrites removed some of these paragraphs. A Nourished page phrase that
+   is found neither in its old nor in its new form is reported as superseded, not as an error.
 5. Search index: the Starter Kit entry used the label "Free guide"; it becomes "Free Starter Kit".
 
 Writes _src/reports/review_040.md. Idempotent: a second run changes nothing.
@@ -94,7 +96,9 @@ if changes:
 
 
 def apply(path, pairs, label):
-    """pairs: (old, new). Each must be found once (old) or already applied (new present)."""
+    """pairs: (old, new). Each must be found once (old) or already applied (new present).
+    On the Nourished page, a phrase found in neither form was removed by a later sales-page
+    rewrite and is reported as superseded."""
     s = open(path, encoding='utf-8').read()
     out = s
     for old, new in pairs:
@@ -107,6 +111,8 @@ def apply(path, pairs, label):
         elif out.count(old) == 1:
             out = out.replace(old, new)
             report.append(f'- {label}: OK: {new[:70]}...')
+        elif label == 'Nourished page' and out.count(old) == 0:
+            report.append(f'- {label}: superseded (text no longer on the page): {old[:70]}...')
         else:
             print(f'ERROR: {label}: anchor found {out.count(old)} times (nothing saved in {os.path.basename(path)}):\n{old[:140]}')
             sys.exit(1)
@@ -170,8 +176,8 @@ report += ['', '## Counts after this run',
            '- gentle: %d' % sum(1 for r in recipes if 'gentle' in r.get('tags', [])),
            '- soft: %d' % sum(1 for r in recipes if 'soft' in r.get('tags', []))]
 report += ['', '## Pending (owner decision or files)',
-           '- Payment vendor not confirmed; text mirrors the Terms (Lemon Squeezy).',
-           '- hello@boredoftoast.com not set up yet (domain not bought).',
+           '- Payment vendor: Payhip + Stripe chosen; Terms and sales page still to be updated.',
+           '- Support email: boredoftoast@gmail.com (applied by update_900).',
            '- Preview images still show old PDF text; needs the PDFs.',
            '- Chili photo: needs visual confirmation before any swap.']
 os.makedirs(P('reports'), exist_ok=True)

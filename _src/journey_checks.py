@@ -32,10 +32,12 @@ for signup,download,checkout in product([False,True],repeat=3):
     assert (c['checkout_url'] in pu)==checkout
     assert ('Purchasing is not open yet' in paid)==(not checkout)
     assert ('Four English PDFs' in paid) and ('US$20' in paid)
-    # Revised PDFs: main guide 64, meal examples 26, recipes 16, printable pack 13.
-    assert all(f'{n} pages' in paid for n in (64, 26, 16, 13)), 'Nourished page counts do not match the PDFs'
-    assert not any(f'{n} pages' in paid for n in (89, 60, 18, 14, 12)), 'Old Nourished page counts still present'
-    assert '119 pages' in paid and '105 fillable fields' in paid
+    # Final PDFs (nourished-product): main guide 57, 28-Day 15, Recipe Pack 18, Printable Pack 14.
+    assert all(f'{n} pages' in paid for n in (57, 15, 18, 14)), 'Nourished page counts do not match the PDFs'
+    assert not any(f'{n} pages' in paid for n in (89, 64, 60, 26, 16, 13, 12)), 'Old Nourished page counts still present'
+    assert '104 pages' in paid and '119 pages' not in paid
+    assert 'fillable' not in paid.lower(), 'The PDFs have no fillable fields'
+    assert 'Lemon Squeezy' not in paid and 'Payhip' in paid
     assert 'They are static sheets, not interactive form fields.' not in paid
     assert 'boredoftoast@gmail.com' in paid and 'hello@boredoftoast.com' not in paid
     if signup:

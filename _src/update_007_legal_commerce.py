@@ -57,7 +57,7 @@ insert_after(terms, 'Content Ownership and Sharing', [
         'When you buy a product, you receive a personal, non-transferable license to download, read and print it for use in your own household. Please do not share, resell or republish the files, or upload them to other websites.'
     ]},
     {'h': 'Refunds', 'p': [
-        'If a product is not right for you, email hello@boredoftoast.com within 14 days of your purchase and we will refund you in full. You do not need to give a reason.',
+        'If a product is not right for you, email boredoftoast@gmail.com within 14 days of your purchase and we will refund you in full. You do not need to give a reason.',
         'Refunds are returned to your original payment method through Lemon Squeezy. After a refund, please delete your copies of the files.'
     ]}
 ])

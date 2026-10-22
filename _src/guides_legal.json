@@ -1011,16 +1011,16 @@
       {
         "h": "Email Sign-Ups",
         "p": [
-          "When you sign up for a free resource such as the GLP-1 Kitchen Starter Kit, you give us your email address and, if you choose, your first name. We use MailerLite to store this information and send our emails.",
+          "When you sign up for a free resource such as the GLP-1 Kitchen Starter Kit, you give us your email address and, if you choose, your first name. We use Payhip, the platform that delivers the kit, to store this information and send our emails.",
           "We use your email to deliver what you asked for and to send occasional recipes, tips and information about our products. Every email includes a link to unsubscribe, and you can ask us to delete your details at any time.",
-          "MailerLite may record whether an email is opened or a link is clicked, which helps us understand what is useful. MailerLite’s privacy policy applies to how it processes this data."
+          "Payhip may record whether an email is opened or a link is clicked, which helps us understand what is useful. Payhip’s privacy policy applies to how it processes this data."
         ]
       },
       {
         "h": "Purchases",
         "p": [
-          "When you buy a digital product, the checkout is run by Lemon Squeezy, our reseller and merchant of record. Lemon Squeezy collects your name, email address, billing details and payment information to process the order, calculate taxes and deliver your files. We do not see or store your full card details.",
-          "Lemon Squeezy shares with us the information we need to support your order, such as your name, email address, the product you bought and the order status. Lemon Squeezy’s privacy policy applies to the checkout."
+          "When you buy a digital product, the checkout is run by Payhip, and card payments are processed by Stripe. Payhip and Stripe collect your name, email address, billing details and payment information to process the order, calculate taxes and deliver your files. We do not see or store your full card details.",
+          "Payhip shares with us the information we need to support your order, such as your name, email address, the product you bought and the order status. The privacy policies of Payhip and Stripe apply to the checkout."
         ]
       },
       {
@@ -1036,7 +1036,7 @@
           "Right now, Bored of Toast uses very few, if any, cookies of its own. Some third-party services we rely on may still receive information from your browser.",
           "Our fonts are hosted on this site, so your browser does not connect to Google or any other font service to load them.",
           "In the future we may add comments powered by GitHub Discussions. If you choose to comment, you will sign in with GitHub, and GitHub's privacy policy will apply to that activity. We may also add advertising or affiliate links. Ad networks and affiliate partners may use cookies to show relevant ads or to credit us for a referral. When these features arrive, we will update this policy and provide any required cookie choices.",
-          "Our email sign-up and checkout pages are hosted by MailerLite and Lemon Squeezy and may use their own cookies, for example to keep your checkout session working."
+          "Our email sign-up and checkout pages are hosted by Payhip and may use their own cookies, for example to keep your checkout session working."
         ]
       },
       {
@@ -1090,7 +1090,7 @@
         "h": "Digital Products and Purchases",
         "p": [
           "Our digital products are delivered as downloadable PDF files. Prices are shown in US dollars on the product page.",
-          "Purchases are processed by Lemon Squeezy, which acts as our reseller and merchant of record. Lemon Squeezy handles payment and any applicable sales tax or VAT, and sends your receipt and download access by email. Its own terms and privacy policy apply to the checkout.",
+          "Purchases are made through Payhip, our online store platform, and card payments are processed by Stripe. Payhip shows any applicable sales tax or VAT at checkout and sends your receipt and download access by email. The terms and privacy policies of Payhip and Stripe apply to the checkout.",
           "When you buy a product, you receive a personal, non-transferable license to download, read and print it for use in your own household. Please do not share, resell or republish the files, or upload them to other websites."
         ]
       },
@@ -1098,7 +1098,7 @@
         "h": "Refunds",
         "p": [
           "If a product is not right for you, email boredoftoast@gmail.com within 14 days of your purchase and we will refund you in full. You do not need to give a reason.",
-          "Refunds are returned to your original payment method through Lemon Squeezy. After a refund, please delete your copies of the files."
+          "Refunds are returned to your original payment method through Payhip. After a refund, please delete your copies of the files."
         ]
       },
       {
