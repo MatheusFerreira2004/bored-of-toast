@@ -33,18 +33,20 @@ jobs:
         run: |
           set -euo pipefail
           shopt -s nullglob
+          echo "Commit: $GITHUB_SHA · $(date -u)" > /tmp/build.log
           echo '## Update scripts' >> "$GITHUB_STEP_SUMMARY"
           for f in _src/update_*.py; do
-            echo "### $f" >> "$GITHUB_STEP_SUMMARY"
-            python3 "$f" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "### $f" | tee -a "$GITHUB_STEP_SUMMARY" /tmp/build.log
+            python3 "$f" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" /tmp/build.log
           done
 
       - name: Regenerate the site
         run: |
           set -euo pipefail
+          echo '### Regenerate the site' >> /tmp/build.log
           rm -rf _src/site && mkdir -p _src/site
           cp -r images _src/site/images
-          python3 _src/build.py
+          python3 _src/build.py 2>&1 | tee -a /tmp/build.log
           cp -r _src/site/. ./
           rm -rf _src/site
           find . -name __pycache__ -type d -prune -exec rm -rf {} +
@@ -52,22 +54,24 @@ jobs:
       - name: Compare with a fresh build (same test as checks.yml)
         run: |
           set -euo pipefail
+          echo '### Compare with a fresh build' >> /tmp/build.log
           mkdir -p _src/site && cp -r images _src/site/images
-          python3 _src/build.py
-          diff -r -q _src/site . -x images -x _src -x .git -x .github -x README.md -x sitemap.xml
+          python3 _src/build.py 2>&1 | tee -a /tmp/build.log
+          diff -r -q _src/site . -x images -x _src -x .git -x .github -x README.md -x sitemap.xml 2>&1 | tee -a /tmp/build.log
           rm -rf _src/site
           find . -name __pycache__ -type d -prune -exec rm -rf {} +
 
       - name: Site checks
         run: |
           set -euo pipefail
-          echo '## Site checks' >> "$GITHUB_STEP_SUMMARY"
-          python3 _src/checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
-          python3 _src/journey_checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '## Site checks' | tee -a "$GITHUB_STEP_SUMMARY" /tmp/build.log
+          python3 _src/checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" /tmp/build.log
+          python3 _src/journey_checks.py 2>&1 | tee -a "$GITHUB_STEP_SUMMARY" /tmp/build.log
 
       - name: Commit regenerated site
         run: |
           set -euo pipefail
+          rm -f _src/reports/last-failure.log
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
@@ -77,3 +81,16 @@ jobs:
             git commit -m "Regenerate site (auto build)"
             git push
           fi
+
+      - name: Save the failure log to the repository
+        if: failure()
+        run: |
+          set -uo pipefail
+          git reset --hard HEAD
+          git clean -fd
+          mkdir -p _src/reports
+          cp /tmp/build.log _src/reports/last-failure.log 2>/dev/null || echo "No log captured." > _src/reports/last-failure.log
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _src/reports/last-failure.log
+          git commit -m "Build failure log" && git push
